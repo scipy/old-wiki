@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/hdf5_in_Matlab?action=AttachFile&do=view&target=h5load.m by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:43:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:h5load.m of Cookbook/hdf5_in_Matlab - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/hdf5_in_Matlab" href="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2Fhdf5_in_Matlab&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="h5load.m" href="hdf5_in_Matlabf822.html?action=AttachFile&amp;do=view&amp;target=h5load.m">
+<link rel="Appendix" title="hdf5matlab.zip" href="hdf5_in_Matlab1701.html?action=AttachFile&amp;do=view&amp;target=hdf5matlab.zip">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="hdf5_in_Matlab456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:h5load.m of Cookbook/hdf5_in_Matlab</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="hdf5_in_Matlab.html">Cookbook/hdf5_in_Matlab</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="hdf5_in_Matlab37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'h5load.m'</h2><a class="download" href="h5load82af.m?action=AttachFile&amp;do=get&amp;target=h5load.m">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_1">   1</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_1"></span><span class="anchor" id="line-1-1"></span><span class="ID">function</span> <span class="ID">data</span>=<span class="ID">h5load</span>(<span class="ID">filename</span>, <span class="ID">path</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_2">   2</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_2"></span><span class="anchor" id="line-2"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_3">   3</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_3"></span><span class="anchor" id="line-3"></span>% <span class="ID">data</span> = <span class="ID">H5LOAD</span>(<span class="ID">filename</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_4">   4</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_4"></span><span class="anchor" id="line-4"></span>% <span class="ID">data</span> = <span class="ID">H5LOAD</span>(<span class="ID">filename</span>, <span class="ID">path_in_file</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_5">   5</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_5"></span><span class="anchor" id="line-5"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_6">   6</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_6"></span><span class="anchor" id="line-6"></span>% <span class="ID">Load</span> <span class="ID">data</span> <span class="ResWord">in</span> <span class="ID">a</span> <span class="ID">HDF5</span> <span class="ID">file</span> <span class="ID">to</span> <span class="ID">a</span> <span class="ID">Matlab</span> <span class="ID">structure</span>.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_7">   7</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_7"></span><span class="anchor" id="line-7"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_8">   8</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_8"></span><span class="anchor" id="line-8"></span>% <span class="ID">Parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_9">   9</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_9"></span><span class="anchor" id="line-9"></span>% ----------</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_10">  10</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_10"></span><span class="anchor" id="line-10"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_11">  11</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_11"></span><span class="anchor" id="line-11"></span>% <span class="ID">filename</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_12">  12</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_12"></span><span class="anchor" id="line-12"></span>%     <span class="ID">Name</span> <span class="ID">of</span> <span class="ID">the</span> <span class="ID">file</span> <span class="ID">to</span> <span class="ID">load</span> <span class="ID">data</span> <span class="ID">from</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_13">  13</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_13"></span><span class="anchor" id="line-13"></span>% <span class="ID">path_in_file</span> : <span class="ID">optional</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_14">  14</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_14"></span><span class="anchor" id="line-14"></span>%     <span class="ID">Path</span> <span class="ID">to</span> <span class="ID">the</span> <span class="ID">part</span> <span class="ID">of</span> <span class="ID">the</span> <span class="ID">HDF5</span> <span class="ID">file</span> <span class="ID">to</span> <span class="ID">load</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_15">  15</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_15"></span><span class="anchor" id="line-15"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_16">  16</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_16"></span><span class="anchor" id="line-16"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_17">  17</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_17"></span><span class="anchor" id="line-17"></span>% <span class="ID">Author</span>: <span class="ID">Pauli</span> <span class="ID">Virtanen</span> &lt;<span class="ID">pav</span>@<span class="ID">iki</span>.<span class="ID">fi</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_18">  18</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_18"></span><span class="anchor" id="line-18"></span>% <span class="ID">This</span> <span class="ID">script</span> <span class="ID">is</span> <span class="ResWord">in</span> <span class="ID">the</span> <span class="ID">Public</span> <span class="ID">Domain</span>. <span class="ID">No</span> <span class="ID">warranty</span>.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_19">  19</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_19"></span><span class="anchor" id="line-19"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_20">  20</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_20"></span><span class="anchor" id="line-20"></span><span class="ResWord">if</span> <span class="ID">nargin</span> &gt; <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_21">  21</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_21"></span><span class="anchor" id="line-21"></span>  <span class="ID">path_parts</span> = <span class="ID">regexp</span>(<span class="ID">path</span>, <span class="Char">'/'</span>, '<span class="ID">split</span>');</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_22">  22</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_22"></span><span class="anchor" id="line-22"></span><span class="ResWord">else</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_23">  23</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_23"></span><span class="anchor" id="line-23"></span>  <span class="ID">path</span> = '';</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_24">  24</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_24"></span><span class="anchor" id="line-24"></span>  <span class="ID">path_parts</span> = [];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_25">  25</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_25"></span><span class="anchor" id="line-25"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_26">  26</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_26"></span><span class="anchor" id="line-26"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_27">  27</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_27"></span><span class="anchor" id="line-27"></span><span class="ID">loc</span> = <span class="ID">H5F</span>.<span class="ID">open</span>(<span class="ID">filename</span>, '<span class="ID">H5F_ACC_RDONLY</span>', '<span class="ID">H5P_DEFAULT</span>');</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_28">  28</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_28"></span><span class="anchor" id="line-28"></span><span class="ID">try</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_29">  29</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_29"></span><span class="anchor" id="line-29"></span>  <span class="ID">data</span> = <span class="ID">load_one</span>(<span class="ID">loc</span>, <span class="ID">path_parts</span>, <span class="ID">path</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_30">  30</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_30"></span><span class="anchor" id="line-30"></span>  <span class="ID">H5F</span>.<span class="ID">close</span>(<span class="ID">loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_31">  31</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_31"></span><span class="anchor" id="line-31"></span><span class="ID">catch</span> <span class="ID">exc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_32">  32</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_32"></span><span class="anchor" id="line-32"></span>  <span class="ID">H5F</span>.<span class="ID">close</span>(<span class="ID">loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_33">  33</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_33"></span><span class="anchor" id="line-33"></span>  <span class="ID">rethrow</span>(<span class="ID">exc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_34">  34</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_34"></span><span class="anchor" id="line-34"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_35">  35</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_35"></span><span class="anchor" id="line-35"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_36">  36</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_36"></span><span class="anchor" id="line-36"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_37">  37</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_37"></span><span class="anchor" id="line-37"></span><span class="ID">function</span> <span class="ID">data</span>=<span class="ID">load_one</span>(<span class="ID">loc</span>, <span class="ID">path_parts</span>, <span class="ID">full_path</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_38">  38</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_38"></span><span class="anchor" id="line-38"></span>% <span class="ID">Load</span> <span class="ID">a</span> <span class="ID">record</span> <span class="ID">recursively</span>.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_39">  39</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_39"></span><span class="anchor" id="line-39"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_40">  40</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_40"></span><span class="anchor" id="line-40"></span><span class="ResWord">while</span> ~<span class="ID">isempty</span>(<span class="ID">path_parts</span>) &amp; <span class="ID">strcmp</span>(<span class="ID">path_parts</span>{<span class="Number">1</span>}, '')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_41">  41</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_41"></span><span class="anchor" id="line-41"></span>  <span class="ID">path_parts</span> = <span class="ID">path_parts</span>(<span class="Number">2</span>:<span class="ID">end</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_42">  42</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_42"></span><span class="anchor" id="line-42"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_43">  43</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_43"></span><span class="anchor" id="line-43"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_44">  44</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_44"></span><span class="anchor" id="line-44"></span><span class="ID">data</span> = <span class="ResWord">struct</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_45">  45</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_45"></span><span class="anchor" id="line-45"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_46">  46</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_46"></span><span class="anchor" id="line-46"></span><span class="ID">num_objs</span> = <span class="ID">H5G</span>.<span class="ID">get_num_objs</span>(<span class="ID">loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_47">  47</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_47"></span><span class="anchor" id="line-47"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_48">  48</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_48"></span><span class="anchor" id="line-48"></span>% </span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_49">  49</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_49"></span><span class="anchor" id="line-49"></span>% <span class="ID">Load</span> <span class="ID">groups</span> <span class="ID">and</span> <span class="ID">datasets</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_50">  50</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_50"></span><span class="anchor" id="line-50"></span>%</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_51">  51</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_51"></span><span class="anchor" id="line-51"></span><span class="ResWord">for</span> <span class="ID">j_item</span>=<span class="Number">0</span>:<span class="ID">num_objs</span>-<span class="Number">1</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_52">  52</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_52"></span><span class="anchor" id="line-52"></span>  <span class="ID">objtype</span> = <span class="ID">H5G</span>.<span class="ID">get_objtype_by_idx</span>(<span class="ID">loc</span>, <span class="ID">j_item</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_53">  53</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_53"></span><span class="anchor" id="line-53"></span>  <span class="ID">objname</span> = <span class="ID">H5G</span>.<span class="ID">get_objname_by_idx</span>(<span class="ID">loc</span>, <span class="ID">j_item</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_54">  54</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_54"></span><span class="anchor" id="line-54"></span>  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_55">  55</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_55"></span><span class="anchor" id="line-55"></span>  <span class="ResWord">if</span> <span class="ID">objtype</span> == <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_56">  56</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_56"></span><span class="anchor" id="line-56"></span>    % <span class="ID">Group</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_57">  57</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_57"></span><span class="anchor" id="line-57"></span>    <span class="ID">name</span> = <span class="ID">regexprep</span>(<span class="ID">objname</span>, '.*/', '');</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_58">  58</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_58"></span><span class="anchor" id="line-58"></span>  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_59">  59</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_59"></span><span class="anchor" id="line-59"></span>    <span class="ResWord">if</span> <span class="ID">isempty</span>(<span class="ID">path_parts</span>) | <span class="ID">strcmp</span>(<span class="ID">path_parts</span>{<span class="Number">1</span>}, <span class="ID">name</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_60">  60</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_60"></span><span class="anchor" id="line-60"></span>      <span class="ResWord">if</span> ~<span class="ID">isempty</span>(<span class="ID">regexp</span>(<span class="ID">name</span>,'^[<span class="ID">a</span>-<span class="ID">zA</span>-<span class="ID">Z</span>].*'))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_61">  61</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_61"></span><span class="anchor" id="line-61"></span>	<span class="ID">group_loc</span> = <span class="ID">H5G</span>.<span class="ID">open</span>(<span class="ID">loc</span>, <span class="ID">name</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_62">  62</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_62"></span><span class="anchor" id="line-62"></span>	<span class="ID">try</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_63">  63</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_63"></span><span class="anchor" id="line-63"></span>	  <span class="ID">sub_data</span> = <span class="ID">load_one</span>(<span class="ID">group_loc</span>, <span class="ID">path_parts</span>(<span class="Number">2</span>:<span class="ID">end</span>), <span class="ID">full_path</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_64">  64</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_64"></span><span class="anchor" id="line-64"></span>	  <span class="ID">H5G</span>.<span class="ID">close</span>(<span class="ID">group_loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_65">  65</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_65"></span><span class="anchor" id="line-65"></span>	<span class="ID">catch</span> <span class="ID">exc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_66">  66</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_66"></span><span class="anchor" id="line-66"></span>	  <span class="ID">H5G</span>.<span class="ID">close</span>(<span class="ID">group_loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_67">  67</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_67"></span><span class="anchor" id="line-67"></span>	  <span class="ID">rethrow</span>(<span class="ID">exc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_68">  68</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_68"></span><span class="anchor" id="line-68"></span>	<span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_69">  69</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_69"></span><span class="anchor" id="line-69"></span>	<span class="ResWord">if</span> <span class="ID">isempty</span>(<span class="ID">path_parts</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_70">  70</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_70"></span><span class="anchor" id="line-70"></span>	  <span class="ID">data</span> = <span class="ID">setfield</span>(<span class="ID">data</span>, <span class="ID">name</span>, <span class="ID">sub_data</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_71">  71</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_71"></span><span class="anchor" id="line-71"></span>	<span class="ResWord">else</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_72">  72</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_72"></span><span class="anchor" id="line-72"></span>	  <span class="ID">data</span> = <span class="ID">sub_data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_73">  73</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_73"></span><span class="anchor" id="line-73"></span>	  <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_74">  74</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_74"></span><span class="anchor" id="line-74"></span>	<span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_75">  75</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_75"></span><span class="anchor" id="line-75"></span>      <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_76">  76</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_76"></span><span class="anchor" id="line-76"></span>    <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_77">  77</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_77"></span><span class="anchor" id="line-77"></span>   </span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_78">  78</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_78"></span><span class="anchor" id="line-78"></span>  <span class="ID">elseif</span> <span class="ID">objtype</span> == <span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_79">  79</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_79"></span><span class="anchor" id="line-79"></span>    % <span class="ID">Dataset</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_80">  80</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_80"></span><span class="anchor" id="line-80"></span>    <span class="ID">name</span> = <span class="ID">regexprep</span>(<span class="ID">objname</span>, '.*/', '');</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_81">  81</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_81"></span><span class="anchor" id="line-81"></span>  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_82">  82</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_82"></span><span class="anchor" id="line-82"></span>    <span class="ResWord">if</span> <span class="ID">isempty</span>(<span class="ID">path_parts</span>) | <span class="ID">strcmp</span>(<span class="ID">path_parts</span>{<span class="Number">1</span>}, <span class="ID">name</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_83">  83</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_83"></span><span class="anchor" id="line-83"></span>      <span class="ResWord">if</span> ~<span class="ID">isempty</span>(<span class="ID">regexp</span>(<span class="ID">name</span>,'^[<span class="ID">a</span>-<span class="ID">zA</span>-<span class="ID">Z</span>].*'))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_84">  84</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_84"></span><span class="anchor" id="line-84"></span>	<span class="ID">dataset_loc</span> = <span class="ID">H5D</span>.<span class="ID">open</span>(<span class="ID">loc</span>, <span class="ID">name</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_85">  85</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_85"></span><span class="anchor" id="line-85"></span>	<span class="ID">try</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_86">  86</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_86"></span><span class="anchor" id="line-86"></span>	  <span class="ID">sub_data</span> = <span class="ID">H5D</span>.<span class="ID">read</span>(<span class="ID">dataset_loc</span>, ...</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_87">  87</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_87"></span><span class="anchor" id="line-87"></span>	      '<span class="ID">H5ML_DEFAULT</span>', '<span class="ID">H5S_ALL</span><span class="Char">','</span><span class="ID">H5S_ALL</span><span class="Char">','</span><span class="ID">H5P_DEFAULT</span>');</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_88">  88</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_88"></span><span class="anchor" id="line-88"></span>	  <span class="ID">H5D</span>.<span class="ID">close</span>(<span class="ID">dataset_loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_89">  89</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_89"></span><span class="anchor" id="line-89"></span>	<span class="ID">catch</span> <span class="ID">exc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_90">  90</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_90"></span><span class="anchor" id="line-90"></span>	  <span class="ID">H5D</span>.<span class="ID">close</span>(<span class="ID">dataset_loc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_91">  91</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_91"></span><span class="anchor" id="line-91"></span>	  <span class="ID">rethrow</span>(<span class="ID">exc</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_92">  92</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_92"></span><span class="anchor" id="line-92"></span>	<span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_93">  93</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_93"></span><span class="anchor" id="line-93"></span>	</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_94">  94</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_94"></span><span class="anchor" id="line-94"></span>	<span class="ID">sub_data</span> = <span class="ID">fix_data</span>(<span class="ID">sub_data</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_95">  95</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_95"></span><span class="anchor" id="line-95"></span>	</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_96">  96</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_96"></span><span class="anchor" id="line-96"></span>	<span class="ResWord">if</span> <span class="ID">isempty</span>(<span class="ID">path_parts</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_97">  97</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_97"></span><span class="anchor" id="line-97"></span>	  <span class="ID">data</span> = <span class="ID">setfield</span>(<span class="ID">data</span>, <span class="ID">name</span>, <span class="ID">sub_data</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_98">  98</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_98"></span><span class="anchor" id="line-98"></span>	<span class="ResWord">else</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_99">  99</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_99"></span><span class="anchor" id="line-99"></span>	  <span class="ID">data</span> = <span class="ID">sub_data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_100"> 100</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_100"></span><span class="anchor" id="line-100"></span>	  <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_101"> 101</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_101"></span><span class="anchor" id="line-101"></span>	<span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_102"> 102</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_102"></span><span class="anchor" id="line-102"></span>      <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_103"> 103</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_103"></span><span class="anchor" id="line-103"></span>    <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_104"> 104</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_104"></span><span class="anchor" id="line-104"></span>  <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_105"> 105</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_105"></span><span class="anchor" id="line-105"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_106"> 106</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_106"></span><span class="anchor" id="line-106"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_107"> 107</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_107"></span><span class="anchor" id="line-107"></span>% <span class="ID">Check</span> <span class="ID">that</span> <span class="ID">we</span> <span class="ID">managed</span> <span class="ID">to</span> <span class="ID">load</span> <span class="ID">something</span> <span class="ResWord">if</span> <span class="ID">path</span> <span class="ID">walking</span> <span class="ID">is</span> <span class="ResWord">in</span> <span class="ID">progress</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_108"> 108</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_108"></span><span class="anchor" id="line-108"></span><span class="ResWord">if</span> ~<span class="ID">isempty</span>(<span class="ID">path_parts</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_109"> 109</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_109"></span><span class="anchor" id="line-109"></span>  <span class="ID">error</span>(<span class="ID">sprintf</span>('<span class="ID">Path</span> <span class="String">&quot;</span><span class="String">%s</span><span class="String">&quot;</span> <span class="ID">not</span> <span class="ID">found</span> <span class="ResWord">in</span> <span class="ID">the</span> <span class="ID">HDF5</span> <span class="ID">file</span>', <span class="ID">full_path</span>));</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_110"> 110</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_110"></span><span class="anchor" id="line-110"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_111"> 111</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_111"></span><span class="anchor" id="line-111"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_112"> 112</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_112"></span><span class="anchor" id="line-112"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_113"> 113</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_113"></span><span class="anchor" id="line-113"></span><span class="ID">function</span> <span class="ID">data</span>=<span class="ID">fix_data</span>(<span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_114"> 114</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_114"></span><span class="anchor" id="line-114"></span>% <span class="ID">Fix</span> <span class="ID">some</span> <span class="ID">common</span> <span class="ID">types</span> <span class="ID">of</span> <span class="ID">data</span> <span class="ID">to</span> <span class="ID">more</span> <span class="ID">friendly</span> <span class="ID">form</span>.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_115"> 115</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_115"></span><span class="anchor" id="line-115"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_116"> 116</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_116"></span><span class="anchor" id="line-116"></span><span class="ResWord">if</span> <span class="ID">isstruct</span>(<span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_117"> 117</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_117"></span><span class="anchor" id="line-117"></span>  <span class="ID">fields</span> = <span class="ID">fieldnames</span>(<span class="ID">data</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_118"> 118</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_118"></span><span class="anchor" id="line-118"></span>  <span class="ResWord">if</span> <span class="ID">length</span>(<span class="ID">fields</span>) == <span class="Number">2</span> &amp; <span class="ID">strcmp</span>(<span class="ID">fields</span>{<span class="Number">1</span>}, <span class="Char">'r'</span>) &amp; <span class="ID">strcmp</span>(<span class="ID">fields</span>{<span class="Number">2</span>}, <span class="Char">'i'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_119"> 119</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_119"></span><span class="anchor" id="line-119"></span>    <span class="ResWord">if</span> <span class="ID">isnumeric</span>(<span class="ID">data</span>.<span class="ID">r</span>) &amp; <span class="ID">isnumeric</span>(<span class="ID">data</span>.<span class="ID">i</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_120"> 120</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_120"></span><span class="anchor" id="line-120"></span>      <span class="ID">data</span> = <span class="ID">data</span>.<span class="ID">r</span> + <span class="Number">1</span><span class="ID">j</span>*<span class="ID">data</span>.<span class="ID">i</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_121"> 121</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_121"></span><span class="anchor" id="line-121"></span>    <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_122"> 122</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_122"></span><span class="anchor" id="line-122"></span>  <span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_123"> 123</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_123"></span><span class="anchor" id="line-123"></span><span class="ID">end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_124"> 124</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_124"></span><span class="anchor" id="line-124"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_125"> 125</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_125"></span><span class="anchor" id="line-125"></span><span class="ResWord">if</span> <span class="ID">isnumeric</span>(<span class="ID">data</span>) &amp; <span class="ID">ndims</span>(<span class="ID">data</span>) &gt; <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_126"> 126</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_126"></span><span class="anchor" id="line-126"></span>  % <span class="ID">permute</span> <span class="ID">dimensions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_127"> 127</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_127"></span><span class="anchor" id="line-127"></span>  <span class="ID">data</span> = <span class="ID">permute</span>(<span class="ID">data</span>, <span class="ID">fliplr</span>(<span class="Number">1</span>:<span class="ID">ndims</span>(<span class="ID">data</span>)));</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_128"> 128</a> </span><span class="LineAnchor" id="CA-f91e38a1a1ce36f46bf9342afdccb1f790ecc759_128"></span><span class="anchor" id="line-128"></span><span class="ID">end</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="h5load.m"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327cbe.052f9f959a7d98d406675412187d8a7c068cf756">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="h5load82af.m?action=AttachFile&amp;do=get&amp;target=h5load.m">get</a>&nbsp;| <a href="hdf5_in_Matlabf822.html?action=AttachFile&amp;do=view&amp;target=h5load.m">view</a>] (2009-04-28 12:05:57, 2.7 KB) [[attachment:h5load.m]]</li><li>[<a href="hdf5matlab69cf.zip?action=AttachFile&amp;do=get&amp;target=hdf5matlab.zip">get</a>&nbsp;| <a href="hdf5_in_Matlab1701.html?action=AttachFile&amp;do=view&amp;target=hdf5matlab.zip">view</a>] (2007-07-20 09:22:38, 2.6 KB) [[attachment:hdf5matlab.zip]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="hdf5_in_Matlab37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/hdf5_in_Matlab">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/hdf5_in_Matlab?action=AttachFile&do=view&target=h5load.m by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:43:39 GMT -->
+</html>
+

@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/ArrayStruct_and_Pyrex?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/ArrayStruct_and_Pyrex - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/ArrayStruct_and_Pyrex" href="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FArrayStruct_and_Pyrex&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="ArrayStruct_and_Pyrex456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="ArrayStruct_and_Pyrex0b84.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FArrayStruct_and_Pyrex%22" rel="nofollow" title="Click to do a full-text search for this title">ArrayStruct_and_Pyrex</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="ArrayStruct_and_Pyrex.html">ArrayStruct_and_Pyrex</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ArrayStruct_and_Pyrex37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Overview">Overview</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><a class="http" href="../../external.html?link=http://nz.cosc.canterbury.ac.nz/~greg/python/Pyrex/">Pyrex</a> is a language for writing C extensions to Python. Its syntax is very similar to writing Python. A <tt>.pyx</tt> file is compiled to a <tt>.c</tt> file, which is then compiled like a standard C extension module for Python. Many people find writing extension modules with Pyrex preferable to writing them in C or using other tools, such as SWIG. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">See <a class="http" href="../../external.html?link=http://numeric.scipy.org/">http://numeric.scipy.org/</a> for an explanation of the <tt>__array_struct__</tt> interface. The following packages support the interface: <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><ul><li><p class="line891">NumPy (all versions) <span class="anchor" id="line-8"></span></li><li><p class="line862">Numeric (&gt;=24.2) <span class="anchor" id="line-9"></span></li><li><p class="line862">numarray (&gt;=1.5.0) <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></li></ul><p class="line867">
+<h1 id="Sharing_data_malloced_by_a_Pyrex-based_extension">Sharing data malloced by a Pyrex-based extension</h1>
+<span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">Here is a Pyrex file which shows how to export its data using the <tt>__array_struct__</tt> array interface. This allows various Python types to have a view of the data without actually copying the data itself. <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line867"><span class="anchor" id="line-16"></span><p class="line867"><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-b9408a047b3340806f4d6140a5de64667279e670" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ID">cdef</span> <span class="ID">extern</span> <span class="ResWord">from</span> <span class="String">&quot;</span><span class="String">Python.h</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="anchor" id="line-2-1"></span>    <span class="ID">ctypedef</span> <span class="ResWord">int</span> <span class="ID">Py_intptr_t</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span>    <span class="ID">void</span> <span class="ID">Py_INCREF</span>(<span class="ResWord">object</span>)</span>
+<span class="line"><span class="anchor" id="line-4-1"></span>    <span class="ID">void</span> <span class="ID">Py_DECREF</span>(<span class="ResWord">object</span>)</span>
+<span class="line"><span class="anchor" id="line-5-1"></span>    <span class="ResWord">object</span> <span class="ID">PyCObject_FromVoidPtrAndDesc</span>( <span class="ID">void</span>* <span class="ID">cobj</span>, <span class="ID">void</span>* <span class="ID">desc</span>, <span class="ID">void</span> (*<span class="ID">destr</span>)(<span class="ID">void</span> *, <span class="ID">void</span> *))</span>
+<span class="line"><span class="anchor" id="line-6-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">cdef</span> <span class="ID">extern</span> <span class="ResWord">from</span> <span class="String">&quot;</span><span class="String">stdlib.h</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="anchor" id="line-8-1"></span>    <span class="ID">ctypedef</span> <span class="ResWord">int</span> <span class="ID">size_t</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span>    <span class="ID">ctypedef</span> <span class="ResWord">long</span> <span class="ID">intptr_t</span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span>    <span class="ID">void</span> *<span class="ID">malloc</span>(<span class="ID">size_t</span> <span class="ID">size</span>)</span>
+<span class="line"><span class="anchor" id="line-11-1"></span>    <span class="ID">void</span> <span class="ID">free</span>(<span class="ID">void</span>* <span class="ID">ptr</span>)</span>
+<span class="line"><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="Comment"># for PyArrayInterface:</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">CONTIGUOUS</span>=<span class="Number">0x01</span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">FORTRAN</span>=<span class="Number">0x02</span></span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="ID">ALIGNED</span>=<span class="Number">0x100</span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ID">NOTSWAPPED</span>=<span class="Number">0x200</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">WRITEABLE</span>=<span class="Number">0x400</span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">ctypedef</span> <span class="ID">struct</span> <span class="ID">PyArrayInterface</span>:</span>
+<span class="line"><span class="anchor" id="line-21-1"></span>    <span class="ResWord">int</span> <span class="ID">version</span>          <span class="Comment"># contains the integer 2 as a sanity check</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span>    <span class="ResWord">int</span> <span class="ID">nd</span>               <span class="Comment"># number of dimensions</span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span>    <span class="ID">char</span> <span class="ID">typekind</span>        <span class="Comment"># kind in array --- character code of typestr</span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span>    <span class="ResWord">int</span> <span class="ID">itemsize</span>         <span class="Comment"># size of each element</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span>    <span class="ResWord">int</span> <span class="ID">flags</span>            <span class="Comment"># flags indicating how the data should be interpreted</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span>    <span class="ID">Py_intptr_t</span> *<span class="ID">shape</span>   <span class="Comment"># A length-nd array of shape information</span></span>
+<span class="line"><span class="anchor" id="line-27-1"></span>    <span class="ID">Py_intptr_t</span> *<span class="ID">strides</span> <span class="Comment"># A length-nd array of stride information</span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span>    <span class="ID">void</span> *<span class="ID">data</span>           <span class="Comment"># A pointer to the first element of the array</span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span><span class="ID">cdef</span> <span class="ID">void</span> <span class="ID">free_array_interface</span>( <span class="ID">void</span>* <span class="ID">ptr</span>, <span class="ID">void</span> *<span class="ID">arr</span> ):</span>
+<span class="line"><span class="anchor" id="line-31-1"></span>    <span class="ID">cdef</span> <span class="ID">PyArrayInterface</span>* <span class="ID">inter</span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span></span>
+<span class="line"><span class="anchor" id="line-33-1"></span>    <span class="ID">inter</span> = &lt;<span class="ID">PyArrayInterface</span>*&gt;<span class="ID">ptr</span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span>    <span class="ID">arrpy</span> = &lt;<span class="ResWord">object</span>&gt;<span class="ID">arr</span></span>
+<span class="line"><span class="anchor" id="line-35-1"></span>    <span class="ID">Py_DECREF</span>( <span class="ID">arrpy</span> )</span>
+<span class="line"><span class="anchor" id="line-36-1"></span>    <span class="ID">free</span>(<span class="ID">inter</span>)</span>
+<span class="line"><span class="anchor" id="line-37-1"></span></span>
+<span class="line"><span class="anchor" id="line-38-1"></span><span class="ID">ctypedef</span> <span class="ID">unsigned</span> <span class="ID">char</span> <span class="ID">fi</span></span>
+<span class="line"><span class="anchor" id="line-39-1"></span><span class="ID">ctypedef</span> <span class="ID">fi</span>* <span class="ID">fiptr</span></span>
+<span class="line"><span class="anchor" id="line-40-1"></span><span class="ID">cdef</span> <span class="ResWord">class</span> <span class="ID">Unsigned8Buf</span>:</span>
+<span class="line"><span class="anchor" id="line-41-1"></span>    <span class="ID">cdef</span> <span class="ID">fiptr</span> <span class="ID">data</span></span>
+<span class="line"><span class="anchor" id="line-42-1"></span>    <span class="ID">cdef</span> <span class="ID">Py_intptr_t</span> <span class="ID">shape</span>[<span class="Number">2</span>]</span>
+<span class="line"><span class="anchor" id="line-43-1"></span>    <span class="ID">cdef</span> <span class="ID">Py_intptr_t</span> <span class="ID">strides</span>[<span class="Number">2</span>]</span>
+<span class="line"><span class="anchor" id="line-44-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-45-1"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ResWord">int</span> <span class="ID">width</span>, <span class="ResWord">int</span> <span class="ID">height</span>):</span>
+<span class="line"><span class="anchor" id="line-46-1"></span>        <span class="ID">cdef</span> <span class="ResWord">int</span> <span class="ID">bufsize</span></span>
+<span class="line"><span class="anchor" id="line-47-1"></span>        <span class="ID">bufsize</span> = <span class="ID">width</span>*<span class="ID">height</span>*<span class="ID">sizeof</span>(<span class="ID">fi</span>)</span>
+<span class="line"><span class="anchor" id="line-48-1"></span>        <span class="ResWord">self</span>.<span class="ID">data</span>=&lt;<span class="ID">fiptr</span>&gt;<span class="ID">malloc</span>( <span class="ID">bufsize</span> )</span>
+<span class="line"><span class="anchor" id="line-49-1"></span>        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">data</span>==<span class="ID">NULL</span>: <span class="ResWord">raise</span> <span class="ID">MemoryError</span>(<span class="String">&quot;</span><span class="String">Error allocating memory</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="anchor" id="line-50-1"></span>        <span class="ResWord">self</span>.<span class="ID">strides</span>[<span class="Number">0</span>]=<span class="ID">width</span></span>
+<span class="line"><span class="anchor" id="line-51-1"></span>        <span class="ResWord">self</span>.<span class="ID">strides</span>[<span class="Number">1</span>]=<span class="Number">1</span> <span class="Comment"># 1 byte per element</span></span>
+<span class="line"><span class="anchor" id="line-52-1"></span>        </span>
+<span class="line"><span class="anchor" id="line-53-1"></span>        <span class="ResWord">self</span>.<span class="ID">shape</span>[<span class="Number">0</span>]=<span class="ID">height</span></span>
+<span class="line"><span class="anchor" id="line-54-1"></span>        <span class="ResWord">self</span>.<span class="ID">shape</span>[<span class="Number">1</span>]=<span class="ID">width</span></span>
+<span class="line"><span class="anchor" id="line-55-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-56-1"></span>    <span class="ResWord">def</span> <span class="ID">__dealloc__</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="anchor" id="line-57-1"></span>            <span class="ID">free</span>(<span class="ResWord">self</span>.<span class="ID">data</span>)</span>
+<span class="line"><span class="anchor" id="line-58-1"></span>            </span>
+<span class="line"><span class="anchor" id="line-59-1"></span>    <span class="ResWord">property</span> <span class="ID">__array_struct__</span>:</span>
+<span class="line"><span class="anchor" id="line-60-1"></span>        <span class="ResWord">def</span> <span class="ID">__get__</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="anchor" id="line-61-1"></span>            <span class="ID">cdef</span> <span class="ID">PyArrayInterface</span>* <span class="ID">inter</span></span>
+<span class="line"><span class="anchor" id="line-62-1"></span></span>
+<span class="line"><span class="anchor" id="line-63-1"></span>            <span class="ID">cdef</span> <span class="ID">Py_intptr_t</span> *<span class="ID">newshape</span>   <span class="Comment"># A length-nd array of shape information</span></span>
+<span class="line"><span class="anchor" id="line-64-1"></span>            <span class="ID">cdef</span> <span class="ID">Py_intptr_t</span> *<span class="ID">newstrides</span> <span class="Comment"># A length-nd array of stride information</span></span>
+<span class="line"><span class="anchor" id="line-65-1"></span>            <span class="ID">cdef</span> <span class="ResWord">int</span> <span class="ID">nd</span></span>
+<span class="line"><span class="anchor" id="line-66-1"></span></span>
+<span class="line"><span class="anchor" id="line-67-1"></span>            <span class="ID">nd</span> = <span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-68-1"></span></span>
+<span class="line"><span class="anchor" id="line-69-1"></span>            <span class="ID">inter</span> = &lt;<span class="ID">PyArrayInterface</span>*&gt;<span class="ID">malloc</span>( <span class="ID">sizeof</span>( <span class="ID">PyArrayInterface</span> ) )</span>
+<span class="line"><span class="anchor" id="line-70-1"></span>            <span class="ResWord">if</span> <span class="ID">inter</span> <span class="ResWord">is</span> <span class="ID">NULL</span>:</span>
+<span class="line"><span class="anchor" id="line-71-1"></span>                <span class="ResWord">raise</span> <span class="ID">MemoryError</span>()</span>
+<span class="line"><span class="anchor" id="line-72-1"></span></span>
+<span class="line"><span class="anchor" id="line-73-1"></span>            <span class="ID">inter</span>.<span class="ID">version</span> = <span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-74-1"></span>            <span class="ID">inter</span>.<span class="ID">nd</span> = <span class="ID">nd</span></span>
+<span class="line"><span class="anchor" id="line-75-1"></span>            <span class="ID">inter</span>.<span class="ID">typekind</span> = <span class="String">'</span><span class="String">u</span><span class="String">'</span>[<span class="Number">0</span>] <span class="Comment"># unsigned int</span></span>
+<span class="line"><span class="anchor" id="line-76-1"></span>            <span class="ID">inter</span>.<span class="ID">itemsize</span> = <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-77-1"></span>            <span class="ID">inter</span>.<span class="ID">flags</span> = <span class="ID">NOTSWAPPED</span> | <span class="ID">ALIGNED</span> | <span class="ID">WRITEABLE</span></span>
+<span class="line"><span class="anchor" id="line-78-1"></span>            <span class="ID">inter</span>.<span class="ID">strides</span> = <span class="ResWord">self</span>.<span class="ID">strides</span></span>
+<span class="line"><span class="anchor" id="line-79-1"></span>            <span class="ID">inter</span>.<span class="ID">shape</span> = <span class="ResWord">self</span>.<span class="ID">shape</span></span>
+<span class="line"><span class="anchor" id="line-80-1"></span>            <span class="ID">inter</span>.<span class="ID">data</span> = <span class="ResWord">self</span>.<span class="ID">data</span></span>
+<span class="line"><span class="anchor" id="line-81-1"></span>            <span class="ID">Py_INCREF</span>(<span class="ResWord">self</span>)</span>
+<span class="line"><span class="anchor" id="line-82-1"></span>            <span class="ID">obj</span> = <span class="ID">PyCObject_FromVoidPtrAndDesc</span>( &lt;<span class="ID">void</span>*&gt;<span class="ID">inter</span>, &lt;<span class="ID">void</span>*&gt;<span class="ResWord">self</span>, <span class="ID">free_array_interface</span>)</span>
+<span class="line"><span class="anchor" id="line-83-1"></span>            <span class="ResWord">return</span> <span class="ID">obj</span></span>
+</pre></div></div><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><p class="line867">
+<h1 id="Using_data_malloced_elsewhere_with_a_Pyrex-based_extension">Using data malloced elsewhere with a Pyrex-based extension</h1>
+<span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line862">One example is the get_data_copy() function of <a class="http" href="../../external.html?link=http://code.astraw.com/projects/motmot/browser/trunk/cam_iface/src/_cam_iface_shm.pyx">_cam_iface_shm.pyx</a> in the <a class="http" href="../../external.html?link=http://code.astraw.com/projects/motmot">motmot camera utilities</a> software. In this use example, an image is copied from shared memory into an externally malloced buffer supporting the <tt>__array_struct__</tt> interface. (The shared memory stuff has only been tested on linux, but the rest should work anywhere.) <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line867">
+<h1 id="See_also">See also</h1>
+<span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><ul><li><p class="line891"><a href="Pyrex_and_NumPy.html">Cookbook/Pyrex_and_NumPy</a> <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-111"></span><a href="../CategoryCookbook.html"><strong class="highlight">CategoryCookbook</strong></a> <span class="anchor" id="line-112"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/ArrayStruct_and_Pyrex  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ArrayStruct_and_Pyrex37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/ArrayStruct_and_Pyrex">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/ArrayStruct_and_Pyrex?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+</html>
+

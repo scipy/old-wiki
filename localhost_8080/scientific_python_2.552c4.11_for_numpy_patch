@@ -1,0 +1,817 @@
+diff -rc ScientificPython-2.5.11/Examples/BSP/example1_array.py ScientificPython-2.5.11-numpy/Examples/BSP/example1_array.py
+*** ScientificPython-2.5.11/Examples/BSP/example1_array.py	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Examples/BSP/example1_array.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,5 ****
+  from Scientific.BSP import ParSequence, ParFunction, ParRootFunction
+! import Numeric; N = Numeric
+  import operator
+  
+  # The local computation function.
+--- 1,7 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  from Scientific.BSP import ParSequence, ParFunction, ParRootFunction
+! import numpy.oldnumeric as Numeric; N = Numeric
+  import operator
+  
+  # The local computation function.
+diff -rc ScientificPython-2.5.11/Examples/BSP/example4.py ScientificPython-2.5.11-numpy/Examples/BSP/example4.py
+*** ScientificPython-2.5.11/Examples/BSP/example4.py	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Examples/BSP/example4.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,5 ****
+  from Scientific.BSP import ParClass, ParBase, numberOfProcessors
+! import Numeric, operator
+  
+  class DistributedMatrix(ParBase):
+  
+--- 1,7 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  from Scientific.BSP import ParClass, ParBase, numberOfProcessors
+! import numpy.oldnumeric as Numeric, operator
+  
+  class DistributedMatrix(ParBase):
+  
+diff -rc ScientificPython-2.5.11/Examples/demomodule.c ScientificPython-2.5.11-numpy/Examples/demomodule.c
+*** ScientificPython-2.5.11/Examples/demomodule.c	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Examples/demomodule.c	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 6,12 ****
+   */
+  
+  #include "Python.h"
+! #include "Numeric/arrayobject.h"
+  #include "Scientific/netcdfmodule.h"
+  
+  
+--- 6,12 ----
+   */
+  
+  #include "Python.h"
+! #include "numpy/oldnumeric.h"
+  #include "Scientific/netcdfmodule.h"
+  
+  
+diff -rc ScientificPython-2.5.11/Examples/mpi.py ScientificPython-2.5.11-numpy/Examples/mpi.py
+*** ScientificPython-2.5.11/Examples/mpi.py	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Examples/mpi.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,5 ****
+  from Scientific import MPI
+! import Numeric, sys
+  
+  communicator = MPI.world.duplicate()
+  
+--- 1,7 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  from Scientific import MPI
+! import numpy.oldnumeric as Numeric, sys
+  
+  communicator = MPI.world.duplicate()
+  
+***************
+*** 55,60 ****
+  # Share
+  
+  to_share = (communicator.rank+1)*Numeric.arange(5)
+! all = Numeric.zeros((communicator.size,)+to_share.shape, to_share.typecode())
+  communicator.share(to_share, all)
+  print "%d has:\n%s" % (communicator.rank, str(all))
+--- 57,62 ----
+  # Share
+  
+  to_share = (communicator.rank+1)*Numeric.arange(5)
+! all = Numeric.zeros((communicator.size,)+to_share.shape, to_share.dtype.char)
+  communicator.share(to_share, all)
+  print "%d has:\n%s" % (communicator.rank, str(all))
+diff -rc ScientificPython-2.5.11/Include/Scientific/bspmodule.h ScientificPython-2.5.11-numpy/Include/Scientific/bspmodule.h
+*** ScientificPython-2.5.11/Include/Scientific/bspmodule.h	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Include/Scientific/bspmodule.h	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 12,18 ****
+  extern "C" {
+  #endif
+  
+! #include "Numeric/arrayobject.h"
+  #include "bsp.h"
+  
+  /* Include the automatically generated API definitions */
+--- 12,18 ----
+  extern "C" {
+  #endif
+  
+! #include "numpy/oldnumeric.h"
+  #include "bsp.h"
+  
+  /* Include the automatically generated API definitions */
+diff -rc ScientificPython-2.5.11/Include/Scientific/mpimodule.h ScientificPython-2.5.11-numpy/Include/Scientific/mpimodule.h
+*** ScientificPython-2.5.11/Include/Scientific/mpimodule.h	2006-05-24 14:40:37.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Include/Scientific/mpimodule.h	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 85,91 ****
+  extern "C" {
+  #endif
+  
+! #include "Numeric/arrayobject.h"
+  #include "mpi.h"
+  
+  #ifndef MPI_VERSION
+--- 85,91 ----
+  extern "C" {
+  #endif
+  
+! #include "numpy/oldnumeric.h"
+  #include "mpi.h"
+  
+  #ifndef MPI_VERSION
+diff -rc ScientificPython-2.5.11/Include/Scientific/netcdfmodule.h ScientificPython-2.5.11-numpy/Include/Scientific/netcdfmodule.h
+*** ScientificPython-2.5.11/Include/Scientific/netcdfmodule.h	2006-06-22 15:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Include/Scientific/netcdfmodule.h	2006-09-19 01:30:54.000000000 -0600
+***************
+*** 17,23 ****
+--- 17,25 ----
+  #if PY_VERSION_HEX < 0x02050000
+  #if !defined(PY_SSIZE_T_COMPATIBILITY)
+  #define PY_SSIZE_T_COMPATIBILITY
++ #ifndef NPY_VERSION
+  typedef int Py_ssize_t;
++ #endif
+  #define PY_SSIZE_T_MAX INT_MAX
+  #define PY_SSIZE_T_MIN INT_MIN
+  typedef Py_ssize_t (*lenfunc)(PyObject *);
+Only in ScientificPython-2.5.11-numpy/Include/Scientific: netcdfmodule.h~
+diff -rc ScientificPython-2.5.11/Scientific/BSP/core.py ScientificPython-2.5.11-numpy/Scientific/BSP/core.py
+*** ScientificPython-2.5.11/Scientific/BSP/core.py	2006-05-31 12:01:22.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/BSP/core.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # High-level parallelization classes
+  #
+  # Written by Konrad Hinsen <hinsen@cnrs-orleans.fr>
+***************
+*** 67,76 ****
+          requests = []
+          if type(obj) is N.arraytype:
+              send_data = obj
+!             tag = _type_tags.get(send_data.typecode(), 2)
+              if _debug_flag:
+                  print world.rank, "sending array (type %s, shape %s) to %s" \
+!                       % (send_data.typecode(), str(obj.shape), \
+                           str(destinations))
+                  sys.stdout.flush()
+              if tag == 2:
+--- 69,78 ----
+          requests = []
+          if type(obj) is N.arraytype:
+              send_data = obj
+!             tag = _type_tags.get(send_data.dtype.char, 2)
+              if _debug_flag:
+                  print world.rank, "sending array (type %s, shape %s) to %s" \
+!                       % (send_data.dtype.char, str(obj.shape), \
+                           str(destinations))
+                  sys.stdout.flush()
+              if tag == 2:
+diff -rc ScientificPython-2.5.11/Scientific/Functions/FindRoot.py ScientificPython-2.5.11-numpy/Scientific/Functions/FindRoot.py
+*** ScientificPython-2.5.11/Scientific/Functions/FindRoot.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Functions/FindRoot.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # 'Safe' Newton-Raphson for numerical root-finding
+  #
+  # Written by Scott M. Ransom <ransom@cfa.harvard.edu>
+***************
+*** 13,19 ****
+  Example::
+  
+      >>>from Scientific.Functions.FindRoot import newtonRaphson
+!     >>>from Numeric import pi, sin, cos
+      >>>def func(x):
+      >>>    return (2*x*cos(x) - sin(x))*cos(x) - x + pi/4.0
+      >>>newtonRaphson(func, 0.0, 1.0, 1.0e-12)
+--- 15,21 ----
+  Example::
+  
+      >>>from Scientific.Functions.FindRoot import newtonRaphson
+!     >>>from numpy.oldnumeric import pi, sin, cos
+      >>>def func(x):
+      >>>    return (2*x*cos(x) - sin(x))*cos(x) - x + pi/4.0
+      >>>newtonRaphson(func, 0.0, 1.0, 1.0e-12)
+diff -rc ScientificPython-2.5.11/Scientific/Functions/LeastSquares.py ScientificPython-2.5.11-numpy/Scientific/Functions/LeastSquares.py
+*** ScientificPython-2.5.11/Scientific/Functions/LeastSquares.py	2006-07-18 15:16:13.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Functions/LeastSquares.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # This module contains functions to do general non-linear
+  # least squares fits.
+  #
+***************
+*** 10,16 ****
+  
+  Usage example::
+  
+!     from Numeric import exp
+  
+      def f(param, t):
+          return param[0]*exp(-param[1]/t)
+--- 12,18 ----
+  
+  Usage example::
+  
+!     from numpy.oldnumeric import exp
+  
+      def f(param, t):
+          return param[0]*exp(-param[1]/t)
+diff -rc ScientificPython-2.5.11/Scientific/Functions/Polynomial.py ScientificPython-2.5.11-numpy/Scientific/Functions/Polynomial.py
+*** ScientificPython-2.5.11/Scientific/Functions/Polynomial.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Functions/Polynomial.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # This module defines a multivariate polynomial class
+  #
+  # Written by Konrad Hinsen <hinsen@cnrs-orleans.fr>
+***************
+*** 69,79 ****
+          shape[:self.dim] = self.coeff.shape
+          shape[:other.dim] = Numeric.maximum(shape[:other.dim],
+                                              other.coeff.shape)
+!         coeff1 = Numeric.zeros(shape, self.coeff.typecode())
+          index = tuple(map(lambda d: slice(0, d), self.coeff.shape) + \
+                        (dim-self.dim)*[0])
+          coeff1[index] = self.coeff
+!         coeff2 = Numeric.zeros(shape, other.coeff.typecode())
+          index = tuple(map(lambda d: slice(0, d), other.coeff.shape) + \
+                        (dim-other.dim)*[0])
+          coeff2[index] = other.coeff
+--- 71,81 ----
+          shape[:self.dim] = self.coeff.shape
+          shape[:other.dim] = Numeric.maximum(shape[:other.dim],
+                                              other.coeff.shape)
+!         coeff1 = Numeric.zeros(shape, self.coeff.dtype.char)
+          index = tuple(map(lambda d: slice(0, d), self.coeff.shape) + \
+                        (dim-self.dim)*[0])
+          coeff1[index] = self.coeff
+!         coeff2 = Numeric.zeros(shape, other.coeff.dtype.char)
+          index = tuple(map(lambda d: slice(0, d), other.coeff.shape) + \
+                        (dim-other.dim)*[0])
+          coeff2[index] = other.coeff
+***************
+*** 153,163 ****
+          n = len(self.coeff)-1
+          if n == 0:
+              return Numeric.array([])
+!         a = Numeric.zeros((n, n), self.coeff.typecode())
+          if n > 1:
+              a[1:, :-1] = Numeric.identity(n-1)
+          a[:, -1] = -self.coeff[:-1]/self.coeff[-1]
+!         from LinearAlgebra import eigenvalues
+          return eigenvalues(a)
+  
+  # Polynomial fit constructor for use in module Interpolation
+--- 155,165 ----
+          n = len(self.coeff)-1
+          if n == 0:
+              return Numeric.array([])
+!         a = Numeric.zeros((n, n), self.coeff.dtype.char)
+          if n > 1:
+              a[1:, :-1] = Numeric.identity(n-1)
+          a[:, -1] = -self.coeff[:-1]/self.coeff[-1]
+!         from numpy.oldnumeric.linear_algebra import eigenvalues
+          return eigenvalues(a)
+  
+  # Polynomial fit constructor for use in module Interpolation
+diff -rc ScientificPython-2.5.11/Scientific/Functions/Romberg.py ScientificPython-2.5.11-numpy/Scientific/Functions/Romberg.py
+*** ScientificPython-2.5.11/Scientific/Functions/Romberg.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Functions/Romberg.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # Romberg quadratures for numeric integration.
+  #
+  # Written by Scott M. Ransom <ransom@cfa.harvard.edu>
+***************
+*** 18,24 ****
+      Example::
+  
+        >>>from Scientific.Functions.Romberg import trapezoid
+!       >>>from Numeric import pi, tan
+        >>>trapezoid(tan, (0.0, pi/3.0), 100)
+  
+        yields 0.69317459482518262
+--- 20,26 ----
+      Example::
+  
+        >>>from Scientific.Functions.Romberg import trapezoid
+!       >>>from numpy.oldnumeric import pi, tan
+        >>>trapezoid(tan, (0.0, pi/3.0), 100)
+  
+        yields 0.69317459482518262
+***************
+*** 77,83 ****
+      Example::
+  
+        >>>from Scientific.Functions.Romberg import romberg
+!       >>>from Numeric import pi, tan
+        >>>romberg(tan, (0.0, pi/3.0))
+  
+        yields '0.693147180562'
+--- 79,85 ----
+      Example::
+  
+        >>>from Scientific.Functions.Romberg import romberg
+!       >>>from numpy.oldnumeric import pi, tan
+        >>>romberg(tan, (0.0, pi/3.0))
+  
+        yields '0.693147180562'
+diff -rc ScientificPython-2.5.11/Scientific/Geometry/Quaternion.py ScientificPython-2.5.11-numpy/Scientific/Geometry/Quaternion.py
+*** ScientificPython-2.5.11/Scientific/Geometry/Quaternion.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Geometry/Quaternion.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # This module defines a class representing quaternions.
+  # It contains just what is needed for using quaternions as representations
+  # of rotations in 3d space.
+***************
+*** 99,105 ****
+          @returns: the inverse
+          @rtype: L{Quaternion}
+          """
+!         import LinearAlgebra
+          inverse = LinearAlgebra.inverse(self.asMatrix())
+          return Quaternion(inverse[:, 0])
+  
+--- 101,107 ----
+          @returns: the inverse
+          @rtype: L{Quaternion}
+          """
+!         import numpy.oldnumeric.linear_algebra as LinearAlgebra
+          inverse = LinearAlgebra.inverse(self.asMatrix())
+          return Quaternion(inverse[:, 0])
+  
+diff -rc ScientificPython-2.5.11/Scientific/Geometry/TensorModule.py ScientificPython-2.5.11-numpy/Scientific/Geometry/TensorModule.py
+*** ScientificPython-2.5.11/Scientific/Geometry/TensorModule.py	2006-05-31 12:01:23.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Geometry/TensorModule.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # This module defines 3d geometrical tensors with the standard
+  # operations on them. The elements are stored in an array.
+  #
+***************
+*** 95,101 ****
+              return 1
+          else:
+              return not N.logical_and.reduce(
+!                 N.equal(self.array, other.array).flat)
+  
+      def __len__(self):
+          return 3
+--- 97,103 ----
+              return 1
+          else:
+              return not N.logical_and.reduce(
+!                 N.equal(self.array, other.array).ravel())
+  
+      def __len__(self):
+          return 3
+***************
+*** 191,197 ****
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from LinearAlgebra import eigenvalues
+              return eigenvalues(self.array)
+          else:
+              raise ValueError('Undefined operation')
+--- 193,199 ----
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from numpy.oldnumeric.linear_algebra import eigenvalues
+              return eigenvalues(self.array)
+          else:
+              raise ValueError('Undefined operation')
+***************
+*** 204,210 ****
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from LinearAlgebra import eigenvectors
+              ev, vectors = eigenvectors(self.array)
+              return ev, Tensor(vectors)
+          else:
+--- 206,212 ----
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from numpy.oldnumeric.linear_algebra import eigenvectors
+              ev, vectors = eigenvectors(self.array)
+              return ev, Tensor(vectors)
+          else:
+***************
+*** 217,223 ****
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from LinearAlgebra import inverse
+              return Tensor(inverse(self.array))
+          else:
+              raise ValueError('Undefined operation')
+--- 219,225 ----
+          @raises ValueError: if rank !=2 
+          """
+          if self.rank == 2:
+!             from numpy.oldnumeric.linear_algebra import inverse
+              return Tensor(inverse(self.array))
+          else:
+              raise ValueError('Undefined operation')
+diff -rc ScientificPython-2.5.11/Scientific/Geometry/Transformation.py ScientificPython-2.5.11-numpy/Scientific/Geometry/Transformation.py
+*** ScientificPython-2.5.11/Scientific/Geometry/Transformation.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Geometry/Transformation.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # This module defines classes that represent coordinate translations,
+  # rotations, and combinations of translation and rotation.
+  #
+***************
+*** 377,383 ****
+          return Rotation(self.tensor.transpose())*Translation(-self.vector)
+  
+  #    def screwMotion1(self):
+! #        import LinearAlgebra
+  #        axis, angle = self.rotation().axisAndAngle()
+  #        d = self.vector*axis
+  #        x = d*axis-self.vector
+--- 379,385 ----
+          return Rotation(self.tensor.transpose())*Translation(-self.vector)
+  
+  #    def screwMotion1(self):
+! #        import numpy.oldnumeric.linear_algebra as LinearAlgebra
+  #        axis, angle = self.rotation().axisAndAngle()
+  #        d = self.vector*axis
+  #        x = d*axis-self.vector
+diff -rc ScientificPython-2.5.11/Scientific/LA.py ScientificPython-2.5.11-numpy/Scientific/LA.py
+*** ScientificPython-2.5.11/Scientific/LA.py	2006-06-12 14:01:09.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/LA.py	2006-09-19 01:34:20.000000000 -0600
+***************
+*** 1,20 ****
+! done = False
+! 
+! try:
+!     from Scientific import use_numeric
+!     from LinearAlgebra import *
+!     del use_numeric
+!     done = True
+! except ImportError:
+!     pass
+! 
+! if not done:
+!     try:
+!         from Scientific import use_numarray
+!         from numarray.linear_algebra import *
+!         del use_numarray
+!         done = True
+!     except ImportError:
+!         pass
+! 
+! del done
+--- 1 ----
+! from numpy.oldnumeric.linear_algebra import *
+Only in ScientificPython-2.5.11-numpy/Scientific: LA.py~
+diff -rc ScientificPython-2.5.11/Scientific/Mathematica.py ScientificPython-2.5.11-numpy/Scientific/Mathematica.py
+*** ScientificPython-2.5.11/Scientific/Mathematica.py	2006-05-31 12:01:24.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Mathematica.py	2006-09-19 01:27:00.000000000 -0600
+***************
+*** 1,9 ****
+  # Interface to Mathematica for plotting
+  #
+  # Written by Konrad Hinsen <hinsen@cnrs-orleans.fr>
+  # last revision: 2005-9-5
+  
+! import Numeric, os, string, tempfile
+  
+  # Class representing a Mathematica process
+  
+--- 1,11 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # Interface to Mathematica for plotting
+  #
+  # Written by Konrad Hinsen <hinsen@cnrs-orleans.fr>
+  # last revision: 2005-9-5
+  
+! import numpy.oldnumeric as Numeric, os, string, tempfile
+  
+  # Class representing a Mathematica process
+  
+***************
+*** 191,197 ****
+      
+  if __name__ == '__main__':
+  
+!     from Numeric import arange, sin, NewAxis
+  
+  #    data1 = [4,6,5,3]
+  #    data2 = [4,6,5,3]
+--- 193,199 ----
+      
+  if __name__ == '__main__':
+  
+!     from numpy.oldnumeric import arange, sin, NewAxis
+  
+  #    data1 = [4,6,5,3]
+  #    data2 = [4,6,5,3]
+diff -rc ScientificPython-2.5.11/Scientific/MPI/core.py ScientificPython-2.5.11-numpy/Scientific/MPI/core.py
+*** ScientificPython-2.5.11/Scientific/MPI/core.py	2006-06-23 13:13:30.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/MPI/core.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # The MPI Interface is written in C; this module only contains documentation
+  # and imports objects from the C module.
+  #
+***************
+*** 403,409 ****
+          del _registerErrorObject
+      except ImportError:
+  
+!         import Numeric
+  
+          _C_API = None
+  
+--- 405,411 ----
+          del _registerErrorObject
+      except ImportError:
+  
+!         import numpy.oldnumeric as Numeric
+  
+          _C_API = None
+  
+***************
+*** 420,426 ****
+              def send(self, data, destination, tag):
+                  if destination != 0:
+                      raise MPIError("invalid MPI destination")
+!                 self.messages.append((tag, Numeric.array(data, copy=1).flat))
+  
+              def nonblockingSend(self, data, destination, tag):
+                  self.send(data, destination, tag)
+--- 422,428 ----
+              def send(self, data, destination, tag):
+                  if destination != 0:
+                      raise MPIError("invalid MPI destination")
+!                 self.messages.append((tag, Numeric.array(data, copy=1).ravel()))
+  
+              def nonblockingSend(self, data, destination, tag):
+                  self.send(data, destination, tag)
+diff -rc ScientificPython-2.5.11/Scientific/N.py ScientificPython-2.5.11-numpy/Scientific/N.py
+*** ScientificPython-2.5.11/Scientific/N.py	2006-06-13 09:38:04.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/N.py	2006-09-19 01:32:51.000000000 -0600
+***************
+*** 1,38 ****
+! done = False
+! 
+! try:
+!     from Scientific import use_numeric
+!     from Numeric import *
+!     del use_numeric
+!     done = True
+!     def int_sum(a, axis=0):
+!         return add.reduce(a, axis)
+! 
+! except ImportError:
+!     pass
+! 
+! if not done:
+!     try:
+!         from Scientific import use_numpy
+!         from numpy import *
+!         del use_numpy
+!         done = True
+!         def int_sum(a, axis=0):
+!             return add.reduce(a, axis)
+! 
+!     except ImportError:
+!         pass
+! 
+! if not done:
+!     try:
+!         from Scientific import use_numarray
+!         from numarray import *
+!         del use_numarray
+!         done = True
+!         def int_sum(a, axis=0):
+!             return add.reduce(a, axis, type=Int)
+! 
+!     except ImportError:
+!         pass
+! 
+! del done
+--- 1,3 ----
+! from numpy.oldnumeric import *
+! def int_sum(a, axis=0):
+!     return add.reduce(a, axis)
+Only in ScientificPython-2.5.11-numpy/Scientific: N.py~
+diff -rc ScientificPython-2.5.11/Scientific/Signals/Models.py ScientificPython-2.5.11-numpy/Scientific/Signals/Models.py
+*** ScientificPython-2.5.11/Scientific/Signals/Models.py	2006-06-12 14:01:10.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Scientific/Signals/Models.py	2006-09-19 01:27:01.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 19, 2006 by -c
++ 
+  # Autoregressive Model for stochastic processes
+  #
+  # Written by Konrad Hinsen <hinsen@cnrs-orleans.fr>
+***************
+*** 100,111 ****
+          @rtype: C{Numeric.array} of C{complex}
+          """
+          if self._poles is None:
+!             from LinearAlgebra import eigenvalues
+              n = len(self.coeff)
+              if n == 1:
+                  self._poles = self.coeff
+              else:
+!                 a = N.zeros((n, n), self.coeff.typecode())
+                  a[1:, :-1] = N.identity(n-1)
+                  a[:, -1] = self.coeff
+                  self._poles = eigenvalues(a)
+--- 102,113 ----
+          @rtype: C{Numeric.array} of C{complex}
+          """
+          if self._poles is None:
+!             from numpy.oldnumeric.linear_algebra import eigenvalues
+              n = len(self.coeff)
+              if n == 1:
+                  self._poles = self.coeff
+              else:
+!                 a = N.zeros((n, n), self.coeff.dtype.char)
+                  a[1:, :-1] = N.identity(n-1)
+                  a[:, -1] = self.coeff
+                  self._poles = eigenvalues(a)
+***************
+*** 313,319 ****
+  
+  if __name__ == '__main__':
+  
+!     import FFT
+      def AutoCorrelationFunction(series):
+          n = 2*len(series)
+          FFTSeries = FFT.fft(series,n,0)
+--- 315,321 ----
+  
+  if __name__ == '__main__':
+  
+!     import numpy.oldnumeric.fft as FFT
+      def AutoCorrelationFunction(series):
+          n = 2*len(series)
+          FFTSeries = FFT.fft(series,n,0)
+***************
+*** 325,331 ****
+      from Scientific.Statistics import mean
+      from Scientific.IO.ArrayIO import readArray
+      from Gnuplot import plot
+!     from RandomArray import random
+      dt = 1.
+      t = dt*N.arange(500)
+      if 1:
+--- 327,333 ----
+      from Scientific.Statistics import mean
+      from Scientific.IO.ArrayIO import readArray
+      from Gnuplot import plot
+!     from numpy.oldnumeric.random_array import random
+      dt = 1.
+      t = dt*N.arange(500)
+      if 1:
+Only in ScientificPython-2.5.11/Scientific: use_numarray
+Only in ScientificPython-2.5.11/Scientific: use_numeric
+Only in ScientificPython-2.5.11/Scientific: use_numpy
+diff -rc ScientificPython-2.5.11/setup.py ScientificPython-2.5.11-numpy/setup.py
+*** ScientificPython-2.5.11/setup.py	2006-06-13 09:34:54.000000000 -0600
+--- ScientificPython-2.5.11-numpy/setup.py	2006-09-19 01:32:10.000000000 -0600
+***************
+*** 15,37 ****
+  pkginfo = Dummy()
+  execfile('Scientific/__pkginfo__.py', pkginfo.__dict__)
+  
+  extra_compile_args = []
+! arrayobject_h_include = []
+! if "--numpy" in sys.argv:
+!     use_numpy = 1
+!     extra_compile_args.append("-DNUMPY=1")
+!     sys.argv.remove("--numpy")
+!     arrayobject_h_include = [os.path.join(sys.prefix,
+!                             "lib/python%s.%s/site-packages/numpy/core/include"
+!                                           % sys.version_info [:2])]
+! else:
+!     use_numpy = 0
+! if "--numarray" in sys.argv:
+!     use_numarray = 1
+!     extra_compile_args.append("-DNUMARRAY=1")
+!     sys.argv.remove("--numarray")
+! else:
+!     use_numarray = 0
+  
+  if netcdf_prefix is None:
+      try:
+--- 15,23 ----
+  pkginfo = Dummy()
+  execfile('Scientific/__pkginfo__.py', pkginfo.__dict__)
+  
++ import numpy
+  extra_compile_args = []
+! arrayobject_h_include = [numpy.get_include()]
+  
+  if netcdf_prefix is None:
+      try:
+***************
+*** 76,97 ****
+                               ['Src/Scientific_vector.c'],
+                               libraries=['m']))
+  
+! if 'sdist' in sys.argv:
+!     packages.append('Scientific.use_numarray')
+!     packages.append('Scientific.use_numeric')
+!     packages.append('Scientific.use_numpy')
+! elif use_numpy:
+!     packages.append('Scientific.use_numpy')
+! elif use_numarray:
+!     packages.append('Scientific.use_numarray')
+! else:
+!     packages.append('Scientific.use_numeric')
+  
+- if sys.version[:3] >= '2.1':
+-     packages.append('Scientific.BSP')
+-     scripts = ['bsp_virtual']
+- else:
+-     scripts = []
+  
+  class modified_install_headers(install_headers):
+  
+--- 62,70 ----
+                               ['Src/Scientific_vector.c'],
+                               libraries=['m']))
+  
+! packages.append('Scientific.BSP')
+! scripts = ['bsp_virtual']
+  
+  
+  class modified_install_headers(install_headers):
+  
+Only in ScientificPython-2.5.11-numpy: setup.py~
+diff -rc ScientificPython-2.5.11/Src/Scientific_netcdf.c ScientificPython-2.5.11-numpy/Src/Scientific_netcdf.c
+*** ScientificPython-2.5.11/Src/Scientific_netcdf.c	2006-08-17 14:29:42.000000000 -0600
+--- ScientificPython-2.5.11-numpy/Src/Scientific_netcdf.c	2006-09-19 01:29:02.000000000 -0600
+***************
+*** 10,24 ****
+  #endif
+  
+  #include "Python.h"
+! #if defined(NUMPY)
+! #include "numpy/arrayobject.h"
+! #else
+! #if defined(NUMARRAY)
+! #include "numarray/arrayobject.h"
+! #else
+! #include "Numeric/arrayobject.h"
+! #endif
+! #endif
+  #include "netcdf.h"
+  
+  #define _NETCDF_MODULE
+--- 10,16 ----
+  #endif
+  
+  #include "Python.h"
+! #include "numpy/oldnumeric.h"
+  #include "netcdf.h"
+  
+  #define _NETCDF_MODULE
+Only in ScientificPython-2.5.11-numpy/Src: Scientific_netcdf.c~

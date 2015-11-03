@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/vtkVolumeRendering by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:23:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/vtkVolumeRendering - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/vtkVolumeRendering" href="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FvtkVolumeRendering&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="vtkVolumeRendering456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="../AllPages190b.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FvtkVolumeRendering%22" rel="nofollow" title="Click to do a full-text search for this title">vtkVolumeRendering</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="vtkVolumeRendering.html">vtkVolumeRendering</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="vtkVolumeRendering37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line862">As I had some problems in figuring out how to use VTK to render data contained in a three dimensional numpy array, I have decided to share my code. This code is based on the otherwise excellent documentation for VTK and the now outdated vtkImageImportFromArray-class created by David Gobbi found at <a class="http" href="../../external.html?link=http://public.kitware.com/cgi-bin/cvsweb.cgi/vtk/python/?cvsroot=vtk">http://public.kitware.com/cgi-bin/cvsweb.cgi/vtk/python/?cvsroot=vtk</a> <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line874">The example is very simple, for more advanced functionality: read the documentation. <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867"><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-8340d8d2f637b75ba3c03d415902ec56afda8969\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_1">   1</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">vtk</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_2">   2</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_3">   3</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_3"></span><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_4">   4</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_4"></span><span class="anchor" id="line-4-1"></span><span class="Comment"># We begin by creating the data we want to render.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_5">   5</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_5"></span><span class="anchor" id="line-5-1"></span><span class="Comment"># For this tutorial, we create a 3D-image containing three overlaping cubes. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_6">   6</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_6"></span><span class="anchor" id="line-6-1"></span><span class="Comment"># This data can of course easily be replaced by data from a medical CT-scan or anything else three dimensional.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_7">   7</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_7"></span><span class="anchor" id="line-7-1"></span><span class="Comment"># The only limit is that the data must be reduced to unsigned 8 bit or 16 bit integers.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_8">   8</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_8"></span><span class="anchor" id="line-8-1"></span><span class="ID">data_matrix</span> = <span class="ID">zeros</span>([<span class="Number">75</span>, <span class="Number">75</span>, <span class="Number">75</span>], <span class="ID">dtype</span>=<span class="ID">uint8</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_9">   9</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">data_matrix</span>[<span class="Number">0</span>:<span class="Number">35</span>, <span class="Number">0</span>:<span class="Number">35</span>, <span class="Number">0</span>:<span class="Number">35</span>] = <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_10">  10</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">data_matrix</span>[<span class="Number">25</span>:<span class="Number">55</span>, <span class="Number">25</span>:<span class="Number">55</span>, <span class="Number">25</span>:<span class="Number">55</span>] = <span class="Number">100</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_11">  11</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">data_matrix</span>[<span class="Number">45</span>:<span class="Number">74</span>, <span class="Number">45</span>:<span class="Number">74</span>, <span class="Number">45</span>:<span class="Number">74</span>] = <span class="Number">150</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_12">  12</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_13">  13</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_13"></span><span class="anchor" id="line-13-1"></span><span class="Comment"># For VTK to be able to use the data, it must be stored as a VTK-image. This can be done by the vtkImageImport-class which</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_14">  14</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_14"></span><span class="anchor" id="line-14-1"></span><span class="Comment"># imports raw data and stores it. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_15">  15</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">dataImporter</span> = <span class="ID">vtk</span>.<span class="ID">vtkImageImport</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_16">  16</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_16"></span><span class="anchor" id="line-16-1"></span><span class="Comment"># The preaviusly created array is converted to a string of chars and imported.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_17">  17</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">data_string</span> = <span class="ID">data_matrix</span>.<span class="ID">tostring</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_18">  18</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_18"></span><span class="anchor" id="line-18-1"></span><span class="ID">dataImporter</span>.<span class="ID">CopyImportVoidPointer</span>(<span class="ID">data_string</span>, <span class="ResWord">len</span>(<span class="ID">data_string</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_19">  19</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_19"></span><span class="anchor" id="line-19-1"></span><span class="Comment"># The type of the newly imported data is set to unsigned char (uint8)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_20">  20</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">dataImporter</span>.<span class="ID">SetDataScalarTypeToUnsignedChar</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_21">  21</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_21"></span><span class="anchor" id="line-21-1"></span><span class="Comment"># Because the data that is imported only contains an intensity value (it isnt RGB-coded or someting similar), the importer</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_22">  22</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_22"></span><span class="anchor" id="line-22-1"></span><span class="Comment"># must be told this is the case.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_23">  23</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_23"></span><span class="anchor" id="line-23-1"></span><span class="ID">dataImporter</span>.<span class="ID">SetNumberOfScalarComponents</span>(<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_24">  24</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_24"></span><span class="anchor" id="line-24-1"></span><span class="Comment"># The following two functions describe how the data is stored and the dimensions of the array it is stored in. For this</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_25">  25</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_25"></span><span class="anchor" id="line-25-1"></span><span class="Comment"># simple case, all axes are of length 75 and begins with the first element. For other data, this is probably not the case.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_26">  26</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_26"></span><span class="anchor" id="line-26-1"></span><span class="Comment"># I have to admit however, that I honestly dont know the difference between SetDataExtent() and SetWholeExtent() although</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_27">  27</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_27"></span><span class="anchor" id="line-27-1"></span><span class="Comment"># VTK complains if not both are used.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_28">  28</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_28"></span><span class="anchor" id="line-28-1"></span><span class="ID">dataImporter</span>.<span class="ID">SetDataExtent</span>(<span class="Number">0</span>, <span class="Number">74</span>, <span class="Number">0</span>, <span class="Number">74</span>, <span class="Number">0</span>, <span class="Number">74</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_29">  29</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_29"></span><span class="anchor" id="line-29-1"></span><span class="ID">dataImporter</span>.<span class="ID">SetWholeExtent</span>(<span class="Number">0</span>, <span class="Number">74</span>, <span class="Number">0</span>, <span class="Number">74</span>, <span class="Number">0</span>, <span class="Number">74</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_30">  30</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_30"></span><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_31">  31</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_31"></span><span class="anchor" id="line-31-1"></span><span class="Comment"># The following class is used to store transparencyv-values for later retrival. In our case, we want the value 0 to be</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_32">  32</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_32"></span><span class="anchor" id="line-32-1"></span><span class="Comment"># completly opaque whereas the three different cubes are given different transperancy-values to show how it works.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_33">  33</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_33"></span><span class="anchor" id="line-33-1"></span><span class="ID">alphaChannelFunc</span> = <span class="ID">vtk</span>.<span class="ID">vtkPiecewiseFunction</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_34">  34</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">alphaChannelFunc</span>.<span class="ID">AddPoint</span>(<span class="Number">0</span>, <span class="Number">0.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_35">  35</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_35"></span><span class="anchor" id="line-35-1"></span><span class="ID">alphaChannelFunc</span>.<span class="ID">AddPoint</span>(<span class="Number">50</span>, <span class="Number">0.05</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_36">  36</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_36"></span><span class="anchor" id="line-36-1"></span><span class="ID">alphaChannelFunc</span>.<span class="ID">AddPoint</span>(<span class="Number">100</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_37">  37</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_37"></span><span class="anchor" id="line-37-1"></span><span class="ID">alphaChannelFunc</span>.<span class="ID">AddPoint</span>(<span class="Number">150</span>, <span class="Number">0.2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_38">  38</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_38"></span><span class="anchor" id="line-38-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_39">  39</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_39"></span><span class="anchor" id="line-39-1"></span><span class="Comment"># This class stores color data and can create color tables from a few color points. For this demo, we want the three cubes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_40">  40</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_40"></span><span class="anchor" id="line-40-1"></span><span class="Comment"># to be of the colors red green and blue.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_41">  41</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_41"></span><span class="anchor" id="line-41-1"></span><span class="ID">colorFunc</span> = <span class="ID">vtk</span>.<span class="ID">vtkColorTransferFunction</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_42">  42</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_42"></span><span class="anchor" id="line-42-1"></span><span class="ID">colorFunc</span>.<span class="ID">AddRGBPoint</span>(<span class="Number">50</span>, <span class="Number">1.0</span>, <span class="Number">0.0</span>, <span class="Number">0.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_43">  43</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_43"></span><span class="anchor" id="line-43-1"></span><span class="ID">colorFunc</span>.<span class="ID">AddRGBPoint</span>(<span class="Number">100</span>, <span class="Number">0.0</span>, <span class="Number">1.0</span>, <span class="Number">0.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_44">  44</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_44"></span><span class="anchor" id="line-44-1"></span><span class="ID">colorFunc</span>.<span class="ID">AddRGBPoint</span>(<span class="Number">150</span>, <span class="Number">0.0</span>, <span class="Number">0.0</span>, <span class="Number">1.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_45">  45</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_45"></span><span class="anchor" id="line-45-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_46">  46</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_46"></span><span class="anchor" id="line-46-1"></span><span class="Comment"># The preavius two classes stored properties. Because we want to apply these properties to the volume we want to render,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_47">  47</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_47"></span><span class="anchor" id="line-47-1"></span><span class="Comment"># we have to store them in a class that stores volume prpoperties.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_48">  48</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_48"></span><span class="anchor" id="line-48-1"></span><span class="ID">volumeProperty</span> = <span class="ID">vtk</span>.<span class="ID">vtkVolumeProperty</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_49">  49</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_49"></span><span class="anchor" id="line-49-1"></span><span class="ID">volumeProperty</span>.<span class="ID">SetColor</span>(<span class="ID">colorFunc</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_50">  50</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_50"></span><span class="anchor" id="line-50-1"></span><span class="ID">volumeProperty</span>.<span class="ID">SetScalarOpacity</span>(<span class="ID">alphaChannelFunc</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_51">  51</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_51"></span><span class="anchor" id="line-51-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_52">  52</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_52"></span><span class="anchor" id="line-52-1"></span><span class="Comment"># This class describes how the volume is rendered (through ray tracing).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_53">  53</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_53"></span><span class="anchor" id="line-53-1"></span><span class="ID">compositeFunction</span> = <span class="ID">vtk</span>.<span class="ID">vtkVolumeRayCastCompositeFunction</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_54">  54</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_54"></span><span class="anchor" id="line-54-1"></span><span class="Comment"># We can finally create our volume. We also have to specify the data for it, as well as how the data will be rendered.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_55">  55</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_55"></span><span class="anchor" id="line-55-1"></span><span class="ID">volumeMapper</span> = <span class="ID">vtk</span>.<span class="ID">vtkVolumeRayCastMapper</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_56">  56</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_56"></span><span class="anchor" id="line-56-1"></span><span class="ID">volumeMapper</span>.<span class="ID">SetVolumeRayCastFunction</span>(<span class="ID">compositeFunction</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_57">  57</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_57"></span><span class="anchor" id="line-57-1"></span><span class="ID">volumeMapper</span>.<span class="ID">SetInputConnection</span>(<span class="ID">dataImporter</span>.<span class="ID">GetOutputPort</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_58">  58</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_58"></span><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_59">  59</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_59"></span><span class="anchor" id="line-59-1"></span><span class="Comment"># The class vtkVolume is used to pair the preaviusly declared volume as well as the properties to be used when rendering that volume.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_60">  60</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_60"></span><span class="anchor" id="line-60-1"></span><span class="ID">volume</span> = <span class="ID">vtk</span>.<span class="ID">vtkVolume</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_61">  61</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_61"></span><span class="anchor" id="line-61-1"></span><span class="ID">volume</span>.<span class="ID">SetMapper</span>(<span class="ID">volumeMapper</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_62">  62</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_62"></span><span class="anchor" id="line-62-1"></span><span class="ID">volume</span>.<span class="ID">SetProperty</span>(<span class="ID">volumeProperty</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_63">  63</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_63"></span><span class="anchor" id="line-63-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_64">  64</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_64"></span><span class="anchor" id="line-64-1"></span><span class="Comment"># With almost everything else ready, its time to initialize the renderer and window, as well as creating a method for exiting the application</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_65">  65</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_65"></span><span class="anchor" id="line-65-1"></span><span class="ID">renderer</span> = <span class="ID">vtk</span>.<span class="ID">vtkRenderer</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_66">  66</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_66"></span><span class="anchor" id="line-66-1"></span><span class="ID">renderWin</span> = <span class="ID">vtk</span>.<span class="ID">vtkRenderWindow</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_67">  67</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_67"></span><span class="anchor" id="line-67-1"></span><span class="ID">renderWin</span>.<span class="ID">AddRenderer</span>(<span class="ID">renderer</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_68">  68</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_68"></span><span class="anchor" id="line-68-1"></span><span class="ID">renderInteractor</span> = <span class="ID">vtk</span>.<span class="ID">vtkRenderWindowInteractor</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_69">  69</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_69"></span><span class="anchor" id="line-69-1"></span><span class="ID">renderInteractor</span>.<span class="ID">SetRenderWindow</span>(<span class="ID">renderWin</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_70">  70</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_70"></span><span class="anchor" id="line-70-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_71">  71</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_71"></span><span class="anchor" id="line-71-1"></span><span class="Comment"># We add the volume to the renderer ...</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_72">  72</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_72"></span><span class="anchor" id="line-72-1"></span><span class="ID">renderer</span>.<span class="ID">AddVolume</span>(<span class="ID">volume</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_73">  73</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_73"></span><span class="anchor" id="line-73-1"></span><span class="Comment"># ... set background color to white ...</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_74">  74</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_74"></span><span class="anchor" id="line-74-1"></span><span class="ID">renderer</span>.<span class="ID">SetBackground</span>(<span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_75">  75</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_75"></span><span class="anchor" id="line-75-1"></span><span class="Comment"># ... and set window size.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_76">  76</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_76"></span><span class="anchor" id="line-76-1"></span><span class="ID">renderWin</span>.<span class="ID">SetSize</span>(<span class="Number">400</span>, <span class="Number">400</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_77">  77</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_77"></span><span class="anchor" id="line-77-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_78">  78</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_78"></span><span class="anchor" id="line-78-1"></span><span class="Comment"># A simple function to be called when the user decides to quit the application.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_79">  79</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_79"></span><span class="anchor" id="line-79-1"></span><span class="ResWord">def</span> <span class="ID">exitCheck</span>(<span class="ID">obj</span>, <span class="ID">event</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_80">  80</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_80"></span><span class="anchor" id="line-80-1"></span>    <span class="ResWord">if</span> <span class="ID">obj</span>.<span class="ID">GetEventPending</span>() != <span class="Number">0</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_81">  81</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_81"></span><span class="anchor" id="line-81-1"></span>        <span class="ID">obj</span>.<span class="ID">SetAbortRender</span>(<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_82">  82</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_82"></span><span class="anchor" id="line-82-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_83">  83</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_83"></span><span class="anchor" id="line-83-1"></span><span class="Comment"># Tell the application to use the function as an exit check.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_84">  84</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_84"></span><span class="anchor" id="line-84-1"></span><span class="ID">renderWin</span>.<span class="ID">AddObserver</span>(<span class="String">&quot;</span><span class="String">AbortCheckEvent</span><span class="String">&quot;</span>, <span class="ID">exitCheck</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_85">  85</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_85"></span><span class="anchor" id="line-85-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_86">  86</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_86"></span><span class="anchor" id="line-86-1"></span><span class="ID">renderInteractor</span>.<span class="ID">Initialize</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_87">  87</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_87"></span><span class="anchor" id="line-87-1"></span><span class="Comment"># Because nothing will be rendered without any input, we order the first render manually before control is handed over to the main-loop.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_88">  88</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_88"></span><span class="anchor" id="line-88-1"></span><span class="ID">renderWin</span>.<span class="ID">Render</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8340d8d2f637b75ba3c03d415902ec56afda8969_89">  89</a> </span><span class="LineAnchor" id="CA-8340d8d2f637b75ba3c03d415902ec56afda8969_89"></span><span class="anchor" id="line-89-1"></span><span class="ID">renderInteractor</span>.<span class="ID">Start</span>()</span>
+</pre></div></div><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><p class="line862">To exit the application, simply press <em>q</em>. <span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><p class="line874">In my opinion, the volume renderer creates extremely ugly images if not the following option is used: <span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-f6d33e47efc29a7602e40ce794be08ea8451f20f\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-f6d33e47efc29a7602e40ce794be08ea8451f20f" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-f6d33e47efc29a7602e40ce794be08ea8451f20f_1">   1</a> </span><span class="LineAnchor" id="CA-f6d33e47efc29a7602e40ce794be08ea8451f20f_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">volumeProperty</span>.<span class="ID">ShadeOn</span>()</span>
+</pre></div></div><span class="anchor" id="line-104"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-105"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-106"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/vtkVolumeRendering  (last edited 2015-10-24 17:48:26 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="vtkVolumeRendering37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/vtkVolumeRendering">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/vtkVolumeRendering by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:23:06 GMT -->
+</html>
+

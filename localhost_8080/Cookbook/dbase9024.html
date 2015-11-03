@@ -1,0 +1,488 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=dbase.0.2.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:42:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:dbase.0.2.py of Cookbook/dbase - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/dbase" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2Fdbase&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="data.0.3.csv" href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">
+<link rel="Appendix" title="data.csv" href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">
+<link rel="Appendix" title="dbase.0.1.py" href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">
+<link rel="Appendix" title="dbase.0.2.py" href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">
+<link rel="Appendix" title="dbase.0.3.py" href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">
+<link rel="Appendix" title="dbase.0.4.py" href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">
+<link rel="Appendix" title="dbase.0.5.py" href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">
+<link rel="Appendix" title="dbase.0.6.py" href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">
+<link rel="Appendix" title="dbase.0.7.py" href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">
+<link rel="Appendix" title="dbase.py" href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">
+<link rel="Appendix" title="dbase.pydoc" href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">
+<link rel="Appendix" title="dbase_pydoc.0.1.txt" href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">
+<link rel="Appendix" title="dbase_pydoc.0.2.txt" href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">
+<link rel="Appendix" title="ex_plot.0.1.png" href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">
+<link rel="Appendix" title="ex_plot.png" href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">
+<link rel="Appendix" title="ex_plot1.png" href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">
+<link rel="Appendix" title="example_plot.png" href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">
+<link rel="Appendix" title="pydoc" href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="dbase456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:dbase.0.2.py of Cookbook/dbase</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="dbase.html">Cookbook/dbase</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'dbase.0.2.py'</h2><a class="download" href="dbase.0.274aa.py?action=AttachFile&amp;do=get&amp;target=dbase.0.2.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_1">   1</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_1"></span><span class="anchor" id="line-1-1"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">c_</span>, <span class="ID">arange</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_2">   2</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_2"></span><span class="anchor" id="line-2"></span><span class="ResWord">from</span> <span class="ID">scipy.io</span> <span class="ResWord">import</span> <span class="ID">read_array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_3">   3</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_3"></span><span class="anchor" id="line-3"></span><span class="ResWord">from</span> <span class="ID">numpy.random</span> <span class="ResWord">import</span> <span class="ID">randn</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_4">   4</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_4"></span><span class="anchor" id="line-4"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">plot</span>, <span class="ID">show</span>, <span class="ID">figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_5">   5</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_5"></span><span class="anchor" id="line-5"></span><span class="ResWord">import</span> <span class="ID">pickle</span>, <span class="ID">csv</span>, <span class="ID">os</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_6">   6</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_6"></span><span class="anchor" id="line-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_7">   7</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">class</span> <span class="ID">dbase</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_8">   8</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_8"></span><span class="anchor" id="line-8"></span>	<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_9">   9</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_9"></span><span class="anchor" id="line-9"></span><span class="String">	A simple data-frame, that reads and write csv/pickle files with variable names.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_10">  10</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_10"></span><span class="anchor" id="line-10"></span><span class="String">	Columns in the data can be accessed using x.get('a','c') where 'a' and 'c' are</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_11">  11</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_11"></span><span class="anchor" id="line-11"></span><span class="String">	variable names.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_12">  12</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_12"></span><span class="anchor" id="line-12"></span><span class="String">	&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_13">  13</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_13"></span><span class="anchor" id="line-13"></span>	<span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>,<span class="ID">f</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_14">  14</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_14"></span><span class="anchor" id="line-14"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_15">  15</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_15"></span><span class="anchor" id="line-15"></span><span class="String">		Initializing the dbase class. Loading file f.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_16">  16</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_16"></span><span class="anchor" id="line-16"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_17">  17</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_17"></span><span class="anchor" id="line-17"></span>		<span class="ResWord">self</span>.<span class="ID">load</span>(<span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_18">  18</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_18"></span><span class="anchor" id="line-18"></span>		<span class="ResWord">self</span>.<span class="ID">DBname</span> = <span class="ID">os</span>.<span class="ID">getcwd</span>() + <span class="String">'</span><span class="String">/</span><span class="String">'</span> + <span class="ID">f</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_19">  19</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_19"></span><span class="anchor" id="line-19"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_20">  20</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_20"></span><span class="anchor" id="line-20"></span>	<span class="ResWord">def</span> <span class="ID">load</span>(<span class="ResWord">self</span>,<span class="ID">fname</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_21">  21</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_21"></span><span class="anchor" id="line-21"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_22">  22</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_22"></span><span class="anchor" id="line-22"></span><span class="String">		Loading data from a csv or a pickle file of the dbase class</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_23">  23</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_23"></span><span class="anchor" id="line-23"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_24">  24</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_24"></span><span class="anchor" id="line-24"></span>		<span class="ID">fext</span> = <span class="ResWord">self</span>.<span class="ID">__ext</span>(<span class="ID">fname</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_25">  25</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_25"></span><span class="anchor" id="line-25"></span>		<span class="ID">f</span> = <span class="ResWord">open</span>(<span class="ID">fname</span>,<span class="String">'</span><span class="String">r</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_26">  26</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_26"></span><span class="anchor" id="line-26"></span>		<span class="ResWord">if</span> <span class="ID">fext</span> == <span class="String">'</span><span class="String">csv</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_27">  27</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_27"></span><span class="anchor" id="line-27"></span>			<span class="ResWord">self</span>.<span class="ID">varnm</span> = <span class="ResWord">self</span>.<span class="ID">__vardic</span>(<span class="ID">f</span>.<span class="ID">readline</span>().<span class="ID">split</span>(<span class="String">'</span><span class="String">,</span><span class="String">'</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_28">  28</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_28"></span><span class="anchor" id="line-28"></span>			<span class="ResWord">self</span>.<span class="ID">data</span> = <span class="ID">read_array</span>(<span class="ID">f</span>, <span class="ID">separator</span>=<span class="String">'</span><span class="String">,</span><span class="String">'</span>, <span class="ID">lines</span>=(<span class="Number">0</span>,-<span class="Number">1</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_29">  29</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_29"></span><span class="anchor" id="line-29"></span>		<span class="ResWord">elif</span> <span class="ID">fext</span> == <span class="String">'</span><span class="String">pickle</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_30">  30</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_30"></span><span class="anchor" id="line-30"></span>			<span class="ID">a</span> = <span class="ID">pickle</span>.<span class="ID">load</span>(<span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_31">  31</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_31"></span><span class="anchor" id="line-31"></span>			<span class="ResWord">self</span>.<span class="ID">varnm</span> = <span class="ID">a</span>.<span class="ID">varnm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_32">  32</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_32"></span><span class="anchor" id="line-32"></span>			<span class="ResWord">self</span>.<span class="ID">data</span> = <span class="ID">a</span>.<span class="ID">data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_33">  33</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_33"></span><span class="anchor" id="line-33"></span>		<span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_34">  34</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_34"></span><span class="anchor" id="line-34"></span>			<span class="ResWord">raise</span> <span class="String">'</span><span class="String">This class only works on csv and pickle files</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_35">  35</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_35"></span><span class="anchor" id="line-35"></span>		<span class="ID">f</span>.<span class="ID">close</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_36">  36</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_36"></span><span class="anchor" id="line-36"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_37">  37</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_37"></span><span class="anchor" id="line-37"></span>	<span class="ResWord">def</span> <span class="ID">dump</span>(<span class="ResWord">self</span>,<span class="ID">fname</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_38">  38</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_38"></span><span class="anchor" id="line-38"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_39">  39</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_39"></span><span class="anchor" id="line-39"></span><span class="String">		Dumping the instance of the class into a csv or pickle file</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_40">  40</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_40"></span><span class="anchor" id="line-40"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_41">  41</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_41"></span><span class="anchor" id="line-41"></span>		<span class="ID">fext</span> = <span class="ResWord">self</span>.<span class="ID">__ext</span>(<span class="ID">fname</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_42">  42</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_42"></span><span class="anchor" id="line-42"></span>		<span class="ID">f</span> = <span class="ResWord">open</span>(<span class="ID">fname</span>,<span class="String">'</span><span class="String">w</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_43">  43</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_43"></span><span class="anchor" id="line-43"></span>		<span class="ResWord">if</span> <span class="ID">fext</span> == <span class="String">'</span><span class="String">csv</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_44">  44</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_44"></span><span class="anchor" id="line-44"></span>			<span class="ID">writer</span> = <span class="ID">csv</span>.<span class="ID">writer</span>(<span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_45">  45</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_45"></span><span class="anchor" id="line-45"></span>			<span class="ID">writer</span>.<span class="ID">writerow</span>(<span class="ResWord">self</span>.<span class="ID">__sort_keys</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_46">  46</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_46"></span><span class="anchor" id="line-46"></span>			<span class="ID">writer</span>.<span class="ID">writerows</span>(<span class="ResWord">self</span>.<span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_47">  47</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_47"></span><span class="anchor" id="line-47"></span>		<span class="ResWord">elif</span> <span class="ID">fext</span> == <span class="String">'</span><span class="String">pickle</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_48">  48</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_48"></span><span class="anchor" id="line-48"></span>			<span class="ID">pickle</span>.<span class="ID">dump</span>(<span class="ResWord">self</span>,<span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_49">  49</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_49"></span><span class="anchor" id="line-49"></span>		<span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_50">  50</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_50"></span><span class="anchor" id="line-50"></span>			<span class="ResWord">raise</span> <span class="String">'</span><span class="String">This class only outputs csv or pickle files</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_51">  51</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_51"></span><span class="anchor" id="line-51"></span>		<span class="ID">f</span>.<span class="ID">close</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_52">  52</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_52"></span><span class="anchor" id="line-52"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_53">  53</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_53"></span><span class="anchor" id="line-53"></span>	<span class="ResWord">def</span> <span class="ID">get</span>(<span class="ResWord">self</span>,*<span class="ID">var</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_54">  54</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_54"></span><span class="anchor" id="line-54"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_55">  55</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_55"></span><span class="anchor" id="line-55"></span><span class="String">		Selecting a column based on variable labels. Assumes data are in columns.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_56">  56</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_56"></span><span class="anchor" id="line-56"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_57">  57</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_57"></span><span class="anchor" id="line-57"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_58">  58</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_58"></span><span class="anchor" id="line-58"></span>		<span class="ID">a</span> = <span class="ResWord">self</span>.<span class="ID">data</span>[:,<span class="ResWord">self</span>.<span class="ID">varnm</span>[<span class="ID">var</span>[<span class="Number">0</span>]]]				<span class="Comment"># getting the data for the 1st element in self.data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_59">  59</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_59"></span><span class="anchor" id="line-59"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_60">  60</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_60"></span><span class="anchor" id="line-60"></span>		<span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">var</span>[<span class="Number">1</span>:]:						</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_61">  61</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_61"></span><span class="anchor" id="line-61"></span>			<span class="ID">a</span> = <span class="ID">c_</span>[<span class="ID">a</span>,<span class="ResWord">self</span>.<span class="ID">data</span>[:,<span class="ResWord">self</span>.<span class="ID">varnm</span>[<span class="ID">i</span>]]]		<span class="Comment"># concatenate column-wise, along last axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_62">  62</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_62"></span><span class="anchor" id="line-62"></span>	</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_63">  63</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_63"></span><span class="anchor" id="line-63"></span>		<span class="ResWord">return</span> <span class="ID">a</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_64">  64</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_64"></span><span class="anchor" id="line-64"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_65">  65</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_65"></span><span class="anchor" id="line-65"></span>	<span class="ResWord">def</span> <span class="ID">addvar</span>(<span class="ResWord">self</span>,<span class="ID">a</span>,<span class="ID">v</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_66">  66</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_66"></span><span class="anchor" id="line-66"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_67">  67</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_67"></span><span class="anchor" id="line-67"></span><span class="String">		Adding columns of data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_68">  68</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_68"></span><span class="anchor" id="line-68"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_69">  69</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_69"></span><span class="anchor" id="line-69"></span>		<span class="ResWord">self</span>.<span class="ID">data</span> = <span class="ID">c_</span>[<span class="ResWord">self</span>.<span class="ID">data</span>,<span class="ID">a</span>]			<span class="Comment"># concatenation the data at end</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_70">  70</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_70"></span><span class="anchor" id="line-70"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_71">  71</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_71"></span><span class="anchor" id="line-71"></span>		<span class="ID">j</span> = <span class="ResWord">max</span>(<span class="ResWord">self</span>.<span class="ID">varnm</span>.<span class="ID">values</span>()) + <span class="Number">1</span>	<span class="Comment"># starting index past max index</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_72">  72</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_72"></span><span class="anchor" id="line-72"></span>		<span class="ResWord">if</span> <span class="ResWord">isinstance</span>(<span class="ID">v</span>,<span class="ResWord">str</span>): <span class="ID">v</span> = [<span class="ID">v</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_73">  73</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_73"></span><span class="anchor" id="line-73"></span>		<span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">v</span>:						</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_74">  74</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_74"></span><span class="anchor" id="line-74"></span>			<span class="ResWord">self</span>.<span class="ID">varnm</span>[<span class="ID">i</span>] = <span class="ID">j</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_75">  75</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_75"></span><span class="anchor" id="line-75"></span>			<span class="ID">j</span> += <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_76">  76</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_76"></span><span class="anchor" id="line-76"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_77">  77</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_77"></span><span class="anchor" id="line-77"></span>	<span class="ResWord">def</span> <span class="ID">delvar</span>(<span class="ResWord">self</span>,*<span class="ID">v</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_78">  78</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_78"></span><span class="anchor" id="line-78"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_79">  79</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_79"></span><span class="anchor" id="line-79"></span><span class="String">		Deleting columns of data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_80">  80</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_80"></span><span class="anchor" id="line-80"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_81">  81</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_81"></span><span class="anchor" id="line-81"></span>		<span class="Comment"># removing the variables listed </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_82">  82</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_82"></span><span class="anchor" id="line-82"></span>		<span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">v</span>:						</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_83">  83</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_83"></span><span class="anchor" id="line-83"></span>			<span class="ResWord">del</span> <span class="ResWord">self</span>.<span class="ID">varnm</span>[<span class="ID">i</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_84">  84</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_84"></span><span class="anchor" id="line-84"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_85">  85</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_85"></span><span class="anchor" id="line-85"></span>		<span class="Comment"># index list for the remaining variables</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_86">  86</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_86"></span><span class="anchor" id="line-86"></span>		<span class="ID">index</span> = <span class="ResWord">self</span>.<span class="ID">varnm</span>.<span class="ID">values</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_87">  87</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_87"></span><span class="anchor" id="line-87"></span>		<span class="ID">index</span>.<span class="ID">sort</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_88">  88</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_88"></span><span class="anchor" id="line-88"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_89">  89</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_89"></span><span class="anchor" id="line-89"></span>		<span class="Comment"># selecting the remain columns</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_90">  90</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_90"></span><span class="anchor" id="line-90"></span>		<span class="ResWord">self</span>.<span class="ID">data</span> = <span class="ResWord">self</span>.<span class="ID">data</span>[:,<span class="ID">index</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_91">  91</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_91"></span><span class="anchor" id="line-91"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_92">  92</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_92"></span><span class="anchor" id="line-92"></span>		<span class="Comment"># updating the index number </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_93">  93</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_93"></span><span class="anchor" id="line-93"></span>		<span class="ResWord">self</span>.<span class="ID">varnm</span> = <span class="ResWord">self</span>.<span class="ID">__vardic</span>(<span class="ResWord">self</span>.<span class="ID">__sort_keys</span>(<span class="ResWord">range</span>(<span class="ResWord">len</span>(<span class="ID">index</span>))))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_94">  94</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_94"></span><span class="anchor" id="line-94"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_95">  95</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_95"></span><span class="anchor" id="line-95"></span>	<span class="ResWord">def</span> <span class="ID">info</span>(<span class="ResWord">self</span>,<span class="ID">axis</span>=<span class="Number">0</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_96">  96</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_96"></span><span class="anchor" id="line-96"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_97">  97</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_97"></span><span class="anchor" id="line-97"></span><span class="String">		Printing descriptive statistics on selected variables</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_98">  98</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_98"></span><span class="anchor" id="line-98"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_99">  99</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_99"></span><span class="anchor" id="line-99"></span>		<span class="ID">nobs</span> = <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">shape</span>[<span class="ID">axis</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_100"> 100</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_100"></span><span class="anchor" id="line-100"></span>		<span class="ID">nvar</span> = <span class="ResWord">len</span>(<span class="ResWord">self</span>.<span class="ID">varnm</span>.<span class="ID">keys</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_101"> 101</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_101"></span><span class="anchor" id="line-101"></span>		<span class="ResWord">min</span> = <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">min</span>(<span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_102"> 102</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_102"></span><span class="anchor" id="line-102"></span>		<span class="ResWord">max</span> = <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">max</span>(<span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_103"> 103</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_103"></span><span class="anchor" id="line-103"></span>		<span class="ID">mean</span> = <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">mean</span>(<span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_104"> 104</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_104"></span><span class="anchor" id="line-104"></span>		<span class="ID">std</span> = <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">std</span>(<span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_105"> 105</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_105"></span><span class="anchor" id="line-105"></span>		<span class="ResWord">vars</span> = <span class="ResWord">self</span>.<span class="ID">__sort_keys</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_106"> 106</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_106"></span><span class="anchor" id="line-106"></span>		</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_107"> 107</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_107"></span><span class="anchor" id="line-107"></span>		<span class="ResWord">print</span> <span class="String">'</span><span class="SPChar">\n</span><span class="String">==========================================================</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_108"> 108</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_108"></span><span class="anchor" id="line-108"></span>		<span class="ResWord">print</span> <span class="String">'</span><span class="String">================== Database information ==================</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_109"> 109</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_109"></span><span class="anchor" id="line-109"></span>		<span class="ResWord">print</span> <span class="String">'</span><span class="String">==========================================================</span><span class="SPChar">\n</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_110"> 110</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_110"></span><span class="anchor" id="line-110"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_111"> 111</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_111"></span><span class="anchor" id="line-111"></span>		<span class="ResWord">print</span> <span class="String">'''</span><span class="String">file:			</span><span class="String">%s</span><span class="String">'''</span> % <span class="ID">b</span>.<span class="ID">DBname</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_112"> 112</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_112"></span><span class="anchor" id="line-112"></span>		<span class="ResWord">print</span> <span class="String">'''</span><span class="String"># obs:			</span><span class="String">%s</span><span class="String">'''</span> % <span class="ID">nobs</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_113"> 113</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_113"></span><span class="anchor" id="line-113"></span>		<span class="ResWord">print</span> <span class="String">'''</span><span class="String"># variables:	</span><span class="String">%s</span><span class="SPChar">\n</span><span class="String">'''</span> % <span class="ID">nvar</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_114"> 114</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_114"></span><span class="anchor" id="line-114"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_115"> 115</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_115"></span><span class="anchor" id="line-115"></span>		<span class="ResWord">print</span> <span class="String">'</span><span class="String">var			min			max			mean		std.dev</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_116"> 116</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_116"></span><span class="anchor" id="line-116"></span>		<span class="ResWord">print</span> <span class="String">'</span><span class="String">==========================================================</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_117"> 117</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_117"></span><span class="anchor" id="line-117"></span>		</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_118"> 118</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_118"></span><span class="anchor" id="line-118"></span>		<span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">nvar</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_119"> 119</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_119"></span><span class="anchor" id="line-119"></span>			<span class="ResWord">print</span> <span class="String">'''</span><span class="String">%s</span><span class="String">			</span><span class="String">%-5.2f</span><span class="String">		</span><span class="String">%-5.2f</span><span class="String">		</span><span class="String">%-5.2f</span><span class="String">		</span><span class="String">%-5.2f</span><span class="String">'''</span> % <span class="ResWord">tuple</span>([<span class="ResWord">vars</span>[<span class="ID">i</span>],<span class="ResWord">min</span>[<span class="ID">i</span>],<span class="ResWord">max</span>[<span class="ID">i</span>],<span class="ID">mean</span>[<span class="ID">i</span>],<span class="ID">std</span>[<span class="ID">i</span>]]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_120"> 120</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_120"></span><span class="anchor" id="line-120"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_121"> 121</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_121"></span><span class="anchor" id="line-121"></span>	<span class="ResWord">def</span> <span class="ID">dataplot</span>(<span class="ResWord">self</span>,<span class="ID">var</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_122"> 122</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_122"></span><span class="anchor" id="line-122"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_123"> 123</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_123"></span><span class="anchor" id="line-123"></span><span class="String">		Plotting the data with variable names</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_124"> 124</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_124"></span><span class="anchor" id="line-124"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_125"> 125</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_125"></span><span class="anchor" id="line-125"></span>		<span class="ID">a</span> = <span class="ResWord">self</span>.<span class="ID">get</span>(<span class="ID">var</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_126"> 126</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_126"></span><span class="anchor" id="line-126"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_127"> 127</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_127"></span><span class="anchor" id="line-127"></span>		<span class="Comment"># plot a single column</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_128"> 128</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_128"></span><span class="anchor" id="line-128"></span>		<span class="ID">title</span> = <span class="String">&quot;</span><span class="String">Plot of series </span><span class="String">&quot;</span> + <span class="ID">var</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_129"> 129</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_129"></span><span class="anchor" id="line-129"></span>		<span class="ID">ax</span> = <span class="ID">figure</span>().<span class="ID">add_axes</span>([.<span class="Number">1</span>,.<span class="Number">1</span>,.<span class="Number">8</span>,.<span class="Number">8</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_130"> 130</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_130"></span><span class="anchor" id="line-130"></span>		<span class="ID">ax</span>.<span class="ID">plot</span>(<span class="ID">a</span>); </span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_131"> 131</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_131"></span><span class="anchor" id="line-131"></span>		<span class="ID">ax</span>.<span class="ID">set_title</span>(<span class="ID">title</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_132"> 132</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_132"></span><span class="anchor" id="line-132"></span>		<span class="ID">show</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_133"> 133</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_133"></span><span class="anchor" id="line-133"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_134"> 134</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_134"></span><span class="anchor" id="line-134"></span>	<span class="ResWord">def</span> <span class="ID">__vardic</span>(<span class="ResWord">self</span>,<span class="ID">L</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_135"> 135</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_135"></span><span class="anchor" id="line-135"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_136"> 136</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_136"></span><span class="anchor" id="line-136"></span><span class="String">		Making a dictionary with variable names and indices</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_137"> 137</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_137"></span><span class="anchor" id="line-137"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_138"> 138</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_138"></span><span class="anchor" id="line-138"></span>		<span class="ID">dic</span> = {}; <span class="ID">j</span> = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_139"> 139</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_139"></span><span class="anchor" id="line-139"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_140"> 140</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_140"></span><span class="anchor" id="line-140"></span>		<span class="Comment"># reading only the 1st line in the file and extracting variables names</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_141"> 141</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_141"></span><span class="anchor" id="line-141"></span>		<span class="Comment"># names are linked in the dictionary to their, and the data's, index</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_142"> 142</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_142"></span><span class="anchor" id="line-142"></span>		<span class="Comment"># making sure to strip leading and trailing white space</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_143"> 143</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_143"></span><span class="anchor" id="line-143"></span>		<span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">L</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_144"> 144</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_144"></span><span class="anchor" id="line-144"></span>			<span class="ID">dic</span>[<span class="ID">i</span>.<span class="ID">strip</span>()] = <span class="ID">j</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_145"> 145</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_145"></span><span class="anchor" id="line-145"></span>			<span class="ID">j</span> += <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_146"> 146</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_146"></span><span class="anchor" id="line-146"></span>	</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_147"> 147</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_147"></span><span class="anchor" id="line-147"></span>		<span class="ResWord">return</span> <span class="ID">dic</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_148"> 148</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_148"></span><span class="anchor" id="line-148"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_149"> 149</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_149"></span><span class="anchor" id="line-149"></span>	<span class="ResWord">def</span> <span class="ID">__ext</span>(<span class="ResWord">self</span>,<span class="ID">fname</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_150"> 150</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_150"></span><span class="anchor" id="line-150"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_151"> 151</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_151"></span><span class="anchor" id="line-151"></span><span class="String">		Finding the file extension of the filename passed to dbase</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_152"> 152</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_152"></span><span class="anchor" id="line-152"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_153"> 153</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_153"></span><span class="anchor" id="line-153"></span>		<span class="ResWord">return</span> <span class="ID">fname</span>.<span class="ID">split</span>(<span class="String">'</span><span class="String">.</span><span class="String">'</span>)[-<span class="Number">1</span>].<span class="ID">strip</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_154"> 154</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_154"></span><span class="anchor" id="line-154"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_155"> 155</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_155"></span><span class="anchor" id="line-155"></span>	<span class="ResWord">def</span> <span class="ID">__sort_keys</span>(<span class="ResWord">self</span>,<span class="ID">v</span> = []):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_156"> 156</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_156"></span><span class="anchor" id="line-156"></span>		<span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_157"> 157</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_157"></span><span class="anchor" id="line-157"></span><span class="String">		Sorting the keys in the variable name dictionary so they are in the correct order</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_158"> 158</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_158"></span><span class="anchor" id="line-158"></span><span class="String">		&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_159"> 159</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_159"></span><span class="anchor" id="line-159"></span>		<span class="ID">k</span> = <span class="ResWord">self</span>.<span class="ID">varnm</span>.<span class="ID">keys</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_160"> 160</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_160"></span><span class="anchor" id="line-160"></span>		<span class="ResWord">if</span> <span class="ID">v</span> == []: <span class="ID">v</span> = <span class="ResWord">self</span>.<span class="ID">varnm</span>.<span class="ID">values</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_161"> 161</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_161"></span><span class="anchor" id="line-161"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_162"> 162</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_162"></span><span class="anchor" id="line-162"></span>		<span class="ResWord">return</span> [<span class="ID">k</span>[<span class="ID">i</span>] <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">v</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_163"> 163</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_163"></span><span class="anchor" id="line-163"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_164"> 164</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_164"></span><span class="anchor" id="line-164"></span><span class="Comment">########################</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_165"> 165</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_165"></span><span class="anchor" id="line-165"></span><span class="Comment">### Testing the class</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_166"> 166</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_166"></span><span class="anchor" id="line-166"></span><span class="Comment">########################</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_167"> 167</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_167"></span><span class="anchor" id="line-167"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_168"> 168</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_168"></span><span class="anchor" id="line-168"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_169"> 169</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_169"></span><span class="anchor" id="line-169"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_170"> 170</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_170"></span><span class="anchor" id="line-170"></span>	<span class="Comment"># creating simulated data and variable labels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_171"> 171</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_171"></span><span class="anchor" id="line-171"></span>	<span class="ID">varnm</span> = [<span class="String">'</span><span class="String">a</span><span class="String">'</span>,<span class="String">'</span><span class="String">b</span><span class="String">'</span>,<span class="String">'</span><span class="String">c</span><span class="String">'</span>]			<span class="Comment"># variable labels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_172"> 172</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_172"></span><span class="anchor" id="line-172"></span>	<span class="ID">data</span> =	<span class="ID">randn</span>(<span class="Number">5</span>,<span class="Number">3</span>)				<span class="Comment"># the data array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_173"> 173</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_173"></span><span class="anchor" id="line-173"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_174"> 174</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_174"></span><span class="anchor" id="line-174"></span>	<span class="Comment"># saving simulated data to a csv file</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_175"> 175</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_175"></span><span class="anchor" id="line-175"></span>	<span class="ID">f</span> = <span class="ResWord">open</span>(<span class="String">'</span><span class="String">data.csv</span><span class="String">'</span>,<span class="String">'</span><span class="String">w</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_176"> 176</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_176"></span><span class="anchor" id="line-176"></span>	<span class="ID">writer</span> = <span class="ID">csv</span>.<span class="ID">writer</span>(<span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_177"> 177</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_177"></span><span class="anchor" id="line-177"></span>	<span class="ID">writer</span>.<span class="ID">writerow</span>(<span class="ID">varnm</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_178"> 178</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_178"></span><span class="anchor" id="line-178"></span>	<span class="ID">writer</span>.<span class="ID">writerows</span>(<span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_179"> 179</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_179"></span><span class="anchor" id="line-179"></span>	<span class="ID">f</span>.<span class="ID">close</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_180"> 180</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_180"></span><span class="anchor" id="line-180"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_181"> 181</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_181"></span><span class="anchor" id="line-181"></span>	<span class="Comment"># loading the data from the csv file and dumping the dbase class instance to a pickle file</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_182"> 182</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_182"></span><span class="anchor" id="line-182"></span>	<span class="ID">a</span> = <span class="ID">dbase</span>(<span class="String">&quot;</span><span class="String">data.csv</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_183"> 183</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_183"></span><span class="anchor" id="line-183"></span>	<span class="ID">a</span>.<span class="ID">dump</span>(<span class="String">&quot;</span><span class="String">data.pickle</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_184"> 184</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_184"></span><span class="anchor" id="line-184"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_185"> 185</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_185"></span><span class="anchor" id="line-185"></span>	<span class="Comment"># loading the object from the pickle file</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_186"> 186</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_186"></span><span class="anchor" id="line-186"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Loading the dbase object from a pickle file</span><span class="SPChar">\n</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_187"> 187</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_187"></span><span class="anchor" id="line-187"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_188"> 188</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_188"></span><span class="anchor" id="line-188"></span>	<span class="ID">b</span> = <span class="ID">dbase</span>(<span class="String">&quot;</span><span class="String">data.pickle</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_189"> 189</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_189"></span><span class="anchor" id="line-189"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_190"> 190</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_190"></span><span class="anchor" id="line-190"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Data from dbase class</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_191"> 191</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_191"></span><span class="anchor" id="line-191"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Variable names from dbase class</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">varnm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_192"> 192</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_192"></span><span class="anchor" id="line-192"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Two columns selected using variable names</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">get</span>(<span class="String">'</span><span class="String">a</span><span class="String">'</span>,<span class="String">'</span><span class="String">c</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_193"> 193</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_193"></span><span class="anchor" id="line-193"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Saving data and variable names to a different csv file</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">dump</span>(<span class="String">&quot;</span><span class="String">data_dump.csv</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_194"> 194</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_194"></span><span class="anchor" id="line-194"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_195"> 195</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_195"></span><span class="anchor" id="line-195"></span>	<span class="Comment"># making the database bigger</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_196"> 196</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_196"></span><span class="anchor" id="line-196"></span>	<span class="ID">xtra1</span> = <span class="ID">b</span>.<span class="ID">get</span>(<span class="String">'</span><span class="String">a</span><span class="String">'</span>) * <span class="ID">b</span>.<span class="ID">get</span>(<span class="String">'</span><span class="String">b</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_197"> 197</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_197"></span><span class="anchor" id="line-197"></span>	<span class="ID">xtra2</span> = <span class="ID">b</span>.<span class="ID">get</span>(<span class="String">'</span><span class="String">a</span><span class="String">'</span>) * <span class="ID">b</span>.<span class="ID">get</span>(<span class="String">'</span><span class="String">c</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_198"> 198</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_198"></span><span class="anchor" id="line-198"></span>	<span class="ID">xtra</span> = <span class="ID">c_</span>[<span class="ID">xtra1</span>,<span class="ID">xtra2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_199"> 199</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_199"></span><span class="anchor" id="line-199"></span>	<span class="ID">xtra_varnm</span> = (<span class="String">'</span><span class="String">x1</span><span class="String">'</span>,<span class="String">'</span><span class="String">x2</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_200"> 200</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_200"></span><span class="anchor" id="line-200"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_201"> 201</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_201"></span><span class="anchor" id="line-201"></span>	<span class="ID">b</span>.<span class="ID">addvar</span>(<span class="ID">xtra</span>,<span class="ID">xtra_varnm</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_202"> 202</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_202"></span><span class="anchor" id="line-202"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Two columns added</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_203"> 203</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_203"></span><span class="anchor" id="line-203"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Two variable names added</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">varnm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_204"> 204</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_204"></span><span class="anchor" id="line-204"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_205"> 205</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_205"></span><span class="anchor" id="line-205"></span>	<span class="Comment"># making the database smaller</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_206"> 206</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_206"></span><span class="anchor" id="line-206"></span>	<span class="ID">b</span>.<span class="ID">delvar</span>(<span class="String">'</span><span class="String">a</span><span class="String">'</span>,<span class="String">'</span><span class="String">x2</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_207"> 207</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_207"></span><span class="anchor" id="line-207"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Two columns deleted</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_208"> 208</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_208"></span><span class="anchor" id="line-208"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Two variable names deleted</span><span class="SPChar">\n</span><span class="String">&quot;</span>, <span class="ID">b</span>.<span class="ID">varnm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_209"> 209</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_209"></span><span class="anchor" id="line-209"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_210"> 210</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_210"></span><span class="anchor" id="line-210"></span>	<span class="Comment"># getting the name of the file you are working on</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_211"> 211</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_211"></span><span class="anchor" id="line-211"></span>	<span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">Working on file: </span><span class="String">&quot;</span> + <span class="ID">b</span>.<span class="ID">DBname</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_212"> 212</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_212"></span><span class="anchor" id="line-212"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_213"> 213</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_213"></span><span class="anchor" id="line-213"></span>	<span class="Comment"># descriptive information on the database, or selected variables in the databse</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_214"> 214</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_214"></span><span class="anchor" id="line-214"></span>	<span class="ID">b</span>.<span class="ID">info</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_215"> 215</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_215"></span><span class="anchor" id="line-215"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_216"> 216</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_216"></span><span class="anchor" id="line-216"></span>	<span class="Comment"># plotting a series</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_217"> 217</a> </span><span class="LineAnchor" id="CA-3f70bc3d256771c7b1fb0e8229e7df030e8ecc91_217"></span><span class="anchor" id="line-217"></span>	<span class="ID">b</span>.<span class="ID">dataplot</span>(<span class="String">'</span><span class="String">b</span><span class="String">'</span>)</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/dbase" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="dbase.0.2.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327c5a.dafc36e0d92196b4e998be8a2576bf274cf1f2a8">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="data.0.3e200.csv?action=AttachFile&amp;do=get&amp;target=data.0.3.csv">get</a>&nbsp;| <a href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">view</a>] (2007-01-14 23:35:05, 4.5 KB) [[attachment:data.0.3.csv]]</li><li>[<a href="data76e5.csv?action=AttachFile&amp;do=get&amp;target=data.csv">get</a>&nbsp;| <a href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">view</a>] (2007-01-07 18:13:31, 4.0 KB) [[attachment:data.csv]]</li><li>[<a href="dbase.0.1b943.py?action=AttachFile&amp;do=get&amp;target=dbase.0.1.py">get</a>&nbsp;| <a href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">view</a>] (2007-01-07 18:00:31, 16.1 KB) [[attachment:dbase.0.1.py]]</li><li>[<a href="dbase.0.274aa.py?action=AttachFile&amp;do=get&amp;target=dbase.0.2.py">get</a>&nbsp;| <a href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">view</a>] (2007-01-14 22:55:13, 5.6 KB) [[attachment:dbase.0.2.py]]</li><li>[<a href="dbase.0.32133.py?action=AttachFile&amp;do=get&amp;target=dbase.0.3.py">get</a>&nbsp;| <a href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">view</a>] (2007-01-14 23:31:35, 18.1 KB) [[attachment:dbase.0.3.py]]</li><li>[<a href="dbase.0.4bd63.py?action=AttachFile&amp;do=get&amp;target=dbase.0.4.py">get</a>&nbsp;| <a href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">view</a>] (2007-01-14 23:51:16, 18.4 KB) [[attachment:dbase.0.4.py]]</li><li>[<a href="dbase.0.5f856.py?action=AttachFile&amp;do=get&amp;target=dbase.0.5.py">get</a>&nbsp;| <a href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">view</a>] (2007-01-14 23:54:23, 18.4 KB) [[attachment:dbase.0.5.py]]</li><li>[<a href="dbase.0.6312b.py?action=AttachFile&amp;do=get&amp;target=dbase.0.6.py">get</a>&nbsp;| <a href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">view</a>] (2007-01-15 06:33:06, 18.4 KB) [[attachment:dbase.0.6.py]]</li><li>[<a href="dbase.0.7f434.py?action=AttachFile&amp;do=get&amp;target=dbase.0.7.py">get</a>&nbsp;| <a href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">view</a>] (2007-01-19 05:53:14, 19.1 KB) [[attachment:dbase.0.7.py]]</li><li>[<a href="dbase211c.py?action=AttachFile&amp;do=get&amp;target=dbase.py">get</a>&nbsp;| <a href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">view</a>] (2007-01-07 07:50:10, 15.8 KB) [[attachment:dbase.py]]</li><li>[<a href="dbase07fe.pydoc?action=AttachFile&amp;do=get&amp;target=dbase.pydoc">get</a>&nbsp;| <a href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">view</a>] (2007-01-07 07:52:21, 7.6 KB) [[attachment:dbase.pydoc]]</li><li>[<a href="dbase_pydoc.0.1d60b.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.1.txt">get</a>&nbsp;| <a href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">view</a>] (2007-01-07 18:01:44, 7.9 KB) [[attachment:dbase_pydoc.0.1.txt]]</li><li>[<a href="dbase_pydoc.0.230c3.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.2.txt">get</a>&nbsp;| <a href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">view</a>] (2007-01-14 22:56:04, 8.2 KB) [[attachment:dbase_pydoc.0.2.txt]]</li><li>[<a href="ex_plot.0.1c9c7.png?action=AttachFile&amp;do=get&amp;target=ex_plot.0.1.png">get</a>&nbsp;| <a href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">view</a>] (2007-01-07 18:02:50, 27.7 KB) [[attachment:ex_plot.0.1.png]]</li><li>[<a href="ex_plot59eb.png?action=AttachFile&amp;do=get&amp;target=ex_plot.png">get</a>&nbsp;| <a href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">view</a>] (2007-01-07 08:01:04, 87.7 KB) [[attachment:ex_plot.png]]</li><li>[<a href="ex_plot1f462.png?action=AttachFile&amp;do=get&amp;target=ex_plot1.png">get</a>&nbsp;| <a href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">view</a>] (2007-01-07 08:03:54, 28.2 KB) [[attachment:ex_plot1.png]]</li><li>[<a href="example_plotd84c.png?action=AttachFile&amp;do=get&amp;target=example_plot.png">get</a>&nbsp;| <a href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">view</a>] (2007-01-07 07:57:21, 895.9 KB) [[attachment:example_plot.png]]</li><li>[<a href="pydocef5d?action=AttachFile&amp;do=get&amp;target=pydoc">get</a>&nbsp;| <a href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">view</a>] (2007-01-07 07:51:51, 34.3 KB) [[attachment:pydoc]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=dbase.0.2.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:42:16 GMT -->
+</html>
+

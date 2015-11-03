@@ -1,0 +1,389 @@
+Index: htdocs/download.data
+===================================================================
+--- htdocs/download.data	(revision 341)
++++ htdocs/download.data	(working copy)
+@@ -37,12 +37,13 @@
+     </li>
+ 
+ 
+-   <li> "Numeric" python module: 
+-        <a href="http://numpy.sf.net/">Main page</a>
+-	<a href="http://sourceforge.net/project/showfiles.php?group_id=1369&package_id=1351">
++   <li> "NumPy" python module: 
++        <a href="http://www.numpy.org/">Main page</a>
++	<a href="http://sourceforge.net/project/showfiles.php?group_id=1369&package_id=175301">
+ 	   Downloads</a> 
+-        <b>Note that you need the <code>Numeric</code> module and
+-        <it>not</it> <code>NumPy</code></b>
++        <b>Note that you need the new <code>NumPy</code> module and
++        <it>not</it> <code>Numeric</code> or <code>Numarray</code></b>
++
+    </li>
+  
+   </ul>
+Index: rpy/src/RPy.h
+===================================================================
+--- rpy/src/RPy.h	(revision 341)
++++ rpy/src/RPy.h	(working copy)
+@@ -90,8 +90,8 @@
+ #include "robjobject.h"
+ #include "setenv.h"
+ 
+-#ifdef WITH_NUMERIC
+-#include "Numeric/arrayobject.h"
++#ifdef WITH_NUMPY
++#include "numpy/oldnumeric.h"
+ #endif
+ 
+ #define MAXIDSIZE 256
+Index: rpy/src/rpymodule.c
+===================================================================
+--- rpy/src/rpymodule.c	(revision 341)
++++ rpy/src/rpymodule.c	(working copy)
+@@ -46,12 +46,12 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-/* Flag indicating whether Numeric is available in this session
++/* Flag indicating whether NumPy is available in this session
+  *
+- * This is necessary Numeric may not available at run time, even if
++ * This is necessary NumPy may not available at run time, even if
+  * it was available at compile time.
+ */
+-static int use_numeric=0;
++static int use_numpy=0;
+ 
+ 
+ /* Local function definitions */
+@@ -91,9 +91,6 @@
+ PyObject *rpy_dict;
+  
+ 
+-#ifdef WITH_NUMERIC
+-static PyObject *Py_transpose;
+-#endif
+ 
+ /* Global list to protect R objects from garbage collection */
+ /* This is inspired in $R_SRC/src/main/memory.c */
+@@ -303,8 +300,8 @@
+   return NULL;
+ }
+ 
+-#ifdef WITH_NUMERIC
+-/* Convert a Numeric array to a R array */
++#ifdef WITH_NUMPY
++/* Convert a NumPy array to a R array */
+ SEXP
+ to_Rarray(PyObject *o)
+ {
+@@ -424,9 +421,9 @@
+       PROTECT(robj = NEW_STRING(1));
+       SET_STRING_ELT(robj, 0, COPY_TO_USER_STRING(PyString_AsString(obj)));
+     }
+-#ifdef WITH_NUMERIC
++#ifdef WITH_NUMPY
+   //else if (PyArray_Check(obj)) 
+-  else if (use_numeric && PyArray_Check(obj)) 
++  else if (use_numpy && PyArray_Check(obj)) 
+     {
+       PROTECT(robj = to_Rarray(obj));
+     }
+@@ -539,10 +536,10 @@
+   return list;
+ }
+ 
+-/* Convert a Python sequence to a Numeric array */
+-#ifdef WITH_NUMERIC
++/* Convert a Python sequence to a NumPy array */
++#ifdef WITH_NUMPY
+ static PyObject *
+-to_PyNumericArray(PyObject *seq, SEXP dim)
++to_PyNumPyArray(PyObject *seq, SEXP dim)
+ {
+   PyObject *array, *ret, *dims, *it;
+   int l, i, j;
+@@ -573,7 +570,7 @@
+   if (!ret)
+     return NULL;
+ 
+-  array = PyObject_CallFunction(Py_transpose, "O", ret);
++  array = PyArray_Transpose((PyArrayObject *)ret, NULL);
+   Py_XDECREF(ret);
+   return array;
+ }
+@@ -613,7 +610,7 @@
+   char *strings, *thislevel;
+   double *reals;
+   Rcomplex *complexes;
+-#ifdef WITH_NUMERIC
++#ifdef WITH_NUMPY
+   PyObject *array;
+ #endif
+ 
+@@ -702,11 +699,11 @@
+ 
+   dim = GET_DIM(robj);
+   if (dim != R_NilValue) {
+-#ifdef WITH_NUMERIC
+-    if(use_numeric)
++#ifdef WITH_NUMPY
++    if(use_numpy)
+       {
+-        array = to_PyNumericArray(tmp, dim);
+-        if (array) {                /* If the conversion to Numeric succeed.. */
++        array = to_PyNumPyArray(tmp, dim);
++        if (array) {                /* If the conversion to NumPy succeed.. */
+           *obj = array;             /* we are done */
+           Py_DECREF(tmp);
+           return 1;
+@@ -1547,21 +1544,13 @@
+   return Py_None;
+ }
+ 
+-#ifdef WITH_NUMERIC
++#ifdef WITH_NUMPY
+ static void
+-init_numeric(void)
++init_numpy(void)
+ {
+-  PyObject *multiarray, *dict;
+-  
+-  if(use_numeric)
++  if(use_numpy)
+     {
+       import_array();
+-      multiarray = PyImport_ImportModule("multiarray");
+-      if (multiarray) {
+-        dict = PyModule_GetDict(multiarray);
+-        if (dict)
+-          Py_transpose = PyDict_GetItemString(dict, "transpose");
+-      }
+     }
+ }
+ #endif
+@@ -1574,11 +1563,11 @@
+   
+   if (!PyArg_ParseTuple(args, "i:r_init", &i))
+     return NULL;
+-  use_numeric = i;
++  use_numpy = i;
+ 
+-#ifdef WITH_NUMERIC
+-  if(use_numeric)
+-    init_numeric();
++#ifdef WITH_NUMPY
++  if(use_numpy)
++    init_numpy();
+ #endif
+   
+   if(first==1)
+@@ -1732,8 +1721,8 @@
+   Robj_Type.tp_alloc = PyType_GenericAlloc;
+ #endif
+ 
+-  //m = Py_InitModule(MacroQuote(RPY_SHNAME), rpy_methods);
+-  m = Py_InitModule(RPY_SHNAME, rpy_methods);
++  m = Py_InitModule(MacroQuote(RPY_SHNAME), rpy_methods);
++  //m = Py_InitModule(RPY_SHNAME, rpy_methods);
+   d = PyModule_GetDict(m);
+ 
+   /* Save this interpreter */
+Index: rpy/setup.py
+===================================================================
+--- rpy/setup.py	(revision 341)
++++ rpy/setup.py	(working copy)
+@@ -137,12 +137,13 @@
+         extra_compile_args=["-shared"]
+         source_files = source_files + ["src/setenv.c"]
+ 
+-    # check whether Numeric is present
++    # check whether NumPy is present
+     try:
+-        import Numeric
+-        DEFINE.append(('WITH_NUMERIC', None))
++        import numpy
++        DEFINE.append(('WITH_NUMPY', None))
++        include_dirs.append(numpy.get_include())
+     except ImportError:
+-        UNDEF.append('WITH_NUMERIC')
++        UNDEF.append('WITH_NUMPY')
+ 
+     # get the RPy version
+     from rpy_version import rpy_version
+Index: rpy/INSTALL.UNIX
+===================================================================
+--- rpy/INSTALL.UNIX	(revision 341)
++++ rpy/INSTALL.UNIX	(working copy)
+@@ -10,10 +10,10 @@
+ Linux and Unix Source Installation:
+ ----------------------------
+ 
+-If you have Numeric (NumPy) installed, it can be used by RPy; normally it is
+-autodetected, you don't have to do anything.  If Numeric cannot be found, then
++If you have NumPy installed, it can be used by RPy; normally it is
++autodetected, you don't have to do anything.  If NumPy cannot be found, then
+ R arrays will be converted to Python lists, which are a lot more inefficient
+-than Numeric arrays.  I strongly suggest to install Numeric.
++than NumPy arrays.  I strongly suggest to install NumPy.
+ 
+ If you have installed some previous version of RPy, just go to (c).
+ 
+Index: rpy/README
+===================================================================
+--- rpy/README	(revision 341)
++++ rpy/README	(working copy)
+@@ -41,10 +41,10 @@
+ Linux and Unix Source Installation:
+ ----------------------------
+ 
+-If you have Numeric (NumPy) installed, it can be used by RPy; normally it is
+-autodetected, you don't have to do anything.  If Numeric cannot be found, then
++If you have NumPy installed, it can be used by RPy; normally it is
++autodetected, you don't have to do anything.  If NumPy cannot be found, then
+ R arrays will be converted to Python lists, which are a lot more inefficient
+-than Numeric arrays.  I strongly suggest to install Numeric.
++than NumPy arrays.  I strongly suggest to install NumPy.
+ 
+ If you have installed some previous version of RPy, just go to (c).
+ 
+@@ -124,17 +124,17 @@
+ ----------------------------
+ 
+ The Windows version of RPy is provided as a binary bundle.  It is
+-compiled with Python 2.3 and with Numeric support.
++compiled with Python 2.4 and with NumPy support.
+ 
+ Before installing RPy, make sure you have installed:
+ 
+-    o Python 2.2
++    o Python 2.4
+     o R (a recent version)
+-    o Numeric  (http://numpy.sf.net)
++    o NumPy  (http://numpy.sf.net)
+     o win32all, windows extensions from Mark Hammond
+       (http://starship.python.net/crew/mhammond/win32/Downloads.html)
+ 
+-Then, just download the file 'rpy-0.3.win32-py2.2.exe', and execute
++Then, just download the file 'rpy-1.0.win32-py2.4.exe', and execute
+ it.  You may want to download the documentation, also, which is in a
+ separate bundle.
+ 
+Index: rpy/INSTALL.WINDOWS
+===================================================================
+--- rpy/INSTALL.WINDOWS	(revision 341)
++++ rpy/INSTALL.WINDOWS	(working copy)
+@@ -3,21 +3,21 @@
+ ----------------------------
+ 
+ The Windows version of RPy is provided as a binary bundle.  It is
+-compiled with Python 2.3 and with Numeric support.
++compiled with Python 2.4 and with NumPy support.
+ 
+ Before installing RPy, make sure you have installed:
+ 
+-    o Python 2.2
++    o Python 2.4
+ 
+     o R (a recent version)
+ 
+-    o The "Numeric" python module.
++    o The "NumPy" python module.
+ 
+-      Main page: http://numpy.sf.net/
++      Main page: http://www.numpy.org/
+       Download from:
+-      http://sourceforge.net/project/showfiles.php?group_id=1369&package_id=1351)
++      http://sourceforge.net/project/showfiles.php?group_id=1369&package_id=175103
+       
+-      Note: You need the "Numeric" module and *not* "NumPy".
++      Note: You need the new "NumPy" module
+ 
+     o win32all, windows extensions from Mark Hammond (included in
+       ActiveState python) and is also available from
+Index: rpy/rpy.py
+===================================================================
+--- rpy/rpy.py	(revision 341)
++++ rpy/rpy.py	(working copy)
+@@ -28,14 +28,14 @@
+ import time, os, sys, atexit, glob
+ import rpy_tools
+ 
+-# If we cannot import Numeric, it should have been detected at
++# If we cannot import numpy, it should have been detected at
+ # installation time and RPy should have been compiled properly. So,
+ # don't complain.
+ try:
+-    from Numeric import *
+-    HAS_NUMERIC = 1
++    from numpy.oldnumeric import *
++    HAS_NUMPY = 1
+ except ImportError:
+-    HAS_NUMERIC = 0
++    HAS_NUMPY = 0
+     pass
+ 
+ # Get necessary paths and version information
+@@ -255,7 +255,7 @@
+         if rpy_options['VERBOSE']:
+             print "Creating the R object 'r' ..",
+             sys.stdout.flush()
+-        _rpy.r_init(HAS_NUMERIC);
++        _rpy.r_init(HAS_NUMPY);
+         _rpy.set_mode(NO_DEFAULT)
+         
+         self.get = _rpy.get_fun('get')  # this must happen before any calls to self or its methods!
+Index: rpy/tests/test_numeric.py
+===================================================================
+--- rpy/tests/test_numeric.py	(revision 341)
++++ rpy/tests/test_numeric.py	(working copy)
+@@ -2,9 +2,9 @@
+ 
+ import unittest
+ try:
+-    from Numeric import *
++    from numpy.oldnumeric import *
+ except ImportError:
+-    print 'Numeric not available. Skipping.\n'
++    print 'NumPy not available. Skipping.\n'
+     import sys
+     sys.exit(0)
+     
+@@ -46,7 +46,7 @@
+         
+     def testToPyDimensions(self):
+         self.failUnless(self.py_c.shape == self.py.shape,
+-                        'wrong dimensions in Numeric array')
++                        'wrong dimensions in NumPy array')
+ 
+     def testToRDimensions(self):
+         self.failUnless(r.dim(self.ra) == r.dim(self.ra_c),
+@@ -57,7 +57,7 @@
+                         self.py[1,2,3] == self.py_c[1,2,3] and
+                         self.py[1,1,2] == self.py_c[1,1,2] and
+                         self.py[1,0,3] == self.py_c[1,0,3],
+-                        'Numeric array not equal')
++                        'NumPy array not equal')
+ 
+     def testRElements(self):
+         try:
+Index: rpy/tests/test_array.py
+===================================================================
+--- rpy/tests/test_array.py	(revision 341)
++++ rpy/tests/test_array.py	(working copy)
+@@ -28,8 +28,13 @@
+             r.array.autoconvert(BASIC_CONVERSION)
+ 
+     def testConversionToPy(self):
+-        self.failUnless(self.py == self.ra.as_py(),
+-                        'wrong conversion to Python')
++        try:
++            import numpy
++            self.failUnless((self.py == self.ra.as_py()).all(),
++                            'wrong conversion to Python')            
++        except ImportError:
++            self.failUnless(self.py == self.ra.as_py(),
++                            'wrong conversion to Python')
+ 
+     def testConversionToR(self):
+         py_c = to_r(self.py)

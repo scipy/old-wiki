@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/LineIntegralConvolution?action=AttachFile&do=view&target=lic_demo.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:46:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:lic_demo.py of Cookbook/LineIntegralConvolution - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/LineIntegralConvolution" href="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FLineIntegralConvolution&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="flow-image.png" href="LineIntegralConvolution2aec.html?action=AttachFile&amp;do=view&amp;target=flow-image.png">
+<link rel="Appendix" title="lic.py" href="LineIntegralConvolutionffd3.html?action=AttachFile&amp;do=view&amp;target=lic.py">
+<link rel="Appendix" title="lic_demo.py" href="LineIntegralConvolution495b.html?action=AttachFile&amp;do=view&amp;target=lic_demo.py">
+<link rel="Appendix" title="lic_internal.pyx" href="LineIntegralConvolution7565.html?action=AttachFile&amp;do=view&amp;target=lic_internal.pyx">
+<link rel="Appendix" title="setup.py" href="LineIntegralConvolutionc5f1.html?action=AttachFile&amp;do=view&amp;target=setup.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="LineIntegralConvolution456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:lic_demo.py of Cookbook/LineIntegralConvolution</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="LineIntegralConvolution.html">LineIntegralConvolution</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LineIntegralConvolution37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'lic_demo.py'</h2><a class="download" href="lic_demofb29.py?action=AttachFile&amp;do=get&amp;target=lic_demo.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-1d05c506285c48f6e57f259a617c519dc524c8d4\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_1">   1</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_1"></span><span class="anchor" id="line-1-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_2">   2</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_2"></span><span class="anchor" id="line-2"></span><span class="ResWord">import</span> <span class="ID">pylab</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_3">   3</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_3"></span><span class="anchor" id="line-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_4">   4</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_4"></span><span class="anchor" id="line-4"></span><span class="ResWord">import</span> <span class="ID">lic_internal</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_5">   5</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_6">   6</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_6"></span><span class="anchor" id="line-6"></span><span class="ID">dpi</span> = <span class="Number">100</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_7">   7</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_7"></span><span class="anchor" id="line-7"></span><span class="ID">size</span> = <span class="Number">700</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_8">   8</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_8"></span><span class="anchor" id="line-8"></span><span class="ID">video</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_9">   9</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_9"></span><span class="anchor" id="line-9"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_10">  10</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_10"></span><span class="anchor" id="line-10"></span><span class="ID">vortex_spacing</span> = <span class="Number">0.5</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_11">  11</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_11"></span><span class="anchor" id="line-11"></span><span class="ID">extra_factor</span> = <span class="Number">2.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_12">  12</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_12"></span><span class="anchor" id="line-12"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_13">  13</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_13"></span><span class="anchor" id="line-13"></span><span class="ID">a</span> = <span class="ID">np</span>.<span class="ID">array</span>([<span class="Number">1</span>,<span class="Number">0</span>])*<span class="ID">vortex_spacing</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_14">  14</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_14"></span><span class="anchor" id="line-14"></span><span class="ID">b</span> = <span class="ID">np</span>.<span class="ID">array</span>([<span class="ID">np</span>.<span class="ID">cos</span>(<span class="ID">np</span>.<span class="ID">pi</span>/<span class="Number">3</span>),<span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">np</span>.<span class="ID">pi</span>/<span class="Number">3</span>)])*<span class="ID">vortex_spacing</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_15">  15</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_15"></span><span class="anchor" id="line-15"></span><span class="ID">rnv</span> = <span class="ResWord">int</span>(<span class="Number">2</span>*<span class="ID">extra_factor</span>/<span class="ID">vortex_spacing</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_16">  16</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_16"></span><span class="anchor" id="line-16"></span><span class="ID">vortices</span> = [<span class="ID">n</span>*<span class="ID">a</span>+<span class="ID">m</span>*<span class="ID">b</span> <span class="ResWord">for</span> <span class="ID">n</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(-<span class="ID">rnv</span>,<span class="ID">rnv</span>) <span class="ResWord">for</span> <span class="ID">m</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(-<span class="ID">rnv</span>,<span class="ID">rnv</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_17">  17</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_17"></span><span class="anchor" id="line-17"></span><span class="ID">vortices</span> = [(<span class="ID">x</span>,<span class="ID">y</span>) <span class="ResWord">for</span> (<span class="ID">x</span>,<span class="ID">y</span>) <span class="ResWord">in</span> <span class="ID">vortices</span> <span class="ResWord">if</span> -<span class="ID">extra_factor</span>&lt;<span class="ID">x</span>&lt;<span class="ID">extra_factor</span> <span class="ResWord">and</span> -<span class="ID">extra_factor</span>&lt;<span class="ID">y</span>&lt;<span class="ID">extra_factor</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_18">  18</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_18"></span><span class="anchor" id="line-18"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_19">  19</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_19"></span><span class="anchor" id="line-19"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_20">  20</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_20"></span><span class="anchor" id="line-20"></span><span class="ID">xs</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(-<span class="Number">1</span>,<span class="Number">1</span>,<span class="ID">size</span>).<span class="ID">astype</span>(<span class="ID">np</span>.<span class="ID">float32</span>)[<span class="ResWord">None</span>,:]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_21">  21</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_21"></span><span class="anchor" id="line-21"></span><span class="ID">ys</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(-<span class="Number">1</span>,<span class="Number">1</span>,<span class="ID">size</span>).<span class="ID">astype</span>(<span class="ID">np</span>.<span class="ID">float32</span>)[:,<span class="ResWord">None</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_22">  22</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_22"></span><span class="anchor" id="line-22"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_23">  23</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_23"></span><span class="anchor" id="line-23"></span><span class="ID">vectors</span> = <span class="ID">np</span>.<span class="ID">zeros</span>((<span class="ID">size</span>,<span class="ID">size</span>,<span class="Number">2</span>),<span class="ID">dtype</span>=<span class="ID">np</span>.<span class="ID">float32</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_24">  24</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_24"></span><span class="anchor" id="line-24"></span><span class="ResWord">for</span> (<span class="ID">x</span>,<span class="ID">y</span>) <span class="ResWord">in</span> <span class="ID">vortices</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_25">  25</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_25"></span><span class="anchor" id="line-25"></span>    <span class="ID">rsq</span> = (<span class="ID">xs</span>-<span class="ID">x</span>)**<span class="Number">2</span>+(<span class="ID">ys</span>-<span class="ID">y</span>)**<span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_26">  26</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_26"></span><span class="anchor" id="line-26"></span>    <span class="ID">vectors</span>[...,<span class="Number">0</span>] +=  (<span class="ID">ys</span>-<span class="ID">y</span>)/<span class="ID">rsq</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_27">  27</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_27"></span><span class="anchor" id="line-27"></span>    <span class="ID">vectors</span>[...,<span class="Number">1</span>] += -(<span class="ID">xs</span>-<span class="ID">x</span>)/<span class="ID">rsq</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_28">  28</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_28"></span><span class="anchor" id="line-28"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_29">  29</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_29"></span><span class="anchor" id="line-29"></span><span class="ID">texture</span> = <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">rand</span>(<span class="ID">size</span>,<span class="ID">size</span>).<span class="ID">astype</span>(<span class="ID">np</span>.<span class="ID">float32</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_30">  30</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_30"></span><span class="anchor" id="line-30"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_31">  31</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_31"></span><span class="anchor" id="line-31"></span><span class="ID">plt</span>.<span class="ID">bone</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_32">  32</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_32"></span><span class="anchor" id="line-32"></span><span class="ID">frame</span>=<span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_33">  33</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_33"></span><span class="anchor" id="line-33"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_34">  34</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_34"></span><span class="anchor" id="line-34"></span><span class="ResWord">if</span> <span class="ID">video</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_35">  35</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_35"></span><span class="anchor" id="line-35"></span>    <span class="ID">kernellen</span> = <span class="Number">31</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_36">  36</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_36"></span><span class="anchor" id="line-36"></span>    <span class="ResWord">for</span> <span class="ID">t</span> <span class="ResWord">in</span> <span class="ID">np</span>.<span class="ID">linspace</span>(<span class="Number">0</span>,<span class="Number">1</span>,<span class="Number">16</span>*<span class="Number">5</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_37">  37</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_37"></span><span class="anchor" id="line-37"></span>        <span class="ID">kernel</span> = <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">np</span>.<span class="ID">arange</span>(<span class="ID">kernellen</span>)*<span class="ID">np</span>.<span class="ID">pi</span>/<span class="ID">kernellen</span>)*(<span class="Number">1</span>+<span class="ID">np</span>.<span class="ID">sin</span>(<span class="Number">2</span>*<span class="ID">np</span>.<span class="ID">pi</span>*<span class="Number">5</span>*(<span class="ID">np</span>.<span class="ID">arange</span>(<span class="ID">kernellen</span>)/<span class="ResWord">float</span>(<span class="ID">kernellen</span>)+<span class="ID">t</span>)))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_38">  38</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_38"></span><span class="anchor" id="line-38"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_39">  39</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_39"></span><span class="anchor" id="line-39"></span>        <span class="ID">kernel</span> = <span class="ID">kernel</span>.<span class="ID">astype</span>(<span class="ID">np</span>.<span class="ID">float32</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_40">  40</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_40"></span><span class="anchor" id="line-40"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_41">  41</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_41"></span><span class="anchor" id="line-41"></span>        <span class="ID">image</span> = <span class="ID">lic_internal</span>.<span class="ID">line_integral_convolution</span>(<span class="ID">vectors</span>, <span class="ID">texture</span>, <span class="ID">kernel</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_42">  42</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_42"></span><span class="anchor" id="line-42"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_43">  43</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_43"></span><span class="anchor" id="line-43"></span>        <span class="ID">plt</span>.<span class="ID">clf</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_44">  44</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_44"></span><span class="anchor" id="line-44"></span>        <span class="ID">plt</span>.<span class="ID">axis</span>(<span class="String">'</span><span class="String">off</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_45">  45</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_45"></span><span class="anchor" id="line-45"></span>        <span class="ID">plt</span>.<span class="ID">figimage</span>(<span class="ID">image</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_46">  46</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_46"></span><span class="anchor" id="line-46"></span>        <span class="ID">plt</span>.<span class="ID">gcf</span>().<span class="ID">set_size_inches</span>((<span class="ID">size</span>/<span class="ResWord">float</span>(<span class="ID">dpi</span>),<span class="ID">size</span>/<span class="ResWord">float</span>(<span class="ID">dpi</span>)))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_47">  47</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_47"></span><span class="anchor" id="line-47"></span>        <span class="ID">plt</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">flow-</span><span class="String">%04d</span><span class="String">.png</span><span class="String">&quot;</span>%<span class="ID">frame</span>,<span class="ID">dpi</span>=<span class="ID">dpi</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_48">  48</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_48"></span><span class="anchor" id="line-48"></span>        <span class="ID">frame</span> += <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_49">  49</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_49"></span><span class="anchor" id="line-49"></span><span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_50">  50</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_50"></span><span class="anchor" id="line-50"></span>    <span class="ID">kernellen</span>=<span class="Number">31</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_51">  51</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_51"></span><span class="anchor" id="line-51"></span>    <span class="ID">kernel</span> = <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">np</span>.<span class="ID">arange</span>(<span class="ID">kernellen</span>)*<span class="ID">np</span>.<span class="ID">pi</span>/<span class="ID">kernellen</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_52">  52</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_52"></span><span class="anchor" id="line-52"></span>    <span class="ID">kernel</span> = <span class="ID">kernel</span>.<span class="ID">astype</span>(<span class="ID">np</span>.<span class="ID">float32</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_53">  53</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_53"></span><span class="anchor" id="line-53"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_54">  54</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_54"></span><span class="anchor" id="line-54"></span>    <span class="ID">image</span> = <span class="ID">lic_internal</span>.<span class="ID">line_integral_convolution</span>(<span class="ID">vectors</span>, <span class="ID">texture</span>, <span class="ID">kernel</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_55">  55</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_55"></span><span class="anchor" id="line-55"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_56">  56</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_56"></span><span class="anchor" id="line-56"></span>    <span class="ID">plt</span>.<span class="ID">clf</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_57">  57</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_57"></span><span class="anchor" id="line-57"></span>    <span class="ID">plt</span>.<span class="ID">axis</span>(<span class="String">'</span><span class="String">off</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_58">  58</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_58"></span><span class="anchor" id="line-58"></span>    <span class="ID">plt</span>.<span class="ID">figimage</span>(<span class="ID">image</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_59">  59</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_59"></span><span class="anchor" id="line-59"></span>    <span class="ID">plt</span>.<span class="ID">gcf</span>().<span class="ID">set_size_inches</span>((<span class="ID">size</span>/<span class="ResWord">float</span>(<span class="ID">dpi</span>),<span class="ID">size</span>/<span class="ResWord">float</span>(<span class="ID">dpi</span>)))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d05c506285c48f6e57f259a617c519dc524c8d4_60">  60</a> </span><span class="LineAnchor" id="CA-1d05c506285c48f6e57f259a617c519dc524c8d4_60"></span><span class="anchor" id="line-60"></span>    <span class="ID">plt</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">flow-image.png</span><span class="String">&quot;</span>,<span class="ID">dpi</span>=<span class="ID">dpi</span>)</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="lic_demo.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327d11.deb25687eeea9235102b3ab10daa81116e5dfb2d">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="flow-image2745.png?action=AttachFile&amp;do=get&amp;target=flow-image.png">get</a>&nbsp;| <a href="LineIntegralConvolution2aec.html?action=AttachFile&amp;do=view&amp;target=flow-image.png">view</a>] (2008-11-18 14:31:26, 923.3 KB) [[attachment:flow-image.png]]</li><li>[<a href="licb283.py?action=AttachFile&amp;do=get&amp;target=lic.py">get</a>&nbsp;| <a href="LineIntegralConvolutionffd3.html?action=AttachFile&amp;do=view&amp;target=lic.py">view</a>] (2008-11-18 14:29:58, 1.6 KB) [[attachment:lic.py]]</li><li>[<a href="lic_demofb29.py?action=AttachFile&amp;do=get&amp;target=lic_demo.py">get</a>&nbsp;| <a href="LineIntegralConvolution495b.html?action=AttachFile&amp;do=view&amp;target=lic_demo.py">view</a>] (2008-11-18 14:37:33, 1.7 KB) [[attachment:lic_demo.py]]</li><li>[<a href="lic_internal96bc.pyx?action=AttachFile&amp;do=get&amp;target=lic_internal.pyx">get</a>&nbsp;| <a href="LineIntegralConvolution7565.html?action=AttachFile&amp;do=view&amp;target=lic_internal.pyx">view</a>] (2008-11-18 14:29:46, 2.3 KB) [[attachment:lic_internal.pyx]]</li><li>[<a href="setupf4a3.py?action=AttachFile&amp;do=get&amp;target=setup.py">get</a>&nbsp;| <a href="LineIntegralConvolutionc5f1.html?action=AttachFile&amp;do=view&amp;target=setup.py">view</a>] (2008-11-18 14:30:19, 0.2 KB) [[attachment:setup.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LineIntegralConvolution37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/LineIntegralConvolution">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/LineIntegralConvolution?action=AttachFile&do=view&target=lic_demo.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:46:12 GMT -->
+</html>
+

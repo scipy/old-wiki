@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/KalmanFilterLinearDetailed?highlight=%28%28Cookbook%7CKalmanFiltering%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>KalmanFilterLinearDetailed - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: KalmanFilterLinearDetailed" href="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=KalmanFilterLinearDetailed&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed?action=print">
+<link rel="Appendix" title="kalman.py" href="KalmanFilterLinearDetailed9af8.html?action=AttachFile&amp;do=view&amp;target=kalman.py">
+<link rel="Appendix" title="kalman_filter_constantValue.png" href="KalmanFilterLinearDetailed393b.html?action=AttachFile&amp;do=view&amp;target=kalman_filter_constantValue.png">
+<link rel="Appendix" title="kalman_filter_tank.png" href="KalmanFilterLinearDetailed8445.html?action=AttachFile&amp;do=view&amp;target=kalman_filter_tank.png">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="KalmanFilterLinearDetailed456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a class="backlink" href="AllPages325c.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22KalmanFilterLinearDetailed%22" rel="nofollow" title="Click to do a full-text search for this title">KalmanFilterLinearDetailed</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="KalmanFilterLinearDetailed.html">KalmanFilte...earDetailed</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="KalmanFilterLinearDetailed37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Structure_of_Program">Structure of Program</a></li><li>
+<a href="#Numerical_experiments">Numerical experiments</a><ol><li>
+<a href="#SysConstVal_Experiment">SysConstVal Experiment</a></li><li>
+<a href="#SysTank_Experiment">SysTank Experiment</a></li></ol></li><li>
+<a href="#Program_Code">Program Code</a></li></ol></div><p class="line874"> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">Naive but fairly general implementation of a Kalman Filter, together with <span class="anchor" id="line-6"></span>some examples. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">This <a class="attachment" href="KalmanFilterLinearDetailed9af8.html?action=AttachFile&amp;do=view&amp;target=kalman.py" title="program">program</a> is based on the following paper: <span class="anchor" id="line-10"></span><ul><li style="list-style-type:none">Greg Welch and Garry Bishop. An Introduction to the Kalman Filter. <span class="anchor" id="line-11"></span><p class="line891"><a class="http" href="../external.html?link=http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html">http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html</a> <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></li></ul><p class="line874">See also: <span class="anchor" id="line-14"></span><ul><li style="list-style-type:none"><p class="line891"><a class="http" href="../external.html?link=http://en.wikipedia.org/wiki/Kalman_filter">http://en.wikipedia.org/wiki/Kalman_filter</a> <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></li></ul><p class="line874">A Kalman filter is an Algorithm to estimate the states of a linear dynamic system <span class="anchor" id="line-18"></span>from noisy measurements. It must know the system's parameters, as well as <span class="anchor" id="line-19"></span>the inputs, which may have process noise added to them.  <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line874">System Equations: <span class="anchor" id="line-22"></span><div><table><tbody><tr>  <td style="width: 99%"><p class="line862">    x<sub>k</sub> = A x<sub>k-1</sub> + B u<sub>k</sub> + w<sub>k</sub>(Q) </td>
+  <td><p class="line862"> (1) </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-23"></span><p class="line862">         z<sub>k</sub> = H x<sub>k</sub> + v<sub>k</sub>(R)              </td>
+  <td><p class="line862"> (2) </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line874">with: <span class="anchor" id="line-26"></span><ul><li>x: State variables (vector) <span class="anchor" id="line-27"></span></li><li>u: Inputs (vector) <span class="anchor" id="line-28"></span></li><li>z: Outputs (vector) <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li><li class="gap">w: Random noise (vector) with covariance Q  <span class="anchor" id="line-31"></span></li><li>v: Random noise (vector) with covariance R <span class="anchor" id="line-32"></span></li><li>A,B,H: Parameter matrices <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></li></ul><p class="line874">Such a dynamic system can be interpreted as a system of linear differential <span class="anchor" id="line-35"></span>equations, in a time discete form. Therfore the state variables of many <span class="anchor" id="line-36"></span>physical systems can be estimated by a Kalman Filter. But there does not <span class="anchor" id="line-37"></span>need to be an interpretation as a differential equation. Welsh and Bishop <span class="anchor" id="line-38"></span>(the authors of the paper above) use the Kalman Filter to predict the <span class="anchor" id="line-39"></span>position of moving objects in image sequences (IMHO). <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line874">As one can see from equation (2) it is not necessary to measure the state <span class="anchor" id="line-42"></span>variables directly. A Kalman Filter can estimate the system states from a <span class="anchor" id="line-43"></span>linear combination of them, with added noise. <span class="anchor" id="line-44"></span>The Kalman filter does not need to store a long history of measurements. It  <span class="anchor" id="line-45"></span>stores only the current state estimate (x<sub>hat</sub>) and a matrix that specifies how much the filter <span class="anchor" id="line-46"></span>trusts the current state estimate (P). <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line867">
+<h1 id="Structure_of_Program">Structure of Program</h1>
+<span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line862">The program (<a class="attachment" href="KalmanFilterLinearDetailed9af8.html?action=AttachFile&amp;do=view&amp;target=kalman.py" title="">kalman.py</a>) is fairly large (~1000 lines), however much space is taken by comments. First come some classes that do the maths: <span class="anchor" id="line-52"></span><ul><li><p class="line891"><strong>LinSys</strong>: The dynamic system. Can simulate the system and generate the random noise.  <span class="anchor" id="line-53"></span>Needs all parameter matrices (A, B, H, Q, R) to run. Parent class for all example systems. <span class="anchor" id="line-54"></span></li><li><p class="line891"><strong>KalmanFilter</strong>: The Kalman filter. Needs a LinSys class to know the system's parameters. <span class="anchor" id="line-55"></span></li><li><p class="line891"><strong>PidController</strong>: A very simple PID controller.  <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span></li></ul><p class="line862">Then come some example systems. These classes all inherit from LinSys. To create your own dynamic systems see the docstring of the LinSys class, and use one of the example systems as a starting point. <span class="anchor" id="line-58"></span><ul><li><p class="line891"><strong>SysConstVal</strong>: In this system the state values simply stay constant. <span class="anchor" id="line-59"></span></li><li><p class="line891"><strong>SysTank</strong>: Tank with variable input and output. <span class="anchor" id="line-60"></span></li><li><p class="line891"><strong>SysSpringPendulum</strong> A damped spring pendulum. Forces are applied to pendulum's mass.  <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span></li></ul><p class="line874">Finally there are several numerical experiments, which are described in the next section. <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line867">
+<h1 id="Numerical_experiments">Numerical experiments</h1>
+<span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line874">The numerical experiments are organized in (nested) functions. This way it is easy to enable/disable  <span class="anchor" id="line-68"></span>certain experiments by only commenting out the line where the experiment function is called. <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line867">
+<h2 id="SysConstVal_Experiment">SysConstVal Experiment</h2>
+<span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line874">In this experiment the Kalman filter is asked to guess two constant values. The filter can only see the values with random noise (a random number) added to them. The filter is shown many such noisy  measurements, and each time it is asked to estimate the true values. The noise for value 0 (blue) has a big variance, and the noise for value 1 (green) has a small variance. The filter knows the variances. <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line867"><img alt="kalman_filter_constantValue.png" class="attachment" src="kalman_filter_constantValuea72c.png?action=AttachFile&amp;do=get&amp;target=kalman_filter_constantValue.png" title="kalman_filter_constantValue.png" /> <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line874">The filter behaves as an adaptable lowpass filter. When the noise's variance is big (blue) the filter does not trust the measurements very much, and the filter is slow to find the true value. When the noise's variance is small (green) it finds the true values quickly.  <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line862">This experiment is very similar to the example in the <a class="http" href="../external.html?link=http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html">paper</a> mentioned in the introduction, and in the other <a href="Cookbook/KalmanFiltering.html">Kalman Filtering</a> example. <span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line867">
+<h2 id="SysTank_Experiment">SysTank Experiment</h2>
+<span class="anchor" id="line-82"></span><p class="line867">SysTank models a tank with variable inflow and outflow. The the amount of liquid in the tank is measured, but with a lot of noise added to it. The inflow and the outflow rates are known, and considerable process noise is added to them too. The Kalman filter is asked to estimate the amount of liquid in the tank.  <span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line874">For comparison a simple moving average filter is applied to the noisy measurements. It averages over 15 steps. As one can see in the image below, the Kalman filter performs significantly better than the averaging filter. <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line867"><img alt="kalman_filter_tank.png" class="attachment" src="kalman_filter_tank72e9.png?action=AttachFile&amp;do=get&amp;target=kalman_filter_tank.png" title="kalman_filter_tank.png" /> <span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><p class="line867">
+<h1 id="Program_Code">Program Code</h1>
+<span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><p class="line862">Download the program:: <a class="attachment" href="KalmanFilterLinearDetailed9af8.html?action=AttachFile&amp;do=view&amp;target=kalman.py" title="">kalman.py</a> <span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><p class="line867"><span class="anchor" id="line-93"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: KalmanFilterLinearDetailed  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="KalmanFilterLinearDetailed37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/KalmanFilterLinearDetailed">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/KalmanFilterLinearDetailed?highlight=%28%28Cookbook%7CKalmanFiltering%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

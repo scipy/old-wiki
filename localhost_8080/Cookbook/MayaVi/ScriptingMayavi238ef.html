@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/MayaVi/ScriptingMayavi2 - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/ScriptingMayavi2" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FScriptingMayavi2&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="ScriptingMayavi2456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../MayaVi.html">MayaVi</a></li><li><a class="backlink" href="ScriptingMayavi22396.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FScriptingMayavi2%22" rel="nofollow" title="Click to do a full-text search for this title">ScriptingMayavi2</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="ScriptingMayavi2.html">ScriptingMayavi2</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ScriptingMayavi237dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Main_template:_create_your_MayaVi2_class">Main template: create your MayaVi2 class</a></li><li>
+<a href="#Loading_data">Loading data</a><ol><li>
+<a href="#Loading_data_from_array_using_ArraySource_method">Loading data from array using ArraySource method</a></li><li>
+<a href="#Loading_data_from_file_using_FileReader_methods">Loading data from file using FileReader methods</a></li><li>
+<a href="#Add_the_source_to_your_MayaVi2_class">Add the source to your MayaVi2 class</a></li></ol></li><li>
+<a href="#Basic_Modules">Basic Modules</a></li><li>
+<a href="#Main_Modules">Main Modules</a></li><li>
+<a href="#Filters">Filters</a></li></ol></div><p class="line874"> <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><div><table><tbody><tr>  <td style="background-color: #80FF80"><p class="line862"> This page presents scripting Mayavi2 using the advanced, object-oriented API. Mayavi2 has recently acquired an easy-to-use, thought maybe not as powerful, scripting module: mlab. You are invited to refer to the <a class="http" href="../../../external.html?link=http://code.enthought.com/projects/mayavi/docs/development/mayavi/html/mlab.html">section</a> of <a class="http" href="../../../external.html?link=http://code.enthought.com/projects/mayavi/docs/development/mayavi/html/">Mayavi2 user guide</a>. Reading this page will give you a deeper understanding of how Mayavi2 works, and it complements the user guide. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">To script MayaVi2, you need (at least): <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><ul><li>your favorite text editor; <span class="anchor" id="line-12"></span></li><li><p class="line862">python installed <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-13"></span></li><li><p class="line891">MayaVi2 installed <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></li></ul><p class="line862">Scripting MayaVi2 is quite simple because MayaVi2 is written in python and based on TVTK, which eases the uses of all VTK objects. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line862">In the following, you'll be learned how to script and use MayaVi2 modules and filters. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line874">Modules can be split in two parts: <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><ul><li><p class="line862">modules which do not interact with VTK data, and are seldom modified/handled (Outline, Axes, OrientationAxes and Text). These are called the &quot;basic&quot; modules. Although color bar is not strictly speaking a module, it will be presented here. Setting a few parameters for rendering your scene will be also presented. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span></li><li class="gap">modules which do interact with VTK data, and those you want to play with (i.e. all the remainder modules ;-). <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span></li></ul><p class="line862">Before starting, let's see the &quot;main template&quot; of a MayaVi2 script written in python. <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line867">
+<h1 id="Main_template:_create_your_MayaVi2_class">Main template: create your MayaVi2 class</h1>
+<span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line862">A MayaVi2 script should contain at least the following few lines: <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line867"><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-06cfa32300193c7ff029430fd30712f516338d94\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-06cfa32300193c7ff029430fd30712f516338d94" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_1">   1</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_1"></span><span class="anchor" id="line-1-2"></span><span class="Comment">#! /usr/bin/env python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_2">   2</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_3">   3</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.app</span> <span class="ResWord">import</span> <span class="ID">Mayavi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_4">   4</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_4"></span><span class="anchor" id="line-4-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_5">   5</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_5"></span><span class="anchor" id="line-5-1"></span><span class="ResWord">class</span> <span class="ID">MyClass</span>(<span class="ID">Mayavi</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_6">   6</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_6"></span><span class="anchor" id="line-6-1"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_7">   7</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_7"></span><span class="anchor" id="line-7-1"></span>    <span class="ResWord">def</span> <span class="ID">run</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_8">   8</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_8"></span><span class="anchor" id="line-8-1"></span>        <span class="ID">script</span> = <span class="ResWord">self</span>.<span class="ID">script</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_9">   9</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_9"></span><span class="anchor" id="line-9-1"></span>        <span class="Comment"># `self.script` is the MayaVi Script interface (an instance of</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_10">  10</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_10"></span><span class="anchor" id="line-10-1"></span>        <span class="Comment"># enthought.mayavi.script.Script) that is created by the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_11">  11</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_11"></span><span class="anchor" id="line-11-1"></span>        <span class="Comment"># base `Mayavi` class.  Here we save a local reference for</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_12">  12</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_12"></span><span class="anchor" id="line-12-1"></span>        <span class="Comment"># convenience.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_13">  13</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_13"></span><span class="anchor" id="line-13-1"></span>  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_14">  14</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_14"></span><span class="anchor" id="line-14-1"></span>        <span class="Comment">## import any Mayavi modules and filters you want (they must be done here!)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_15">  15</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_15"></span><span class="anchor" id="line-15-1"></span>        .../...</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_16">  16</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_16"></span><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_17">  17</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_17"></span><span class="anchor" id="line-17-1"></span>        <span class="ID">script</span>.<span class="ID">new_scene</span>()                      <span class="Comment"># to create the rendering scene</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_18">  18</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_18"></span><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_19">  19</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_19"></span><span class="anchor" id="line-19-1"></span>        <span class="Comment">## your stuff (modules, filters, etc) here</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_20">  20</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_20"></span><span class="anchor" id="line-20-1"></span>        .../...</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_21">  21</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_21"></span><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_22">  22</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_22"></span><span class="anchor" id="line-22-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_23">  23</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_23"></span><span class="anchor" id="line-23-1"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_24">  24</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_24"></span><span class="anchor" id="line-24-1"></span>    <span class="ID">mc</span> = <span class="ID">MyClass</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-06cfa32300193c7ff029430fd30712f516338d94_25">  25</a> </span><span class="LineAnchor" id="CA-06cfa32300193c7ff029430fd30712f516338d94_25"></span><span class="anchor" id="line-25-1"></span>    <span class="ID">mc</span>.<span class="ID">main</span>()</span>
+</pre></div></div><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line862">Adding modules or filters is quite simple: you have to import it, and then add it to your MayaVi2 class. <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><p class="line874">To add a module, type: <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line867"><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-6ab74bb74a51652106e19649bda28c6e3d46bb1f" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.foo_module</span> <span class="ResWord">import</span> <span class="ID">FooModule</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span>.../...</span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ID">mymodule</span> = <span class="ID">FooModule</span>()</span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">mymodule</span>)</span>
+</pre></div></div><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line874">To add a filter, type: <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line867"><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-74176d7ffb88f835b987091622c591266888e0ae" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.filters.bar_filter</span> <span class="ResWord">import</span> <span class="ID">BarFilter</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span>.../...</span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ID">myfilter</span> = <span class="ID">BarFilter</span>()</span>
+<span class="line"><span class="anchor" id="line-4-3"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">myfilter</span>)</span>
+</pre></div></div><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line862">Notice the used syntax: for modules for example, foo_module is the foo_module python file (without the extension .py) in the subdirectory module/ of mayavi/ directory (lower case, underscore); this file contains the class <a class="nonexistent" href="../../FooModule.html">FooModule</a> (no underscore, capitalized name). <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line874">But first of all, before rendering your scene with the modules and the filters you want to use, you have to load some data, of course. <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><p class="line867">
+<h1 id="Loading_data">Loading data</h1>
+<span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><p class="line874">You have the choice between: <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><ul><li><p class="line862">create a 3D data array, for scalars data (for vectors data, you have to use a 4D scalars data, i.e. a 3D scalar data for each component) and load it with ArraySource method; <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span></li><li class="gap"><p class="line862">load a data file with FileReader methods. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></li></ul><p class="line867">
+<h2 id="Loading_data_from_array_using_ArraySource_method">Loading data from array using ArraySource method</h2>
+<span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><p class="line862">For example, we will create a 50*50*50 3D (scalar) array of a product of cosinus &amp; sinus functions. <span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><p class="line874">To do this, we need to load the appropriate modules: <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><p class="line867"><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-d1f3a196262438b99119e3e619d3eafcefdd53db\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_1">   1</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">import</span> <span class="ID">scipy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_2">   2</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_2"></span><span class="anchor" id="line-2-4"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">ogrid</span>, <span class="ID">sin</span>, <span class="ID">cos</span>, <span class="ID">sqrt</span>, <span class="ID">pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_3">   3</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_3"></span><span class="anchor" id="line-3-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_4">   4</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_4"></span><span class="anchor" id="line-4-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.sources.array_source</span> <span class="ResWord">import</span> <span class="ID">ArraySource</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_5">   5</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_5"></span><span class="anchor" id="line-5-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_6">   6</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_6"></span><span class="anchor" id="line-6-2"></span><span class="ID">Nx</span> = <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_7">   7</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">Ny</span> = <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_8">   8</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_8"></span><span class="anchor" id="line-8-2"></span><span class="ID">Nz</span> = <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_9">   9</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_9"></span><span class="anchor" id="line-9-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_10">  10</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_10"></span><span class="anchor" id="line-10-2"></span><span class="ID">Lx</span> = <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_11">  11</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_11"></span><span class="anchor" id="line-11-2"></span><span class="ID">Ly</span> = <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_12">  12</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_12"></span><span class="anchor" id="line-12-2"></span><span class="ID">Lz</span> = <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_13">  13</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_13"></span><span class="anchor" id="line-13-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_14">  14</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_14"></span><span class="anchor" id="line-14-2"></span><span class="ID">x</span>, <span class="ID">y</span>, <span class="ID">z</span> = <span class="ID">ogrid</span>[<span class="Number">0</span>:<span class="ID">Lx</span>:(<span class="ID">Nx</span>+<span class="Number">1</span>)*<span class="Number">1j</span>,<span class="Number">0</span>:<span class="ID">Ly</span>:(<span class="ID">Ny</span>+<span class="Number">1</span>)*<span class="Number">1j</span>,<span class="Number">0</span>:<span class="ID">Lz</span>:(<span class="ID">Nz</span>+<span class="Number">1</span>)*<span class="Number">1j</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_15">  15</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_15"></span><span class="anchor" id="line-15-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_16">  16</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_16"></span><span class="anchor" id="line-16-2"></span><span class="Comment"># Strictly speaking, H is the magnetic field of the &quot;transverse electric&quot; eigenmode m=n=p=1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_17">  17</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_17"></span><span class="anchor" id="line-17-2"></span><span class="Comment"># of a rectangular resonator cavity, with dimensions Lx, Ly, Lz</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_18">  18</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_18"></span><span class="anchor" id="line-18-2"></span><span class="ID">Hx</span> = <span class="ID">sin</span>(<span class="ID">x</span>*<span class="ID">pi</span>/<span class="ID">Lx</span>)*<span class="ID">cos</span>(<span class="ID">y</span>*<span class="ID">pi</span>/<span class="ID">Ly</span>)*<span class="ID">cos</span>(<span class="ID">z</span>*<span class="ID">pi</span>/<span class="ID">Lz</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_19">  19</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_19"></span><span class="anchor" id="line-19-2"></span><span class="ID">Hy</span> = <span class="ID">cos</span>(<span class="ID">x</span>*<span class="ID">pi</span>/<span class="ID">Lx</span>)*<span class="ID">sin</span>(<span class="ID">y</span>*<span class="ID">pi</span>/<span class="ID">Ly</span>)*<span class="ID">cos</span>(<span class="ID">z</span>*<span class="ID">pi</span>/<span class="ID">Lz</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_20">  20</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_20"></span><span class="anchor" id="line-20-2"></span><span class="ID">Hz</span> = <span class="ID">cos</span>(<span class="ID">x</span>*<span class="ID">pi</span>/<span class="ID">Lx</span>)*<span class="ID">cos</span>(<span class="ID">y</span>*<span class="ID">pi</span>/<span class="ID">Ly</span>)*<span class="ID">sin</span>(<span class="ID">z</span>*<span class="ID">pi</span>/<span class="ID">Lz</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_21">  21</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_21"></span><span class="anchor" id="line-21-2"></span><span class="ID">Hv_scal</span> = <span class="ID">sqrt</span>(<span class="ID">Hx</span>**<span class="Number">2</span> + <span class="ID">Hy</span>**<span class="Number">2</span> + <span class="ID">Hz</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_22">  22</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_22"></span><span class="anchor" id="line-22-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_23">  23</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_23"></span><span class="anchor" id="line-23-2"></span><span class="Comment"># We want to load a scalars data (Hv_scal) as magnitude of a given 3D vector (Hv = {Hx, Hy, Hz})</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_24">  24</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_24"></span><span class="anchor" id="line-24-2"></span><span class="Comment"># Hv_scal is a 3D scalars data, Hv is a 4D scalars data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_25">  25</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_25"></span><span class="anchor" id="line-25-2"></span><span class="ID">src</span> = <span class="ID">ArraySource</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_26">  26</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_26"></span><span class="anchor" id="line-26-1"></span><span class="ID">src</span>.<span class="ID">scalar_data</span> = <span class="ID">Hv_scal</span> <span class="Comment"># load scalars data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_27">  27</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_27"></span><span class="anchor" id="line-27-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_28">  28</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_28"></span><span class="anchor" id="line-28-1"></span><span class="Comment"># To load vectors data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d1f3a196262438b99119e3e619d3eafcefdd53db_29">  29</a> </span><span class="LineAnchor" id="CA-d1f3a196262438b99119e3e619d3eafcefdd53db_29"></span><span class="anchor" id="line-29-1"></span><span class="Comment"># src.vector_data = Hv</span></span>
+</pre></div></div><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><p class="line867">
+<h2 id="Loading_data_from_file_using_FileReader_methods">Loading data from file using FileReader methods</h2>
+<span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><p class="line874">To load a VTK data file, say heart.vtk file in mayavi/examples/data/ directory, simply type: <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><p class="line867"><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-99457b8299f0b013f6b9570aada4635b4f4d59a5" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.sources.vtk_file_reader</span> <span class="ResWord">import</span> <span class="ID">VTKFileReader</span></span>
+<span class="line"><span class="anchor" id="line-2-5"></span></span>
+<span class="line"><span class="anchor" id="line-3-5"></span><span class="ID">src</span> = <span class="ID">VTKFileReader</span>()</span>
+<span class="line"><span class="anchor" id="line-4-5"></span><span class="ID">src</span>.<span class="ID">initialize</span>(<span class="String">&quot;</span><span class="String">heart.vtk</span><span class="String">&quot;</span>)</span>
+</pre></div></div><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><p class="line862">Note: Files with .vtk extension are called &quot;legacy VTK&quot; files. MayaVi2 can read a lot of other files formats (XML, files from Ensight, Plot3D and so on). For example, you can load an XML file (with extension .vti, .vtp, .vtr, .vts, .vtu, etc) using VTKXML!<a class="nonexistent" href="../../FileReader.html">FileReader</a> method.  <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line867">
+<h2 id="Add_the_source_to_your_MayaVi2_class">Add the source to your MayaVi2 class</h2>
+<span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line862">Then, once your data are loaded using one of the two methods above, add the source with the add_source() method in the body of the class MyClass (after script.new_scene): <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line867"><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-673ec564ec02b37bf516290a298b10c91316d7b2" lang="en"><span class="line"><span class="anchor" id="line-1-12"></span><span class="ID">script</span>.<span class="ID">add_source</span>(<span class="ID">src</span>)</span>
+</pre></div></div><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><p class="line862">The four basic modules Outline, Axes, OrientationAxes and Text will be presented now. <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line867">
+<h1 id="Basic_Modules">Basic Modules</h1>
+<span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><p class="line862">See the <a href="ScriptingMayavi2/BasicModules.html">Basic Modules</a> wiki page. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line867">
+<h1 id="Main_Modules">Main Modules</h1>
+<span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line862">See the <a href="ScriptingMayavi2/MainModules.html">Main Modules</a> wiki page. <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><p class="line867">
+<h1 id="Filters">Filters</h1>
+<span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><p class="line862">See the <a href="ScriptingMayavi2/Filters.html">Filters</a> wiki page. <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-165"></span><a href="../../CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <span class="anchor" id="line-166"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MayaVi/ScriptingMayavi2  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ScriptingMayavi237dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+</html>
+

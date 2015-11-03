@@ -1,0 +1,337 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Data_Acquisition_with_NIDAQmx - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Data_Acquisition_with_NIDAQmx" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FData_Acquisition_with_NIDAQmx&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Data_Acquisition_with_NIDAQmx456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Data_Acquisition_with_NIDAQmxc499.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FData_Acquisition_with_NIDAQmx%22" rel="nofollow" title="Click to do a full-text search for this title">Data_Acquisition_with_NIDAQmx</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Data_Acquisition_with_NIDAQmx.html">Data_Acquis...ith_NIDAQmx</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Data_Acquisition_with_NIDAQmx37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">These are quick examples of using <a class="http" href="../../external.html?link=http://docs.python.org/lib/module-ctypes.html">ctypes</a> and numpy to do data acquisition and playback using <a class="http" href="../../external.html?link=http://ni.com/">National Instrument's</a> <a class="http" href="../../external.html?link=http://www.ni.com/dataacquisition/nidaqmx.htm">NI-DAQmx</a> library. This library allows access to their wide range of data acquisition devices. By using ctypes, we bypass the need for a C compiler. The code below assumes a Windows platform. NI-DAQmx is also available for Linux, but the code below would require a few minor changes, namely loading the shared library and setting the function signatures. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">See also <a href="Data_Acquisition_with_PyUL.html">Data acquisition with PyUniversalLibrary</a>. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">See also projects that wrap NI-DAQmx library with Linux support: <a class="http" href="../../external.html?link=http://code.google.com/p/pylibnidaqmx/">pylibnidaqmx</a>, <a class="http" href="../../external.html?link=http://code.google.com/p/pydaqmx/">pydaqmx</a>, <a class="http" href="../../external.html?link=http://code.google.com/p/daqmxbase-swig/">daqmxbase-swig</a>. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">OK, enough talk, let's see the code! <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867">
+<h1 id="Analog_Acquisition">Analog Acquisition</h1>
+<span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-61e2398d5a61c2b0180de5cd8d7ed6782967f8e4" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment">#Acq_IncClk.py</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="Comment"># This is a near-verbatim translation of the example program</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="Comment"># C:\Program Files\National Instruments\NI-DAQ\Examples\DAQmx ANSI C\Analog In\Measure Voltage\Acq-Int Clk\Acq-IntClk.c</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ResWord">import</span> <span class="ID">ctypes</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">nidaq</span> = <span class="ID">ctypes</span>.<span class="ID">windll</span>.<span class="ID">nicaiu</span> <span class="Comment"># load the DLL</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="Comment">##############################</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="Comment"># Setup some typedefs and constants</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="Comment"># to correspond with values in</span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="Comment"># C:\Program Files\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include\NIDAQmx.h</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="Comment"># the typedefs</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ID">int32</span> = <span class="ID">ctypes</span>.<span class="ID">c_long</span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="ID">uInt32</span> = <span class="ID">ctypes</span>.<span class="ID">c_ulong</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">uInt64</span> = <span class="ID">ctypes</span>.<span class="ID">c_ulonglong</span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">float64</span> = <span class="ID">ctypes</span>.<span class="ID">c_double</span></span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="ID">TaskHandle</span> = <span class="ID">uInt32</span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="Comment"># the constants</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">DAQmx_Val_Cfg_Default</span> = <span class="ID">int32</span>(-<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ID">DAQmx_Val_Volts</span> = <span class="Number">10348</span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">DAQmx_Val_Rising</span> = <span class="Number">10280</span></span>
+<span class="line"><span class="anchor" id="line-21-1"></span><span class="ID">DAQmx_Val_FiniteSamps</span> = <span class="Number">10178</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span><span class="ID">DAQmx_Val_GroupByChannel</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span><span class="Comment">##############################</span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="ResWord">def</span> <span class="ID">CHK</span>(<span class="ID">err</span>):</span>
+<span class="line"><span class="anchor" id="line-25-1"></span>    <span class="String">&quot;&quot;&quot;a simple error checking routine&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span>    <span class="ResWord">if</span> <span class="ID">err</span> &lt; <span class="Number">0</span>:</span>
+<span class="line"><span class="anchor" id="line-27-1"></span>        <span class="ID">buf_size</span> = <span class="Number">100</span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span>        <span class="ID">buf</span> = <span class="ID">ctypes</span>.<span class="ID">create_string_buffer</span>(<span class="String">'</span><span class="SPChar">\000</span><span class="String">'</span> * <span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-29-1"></span>        <span class="ID">nidaq</span>.<span class="ID">DAQmxGetErrorString</span>(<span class="ID">err</span>,<span class="ID">ctypes</span>.<span class="ID">byref</span>(<span class="ID">buf</span>),<span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-30-1"></span>        <span class="ResWord">raise</span> <span class="ID">RuntimeError</span>(<span class="String">'</span><span class="String">nidaq call failed with error </span><span class="String">%d</span><span class="String">: </span><span class="String">%s</span><span class="String">'</span>%(<span class="ID">err</span>,<span class="ResWord">repr</span>(<span class="ID">buf</span>.<span class="ID">value</span>)))</span>
+<span class="line"><span class="anchor" id="line-31-1"></span><span class="Comment"># initialize variables</span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span><span class="ID">taskHandle</span> = <span class="ID">TaskHandle</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="anchor" id="line-33-1"></span><span class="ID">max_num_samples</span> = <span class="Number">1000</span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span><span class="ID">data</span> = <span class="ID">numpy</span>.<span class="ID">zeros</span>((<span class="ID">max_num_samples</span>,),<span class="ID">dtype</span>=<span class="ID">numpy</span>.<span class="ID">float64</span>)</span>
+<span class="line"><span class="anchor" id="line-35-1"></span><span class="Comment"># now, on with the program</span></span>
+<span class="line"><span class="anchor" id="line-36-1"></span><span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCreateTask</span>(<span class="String">&quot;</span><span class="String">&quot;</span>,<span class="ID">ctypes</span>.<span class="ID">byref</span>(<span class="ID">taskHandle</span>)))</span>
+<span class="line"><span class="anchor" id="line-37-1"></span><span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCreateAIVoltageChan</span>(<span class="ID">taskHandle</span>,<span class="String">&quot;</span><span class="String">Dev1/ai0</span><span class="String">&quot;</span>,<span class="String">&quot;</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="anchor" id="line-38-1"></span>                                   <span class="ID">DAQmx_Val_Cfg_Default</span>,</span>
+<span class="line"><span class="anchor" id="line-39-1"></span>                                   <span class="ID">float64</span>(-<span class="Number">10.0</span>),<span class="ID">float64</span>(<span class="Number">10.0</span>),</span>
+<span class="line"><span class="anchor" id="line-40-1"></span>                                   <span class="ID">DAQmx_Val_Volts</span>,<span class="ResWord">None</span>))</span>
+<span class="line"><span class="anchor" id="line-41-1"></span><span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCfgSampClkTiming</span>(<span class="ID">taskHandle</span>,<span class="String">&quot;</span><span class="String">&quot;</span>,<span class="ID">float64</span>(<span class="Number">10000.0</span>),</span>
+<span class="line"><span class="anchor" id="line-42-1"></span>                                <span class="ID">DAQmx_Val_Rising</span>,<span class="ID">DAQmx_Val_FiniteSamps</span>,</span>
+<span class="line"><span class="anchor" id="line-43-1"></span>                                <span class="ID">uInt64</span>(<span class="ID">max_num_samples</span>)));</span>
+<span class="line"><span class="anchor" id="line-44-1"></span><span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxStartTask</span>(<span class="ID">taskHandle</span>))</span>
+<span class="line"><span class="anchor" id="line-45-1"></span><span class="ID">read</span> = <span class="ID">int32</span>()</span>
+<span class="line"><span class="anchor" id="line-46-1"></span><span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxReadAnalogF64</span>(<span class="ID">taskHandle</span>,<span class="ID">max_num_samples</span>,<span class="ID">float64</span>(<span class="Number">10.0</span>),</span>
+<span class="line"><span class="anchor" id="line-47-1"></span>                             <span class="ID">DAQmx_Val_GroupByChannel</span>,<span class="ID">data</span>.<span class="ID">ctypes</span>.<span class="ID">data</span>,</span>
+<span class="line"><span class="anchor" id="line-48-1"></span>                             <span class="ID">max_num_samples</span>,<span class="ID">ctypes</span>.<span class="ID">byref</span>(<span class="ID">read</span>),<span class="ResWord">None</span>))</span>
+<span class="line"><span class="anchor" id="line-49-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Acquired </span><span class="String">%d</span><span class="String"> points</span><span class="String">&quot;</span>%(<span class="ID">read</span>.<span class="ID">value</span>)</span>
+<span class="line"><span class="anchor" id="line-50-1"></span><span class="ResWord">if</span> <span class="ID">taskHandle</span>.<span class="ID">value</span> != <span class="Number">0</span>:</span>
+<span class="line"><span class="anchor" id="line-51-1"></span>    <span class="ID">nidaq</span>.<span class="ID">DAQmxStopTask</span>(<span class="ID">taskHandle</span>)</span>
+<span class="line"><span class="anchor" id="line-52-1"></span>    <span class="ID">nidaq</span>.<span class="ID">DAQmxClearTask</span>(<span class="ID">taskHandle</span>)</span>
+<span class="line"><span class="anchor" id="line-53-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">End of program, press Enter key to quit</span><span class="String">&quot;</span></span>
+<span class="line"><span class="anchor" id="line-54-1"></span><span class="ResWord">raw_input</span>()</span>
+</pre></div></div><span class="anchor" id="line-67"></span><p class="line867">
+<h1 id="Analog_Generation">Analog Generation</h1>
+<span class="anchor" id="line-68"></span><p class="line867"><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-be6b78f31d798958c67ed4aa3c3e3928874ffe67" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="String">This is an interpretation of the example program</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="String">C:\Program Files\National Instruments\NI-DAQ\Examples\DAQmx ANSI C\Analog Out\Generate Voltage\Cont Gen Volt Wfm-Int Clk\ContGen-IntClk.c</span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="String">This routine will play an arbitrary-length waveform file.</span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="String">This module depends on:</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="String">numpy</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="String">Adapted by Martin Bures [ mbures { @ } zoll { . } com ]</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="Comment"># import system libraries</span></span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ResWord">import</span> <span class="ID">ctypes</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="ResWord">import</span> <span class="ID">threading</span></span>
+<span class="line"><span class="anchor" id="line-13-2"></span><span class="Comment"># load any DLLs</span></span>
+<span class="line"><span class="anchor" id="line-14-2"></span><span class="ID">nidaq</span> = <span class="ID">ctypes</span>.<span class="ID">windll</span>.<span class="ID">nicaiu</span> <span class="Comment"># load the DLL</span></span>
+<span class="line"><span class="anchor" id="line-15-2"></span><span class="Comment">##############################</span></span>
+<span class="line"><span class="anchor" id="line-16-2"></span><span class="Comment"># Setup some typedefs and constants</span></span>
+<span class="line"><span class="anchor" id="line-17-2"></span><span class="Comment"># to correspond with values in</span></span>
+<span class="line"><span class="anchor" id="line-18-2"></span><span class="Comment"># C:\Program Files\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include\NIDAQmx.h</span></span>
+<span class="line"><span class="anchor" id="line-19-2"></span><span class="Comment"># the typedefs</span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="ID">int32</span> = <span class="ID">ctypes</span>.<span class="ID">c_long</span></span>
+<span class="line"><span class="anchor" id="line-21-2"></span><span class="ID">uInt32</span> = <span class="ID">ctypes</span>.<span class="ID">c_ulong</span></span>
+<span class="line"><span class="anchor" id="line-22-2"></span><span class="ID">uInt64</span> = <span class="ID">ctypes</span>.<span class="ID">c_ulonglong</span></span>
+<span class="line"><span class="anchor" id="line-23-2"></span><span class="ID">float64</span> = <span class="ID">ctypes</span>.<span class="ID">c_double</span></span>
+<span class="line"><span class="anchor" id="line-24-2"></span><span class="ID">TaskHandle</span> = <span class="ID">uInt32</span></span>
+<span class="line"><span class="anchor" id="line-25-2"></span><span class="Comment"># the constants</span></span>
+<span class="line"><span class="anchor" id="line-26-2"></span><span class="ID">DAQmx_Val_Cfg_Default</span> = <span class="ID">int32</span>(-<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-27-2"></span><span class="ID">DAQmx_Val_Volts</span> = <span class="Number">10348</span></span>
+<span class="line"><span class="anchor" id="line-28-2"></span><span class="ID">DAQmx_Val_Rising</span> = <span class="Number">10280</span></span>
+<span class="line"><span class="anchor" id="line-29-2"></span><span class="ID">DAQmx_Val_FiniteSamps</span> = <span class="Number">10178</span></span>
+<span class="line"><span class="anchor" id="line-30-2"></span><span class="ID">DAQmx_Val_ContSamps</span> = <span class="Number">10123</span></span>
+<span class="line"><span class="anchor" id="line-31-2"></span><span class="ID">DAQmx_Val_GroupByChannel</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-32-2"></span><span class="Comment">##############################</span></span>
+<span class="line"><span class="anchor" id="line-33-2"></span><span class="ResWord">class</span> <span class="ID">WaveformThread</span>( <span class="ID">threading</span>.<span class="ID">Thread</span> ):</span>
+<span class="line"><span class="anchor" id="line-34-2"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-35-2"></span><span class="String">    This class performs the necessary initialization of the DAQ hardware and</span></span>
+<span class="line"><span class="anchor" id="line-36-2"></span><span class="String">    spawns a thread to handle playback of the signal.</span></span>
+<span class="line"><span class="anchor" id="line-37-2"></span><span class="String">    It takes as input arguments the waveform to play and the sample rate at which</span></span>
+<span class="line"><span class="anchor" id="line-38-2"></span><span class="String">    to play it.</span></span>
+<span class="line"><span class="anchor" id="line-39-2"></span><span class="String">    This will play an arbitrary-length waveform file.</span></span>
+<span class="line"><span class="anchor" id="line-40-2"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-41-2"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>( <span class="ResWord">self</span>, <span class="ID">waveform</span>, <span class="ID">sampleRate</span> ):</span>
+<span class="line"><span class="anchor" id="line-42-2"></span>        <span class="ResWord">self</span>.<span class="ID">running</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-43-2"></span>        <span class="ResWord">self</span>.<span class="ID">sampleRate</span> = <span class="ID">sampleRate</span></span>
+<span class="line"><span class="anchor" id="line-44-2"></span>        <span class="ResWord">self</span>.<span class="ID">periodLength</span> = <span class="ResWord">len</span>( <span class="ID">waveform</span> )</span>
+<span class="line"><span class="anchor" id="line-45-2"></span>        <span class="ResWord">self</span>.<span class="ID">taskHandle</span> = <span class="ID">TaskHandle</span>( <span class="Number">0</span> )</span>
+<span class="line"><span class="anchor" id="line-46-2"></span>        <span class="ResWord">self</span>.<span class="ID">data</span> = <span class="ID">numpy</span>.<span class="ID">zeros</span>( ( <span class="ResWord">self</span>.<span class="ID">periodLength</span>, ), <span class="ID">dtype</span>=<span class="ID">numpy</span>.<span class="ID">float64</span> )</span>
+<span class="line"><span class="anchor" id="line-47-2"></span>        <span class="Comment"># convert waveform to a numpy array</span></span>
+<span class="line"><span class="anchor" id="line-48-2"></span>        <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>( <span class="ResWord">self</span>.<span class="ID">periodLength</span> ):</span>
+<span class="line"><span class="anchor" id="line-49-2"></span>            <span class="ResWord">self</span>.<span class="ID">data</span>[ <span class="ID">i</span> ] = <span class="ID">waveform</span>[ <span class="ID">i</span> ]</span>
+<span class="line"><span class="anchor" id="line-50-2"></span>        <span class="Comment"># setup the DAQ hardware</span></span>
+<span class="line"><span class="anchor" id="line-51-2"></span>        <span class="ResWord">self</span>.<span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCreateTask</span>(<span class="String">&quot;</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="anchor" id="line-52-2"></span>                          <span class="ID">ctypes</span>.<span class="ID">byref</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span> )))</span>
+<span class="line"><span class="anchor" id="line-53-2"></span>        <span class="ResWord">self</span>.<span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCreateAOVoltageChan</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span>,</span>
+<span class="line"><span class="anchor" id="line-54-2"></span>                                   <span class="String">&quot;</span><span class="String">Dev1/ao0</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="anchor" id="line-55-1"></span>                                   <span class="String">&quot;</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="anchor" id="line-56-1"></span>                                   <span class="ID">float64</span>(-<span class="Number">10.0</span>),</span>
+<span class="line"><span class="anchor" id="line-57-1"></span>                                   <span class="ID">float64</span>(<span class="Number">10.0</span>),</span>
+<span class="line"><span class="anchor" id="line-58-1"></span>                                   <span class="ID">DAQmx_Val_Volts</span>,</span>
+<span class="line"><span class="anchor" id="line-59-1"></span>                                   <span class="ResWord">None</span>))</span>
+<span class="line"><span class="anchor" id="line-60-1"></span>        <span class="ResWord">self</span>.<span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxCfgSampClkTiming</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span>,</span>
+<span class="line"><span class="anchor" id="line-61-1"></span>                                <span class="String">&quot;</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="anchor" id="line-62-1"></span>                                <span class="ID">float64</span>(<span class="ResWord">self</span>.<span class="ID">sampleRate</span>),</span>
+<span class="line"><span class="anchor" id="line-63-1"></span>                                <span class="ID">DAQmx_Val_Rising</span>,</span>
+<span class="line"><span class="anchor" id="line-64-1"></span>                                <span class="ID">DAQmx_Val_FiniteSamps</span>,</span>
+<span class="line"><span class="anchor" id="line-65-1"></span>                                <span class="ID">uInt64</span>(<span class="ResWord">self</span>.<span class="ID">periodLength</span>)));</span>
+<span class="line"><span class="anchor" id="line-66-1"></span>        <span class="ResWord">self</span>.<span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxWriteAnalogF64</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span>,</span>
+<span class="line"><span class="anchor" id="line-67-1"></span>                              <span class="ID">int32</span>(<span class="ResWord">self</span>.<span class="ID">periodLength</span>),</span>
+<span class="line"><span class="anchor" id="line-68-1"></span>                              <span class="Number">0</span>,</span>
+<span class="line"><span class="anchor" id="line-69-1"></span>                              <span class="ID">float64</span>(-<span class="Number">1</span>),</span>
+<span class="line"><span class="anchor" id="line-70-1"></span>                              <span class="ID">DAQmx_Val_GroupByChannel</span>,</span>
+<span class="line"><span class="anchor" id="line-71-1"></span>                              <span class="ResWord">self</span>.<span class="ID">data</span>.<span class="ID">ctypes</span>.<span class="ID">data</span>,</span>
+<span class="line"><span class="anchor" id="line-72-1"></span>                              <span class="ResWord">None</span>,</span>
+<span class="line"><span class="anchor" id="line-73-1"></span>                              <span class="ResWord">None</span>))</span>
+<span class="line"><span class="anchor" id="line-74-1"></span>        <span class="ID">threading</span>.<span class="ID">Thread</span>.<span class="ID">__init__</span>( <span class="ResWord">self</span> )</span>
+<span class="line"><span class="anchor" id="line-75-1"></span>    <span class="ResWord">def</span> <span class="ID">CHK</span>( <span class="ResWord">self</span>, <span class="ID">err</span> ):</span>
+<span class="line"><span class="anchor" id="line-76-1"></span>        <span class="String">&quot;&quot;&quot;a simple error checking routine&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-77-1"></span>        <span class="ResWord">if</span> <span class="ID">err</span> &lt; <span class="Number">0</span>:</span>
+<span class="line"><span class="anchor" id="line-78-1"></span>            <span class="ID">buf_size</span> = <span class="Number">100</span></span>
+<span class="line"><span class="anchor" id="line-79-1"></span>            <span class="ID">buf</span> = <span class="ID">ctypes</span>.<span class="ID">create_string_buffer</span>(<span class="String">'</span><span class="SPChar">\000</span><span class="String">'</span> * <span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-80-1"></span>            <span class="ID">nidaq</span>.<span class="ID">DAQmxGetErrorString</span>(<span class="ID">err</span>,<span class="ID">ctypes</span>.<span class="ID">byref</span>(<span class="ID">buf</span>),<span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-81-1"></span>            <span class="ResWord">raise</span> <span class="ID">RuntimeError</span>(<span class="String">'</span><span class="String">nidaq call failed with error </span><span class="String">%d</span><span class="String">: </span><span class="String">%s</span><span class="String">'</span>%(<span class="ID">err</span>,<span class="ResWord">repr</span>(<span class="ID">buf</span>.<span class="ID">value</span>)))</span>
+<span class="line"><span class="anchor" id="line-82-1"></span>        <span class="ResWord">if</span> <span class="ID">err</span> &gt; <span class="Number">0</span>:</span>
+<span class="line"><span class="anchor" id="line-83-1"></span>            <span class="ID">buf_size</span> = <span class="Number">100</span></span>
+<span class="line"><span class="anchor" id="line-84-1"></span>            <span class="ID">buf</span> = <span class="ID">ctypes</span>.<span class="ID">create_string_buffer</span>(<span class="String">'</span><span class="SPChar">\000</span><span class="String">'</span> * <span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-85-1"></span>            <span class="ID">nidaq</span>.<span class="ID">DAQmxGetErrorString</span>(<span class="ID">err</span>,<span class="ID">ctypes</span>.<span class="ID">byref</span>(<span class="ID">buf</span>),<span class="ID">buf_size</span>)</span>
+<span class="line"><span class="anchor" id="line-86-1"></span>            <span class="ResWord">raise</span> <span class="ID">RuntimeError</span>(<span class="String">'</span><span class="String">nidaq generated warning </span><span class="String">%d</span><span class="String">: </span><span class="String">%s</span><span class="String">'</span>%(<span class="ID">err</span>,<span class="ResWord">repr</span>(<span class="ID">buf</span>.<span class="ID">value</span>)))</span>
+<span class="line"><span class="anchor" id="line-87-1"></span>    <span class="ResWord">def</span> <span class="ID">run</span>( <span class="ResWord">self</span> ):</span>
+<span class="line"><span class="anchor" id="line-88-1"></span>        <span class="ID">counter</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-89-1"></span>        <span class="ResWord">self</span>.<span class="ID">CHK</span>(<span class="ID">nidaq</span>.<span class="ID">DAQmxStartTask</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span> ))</span>
+<span class="line"><span class="anchor" id="line-90-1"></span>    <span class="ResWord">def</span> <span class="ID">stop</span>( <span class="ResWord">self</span> ):</span>
+<span class="line"><span class="anchor" id="line-91-1"></span>        <span class="ResWord">self</span>.<span class="ID">running</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-92-1"></span>        <span class="ID">nidaq</span>.<span class="ID">DAQmxStopTask</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span> )</span>
+<span class="line"><span class="anchor" id="line-93-1"></span>        <span class="ID">nidaq</span>.<span class="ID">DAQmxClearTask</span>( <span class="ResWord">self</span>.<span class="ID">taskHandle</span> )</span>
+<span class="line"><span class="anchor" id="line-94-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="anchor" id="line-95-1"></span>    <span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="anchor" id="line-96-1"></span>    <span class="Comment"># generate a time signal 5 seconds long with 250Hz sample rate</span></span>
+<span class="line"><span class="anchor" id="line-97-1"></span>    <span class="ID">t</span> = <span class="ID">numpy</span>.<span class="ID">arange</span>( <span class="Number">0</span>, <span class="Number">5</span>, <span class="Number">1.0</span>/<span class="Number">250.0</span> )</span>
+<span class="line"><span class="anchor" id="line-98-1"></span>    <span class="Comment"># generate sine wave</span></span>
+<span class="line"><span class="anchor" id="line-99-1"></span>    <span class="ID">x</span> = <span class="ID">sin</span>( <span class="ID">t</span> )</span>
+<span class="line"><span class="anchor" id="line-100-1"></span>    <span class="ID">mythread</span> = <span class="ID">WaveformThread</span>( <span class="ID">x</span>, <span class="Number">250</span> )</span>
+<span class="line"><span class="anchor" id="line-101-1"></span>    <span class="Comment"># start playing waveform</span></span>
+<span class="line"><span class="anchor" id="line-102-1"></span>    <span class="ID">mythread</span>.<span class="ID">start</span>()</span>
+<span class="line"><span class="anchor" id="line-103-1"></span>    <span class="Comment"># wait 5 seconds then stop</span></span>
+<span class="line"><span class="anchor" id="line-104-1"></span>    <span class="ID">time</span>.<span class="ID">sleep</span>( <span class="Number">5</span> )</span>
+<span class="line"><span class="anchor" id="line-105-1"></span>    <span class="ID">mythread</span>.<span class="ID">stop</span>()</span>
+</pre></div></div><span class="anchor" id="line-176"></span><p class="line867"><a href="../CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <span class="anchor" id="line-177"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Data_Acquisition_with_NIDAQmx  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Data_Acquisition_with_NIDAQmx37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Data_Acquisition_with_NIDAQmx?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+</html>
+

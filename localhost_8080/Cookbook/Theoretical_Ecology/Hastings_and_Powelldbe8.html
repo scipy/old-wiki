@@ -1,0 +1,340 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Theoretical_Ecology/Hastings_and_Powell - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Theoretical_Ecology/Hastings_and_Powell" href="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FTheoretical_Ecology%2FHastings_and_Powell&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell?action=print">
+<link rel="Up" href="../Theoretical_Ecology.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Hastings_and_Powell456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Theoretical_Ecology.html">Theoretical_Ecology</a></li><li><a class="backlink" href="Hastings_and_Powell6d7e.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FTheoretical_Ecology%2FHastings_and_Powell%22" rel="nofollow" title="Click to do a full-text search for this title">Hastings_and_Powell</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Hastings_and_Powell.html">Hastings_and_Powell</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Hastings_and_Powell.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Hastings_and_Powell37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Overview">Overview</h1>
+<span class="anchor" id="line-2"></span><p class="line874">A simple script that recreates the min/max bifurcation diagrams from Hastings and Powell 1991. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line867">
+<h1 id="Library_Functions">Library Functions</h1>
+<span class="anchor" id="line-5"></span><p class="line874">Two useful functions are defined in the module bif.py. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_1">   1</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_2">   2</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_3">   3</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">def</span> <span class="ID">window</span>(<span class="ID">data</span>, <span class="ID">size</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_4">   4</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_4"></span><span class="anchor" id="line-4-1"></span>    <span class="String">&quot;&quot;&quot;A generator that returns the moving window of length</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_5">   5</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_5"></span><span class="anchor" id="line-5-1"></span><span class="String">    `size` over the `data`</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_6">   6</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_6"></span><span class="anchor" id="line-6-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_7">   7</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_7"></span><span class="anchor" id="line-7-1"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_8">   8</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_8"></span><span class="anchor" id="line-8-1"></span>    <span class="ResWord">for</span> <span class="ID">start</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ResWord">len</span>(<span class="ID">data</span>) - (<span class="ID">size</span> - <span class="Number">1</span>)):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_9">   9</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_9"></span><span class="anchor" id="line-9-1"></span>        <span class="ResWord">yield</span> <span class="ID">data</span>[<span class="ID">start</span>:(<span class="ID">start</span> + <span class="ID">size</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_10">  10</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_10"></span><span class="anchor" id="line-10-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_11">  11</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_11"></span><span class="anchor" id="line-11-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_12">  12</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_12"></span><span class="anchor" id="line-12-1"></span><span class="ResWord">def</span> <span class="ID">min_max</span>(<span class="ID">data</span>, <span class="ID">tol</span>=<span class="Number">1e-14</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_13">  13</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_13"></span><span class="anchor" id="line-13-1"></span>    <span class="String">&quot;&quot;&quot;Return a list of the local min/max found</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_14">  14</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_14"></span><span class="anchor" id="line-14-1"></span><span class="String">    in a `data` series, given the relative tolerance `tol`</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_15">  15</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_15"></span><span class="anchor" id="line-15-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_16">  16</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_16"></span><span class="anchor" id="line-16-1"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_17">  17</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_17"></span><span class="anchor" id="line-17-1"></span>    <span class="ID">maxes</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_18">  18</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_18"></span><span class="anchor" id="line-18-1"></span>    <span class="ID">mins</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_19">  19</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_19"></span><span class="anchor" id="line-19-1"></span>    <span class="ResWord">for</span> <span class="ID">first</span>, <span class="ID">second</span>, <span class="ID">third</span> <span class="ResWord">in</span> <span class="ID">window</span>(<span class="ID">data</span>, <span class="ID">size</span>=<span class="Number">3</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_20">  20</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_20"></span><span class="anchor" id="line-20-1"></span>        <span class="ResWord">if</span> <span class="ID">first</span> &lt; <span class="ID">second</span> <span class="ResWord">and</span> <span class="ID">third</span> &lt; <span class="ID">second</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_21">  21</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_21"></span><span class="anchor" id="line-21-1"></span>            <span class="ID">maxes</span>.<span class="ID">append</span>(<span class="ID">second</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_22">  22</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_22"></span><span class="anchor" id="line-22-1"></span>        <span class="ResWord">elif</span> <span class="ID">first</span> &gt; <span class="ID">second</span> <span class="ResWord">and</span> <span class="ID">third</span> &gt; <span class="ID">second</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_23">  23</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_23"></span><span class="anchor" id="line-23-1"></span>            <span class="ID">mins</span>.<span class="ID">append</span>(<span class="ID">second</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_24">  24</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_24"></span><span class="anchor" id="line-24-1"></span>        <span class="ResWord">elif</span> <span class="ResWord">abs</span>(<span class="ID">first</span> - <span class="ID">second</span>) &lt; <span class="ID">tol</span> <span class="ResWord">and</span> <span class="ResWord">abs</span>(<span class="ID">second</span> - <span class="ID">third</span>) &lt; <span class="ID">tol</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_25">  25</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_25"></span><span class="anchor" id="line-25-1"></span>            <span class="Comment"># an equilibrium is both the maximum and minimum</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_26">  26</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_26"></span><span class="anchor" id="line-26-1"></span>            <span class="ID">maxes</span>.<span class="ID">append</span>(<span class="ID">second</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_27">  27</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_27"></span><span class="anchor" id="line-27-1"></span>            <span class="ID">mins</span>.<span class="ID">append</span>(<span class="ID">second</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_28">  28</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_28"></span><span class="anchor" id="line-28-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_29">  29</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_29"></span><span class="anchor" id="line-29-1"></span>    <span class="ResWord">return</span> {<span class="String">'</span><span class="String">max</span><span class="String">'</span>: <span class="ID">numpy</span>.<span class="ID">asarray</span>(<span class="ID">maxes</span>),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_30">  30</a> </span><span class="LineAnchor" id="CA-37f5a5870e7bcda2f656f04118acaf96c0bafef2_30"></span><span class="anchor" id="line-30-1"></span>            <span class="String">'</span><span class="String">min</span><span class="String">'</span>: <span class="ID">numpy</span>.<span class="ID">asarray</span>(<span class="ID">mins</span>)}</span>
+</pre></div></div><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line867">
+<h1 id="The_Model">The Model</h1>
+<span class="anchor" id="line-40"></span><p class="line874">For speed the model is defined in a fortran file and compiled into a library for use from python. <span class="anchor" id="line-41"></span>Using this method gives a 100 fold increase in speed. The file uses Fortran 90, which makes using f2py  <span class="anchor" id="line-42"></span>especially easy. The file is named hastings.f90. <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line867"><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><pre><span class="anchor" id="line-1"></span>module model
+<span class="anchor" id="line-2"></span>    implicit none
+<span class="anchor" id="line-3"></span>
+<span class="anchor" id="line-4"></span>    real(8), save :: a1, a2, b1, b2, d1, d2
+<span class="anchor" id="line-5"></span>
+<span class="anchor" id="line-6"></span>contains 
+<span class="anchor" id="line-7"></span>
+<span class="anchor" id="line-8"></span>    subroutine fweb(y, t, yprime)
+<span class="anchor" id="line-9"></span>        real(8), dimension(3), intent(in) :: y
+<span class="anchor" id="line-10"></span>        real(8), intent(in) :: t
+<span class="anchor" id="line-11"></span>        real(8), dimension(3), intent(out) :: yprime
+<span class="anchor" id="line-12"></span>
+<span class="anchor" id="line-13"></span>        yprime(1) = y(1)*(1.0d0 - y(1)) - a1*y(1)*y(2)/(1.0d0 + b1*y(1)) 
+<span class="anchor" id="line-14"></span>        yprime(2) = a1*y(1)*y(2)/(1.0d0 + b1*y(1)) - a2*y(2)*y(3)/(1.0d0 + b2*y(2)) - d1*y(2)
+<span class="anchor" id="line-15"></span>        yprime(3) = a2*y(2)*y(3)/(1.0d0 + b2*y(2)) - d2*y(3)
+<span class="anchor" id="line-16"></span>    end subroutine fweb
+<span class="anchor" id="line-17"></span>
+<span class="anchor" id="line-18"></span>end module model</pre><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line874">Which is compiled (using the gfortran compiler) with the command: <span class="anchor" id="line-66"></span><tt>f2py&nbsp;-c&nbsp;-m&nbsp;hastings&nbsp;hastings.f90&nbsp;--fcompiler=gnu95</tt> <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line867">
+<h1 id="The_Script">The Script</h1>
+<span class="anchor" id="line-69"></span><p class="line867"><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-d3aa8e1b46535eafa46825149e6c17985fc65f72\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_1">   1</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_2">   2</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_2"></span><span class="anchor" id="line-2-2"></span><span class="ResWord">from</span> <span class="ID">scipy.integrate</span> <span class="ResWord">import</span> <span class="ID">odeint</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_3">   3</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_3"></span><span class="anchor" id="line-3-2"></span><span class="ResWord">import</span> <span class="ID">bif</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_4">   4</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_4"></span><span class="anchor" id="line-4-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_5">   5</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_5"></span><span class="anchor" id="line-5-2"></span><span class="ResWord">import</span> <span class="ID">hastings</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_6">   6</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_6"></span><span class="anchor" id="line-6-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_7">   7</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_7"></span><span class="anchor" id="line-7-2"></span><span class="Comment"># setup the food web parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_8">   8</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_8"></span><span class="anchor" id="line-8-2"></span><span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">a1</span> = <span class="Number">5.0</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_9">   9</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_9"></span><span class="anchor" id="line-9-2"></span><span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">a2</span> = <span class="Number">0.1</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_10">  10</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_10"></span><span class="anchor" id="line-10-2"></span><span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">b2</span> = <span class="Number">2.0</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_11">  11</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_11"></span><span class="anchor" id="line-11-2"></span><span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">d1</span> = <span class="Number">0.4</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_12">  12</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_12"></span><span class="anchor" id="line-12-2"></span><span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">d2</span> = <span class="Number">0.01</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_13">  13</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_13"></span><span class="anchor" id="line-13-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_14">  14</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_14"></span><span class="anchor" id="line-14-2"></span><span class="Comment"># setup the ode solver parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_15">  15</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_15"></span><span class="anchor" id="line-15-2"></span><span class="ID">t</span> = <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="Number">10000</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_16">  16</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_16"></span><span class="anchor" id="line-16-2"></span><span class="ID">y0</span> = [<span class="Number">0.8</span>, <span class="Number">0.2</span>, <span class="Number">10.0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_17">  17</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_17"></span><span class="anchor" id="line-17-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_18">  18</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_18"></span><span class="anchor" id="line-18-2"></span><span class="ResWord">def</span> <span class="ID">print_max</span>(<span class="ID">data</span>, <span class="ID">maxfile</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_19">  19</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_19"></span><span class="anchor" id="line-19-2"></span>    <span class="ResWord">for</span> <span class="ID">a_max</span> <span class="ResWord">in</span> <span class="ID">data</span>[<span class="String">'</span><span class="String">max</span><span class="String">'</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_20">  20</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_20"></span><span class="anchor" id="line-20-2"></span>        <span class="ResWord">print</span> &gt;&gt; <span class="ID">maxfile</span>, <span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">b1</span>, <span class="ID">a_max</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_21">  21</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_21"></span><span class="anchor" id="line-21-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_22">  22</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_22"></span><span class="anchor" id="line-22-2"></span><span class="ID">x_maxfile</span> = <span class="ResWord">open</span>(<span class="String">'</span><span class="String">x_maxfile.dat</span><span class="String">'</span>, <span class="String">'</span><span class="String">w</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_23">  23</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_23"></span><span class="anchor" id="line-23-2"></span><span class="ID">y_maxfile</span> = <span class="ResWord">open</span>(<span class="String">'</span><span class="String">y_maxfile.dat</span><span class="String">'</span>, <span class="String">'</span><span class="String">w</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_24">  24</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_24"></span><span class="anchor" id="line-24-2"></span><span class="ID">z_maxfile</span> = <span class="ResWord">open</span>(<span class="String">'</span><span class="String">z_maxfile.dat</span><span class="String">'</span>, <span class="String">'</span><span class="String">w</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_25">  25</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_25"></span><span class="anchor" id="line-25-2"></span><span class="ResWord">for</span> <span class="ID">i</span>, <span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">b1</span> <span class="ResWord">in</span> <span class="ResWord">enumerate</span>(<span class="ID">numpy</span>.<span class="ID">linspace</span>(<span class="Number">2.0</span>, <span class="Number">6.2</span>, <span class="Number">420</span>)):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_26">  26</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_26"></span><span class="anchor" id="line-26-2"></span>    <span class="ResWord">print</span> <span class="ID">i</span>, <span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">b1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_27">  27</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_27"></span><span class="anchor" id="line-27-2"></span>    <span class="ID">y</span> = <span class="ID">odeint</span>(<span class="ID">hastings</span>.<span class="ID">model</span>.<span class="ID">fweb</span>, <span class="ID">y0</span>, <span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_28">  28</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_28"></span><span class="anchor" id="line-28-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_29">  29</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_29"></span><span class="anchor" id="line-29-2"></span>    <span class="Comment"># use the last 'stationary' solution as an intial guess for the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_30">  30</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_30"></span><span class="anchor" id="line-30-2"></span>    <span class="Comment"># next run. This both speeds up the computations, as well as helps</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_31">  31</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_31"></span><span class="anchor" id="line-31-1"></span>    <span class="Comment"># make sure that solver doesn't need to do too much work.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_32">  32</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_32"></span><span class="anchor" id="line-32-1"></span>    <span class="ID">y0</span> = <span class="ID">y</span>[-<span class="Number">1</span>, :]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_33">  33</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_33"></span><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_34">  34</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_34"></span><span class="anchor" id="line-34-1"></span>    <span class="ID">x_minmax</span> = <span class="ID">bif</span>.<span class="ID">min_max</span>(<span class="ID">y</span>[<span class="Number">5000</span>:, <span class="Number">0</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_35">  35</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_35"></span><span class="anchor" id="line-35-1"></span>    <span class="ID">y_minmax</span> = <span class="ID">bif</span>.<span class="ID">min_max</span>(<span class="ID">y</span>[<span class="Number">5000</span>:, <span class="Number">1</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_36">  36</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_36"></span><span class="anchor" id="line-36-1"></span>    <span class="ID">z_minmax</span> = <span class="ID">bif</span>.<span class="ID">min_max</span>(<span class="ID">y</span>[<span class="Number">5000</span>:, <span class="Number">2</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_37">  37</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_37"></span><span class="anchor" id="line-37-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_38">  38</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_38"></span><span class="anchor" id="line-38-1"></span>    <span class="ID">print_max</span>(<span class="ID">x_minmax</span>, <span class="ID">x_maxfile</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_39">  39</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_39"></span><span class="anchor" id="line-39-1"></span>    <span class="ID">print_max</span>(<span class="ID">y_minmax</span>, <span class="ID">y_maxfile</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_40">  40</a> </span><span class="LineAnchor" id="CA-d3aa8e1b46535eafa46825149e6c17985fc65f72_40"></span><span class="anchor" id="line-40-1"></span>    <span class="ID">print_max</span>(<span class="ID">z_minmax</span>, <span class="ID">z_maxfile</span>)</span>
+</pre></div></div><span class="anchor" id="line-111"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Hastings_and_Powell37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Theoretical_Ecology/Hastings_and_Powell?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

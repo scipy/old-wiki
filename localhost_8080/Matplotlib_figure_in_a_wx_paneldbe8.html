@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Matplotlib_figure_in_a_wx_panel?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Matplotlib_figure_in_a_wx_panel - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Matplotlib_figure_in_a_wx_panel" href="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Matplotlib_figure_in_a_wx_panel&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel?action=print">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Matplotlib_figure_in_a_wx_panel456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a class="backlink" href="Matplotlib_figure_in_a_wx_panelbbf6.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Matplotlib_figure_in_a_wx_panel%22" rel="nofollow" title="Click to do a full-text search for this title">Matplotlib_figure_in_a_wx_panel</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="Matplotlib_figure_in_a_wx_panel.html">Matplotlib_..._a_wx_panel</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Matplotlib_figure_in_a_wx_panel.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib_figure_in_a_wx_panel37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">In order to embed a panel in your application subclass the <tt class="backtick">PlotPanel</tt> class and override the draw method. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><span class="anchor" id="version2"></span> <span class="anchor" id="line-4"></span>
+<h1 id="Version_2">Version 2</h1>
+<span class="anchor" id="line-5"></span><p class="line867"><a href="Matplotlib_figure_in_a_wx_panel.html#version1">Older version</a> <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><strong>wxPlotPanel.py</strong> <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-08d5cb034c05a8a01c07fe42730055e013f4185a" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="String">New version based on the original by Edward Abraham, incorporating some</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="String">forum discussion, minor bugfixes, and working for Python 2.5.2,</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="String">wxPython 2.8.7.1, and Matplotlib 0.98.3.</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="String">I haven't found an advantage to using the NoRepaintCanvas, so it's removed.</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="String">John Bender, CWRU, 10 Sep 08</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">matplotlib</span>.<span class="ID">interactive</span>( <span class="ResWord">True</span> )</span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>( <span class="String">'</span><span class="String">WXAgg</span><span class="String">'</span> )</span>
+<span class="line"><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">num</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ResWord">class</span> <span class="ID">PlotPanel</span> (<span class="ID">wx</span>.<span class="ID">Panel</span>):</span>
+<span class="line"><span class="anchor" id="line-21-1"></span>    <span class="String">&quot;&quot;&quot;The PlotPanel has a Figure and a Canvas. OnSize events simply set a </span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span><span class="String">flag, and the actual resizing of the figure is triggered by an Idle event.&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>( <span class="ResWord">self</span>, <span class="ID">parent</span>, <span class="ID">color</span>=<span class="ResWord">None</span>, <span class="ID">dpi</span>=<span class="ResWord">None</span>, **<span class="ID">kwargs</span> ):</span>
+<span class="line"><span class="anchor" id="line-24-1"></span>        <span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_wxagg</span> <span class="ResWord">import</span> <span class="ID">FigureCanvasWxAgg</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span>        <span class="ResWord">from</span> <span class="ID">matplotlib.figure</span> <span class="ResWord">import</span> <span class="ID">Figure</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span></span>
+<span class="line"><span class="anchor" id="line-27-1"></span>        <span class="Comment"># initialize Panel</span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span>        <span class="ResWord">if</span> <span class="String">'</span><span class="String">id</span><span class="String">'</span> <span class="ResWord">not</span> <span class="ResWord">in</span> <span class="ID">kwargs</span>.<span class="ID">keys</span>():</span>
+<span class="line"><span class="anchor" id="line-29-1"></span>            <span class="ID">kwargs</span>[<span class="String">'</span><span class="String">id</span><span class="String">'</span>] = <span class="ID">wx</span>.<span class="ID">ID_ANY</span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span>        <span class="ResWord">if</span> <span class="String">'</span><span class="String">style</span><span class="String">'</span> <span class="ResWord">not</span> <span class="ResWord">in</span> <span class="ID">kwargs</span>.<span class="ID">keys</span>():</span>
+<span class="line"><span class="anchor" id="line-31-1"></span>            <span class="ID">kwargs</span>[<span class="String">'</span><span class="String">style</span><span class="String">'</span>] = <span class="ID">wx</span>.<span class="ID">NO_FULL_REPAINT_ON_RESIZE</span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span>        <span class="ID">wx</span>.<span class="ID">Panel</span>.<span class="ID">__init__</span>( <span class="ResWord">self</span>, <span class="ID">parent</span>, **<span class="ID">kwargs</span> )</span>
+<span class="line"><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span>        <span class="Comment"># initialize matplotlib stuff</span></span>
+<span class="line"><span class="anchor" id="line-35-1"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span> = <span class="ID">Figure</span>( <span class="ResWord">None</span>, <span class="ID">dpi</span> )</span>
+<span class="line"><span class="anchor" id="line-36-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span> = <span class="ID">FigureCanvasWxAgg</span>( <span class="ResWord">self</span>, -<span class="Number">1</span>, <span class="ResWord">self</span>.<span class="ID">figure</span> )</span>
+<span class="line"><span class="anchor" id="line-37-1"></span>        <span class="ResWord">self</span>.<span class="ID">SetColor</span>( <span class="ID">color</span> )</span>
+<span class="line"><span class="anchor" id="line-38-1"></span></span>
+<span class="line"><span class="anchor" id="line-39-1"></span>        <span class="ResWord">self</span>.<span class="ID">_SetSize</span>()</span>
+<span class="line"><span class="anchor" id="line-40-1"></span>        <span class="ResWord">self</span>.<span class="ID">draw</span>()</span>
+<span class="line"><span class="anchor" id="line-41-1"></span></span>
+<span class="line"><span class="anchor" id="line-42-1"></span>        <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-43-1"></span></span>
+<span class="line"><span class="anchor" id="line-44-1"></span>        <span class="ResWord">self</span>.<span class="ID">Bind</span>(<span class="ID">wx</span>.<span class="ID">EVT_IDLE</span>, <span class="ResWord">self</span>.<span class="ID">_onIdle</span>)</span>
+<span class="line"><span class="anchor" id="line-45-1"></span>        <span class="ResWord">self</span>.<span class="ID">Bind</span>(<span class="ID">wx</span>.<span class="ID">EVT_SIZE</span>, <span class="ResWord">self</span>.<span class="ID">_onSize</span>)</span>
+<span class="line"><span class="anchor" id="line-46-1"></span></span>
+<span class="line"><span class="anchor" id="line-47-1"></span>    <span class="ResWord">def</span> <span class="ID">SetColor</span>( <span class="ResWord">self</span>, <span class="ID">rgbtuple</span>=<span class="ResWord">None</span> ):</span>
+<span class="line"><span class="anchor" id="line-48-1"></span>        <span class="String">&quot;&quot;&quot;Set figure and canvas colours to be the same.&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-49-1"></span>        <span class="ResWord">if</span> <span class="ID">rgbtuple</span> <span class="ResWord">is</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="anchor" id="line-50-1"></span>            <span class="ID">rgbtuple</span> = <span class="ID">wx</span>.<span class="ID">SystemSettings</span>.<span class="ID">GetColour</span>( <span class="ID">wx</span>.<span class="ID">SYS_COLOUR_BTNFACE</span> ).<span class="ID">Get</span>()</span>
+<span class="line"><span class="anchor" id="line-51-1"></span>        <span class="ID">clr</span> = [<span class="ID">c</span>/<span class="Number">255.</span> <span class="ResWord">for</span> <span class="ID">c</span> <span class="ResWord">in</span> <span class="ID">rgbtuple</span>]</span>
+<span class="line"><span class="anchor" id="line-52-1"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_facecolor</span>( <span class="ID">clr</span> )</span>
+<span class="line"><span class="anchor" id="line-53-1"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_edgecolor</span>( <span class="ID">clr</span> )</span>
+<span class="line"><span class="anchor" id="line-54-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">SetBackgroundColour</span>( <span class="ID">wx</span>.<span class="ID">Colour</span>( *<span class="ID">rgbtuple</span> ) )</span>
+<span class="line"><span class="anchor" id="line-55-1"></span></span>
+<span class="line"><span class="anchor" id="line-56-1"></span>    <span class="ResWord">def</span> <span class="ID">_onSize</span>( <span class="ResWord">self</span>, <span class="ID">event</span> ):</span>
+<span class="line"><span class="anchor" id="line-57-1"></span>        <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="anchor" id="line-59-1"></span>    <span class="ResWord">def</span> <span class="ID">_onIdle</span>( <span class="ResWord">self</span>, <span class="ID">evt</span> ):</span>
+<span class="line"><span class="anchor" id="line-60-1"></span>        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">_resizeflag</span>:</span>
+<span class="line"><span class="anchor" id="line-61-1"></span>            <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-62-1"></span>            <span class="ResWord">self</span>.<span class="ID">_SetSize</span>()</span>
+<span class="line"><span class="anchor" id="line-63-1"></span></span>
+<span class="line"><span class="anchor" id="line-64-1"></span>    <span class="ResWord">def</span> <span class="ID">_SetSize</span>( <span class="ResWord">self</span> ):</span>
+<span class="line"><span class="anchor" id="line-65-1"></span>        <span class="ID">pixels</span> = <span class="ResWord">tuple</span>( <span class="ResWord">self</span>.<span class="ID">parent</span>.<span class="ID">GetClientSize</span>() )</span>
+<span class="line"><span class="anchor" id="line-66-1"></span>        <span class="ResWord">self</span>.<span class="ID">SetSize</span>( <span class="ID">pixels</span> )</span>
+<span class="line"><span class="anchor" id="line-67-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">SetSize</span>( <span class="ID">pixels</span> )</span>
+<span class="line"><span class="anchor" id="line-68-1"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_size_inches</span>( <span class="ResWord">float</span>( <span class="ID">pixels</span>[<span class="Number">0</span>] )/<span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">get_dpi</span>(),</span>
+<span class="line"><span class="anchor" id="line-69-1"></span>                                     <span class="ResWord">float</span>( <span class="ID">pixels</span>[<span class="Number">1</span>] )/<span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">get_dpi</span>() )</span>
+<span class="line"><span class="anchor" id="line-70-1"></span></span>
+<span class="line"><span class="anchor" id="line-71-1"></span>    <span class="ResWord">def</span> <span class="ID">draw</span>(<span class="ResWord">self</span>): <span class="ResWord">pass</span> <span class="Comment"># abstract, to be overridden by child classes</span></span>
+<span class="line"><span class="anchor" id="line-72-1"></span></span>
+<span class="line"><span class="anchor" id="line-73-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="anchor" id="line-74-1"></span>    <span class="ResWord">class</span> <span class="ID">DemoPlotPanel</span> (<span class="ID">PlotPanel</span>):</span>
+<span class="line"><span class="anchor" id="line-75-1"></span>        <span class="String">&quot;&quot;&quot;Plots several lines in distinct colors.&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-76-1"></span>        <span class="ResWord">def</span> <span class="ID">__init__</span>( <span class="ResWord">self</span>, <span class="ID">parent</span>, <span class="ID">point_lists</span>, <span class="ID">clr_list</span>, **<span class="ID">kwargs</span> ):</span>
+<span class="line"><span class="anchor" id="line-77-1"></span>            <span class="ResWord">self</span>.<span class="ID">parent</span> = <span class="ID">parent</span></span>
+<span class="line"><span class="anchor" id="line-78-1"></span>            <span class="ResWord">self</span>.<span class="ID">point_lists</span> = <span class="ID">point_lists</span></span>
+<span class="line"><span class="anchor" id="line-79-1"></span>            <span class="ResWord">self</span>.<span class="ID">clr_list</span> = <span class="ID">clr_list</span></span>
+<span class="line"><span class="anchor" id="line-80-1"></span></span>
+<span class="line"><span class="anchor" id="line-81-1"></span>            <span class="Comment"># initiate plotter</span></span>
+<span class="line"><span class="anchor" id="line-82-1"></span>            <span class="ID">PlotPanel</span>.<span class="ID">__init__</span>( <span class="ResWord">self</span>, <span class="ID">parent</span>, **<span class="ID">kwargs</span> )</span>
+<span class="line"><span class="anchor" id="line-83-1"></span>            <span class="ResWord">self</span>.<span class="ID">SetColor</span>( (<span class="Number">255</span>,<span class="Number">255</span>,<span class="Number">255</span>) )</span>
+<span class="line"><span class="anchor" id="line-84-1"></span></span>
+<span class="line"><span class="anchor" id="line-85-1"></span>        <span class="ResWord">def</span> <span class="ID">draw</span>( <span class="ResWord">self</span> ):</span>
+<span class="line"><span class="anchor" id="line-86-1"></span>            <span class="String">&quot;&quot;&quot;Draw data.&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-87-1"></span>            <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ResWord">hasattr</span>( <span class="ResWord">self</span>, <span class="String">'</span><span class="String">subplot</span><span class="String">'</span> ):</span>
+<span class="line"><span class="anchor" id="line-88-1"></span>                <span class="ResWord">self</span>.<span class="ID">subplot</span> = <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">add_subplot</span>( <span class="Number">111</span> )</span>
+<span class="line"><span class="anchor" id="line-89-1"></span></span>
+<span class="line"><span class="anchor" id="line-90-1"></span>            <span class="ResWord">for</span> <span class="ID">i</span>, <span class="ID">pt_list</span> <span class="ResWord">in</span> <span class="ResWord">enumerate</span>( <span class="ResWord">self</span>.<span class="ID">point_lists</span> ):</span>
+<span class="line"><span class="anchor" id="line-91-1"></span>                <span class="ID">plot_pts</span> = <span class="ID">num</span>.<span class="ID">array</span>( <span class="ID">pt_list</span> )</span>
+<span class="line"><span class="anchor" id="line-92-1"></span>                <span class="ID">clr</span> = [<span class="ResWord">float</span>( <span class="ID">c</span> )/<span class="Number">255.</span> <span class="ResWord">for</span> <span class="ID">c</span> <span class="ResWord">in</span> <span class="ResWord">self</span>.<span class="ID">clr_list</span>[<span class="ID">i</span>]]</span>
+<span class="line"><span class="anchor" id="line-93-1"></span>                <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">plot</span>( <span class="ID">plot_pts</span>[:,<span class="Number">0</span>], <span class="ID">plot_pts</span>[:,<span class="Number">1</span>], <span class="ID">color</span>=<span class="ID">clr</span> )</span>
+<span class="line"><span class="anchor" id="line-94-1"></span></span>
+<span class="line"><span class="anchor" id="line-95-1"></span>    <span class="ID">theta</span> = <span class="ID">num</span>.<span class="ID">arange</span>( <span class="Number">0</span>, <span class="Number">45</span>*<span class="Number">2</span>*<span class="ID">num</span>.<span class="ID">pi</span>, <span class="Number">0.02</span> )</span>
+<span class="line"><span class="anchor" id="line-96-1"></span></span>
+<span class="line"><span class="anchor" id="line-97-1"></span>    <span class="ID">rad0</span> = (<span class="Number">0.8</span>*<span class="ID">theta</span>/(<span class="Number">2</span>*<span class="ID">num</span>.<span class="ID">pi</span>) + <span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-98-1"></span>    <span class="ID">r0</span> = <span class="ID">rad0</span>*(<span class="Number">8</span> + <span class="ID">num</span>.<span class="ID">sin</span>( <span class="ID">theta</span>*<span class="Number">7</span> + <span class="ID">rad0</span>/<span class="Number">1.8</span> ))</span>
+<span class="line"><span class="anchor" id="line-99-1"></span>    <span class="ID">x0</span> = <span class="ID">r0</span>*<span class="ID">num</span>.<span class="ID">cos</span>( <span class="ID">theta</span> )</span>
+<span class="line"><span class="anchor" id="line-100-1"></span>    <span class="ID">y0</span> = <span class="ID">r0</span>*<span class="ID">num</span>.<span class="ID">sin</span>( <span class="ID">theta</span> )</span>
+<span class="line"><span class="anchor" id="line-101-1"></span></span>
+<span class="line"><span class="anchor" id="line-102-1"></span>    <span class="ID">rad1</span> = (<span class="Number">0.8</span>*<span class="ID">theta</span>/(<span class="Number">2</span>*<span class="ID">num</span>.<span class="ID">pi</span>) + <span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-103-1"></span>    <span class="ID">r1</span> = <span class="ID">rad1</span>*(<span class="Number">6</span> + <span class="ID">num</span>.<span class="ID">sin</span>( <span class="ID">theta</span>*<span class="Number">7</span> + <span class="ID">rad1</span>/<span class="Number">1.9</span> ))</span>
+<span class="line"><span class="anchor" id="line-104-1"></span>    <span class="ID">x1</span> = <span class="ID">r1</span>*<span class="ID">num</span>.<span class="ID">cos</span>( <span class="ID">theta</span> )</span>
+<span class="line"><span class="anchor" id="line-105-1"></span>    <span class="ID">y1</span> = <span class="ID">r1</span>*<span class="ID">num</span>.<span class="ID">sin</span>( <span class="ID">theta</span> )</span>
+<span class="line"><span class="anchor" id="line-106-1"></span></span>
+<span class="line"><span class="anchor" id="line-107-1"></span>    <span class="ID">points</span> = [[(<span class="ID">xi</span>,<span class="ID">yi</span>) <span class="ResWord">for</span> <span class="ID">xi</span>,<span class="ID">yi</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>( <span class="ID">x0</span>, <span class="ID">y0</span> )],</span>
+<span class="line"><span class="anchor" id="line-108-1"></span>              [(<span class="ID">xi</span>,<span class="ID">yi</span>) <span class="ResWord">for</span> <span class="ID">xi</span>,<span class="ID">yi</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>( <span class="ID">x1</span>, <span class="ID">y1</span> )]]</span>
+<span class="line"><span class="anchor" id="line-109-1"></span>    <span class="ID">clrs</span> = [[<span class="Number">225</span>,<span class="Number">200</span>,<span class="Number">160</span>], [<span class="Number">219</span>,<span class="Number">112</span>,<span class="Number">147</span>]]</span>
+<span class="line"><span class="anchor" id="line-110-1"></span></span>
+<span class="line"><span class="anchor" id="line-111-1"></span>    <span class="ID">app</span> = <span class="ID">wx</span>.<span class="ID">PySimpleApp</span>( <span class="Number">0</span> )</span>
+<span class="line"><span class="anchor" id="line-112-1"></span>    <span class="ID">frame</span> = <span class="ID">wx</span>.<span class="ID">Frame</span>( <span class="ResWord">None</span>, <span class="ID">wx</span>.<span class="ID">ID_ANY</span>, <span class="String">'</span><span class="String">WxPython and Matplotlib</span><span class="String">'</span>, <span class="ID">size</span>=(<span class="Number">300</span>,<span class="Number">300</span>) )</span>
+<span class="line"><span class="anchor" id="line-113-1"></span>    <span class="ID">panel</span> = <span class="ID">DemoPlotPanel</span>( <span class="ID">frame</span>, <span class="ID">points</span>, <span class="ID">clrs</span> )</span>
+<span class="line"><span class="anchor" id="line-114-1"></span>    <span class="ID">frame</span>.<span class="ID">Show</span>()</span>
+<span class="line"><span class="anchor" id="line-115-1"></span>    <span class="ID">app</span>.<span class="ID">MainLoop</span>()</span>
+</pre></div></div><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><p class="line867"><span class="anchor" id="version1"></span> <span class="anchor" id="line-127"></span>
+<h1 id="Version_1">Version 1</h1>
+<span class="anchor" id="line-128"></span><p class="line862">Note: see <a class="http" href="../external.html?link=http://sourceforge.net/mailarchive/forum.php?thread_name=cc8074370711152042l71d5ce03r9911089a6afa2e88%40mail.gmail.com&amp;forum_name=matplotlib-users">a discussion on the matplotlib-users mailing list (see, in particular, the final post of the thread)</a> about this example. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line867"><strong>wxPlotPanel.py</strong> <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-4351481633b676a1b1eae07f332f4ce9c4853d3b" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="String">A demonstration of creating a matlibplot window from within wx.</span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="String">A resize only causes a single redraw of the panel.</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="String">The WXAgg backend is used as it is quicker.</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="String">Edward Abraham, Datamine, April, 2006</span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="String">(works with wxPython 2.6.1, Matplotlib 0.87 and Python 2.4)</span></span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="anchor" id="line-13-2"></span><span class="ID">matplotlib</span>.<span class="ID">interactive</span>(<span class="ResWord">False</span>)</span>
+<span class="line"><span class="anchor" id="line-14-2"></span><span class="Comment">#Use the WxAgg back end. The Wx one takes too long to render</span></span>
+<span class="line"><span class="anchor" id="line-15-2"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">'</span><span class="String">WXAgg</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-16-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_wxagg</span> <span class="ResWord">import</span> <span class="ID">FigureCanvasWxAgg</span></span>
+<span class="line"><span class="anchor" id="line-17-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib.figure</span> <span class="ResWord">import</span> <span class="ID">Figure</span></span>
+<span class="line"><span class="anchor" id="line-18-2"></span><span class="Comment">#used in the particular example</span></span>
+<span class="line"><span class="anchor" id="line-19-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib.numerix</span> <span class="ResWord">import</span> <span class="ID">arange</span>, <span class="ID">sin</span>, <span class="ID">cos</span>, <span class="ID">pi</span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="anchor" id="line-21-2"></span></span>
+<span class="line"><span class="anchor" id="line-22-2"></span><span class="ResWord">class</span> <span class="ID">NoRepaintCanvas</span>(<span class="ID">FigureCanvasWxAgg</span>):</span>
+<span class="line"><span class="anchor" id="line-23-2"></span>    <span class="String">&quot;&quot;&quot;We subclass FigureCanvasWxAgg, overriding the _onPaint method, so that</span></span>
+<span class="line"><span class="anchor" id="line-24-2"></span><span class="String">    the draw method is only called for the first two paint events. After that,</span></span>
+<span class="line"><span class="anchor" id="line-25-2"></span><span class="String">    the canvas will only be redrawn when it is resized.</span></span>
+<span class="line"><span class="anchor" id="line-26-2"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-27-2"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, *<span class="ID">args</span>, **<span class="ID">kwargs</span>):</span>
+<span class="line"><span class="anchor" id="line-28-2"></span>        <span class="ID">FigureCanvasWxAgg</span>.<span class="ID">__init__</span>(<span class="ResWord">self</span>, *<span class="ID">args</span>, **<span class="ID">kwargs</span>)</span>
+<span class="line"><span class="anchor" id="line-29-2"></span>        <span class="ResWord">self</span>.<span class="ID">_drawn</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-30-2"></span>        </span>
+<span class="line"><span class="anchor" id="line-31-2"></span>    <span class="ResWord">def</span> <span class="ID">_onPaint</span>(<span class="ResWord">self</span>, <span class="ID">evt</span>):</span>
+<span class="line"><span class="anchor" id="line-32-2"></span>        <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-33-2"></span><span class="String">        Called when wxPaintEvt is generated</span></span>
+<span class="line"><span class="anchor" id="line-34-2"></span><span class="String">        &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-35-2"></span>        <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ResWord">self</span>.<span class="ID">_isRealized</span>:</span>
+<span class="line"><span class="anchor" id="line-36-2"></span>            <span class="ResWord">self</span>.<span class="ID">realize</span>()</span>
+<span class="line"><span class="anchor" id="line-37-2"></span>        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">_drawn</span> &lt; <span class="Number">2</span>:</span>
+<span class="line"><span class="anchor" id="line-38-2"></span>            <span class="ResWord">self</span>.<span class="ID">draw</span>(<span class="ID">repaint</span> = <span class="ResWord">False</span>)</span>
+<span class="line"><span class="anchor" id="line-39-2"></span>            <span class="ResWord">self</span>.<span class="ID">_drawn</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-40-2"></span>        <span class="ResWord">self</span>.<span class="ID">gui_repaint</span>(<span class="ID">drawDC</span>=<span class="ID">wx</span>.<span class="ID">PaintDC</span>(<span class="ResWord">self</span>))</span>
+<span class="line"><span class="anchor" id="line-41-2"></span>        </span>
+<span class="line"><span class="anchor" id="line-42-2"></span><span class="ResWord">class</span> <span class="ID">PlotPanel</span>(<span class="ID">wx</span>.<span class="ID">Panel</span>):</span>
+<span class="line"><span class="anchor" id="line-43-2"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-44-2"></span><span class="String">    The PlotPanel has a Figure and a Canvas. OnSize events simply set a </span></span>
+<span class="line"><span class="anchor" id="line-45-2"></span><span class="String">    flag, and the actually redrawing of the</span></span>
+<span class="line"><span class="anchor" id="line-46-2"></span><span class="String">    figure is triggered by an Idle event.</span></span>
+<span class="line"><span class="anchor" id="line-47-2"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-48-2"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ID">parent</span>, <span class="ResWord">id</span> = -<span class="Number">1</span>, <span class="ID">color</span> = <span class="ResWord">None</span>,\</span>
+<span class="line"><span class="anchor" id="line-49-2"></span>        <span class="ID">dpi</span> = <span class="ResWord">None</span>, <span class="ID">style</span> = <span class="ID">wx</span>.<span class="ID">NO_FULL_REPAINT_ON_RESIZE</span>, **<span class="ID">kwargs</span>):</span>
+<span class="line"><span class="anchor" id="line-50-2"></span>        <span class="ID">wx</span>.<span class="ID">Panel</span>.<span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ID">parent</span>, <span class="ResWord">id</span> = <span class="ResWord">id</span>, <span class="ID">style</span> = <span class="ID">style</span>, **<span class="ID">kwargs</span>)</span>
+<span class="line"><span class="anchor" id="line-51-2"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span> = <span class="ID">Figure</span>(<span class="ResWord">None</span>, <span class="ID">dpi</span>)</span>
+<span class="line"><span class="anchor" id="line-52-2"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span> = <span class="ID">NoRepaintCanvas</span>(<span class="ResWord">self</span>, -<span class="Number">1</span>, <span class="ResWord">self</span>.<span class="ID">figure</span>)</span>
+<span class="line"><span class="anchor" id="line-53-2"></span>        <span class="ResWord">self</span>.<span class="ID">SetColor</span>(<span class="ID">color</span>)</span>
+<span class="line"><span class="anchor" id="line-54-2"></span>        <span class="ResWord">self</span>.<span class="ID">Bind</span>(<span class="ID">wx</span>.<span class="ID">EVT_IDLE</span>, <span class="ResWord">self</span>.<span class="ID">_onIdle</span>)</span>
+<span class="line"><span class="anchor" id="line-55-2"></span>        <span class="ResWord">self</span>.<span class="ID">Bind</span>(<span class="ID">wx</span>.<span class="ID">EVT_SIZE</span>, <span class="ResWord">self</span>.<span class="ID">_onSize</span>)</span>
+<span class="line"><span class="anchor" id="line-56-2"></span>        <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-57-2"></span>        <span class="ResWord">self</span>.<span class="ID">_SetSize</span>()</span>
+<span class="line"><span class="anchor" id="line-58-2"></span></span>
+<span class="line"><span class="anchor" id="line-59-2"></span>    <span class="ResWord">def</span> <span class="ID">SetColor</span>(<span class="ResWord">self</span>, <span class="ID">rgbtuple</span>):</span>
+<span class="line"><span class="anchor" id="line-60-2"></span>        <span class="String">&quot;&quot;&quot;Set figure and canvas colours to be the same&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-61-2"></span>        <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">rgbtuple</span>:</span>
+<span class="line"><span class="anchor" id="line-62-2"></span>            <span class="ID">rgbtuple</span> = <span class="ID">wx</span>.<span class="ID">SystemSettings</span>.<span class="ID">GetColour</span>(<span class="ID">wx</span>.<span class="ID">SYS_COLOUR_BTNFACE</span>).<span class="ID">Get</span>()</span>
+<span class="line"><span class="anchor" id="line-63-2"></span>        <span class="ID">col</span> = [<span class="ID">c</span>/<span class="Number">255.0</span> <span class="ResWord">for</span> <span class="ID">c</span> <span class="ResWord">in</span> <span class="ID">rgbtuple</span>]</span>
+<span class="line"><span class="anchor" id="line-64-2"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_facecolor</span>(<span class="ID">col</span>)</span>
+<span class="line"><span class="anchor" id="line-65-2"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_edgecolor</span>(<span class="ID">col</span>)</span>
+<span class="line"><span class="anchor" id="line-66-2"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">SetBackgroundColour</span>(<span class="ID">wx</span>.<span class="ID">Colour</span>(*<span class="ID">rgbtuple</span>))</span>
+<span class="line"><span class="anchor" id="line-67-2"></span></span>
+<span class="line"><span class="anchor" id="line-68-2"></span>    <span class="ResWord">def</span> <span class="ID">_onSize</span>(<span class="ResWord">self</span>, <span class="ID">event</span>):</span>
+<span class="line"><span class="anchor" id="line-69-2"></span>        <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-70-2"></span></span>
+<span class="line"><span class="anchor" id="line-71-2"></span>    <span class="ResWord">def</span> <span class="ID">_onIdle</span>(<span class="ResWord">self</span>, <span class="ID">evt</span>):</span>
+<span class="line"><span class="anchor" id="line-72-2"></span>        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">_resizeflag</span>:</span>
+<span class="line"><span class="anchor" id="line-73-2"></span>            <span class="ResWord">self</span>.<span class="ID">_resizeflag</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-74-2"></span>            <span class="ResWord">self</span>.<span class="ID">_SetSize</span>()</span>
+<span class="line"><span class="anchor" id="line-75-2"></span>            <span class="ResWord">self</span>.<span class="ID">draw</span>()</span>
+<span class="line"><span class="anchor" id="line-76-2"></span>                </span>
+<span class="line"><span class="anchor" id="line-77-2"></span>    <span class="ResWord">def</span> <span class="ID">_SetSize</span>(<span class="ResWord">self</span>, <span class="ID">pixels</span> = <span class="ResWord">None</span>):</span>
+<span class="line"><span class="anchor" id="line-78-2"></span>        <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-79-2"></span><span class="String">        This method can be called to force the Plot to be a desired size, which defaults to</span></span>
+<span class="line"><span class="anchor" id="line-80-2"></span><span class="String">        the ClientSize of the panel</span></span>
+<span class="line"><span class="anchor" id="line-81-2"></span><span class="String">        &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-82-2"></span>        <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">pixels</span>:</span>
+<span class="line"><span class="anchor" id="line-83-2"></span>            <span class="ID">pixels</span> = <span class="ResWord">self</span>.<span class="ID">GetClientSize</span>()</span>
+<span class="line"><span class="anchor" id="line-84-2"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">SetSize</span>(<span class="ID">pixels</span>)</span>
+<span class="line"><span class="anchor" id="line-85-2"></span>        <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">set_figsize_inches</span>(<span class="ID">pixels</span>[<span class="Number">0</span>]/<span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">get_dpi</span>(),   </span>
+<span class="line"><span class="anchor" id="line-86-2"></span>        <span class="ID">pixels</span>[<span class="Number">1</span>]/<span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">get_dpi</span>())</span>
+<span class="line"><span class="anchor" id="line-87-2"></span></span>
+<span class="line"><span class="anchor" id="line-88-2"></span>    <span class="ResWord">def</span> <span class="ID">draw</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="anchor" id="line-89-2"></span>        <span class="String">&quot;&quot;&quot;Where the actual drawing happens&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-90-2"></span>        <span class="ResWord">pass</span></span>
+<span class="line"><span class="anchor" id="line-91-2"></span></span>
+<span class="line"><span class="anchor" id="line-92-2"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="anchor" id="line-93-2"></span>    <span class="ResWord">class</span> <span class="ID">DemoPlotPanel</span>(<span class="ID">PlotPanel</span>):</span>
+<span class="line"><span class="anchor" id="line-94-2"></span>        <span class="String">&quot;&quot;&quot;An example plotting panel. The only method that needs </span></span>
+<span class="line"><span class="anchor" id="line-95-2"></span><span class="String">        overriding is the draw method&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-96-2"></span>        <span class="ResWord">def</span> <span class="ID">draw</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="anchor" id="line-97-2"></span>            <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ResWord">hasattr</span>(<span class="ResWord">self</span>, <span class="String">'</span><span class="String">subplot</span><span class="String">'</span>):</span>
+<span class="line"><span class="anchor" id="line-98-2"></span>                <span class="ResWord">self</span>.<span class="ID">subplot</span> = <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">add_subplot</span>(<span class="Number">111</span>)</span>
+<span class="line"><span class="anchor" id="line-99-2"></span>            <span class="ID">theta</span> = <span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">45</span>*<span class="Number">2</span>*<span class="ID">pi</span>, <span class="Number">0.02</span>)</span>
+<span class="line"><span class="anchor" id="line-100-2"></span>            <span class="ID">rad</span> = (<span class="Number">0.8</span>*<span class="ID">theta</span>/(<span class="Number">2</span>*<span class="ID">pi</span>)+<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-101-2"></span>            <span class="ID">r</span> = <span class="ID">rad</span>*(<span class="Number">8</span> + <span class="ID">sin</span>(<span class="ID">theta</span>*<span class="Number">7</span>+<span class="ID">rad</span>/<span class="Number">1.8</span>))</span>
+<span class="line"><span class="anchor" id="line-102-2"></span>            <span class="ID">x</span> = <span class="ID">r</span>*<span class="ID">cos</span>(<span class="ID">theta</span>)</span>
+<span class="line"><span class="anchor" id="line-103-2"></span>            <span class="ID">y</span> = <span class="ID">r</span>*<span class="ID">sin</span>(<span class="ID">theta</span>)</span>
+<span class="line"><span class="anchor" id="line-104-2"></span>            <span class="Comment">#Now draw it</span></span>
+<span class="line"><span class="anchor" id="line-105-2"></span>            <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">plot</span>(<span class="ID">x</span>,<span class="ID">y</span>, <span class="String">'</span><span class="String">-r</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-106-2"></span>            <span class="Comment">#Set some plot attributes</span></span>
+<span class="line"><span class="anchor" id="line-107-2"></span>            <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">set_title</span>(<span class="String">&quot;</span><span class="String">A polar flower (</span><span class="String">%s</span><span class="String"> points)</span><span class="String">&quot;</span>%<span class="ResWord">len</span>(<span class="ID">x</span>), <span class="ID">fontsize</span> = <span class="Number">12</span>)</span>
+<span class="line"><span class="anchor" id="line-108-2"></span>            <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">set_xlabel</span>(<span class="String">&quot;</span><span class="String">Flower is from  http://www.physics.emory.edu/~weeks/ideas/rose.html</span><span class="String">&quot;</span>, <span class="ID">fontsize</span> = <span class="Number">8</span>)</span>
+<span class="line"><span class="anchor" id="line-109-2"></span>            <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">set_xlim</span>([-<span class="Number">400</span>, <span class="Number">400</span>])</span>
+<span class="line"><span class="anchor" id="line-110-2"></span>            <span class="ResWord">self</span>.<span class="ID">subplot</span>.<span class="ID">set_ylim</span>([-<span class="Number">400</span>, <span class="Number">400</span>])</span>
+<span class="line"><span class="anchor" id="line-111-2"></span></span>
+<span class="line"><span class="anchor" id="line-112-2"></span></span>
+<span class="line"><span class="anchor" id="line-113-2"></span>    <span class="ID">app</span> = <span class="ID">wx</span>.<span class="ID">PySimpleApp</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="anchor" id="line-114-2"></span>    <span class="Comment">#Initialise a frame ...</span></span>
+<span class="line"><span class="anchor" id="line-115-2"></span>    <span class="ID">frame</span> = <span class="ID">wx</span>.<span class="ID">Frame</span>(<span class="ResWord">None</span>, -<span class="Number">1</span>, <span class="String">'</span><span class="String">WxPython and Matplotlib</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-116-1"></span>    <span class="Comment">#Make a child plot panel...</span></span>
+<span class="line"><span class="anchor" id="line-117-1"></span>    <span class="ID">panel</span> = <span class="ID">DemoPlotPanel</span>(<span class="ID">frame</span>)</span>
+<span class="line"><span class="anchor" id="line-118-1"></span></span>
+<span class="line"><span class="anchor" id="line-119-1"></span>    <span class="Comment">#Put it in a sizer ...   </span></span>
+<span class="line"><span class="anchor" id="line-120-1"></span>    <span class="ID">sizer</span> = <span class="ID">wx</span>.<span class="ID">BoxSizer</span>(<span class="ID">wx</span>.<span class="ID">HORIZONTAL</span>)</span>
+<span class="line"><span class="anchor" id="line-121-1"></span>    <span class="ID">panel</span>.<span class="ID">SetSizer</span>(<span class="ID">sizer</span>)</span>
+<span class="line"><span class="anchor" id="line-122-1"></span>    <span class="ID">sizer</span>.<span class="ID">SetItemMinSize</span>(<span class="ID">panel</span>, <span class="Number">300</span>, <span class="Number">300</span>)</span>
+<span class="line"><span class="anchor" id="line-123-1"></span>    <span class="ID">panel</span>.<span class="ID">Fit</span>()</span>
+<span class="line"><span class="anchor" id="line-124-1"></span>    <span class="ID">panel</span>.<span class="ID">_SetSize</span>()</span>
+<span class="line"><span class="anchor" id="line-125-1"></span>    <span class="Comment">#And we are done ...    </span></span>
+<span class="line"><span class="anchor" id="line-126-1"></span>    <span class="ID">frame</span>.<span class="ID">Show</span>()</span>
+<span class="line"><span class="anchor" id="line-127-1"></span>    <span class="ID">app</span>.<span class="ID">MainLoop</span>()</span>
+</pre></div></div><span class="anchor" id="line-260"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib_figure_in_a_wx_panel37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Matplotlib_figure_in_a_wx_panel">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Matplotlib_figure_in_a_wx_panel?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:34 GMT -->
+</html>
+

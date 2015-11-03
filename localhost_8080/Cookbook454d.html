@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook?highlight=%28%28Cookbook%7CReading_mat_files%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook" href="../external.html?link=http://localhost:8080/Cookbook?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/Cookbook?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/Cookbook?action=print">
+<link rel="Appendix" title="package.zip" href="Cookbook36b0.html?action=AttachFile&amp;do=view&amp;target=package.zip">
+<link rel="Appendix" title="smoothsignal.png" href="Cookbook5523.html?action=AttachFile&amp;do=view&amp;target=smoothsignal.png">
+<link rel="Appendix" title="test_kmeans.py" href="Cookbooka80a.html?action=AttachFile&amp;do=view&amp;target=test_kmeans.py">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/Cookbook">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Cookbook456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a class="backlink" href="Cookbook401d.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%22" rel="nofollow" title="Click to do a full-text search for this title">Cookbook</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="Cookbook.html">Cookbook</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Cookbook37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Cookbook">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Scipy_Central">Scipy Central</a></li><li>
+<a href="#NumPy_.2F_SciPy">NumPy / SciPy</a><ol><li>
+<a href="#Advanced_topics">Advanced topics</a></li></ol></li><li>
+<a href="#Compiling_Extensions">Compiling Extensions</a></li><li>
+<a href="#Scientific_Scripts">Scientific Scripts</a></li><li>
+<a href="#Input_Output">Input Output</a></li><li>
+<a href="#Graphics">Graphics</a></li><li>
+<a href="#Using_NumPy_With_Other_Languages_.28Advanced.29">Using NumPy With Other Languages (Advanced)</a></li><li>
+<a href="#Scientific_GUIs">Scientific GUIs</a></li></ol></div><p class="line874"> This page hosts &quot;recipes&quot;, or worked examples of commonly-done tasks.    Some are introductory in nature, while others are quite advanced (these are at the bottom of the page).  We encourage new users to post recipes even for simple tasks that are not yet represented here.  Our goal is an easy learning experience for new users.  Some of these recipes may be incorporated into tutorials in the future. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Scipy_Central">Scipy Central</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><ul><li><p class="line862">You can find and submit more recipes at <a class="http" href="../external.html?link=http://scipy-central.org/">http://scipy-central.org/</a> (which eventually can supersede this wiki page) <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span></li></ul><p class="line867">
+<h1 id="NumPy_.2F_SciPy">NumPy / SciPy</h1>
+<span class="anchor" id="line-8"></span><ul><li><p class="line891">NumPy arrays: tips and tricks: <span class="anchor" id="line-9"></span><ul><li><p class="line891"><a href="Cookbook/BuildingArrays.html">Building Arrays</a> Introduction to numerical arrays. <span class="anchor" id="line-10"></span></li><li><p class="line891"><a href="Cookbook/Indexing.html">Indexing</a> Indexing numpy arrays, from simple to complicated. <span class="anchor" id="line-11"></span></li><li><p class="line891"><a href="Cookbook/MultiDot.html">Multiplying multiple arguments</a> Generalizing <tt class="backtick">dot(a,b)</tt> to the case of N arguments. <span class="anchor" id="line-12"></span></li><li><p class="line891"><a href="Cookbook/SegmentAxis.html">Segment axis</a> Devious trick using strides to allow general operations (like convolution) on successive, overlapping pieces of an array <span class="anchor" id="line-13"></span></li><li><p class="line891"><a href="Cookbook/GameOfLifeStrides.html">Stride tricks for the Game of Life</a> This is similar to <a href="Cookbook/SegmentAxis.html">Segment axis</a>, but for 2D arrays with 2D windows. <span class="anchor" id="line-14"></span></li><li><p class="line891"><a href="Cookbook/MetaArray.html">MetaArray</a> Class for storing per-axis meta <a class="http" href="../external.html?link=http://open.salon.com/blog/smebs/2011/05/16/marketing_data_box_-_complete_strategy_guide_for_smbs">data</a> information with an array (axis names, column names, units, etc.) <span class="anchor" id="line-15"></span></li><li><p class="line891"><a href="Cookbook/Obarray.html">Obarray</a> Trick for avoiding object arrays when dealing with arrays of objects. <span class="anchor" id="line-16"></span></li><li><p class="line891"><a href="Cookbook/Recarray.html">Recarray</a> Accessing array columns with structured arrays and recarrays. <span class="anchor" id="line-17"></span></li><li><p class="line891"><a href="Cookbook/AccumarrayLike.html">accumarray-like function</a> A function that behaves like MATLAB's accumarray. <span class="anchor" id="line-18"></span></li></ul></li><li>Linear Algebra <span class="anchor" id="line-19"></span><ul><li><p class="line891"><a href="Cookbook/RankNullspace.html">Rank and nullspace</a> of a matrix. <span class="anchor" id="line-20"></span></li></ul></li><li>Interpolation: <span class="anchor" id="line-21"></span><ul><li><p class="line891"><a href="Cookbook/Interpolation.html">Interpolation</a> Examples of interpolation (see also <a href="Cookbook/Matplotlib/Gridding_irregularly_spaced_data.html">Gridding irregularly spaced data</a>). <span class="anchor" id="line-22"></span></li><li><p class="line891"><a href="Cookbook/RadialBasisFunctions.html">Radial Basis Functions</a> Using radial basis functions for smoothing/interpolation <span class="anchor" id="line-23"></span></li></ul></li><li>Optimization and fitting techniques: <span class="anchor" id="line-24"></span><ul><li><p class="line891"><a href="Cookbook/OptimizationDemo1.html">Optimization</a> Quick example of fminbound with plot. <span class="anchor" id="line-25"></span></li><li><p class="line891"><a href="Cookbook/OptimizationAndFitDemo1.html">Optimization with fit</a> Similar to above with spline fit and chaco plot. <span class="anchor" id="line-26"></span></li><li><p class="line891"><a href="Cookbook/FittingData.html">Fitting Data</a> Day to day work in the lab: fitting experimental data. <span class="anchor" id="line-27"></span></li><li><p class="line891"><a href="Cookbook/LinearRegression.html">Linear regression</a> Simple Linear regression example. <span class="anchor" id="line-28"></span></li><li><p class="line891"><a href="Cookbook/OLS.html">Fit statistics</a> Estimates a multi-variate regression model and provides various fit statistics. <span class="anchor" id="line-29"></span></li><li><p class="line891"><a href="Cookbook/Least_Squares_Circle.html">Least Squares Circle</a> Fitting the least squares circle from a series of 2D points <span class="anchor" id="line-30"></span></li><li><p class="line891"><a href="Cookbook/RANSAC.html">RANSAC algorithm</a> Implementation of the robust estimation method. <span class="anchor" id="line-31"></span></li></ul></li><li>Ordinary differential equations <span class="anchor" id="line-32"></span><ul><li><p class="line891"><a href="Cookbook/Zombie_Apocalypse_ODEINT.html">Zombie Apocalypse ODE Modeling</a> Modeling a Zombie Apocalypse by solving a system of ordinary differential equations using the <a href="SciPy.html">SciPy</a> routine, <em>odeint</em>. <span class="anchor" id="line-33"></span></li><li><p class="line891"><a href="Cookbook/CoupledSpringMassSystem.html">A coupled spring-mass system</a> Another example of solving differential equations. <span class="anchor" id="line-34"></span></li><li><p class="line891"><a href="Cookbook/LoktaVolterraTutoriald1e1.html">Lotka-Volterra Tutorial</a> Solving ordinary differential equations with Scipy <span class="anchor" id="line-35"></span></li><li><p class="line891"><a href="Cookbook/KdV.html">KdV</a> Solving the Korteweg-deVries equation on a periodic domain using the pseudo-spectral method with the method of lines. <span class="anchor" id="line-36"></span></li><li><p class="line891"><a href="Cookbook/Theoretical_Ecology/Hastings_and_Powell.html">Hastings and Powell food chain model</a> <span class="anchor" id="line-37"></span></li></ul></li><li>Root finding <span class="anchor" id="line-38"></span><ul><li><p class="line891"><a href="Cookbook/SphericalBesselZeros.html">Spherical Bessel Zeros</a> Finding the zeros of the spherical Bessel functions and its derivative <span class="anchor" id="line-39"></span></li><li><p class="line891"><a href="Cookbook/Intersection.html">Intersection of functions</a> Compute the points at which two given functions intersect. <span class="anchor" id="line-40"></span></li></ul></li><li><p class="line891"><a href="Cookbook/Rebinning.html">Data rebinning</a> Examples of rebinning data to produce smaller arrays with and without interpolation. <span class="anchor" id="line-41"></span></li><li><p class="line891"><a href="Cookbook/Histograms.html">Histograms</a> 2D histograms with variable bin width <span class="anchor" id="line-42"></span></li><li><p class="line891"><a href="Cookbook/Finding_Convex_Hull.html">Convex Hull</a> Finds the convex hull around a set of data points. <span class="anchor" id="line-43"></span></li><li><p class="line891"><a href="Cookbook/Finding_Convex_Hull_Minimum_Point.html">Minimum Point of a Convex Hull</a> Finds the minimum point of the convex hull of a finite set of points. <span class="anchor" id="line-44"></span></li><li><p class="line891"><a href="Cookbook/KalmanFiltering.html">Kalman Filtering</a> Example from the Welch &amp; Bishop <a class="http" href="../external.html?link=http://www.cs.unc.edu/~welch/kalman/kalmanIntro.html">Introduction to the Kalman Filter</a>. <span class="anchor" id="line-45"></span></li><li><p class="line891"><a href="Cookbook/CommTheory.html">Comm Theory</a> Example of BPSK simulation. <span class="anchor" id="line-46"></span></li><li><p class="line891"><a href="Cookbook/SignalSmooth.html">Smoothing a signal</a> Performing smoothing of 1D and 2D signals by convolving them with a window. <span class="anchor" id="line-47"></span></li><li><p class="line891"><a href="Cookbook/ButterworthBandpass.html">Butterworth Bandpass Filter</a> Create and apply a Butterworth bandpass filter. <span class="anchor" id="line-48"></span></li><li><p class="line891"><a href="Cookbook/FIRFilter.html">FIR Filter Design</a> Design a low-pass FIR filter using the window method. <span class="anchor" id="line-49"></span></li><li><p class="line891"><a href="Cookbook/ApplyFIRFilter.html">How to apply a FIR filter:</a> signal.convolve, signal.fftconvolve, ndimage.convolve1d or signal.lfilter? <span class="anchor" id="line-50"></span></li><li><p class="line891"><a href="Cookbook/FiltFilt.html">A zero phase delay filter</a> Sample code for a null phase delay filter that processes the signal in the forward and backward direction removing the phase delay. <span class="anchor" id="line-51"></span></li><li><p class="line891"><a href="Cookbook/SavitzkyGolay.html">Savitzky Golay filtering of data</a> Sample code for Savitzky Golay filtering. <span class="anchor" id="line-52"></span></li><li><p class="line891"><a href="Cookbook/FrequencySweptDemo.html">Frequency-swept signals</a> Generating frequency-swept signals with chirp() and sweep_poly() from scipy.signal (<a href="SciPy.html">SciPy</a> 0.8) <span class="anchor" id="line-53"></span></li><li><p class="line891"><a href="Cookbook/Multithreading.html">Multithreading</a> Easy multithreading for embarrassingly parallel problems <span class="anchor" id="line-54"></span></li><li><p class="line891"><a href="Cookbook/KDTree.html">KDTree</a> Searching multidimensional space using kd-trees. <span class="anchor" id="line-55"></span></li><li><p class="line891"><a href="Cookbook/ParticleFilter.html">Particle Filter</a> A simple particle filter algorithm for tracking objects in a video sequence. <span class="anchor" id="line-56"></span></li><li><p class="line891"><a href="Cookbook/BrownianMotion.html">Brownian Motion</a> Compute Brownian motion (i.e. the Wiener process). <span class="anchor" id="line-57"></span></li><li><p class="line891"><a href="Cookbook/CorrelatedRandomSamples.html">Correlated Random Samples</a> Generate correlated normally distributed random samples. <span class="anchor" id="line-58"></span></li><li><p class="line891"><a href="Cookbook/Solving_Large_Markov_Chains.html">Large Markov Chains</a> Find the stationary distribution of a large Markov chain; the M/M/1 tandem queue <span class="anchor" id="line-59"></span></li><li><p class="line891"><a href="Cookbook/Watershed.html">Watershed algorithm</a> Apply the watershed algorithm in order to split an array into distinct components (e.g. for the segmentation of an image into objects). <span class="anchor" id="line-60"></span></li><li><p class="line891"><a href="Cookbook/LinearClassification.html">Linear Classification</a> Fisher's discriminant function and Probabilistic Generative model <span class="anchor" id="line-61"></span></li><li><p class="line891"><a href="Cookbook/EyeDiagram.html">Plot an eye diagram</a> using numpy and matplotlib. <span class="anchor" id="line-62"></span></li></ul><p class="line867">
+<h2 id="Advanced_topics">Advanced topics</h2>
+<span class="anchor" id="line-63"></span><ul><li><p class="line891"><a href="Cookbook/ViewsVsCopies.html">Views vs Copies</a> A quick introduction to array views and some caveats on situations where you should expect a <a class="http" href="../external.html?link=http://open.salon.com/blog/smebs/2011/05/16/marketing_data_box_-_complete_strategy_guide_for_smbs">data</a> view or a data copy. <span class="anchor" id="line-64"></span></li></ul><p class="line867">
+<h1 id="Compiling_Extensions">Compiling Extensions</h1>
+<span class="anchor" id="line-65"></span><ul><li><p class="line891"><a href="Cookbook/CompilingExtensionsOnWindowsWithMinGW.html">Compiling Extensions on Windows</a> A quick tutorial on how to compile extension modules on Windows using MinGW <span class="anchor" id="line-66"></span></li></ul><p class="line867">
+<h1 id="Scientific_Scripts">Scientific Scripts</h1>
+<span class="anchor" id="line-67"></span><ul><li><p class="line891"><a href="Cookbook/Theoretical_Ecology.html">Theoretical Ecology</a> <span class="anchor" id="line-68"></span></li><li><p class="line891"><a href="Cookbook/SchrodingerFDTD.html">Schrödinger's equation</a>: a 1-d FDTD solver that animates the time evolution of a gaussian wave packet interacting with simple potentials. <span class="anchor" id="line-69"></span></li></ul><p class="line867">
+<h1 id="Input_Output">Input Output</h1>
+<span class="anchor" id="line-70"></span><ul><li><p class="line891"><a href="Cookbook/hdf5_in_Matlab.html">Loading hdf5 in Matlab</a> <span class="anchor" id="line-71"></span></li><li><p class="line891"><a href="Cookbook/Reading_mat_files.html">Reading Matlab .mat files</a> <span class="anchor" id="line-72"></span></li><li><p class="line891"><a href="Cookbook/DataFrame.html">DataFrames</a> A useful class for storing alphanumerical data, similar to GNU R's data frames. <span class="anchor" id="line-73"></span></li><li><p class="line891"><a href="Cookbook/Data_Acquisition_with_PyUL.html">Data acquisition with PyUniversalLibrary</a> A series of examples using an inexpensive USB data acquisition device from Measurement Computing. <span class="anchor" id="line-74"></span></li><li><p class="line891"><a href="Cookbook/Data_Acquisition_with_NIDAQmx.html">Data acquisition with Ni-DAQmx</a> A simple example of using ctypes and numpy to access data acquisition devices from National Instruments. <span class="anchor" id="line-75"></span></li><li><p class="line891"><a href="Cookbook/InputOutput.html">input/output</a> Reading and writing a NumPy array from/to an ascii/binary file. <span class="anchor" id="line-76"></span></li><li><p class="line891"><a href="Cookbook/FortranIO.html">Fortran I/O</a> Reading FORTRAN record-structured binary files (if you don't know what these are, thank your stars and you don't need this). <span class="anchor" id="line-77"></span></li><li><p class="line891"><a href="Cookbook/Reading_SPE_files.html">Reading SPE files</a> Reading SPE binary files produced by CCD cameras (Princeton and like). <span class="anchor" id="line-78"></span></li><li><p class="line891"><a href="Cookbook/LASReader.html">Reading LAS files</a> Reading LAS (Log ASCII Standard) well log files. <span class="anchor" id="line-79"></span></li></ul><p class="line867">
+<h1 id="Graphics">Graphics</h1>
+<span class="anchor" id="line-80"></span><p class="line862">There are several packages available to produce interactive screen graphics (use the mouse to zoom, orient, and fine-tune) and publication-quality printed plots, in 2D, 3D, and 4D (animations).  These packages have releases more frequently than <a href="SciPy.html">SciPy</a>.  Rather than bundling out-of-date packages with <a href="SciPy.html">SciPy</a>, the plotting packages are released separately.  However, their developers work closely with the <a href="SciPy.html">SciPy</a> developers to ensure compatibility. <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><ul><li><p class="line891"><a href="Cookbook/Matplotlib.html">Matplotlib <strong class="highlight">cookbook</strong></a>.  Matplotlib is the preferred package for 2D graphics. <span class="anchor" id="line-83"></span></li><li><p class="line891"><a href="Cookbook/MayaVi.html">3D plotting with Mayavi</a>. Advanced 3D data visualization with MayaVi2 (and TVTK): a very powerful interactive scientific data visualizer. <span class="anchor" id="line-84"></span></li><li><p class="line891"><a href="Cookbook/PIL.html">Python Imaging Library</a>. Create/manipulate images as numpy array's. <span class="anchor" id="line-85"></span></li><li><p class="line891"><a href="Cookbook/xplt.html">Plotting with xplt</a>.  xplt is very fast but less flexible than matplotlib.  It allows simple 3-d surface visualizations as well. It is based on pygist (included) and is available under the sandbox directory in SVN scipy. <span class="anchor" id="line-86"></span></li><li><p class="line891"><a href="WilnaDuToit.html">Mat3d</a>. Simple 3D plotting using an OpenGL backend. <span class="anchor" id="line-87"></span></li><li><p class="line891"><a href="Cookbook/LineIntegralConvolution.html">Line Integral Convolution</a> code in cython for visualizing vector fields <span class="anchor" id="line-88"></span></li><li><p class="line891"><a href="Cookbook/vtkVolumeRenderingad46.html">VTK volume rendering</a>. This is a simple example that show how to use VTK to volume render your three dimensional numpy arrays. <span class="anchor" id="line-89"></span></li><li><p class="line891"><a href="Cookbook/OldMatplotlib.html">Old Matplotlib recipes</a>. The recipes on this page are being contributed to the Matplotlib project and will eventually be deleted from this Wiki. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></li></ul><p class="line867">
+<h1 id="Using_NumPy_With_Other_Languages_.28Advanced.29">Using NumPy With Other Languages (Advanced)</h1>
+<span class="anchor" id="line-92"></span><ul><li><p class="line862">A <a href="PerformancePython.html">comparison</a> of Weave with NumPy, Pyrex, Psyco, Fortran and C++ using Laplace's equation as an example. <span class="anchor" id="line-93"></span></li><li><p class="line862">Using <a href="Cookbook/Pyrex_and_NumPy.html">Pyrex and NumPy</a> to share data between your Pyrex/C extension module and NumPy. <span class="anchor" id="line-94"></span></li><li><p class="line862">Using <a href="Cookbook/ArrayStruct_and_Pyrex.html">Pyrex and the array_struct interface</a> to access array data without requiring a C dependency on Numeric, numarray, or NumPy. <span class="anchor" id="line-95"></span></li><li><p class="line891"><strong>NumInd</strong>: <a href="Cookbook/A_Numerical_Agnostic_Pyrex_Class.html">A Numerical Agnostic Pyrex Class</a> to access Numeric/numarray/!<a class="nonexistent" href="NumPy.html">NumPy</a> arrays in an uniform way from both C and Pyrex space. <span class="anchor" id="line-96"></span></li><li><p class="line862">Using <a href="Cookbook/SWIG_and_NumPy.html">SWIG and NumPy</a> to access and modify NumPy arrays in C libraries. <span class="anchor" id="line-97"></span></li><li><p class="line891"><strong>numpy.i</strong>: A few <a href="Cookbook/SWIG_NumPy_examples.html">SWIG and numpy.i</a> basic examples. <span class="anchor" id="line-98"></span></li><li><p class="line891"><strong>numpy.i</strong>: Using <a href="Cookbook/SWIG_Memory_Deallocation.html">SWIG and numpy.i</a> to handle automatic C memory deallocation from Python (using a modified numpy.i). <span class="anchor" id="line-99"></span></li><li><p class="line862">Using <a href="Cookbook/F2Py.html">f2py</a> to wrap Fortran codes. <span class="anchor" id="line-100"></span></li><li><p class="line862">Using <a href="Cookbook/f2py_and_NumPy.html">f2py and Numpy</a> to wrap C codes. <span class="anchor" id="line-101"></span></li><li><p class="line862">Writing <a href="Cookbook/C_Extensions.html">C Extensions</a>. <span class="anchor" id="line-102"></span></li><li><p class="line862">Using <a href="Cookbook/Ctypes.html">ctypes with NumPy</a>. <span class="anchor" id="line-103"></span></li><li><p class="line862">Using <a href="Cookbook/Weave.html">/Weave</a> and <strong>iterators</strong> for fast, generalized code. <span class="anchor" id="line-104"></span></li></ul><p class="line867">
+<h1 id="Scientific_GUIs">Scientific GUIs</h1>
+<span class="anchor" id="line-105"></span><ul><li><p class="line862">Using <a href="Cookbook/wxPython_dialogs.html">wxPython dialogs</a> for simple user interaction. <span class="anchor" id="line-106"></span></li><li><p class="line862">Using <a href="TraitsUI.html">TraitsUI</a> to build interactive applications. <span class="anchor" id="line-107"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-108"></span><ul><li style="list-style-type:none"><p class="line891"><strong>List of all pages in the category &quot;<strong class="highlight">Cookbook</strong>&quot;:</strong> <span class="anchor" id="line-109"></span></li><li style="list-style-type:none"><p class="line891"><div class="searchresults">
+
+</div> <span class="anchor" id="line-110"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-111"></span><ul><li style="list-style-type:none"><p class="line891"><a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <span class="anchor" id="line-112"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-113"></span><ul><li style="list-style-type:none"><p class="line891"><a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <a href="CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <span class="anchor" id="line-114"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Cookbook37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Cookbook">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook?highlight=%28%28Cookbook%7CReading_mat_files%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

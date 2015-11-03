@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=AttachFile&do=view&target=ndarray.h by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:37:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:ndarray.h of C++_Extensions_that_use_NumPy_arrays - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: C++_Extensions_that_use_NumPy_arrays" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=C%2B%2B_Extensions_that_use_NumPy_arrays&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=print">
+<link rel="Appendix" title="ndarray.h" href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h">
+<link rel="Appendix" title="numpyctypes.py" href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="C%2b%2b_Extensions_that_use_NumPy_arrays456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:ndarray.h of C++_Extensions_that_use_NumPy_arrays</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="C%2b%2b_Extensions_that_use_NumPy_arrays.html">C++_Extensi...umPy_arrays</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'ndarray.h'</h2><a class="download" href="ndarray2e5c.h?action=AttachFile&amp;do=get&amp;target=ndarray.h">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9b52b3888939a7f3a4026f737853f2cbc6490b26\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_1">   1</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment">//==========================================================</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_2">   2</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_2"></span><span class="anchor" id="line-2"></span><span class="Comment"></span><span class="Comment">// ndarray.h: C++ interface for easy access to numpy arrays </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_3">   3</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_3"></span><span class="anchor" id="line-3"></span><span class="Comment"></span><span class="Comment">//</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_4">   4</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_4"></span><span class="anchor" id="line-4"></span><span class="Comment"></span><span class="Comment">// J. De Ridder</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_5">   5</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_5"></span><span class="anchor" id="line-5"></span><span class="Comment"></span><span class="Comment">//==========================================================</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_6">   6</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_6"></span><span class="anchor" id="line-6"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_7">   7</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_7"></span><span class="anchor" id="line-7"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_8">   8</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_8"></span><span class="anchor" id="line-8"></span><span class="Preprc">#</span><span class="Preprc">ifndef NDARRAY_H</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_9">   9</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_9"></span><span class="anchor" id="line-9"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">define NDARRAY_H</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_10">  10</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_10"></span><span class="anchor" id="line-10"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_11">  11</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_11"></span><span class="anchor" id="line-11"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_12">  12</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_12"></span><span class="anchor" id="line-12"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_13">  13</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_13"></span><span class="anchor" id="line-13"></span><span class="Comment">// The C-struct to retrieve the ctypes structure.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_14">  14</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_14"></span><span class="anchor" id="line-14"></span><span class="Comment"></span><span class="Comment">// Note: Order of struct members must be the same as in Python.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_15">  15</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_15"></span><span class="anchor" id="line-15"></span><span class="Comment"></span><span class="Comment">//       Member names are not recognized!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_16">  16</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_16"></span><span class="anchor" id="line-16"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_17">  17</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_17"></span><span class="anchor" id="line-17"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_18">  18</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_18"></span><span class="anchor" id="line-18"></span><span class="ID">template</span> &lt;<span class="ResWord">typename</span> <span class="ID">T</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_19">  19</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_19"></span><span class="anchor" id="line-19"></span><span class="ResWord">struct</span> <span class="ID">numpyArray</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_20">  20</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_20"></span><span class="anchor" id="line-20"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_21">  21</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_21"></span><span class="anchor" id="line-21"></span>    <span class="ID">T</span> *<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_22">  22</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_22"></span><span class="anchor" id="line-22"></span>    <span class="ResWord">long</span> *<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_23">  23</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_23"></span><span class="anchor" id="line-23"></span>    <span class="ResWord">long</span> *<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_24">  24</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_24"></span><span class="anchor" id="line-24"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_25">  25</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_25"></span><span class="anchor" id="line-25"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_26">  26</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_26"></span><span class="anchor" id="line-26"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_27">  27</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_27"></span><span class="anchor" id="line-27"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_28">  28</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_28"></span><span class="anchor" id="line-28"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_29">  29</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_29"></span><span class="anchor" id="line-29"></span><span class="Comment">// Traits need to used because the return type of the []-operator can be</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_30">  30</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_30"></span><span class="anchor" id="line-30"></span><span class="Comment"></span><span class="Comment">// a subarray or an element, depending whether all the axes are exhausted.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_31">  31</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_31"></span><span class="anchor" id="line-31"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_32">  32</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_32"></span><span class="anchor" id="line-32"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt; <span class="ID">class</span> <span class="ID">Ndarray</span>;        <span class="Comment">// forward declaration</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_33">  33</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_33"></span><span class="anchor" id="line-33"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_34">  34</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_34"></span><span class="anchor" id="line-34"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_35">  35</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_35"></span><span class="anchor" id="line-35"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_36">  36</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_36"></span><span class="anchor" id="line-36"></span><span class="ResWord">struct</span> <span class="ID">getItemTraits</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_37">  37</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_37"></span><span class="anchor" id="line-37"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_38">  38</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_38"></span><span class="anchor" id="line-38"></span>    <span class="ResWord">typedef</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>-<span class="Number">1</span>&gt; <span class="ID">returnType</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_39">  39</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_39"></span><span class="anchor" id="line-39"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_40">  40</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_40"></span><span class="anchor" id="line-40"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_41">  41</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_41"></span><span class="anchor" id="line-41"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_42">  42</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_42"></span><span class="anchor" id="line-42"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_43">  43</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_43"></span><span class="anchor" id="line-43"></span><span class="ResWord">struct</span> <span class="ID">getItemTraits</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_44">  44</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_44"></span><span class="anchor" id="line-44"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_45">  45</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_45"></span><span class="anchor" id="line-45"></span>    <span class="ResWord">typedef</span> <span class="ID">datatype</span>&amp; <span class="ID">returnType</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_46">  46</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_46"></span><span class="anchor" id="line-46"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_47">  47</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_47"></span><span class="anchor" id="line-47"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_48">  48</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_48"></span><span class="anchor" id="line-48"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_49">  49</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_49"></span><span class="anchor" id="line-49"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_50">  50</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_50"></span><span class="anchor" id="line-50"></span><span class="Comment">// Ndarray definition</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_51">  51</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_51"></span><span class="anchor" id="line-51"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_52">  52</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_52"></span><span class="anchor" id="line-52"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_53">  53</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_53"></span><span class="anchor" id="line-53"></span><span class="ID">class</span> <span class="ID">Ndarray</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_54">  54</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_54"></span><span class="anchor" id="line-54"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_55">  55</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_55"></span><span class="anchor" id="line-55"></span>    <span class="ID">private</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_56">  56</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_56"></span><span class="anchor" id="line-56"></span>        <span class="ID">datatype</span> *<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_57">  57</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_57"></span><span class="anchor" id="line-57"></span>        <span class="ResWord">long</span> *<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_58">  58</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_58"></span><span class="anchor" id="line-58"></span>        <span class="ResWord">long</span> *<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_59">  59</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_59"></span><span class="anchor" id="line-59"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_60">  60</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_60"></span><span class="anchor" id="line-60"></span>    <span class="ID">public</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_61">  61</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_61"></span><span class="anchor" id="line-61"></span>        <span class="ID">Ndarray</span>(<span class="ID">datatype</span> *<span class="ID">data</span>, <span class="ResWord">long</span> *<span class="ID">shape</span>, <span class="ResWord">long</span> *<span class="ID">strides</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_62">  62</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_62"></span><span class="anchor" id="line-62"></span>        <span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;&amp; <span class="ID">array</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_63">  63</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_63"></span><span class="anchor" id="line-63"></span>        <span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">numpyArray</span>&lt;<span class="ID">datatype</span>&gt;&amp; <span class="ID">array</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_64">  64</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_64"></span><span class="anchor" id="line-64"></span>        <span class="ResWord">long</span> <span class="ID">getShape</span>(<span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">axis</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_65">  65</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_65"></span><span class="anchor" id="line-65"></span>        <span class="ResWord">typename</span> <span class="ID">getItemTraits</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">returnType</span> <span class="ID">operator</span>[](<span class="ResWord">unsigned</span> <span class="ResWord">long</span> <span class="ID">i</span>);       </span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_66">  66</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_66"></span><span class="anchor" id="line-66"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_67">  67</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_67"></span><span class="anchor" id="line-67"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_68">  68</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_68"></span><span class="anchor" id="line-68"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_69">  69</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_69"></span><span class="anchor" id="line-69"></span><span class="Comment">// Ndarray constructor</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_70">  70</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_70"></span><span class="anchor" id="line-70"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_71">  71</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_71"></span><span class="anchor" id="line-71"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_72">  72</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_72"></span><span class="anchor" id="line-72"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">Ndarray</span>(<span class="ID">datatype</span> *<span class="ID">data</span>, <span class="ResWord">long</span> *<span class="ID">shape</span>, <span class="ResWord">long</span> *<span class="ID">strides</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_73">  73</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_73"></span><span class="anchor" id="line-73"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_74">  74</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_74"></span><span class="anchor" id="line-74"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_75">  75</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_75"></span><span class="anchor" id="line-75"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_76">  76</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_76"></span><span class="anchor" id="line-76"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_77">  77</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_77"></span><span class="anchor" id="line-77"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_78">  78</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_78"></span><span class="anchor" id="line-78"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_79">  79</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_79"></span><span class="anchor" id="line-79"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_80">  80</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_80"></span><span class="anchor" id="line-80"></span><span class="Comment">// Ndarray copy constructor</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_81">  81</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_81"></span><span class="anchor" id="line-81"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_82">  82</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_82"></span><span class="anchor" id="line-82"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_83">  83</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_83"></span><span class="anchor" id="line-83"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;&amp; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_84">  84</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_84"></span><span class="anchor" id="line-84"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_85">  85</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_85"></span><span class="anchor" id="line-85"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">array</span>.<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_86">  86</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_86"></span><span class="anchor" id="line-86"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">array</span>.<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_87">  87</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_87"></span><span class="anchor" id="line-87"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">array</span>.<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_88">  88</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_88"></span><span class="anchor" id="line-88"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_89">  89</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_89"></span><span class="anchor" id="line-89"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_90">  90</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_90"></span><span class="anchor" id="line-90"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_91">  91</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_91"></span><span class="anchor" id="line-91"></span><span class="Comment">// Ndarray constructor from ctypes structure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_92">  92</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_92"></span><span class="anchor" id="line-92"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_93">  93</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_93"></span><span class="anchor" id="line-93"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_94">  94</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_94"></span><span class="anchor" id="line-94"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">numpyArray</span>&lt;<span class="ID">datatype</span>&gt;&amp; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_95">  95</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_95"></span><span class="anchor" id="line-95"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_96">  96</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_96"></span><span class="anchor" id="line-96"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">array</span>.<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_97">  97</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_97"></span><span class="anchor" id="line-97"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">array</span>.<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_98">  98</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_98"></span><span class="anchor" id="line-98"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">array</span>.<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_99">  99</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_99"></span><span class="anchor" id="line-99"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_100"> 100</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_100"></span><span class="anchor" id="line-100"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_101"> 101</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_101"></span><span class="anchor" id="line-101"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_102"> 102</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_102"></span><span class="anchor" id="line-102"></span><span class="Comment">// Ndarray method to get length of given axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_103"> 103</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_103"></span><span class="anchor" id="line-103"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_104"> 104</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_104"></span><span class="anchor" id="line-104"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_105"> 105</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_105"></span><span class="anchor" id="line-105"></span><span class="ResWord">long</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">getShape</span>(<span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_106"> 106</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_106"></span><span class="anchor" id="line-106"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_107"> 107</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_107"></span><span class="anchor" id="line-107"></span>    <span class="ResWord">return</span> <span class="ID">this</span>-&gt;<span class="ID">shape</span>[<span class="ID">axis</span>];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_108"> 108</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_108"></span><span class="anchor" id="line-108"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_109"> 109</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_109"></span><span class="anchor" id="line-109"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_110"> 110</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_110"></span><span class="anchor" id="line-110"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_111"> 111</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_111"></span><span class="anchor" id="line-111"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_112"> 112</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_112"></span><span class="anchor" id="line-112"></span><span class="Comment">// Ndarray overloaded []-operator.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_113"> 113</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_113"></span><span class="anchor" id="line-113"></span><span class="Comment"></span><span class="Comment">// The [i][j][k] selection is recursively replaced by i*strides[0]+j*strides[1]+k*strides[2]</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_114"> 114</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_114"></span><span class="anchor" id="line-114"></span><span class="Comment"></span><span class="Comment">// at compile time, using template meta-programming. If the axes are not exhausted, return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_115"> 115</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_115"></span><span class="anchor" id="line-115"></span><span class="Comment"></span><span class="Comment">// a subarray, else return an element.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_116"> 116</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_116"></span><span class="anchor" id="line-116"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_117"> 117</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_117"></span><span class="anchor" id="line-117"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>, <span class="ResWord">int</span> <span class="ID">ndim</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_118"> 118</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_118"></span><span class="anchor" id="line-118"></span><span class="ResWord">typename</span> <span class="ID">getItemTraits</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">returnType</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_119"> 119</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_119"></span><span class="anchor" id="line-119"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>&gt;::<span class="ID">operator</span>[](<span class="ResWord">unsigned</span> <span class="ResWord">long</span> <span class="ID">i</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_120"> 120</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_120"></span><span class="anchor" id="line-120"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_121"> 121</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_121"></span><span class="anchor" id="line-121"></span>    <span class="ResWord">return</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="ID">ndim</span>-<span class="Number">1</span>&gt;(&amp;<span class="ID">this</span>-&gt;<span class="ID">data</span>[<span class="ID">i</span>*<span class="ID">this</span>-&gt;<span class="ID">strides</span>[<span class="Number">0</span>]], &amp;<span class="ID">this</span>-&gt;<span class="ID">shape</span>[<span class="Number">1</span>], &amp;<span class="ID">this</span>-&gt;<span class="ID">strides</span>[<span class="Number">1</span>]);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_122"> 122</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_122"></span><span class="anchor" id="line-122"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_123"> 123</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_123"></span><span class="anchor" id="line-123"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_124"> 124</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_124"></span><span class="anchor" id="line-124"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_125"> 125</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_125"></span><span class="anchor" id="line-125"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_126"> 126</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_126"></span><span class="anchor" id="line-126"></span><span class="Comment">// Template partial specialisation of Ndarray.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_127"> 127</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_127"></span><span class="anchor" id="line-127"></span><span class="Comment"></span><span class="Comment">// For 1D Ndarrays, the [] operator should return an element, not a subarray, so it needs</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_128"> 128</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_128"></span><span class="anchor" id="line-128"></span><span class="Comment"></span><span class="Comment">// to be special-cased. In principle only the operator[] method should be specialised, but</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_129"> 129</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_129"></span><span class="anchor" id="line-129"></span><span class="Comment"></span><span class="Comment">// for some reason my gcc version seems to require that then the entire class with all its </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_130"> 130</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_130"></span><span class="anchor" id="line-130"></span><span class="Comment"></span><span class="Comment">// methods are specialised.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_131"> 131</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_131"></span><span class="anchor" id="line-131"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_132"> 132</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_132"></span><span class="anchor" id="line-132"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_133"> 133</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_133"></span><span class="anchor" id="line-133"></span><span class="ID">class</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_134"> 134</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_134"></span><span class="anchor" id="line-134"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_135"> 135</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_135"></span><span class="anchor" id="line-135"></span>    <span class="ID">private</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_136"> 136</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_136"></span><span class="anchor" id="line-136"></span>        <span class="ID">datatype</span> *<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_137"> 137</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_137"></span><span class="anchor" id="line-137"></span>        <span class="ResWord">long</span> *<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_138"> 138</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_138"></span><span class="anchor" id="line-138"></span>        <span class="ResWord">long</span> *<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_139"> 139</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_139"></span><span class="anchor" id="line-139"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_140"> 140</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_140"></span><span class="anchor" id="line-140"></span>    <span class="ID">public</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_141"> 141</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_141"></span><span class="anchor" id="line-141"></span>        <span class="ID">Ndarray</span>(<span class="ID">datatype</span> *<span class="ID">data</span>, <span class="ResWord">long</span> *<span class="ID">shape</span>, <span class="ResWord">long</span> *<span class="ID">strides</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_142"> 142</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_142"></span><span class="anchor" id="line-142"></span>        <span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;&amp; <span class="ID">array</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_143"> 143</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_143"></span><span class="anchor" id="line-143"></span>        <span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">numpyArray</span>&lt;<span class="ID">datatype</span>&gt;&amp; <span class="ID">array</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_144"> 144</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_144"></span><span class="anchor" id="line-144"></span>        <span class="ResWord">long</span> <span class="ID">getShape</span>(<span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">axis</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_145"> 145</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_145"></span><span class="anchor" id="line-145"></span>        <span class="ResWord">typename</span> <span class="ID">getItemTraits</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">returnType</span> <span class="ID">operator</span>[](<span class="ResWord">unsigned</span> <span class="ResWord">long</span> <span class="ID">i</span>);       </span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_146"> 146</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_146"></span><span class="anchor" id="line-146"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_147"> 147</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_147"></span><span class="anchor" id="line-147"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_148"> 148</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_148"></span><span class="anchor" id="line-148"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_149"> 149</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_149"></span><span class="anchor" id="line-149"></span><span class="Comment">// Ndarray partial specialised constructor</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_150"> 150</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_150"></span><span class="anchor" id="line-150"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_151"> 151</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_151"></span><span class="anchor" id="line-151"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_152"> 152</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_152"></span><span class="anchor" id="line-152"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">Ndarray</span>(<span class="ID">datatype</span> *<span class="ID">data</span>, <span class="ResWord">long</span> *<span class="ID">shape</span>, <span class="ResWord">long</span> *<span class="ID">strides</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_153"> 153</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_153"></span><span class="anchor" id="line-153"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_154"> 154</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_154"></span><span class="anchor" id="line-154"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_155"> 155</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_155"></span><span class="anchor" id="line-155"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_156"> 156</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_156"></span><span class="anchor" id="line-156"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_157"> 157</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_157"></span><span class="anchor" id="line-157"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_158"> 158</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_158"></span><span class="anchor" id="line-158"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_159"> 159</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_159"></span><span class="anchor" id="line-159"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_160"> 160</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_160"></span><span class="anchor" id="line-160"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_161"> 161</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_161"></span><span class="anchor" id="line-161"></span><span class="Comment">// Ndarray partially specialised copy constructor</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_162"> 162</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_162"></span><span class="anchor" id="line-162"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_163"> 163</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_163"></span><span class="anchor" id="line-163"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_164"> 164</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_164"></span><span class="anchor" id="line-164"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;&amp; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_165"> 165</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_165"></span><span class="anchor" id="line-165"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_166"> 166</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_166"></span><span class="anchor" id="line-166"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">array</span>.<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_167"> 167</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_167"></span><span class="anchor" id="line-167"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">array</span>.<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_168"> 168</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_168"></span><span class="anchor" id="line-168"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">array</span>.<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_169"> 169</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_169"></span><span class="anchor" id="line-169"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_170"> 170</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_170"></span><span class="anchor" id="line-170"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_171"> 171</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_171"></span><span class="anchor" id="line-171"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_172"> 172</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_172"></span><span class="anchor" id="line-172"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_173"> 173</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_173"></span><span class="anchor" id="line-173"></span><span class="Comment">// Ndarray partially specialised constructor from ctypes structure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_174"> 174</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_174"></span><span class="anchor" id="line-174"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_175"> 175</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_175"></span><span class="anchor" id="line-175"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_176"> 176</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_176"></span><span class="anchor" id="line-176"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">Ndarray</span>(<span class="ResWord">const</span> <span class="ID">numpyArray</span>&lt;<span class="ID">datatype</span>&gt;&amp; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_177"> 177</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_177"></span><span class="anchor" id="line-177"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_178"> 178</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_178"></span><span class="anchor" id="line-178"></span>    <span class="ID">this</span>-&gt;<span class="ID">data</span> = <span class="ID">array</span>.<span class="ID">data</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_179"> 179</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_179"></span><span class="anchor" id="line-179"></span>    <span class="ID">this</span>-&gt;<span class="ID">shape</span> = <span class="ID">array</span>.<span class="ID">shape</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_180"> 180</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_180"></span><span class="anchor" id="line-180"></span>    <span class="ID">this</span>-&gt;<span class="ID">strides</span> = <span class="ID">array</span>.<span class="ID">strides</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_181"> 181</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_181"></span><span class="anchor" id="line-181"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_182"> 182</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_182"></span><span class="anchor" id="line-182"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_183"> 183</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_183"></span><span class="anchor" id="line-183"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_184"> 184</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_184"></span><span class="anchor" id="line-184"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_185"> 185</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_185"></span><span class="anchor" id="line-185"></span><span class="Comment">// Ndarray method to get length of given axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_186"> 186</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_186"></span><span class="anchor" id="line-186"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_187"> 187</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_187"></span><span class="anchor" id="line-187"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_188"> 188</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_188"></span><span class="anchor" id="line-188"></span><span class="ResWord">long</span> <span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">getShape</span>(<span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">axis</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_189"> 189</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_189"></span><span class="anchor" id="line-189"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_190"> 190</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_190"></span><span class="anchor" id="line-190"></span>    <span class="ResWord">return</span> <span class="ID">this</span>-&gt;<span class="ID">shape</span>[<span class="ID">axis</span>];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_191"> 191</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_191"></span><span class="anchor" id="line-191"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_192"> 192</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_192"></span><span class="anchor" id="line-192"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_193"> 193</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_193"></span><span class="anchor" id="line-193"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_194"> 194</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_194"></span><span class="anchor" id="line-194"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_195"> 195</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_195"></span><span class="anchor" id="line-195"></span><span class="Comment">// Partial specialised [] operator: for 1D arrays, return an element rather than a subarray </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_196"> 196</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_196"></span><span class="anchor" id="line-196"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_197"> 197</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_197"></span><span class="anchor" id="line-197"></span><span class="ID">template</span>&lt;<span class="ResWord">typename</span> <span class="ID">datatype</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_198"> 198</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_198"></span><span class="anchor" id="line-198"></span><span class="ResWord">typename</span> <span class="ID">getItemTraits</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">returnType</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_199"> 199</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_199"></span><span class="anchor" id="line-199"></span><span class="ID">Ndarray</span>&lt;<span class="ID">datatype</span>, <span class="Number">1</span>&gt;::<span class="ID">operator</span>[](<span class="ResWord">unsigned</span> <span class="ResWord">long</span> <span class="ID">i</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_200"> 200</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_200"></span><span class="anchor" id="line-200"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_201"> 201</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_201"></span><span class="anchor" id="line-201"></span>    <span class="ResWord">return</span> <span class="ID">this</span>-&gt;<span class="ID">data</span>[<span class="ID">i</span>*<span class="ID">this</span>-&gt;<span class="ID">strides</span>[<span class="Number">0</span>]];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_202"> 202</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_202"></span><span class="anchor" id="line-202"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_203"> 203</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_203"></span><span class="anchor" id="line-203"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_204"> 204</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_204"></span><span class="anchor" id="line-204"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_205"> 205</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_205"></span><span class="anchor" id="line-205"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_206"> 206</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_206"></span><span class="anchor" id="line-206"></span><span class="Preprc">#</span><span class="Preprc">endif</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_207"> 207</a> </span><span class="LineAnchor" id="CA-9b52b3888939a7f3a4026f737853f2cbc6490b26_207"></span><span class="anchor" id="line-207"></span><span class="Preprc"></span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="ndarray.h"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327bfe.ea3f33091d7b11b529d425f828b1c021bfc168da">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="ndarray2e5c.h?action=AttachFile&amp;do=get&amp;target=ndarray.h">get</a>&nbsp;| <a href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h">view</a>] (2009-01-15 15:10:20, 4.7 KB) [[attachment:ndarray.h]]</li><li>[<a href="numpyctypes0706.py?action=AttachFile&amp;do=get&amp;target=numpyctypes.py">get</a>&nbsp;| <a href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py">view</a>] (2009-01-15 15:10:33, 4.1 KB) [[attachment:numpyctypes.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=AttachFile&do=view&target=ndarray.h by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:37:06 GMT -->
+</html>
+

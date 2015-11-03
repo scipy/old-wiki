@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/BrownianMotion?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/BrownianMotion - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/BrownianMotion" href="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FBrownianMotion&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="brownian_demo.png" href="BrownianMotion14cc.html?action=AttachFile&amp;do=view&amp;target=brownian_demo.png">
+<link rel="Appendix" title="brownian_demo_2d.png" href="BrownianMotionf7d2.html?action=AttachFile&amp;do=view&amp;target=brownian_demo_2d.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="BrownianMotion456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="BrownianMotion7b2e.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FBrownianMotion%22" rel="nofollow" title="Click to do a full-text search for this title">BrownianMotion</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="BrownianMotion.html">Cookbook/BrownianMotion</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="BrownianMotion.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BrownianMotion37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h2 id="Brownian_Motion">Brownian Motion</h2>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><em>Brownian motion</em> is a stochastic process.  One form of the equation for <span class="anchor" id="line-4"></span>Brownian motion is <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><ul><li style="list-style-type:none"><p class="line862">X(0) = X<sub>0</sub> <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line862">X(t + dt) = X(t) + <em>N</em>(0, (delta)<sup>2</sup> dt; t, t+dt) <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></li></ul><p class="line862">where <em>N</em>(a, b; t<sub>1</sub>, t<sub>2</sub>) is a normally distributed random variable with mean a and <span class="anchor" id="line-11"></span>variance b.  The parameters t<sub>1</sub> and t<sub>2</sub> make explicit the statistical <span class="anchor" id="line-12"></span>independence of <em>N</em> on different time intervals; that is, if [t<sub>1</sub>, t<sub>2</sub>) and <span class="anchor" id="line-13"></span>[t<sub>3</sub>, t<sub>4</sub>) are disjoint intervals, then <em>N</em>(a, b; t<sub>1</sub>, t<sub>2</sub>) and <em>N</em>(a, b; t<sub>3</sub>, t<sub>4</sub>) <span class="anchor" id="line-14"></span>are independent. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">The calculation is actually very simple.  A naive implementation that prints <em>n</em> steps <span class="anchor" id="line-17"></span>of the Brownian motion might look like this: <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_1">   1</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">scipy.stats</span> <span class="ResWord">import</span> <span class="ID">norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_2">   2</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_3">   3</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment"># Process parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_4">   4</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">delta</span> = <span class="Number">0.25</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_5">   5</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">dt</span> = <span class="Number">0.1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_6">   6</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_6"></span><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_7">   7</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_7"></span><span class="anchor" id="line-7-1"></span><span class="Comment"># Initial condition.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_8">   8</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_8"></span><span class="anchor" id="line-8-1"></span><span class="ID">x</span> = <span class="Number">0.0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_9">   9</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_9"></span><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_10">  10</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_10"></span><span class="anchor" id="line-10-1"></span><span class="Comment"># Number of iterations to compute.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_11">  11</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">n</span> = <span class="Number">20</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_12">  12</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_13">  13</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_13"></span><span class="anchor" id="line-13-1"></span><span class="Comment"># Iterate to compute the steps of the Brownian motion.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_14">  14</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_14"></span><span class="anchor" id="line-14-1"></span><span class="ResWord">for</span> <span class="ID">k</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">n</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_15">  15</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_15"></span><span class="anchor" id="line-15-1"></span>    <span class="ID">x</span> = <span class="ID">x</span> + <span class="ID">norm</span>.<span class="ID">rvs</span>(<span class="ID">scale</span>=<span class="ID">delta</span>**<span class="Number">2</span>*<span class="ID">dt</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_16">  16</a> </span><span class="LineAnchor" id="CA-5b3d6fa7bfc851c0b50609c78625a7b7afb550cd_16"></span><span class="anchor" id="line-16-1"></span>    <span class="ResWord">print</span> <span class="ID">x</span></span>
+</pre></div></div><span class="anchor" id="line-37"></span><p class="line874">The above code could be easily modified to save the iterations in an array instead of printing them. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line874">The problem with the above code is that it is slow. If we want to compute a large number of iterations, <span class="anchor" id="line-40"></span>we can do much better. The key is to note that the calculation is the cumulative sum of samples from the <span class="anchor" id="line-41"></span>normal distribution.  A fast version can be implemented by first generating all the samples <span class="anchor" id="line-42"></span>from the normal distribution with one call to scipy.stats.norm.rvs(), and then using the numpy <em>cumsum</em> function <span class="anchor" id="line-43"></span>to form the cumulative sum. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><p class="line862">The following function uses this idea to implement the function <em>brownian()</em>.  The function allows the <span class="anchor" id="line-46"></span>initial condition to be an array (or anything that can be converted to an array).  Each element of <span class="anchor" id="line-47"></span><em>x0</em> is treated as an initial condition for a Brownian motion. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_1">   1</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_1"></span><span class="anchor" id="line-1-4"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_2">   2</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_2"></span><span class="anchor" id="line-2-2"></span><span class="String">brownian() implements one dimensional Brownian motion (i.e. the Wiener process).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_3">   3</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_3"></span><span class="anchor" id="line-3-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_4">   4</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_4"></span><span class="anchor" id="line-4-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_5">   5</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_5"></span><span class="anchor" id="line-5-2"></span><span class="Comment"># File: brownian.py</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_6">   6</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_6"></span><span class="anchor" id="line-6-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_7">   7</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_7"></span><span class="anchor" id="line-7-2"></span><span class="ResWord">from</span> <span class="ID">math</span> <span class="ResWord">import</span> <span class="ID">sqrt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_8">   8</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_8"></span><span class="anchor" id="line-8-2"></span><span class="ResWord">from</span> <span class="ID">scipy.stats</span> <span class="ResWord">import</span> <span class="ID">norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_9">   9</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_9"></span><span class="anchor" id="line-9-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_10">  10</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_10"></span><span class="anchor" id="line-10-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_11">  11</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_11"></span><span class="anchor" id="line-11-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_12">  12</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_12"></span><span class="anchor" id="line-12-2"></span><span class="ResWord">def</span> <span class="ID">brownian</span>(<span class="ID">x0</span>, <span class="ID">n</span>, <span class="ID">dt</span>, <span class="ID">delta</span>, <span class="ID">out</span>=<span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_13">  13</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_13"></span><span class="anchor" id="line-13-2"></span>    <span class="String">&quot;&quot;&quot;\</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_14">  14</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_14"></span><span class="anchor" id="line-14-2"></span><span class="String">    Generate an instance of Brownian motion (i.e. the Wiener process):</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_15">  15</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_15"></span><span class="anchor" id="line-15-2"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_16">  16</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_16"></span><span class="anchor" id="line-16-2"></span><span class="String">        X(t) = X(0) + N(0, delta**2 * t; 0, t)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_17">  17</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_17"></span><span class="anchor" id="line-17-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_18">  18</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_18"></span><span class="anchor" id="line-18-1"></span><span class="String">    where N(a,b; t0, t1) is a normally distributed random variable with mean a and</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_19">  19</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_19"></span><span class="anchor" id="line-19-1"></span><span class="String">    variance b.  The parameters t0 and t1 make explicit the statistical</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_20">  20</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_20"></span><span class="anchor" id="line-20-1"></span><span class="String">    independence of N on different time intervals; that is, if [t0, t1) and</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_21">  21</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_21"></span><span class="anchor" id="line-21-1"></span><span class="String">    [t2, t3) are disjoint intervals, then N(a, b; t0, t1) and N(a, b; t2, t3)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_22">  22</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_22"></span><span class="anchor" id="line-22-1"></span><span class="String">    are independent.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_23">  23</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_23"></span><span class="anchor" id="line-23-1"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_24">  24</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_24"></span><span class="anchor" id="line-24-1"></span><span class="String">    Written as an iteration scheme,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_25">  25</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_25"></span><span class="anchor" id="line-25-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_26">  26</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_26"></span><span class="anchor" id="line-26-1"></span><span class="String">        X(t + dt) = X(t) + N(0, delta**2 * dt; t, t+dt)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_27">  27</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_27"></span><span class="anchor" id="line-27-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_28">  28</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_28"></span><span class="anchor" id="line-28-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_29">  29</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_29"></span><span class="anchor" id="line-29-1"></span><span class="String">    If `x0` is an array (or array-like), each value in `x0` is treated as</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_30">  30</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_30"></span><span class="anchor" id="line-30-1"></span><span class="String">    an initial condition, and the value returned is a numpy array with one</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_31">  31</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_31"></span><span class="anchor" id="line-31-1"></span><span class="String">    more dimension than `x0`.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_32">  32</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_32"></span><span class="anchor" id="line-32-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_33">  33</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_33"></span><span class="anchor" id="line-33-1"></span><span class="String">    Arguments</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_34">  34</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_34"></span><span class="anchor" id="line-34-1"></span><span class="String">    ---------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_35">  35</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_35"></span><span class="anchor" id="line-35-1"></span><span class="String">    x0 : float or numpy array (or something that can be converted to a numpy array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_36">  36</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_36"></span><span class="anchor" id="line-36-1"></span><span class="String">         using numpy.asarray(x0)).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_37">  37</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_37"></span><span class="anchor" id="line-37-1"></span><span class="String">        The initial condition(s) (i.e. position(s)) of the Brownian motion.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_38">  38</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_38"></span><span class="anchor" id="line-38-1"></span><span class="String">    n : int</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_39">  39</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_39"></span><span class="anchor" id="line-39-1"></span><span class="String">        The number of steps to take.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_40">  40</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_40"></span><span class="anchor" id="line-40-1"></span><span class="String">    dt : float</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_41">  41</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_41"></span><span class="anchor" id="line-41-1"></span><span class="String">        The time step.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_42">  42</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_42"></span><span class="anchor" id="line-42-1"></span><span class="String">    delta : float</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_43">  43</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_43"></span><span class="anchor" id="line-43-1"></span><span class="String">        delta determines the &quot;speed&quot; of the Brownian motion.  The random variable</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_44">  44</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_44"></span><span class="anchor" id="line-44-1"></span><span class="String">        of the position at time t, X(t), has a normal distribution whose mean is</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_45">  45</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_45"></span><span class="anchor" id="line-45-1"></span><span class="String">        the position at time t=0 and whose variance is delta**2*t.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_46">  46</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_46"></span><span class="anchor" id="line-46-1"></span><span class="String">    out : numpy array or None</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_47">  47</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_47"></span><span class="anchor" id="line-47-1"></span><span class="String">        If `out` is not None, it specifies the array in which to put the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_48">  48</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_48"></span><span class="anchor" id="line-48-1"></span><span class="String">        result.  If `out` is None, a new numpy array is created and returned.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_49">  49</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_49"></span><span class="anchor" id="line-49-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_50">  50</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_50"></span><span class="anchor" id="line-50-1"></span><span class="String">    Returns</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_51">  51</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_51"></span><span class="anchor" id="line-51-1"></span><span class="String">    -------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_52">  52</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_52"></span><span class="anchor" id="line-52-1"></span><span class="String">    A numpy array of floats with shape `x0.shape + (n,)`.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_53">  53</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_53"></span><span class="anchor" id="line-53-1"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_54">  54</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_54"></span><span class="anchor" id="line-54-1"></span><span class="String">    Note that the initial value `x0` is not included in the returned array.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_55">  55</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_55"></span><span class="anchor" id="line-55-1"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_56">  56</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_56"></span><span class="anchor" id="line-56-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_57">  57</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_57"></span><span class="anchor" id="line-57-1"></span>    <span class="ID">x0</span> = <span class="ID">np</span>.<span class="ID">asarray</span>(<span class="ID">x0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_58">  58</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_58"></span><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_59">  59</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_59"></span><span class="anchor" id="line-59-1"></span>    <span class="Comment"># For each element of x0, generate a sample of n numbers from a</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_60">  60</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_60"></span><span class="anchor" id="line-60-1"></span>    <span class="Comment"># normal distribution.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_61">  61</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_61"></span><span class="anchor" id="line-61-1"></span>    <span class="ID">r</span> = <span class="ID">norm</span>.<span class="ID">rvs</span>(<span class="ID">size</span>=<span class="ID">x0</span>.<span class="ID">shape</span> + (<span class="ID">n</span>,), <span class="ID">scale</span>=<span class="ID">delta</span>*<span class="ID">sqrt</span>(<span class="ID">dt</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_62">  62</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_62"></span><span class="anchor" id="line-62-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_63">  63</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_63"></span><span class="anchor" id="line-63-1"></span>    <span class="Comment"># If `out` was not given, create an output array.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_64">  64</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_64"></span><span class="anchor" id="line-64-1"></span>    <span class="ResWord">if</span> <span class="ID">out</span> <span class="ResWord">is</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_65">  65</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_65"></span><span class="anchor" id="line-65-1"></span>        <span class="ID">out</span> = <span class="ID">np</span>.<span class="ID">empty</span>(<span class="ID">r</span>.<span class="ID">shape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_66">  66</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_66"></span><span class="anchor" id="line-66-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_67">  67</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_67"></span><span class="anchor" id="line-67-1"></span>    <span class="Comment"># This computes the Brownian motion by forming the cumulative sum of</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_68">  68</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_68"></span><span class="anchor" id="line-68-1"></span>    <span class="Comment"># the random samples. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_69">  69</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_69"></span><span class="anchor" id="line-69-1"></span>    <span class="ID">np</span>.<span class="ID">cumsum</span>(<span class="ID">r</span>, <span class="ID">axis</span>=-<span class="Number">1</span>, <span class="ID">out</span>=<span class="ID">out</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_70">  70</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_70"></span><span class="anchor" id="line-70-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_71">  71</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_71"></span><span class="anchor" id="line-71-1"></span>    <span class="Comment"># Add the initial condition.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_72">  72</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_72"></span><span class="anchor" id="line-72-1"></span>    <span class="ID">out</span> += <span class="ID">np</span>.<span class="ID">expand_dims</span>(<span class="ID">x0</span>, <span class="ID">axis</span>=-<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_73">  73</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_73"></span><span class="anchor" id="line-73-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_74">  74</a> </span><span class="LineAnchor" id="CA-7f07b24fb5e53e84e863aa76f6df851b0cd61834_74"></span><span class="anchor" id="line-74-1"></span>    <span class="ResWord">return</span> <span class="ID">out</span></span>
+</pre></div></div><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><p class="line867">
+<h3 id="Example">Example</h3>
+<span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><p class="line874">Here's a script that uses this function and matplotlib's pylab module <span class="anchor" id="line-130"></span>to plot several realizations of Brownian motion. <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_1">   1</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_2">   2</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_2"></span><span class="anchor" id="line-2-3"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">plot</span>, <span class="ID">show</span>, <span class="ID">grid</span>, <span class="ID">xlabel</span>, <span class="ID">ylabel</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_3">   3</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_3"></span><span class="anchor" id="line-3-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_4">   4</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_4"></span><span class="anchor" id="line-4-3"></span><span class="ResWord">from</span> <span class="ID">brownian</span> <span class="ResWord">import</span> <span class="ID">brownian</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_5">   5</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_5"></span><span class="anchor" id="line-5-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_6">   6</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_6"></span><span class="anchor" id="line-6-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_7">   7</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_7"></span><span class="anchor" id="line-7-3"></span><span class="ResWord">def</span> <span class="ID">main</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_8">   8</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_8"></span><span class="anchor" id="line-8-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_9">   9</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_9"></span><span class="anchor" id="line-9-3"></span>    <span class="Comment"># The Wiener process parameter.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_10">  10</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_10"></span><span class="anchor" id="line-10-3"></span>    <span class="ID">delta</span> = <span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_11">  11</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_11"></span><span class="anchor" id="line-11-3"></span>    <span class="Comment"># Total time.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_12">  12</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_12"></span><span class="anchor" id="line-12-3"></span>    <span class="ID">T</span> = <span class="Number">10.0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_13">  13</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_13"></span><span class="anchor" id="line-13-3"></span>    <span class="Comment"># Number of steps.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_14">  14</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_14"></span><span class="anchor" id="line-14-3"></span>    <span class="ID">N</span> = <span class="Number">500</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_15">  15</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_15"></span><span class="anchor" id="line-15-3"></span>    <span class="Comment"># Time step size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_16">  16</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_16"></span><span class="anchor" id="line-16-3"></span>    <span class="ID">dt</span> = <span class="ID">T</span>/<span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_17">  17</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_17"></span><span class="anchor" id="line-17-2"></span>    <span class="Comment"># Number of realizations to generate.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_18">  18</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_18"></span><span class="anchor" id="line-18-2"></span>    <span class="ID">m</span> = <span class="Number">20</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_19">  19</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_19"></span><span class="anchor" id="line-19-2"></span>    <span class="Comment"># Create an empty array to store the realizations.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_20">  20</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_20"></span><span class="anchor" id="line-20-2"></span>    <span class="ID">x</span> = <span class="ID">numpy</span>.<span class="ID">empty</span>((<span class="ID">m</span>,<span class="ID">N</span>+<span class="Number">1</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_21">  21</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_21"></span><span class="anchor" id="line-21-2"></span>    <span class="Comment"># Initial values of x.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_22">  22</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_22"></span><span class="anchor" id="line-22-2"></span>    <span class="ID">x</span>[:, <span class="Number">0</span>] = <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_23">  23</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_23"></span><span class="anchor" id="line-23-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_24">  24</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_24"></span><span class="anchor" id="line-24-2"></span>    <span class="ID">brownian</span>(<span class="ID">x</span>[:,<span class="Number">0</span>], <span class="ID">N</span>, <span class="ID">dt</span>, <span class="ID">delta</span>, <span class="ID">out</span>=<span class="ID">x</span>[:,<span class="Number">1</span>:])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_25">  25</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_25"></span><span class="anchor" id="line-25-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_26">  26</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_26"></span><span class="anchor" id="line-26-2"></span>    <span class="ID">t</span> = <span class="ID">numpy</span>.<span class="ID">linspace</span>(<span class="Number">0.0</span>, <span class="ID">N</span>*<span class="ID">dt</span>, <span class="ID">N</span>+<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_27">  27</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_27"></span><span class="anchor" id="line-27-2"></span>    <span class="ResWord">for</span> <span class="ID">k</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">m</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_28">  28</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_28"></span><span class="anchor" id="line-28-2"></span>        <span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">x</span>[<span class="ID">k</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_29">  29</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_29"></span><span class="anchor" id="line-29-2"></span>    <span class="ID">xlabel</span>(<span class="String">'</span><span class="String">t</span><span class="String">'</span>, <span class="ID">fontsize</span>=<span class="Number">16</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_30">  30</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_30"></span><span class="anchor" id="line-30-2"></span>    <span class="ID">ylabel</span>(<span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="ID">fontsize</span>=<span class="Number">16</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_31">  31</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_31"></span><span class="anchor" id="line-31-2"></span>    <span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_32">  32</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_32"></span><span class="anchor" id="line-32-2"></span>    <span class="ID">show</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_33">  33</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_33"></span><span class="anchor" id="line-33-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_34">  34</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_34"></span><span class="anchor" id="line-34-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_35">  35</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_35"></span><span class="anchor" id="line-35-2"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_36">  36</a> </span><span class="LineAnchor" id="CA-20b43d24d99918522f8a6b0ae2d5237f1e336a05_36"></span><span class="anchor" id="line-36-2"></span>    <span class="ID">main</span>()</span>
+</pre></div></div><span class="anchor" id="line-170"></span><p class="line874">The following shows a typical plot generated by the script. <span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><p class="line867"><img alt="brownian_demo.png" class="attachment" src="brownian_democ4e9.png?action=AttachFile&amp;do=get&amp;target=brownian_demo.png" title="brownian_demo.png" /> <span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><p class="line867">
+<h3 id="A2D_Brownian_Motion">2D Brownian Motion</h3>
+<span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><p class="line874">The same function can be used to generate Brownian motion in two dimensions, since each dimension <span class="anchor" id="line-177"></span>is just a one-dimensional Brownian motion. <span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><p class="line874">The following script provides a demo. <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-2d19d2ef2afe394c2b06d96a795d56d325a93452\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_1">   1</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_2">   2</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_2"></span><span class="anchor" id="line-2-4"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">plot</span>, <span class="ID">show</span>, <span class="ID">grid</span>, <span class="ID">axis</span>, <span class="ID">xlabel</span>, <span class="ID">ylabel</span>, <span class="ID">title</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_3">   3</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_3"></span><span class="anchor" id="line-3-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_4">   4</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_4"></span><span class="anchor" id="line-4-4"></span><span class="ResWord">from</span> <span class="ID">brownian</span> <span class="ResWord">import</span> <span class="ID">brownian</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_5">   5</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_5"></span><span class="anchor" id="line-5-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_6">   6</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_6"></span><span class="anchor" id="line-6-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_7">   7</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_7"></span><span class="anchor" id="line-7-4"></span><span class="ResWord">def</span> <span class="ID">main</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_8">   8</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_8"></span><span class="anchor" id="line-8-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_9">   9</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_9"></span><span class="anchor" id="line-9-4"></span>    <span class="Comment"># The Wiener process parameter.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_10">  10</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_10"></span><span class="anchor" id="line-10-4"></span>    <span class="ID">delta</span> = <span class="Number">0.25</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_11">  11</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_11"></span><span class="anchor" id="line-11-4"></span>    <span class="Comment"># Total time.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_12">  12</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_12"></span><span class="anchor" id="line-12-4"></span>    <span class="ID">T</span> = <span class="Number">10.0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_13">  13</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_13"></span><span class="anchor" id="line-13-4"></span>    <span class="Comment"># Number of steps.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_14">  14</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_14"></span><span class="anchor" id="line-14-4"></span>    <span class="ID">N</span> = <span class="Number">500</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_15">  15</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_15"></span><span class="anchor" id="line-15-4"></span>    <span class="Comment"># Time step size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_16">  16</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_16"></span><span class="anchor" id="line-16-4"></span>    <span class="ID">dt</span> = <span class="ID">T</span>/<span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_17">  17</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_17"></span><span class="anchor" id="line-17-3"></span>    <span class="Comment"># Initial values of x.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_18">  18</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_18"></span><span class="anchor" id="line-18-3"></span>    <span class="ID">x</span> = <span class="ID">numpy</span>.<span class="ID">empty</span>((<span class="Number">2</span>,<span class="ID">N</span>+<span class="Number">1</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_19">  19</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_19"></span><span class="anchor" id="line-19-3"></span>    <span class="ID">x</span>[:, <span class="Number">0</span>] = <span class="Number">0.0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_20">  20</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_20"></span><span class="anchor" id="line-20-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_21">  21</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_21"></span><span class="anchor" id="line-21-3"></span>    <span class="ID">brownian</span>(<span class="ID">x</span>[:,<span class="Number">0</span>], <span class="ID">N</span>, <span class="ID">dt</span>, <span class="ID">delta</span>, <span class="ID">out</span>=<span class="ID">x</span>[:,<span class="Number">1</span>:])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_22">  22</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_22"></span><span class="anchor" id="line-22-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_23">  23</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_23"></span><span class="anchor" id="line-23-3"></span>    <span class="Comment"># Plot the 2D trajectory.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_24">  24</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_24"></span><span class="anchor" id="line-24-3"></span>    <span class="ID">plot</span>(<span class="ID">x</span>[<span class="Number">0</span>],<span class="ID">x</span>[<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_25">  25</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_25"></span><span class="anchor" id="line-25-3"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_26">  26</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_26"></span><span class="anchor" id="line-26-3"></span>    <span class="Comment"># Mark the start and end points.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_27">  27</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_27"></span><span class="anchor" id="line-27-3"></span>    <span class="ID">plot</span>(<span class="ID">x</span>[<span class="Number">0</span>,<span class="Number">0</span>],<span class="ID">x</span>[<span class="Number">1</span>,<span class="Number">0</span>], <span class="String">'</span><span class="String">go</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_28">  28</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_28"></span><span class="anchor" id="line-28-3"></span>    <span class="ID">plot</span>(<span class="ID">x</span>[<span class="Number">0</span>,-<span class="Number">1</span>], <span class="ID">x</span>[<span class="Number">1</span>,-<span class="Number">1</span>], <span class="String">'</span><span class="String">ro</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_29">  29</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_29"></span><span class="anchor" id="line-29-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_30">  30</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_30"></span><span class="anchor" id="line-30-3"></span>    <span class="Comment"># More plot decorations.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_31">  31</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_31"></span><span class="anchor" id="line-31-3"></span>    <span class="ID">title</span>(<span class="String">'</span><span class="String">2D Brownian Motion</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_32">  32</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_32"></span><span class="anchor" id="line-32-3"></span>    <span class="ID">xlabel</span>(<span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="ID">fontsize</span>=<span class="Number">16</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_33">  33</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_33"></span><span class="anchor" id="line-33-3"></span>    <span class="ID">ylabel</span>(<span class="String">'</span><span class="String">y</span><span class="String">'</span>, <span class="ID">fontsize</span>=<span class="Number">16</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_34">  34</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_34"></span><span class="anchor" id="line-34-3"></span>    <span class="ID">axis</span>(<span class="String">'</span><span class="String">equal</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_35">  35</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_35"></span><span class="anchor" id="line-35-3"></span>    <span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_36">  36</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_36"></span><span class="anchor" id="line-36-3"></span>    <span class="ID">show</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_37">  37</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_37"></span><span class="anchor" id="line-37-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_38">  38</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_38"></span><span class="anchor" id="line-38-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_39">  39</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_39"></span><span class="anchor" id="line-39-2"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_40">  40</a> </span><span class="LineAnchor" id="CA-2d19d2ef2afe394c2b06d96a795d56d325a93452_40"></span><span class="anchor" id="line-40-2"></span>    <span class="ID">main</span>()</span>
+</pre></div></div><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><p class="line874">A typical plot generated by this script is shown below. <span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><p class="line867"><img alt="brownian_demo_2d.png" class="attachment" src="brownian_demo_2de534.png?action=AttachFile&amp;do=get&amp;target=brownian_demo_2d.png" title="brownian_demo_2d.png" /> <span class="anchor" id="line-227"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BrownianMotion37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/BrownianMotion">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/BrownianMotion?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

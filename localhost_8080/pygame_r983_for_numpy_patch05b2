@@ -1,0 +1,462 @@
+Index: src/surfarray.c
+===================================================================
+--- src/surfarray.c	(revision 983)
++++ src/surfarray.c	(working copy)
+@@ -22,7 +22,7 @@
+ 
+ #include"pygame.h"
+ #include "pygamedocs.h"
+-#include<Numeric/arrayobject.h>
++#include<numpy/oldnumeric.h>
+ #include<SDL_byteorder.h>
+ 
+ 
+@@ -73,7 +73,6 @@
+ 	array = PyArray_FromDimsAndData(3, dim, PyArray_UBYTE, startpixel);
+ 	if(array)
+ 	{
+-		((PyArrayObject*)array)->flags = OWN_DIMENSIONS|OWN_STRIDES|SAVESPACE;
+ 		((PyArrayObject*)array)->strides[2] = pixelstep;
+ 		((PyArrayObject*)array)->strides[1] = surf->pitch;
+ 		((PyArrayObject*)array)->strides[0] = surf->format->BytesPerPixel;
+@@ -111,7 +110,6 @@
+ 	{
+ 		((PyArrayObject*)array)->strides[1] = surf->pitch;
+ 		((PyArrayObject*)array)->strides[0] = surf->format->BytesPerPixel;
+-		((PyArrayObject*)array)->flags = OWN_DIMENSIONS|OWN_STRIDES;
+ 		((PyArrayObject*)array)->base = lifelock;
+ 	}
+ 	return array;
+@@ -152,7 +150,6 @@
+ 	{
+ 		((PyArrayObject*)array)->strides[1] = surf->pitch;
+ 		((PyArrayObject*)array)->strides[0] = surf->format->BytesPerPixel;
+-		((PyArrayObject*)array)->flags = OWN_DIMENSIONS|OWN_STRIDES;
+ 		((PyArrayObject*)array)->base = lifelock;
+ 	}
+ 	return array;
+@@ -1063,8 +1060,6 @@
+ 	import_pygame_base();
+ 	import_pygame_surface();
+ 	import_array();
+-    /*needed for Numeric in python2.3*/
+-        PyImport_ImportModule("Numeric");
+ }
+ 
+ 
+Index: src/sndarray.c
+===================================================================
+--- src/sndarray.c	(revision 983)
++++ src/sndarray.c	(working copy)
+@@ -23,7 +23,7 @@
+ #include "pygame.h"
+ #include "pygamedocs.h"
+ #include"mixer.h"
+-#include<Numeric/arrayobject.h>
++#include<numpy/oldnumeric.h>
+ #include<SDL_byteorder.h>
+ 
+ 
+@@ -71,7 +71,6 @@
+ 	{
+             Py_INCREF(chunkobj);
+             ((PyArrayObject*)array)->base = chunkobj;
+-            ((PyArrayObject*)array)->flags |= SAVESPACE;
+ 	}
+ 	return array;
+ }
+Index: config_unix.py
+===================================================================
+--- config_unix.py	(revision 983)
++++ config_unix.py	(working copy)
+@@ -101,7 +101,7 @@
+             print self.name + '        '[len(self.name):] + ': not found'
+ 
+ class DependencyPython:
+-    def __init__(self, name, module, header):
++    def __init__(self, name, module, header, func=False, extra=None):
+         self.name = name
+         self.lib_dir = ''
+         self.inc_dir = ''
+@@ -111,6 +111,8 @@
+         self.ver = '0'
+         self.module = module
+         self.header = header
++        self.header_is_func = func
++        self.extra = extra
+  
+     def configure(self, incdirs, libdirs):
+         self.found = 1
+@@ -120,11 +122,18 @@
+             except ImportError:
+                 self.found = 0
+         if self.found and self.header:
+-            fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.header_is_func:
++                fullpath = getattr(__import__(self.module), self.header)()
++                self.inc_dir = fullpath
++            else:
++                fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.extra is not None:
++                fullpath = os.path.join(fullpath, self.extra)
+             if not os.path.isfile(fullpath):
+                 self.found = 0
+             else:
+-                self.inc_dir = os.path.split(fullpath)[0]
++                if not self.header_is_func:
++                    self.inc_dir = os.path.split(fullpath)[0]
+         if self.found:
+             print self.name + '        '[len(self.name):] + ': found', self.ver
+         else:
+@@ -145,7 +154,7 @@
+         Dependency('IMAGE', 'SDL_image.h', 'libSDL_image.so', 'SDL_image'),
+         Dependency('MIXER', 'SDL_mixer.h', 'libSDL_mixer.so', 'SDL_mixer'),
+         DependencyProg('SMPEG', 'SMPEG_CONFIG', 'smpeg-config', '0.4.3', 'smpeg'),
+-        DependencyPython('NUMERIC', 'Numeric', 'Numeric/arrayobject.h'),
++        DependencyPython('NUMPY', 'numpy', 'get_include', True, 'numpy/oldnumeric.h'),
+         Dependency('PNG', 'png.h', 'libpng', 'png'),
+         Dependency('JPEG', 'jpeglib.h', 'libjpeg', 'jpeg'),
+         Dependency('X11', '', 'libX11', 'X11'),
+Index: config_darwin.py
+===================================================================
+--- config_darwin.py	(revision 983)
++++ config_darwin.py	(working copy)
+@@ -54,9 +54,8 @@
+                 return
+         print 'Framework ' + self.lib + ' not found'
+ 
+-
+ class DependencyPython:
+-    def __init__(self, name, module, header):
++    def __init__(self, name, module, header, func=False, extra=None):
+         self.name = name
+         self.lib_dir = ''
+         self.inc_dir = ''
+@@ -66,7 +65,9 @@
+         self.ver = '0'
+         self.module = module
+         self.header = header
+-
++        self.header_is_func = func
++        self.extra = extra
++ 
+     def configure(self, incdirs, libdirs):
+         self.found = 1
+         if self.module:
+@@ -75,23 +76,32 @@
+             except ImportError:
+                 self.found = 0
+         if self.found and self.header:
+-            fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.header_is_func:
++                fullpath = getattr(__import__(self.module), self.header)()
++                self.inc_dir = fullpath
++            else:
++                fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.extra is not None:
++                fullpath = os.path.join(fullpath, self.extra)
+             if not os.path.isfile(fullpath):
+-                found = 0
++                self.found = 0
+             else:
+-                self.inc_dir = os.path.split(fullpath)[0]
++                if not self.header_is_func:
++                    self.inc_dir = os.path.split(fullpath)[0]
+         if self.found:
+             print self.name + '        '[len(self.name):] + ': found', self.ver
+         else:
+             print self.name + '        '[len(self.name):] + ': not found'
+ 
++
++
+ DEPS = [
+     FrameworkDependency('SDL', 'SDL.h', 'libSDL', 'SDL'),
+     FrameworkDependency('FONT', 'SDL_ttf.h', 'libSDL_ttf', 'SDL_ttf'),
+     FrameworkDependency('IMAGE', 'SDL_image.h', 'libSDL_image', 'SDL_image'),
+     FrameworkDependency('MIXER', 'SDL_mixer.h', 'libSDL_mixer', 'SDL_mixer'),
+     FrameworkDependency('SMPEG', 'smpeg.h', 'libsmpeg', 'smpeg'),
+-    DependencyPython('NUMERIC', 'Numeric', 'Numeric/arrayobject.h'),
++    DependencyPython('NUMPY', 'numpy', 'get_include', True, 'numpy/oldnumeric.h')
+     Dependency('PNG', 'png.h', 'libpng', 'png'),
+     Dependency('JPEG', 'jpeglib.h', 'libjpeg', 'jpeg'),
+ ]
+Index: Setup.in
+===================================================================
+--- Setup.in	(revision 983)
++++ Setup.in	(working copy)
+@@ -14,7 +14,7 @@
+ SMPEG = -lsmpeg
+ PNG = -lpng
+ JPEG = -ljpeg
+-NUMERIC = -I/usr/include/python2.0/Numeric
++NUMPY = -I/usr/lib/python2.4/site-packages/numpy/core/include
+ X11 = -lX11
+ #--EndConfig
+ 
+@@ -29,8 +29,8 @@
+ font src/font.c $(SDL) $(FONT)
+ mixer src/mixer.c $(SDL) $(MIXER)
+ mixer_music src/music.c $(SDL) $(MIXER)
+-surfarray src/surfarray.c $(SDL) $(NUMERIC)
+-sndarray src/sndarray.c $(SDL) $(NUMERIC) $(MIXER)
++surfarray src/surfarray.c $(SDL) $(NUMPY)
++sndarray src/sndarray.c $(SDL) $(NUMPY) $(MIXER)
+ movie src/movie.c $(SDL) $(SMPEG)
+ scrap src/scrap.c $(SDL) $(X11)
+ 
+Index: lib/__init__.py
+===================================================================
+--- lib/__init__.py	(revision 983)
++++ lib/__init__.py	(working copy)
+@@ -171,7 +171,7 @@
+     """
+     Some additional things that py2app/py2exe will want to see
+     """
+-    import Numeric
++    import numpy 
+     import OpenGL.GL
+     import pygame.macosx
+     import pygame.mac_scrap
+Index: config_msys.py
+===================================================================
+--- config_msys.py	(revision 983)
++++ config_msys.py	(working copy)
+@@ -98,7 +98,7 @@
+             print self.name + '        '[len(self.name):] + ': not found'
+ 
+ class DependencyPython:
+-    def __init__(self, name, module, header):
++    def __init__(self, name, module, header, func=False, extra=None):
+         self.name = name
+         self.lib_dir = ''
+         self.inc_dir = ''
+@@ -108,6 +108,8 @@
+         self.ver = '0'
+         self.module = module
+         self.header = header
++        self.header_is_func = func
++        self.extra = extra
+  
+     def configure(self, incdirs, libdirs):
+         self.found = 1
+@@ -117,18 +119,24 @@
+             except ImportError:
+                 self.found = 0
+         if self.found and self.header:
+-            fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.header_is_func:
++                fullpath = getattr(__import__(self.module), self.header)()
++                self.inc_dir = fullpath
++            else:
++                fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.extra is not None:
++                fullpath = os.path.join(fullpath, self.extra)
+             if not os.path.isfile(fullpath):
+                 self.found = 0
+             else:
+-                self.inc_dir = os.path.split(fullpath)[0]
++                if not self.header_is_func:
++                    self.inc_dir = os.path.split(fullpath)[0]
+         if self.found:
+             print self.name + '        '[len(self.name):] + ': found', self.ver
+         else:
+             print self.name + '        '[len(self.name):] + ': not found'
+ 
+ 
+-
+ sdl_lib_name = 'SDL'
+ if sys.platform.find('bsd') != -1:
+     sdl_lib_name = 'SDL-1.1'
+@@ -142,7 +150,7 @@
+         Dependency('IMAGE', 'SDL_image.h', 'libSDL_image.so', 'SDL_image'),
+         Dependency('MIXER', 'SDL_mixer.h', 'libSDL_mixer.so', 'SDL_mixer'),
+         DependencyProg('SMPEG', 'SMPEG_CONFIG', 'smpeg-config', '0.4.3', 'smpeg'),
+-        DependencyPython('NUMERIC', 'Numeric', 'Numeric/arrayobject.h')
++        DependencyPython('NUMPY', 'numpy', 'get_include', True, 'numpy/oldnumeric.h')
+     ]
+ 
+     if not DEPS[0].found:
+Index: config_win.py
+===================================================================
+--- config_win.py	(revision 983)
++++ config_win.py	(working copy)
+@@ -66,9 +66,8 @@
+             self.inc_dir = self.findhunt(self.path, Dependency.inc_hunt)
+             self.lib_dir = self.findhunt(self.path, Dependency.lib_hunt)
+ 
+-
+ class DependencyPython:
+-    def __init__(self, name, module, header):
++    def __init__(self, name, module, header, func=False, extra=None):
+         self.name = name
+         self.lib_dir = ''
+         self.inc_dir = ''
+@@ -78,8 +77,10 @@
+         self.ver = '0'
+         self.module = module
+         self.header = header
++        self.header_is_func = func
++        self.extra = extra
+  
+-    def configure(self):
++    def configure(self, incdirs, libdirs):
+         self.found = 1
+         if self.module:
+             try:
+@@ -87,11 +88,18 @@
+             except ImportError:
+                 self.found = 0
+         if self.found and self.header:
+-            fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.header_is_func:
++                fullpath = getattr(__import__(self.module), self.header)()
++                self.inc_dir = fullpath
++            else:
++                fullpath = os.path.join(get_python_inc(0), self.header)
++            if self.extra is not None:
++                fullpath = os.path.join(fullpath, self.extra)
+             if not os.path.isfile(fullpath):
+-                found = 0
++                self.found = 0
+             else:
+-                self.inc_dir = os.path.split(fullpath)[0]
++                if not self.header_is_func:
++                    self.inc_dir = os.path.split(fullpath)[0]
+         if self.found:
+             print self.name + '        '[len(self.name):] + ': found', self.ver
+         else:
+@@ -105,7 +113,7 @@
+     Dependency('IMAGE', 'SDL_image-[0-9].*', 'SDL_image'),
+     Dependency('MIXER', 'SDL_mixer-[0-9].*', 'SDL_mixer'),
+     Dependency('SMPEG', 'smpeg-[0-9].*', 'smpeg'),
+-    DependencyPython('NUMERIC', 'Numeric', 'Numeric/arrayobject.h'),
++    DependencyPython('NUMPY', 'numpy', 'get_include', True, 'numpy/oldnumeric.h')
+ ]
+ 
+ 
+Index: examples/macosx/macfont.py
+===================================================================
+--- examples/macosx/macfont.py	(revision 983)
++++ examples/macosx/macfont.py	(working copy)
+@@ -14,7 +14,7 @@
+ from pygame.locals import *
+ from pygame import Surface
+ from pygame.surfarray import blit_array, make_surface, pixels3d, pixels2d
+-import Numeric
++import numpy.oldnumeric as Numeric
+ 
+ from Foundation import *
+ from AppKit import *
+Index: examples/vgrade.py
+===================================================================
+--- examples/vgrade.py	(revision 983)
++++ examples/vgrade.py	(working copy)
+@@ -1,8 +1,8 @@
+ #!/usr/bin/env python
+ 
+-"""This example demonstrates creating an image with Numeric
+-python, and displaying that through SDL. You can look at the
+-method of importing numeric and pygame.surfarray. This method
++"""This example demonstrates creating an image with NumPy,
++and displaying that through SDL. You can look at the
++method of importing numpy and pygame.surfarray. This method
+ will fail 'gracefully' if it is not available.
+ I've tried mixing in a lot of comments where the code might
+ not be self explanatory, nonetheless it may still seem a bit
+@@ -24,10 +24,10 @@
+ from pygame.locals import *
+ 
+ try:
+-    from Numeric import *
+-    from RandomArray import *
++    from numpy.oldnumeric import *
++    from numpy.oldnumeric.random_array import *
+ except ImportError:
+-    raise SystemExit, 'This example requires Numeric and the pygame surfarray module'
++    raise SystemExit, 'This example requires numpy and the pygame surfarray module'
+ 
+ 
+ timer = 0
+Index: examples/sound_array_demos.py
+===================================================================
+--- examples/sound_array_demos.py	(revision 983)
++++ examples/sound_array_demos.py	(working copy)
+@@ -2,7 +2,7 @@
+ """
+ Creates an echo effect an any Sound object.
+ 
+-Uses sndarray and Numeric to create offset faded copies of the
++Uses sndarray and NumPy to create offset faded copies of the
+ original sound. Currently it just uses hardcoded values for the
+ number of echos and the delay. Easy for you to recreate as 
+ needed.
+@@ -27,7 +27,7 @@
+ sndarray = pygame.sndarray
+ import time
+ from math import sin
+-from Numeric import *
++from numpy.oldnumeric import *
+ 
+ #mixer.init(44100, -16, 0)
+ mixer.init()
+Index: examples/blit_blends.py
+===================================================================
+--- examples/blit_blends.py	(revision 983)
++++ examples/blit_blends.py	(working copy)
+@@ -1,6 +1,6 @@
+ #!/usr/bin/env python
+ 
+-# fake additive blending.  Using Numeric.  it doesn't clamp.
++# fake additive blending.  Using NumPy.  it doesn't clamp.
+ # press r,g,b
+ 
+ import os, pygame
+@@ -8,9 +8,9 @@
+ 
+ try:
+     import pygame.surfarray
+-    import Numeric
++    import numpy.oldnumeric as Numeric
+ except:
+-    print "no surfarray for you!  install Numeric"
++    print "no surfarray for you!  install NumPy"
+ 
+ import time
+         
+Index: examples/arraydemo.py
+===================================================================
+--- examples/arraydemo.py	(revision 983)
++++ examples/arraydemo.py	(working copy)
+@@ -3,12 +3,12 @@
+ import os
+ try:
+     import pygame
+-    import Numeric as N
++    import numpy.oldnumeric as N
+     from pygame.locals import *
+     surfarray = pygame.surfarray
+     if not surfarray: raise ImportError
+ except ImportError:
+-    raise ImportError, 'Error Importing Pygame/surfarray or Numeric'
++    raise ImportError, 'Error Importing Pygame/surfarray or NumPy'
+ 
+ 
+ pygame.init()
+@@ -88,11 +88,12 @@
+ 
+ 
+ #soften
+-soften = N.array(rgbarray)*1
+-soften[1:,:]  += rgbarray[:-1,:]*8
+-soften[:-1,:] += rgbarray[1:,:]*8
+-soften[:,1:]  += rgbarray[:,:-1]*8
+-soften[:,:-1] += rgbarray[:,1:]*8
++rgba = N.array(rgbarray).astype(long)
++soften = rgba * 1
++soften[1:,:]  += rgba[:-1,:]*8
++soften[:-1,:] += rgba[1:,:]*8
++soften[:,1:]  += rgba[:,:-1]*8
++soften[:,:-1] += rgba[:,1:]*8
+ soften /= 33
+ surfdemo_show(soften, 'soften')
+ 

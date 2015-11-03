@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/RadialBasisFunctions?action=show&redirect=RadialBasisFunctions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:28:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/RadialBasisFunctions - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/RadialBasisFunctions" href="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FRadialBasisFunctions&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="rbf1d.png" href="RadialBasisFunctionse48e.html?action=AttachFile&amp;do=view&amp;target=rbf1d.png">
+<link rel="Appendix" title="rbf1dnew.png" href="RadialBasisFunctionsb23d.html?action=AttachFile&amp;do=view&amp;target=rbf1dnew.png">
+<link rel="Appendix" title="rbf2d.png" href="RadialBasisFunctionsd0fb.html?action=AttachFile&amp;do=view&amp;target=rbf2d.png">
+<link rel="Appendix" title="rbf2dnew.png" href="RadialBasisFunctions4db8.html?action=AttachFile&amp;do=view&amp;target=rbf2dnew.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="RadialBasisFunctions456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="RadialBasisFunctionseb12.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FRadialBasisFunctions%22" rel="nofollow" title="Click to do a full-text search for this title">RadialBasisFunctions</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="RadialBasisFunctions.html">RadialBasisFunctions</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="info"><strong>Redirected from page "<a href="../RadialBasisFunctions75f4.html?action=show">RadialBasisFunctions</a>"</strong><br></div></p><a class="clear-link" href="RadialBasisFunctions.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="RadialBasisFunctions37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line867">
+<h1 id="Using_radial_basis_functions_for_smoothing.2Finterpolation">Using radial basis functions for smoothing/interpolation</h1>
+<span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line874">Radial basis functions can be used for smoothing/interpolating scattered data in n-dimensions, but should be used with caution for extrapolation outside of the observed data range. <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867">
+<h2 id="A1d_example">1d example</h2>
+<span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line862">This example compares the usage of the Rbf and <a class="nonexistent" href="../UnivariateSpline.html">UnivariateSpline</a> classes from the scipy.interpolate module. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-df6f26843fe6c49d7d33542b503063eb450054bf" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ResWord">from</span> <span class="ID">scipy.interpolate</span> <span class="ResWord">import</span> <span class="ID">Rbf</span>, <span class="ID">InterpolatedUnivariateSpline</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">'</span><span class="String">Agg</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="Comment"># setup data</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">x</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(<span class="Number">0</span>, <span class="Number">10</span>, <span class="Number">9</span>)</span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">y</span> = <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">xi</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(<span class="Number">0</span>, <span class="Number">10</span>, <span class="Number">101</span>)</span>
+<span class="line"><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="Comment"># use fitpack2 method</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">ius</span> = <span class="ID">InterpolatedUnivariateSpline</span>(<span class="ID">x</span>, <span class="ID">y</span>)</span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">yi</span> = <span class="ID">ius</span>(<span class="ID">xi</span>)</span>
+<span class="line"><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ID">plt</span>.<span class="ID">subplot</span>(<span class="Number">2</span>, <span class="Number">1</span>, <span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">x</span>, <span class="ID">y</span>, <span class="String">'</span><span class="String">bo</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">xi</span>, <span class="ID">yi</span>, <span class="String">'</span><span class="String">g</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">xi</span>, <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">xi</span>), <span class="String">'</span><span class="String">r</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-21-1"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Interpolation using univariate spline</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-22-1"></span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span><span class="Comment"># use RBF method</span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="ID">rbf</span> = <span class="ID">Rbf</span>(<span class="ID">x</span>, <span class="ID">y</span>)</span>
+<span class="line"><span class="anchor" id="line-25-1"></span><span class="ID">fi</span> = <span class="ID">rbf</span>(<span class="ID">xi</span>)</span>
+<span class="line"><span class="anchor" id="line-26-1"></span></span>
+<span class="line"><span class="anchor" id="line-27-1"></span><span class="ID">plt</span>.<span class="ID">subplot</span>(<span class="Number">2</span>, <span class="Number">1</span>, <span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-28-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">x</span>, <span class="ID">y</span>, <span class="String">'</span><span class="String">bo</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-29-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">xi</span>, <span class="ID">yi</span>, <span class="String">'</span><span class="String">g</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-30-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">xi</span>, <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">xi</span>), <span class="String">'</span><span class="String">r</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-31-1"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Interpolation using RBF - multiquadrics</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-32-1"></span><span class="ID">plt</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">rbf1d.png</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><p class="line867"><img alt="rbf1dnew.png" class="attachment" src="rbf1dnew171f.png?action=AttachFile&amp;do=get&amp;target=rbf1dnew.png" title="rbf1dnew.png" /> <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><p class="line867">
+<h1 id="A2d_example">2d example</h1>
+<span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line874">This example shows how to interpolate scattered 2d data. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-32635f105a32ff9158c1893698a5baaf0172b333" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ResWord">from</span> <span class="ID">scipy.interpolate</span> <span class="ResWord">import</span> <span class="ID">Rbf</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">'</span><span class="String">Agg</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib</span> <span class="ResWord">import</span> <span class="ID">cm</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="Comment"># 2-d tests - setup scattered data</span></span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ID">x</span> = <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">rand</span>(<span class="Number">100</span>)*<span class="Number">4.0</span>-<span class="Number">2.0</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span><span class="ID">y</span> = <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">rand</span>(<span class="Number">100</span>)*<span class="Number">4.0</span>-<span class="Number">2.0</span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="ID">z</span> = <span class="ID">x</span>*<span class="ID">np</span>.<span class="ID">exp</span>(-<span class="ID">x</span>**<span class="Number">2</span>-<span class="ID">y</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-13-2"></span><span class="ID">ti</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(-<span class="Number">2.0</span>, <span class="Number">2.0</span>, <span class="Number">100</span>)</span>
+<span class="line"><span class="anchor" id="line-14-2"></span><span class="ID">XI</span>, <span class="ID">YI</span> = <span class="ID">np</span>.<span class="ID">meshgrid</span>(<span class="ID">ti</span>, <span class="ID">ti</span>)</span>
+<span class="line"><span class="anchor" id="line-15-2"></span></span>
+<span class="line"><span class="anchor" id="line-16-2"></span><span class="Comment"># use RBF</span></span>
+<span class="line"><span class="anchor" id="line-17-2"></span><span class="ID">rbf</span> = <span class="ID">Rbf</span>(<span class="ID">x</span>, <span class="ID">y</span>, <span class="ID">z</span>, <span class="ID">epsilon</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-18-2"></span><span class="ID">ZI</span> = <span class="ID">rbf</span>(<span class="ID">XI</span>, <span class="ID">YI</span>)</span>
+<span class="line"><span class="anchor" id="line-19-2"></span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="Comment"># plot the result</span></span>
+<span class="line"><span class="anchor" id="line-21-2"></span><span class="ID">n</span> = <span class="ID">plt</span>.<span class="ID">normalize</span>(-<span class="Number">2.</span>, <span class="Number">2.</span>)</span>
+<span class="line"><span class="anchor" id="line-22-2"></span><span class="ID">plt</span>.<span class="ID">subplot</span>(<span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-23-2"></span><span class="ID">plt</span>.<span class="ID">pcolor</span>(<span class="ID">XI</span>, <span class="ID">YI</span>, <span class="ID">ZI</span>, <span class="ID">cmap</span>=<span class="ID">cm</span>.<span class="ID">jet</span>)</span>
+<span class="line"><span class="anchor" id="line-24-2"></span><span class="ID">plt</span>.<span class="ID">scatter</span>(<span class="ID">x</span>, <span class="ID">y</span>, <span class="Number">100</span>, <span class="ID">z</span>, <span class="ID">cmap</span>=<span class="ID">cm</span>.<span class="ID">jet</span>)</span>
+<span class="line"><span class="anchor" id="line-25-2"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">RBF interpolation - multiquadrics</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-26-2"></span><span class="ID">plt</span>.<span class="ID">xlim</span>(-<span class="Number">2</span>, <span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-27-2"></span><span class="ID">plt</span>.<span class="ID">ylim</span>(-<span class="Number">2</span>, <span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-28-2"></span><span class="ID">plt</span>.<span class="ID">colorbar</span>()</span>
+<span class="line"><span class="anchor" id="line-29-2"></span><span class="ID">plt</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">rbf2d.png</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line867"><img alt="rbf2dnew.png" class="attachment" src="rbf2dnew7813.png?action=AttachFile&amp;do=get&amp;target=rbf2dnew.png" title="rbf2dnew.png" /> <span class="anchor" id="line-83"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/RadialBasisFunctions  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="RadialBasisFunctions37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/RadialBasisFunctions">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/RadialBasisFunctions?action=show&redirect=RadialBasisFunctions by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:28:45 GMT -->
+</html>
+

@@ -1,0 +1,295 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/PerformancePython?action=AttachFile&do=view&target=laplace.m by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 21:52:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:laplace.m of PerformancePython - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: PerformancePython" href="../external.html?link=http://localhost:8080/PerformancePython?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=PerformancePython&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/PerformancePython?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/PerformancePython?action=print">
+<link rel="Appendix" title="laplace.m" href="PerformancePythonffae.html?action=AttachFile&amp;do=view&amp;target=laplace.m">
+<link rel="Appendix" title="laplace.py" href="PerformancePythonb826.html?action=AttachFile&amp;do=view&amp;target=laplace.py">
+<link rel="Appendix" title="perfpy.tgz" href="PerformancePython2809.html?action=AttachFile&amp;do=view&amp;target=perfpy.tgz">
+<link rel="Appendix" title="perfpy_2.tgz" href="PerformancePython86aa.html?action=AttachFile&amp;do=view&amp;target=perfpy_2.tgz">
+<link rel="Appendix" title="perfy_2.tgz" href="PerformancePythonb6e9.html?action=AttachFile&amp;do=view&amp;target=perfy_2.tgz">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/PerformancePython">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="PerformancePython456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:laplace.m of PerformancePython</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="PerformancePython.html">PerformancePython</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="PerformancePython37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/PerformancePython">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'laplace.m'</h2><a class="download" href="laplace9c1b.m?action=AttachFile&amp;do=get&amp;target=laplace.m">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-21663580426e5a681206d9236d7c957c43017d97\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-21663580426e5a681206d9236d7c957c43017d97" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_1">   1</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_1"></span><span class="anchor" id="line-1-1"></span>% <span class="ID">laplace</span>.<span class="ID">m</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_2">   2</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_2"></span><span class="anchor" id="line-2"></span>% <span class="ID">Author</span>: <span class="ID">Lorenzo</span> <span class="ID">Bolla</span> &lt;<span class="ID">lbolla</span> (<span class="ID">at</span>) <span class="ID">gmail</span> <span class="ID">dot</span> <span class="ID">com</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_3">   3</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_3"></span><span class="anchor" id="line-3"></span>% <span class="ID">Last</span> <span class="ID">modified</span>: <span class="ID">Apr</span>. <span class="Number">11</span>, <span class="Number">2007</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_4">   4</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_4"></span><span class="anchor" id="line-4"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_5">   5</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_5"></span><span class="anchor" id="line-5"></span><span class="ID">xmin</span> = <span class="Number">0</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_6">   6</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_6"></span><span class="anchor" id="line-6"></span><span class="ID">xmax</span> = <span class="Number">1</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_7">   7</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_7"></span><span class="anchor" id="line-7"></span><span class="ID">ymin</span> = <span class="Number">0</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_8">   8</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_8"></span><span class="anchor" id="line-8"></span><span class="ID">ymax</span> = <span class="Number">1</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_9">   9</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_9"></span><span class="anchor" id="line-9"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_10">  10</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_10"></span><span class="anchor" id="line-10"></span><span class="ID">nx</span> = <span class="Number">200</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_11">  11</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_11"></span><span class="anchor" id="line-11"></span><span class="ID">ny</span> = <span class="ID">nx</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_12">  12</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_12"></span><span class="anchor" id="line-12"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_13">  13</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_13"></span><span class="anchor" id="line-13"></span><span class="ID">dx</span> = (<span class="ID">xmax</span> - <span class="ID">xmin</span>) / (<span class="ID">nx</span> - <span class="Number">1</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_14">  14</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_14"></span><span class="anchor" id="line-14"></span><span class="ID">dy</span> = (<span class="ID">ymax</span> - <span class="ID">ymin</span>) / (<span class="ID">ny</span> - <span class="Number">1</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_15">  15</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_15"></span><span class="anchor" id="line-15"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_16">  16</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_16"></span><span class="anchor" id="line-16"></span><span class="ID">x</span> = <span class="ID">xmin</span>:<span class="ID">dx</span>:<span class="ID">xmax</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_17">  17</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_17"></span><span class="anchor" id="line-17"></span><span class="ID">y</span> = <span class="ID">ymin</span>:<span class="ID">dy</span>:<span class="ID">ymax</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_18">  18</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_18"></span><span class="anchor" id="line-18"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_19">  19</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_19"></span><span class="anchor" id="line-19"></span><span class="ID">n_iter</span> = <span class="Number">100</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_20">  20</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_20"></span><span class="anchor" id="line-20"></span><span class="ID">eps</span> = <span class="Number">1e-16</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_21">  21</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_21"></span><span class="anchor" id="line-21"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_22">  22</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_22"></span><span class="anchor" id="line-22"></span><span class="ID">u</span> = <span class="ID">zeros</span>(<span class="ID">nx</span>,<span class="ID">ny</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_23">  23</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_23"></span><span class="anchor" id="line-23"></span><span class="ID">u</span>(<span class="Number">1</span>,:)   = <span class="ID">xmin</span>^<span class="Number">2</span> - <span class="ID">y</span>.^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_24">  24</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_24"></span><span class="anchor" id="line-24"></span><span class="ID">u</span>(<span class="ID">end</span>,:) = <span class="ID">xmax</span>^<span class="Number">2</span> - <span class="ID">y</span>.^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_25">  25</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_25"></span><span class="anchor" id="line-25"></span><span class="ID">u</span>(:,<span class="Number">1</span>)   = <span class="ID">x</span>.'.^<span class="Number">2</span> - <span class="ID">ymin</span>^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_26">  26</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_26"></span><span class="anchor" id="line-26"></span><span class="ID">u</span>(:,<span class="ID">end</span>) = <span class="ID">x</span>.'.^<span class="Number">2</span> - <span class="ID">ymax</span>^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_27">  27</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_27"></span><span class="anchor" id="line-27"></span><span class="ID">err</span> = <span class="ID">Inf</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_28">  28</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_28"></span><span class="anchor" id="line-28"></span><span class="ID">count</span> = <span class="Number">0</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_29">  29</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_29"></span><span class="anchor" id="line-29"></span><span class="ResWord">while</span> <span class="ID">err</span> &gt; <span class="ID">eps</span> &amp;&amp; <span class="ID">count</span> &lt; <span class="ID">n_iter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_30">  30</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_30"></span><span class="anchor" id="line-30"></span>    <span class="ID">count</span> = <span class="ID">count</span> + <span class="Number">1</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_31">  31</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_31"></span><span class="anchor" id="line-31"></span>    <span class="ID">dx2</span> = <span class="ID">dx</span>^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_32">  32</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_32"></span><span class="anchor" id="line-32"></span>    <span class="ID">dy2</span> = <span class="ID">dy</span>^<span class="Number">2</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_33">  33</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_33"></span><span class="anchor" id="line-33"></span>    <span class="ID">dnr_inv</span> = <span class="Number">0.5</span> / (<span class="ID">dx2</span> + <span class="ID">dy2</span>);    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_34">  34</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_34"></span><span class="anchor" id="line-34"></span>    <span class="ID">u_old</span> = <span class="ID">u</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_35">  35</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_35"></span><span class="anchor" id="line-35"></span>    <span class="ID">u</span>(<span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>, <span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>) = ((<span class="ID">u</span>(<span class="Number">1</span>:<span class="ID">end</span>-<span class="Number">2</span>, <span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>) + <span class="ID">u</span>(<span class="Number">3</span>:<span class="ID">end</span>, <span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>))*<span class="ID">dy2</span> + (<span class="ID">u</span>(<span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>,<span class="Number">1</span>:<span class="ID">end</span>-<span class="Number">2</span>) + <span class="ID">u</span>(<span class="Number">2</span>:<span class="ID">end</span>-<span class="Number">1</span>, <span class="Number">3</span>:<span class="ID">end</span>))*<span class="ID">dx2</span>)*<span class="ID">dnr_inv</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_36">  36</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_36"></span><span class="anchor" id="line-36"></span>    <span class="ID">v</span> = (<span class="ID">u</span> - <span class="ID">u_old</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_37">  37</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_37"></span><span class="anchor" id="line-37"></span>    <span class="ID">err</span> = <span class="ID">sqrt</span>(<span class="ID">v</span>(:).'*<span class="ID">v</span>(:));</span>
+<span class="line"><span class="LineNumber"><a href="#CA-21663580426e5a681206d9236d7c957c43017d97_38">  38</a> </span><span class="LineAnchor" id="CA-21663580426e5a681206d9236d7c957c43017d97_38"></span><span class="anchor" id="line-38"></span><span class="ID">end</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../external.html?link=http://localhost:8080/PerformancePython" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="laplace.m"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056328161.00302564fdc53586d87aecedaaaa9b5552c8b34f">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="laplace9c1b.m?action=AttachFile&amp;do=get&amp;target=laplace.m">get</a>&nbsp;| <a href="PerformancePythonffae.html?action=AttachFile&amp;do=view&amp;target=laplace.m">view</a>] (2007-04-18 09:25:14, 0.8 KB) [[attachment:laplace.m]]</li><li>[<a href="laplace8fff.py?action=AttachFile&amp;do=get&amp;target=laplace.py">get</a>&nbsp;| <a href="PerformancePythonb826.html?action=AttachFile&amp;do=view&amp;target=laplace.py">view</a>] (2006-03-26 18:39:53, 11.5 KB) [[attachment:laplace.py]]</li><li>[<a href="perfpy15b1.tgz?action=AttachFile&amp;do=get&amp;target=perfpy.tgz">get</a>&nbsp;| <a href="PerformancePython2809.html?action=AttachFile&amp;do=view&amp;target=perfpy.tgz">view</a>] (2006-03-26 18:39:24, 10.8 KB) [[attachment:perfpy.tgz]]</li><li>[<a href="perfpy_200cf.tgz?action=AttachFile&amp;do=get&amp;target=perfpy_2.tgz">get</a>&nbsp;| <a href="PerformancePython86aa.html?action=AttachFile&amp;do=view&amp;target=perfpy_2.tgz">view</a>] (2009-11-20 11:08:51, 12.8 KB) [[attachment:perfpy_2.tgz]]</li><li>[<a href="perfy_2c956.tgz?action=AttachFile&amp;do=get&amp;target=perfy_2.tgz">get</a>&nbsp;| <a href="PerformancePythonb6e9.html?action=AttachFile&amp;do=view&amp;target=perfy_2.tgz">view</a>] (2009-11-20 11:07:56, 12.8 KB) [[attachment:perfy_2.tgz]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="PerformancePython37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/PerformancePython">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/PerformancePython?action=AttachFile&do=view&target=laplace.m by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 21:52:57 GMT -->
+</html>
+

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/BarCharts by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:10:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Matplotlib/BarCharts - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/BarCharts" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FBarCharts&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="barchart.png" href="BarCharts3ed1.html?action=AttachFile&amp;do=view&amp;target=barchart.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="BarCharts456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="BarCharts0066.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FBarCharts%22" rel="nofollow" title="Click to do a full-text search for this title">BarCharts</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="BarCharts.html">BarCharts</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BarCharts37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Use the bar function to make bar charts: <a class="http" href="../../../external.html?link=http://matplotlib.sourceforge.net/matplotlib.pylab.html#-bar">http://matplotlib.sourceforge.net/matplotlib.pylab.html#-bar</a> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">Here's an example script that makes a bar char with error bars  and labels centered under the bars. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-3d6ff0da2767785f58376d42d3a7df0880160234" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">numpy.numarray</span> <span class="ResWord">as</span> <span class="ID">na</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="anchor" id="line-5-1"></span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">labels</span> = [<span class="String">&quot;</span><span class="String">Baseline</span><span class="String">&quot;</span>, <span class="String">&quot;</span><span class="String">System</span><span class="String">&quot;</span>]</span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">data</span> =   [<span class="Number">3.75</span>               , <span class="Number">4.75</span>]</span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="ID">error</span> =  [<span class="Number">0.3497</span>             , <span class="Number">0.3108</span>]</span>
+<span class="line"><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">xlocations</span> = <span class="ID">na</span>.<span class="ID">array</span>(<span class="ResWord">range</span>(<span class="ResWord">len</span>(<span class="ID">data</span>)))+<span class="Number">0.5</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">width</span> = <span class="Number">0.5</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ID">bar</span>(<span class="ID">xlocations</span>, <span class="ID">data</span>, <span class="ID">yerr</span>=<span class="ID">error</span>, <span class="ID">width</span>=<span class="ID">width</span>)</span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="ID">yticks</span>(<span class="ResWord">range</span>(<span class="Number">0</span>, <span class="Number">8</span>))</span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">xticks</span>(<span class="ID">xlocations</span>+ <span class="ID">width</span>/<span class="Number">2</span>, <span class="ID">labels</span>)</span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">xlim</span>(<span class="Number">0</span>, <span class="ID">xlocations</span>[-<span class="Number">1</span>]+<span class="ID">width</span>*<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="ID">title</span>(<span class="String">&quot;</span><span class="String">Average Ratings on the Training Set</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ID">gca</span>().<span class="ID">get_xaxis</span>().<span class="ID">tick_bottom</span>()</span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">gca</span>().<span class="ID">get_yaxis</span>().<span class="ID">tick_left</span>()</span>
+<span class="line"><span class="anchor" id="line-19-1"></span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-27"></span><ul><li style="list-style-type:none"><p class="line891"><img alt="barchart.png" class="attachment" src="barchartfc6d.png?action=AttachFile&amp;do=get&amp;target=barchart.png" title="barchart.png" /> <span class="anchor" id="line-28"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/BarCharts  (last edited 2015-10-24 17:48:25 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BarCharts37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/BarCharts">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/BarCharts by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:10:38 GMT -->
+</html>
+

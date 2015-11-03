@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/C_Extensions?highlight=%28%28Cookbook%7CC_Extensions%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/C_Extensions - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/C_Extensions" href="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FC_Extensions&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="C_Extensions456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="C_Extensionsed4d.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FC_Extensions%22" rel="nofollow" title="Click to do a full-text search for this title">C_Extensions</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="C_Extensions.html">Cookbook/C_Extensions</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C_Extensions37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Table_of_Contents">Table of Contents</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Table_of_Contents">Table of Contents</a></li><li>
+<a href="#Skeleton">Skeleton</a></li><li>
+<a href="#Debugging_C_Extensions_on_Windows">Debugging C Extensions on Windows</a></li><li>
+<a href="#Valgrind">Valgrind</a></li><li>
+<a href="#Documentation">Documentation</a></li><li>
+<a href="#Examples">Examples</a></li><li>
+<a href="#Mailing_List_Threads">Mailing List Threads</a></li></ol></div><p class="line874"> <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867">
+<h1 id="Skeleton">Skeleton</h1>
+<span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><tt class="backtick">extmodule.h</tt>: <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-1-1"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b5cf71620888502a5703a79459ef136be0371bae\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b5cf71620888502a5703a79459ef136be0371bae" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_1">   1</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_1"></span><span class="anchor" id="line-1-2"></span><span class="Preprc">#</span><span class="Preprc">ifndef EXTMODULE_H</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_2">   2</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_2"></span><span class="anchor" id="line-2-1"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">define EXTMODULE_H</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_3">   3</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_3"></span><span class="anchor" id="line-3-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_4">   4</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_4"></span><span class="anchor" id="line-4-1"></span><span class="Preprc">#</span><span class="Preprc">ifdef __cplusplus</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_5">   5</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_5"></span><span class="anchor" id="line-5-1"></span><span class="Preprc"></span><span class="ResWord">extern</span> <span class="String">&quot;</span><span class="String">C</span><span class="String">&quot;</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_6">   6</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_6"></span><span class="anchor" id="line-6-1"></span><span class="Preprc">#</span><span class="Preprc">endif</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_7">   7</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_7"></span><span class="anchor" id="line-7-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_8">   8</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_8"></span><span class="anchor" id="line-8-1"></span><span class="Comment">/* Python.h must be included before everything else */</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_9">   9</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_9"></span><span class="anchor" id="line-9-1"></span><span class="Preprc">#</span><span class="Preprc">include &quot;Python.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_10">  10</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_10"></span><span class="anchor" id="line-10-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_11">  11</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_11"></span><span class="anchor" id="line-11-1"></span><span class="Comment">/* include system headers here */</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_12">  12</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_13">  13</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_13"></span><span class="anchor" id="line-13-1"></span><span class="Preprc">#</span><span class="Preprc">if !defined(EXTMODULE_IMPORT_ARRAY)</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_14">  14</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_14"></span><span class="anchor" id="line-14-1"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">define NO_IMPORT_ARRAY</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_15">  15</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_15"></span><span class="anchor" id="line-15-1"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">endif</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_16">  16</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_16"></span><span class="anchor" id="line-16-1"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;numpy</span><span class="Preprc">/</span><span class="Preprc">arrayobject.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_17">  17</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_17"></span><span class="anchor" id="line-17-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_18">  18</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_18"></span><span class="anchor" id="line-18-1"></span><span class="Preprc">#</span><span class="Preprc">ifdef __cplusplus</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_19">  19</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_19"></span><span class="anchor" id="line-19-1"></span><span class="Preprc"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_20">  20</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_20"></span><span class="anchor" id="line-20-1"></span><span class="Preprc">#</span><span class="Preprc">endif</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_21">  21</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_21"></span><span class="anchor" id="line-21-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_22">  22</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_22"></span><span class="anchor" id="line-22-1"></span><span class="Preprc">#</span><span class="Preprc">endif</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b5cf71620888502a5703a79459ef136be0371bae_23">  23</a> </span><span class="LineAnchor" id="CA-b5cf71620888502a5703a79459ef136be0371bae_23"></span><span class="anchor" id="line-23-1"></span><span class="Preprc"></span></span>
+</pre></div></div><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line862">Note that <tt class="backtick">PY_ARRAY_UNIQUE_SYMBOL</tt> must be set to a unique value for each extension module.  But, you actually don't need to set it at all unless you are going to compile an extension module that uses two different source files  <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line867"><tt class="backtick">extmodule.c</tt>: <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line867"><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-1-3"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_1">   1</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_1"></span><span class="anchor" id="line-1-4"></span><span class="Preprc">#</span><span class="Preprc">define EXTMODULE_IMPORT_ARRAY</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_2">   2</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_2"></span><span class="anchor" id="line-2-2"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;extmodule.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_3">   3</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_3"></span><span class="anchor" id="line-3-2"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">undef EXTMODULE_IMPORT_ARRAY</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_4">   4</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_4"></span><span class="anchor" id="line-4-2"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_5">   5</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_5"></span><span class="anchor" id="line-5-2"></span><span class="ResWord">static</span> <span class="ID">PyObject</span>* <span class="ID">FooError</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_6">   6</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_6"></span><span class="anchor" id="line-6-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_7">   7</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_7"></span><span class="anchor" id="line-7-2"></span><span class="ResWord">static</span> <span class="ID">PyObject</span>* <span class="ID">Ext_Foo</span>(<span class="ID">PyObject</span>* <span class="ID">obj</span>, <span class="ID">PyObject</span>* <span class="ID">args</span>) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_8">   8</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_8"></span><span class="anchor" id="line-8-2"></span>   <span class="ID">Py_INCREF</span>(<span class="ID">Py_None</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_9">   9</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_9"></span><span class="anchor" id="line-9-2"></span>   <span class="ResWord">return</span> <span class="ID">Py_None</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_10">  10</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_10"></span><span class="anchor" id="line-10-2"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_11">  11</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_11"></span><span class="anchor" id="line-11-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_12">  12</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_12"></span><span class="anchor" id="line-12-2"></span><span class="ResWord">static</span> <span class="ID">PyMethodDef</span> <span class="ID">methods</span>[] = {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_13">  13</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_13"></span><span class="anchor" id="line-13-2"></span>   {<span class="String">&quot;</span><span class="String">foo</span><span class="String">&quot;</span>, (<span class="ID">PyCFunction</span>) <span class="ID">Ext_Foo</span>, <span class="ID">METH_VARARGS</span>, <span class="String">&quot;</span><span class="String">&quot;</span>},</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_14">  14</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_14"></span><span class="anchor" id="line-14-2"></span>   {<span class="ResWord">NULL</span>, <span class="ResWord">NULL</span>, <span class="Number">0</span>, <span class="ResWord">NULL</span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_15">  15</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_15"></span><span class="anchor" id="line-15-2"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_16">  16</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_16"></span><span class="anchor" id="line-16-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_17">  17</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_17"></span><span class="anchor" id="line-17-2"></span><span class="ID">PyMODINIT_FUNC</span> <span class="ID">init_extmodule</span>() {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_18">  18</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_18"></span><span class="anchor" id="line-18-2"></span>   <span class="ID">PyObject</span>* <span class="ID">m</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_19">  19</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_19"></span><span class="anchor" id="line-19-2"></span>   <span class="ID">m</span> = <span class="ID">Py_InitModule</span>(<span class="String">&quot;</span><span class="String">_extmodule</span><span class="String">&quot;</span>, <span class="ID">methods</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_20">  20</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_20"></span><span class="anchor" id="line-20-2"></span>   <span class="ID">import_array</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_21">  21</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_21"></span><span class="anchor" id="line-21-2"></span>   <span class="ID">SVMError</span> = <span class="ID">PyErr_NewException</span>(<span class="String">&quot;</span><span class="String">_extmodule.FooError</span><span class="String">&quot;</span>, <span class="ResWord">NULL</span>, <span class="ResWord">NULL</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_22">  22</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_22"></span><span class="anchor" id="line-22-2"></span>   <span class="ID">Py_INCREF</span>(<span class="ID">FooError</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_23">  23</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_23"></span><span class="anchor" id="line-23-2"></span>   <span class="ID">PyModule_AddObject</span>(<span class="ID">m</span>, <span class="String">&quot;</span><span class="String">FooError</span><span class="String">&quot;</span>, <span class="ID">FooError</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_24">  24</a> </span><span class="LineAnchor" id="CA-8746e911ee1d1adc0d7e8af42bb18d7d17e5679a_24"></span><span class="anchor" id="line-24-1"></span>}</span>
+</pre></div></div><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line874">If your extension module is contained in a single source file then you can get rid of extmodule.h entirely and replace the first part of extmodule.c with <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line867"><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-1-5"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-da73007a5177e2586d5b752224cc63b2b33060fa\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-da73007a5177e2586d5b752224cc63b2b33060fa" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-da73007a5177e2586d5b752224cc63b2b33060fa_1">   1</a> </span><span class="LineAnchor" id="CA-da73007a5177e2586d5b752224cc63b2b33060fa_1"></span><span class="anchor" id="line-1-6"></span><span class="Preprc">#</span><span class="Preprc">inlude &quot;Python.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-da73007a5177e2586d5b752224cc63b2b33060fa_2">   2</a> </span><span class="LineAnchor" id="CA-da73007a5177e2586d5b752224cc63b2b33060fa_2"></span><span class="anchor" id="line-2-3"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;numpy</span><span class="Preprc">/</span><span class="Preprc">arrayobject.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-da73007a5177e2586d5b752224cc63b2b33060fa_3">   3</a> </span><span class="LineAnchor" id="CA-da73007a5177e2586d5b752224cc63b2b33060fa_3"></span><span class="anchor" id="line-3-3"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-da73007a5177e2586d5b752224cc63b2b33060fa_4">   4</a> </span><span class="LineAnchor" id="CA-da73007a5177e2586d5b752224cc63b2b33060fa_4"></span><span class="anchor" id="line-4-3"></span><span class="Comment">/* remainder of extmodule.c after here */</span></span>
+</pre></div></div><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line867">
+<h1 id="Debugging_C_Extensions_on_Windows">Debugging C Extensions on Windows</h1>
+<span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line862">Debugging C extensions on Windows can be tricky. If you compile your extension code in debug mode, you have to link against the debug version of the Python library, e.g. <tt class="backtick">Python24_d.lib</tt>. When building with Visual Studio, this is taken care of by a pragma in <tt class="backtick">Python24.h</tt>. If you force the compiler to link debug code against the release library, you will probably get the following errors (especially when compiling SWIG wrapped codes): <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line867"><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><pre><span class="anchor" id="line-1-7"></span>extmodule.obj : error LNK2019: unresolved external symbol __imp___Py_Dealloc referenced in function _PySwigObject_format
+<span class="anchor" id="line-2-4"></span>extmodule.obj : error LNK2019: unresolved external symbol __imp___Py_NegativeRefcount referenced in function _PySwigObject_format
+<span class="anchor" id="line-3-4"></span>extmodule.obj : error LNK2001: unresolved external symbol __imp___Py_RefTotal
+<span class="anchor" id="line-4-4"></span>extmodule.obj : error LNK2019: unresolved external symbol __imp___PyObject_DebugFree referenced in function _PySwigObject_dealloc
+<span class="anchor" id="line-5-3"></span>extmodule.obj : error LNK2019: unresolved external symbol __imp___PyObject_DebugMalloc referenced in function _PySwigObject_New
+<span class="anchor" id="line-6-3"></span>extmodule.obj : error LNK2019: unresolved external symbol __imp__Py_InitModule4TraceRefs referenced in function _init_extmodule</pre><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><p class="line874">However, now you also need a debug build of the Python interpreter if you want to import this debuggable extension module. Now you also need debug builds of every other extension module you use. Clearly, this can take some time to get sorted out. <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line874">An alternative is to build your library code as a debug DLL. This way, you can at least that your extension module is passing the right data to the library code you are wrapping. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line874">As an aside, it seems that the MinGW GCC compiler doesn't produce debug symbols that are understood by the Visual Studio debugger. <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><p class="line867">
+<h1 id="Valgrind">Valgrind</h1>
+<span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><p class="line862">To develop a stable extension module, it is essential that you check the memory allocation and memory accesses done by your C code. On Linux, you can use <a class="http" href="../../external.html?link=http://www.valgrind.org/">Valgrind</a>. On Windows, you could try a commercial tool such as <a class="http" href="../../external.html?link=http://www-306.ibm.com/software/awdtools/purifyplus/">Rational PurifyPlus</a>. <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><p class="line862">Before using Valgrind, make sure your extension module is compiled with the <tt class="backtick">-g</tt> switch to GCC so that you can get useful stack traces when errors are detected. <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><p class="line862">Then put the following in a shell script, say <tt class="backtick">valgrind_py.sh</tt>: <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><pre><span class="anchor" id="line-1-8"></span>valgrind \
+<span class="anchor" id="line-2-5"></span>   --tool=memcheck \
+<span class="anchor" id="line-3-5"></span>   --leak-check=yes \
+<span class="anchor" id="line-4-5"></span>   --error-limit=no \
+<span class="anchor" id="line-5-4"></span>   --suppressions=valgrind-python.supp \
+<span class="anchor" id="line-6-4"></span>   --num-callers=10 \
+<span class="anchor" id="line-7-3"></span>   -v \
+<span class="anchor" id="line-8-3"></span>   python $1</pre><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><p class="line867"><tt class="backtick">valgrind-python.supp</tt> suppresses some warnings caused by the Python code. You can find the suppression file for Python 2.4 <a class="http" href="../../external.html?link=http://svn.python.org/projects/python/branches/release24-maint/Misc/valgrind-python.supp">in the Python SVN repository</a>. See also <a class="http" href="../../external.html?link=http://svn.python.org/projects/python/branches/release24-maint/Misc/README.valgrind">README.valgrind</a> in the same location. Some of the suppressions are commented out by default. Enable them by removing the # comment markers. <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><p class="line862">Execute <tt class="backtick">chmod&nbsp;+x&nbsp;valgrind_py.sh</tt> and run it as <tt class="backtick">./valgrind_py.sh&nbsp;test_extmodule.py</tt>. <span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><p class="line867">
+<h1 id="Documentation">Documentation</h1>
+<span class="anchor" id="line-117"></span><ul><li><p class="line891"><a class="http" href="../../external.html?link=http://docs.python.org/ext/ext.html">Extending and Embedding the Python Interpreter</a> (read this first) <span class="anchor" id="line-118"></span></li><li><p class="line891"><a class="http" href="../../external.html?link=http://docs.python.org/api/api.html">Python/C API Reference Manual</a> (then browse through this) <span class="anchor" id="line-119"></span></li><li><p class="line862">Chapter 13 of <a class="http" href="../../external.html?link=http://www.tramy.us/">Guide to NumPy</a> describes the complete API <span class="anchor" id="line-120"></span></li><li><p class="line862">Chapter 14 deals with extending NumPy (make sure you have the edition dated March 15, 2006 or later) <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span></li></ul><p class="line867">
+<h1 id="Examples">Examples</h1>
+<span class="anchor" id="line-123"></span><ul><li><p class="line891"><a class="http" href="../../external.html?link=http://projects.scipy.org/scipy/scipy/browser/trunk/Lib/ndimage">ndimage in the SciPy SVN repository</a> <span class="anchor" id="line-124"></span></li><li><p class="line891"><a href="C_Extensions/NumPy_arrays.html">NumPy arrays</a> (collection of small examples) <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span></li></ul><p class="line867">
+<h1 id="Mailing_List_Threads">Mailing List Threads</h1>
+<span class="anchor" id="line-127"></span><ul><li><p class="line891"><a class="http" href="../../external.html?link=http://thread.gmane.org/gmane.comp.python.numeric.general/5206/focus=5206">Freeing memory allocated in C</a> <span class="anchor" id="line-128"></span></li><li><p class="line891"><a class="http" href="../../external.html?link=http://thread.gmane.org/gmane.comp.python.scientific.user/7392/focus=7400">port C/C++ matlab mexing code to numpy</a> <span class="anchor" id="line-129"></span></li><li><p class="line891"><a class="http" href="../../external.html?link=http://thread.gmane.org/gmane.comp.python.numeric.general/5186/focus=5186">newbie for writing numpy/scipy extensions</a> <span class="anchor" id="line-130"></span></li><li><p class="line891"><a class="http" href="../../external.html?link=http://thread.gmane.org/gmane.comp.python.numeric.general/5234/focus=5234">Array data and struct alignment</a> <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-133"></span><a href="../CategoryCookbook.html">Category<strong class="highlight">Cookbook</strong></a> <span class="anchor" id="line-134"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/C_Extensions  (last edited 2015-10-24 17:48:25 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C_Extensions37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/C_Extensions">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/C_Extensions?highlight=%28%28Cookbook%7CC_Extensions%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

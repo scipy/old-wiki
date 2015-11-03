@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Maps by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:11:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Matplotlib/Maps - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Maps" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FMaps&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="basemap0.png" href="Maps1534.html?action=AttachFile&amp;do=view&amp;target=basemap0.png">
+<link rel="Appendix" title="basemap1.png" href="Mapseb43.html?action=AttachFile&amp;do=view&amp;target=basemap1.png">
+<link rel="Appendix" title="basemap1b.png" href="Maps674c.html?action=AttachFile&amp;do=view&amp;target=basemap1b.png">
+<link rel="Appendix" title="basemap2.png" href="Maps6ee5.html?action=AttachFile&amp;do=view&amp;target=basemap2.png">
+<link rel="Appendix" title="basemap2b.png" href="Maps20fe.html?action=AttachFile&amp;do=view&amp;target=basemap2b.png">
+<link rel="Appendix" title="basemap3.png" href="Maps3f43.html?action=AttachFile&amp;do=view&amp;target=basemap3.png">
+<link rel="Appendix" title="basemap3b.png" href="Maps211f.html?action=AttachFile&amp;do=view&amp;target=basemap3b.png">
+<link rel="Appendix" title="basemap3c.png" href="Mapsbebb.html?action=AttachFile&amp;do=view&amp;target=basemap3c.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Maps456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Maps3285.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FMaps%22" rel="nofollow" title="Click to do a full-text search for this title">Maps</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Maps.html">Cookbook/Matplotlib/Maps</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Maps37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Plotting data on map projections is easy with the basemap toolkit.  <span class="anchor" id="line-2"></span>Toolkits are collections of application-specific functions that extend matplotlib. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line867"><strong>The basemap toolkit is not in the default matplotlib install</strong> - you can <span class="anchor" id="line-5"></span>download it from the matplotlib sourceforge <a class="http" href="../../../external.html?link=http://sourceforge.net/project/showfiles.php?group_id=80706&amp;package_id=142792">download page</a>. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">Suppose you'd like to make a map of the world using an orthographic, or satellite projection and plot some data on it. Here's how to make the map (using matplotlib &gt;= 0.98.0 and basemap &gt;= 0.99): <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_1">   1</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">mpl_toolkits.basemap</span> <span class="ResWord">import</span> <span class="ID">Basemap</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_2">   2</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_3">   3</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_4">   4</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_4"></span><span class="anchor" id="line-4-1"></span><span class="Comment"># set up orthographic map projection with</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_5">   5</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_5"></span><span class="anchor" id="line-5-1"></span><span class="Comment"># perspective of satellite looking down at 50N, 100W.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_6">   6</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_6"></span><span class="anchor" id="line-6-1"></span><span class="Comment"># use low resolution coastlines.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_7">   7</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_7"></span><span class="anchor" id="line-7-1"></span><span class="Comment"># don't plot features that are smaller than 1000 square km.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_8">   8</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">map</span> = <span class="ID">Basemap</span>(<span class="ID">projection</span>=<span class="String">'</span><span class="String">ortho</span><span class="String">'</span>, <span class="ID">lat_0</span> = <span class="Number">50</span>, <span class="ID">lon_0</span> = -<span class="Number">100</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_9">   9</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_9"></span><span class="anchor" id="line-9-1"></span>              <span class="ID">resolution</span> = <span class="String">'</span><span class="String">l</span><span class="String">'</span>, <span class="ID">area_thresh</span> = <span class="Number">1000.</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_10">  10</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_10"></span><span class="anchor" id="line-10-1"></span><span class="Comment"># draw coastlines, country boundaries, fill continents.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_11">  11</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_11"></span><span class="anchor" id="line-11-1"></span><span class="ResWord">map</span>.<span class="ID">drawcoastlines</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_12">  12</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_12"></span><span class="anchor" id="line-12-1"></span><span class="ResWord">map</span>.<span class="ID">drawcountries</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_13">  13</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_13"></span><span class="anchor" id="line-13-1"></span><span class="ResWord">map</span>.<span class="ID">fillcontinents</span>(<span class="ID">color</span> = <span class="String">'</span><span class="String">coral</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_14">  14</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_14"></span><span class="anchor" id="line-14-1"></span><span class="Comment"># draw the edge of the map projection region (the projection limb)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_15">  15</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_15"></span><span class="anchor" id="line-15-1"></span><span class="ResWord">map</span>.<span class="ID">drawmapboundary</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_16">  16</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_16"></span><span class="anchor" id="line-16-1"></span><span class="Comment"># draw lat/lon grid lines every 30 degrees.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_17">  17</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_17"></span><span class="anchor" id="line-17-1"></span><span class="ResWord">map</span>.<span class="ID">drawmeridians</span>(<span class="ID">np</span>.<span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">360</span>, <span class="Number">30</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_18">  18</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_18"></span><span class="anchor" id="line-18-1"></span><span class="ResWord">map</span>.<span class="ID">drawparallels</span>(<span class="ID">np</span>.<span class="ID">arange</span>(-<span class="Number">90</span>, <span class="Number">90</span>, <span class="Number">30</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_19">  19</a> </span><span class="LineAnchor" id="CA-a7f678a2cb9450cd0ef443d73c399e8bbe84c446_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">plt</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-30"></span><p class="line862">There are many other map projections available, probably more than you've even heard of before.  A complete list is available in the <a class="http" href="../../../external.html?link=http://matplotlib.sourceforge.net/mpl_toolkits.basemap.basemap.html">basemap docstrings</a>. Coastlines, political boundaries and rivers are available in four resolutions, <tt>crude</tt>, <tt>low</tt>, <tt>intermediate</tt> and <tt>high</tt>.  Here's what the <tt>low</tt> resolution coastlines look like. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867"><img alt="basemap0.png" class="attachment" src="basemap06b78.png?action=AttachFile&amp;do=get&amp;target=basemap0.png" title="basemap0.png" /> <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line862">Now, suppose you would like to plot the locations of five cities on this map.  Add the following just before the <tt>plt.show()</tt> in the above script: <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line867"><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_1">   1</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_1"></span><span class="anchor" id="line-1-4"></span><span class="Comment"># lat/lon coordinates of five cities.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_2">   2</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">lats</span> = [<span class="Number">40.02</span>, <span class="Number">32.73</span>, <span class="Number">38.55</span>, <span class="Number">48.25</span>, <span class="Number">17.29</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_3">   3</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_3"></span><span class="anchor" id="line-3-2"></span><span class="ID">lons</span> = [-<span class="Number">105.16</span>, -<span class="Number">117.16</span>, -<span class="Number">77.00</span>, -<span class="Number">114.21</span>, -<span class="Number">88.10</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_4">   4</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">cities</span>=[<span class="String">'</span><span class="String">Boulder, CO</span><span class="String">'</span>,<span class="String">'</span><span class="String">San Diego, CA</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_5">   5</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_5"></span><span class="anchor" id="line-5-2"></span>        <span class="String">'</span><span class="String">Washington, DC</span><span class="String">'</span>,<span class="String">'</span><span class="String">Whitefish, MT</span><span class="String">'</span>,<span class="String">'</span><span class="String">Belize City, Belize</span><span class="String">'</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_6">   6</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_6"></span><span class="anchor" id="line-6-2"></span><span class="Comment"># compute the native map projection coordinates for cities.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_7">   7</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">x</span>,<span class="ID">y</span> = <span class="ResWord">map</span>(<span class="ID">lons</span>,<span class="ID">lats</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_8">   8</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_8"></span><span class="anchor" id="line-8-2"></span><span class="Comment"># plot filled circles at the locations of the cities.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_9">   9</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_9"></span><span class="anchor" id="line-9-2"></span><span class="ResWord">map</span>.<span class="ID">plot</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="String">'</span><span class="String">bo</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_10">  10</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_10"></span><span class="anchor" id="line-10-2"></span><span class="Comment"># plot the names of those five cities.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_11">  11</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_11"></span><span class="anchor" id="line-11-2"></span><span class="ResWord">for</span> <span class="ID">name</span>,<span class="ID">xpt</span>,<span class="ID">ypt</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">cities</span>,<span class="ID">x</span>,<span class="ID">y</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_12">  12</a> </span><span class="LineAnchor" id="CA-8b51a04095f5a63f73b6df7d0c6ba10f56fbed61_12"></span><span class="anchor" id="line-12-2"></span>    <span class="ID">plt</span>.<span class="ID">text</span>(<span class="ID">xpt</span>+<span class="Number">50000</span>,<span class="ID">ypt</span>+<span class="Number">50000</span>,<span class="ID">name</span>)</span>
+</pre></div></div><span class="anchor" id="line-50"></span><p class="line867"><img alt="basemap1b.png" class="attachment" src="basemap1b5f7d.png?action=AttachFile&amp;do=get&amp;target=basemap1b.png" title="basemap1b.png" /> <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line862">Calling a basemap class instance with arrays of longitudes and latitudes returns those locations in native map projection coordinates using the <a class="http" href="../../../external.html?link=http://proj.maptools.org/">proj4</a> library. Now suppose you have some data on a regular latitude/longitude grid and you would like to plot contours of that data over the map.  Try adding the following lines just before <tt>p.show()</tt> <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line867"><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-c72006795f93ca3b09e334b1489056d6d6423a17\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_1">   1</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_1"></span><span class="anchor" id="line-1-6"></span><span class="Comment"># make up some data on a regular lat/lon grid.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_2">   2</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_2"></span><span class="anchor" id="line-2-3"></span><span class="ID">nlats</span> = <span class="Number">73</span>; <span class="ID">nlons</span> = <span class="Number">145</span>; <span class="ID">delta</span> = <span class="Number">2.</span>*<span class="ID">np</span>.<span class="ID">pi</span>/(<span class="ID">nlons</span>-<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_3">   3</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_3"></span><span class="anchor" id="line-3-3"></span><span class="ID">lats</span> = (<span class="Number">0.5</span>*<span class="ID">np</span>.<span class="ID">pi</span>-<span class="ID">delta</span>*<span class="ID">np</span>.<span class="ID">indices</span>((<span class="ID">nlats</span>,<span class="ID">nlons</span>))[<span class="Number">0</span>,:,:])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_4">   4</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_4"></span><span class="anchor" id="line-4-3"></span><span class="ID">lons</span> = (<span class="ID">delta</span>*<span class="ID">np</span>.<span class="ID">indices</span>((<span class="ID">nlats</span>,<span class="ID">nlons</span>))[<span class="Number">1</span>,:,:])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_5">   5</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_5"></span><span class="anchor" id="line-5-3"></span><span class="ID">wave</span> = <span class="Number">0.75</span>*(<span class="ID">np</span>.<span class="ID">sin</span>(<span class="Number">2.</span>*<span class="ID">lats</span>)**<span class="Number">8</span>*<span class="ID">np</span>.<span class="ID">cos</span>(<span class="Number">4.</span>*<span class="ID">lons</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_6">   6</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_6"></span><span class="anchor" id="line-6-3"></span><span class="ID">mean</span> = <span class="Number">0.5</span>*<span class="ID">np</span>.<span class="ID">cos</span>(<span class="Number">2.</span>*<span class="ID">lats</span>)*((<span class="ID">np</span>.<span class="ID">sin</span>(<span class="Number">2.</span>*<span class="ID">lats</span>))**<span class="Number">2</span> + <span class="Number">2.</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_7">   7</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_7"></span><span class="anchor" id="line-7-3"></span><span class="Comment"># compute native map projection coordinates of lat/lon grid.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_8">   8</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_8"></span><span class="anchor" id="line-8-3"></span><span class="ID">x</span>, <span class="ID">y</span> = <span class="ResWord">map</span>(<span class="ID">lons</span>*<span class="Number">180.</span>/<span class="ID">np</span>.<span class="ID">pi</span>, <span class="ID">lats</span>*<span class="Number">180.</span>/<span class="ID">np</span>.<span class="ID">pi</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_9">   9</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_9"></span><span class="anchor" id="line-9-3"></span><span class="Comment"># contour data over the map.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-c72006795f93ca3b09e334b1489056d6d6423a17_10">  10</a> </span><span class="LineAnchor" id="CA-c72006795f93ca3b09e334b1489056d6d6423a17_10"></span><span class="anchor" id="line-10-3"></span><span class="ID">CS</span> = <span class="ResWord">map</span>.<span class="ID">contour</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">wave</span>+<span class="ID">mean</span>,<span class="Number">15</span>,<span class="ID">linewidths</span>=<span class="Number">1.5</span>)</span>
+</pre></div></div><span class="anchor" id="line-66"></span><p class="line867"><img alt="basemap2b.png" class="attachment" src="basemap2b8122.png?action=AttachFile&amp;do=get&amp;target=basemap2b.png" title="basemap2b.png" /> <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line862">Instead of plotting the continents and coastlines, you can use an image as a map background using the <tt>warpimage</tt> method.  The default background image is the NASA 'blue marble' image, which you can apply by using <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line867"><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-4ae91f1c5ea7b0b61296277bddfae277bae7b96c\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-4ae91f1c5ea7b0b61296277bddfae277bae7b96c" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-4ae91f1c5ea7b0b61296277bddfae277bae7b96c_1">   1</a> </span><span class="LineAnchor" id="CA-4ae91f1c5ea7b0b61296277bddfae277bae7b96c_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">map</span>.<span class="ID">bluemarble</span>()</span>
+</pre></div></div><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line874">in place of <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line867"><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-71c771033d686b2d6399e941f68fac4d4661c6fc\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-71c771033d686b2d6399e941f68fac4d4661c6fc" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-71c771033d686b2d6399e941f68fac4d4661c6fc_1">   1</a> </span><span class="LineAnchor" id="CA-71c771033d686b2d6399e941f68fac4d4661c6fc_1"></span><span class="anchor" id="line-1-10"></span><span class="ResWord">map</span>.<span class="ID">drawcoastlines</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-71c771033d686b2d6399e941f68fac4d4661c6fc_2">   2</a> </span><span class="LineAnchor" id="CA-71c771033d686b2d6399e941f68fac4d4661c6fc_2"></span><span class="anchor" id="line-2-4"></span><span class="ResWord">map</span>.<span class="ID">drawcountries</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-71c771033d686b2d6399e941f68fac4d4661c6fc_3">   3</a> </span><span class="LineAnchor" id="CA-71c771033d686b2d6399e941f68fac4d4661c6fc_3"></span><span class="anchor" id="line-3-4"></span><span class="ResWord">map</span>.<span class="ID">fillcontinents</span>(<span class="ID">color</span>=<span class="String">'</span><span class="String">coral</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line874">Here's what the resulting plot looks like (using white text instead of black, and white dots instead of blue) <span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line867"><img alt="basemap3c.png" class="attachment" src="basemap3caf5d.png?action=AttachFile&amp;do=get&amp;target=basemap3c.png" title="basemap3c.png" /> <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line874">You can also plot images, pcolor plots and vectors over map projections. <span class="anchor" id="line-87"></span>Examples that illustrate this and more can be found in the examples <span class="anchor" id="line-88"></span>directory of the basemap source distribution. <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-91"></span><a href="../../CategoryCookbookMatplotlib.html">CategoryCookbookMatplotlib</a> <span class="anchor" id="line-92"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/Maps  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Maps37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Maps">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Maps by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:12:02 GMT -->
+</html>
+

@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Finding_Convex_Hull_Minimum_Point - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Finding_Convex_Hull_Minimum_Point" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FFinding_Convex_Hull_Minimum_Point&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Finding_Convex_Hull_Minimum_Point456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Finding_Convex_Hull_Minimum_Pointf98a.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FFinding_Convex_Hull_Minimum_Point%22" rel="nofollow" title="Click to do a full-text search for this title">Finding_Convex_Hull_Minimum_Point</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Finding_Convex_Hull_Minimum_Point.html">Finding_Con...nimum_Point</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Finding_Convex_Hull_Minimum_Point.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Finding_Convex_Hull_Minimum_Point37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Finding_the_minimum_point_in_the_convex_hull_of_a_finite_set_of_points">Finding the minimum point in the convex hull of a finite set of points</a></li><li>
+<a href="#Code">Code</a></li><li>
+<a href="#References">References</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Finding_the_minimum_point_in_the_convex_hull_of_a_finite_set_of_points">Finding the minimum point in the convex hull of a finite set of points</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">Based on the work of Philip Wolf [1] and the recursive algorithm of Kazuyuki Sekitani and Yoshitsugu Yamamoto [2]. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line874">The algorithm in [2] has 3 epsilon to avoid comparison problems in three parts of the algorithm. The code below has few changes and only one epsilon. The aim of the change is to avoid infinite loops.  <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867">
+<h1 id="Code">Code</h1>
+<span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867"><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-88791c9419490cfcacb12a50e0ac2629767f3622\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_1">   1</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> <span class="ID">array</span>, <span class="ID">matrix</span>, <span class="ID">sin</span>, <span class="ID">sqrt</span>, <span class="ID">dot</span>, <span class="ID">cos</span>, <span class="ID">ix_</span>, <span class="ID">zeros</span>, <span class="ID">concatenate</span>, <span class="ResWord">abs</span>, <span class="ID">log10</span>, <span class="ID">exp</span>, <span class="ID">ones</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_2">   2</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">from</span> <span class="ID">numpy.linalg</span> <span class="ResWord">import</span> <span class="ID">norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_3">   3</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_3"></span><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_4">   4</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">from</span> <span class="ID">mpmath</span> <span class="ResWord">import</span> <span class="ID">mpf</span>, <span class="ID">mp</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_5">   5</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">mp</span>.<span class="ID">dps</span>=<span class="Number">80</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_6">   6</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_6"></span><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_7">   7</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_7"></span><span class="anchor" id="line-7-1"></span><span class="ResWord">def</span> <span class="ID">find_min_point</span>(<span class="ID">P</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_8">   8</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_8"></span><span class="anchor" id="line-8-1"></span><span class="Comment">#    print &quot;Calling find_min with P: &quot;, P</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_9">   9</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_9"></span><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_10">  10</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_10"></span><span class="anchor" id="line-10-1"></span>    <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">P</span>) == <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_11">  11</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_11"></span><span class="anchor" id="line-11-1"></span>        <span class="ResWord">return</span> <span class="ID">P</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_12">  12</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_13">  13</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_13"></span><span class="anchor" id="line-13-1"></span>    <span class="ID">eps</span> = <span class="ID">mpf</span>(<span class="Number">10</span>)**-<span class="Number">40</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_14">  14</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_14"></span><span class="anchor" id="line-14-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_15">  15</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_15"></span><span class="anchor" id="line-15-1"></span>    <span class="ID">P</span> = [<span class="ID">array</span>([<span class="ID">mpf</span>(<span class="ID">i</span>) <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">p</span>]) <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_16">  16</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_16"></span><span class="anchor" id="line-16-1"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_17">  17</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_17"></span><span class="anchor" id="line-17-1"></span>    <span class="Comment"># Step 0. Choose a point from C(P)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_18">  18</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_18"></span><span class="anchor" id="line-18-1"></span>    <span class="ID">x</span>  = <span class="ID">P</span>[<span class="ID">array</span>([<span class="ID">dot</span>(<span class="ID">p</span>,<span class="ID">p</span>) <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P</span>]).<span class="ID">argmin</span>()]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_19">  19</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_19"></span><span class="anchor" id="line-19-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_20">  20</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_20"></span><span class="anchor" id="line-20-1"></span>    <span class="ResWord">while</span> <span class="ResWord">True</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_21">  21</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_21"></span><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_22">  22</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_22"></span><span class="anchor" id="line-22-1"></span>        <span class="Comment"># Step 1. \alpha_k := min{x_{k-1}^T p | p \in P}</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_23">  23</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_23"></span><span class="anchor" id="line-23-1"></span>        <span class="ID">p_alpha</span> = <span class="ID">P</span>[<span class="ID">array</span>([<span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">p</span>) <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P</span>]).<span class="ID">argmin</span>()]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_24">  24</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_24"></span><span class="anchor" id="line-24-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_25">  25</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_25"></span><span class="anchor" id="line-25-1"></span>        <span class="ResWord">if</span> <span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">x</span>-<span class="ID">p_alpha</span>) &lt; <span class="ID">eps</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_26">  26</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_26"></span><span class="anchor" id="line-26-1"></span>            <span class="ResWord">return</span> <span class="ID">array</span>([<span class="ResWord">float</span>(<span class="ID">i</span>) <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">x</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_27">  27</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_27"></span><span class="anchor" id="line-27-1"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_28">  28</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_28"></span><span class="anchor" id="line-28-1"></span>        <span class="ID">Pk</span> = [<span class="ID">p</span> <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P</span> <span class="ResWord">if</span> <span class="ResWord">abs</span>(<span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">p</span>-<span class="ID">p_alpha</span>)) &lt; <span class="ID">eps</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_29">  29</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_29"></span><span class="anchor" id="line-29-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_30">  30</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_30"></span><span class="anchor" id="line-30-1"></span>        <span class="Comment"># Step 2. P_k := { p | p \in P and x_{k-1}^T p = \alpha_k}</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_31">  31</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_31"></span><span class="anchor" id="line-31-1"></span>        <span class="ID">P_Pk</span> = [<span class="ID">p</span> <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P</span> <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">array</span>([(<span class="ID">p</span> == <span class="ID">q</span>).<span class="ID">all</span>() <span class="ResWord">for</span> <span class="ID">q</span> <span class="ResWord">in</span> <span class="ID">Pk</span>]).<span class="ID">any</span>()]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_32">  32</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_32"></span><span class="anchor" id="line-32-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_33">  33</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_33"></span><span class="anchor" id="line-33-1"></span>        <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">Pk</span>) == <span class="ResWord">len</span>(<span class="ID">P</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_34">  34</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_34"></span><span class="anchor" id="line-34-1"></span>            <span class="ResWord">return</span> <span class="ID">array</span>([<span class="ResWord">float</span>(<span class="ID">i</span>) <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">x</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_35">  35</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_35"></span><span class="anchor" id="line-35-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_36">  36</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_36"></span><span class="anchor" id="line-36-1"></span>        <span class="ID">y</span> = <span class="ID">find_min_point</span>(<span class="ID">Pk</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_37">  37</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_37"></span><span class="anchor" id="line-37-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_38">  38</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_38"></span><span class="anchor" id="line-38-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_39">  39</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_39"></span><span class="anchor" id="line-39-1"></span>        <span class="ID">p_beta</span> = <span class="ID">P_Pk</span>[<span class="ID">array</span>([<span class="ID">dot</span>(<span class="ID">y</span>,<span class="ID">p</span>) <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P_Pk</span>]).<span class="ID">argmin</span>()]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_40">  40</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_40"></span><span class="anchor" id="line-40-1"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_41">  41</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_41"></span><span class="anchor" id="line-41-1"></span>        <span class="ResWord">if</span> <span class="ID">dot</span>(<span class="ID">y</span>,<span class="ID">y</span>-<span class="ID">p_beta</span>) &lt; <span class="ID">eps</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_42">  42</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_42"></span><span class="anchor" id="line-42-1"></span>            <span class="ResWord">return</span> <span class="ID">array</span>([<span class="ResWord">float</span>(<span class="ID">i</span>) <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">y</span>]) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_43">  43</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_43"></span><span class="anchor" id="line-43-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_44">  44</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_44"></span><span class="anchor" id="line-44-1"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_45">  45</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_45"></span><span class="anchor" id="line-45-1"></span>        <span class="Comment"># Step 4. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_46">  46</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_46"></span><span class="anchor" id="line-46-1"></span>        <span class="ID">P_aux</span> = [<span class="ID">p</span> <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P_Pk</span> <span class="ResWord">if</span> (<span class="ID">dot</span>(<span class="ID">y</span>-<span class="ID">x</span>,<span class="ID">y</span>-<span class="ID">p</span>)&gt;<span class="ID">eps</span>) <span class="ResWord">and</span> (<span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">y</span>-<span class="ID">p</span>)!=<span class="Number">0</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_47">  47</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_47"></span><span class="anchor" id="line-47-1"></span>        <span class="ID">p_lambda</span> = <span class="ID">P_aux</span>[<span class="ID">array</span>([<span class="ID">dot</span>(<span class="ID">y</span>,<span class="ID">y</span>-<span class="ID">p</span>)/<span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">y</span>-<span class="ID">p</span>) <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">P_aux</span>]).<span class="ID">argmin</span>()]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_48">  48</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_48"></span><span class="anchor" id="line-48-1"></span>        <span class="ID">lam</span> = <span class="ID">dot</span>(<span class="ID">x</span>,<span class="ID">p_lambda</span>-<span class="ID">y</span>) / <span class="ID">dot</span>(<span class="ID">y</span>-<span class="ID">x</span>,<span class="ID">y</span>-<span class="ID">p_lambda</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_49">  49</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_49"></span><span class="anchor" id="line-49-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_50">  50</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_50"></span><span class="anchor" id="line-50-1"></span>        <span class="ID">x</span> += <span class="ID">lam</span> * (<span class="ID">y</span>-<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_51">  51</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_51"></span><span class="anchor" id="line-51-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_52">  52</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_52"></span><span class="anchor" id="line-52-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_53">  53</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_53"></span><span class="anchor" id="line-53-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_54">  54</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_54"></span><span class="anchor" id="line-54-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_55">  55</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_55"></span><span class="anchor" id="line-55-1"></span>    <span class="ResWord">print</span> <span class="ID">find_min_point</span>( [<span class="ID">array</span>([ -<span class="Number">4.83907292e+00</span>,   <span class="Number">2.22438863e+04</span>,  -<span class="Number">2.67496763e+04</span>]), <span class="ID">array</span>([   <span class="Number">9.71147604</span>, -<span class="Number">351.46404195</span>, -<span class="Number">292.18064276</span>]), <span class="ID">array</span>([  <span class="Number">4.60452808e+00</span>,   <span class="Number">1.07020174e+05</span>,  -<span class="Number">1.25310230e+05</span>]), <span class="ID">array</span>([  <span class="Number">2.16080134e+00</span>,   <span class="Number">5.12019937e+04</span>,  -<span class="Number">5.96167833e+04</span>]), <span class="ID">array</span>([  <span class="Number">2.65472146e+00</span>,   <span class="Number">6.70546443e+04</span>,  -<span class="Number">7.71619656e+04</span>]), <span class="ID">array</span>([  <span class="Number">1.55775358e+00</span>,  -<span class="Number">1.34347516e+05</span>,   <span class="Number">1.53209265e+05</span>]), <span class="ID">array</span>([   <span class="Number">13.22464295</span>,  <span class="Number">1869.01251292</span>, -<span class="Number">2137.61850989</span>])])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_56">  56</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_56"></span><span class="anchor" id="line-56-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_57">  57</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_57"></span><span class="anchor" id="line-57-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-88791c9419490cfcacb12a50e0ac2629767f3622_58">  58</a> </span><span class="LineAnchor" id="CA-88791c9419490cfcacb12a50e0ac2629767f3622_58"></span><span class="anchor" id="line-58-1"></span>    <span class="ResWord">print</span> <span class="ID">find_min_point</span>( [<span class="ID">array</span>([ -<span class="Number">4.83907292e+00</span>,   <span class="Number">2.22438863e+04</span>,  -<span class="Number">2.67496763e+04</span>]), <span class="ID">array</span>([   <span class="Number">9.71147604</span>, -<span class="Number">351.46404195</span>, -<span class="Number">292.18064276</span>]), <span class="ID">array</span>([  <span class="Number">4.60452808e+00</span>,   <span class="Number">1.07020174e+05</span>,  -<span class="Number">1.25310230e+05</span>]), <span class="ID">array</span>([  <span class="Number">2.16080134e+00</span>,   <span class="Number">5.12019937e+04</span>,  -<span class="Number">5.96167833e+04</span>]), <span class="ID">array</span>([  <span class="Number">2.65472146e+00</span>,   <span class="Number">6.70546443e+04</span>,  -<span class="Number">7.71619656e+04</span>]), <span class="ID">array</span>([  <span class="Number">1.55775358e+00</span>,  -<span class="Number">1.34347516e+05</span>,   <span class="Number">1.53209265e+05</span>]), <span class="ID">array</span>([   <span class="Number">13.22464295</span>,  <span class="Number">1869.01251292</span>, -<span class="Number">2137.61850989</span>]), <span class="ID">array</span>([ <span class="Number">12273.18670123</span>,  -<span class="Number">1233.32015854</span>,  <span class="Number">61690.10864825</span>])])</span>
+</pre></div></div><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line867">
+<h1 id="References">References</h1>
+<span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><ol type="1"><li><p class="line891"><a class="http" href="../../external.html?link=http://www.springerlink.com/content/hw0l2n1271260604/">Finding the nearest point in A polytope</a> <span class="anchor" id="line-78"></span></li><li><p class="line891"><a class="http" href="../../external.html?link=http://www.springerlink.com/content/j25702174115q68x/">A recursive algorithm for finding the minimum norm point in a polytope and a pair of closest points in two polytopes</a> <span class="anchor" id="line-79"></span></li></ol><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Finding_Convex_Hull_Minimum_Point37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Finding_Convex_Hull_Minimum_Point?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

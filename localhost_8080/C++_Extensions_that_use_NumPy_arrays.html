@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:05:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>C++_Extensions_that_use_NumPy_arrays - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: C++_Extensions_that_use_NumPy_arrays" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=C%2B%2B_Extensions_that_use_NumPy_arrays&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=print">
+<link rel="Appendix" title="ndarray.h" href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h">
+<link rel="Appendix" title="numpyctypes.py" href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="C%2b%2b_Extensions_that_use_NumPy_arrays456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a class="backlink" href="AllPages446e.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22C%2B%2B_Extensions_that_use_NumPy_arrays%22" rel="nofollow" title="Click to do a full-text search for this title">C++_Extensions_that_use_NumPy_arrays</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="C%2b%2b_Extensions_that_use_NumPy_arrays.html">C++_Extensi...umPy_arrays</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-6"></span>
+<h2 id="Writing_C.2B-.2B-_extensions_that_use_NumPy_arrays">Writing C++ extensions that use NumPy arrays</h2>
+<span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867">
+<h3 id="Some_basics">Some basics</h3>
+<span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">Passing numpy arrays to C++ using ctypes requires 3 steps: <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line874">1. In Python: make a ctypes object of the numpy array. For example: <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><pre><span class="anchor" id="line-1"></span>import numpy as N
+<span class="anchor" id="line-2"></span>from numpyctypes import c_ndarray
+<span class="anchor" id="line-3"></span>c_myarray = c_ndarray(myarray, dtype = N.double, ndim = 3)</pre><span class="anchor" id="line-18"></span><p class="line862">c_ndarray() checks if the given numpy array fulfills the requirements specified by the keyword parameters. The required <a class="attachment" href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py" title="">numpyctypes.py</a> module is attached to this wiki page. Use help(c_ndarray) to find out more. <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line874">2. In C++: the numpy arrays are converted to a C struct &quot;numpyArray&quot;: <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line867"><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-1-1"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-10b8f81d67b398b2739057f122019281ef4bdb75\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_1">   1</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_1"></span><span class="anchor" id="line-1-2"></span><span class="Preprc">#</span><span class="Preprc">include &lt;iostream&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_2">   2</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_2"></span><span class="anchor" id="line-2-1"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;ndarray.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_3">   3</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_3"></span><span class="anchor" id="line-3-1"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_4">   4</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">extern</span> <span class="String">&quot;</span><span class="String">C</span><span class="String">&quot;</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_5">   5</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_5"></span><span class="anchor" id="line-5-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_6">   6</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_6"></span><span class="anchor" id="line-6-1"></span><span class="ResWord">int</span> <span class="ID">myfunc</span>(<span class="ID">numpyArray</span>&lt;<span class="ResWord">double</span>&gt; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_7">   7</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_7"></span><span class="anchor" id="line-7-1"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_8">   8</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_8"></span><span class="anchor" id="line-8-1"></span><span class="Comment">// Do stuff</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_9">   9</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_9"></span><span class="anchor" id="line-9-1"></span><span class="Comment"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-10b8f81d67b398b2739057f122019281ef4bdb75_10">  10</a> </span><span class="LineAnchor" id="CA-10b8f81d67b398b2739057f122019281ef4bdb75_10"></span><span class="anchor" id="line-10-1"></span>}</span>
+</pre></div></div><span class="anchor" id="line-34"></span><p class="line862">It would be nice if the numpy array could be converted right away to a C++ array class, but unfortunately this is not possible. ctypes only understands C variables, and a C struct is the closest thing to a C++ class. The C++ header file <a class="attachment" href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h" title="">ndarray.h</a> contains the definition of &quot;numpyArray&quot; and is attached to this wiki page. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line874">3. In C++: convert the C struct &quot;numpyArray&quot; to a C++ &quot;Ndarray&quot; object. <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line867"><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-1-3"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_1">   1</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_1"></span><span class="anchor" id="line-1-4"></span><span class="Preprc">#</span><span class="Preprc">include &lt;iostream&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_2">   2</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_2"></span><span class="anchor" id="line-2-2"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;ndarray.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_3">   3</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_3"></span><span class="anchor" id="line-3-2"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_4">   4</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_4"></span><span class="anchor" id="line-4-2"></span><span class="ResWord">extern</span> <span class="String">&quot;</span><span class="String">C</span><span class="String">&quot;</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_5">   5</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_5"></span><span class="anchor" id="line-5-2"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_6">   6</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_6"></span><span class="anchor" id="line-6-2"></span><span class="ResWord">int</span> <span class="ID">myfunc</span>(<span class="ID">numpyArray</span>&lt;<span class="ResWord">double</span>&gt; <span class="ID">array</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_7">   7</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_7"></span><span class="anchor" id="line-7-2"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_8">   8</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_8"></span><span class="anchor" id="line-8-2"></span>    <span class="ID">Ndarray</span>&lt;<span class="ResWord">double</span>,<span class="Number">3</span>&gt; <span class="ID">a</span>(<span class="ID">array</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_9">   9</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_9"></span><span class="anchor" id="line-9-2"></span>   <span class="Comment">// Do stuff</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_10">  10</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_10"></span><span class="anchor" id="line-10-2"></span><span class="Comment"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_11">  11</a> </span><span class="LineAnchor" id="CA-a160f5eae93dc3d46dec8cf5778e3d30eb81099f_11"></span><span class="anchor" id="line-11-1"></span>}</span>
+</pre></div></div><span class="anchor" id="line-51"></span><p class="line874">Note that you need to know the number of dimensions (axes) of the array to define an &quot;Ndarray&quot; object. &quot;Ndarray&quot; is also defined in the C++ header file &quot;ndarray.h&quot;. What's the gain? When using a multidimensional numpy array in a C/C++ extension, you can't simply use a[i][j[k] to access an element. Instead, you need to compute the location of the element using strides info, e.g. a[i*strides[0]+j*strides[1]+k*strides[2]]. The reason for this is the way numpy internally stores an array. Such a way to access an element is rather cumbersome and inconvenient.  C++, however, allows to overload the [] operator to incorporate the strides information automatically. This is exactly what Ndarray does: a[i][j][k] is automatically converted to a[i*strides[0]+j*strides[1]+k*strides[2]] in a transparent way. The technique used is called template metaprogramming and it has the advantage that the conversion is done at compile time, not at runtime! <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
+<h3 id="A_worked_out_example">A worked out example</h3>
+<span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line874">myextension.py <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867"><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><pre><span class="anchor" id="line-1-1"></span>import numpy as N
+<span class="anchor" id="line-2-1"></span>from numpy.ctypeslib import load_library
+<span class="anchor" id="line-3-1"></span>from numpyctypes import c_ndarray
+<span class="anchor" id="line-4"></span>
+<span class="anchor" id="line-5"></span>mylib = load_library('libmyextension', '.')       # '.' is the directory of the C++ lib  
+<span class="anchor" id="line-6"></span>
+<span class="anchor" id="line-7"></span>def myfunc(array1, array2):
+<span class="anchor" id="line-8"></span>    arg1 = c_ndarray(array1, dtype=N.double, ndim = 3, shape = (4,3,2))
+<span class="anchor" id="line-9"></span>    arg2 = c_ndarray(array2, dtype=N.double, ndim = 3, shape = (4,3,2))
+<span class="anchor" id="line-10"></span>    return mylib.myfunc(arg1, arg2)</pre><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">myextension.cpp <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line867"><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-1-5"></span><div class="highlight cpp"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5c318ded647d9f64d57efa07bc7db3e016186ea5\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_1">   1</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_1"></span><span class="anchor" id="line-1-6"></span><span class="Preprc">#</span><span class="Preprc">include &lt;iostream&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_2">   2</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_2"></span><span class="anchor" id="line-2-3"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;ndarray.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_3">   3</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_3"></span><span class="anchor" id="line-3-3"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_4">   4</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_4"></span><span class="anchor" id="line-4-3"></span><span class="ResWord">extern</span> <span class="String">&quot;</span><span class="String">C</span><span class="String">&quot;</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_5">   5</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_5"></span><span class="anchor" id="line-5-3"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_6">   6</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_6"></span><span class="anchor" id="line-6-3"></span><span class="ResWord">int</span> <span class="ID">myfunc</span>(<span class="ID">numpyArray</span>&lt;<span class="ResWord">double</span>&gt; <span class="ID">array1</span>, <span class="ID">numpyArray</span>&lt;<span class="ResWord">double</span>&gt; <span class="ID">array2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_7">   7</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_7"></span><span class="anchor" id="line-7-3"></span>{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_8">   8</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_8"></span><span class="anchor" id="line-8-3"></span>    <span class="ID">Ndarray</span>&lt;<span class="ResWord">double</span>,<span class="Number">3</span>&gt; <span class="ID">a</span>(<span class="ID">array1</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_9">   9</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_9"></span><span class="anchor" id="line-9-3"></span>    <span class="ID">Ndarray</span>&lt;<span class="ResWord">double</span>,<span class="Number">3</span>&gt; <span class="ID">b</span>(<span class="ID">array2</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_10">  10</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_10"></span><span class="anchor" id="line-10-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_11">  11</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_11"></span><span class="anchor" id="line-11-2"></span>    <span class="ResWord">double</span> <span class="ID">sum</span>=<span class="Number">0.0</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_12">  12</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_13">  13</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_13"></span><span class="anchor" id="line-13-1"></span>    <span class="ResWord">for</span> (<span class="ResWord">int</span> <span class="ID">i</span> = <span class="Number">0</span>; <span class="ID">i</span> &lt; <span class="ID">a</span>.<span class="ID">getShape</span>(<span class="Number">0</span>); <span class="ID">i</span>++)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_14">  14</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_14"></span><span class="anchor" id="line-14-1"></span>    {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_15">  15</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_15"></span><span class="anchor" id="line-15-1"></span>        <span class="ResWord">for</span> (<span class="ResWord">int</span> <span class="ID">j</span> = <span class="Number">0</span>; <span class="ID">j</span> &lt; <span class="ID">a</span>.<span class="ID">getShape</span>(<span class="Number">1</span>); <span class="ID">j</span>++)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_16">  16</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_16"></span><span class="anchor" id="line-16-1"></span>        {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_17">  17</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_17"></span><span class="anchor" id="line-17-1"></span>            <span class="ResWord">for</span> (<span class="ResWord">int</span> <span class="ID">k</span> = <span class="Number">0</span>; <span class="ID">k</span> &lt; <span class="ID">a</span>.<span class="ID">getShape</span>(<span class="Number">2</span>); <span class="ID">k</span>++)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_18">  18</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_18"></span><span class="anchor" id="line-18-1"></span>            {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_19">  19</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_19"></span><span class="anchor" id="line-19-1"></span>                <span class="ID">a</span>[<span class="ID">i</span>][<span class="ID">j</span>][<span class="ID">k</span>] = <span class="Number">2.0</span> * <span class="ID">b</span>[<span class="ID">i</span>][<span class="ID">j</span>][<span class="ID">k</span>];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_20">  20</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_20"></span><span class="anchor" id="line-20-1"></span>                <span class="ID">sum</span> += <span class="ID">a</span>[<span class="ID">i</span>][<span class="ID">j</span>][<span class="ID">k</span>];</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_21">  21</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_21"></span><span class="anchor" id="line-21-1"></span>           }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_22">  22</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_22"></span><span class="anchor" id="line-22-1"></span>        }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_23">  23</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_23"></span><span class="anchor" id="line-23-1"></span>    }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_24">  24</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_24"></span><span class="anchor" id="line-24-1"></span>    <span class="ResWord">return</span> <span class="ID">sum</span>;    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_25">  25</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_25"></span><span class="anchor" id="line-25-1"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_26">  26</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_26"></span><span class="anchor" id="line-26-1"></span>} <span class="Comment">// end extern &quot;C&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_27">  27</a> </span><span class="LineAnchor" id="CA-5c318ded647d9f64d57efa07bc7db3e016186ea5_27"></span><span class="anchor" id="line-27-1"></span><span class="Comment"></span></span>
+</pre></div></div><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><p class="line874">myfunc() is extremely trivial, but it serves as an example. You need to compile myextension.cpp and make a shared library from it. The easiest way is to use Scons with the constructor file: <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><pre><span class="anchor" id="line-1-2"></span>env = Environment()
+<span class="anchor" id="line-2-2"></span>env.Replace(CFLAGS=['-O2','-Wall','-ansi','-pedantic'])
+<span class="anchor" id="line-3-2"></span>env.SharedLibrary(target='myextension', source=['myextension.cpp'])</pre><span class="anchor" id="line-109"></span><p class="line874">On a mac, this will create the myextension.dylib. <span class="anchor" id="line-110"></span>Now you can use myfunc in a python program: <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><pre><span class="anchor" id="line-1-3"></span>import numpy as N
+<span class="anchor" id="line-2-3"></span>from myextension import myfunc
+<span class="anchor" id="line-3-3"></span>
+<span class="anchor" id="line-4-1"></span>a = N.zeros((4,3,2))
+<span class="anchor" id="line-5-1"></span>b = N.arange(4*3*2).reshape(4,3,2) * 1.0     # double array !
+<span class="anchor" id="line-6-1"></span>s = myfunc(a,b)
+<span class="anchor" id="line-7-1"></span>print s, a, b</pre><span class="anchor" id="line-120"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: C++_Extensions_that_use_NumPy_arrays  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:05:23 GMT -->
+</html>
+

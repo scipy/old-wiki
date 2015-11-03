@@ -1,0 +1,289 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/CommTheory?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/CommTheory - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/CommTheory" href="../../external.html?link=http://localhost:8080/Cookbook/CommTheory?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FCommTheory&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/CommTheory?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/CommTheory?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="BPSK_BER.PNG" href="CommTheory28ee.html?action=AttachFile&amp;do=view&amp;target=BPSK_BER.PNG">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/CommTheory">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="CommTheory456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="CommTheoryd2d3.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FCommTheory%22" rel="nofollow" title="Click to do a full-text search for this title">CommTheory</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="CommTheory.html">Cookbook/CommTheory</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CommTheory37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/CommTheory">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">These two examples illustrate simple simulation of a digital BPSK modulated communication system where only one sample per symbol is used, and signal is affected only by AWGN noise. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">In the first example, we cycle through different signal to noise values, and the signal length is a function of theoretical probability of error. As a rule of thumb, we want to count about 100 errors for each SNR value, which determines the length of the signal (and noise) vector(s). <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-71a0a7726f8d86b42b5757982a18caa9c9ea62d4" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment">#!/usr/bin/python</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="Comment"># BPSK digital modulation example</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="Comment"># by Ivo Maljevic</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ResWord">from</span> <span class="ID">scipy.special</span> <span class="ResWord">import</span> <span class="ID">erfc</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">SNR_MIN</span>     = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">SNR_MAX</span>     = <span class="Number">9</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">Eb_No_dB</span>    = <span class="ID">arange</span>(<span class="ID">SNR_MIN</span>,<span class="ID">SNR_MAX</span>+<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ID">SNR</span>         = <span class="Number">10</span>**(<span class="ID">Eb_No_dB</span>/<span class="Number">10.0</span>)  <span class="Comment"># linear SNR</span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">Pe</span>          = <span class="ID">empty</span>(<span class="ID">shape</span>(<span class="ID">SNR</span>))</span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">BER</span>         = <span class="ID">empty</span>(<span class="ID">shape</span>(<span class="ID">SNR</span>))</span>
+<span class="line"><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ID">loop</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ResWord">for</span> <span class="ID">snr</span> <span class="ResWord">in</span> <span class="ID">SNR</span>:      <span class="Comment"># SNR loop</span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span> <span class="ID">Pe</span>[<span class="ID">loop</span>] = <span class="Number">0.5</span>*<span class="ID">erfc</span>(<span class="ID">sqrt</span>(<span class="ID">snr</span>))</span>
+<span class="line"><span class="anchor" id="line-20-1"></span> <span class="ID">VEC_SIZE</span> = <span class="ID">ceil</span>(<span class="Number">100</span>/<span class="ID">Pe</span>[<span class="ID">loop</span>])  <span class="Comment"># vector length is a function of Pe</span></span>
+<span class="line"><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span> <span class="Comment"># signal vector, new vector for each SNR value</span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span> <span class="ID">s</span> = <span class="Number">2</span>*<span class="ID">random</span>.<span class="ID">randint</span>(<span class="Number">0</span>,<span class="ID">high</span>=<span class="Number">2</span>,<span class="ID">size</span>=<span class="ID">VEC_SIZE</span>)-<span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span> <span class="Comment"># linear power of the noise; average signal power = 1</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span> <span class="ID">No</span> = <span class="Number">1.0</span>/<span class="ID">snr</span></span>
+<span class="line"><span class="anchor" id="line-27-1"></span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span> <span class="Comment"># noise</span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span> <span class="ID">n</span> = <span class="ID">sqrt</span>(<span class="ID">No</span>/<span class="Number">2</span>)*<span class="ID">random</span>.<span class="ID">randn</span>(<span class="ID">VEC_SIZE</span>)</span>
+<span class="line"><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="anchor" id="line-31-1"></span> <span class="Comment"># signal + noise</span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span> <span class="ID">x</span> = <span class="ID">s</span> + <span class="ID">n</span></span>
+<span class="line"><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span> <span class="Comment"># decode received signal + noise</span></span>
+<span class="line"><span class="anchor" id="line-35-1"></span> <span class="ID">y</span> = <span class="ID">sign</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="anchor" id="line-36-1"></span></span>
+<span class="line"><span class="anchor" id="line-37-1"></span> <span class="Comment"># find erroneous symbols</span></span>
+<span class="line"><span class="anchor" id="line-38-1"></span> <span class="ID">err</span> = <span class="ID">where</span>(<span class="ID">y</span> != <span class="ID">s</span>)</span>
+<span class="line"><span class="anchor" id="line-39-1"></span> <span class="ID">error_sum</span> = <span class="ResWord">float</span>(<span class="ResWord">len</span>(<span class="ID">err</span>[<span class="Number">0</span>]))</span>
+<span class="line"><span class="anchor" id="line-40-1"></span> <span class="ID">BER</span>[<span class="ID">loop</span>] = <span class="ID">error_sum</span>/<span class="ID">VEC_SIZE</span></span>
+<span class="line"><span class="anchor" id="line-41-1"></span> <span class="ResWord">print</span> <span class="String">'</span><span class="String">Eb_No_dB=</span><span class="String">%4.2f</span><span class="String">, BER=</span><span class="String">%10.4e</span><span class="String">, Pe=</span><span class="String">%10.4e</span><span class="String">'</span> % \</span>
+<span class="line"><span class="anchor" id="line-42-1"></span>        (<span class="ID">Eb_No_dB</span>[<span class="ID">loop</span>], <span class="ID">BER</span>[<span class="ID">loop</span>], <span class="ID">Pe</span>[<span class="ID">loop</span>])</span>
+<span class="line"><span class="anchor" id="line-43-1"></span> <span class="ID">loop</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-44-1"></span></span>
+<span class="line"><span class="anchor" id="line-45-1"></span><span class="Comment">#plt.semilogy(Eb_No_dB, Pe,'r',Eb_No_dB, BER,'s')</span></span>
+<span class="line"><span class="anchor" id="line-46-1"></span><span class="ID">plt</span>.<span class="ID">semilogy</span>(<span class="ID">Eb_No_dB</span>, <span class="ID">Pe</span>,<span class="String">'</span><span class="String">r</span><span class="String">'</span>,<span class="ID">linewidth</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-47-1"></span><span class="ID">plt</span>.<span class="ID">semilogy</span>(<span class="ID">Eb_No_dB</span>, <span class="ID">BER</span>,<span class="String">'</span><span class="String">-s</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-48-1"></span><span class="ID">plt</span>.<span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="anchor" id="line-49-1"></span><span class="ID">plt</span>.<span class="ID">legend</span>((<span class="String">'</span><span class="String">analytical</span><span class="String">'</span>,<span class="String">'</span><span class="String">simulation</span><span class="String">'</span>))</span>
+<span class="line"><span class="anchor" id="line-50-1"></span><span class="ID">plt</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Eb/No (dB)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-51-1"></span><span class="ID">plt</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">BER</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-52-1"></span><span class="ID">plt</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line874">In the second, slightly modified example, the problem of signal length growth is solved by braking a signal into frames.Namely, the number of samples for a given SNR grows quickly, so that the simulation above is not practical for Eb/No values greater than 9 or 10 dB. <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line867"><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-e88e88aef70a6909ef6786ccf6608a53bd71e243" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="Comment">#!/usr/bin/python</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="Comment"># BPSK digital modulation: modified example</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="Comment"># by Ivo Maljevic</span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ResWord">from</span> <span class="ID">math</span> <span class="ResWord">import</span> <span class="ID">sqrt</span>, <span class="ID">ceil</span>  <span class="Comment"># scalar calls are faster</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ResWord">from</span> <span class="ID">scipy.special</span> <span class="ResWord">import</span> <span class="ID">erfc</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span></span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ID">rand</span>   = <span class="ID">random</span>.<span class="ID">rand</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span><span class="ID">normal</span> = <span class="ID">random</span>.<span class="ID">normal</span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span></span>
+<span class="line"><span class="anchor" id="line-13-2"></span><span class="ID">SNR_MIN</span>   = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-14-2"></span><span class="ID">SNR_MAX</span>   = <span class="Number">10</span></span>
+<span class="line"><span class="anchor" id="line-15-2"></span><span class="ID">FrameSize</span> = <span class="Number">10000</span></span>
+<span class="line"><span class="anchor" id="line-16-2"></span><span class="ID">Eb_No_dB</span>  = <span class="ID">arange</span>(<span class="ID">SNR_MIN</span>,<span class="ID">SNR_MAX</span>+<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-17-2"></span><span class="ID">Eb_No_lin</span> = <span class="Number">10</span>**(<span class="ID">Eb_No_dB</span>/<span class="Number">10.0</span>)  <span class="Comment"># linear SNR</span></span>
+<span class="line"><span class="anchor" id="line-18-2"></span></span>
+<span class="line"><span class="anchor" id="line-19-2"></span><span class="Comment"># Allocate memory</span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="ID">Pe</span>        = <span class="ID">empty</span>(<span class="ID">shape</span>(<span class="ID">Eb_No_lin</span>))</span>
+<span class="line"><span class="anchor" id="line-21-2"></span><span class="ID">BER</span>       = <span class="ID">empty</span>(<span class="ID">shape</span>(<span class="ID">Eb_No_lin</span>))</span>
+<span class="line"><span class="anchor" id="line-22-2"></span></span>
+<span class="line"><span class="anchor" id="line-23-2"></span><span class="Comment"># signal vector (for faster exec we can repeat the same frame)</span></span>
+<span class="line"><span class="anchor" id="line-24-2"></span><span class="ID">s</span> = <span class="Number">2</span>*<span class="ID">random</span>.<span class="ID">randint</span>(<span class="Number">0</span>,<span class="ID">high</span>=<span class="Number">2</span>,<span class="ID">size</span>=<span class="ID">FrameSize</span>)-<span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-25-2"></span></span>
+<span class="line"><span class="anchor" id="line-26-2"></span><span class="ID">loop</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-27-2"></span><span class="ResWord">for</span> <span class="ID">snr</span> <span class="ResWord">in</span> <span class="ID">Eb_No_lin</span>:</span>
+<span class="line"><span class="anchor" id="line-28-2"></span> <span class="ID">No</span>        = <span class="Number">1.0</span>/<span class="ID">snr</span></span>
+<span class="line"><span class="anchor" id="line-29-2"></span> <span class="ID">Pe</span>[<span class="ID">loop</span>]  = <span class="Number">0.5</span>*<span class="ID">erfc</span>(<span class="ID">sqrt</span>(<span class="ID">snr</span>))</span>
+<span class="line"><span class="anchor" id="line-30-2"></span> <span class="ID">nFrames</span>   = <span class="ID">ceil</span>(<span class="Number">100.0</span>/<span class="ID">FrameSize</span>/<span class="ID">Pe</span>[<span class="ID">loop</span>])</span>
+<span class="line"><span class="anchor" id="line-31-2"></span> <span class="ID">error_sum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-32-2"></span> <span class="ID">scale</span> = <span class="ID">sqrt</span>(<span class="ID">No</span>/<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-33-2"></span></span>
+<span class="line"><span class="anchor" id="line-34-2"></span> <span class="ResWord">for</span> <span class="ID">frame</span> <span class="ResWord">in</span> <span class="ID">arange</span>(<span class="ID">nFrames</span>):</span>
+<span class="line"><span class="anchor" id="line-35-2"></span>   <span class="Comment"># noise</span></span>
+<span class="line"><span class="anchor" id="line-36-2"></span>   <span class="ID">n</span> = <span class="ID">normal</span>(<span class="ID">scale</span>=<span class="ID">scale</span>, <span class="ID">size</span>=<span class="ID">FrameSize</span>)</span>
+<span class="line"><span class="anchor" id="line-37-2"></span></span>
+<span class="line"><span class="anchor" id="line-38-2"></span>   <span class="Comment"># received signal + noise</span></span>
+<span class="line"><span class="anchor" id="line-39-2"></span>   <span class="ID">x</span> = <span class="ID">s</span> + <span class="ID">n</span></span>
+<span class="line"><span class="anchor" id="line-40-2"></span></span>
+<span class="line"><span class="anchor" id="line-41-2"></span>   <span class="Comment"># detection (information is encoded in signal phase)</span></span>
+<span class="line"><span class="anchor" id="line-42-2"></span>   <span class="ID">y</span> = <span class="ID">sign</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="anchor" id="line-43-2"></span></span>
+<span class="line"><span class="anchor" id="line-44-2"></span>   <span class="Comment"># error counting</span></span>
+<span class="line"><span class="anchor" id="line-45-2"></span>   <span class="ID">err</span> = <span class="ID">where</span> (<span class="ID">y</span> != <span class="ID">s</span>)</span>
+<span class="line"><span class="anchor" id="line-46-2"></span>   <span class="ID">error_sum</span> += <span class="ResWord">len</span>(<span class="ID">err</span>[<span class="Number">0</span>])</span>
+<span class="line"><span class="anchor" id="line-47-2"></span></span>
+<span class="line"><span class="anchor" id="line-48-2"></span>   <span class="Comment"># end of frame loop</span></span>
+<span class="line"><span class="anchor" id="line-49-2"></span>   <span class="Comment">##################################################</span></span>
+<span class="line"><span class="anchor" id="line-50-2"></span></span>
+<span class="line"><span class="anchor" id="line-51-2"></span> <span class="ID">BER</span>[<span class="ID">loop</span>] = <span class="ID">error_sum</span>/(<span class="ID">FrameSize</span>*<span class="ID">nFrames</span>)  <span class="Comment"># SNR loop level</span></span>
+<span class="line"><span class="anchor" id="line-52-2"></span> <span class="ResWord">print</span> <span class="String">'</span><span class="String">Eb_No_dB=</span><span class="String">%2d</span><span class="String">, BER=</span><span class="String">%10.4e</span><span class="String">, Pe[loop]=</span><span class="String">%10.4e</span><span class="String">'</span> % \</span>
+<span class="line"><span class="anchor" id="line-53-1"></span>        (<span class="ID">Eb_No_dB</span>[<span class="ID">loop</span>], <span class="ID">BER</span>[<span class="ID">loop</span>], <span class="ID">Pe</span>[<span class="ID">loop</span>])</span>
+<span class="line"><span class="anchor" id="line-54-1"></span> <span class="ID">loop</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-55-1"></span></span>
+<span class="line"><span class="anchor" id="line-56-1"></span><span class="ID">plt</span>.<span class="ID">semilogy</span>(<span class="ID">Eb_No_dB</span>, <span class="ID">Pe</span>,<span class="String">'</span><span class="String">r</span><span class="String">'</span>,<span class="ID">linewidth</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-57-1"></span><span class="ID">plt</span>.<span class="ID">semilogy</span>(<span class="ID">Eb_No_dB</span>, <span class="ID">BER</span>,<span class="String">'</span><span class="String">-s</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-58-1"></span><span class="ID">plt</span>.<span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="anchor" id="line-59-1"></span><span class="ID">plt</span>.<span class="ID">legend</span>((<span class="String">'</span><span class="String">analytical</span><span class="String">'</span>,<span class="String">'</span><span class="String">simulation</span><span class="String">'</span>))</span>
+<span class="line"><span class="anchor" id="line-60-1"></span><span class="ID">plt</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Eb/No (dB)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-61-1"></span><span class="ID">plt</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">BER</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-62-1"></span><span class="ID">plt</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><p class="line867"><img alt="BPSK_BER.PNG" class="attachment" src="BPSK_BERbe21.PNG?action=AttachFile&amp;do=get&amp;target=BPSK_BER.PNG" title="BPSK_BER.PNG" /> <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-131"></span><ul><li style="list-style-type:none"><p class="line891"><a href="../CategoryCookbook.html"><strong class="highlight">CategoryCookbook</strong></a> <span class="anchor" id="line-132"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/CommTheory  (last edited 2015-10-24 17:48:25 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CommTheory37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/CommTheory">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/CommTheory?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+</html>
+

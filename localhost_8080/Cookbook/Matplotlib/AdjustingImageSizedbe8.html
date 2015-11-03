@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/AdjustingImageSize - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/AdjustingImageSize" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FAdjustingImageSize&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="MPL_size_test.py" href="AdjustingImageSized037.html?action=AttachFile&amp;do=view&amp;target=MPL_size_test.py">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="AdjustingImageSize456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="AdjustingImageSize9f0d.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FAdjustingImageSize%22" rel="nofollow" title="Click to do a full-text search for this title">AdjustingImageSize</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="AdjustingImageSize.html">AdjustingImageSize</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="AdjustingImageSize.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="AdjustingImageSize37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">This is a small demo file that helps teach how to adjust figure sizes for matplotlib <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="First_a_little_introduction">First a little introduction</h1>
+<span class="anchor" id="line-4"></span><p class="line867">
+<h2 id="There_are_three_parameters_define_an_image_size_.28this_is_not_MPL_specific.29:">There are three parameters define an image size (this is not MPL specific):</h2>
+<span class="anchor" id="line-5"></span><ul><li>Size in length units (inches, cm, pt, etc): e.g. 5&quot;x7&quot; <span class="anchor" id="line-6"></span></li><li>Size in pixels: e.g. 800x600 pixels <span class="anchor" id="line-7"></span></li><li>Dots per inch (dpi) e.g. 100 dpi <span class="anchor" id="line-8"></span></li></ul><p class="line874">Only two of these are independent, so if you define two of them, the third can be calculated from the others. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">When displaying on a computer screen (or saved to a PNG), the size in length units is irrelevant, the pixels are simply displayed. When printed, or saved to PS, EPS or PDF (all designed to support printing), then the Size or dpi is used to determine how to scale the image. <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867">
+<h2 id="Now_I.27m_getting_into_how_MPL_works">Now I'm getting into how MPL works</h2>
+<span class="anchor" id="line-13"></span><ul><li style="list-style-type:none"><p class="line862">1) The size of a figure is defined in length units (inches), and can be set by <tt>Figure.set_figsize_inches(&nbsp;(w,h)&nbsp;)</tt> <span class="anchor" id="line-14"></span></li><li style="list-style-type:none">2) The layout of the figure is defined in 'figure units' so that as the figure size is changed, the layout (eg axes positions) will update. <span class="anchor" id="line-15"></span></li><li style="list-style-type:none">3) Size of text, width of lines, etc is defined in terms of length units (points?). <span class="anchor" id="line-16"></span></li><li style="list-style-type:none"><p class="line862">4) When displaying to the screen, or creating an image (PNG) the pixel size of text and line widths, etc is  determined by the dpi setting, which is set by <tt>Figure.set_dpi(&nbsp;val&nbsp;)</tt> <span class="anchor" id="line-17"></span></li></ul><p class="line874">The trick here is that when printing, it's natural to think in terms of inches, but when creating an image (for a web page, for instance), it is natural to think in terms of pixel size. However, as of 0.84, pixel size can only be set directly in the GTK* back-ends, with the canvas.resize(w,h) method. (remember that you can only set two of the three size parameters, the third must be calculated from the other two). <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867">
+<h1 id="Another_trick">Another trick</h1>
+<span class="anchor" id="line-20"></span><p class="line862">Figure.savefig() overrides the dpi setting in figure, and uses a default (which on my system at least is 100 dpi). If you want to overide it, you can specify the 'dpi' in the savefig call: <tt>Figure.savefig(filename,&nbsp;dpi=value)</tt> <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">The following code will hopefully make this more clear, at least for generating PNGs for web pages and the like. <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867"><a class="attachment" href="AdjustingImageSized037.html?action=AttachFile&amp;do=view&amp;target=MPL_size_test.py" title="">MPL_size_test.py</a> <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line867"><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-f0b8d448785d49190648007e67b92158038550cf\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-f0b8d448785d49190648007e67b92158038550cf" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_1">   1</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_1"></span><span class="anchor" id="line-1-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_2">   2</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_2"></span><span class="anchor" id="line-2-1"></span><span class="String">This is a small demo file that helps teach how to adjust figure sizes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_3">   3</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_3"></span><span class="anchor" id="line-3-1"></span><span class="String">for matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_4">   4</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_4"></span><span class="anchor" id="line-4-1"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_5">   5</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_5"></span><span class="anchor" id="line-5-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_6">   6</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_6"></span><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_7">   7</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_7"></span><span class="anchor" id="line-7-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_8">   8</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">using MPL version:</span><span class="String">&quot;</span>, <span class="ID">matplotlib</span>.<span class="ID">__version__</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_9">   9</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">&quot;</span><span class="String">WXAgg</span><span class="String">&quot;</span>) <span class="Comment"># do this before pylab so you don'tget the default back end.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_10">  10</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_10"></span><span class="anchor" id="line-10-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_11">  11</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_11"></span><span class="anchor" id="line-11-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_12">  12</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_12"></span><span class="anchor" id="line-12-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.numerix</span> <span class="ResWord">as</span> <span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_13">  13</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_13"></span><span class="anchor" id="line-13-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_14">  14</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_14"></span><span class="anchor" id="line-14-1"></span><span class="Comment"># Generate and plot some simple data:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_15">  15</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">x</span> = <span class="ID">N</span>.<span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">2</span>*<span class="ID">N</span>.<span class="ID">pi</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_16">  16</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">y</span> = <span class="ID">N</span>.<span class="ID">sin</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_17">  17</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_17"></span><span class="anchor" id="line-17-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_18">  18</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_18"></span><span class="anchor" id="line-18-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">x</span>,<span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_19">  19</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">F</span> = <span class="ID">pylab</span>.<span class="ID">gcf</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_20">  20</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_20"></span><span class="anchor" id="line-20-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_21">  21</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_21"></span><span class="anchor" id="line-21-1"></span><span class="Comment"># Now check everything with the defaults:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_22">  22</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_22"></span><span class="anchor" id="line-22-1"></span><span class="ID">DPI</span> = <span class="ID">F</span>.<span class="ID">get_dpi</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_23">  23</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_23"></span><span class="anchor" id="line-23-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">DPI:</span><span class="String">&quot;</span>, <span class="ID">DPI</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_24">  24</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">DefaultSize</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_25">  25</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_25"></span><span class="anchor" id="line-25-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Default size in Inches</span><span class="String">&quot;</span>, <span class="ID">DefaultSize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_26">  26</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_26"></span><span class="anchor" id="line-26-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Which should result in a </span><span class="String">%i</span><span class="String"> x </span><span class="String">%i</span><span class="String"> Image</span><span class="String">&quot;</span>%(<span class="ID">DPI</span>*<span class="ID">DefaultSize</span>[<span class="Number">0</span>], <span class="ID">DPI</span>*<span class="ID">DefaultSize</span>[<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_27">  27</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_27"></span><span class="anchor" id="line-27-1"></span><span class="Comment"># the default is 100dpi for savefig:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_28">  28</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_28"></span><span class="anchor" id="line-28-1"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test1.png</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_29">  29</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_29"></span><span class="anchor" id="line-29-1"></span><span class="Comment"># this gives me a 797 x 566 pixel image, which is about 100 DPI</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_30">  30</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_30"></span><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_31">  31</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_31"></span><span class="anchor" id="line-31-1"></span><span class="Comment"># Now make the image twice as big, while keeping the fonts and all the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_32">  32</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_32"></span><span class="anchor" id="line-32-1"></span><span class="Comment"># same size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_33">  33</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_33"></span><span class="anchor" id="line-33-1"></span><span class="ID">F</span>.<span class="ID">set_figsize_inches</span>( (<span class="ID">DefaultSize</span>[<span class="Number">0</span>]*<span class="Number">2</span>, <span class="ID">DefaultSize</span>[<span class="Number">1</span>]*<span class="Number">2</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_34">  34</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">Size</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_35">  35</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_35"></span><span class="anchor" id="line-35-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Size in Inches</span><span class="String">&quot;</span>, <span class="ID">Size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_36">  36</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_36"></span><span class="anchor" id="line-36-1"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test2.png</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_37">  37</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_37"></span><span class="anchor" id="line-37-1"></span><span class="Comment"># this results in a 1595x1132 image</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_38">  38</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_38"></span><span class="anchor" id="line-38-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_39">  39</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_39"></span><span class="anchor" id="line-39-1"></span><span class="Comment"># Now make the image twice as big, making all the fonts and lines</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_40">  40</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_40"></span><span class="anchor" id="line-40-1"></span><span class="Comment"># bigger too.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_41">  41</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_41"></span><span class="anchor" id="line-41-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_42">  42</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_42"></span><span class="anchor" id="line-42-1"></span><span class="ID">F</span>.<span class="ID">set_figsize_inches</span>( <span class="ID">DefaultSize</span> )<span class="Comment"># resetthe size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_43">  43</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_43"></span><span class="anchor" id="line-43-1"></span><span class="ID">Size</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_44">  44</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_44"></span><span class="anchor" id="line-44-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Size in Inches</span><span class="String">&quot;</span>, <span class="ID">Size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_45">  45</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_45"></span><span class="anchor" id="line-45-1"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test3.png</span><span class="String">&quot;</span>, <span class="ID">dpi</span> = (<span class="Number">200</span>)) <span class="Comment"># change the dpi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f0b8d448785d49190648007e67b92158038550cf_46">  46</a> </span><span class="LineAnchor" id="CA-f0b8d448785d49190648007e67b92158038550cf_46"></span><span class="anchor" id="line-46-1"></span><span class="Comment"># this also results in a 1595x1132 image, but the fonts are larger.</span></span>
+</pre></div></div><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line867">
+<h1 id="Putting_more_than_one_image_in_a_figure">Putting more than one image in a figure</h1>
+<span class="anchor" id="line-80"></span><p class="line874">Suppose you have two images: 100x100 and 100x50 that you want to display in a figure with a buffer of 20 pixels (relative to image pixels) between them and a border of 10 pixels all around. <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line874">The solution isn't particularly object oriented, but at least it gets to the practical details. <span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line867"><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_1">   1</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">def</span> <span class="ID">_calcsize</span>(<span class="ID">matrix1</span>, <span class="ID">matrix2</span>, <span class="ID">top</span>=<span class="Number">10</span>, <span class="ID">left</span>=<span class="Number">10</span>, <span class="ID">right</span>=<span class="Number">10</span>, <span class="ID">bottom</span>=<span class="Number">10</span>, <span class="ResWord">buffer</span>=<span class="Number">20</span>, <span class="ID">height</span>=<span class="Number">4</span>, <span class="ID">scale</span> = <span class="Number">1.</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_2">   2</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_2"></span><span class="anchor" id="line-2-2"></span>   <span class="ID">size1</span> = <span class="ID">array</span>(<span class="ID">matrix1</span>.<span class="ID">shape</span>) * <span class="ID">scale</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_3">   3</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_3"></span><span class="anchor" id="line-3-2"></span>   <span class="ID">size2</span> = <span class="ID">array</span>(<span class="ID">matrix2</span>.<span class="ID">shape</span>) * <span class="ID">scale</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_4">   4</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_4"></span><span class="anchor" id="line-4-2"></span>   <span class="ID">_width</span> = <span class="ResWord">float</span>(<span class="ID">size1</span>[<span class="Number">1</span>] + <span class="ID">size2</span>[<span class="Number">1</span>] + <span class="ID">left</span> + <span class="ID">right</span> + <span class="ResWord">buffer</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_5">   5</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_5"></span><span class="anchor" id="line-5-2"></span>   <span class="ID">_height</span> = <span class="ResWord">float</span>(<span class="ResWord">max</span>(<span class="ID">size1</span>[<span class="Number">0</span>], <span class="ID">size2</span>[<span class="Number">0</span>]) + <span class="ID">top</span> + <span class="ID">bottom</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_6">   6</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_6"></span><span class="anchor" id="line-6-2"></span>   <span class="ID">x1</span> = <span class="ID">left</span> / <span class="ID">_width</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_7">   7</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_7"></span><span class="anchor" id="line-7-2"></span>   <span class="ID">y1</span> = <span class="ID">bottom</span> / <span class="ID">_height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_8">   8</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_8"></span><span class="anchor" id="line-8-2"></span>   <span class="ID">dx1</span> = <span class="ID">size1</span>[<span class="Number">1</span>] / <span class="ID">_width</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_9">   9</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_9"></span><span class="anchor" id="line-9-2"></span>   <span class="ID">dy1</span> = <span class="ID">size1</span>[<span class="Number">0</span>] / <span class="ID">_height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_10">  10</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_10"></span><span class="anchor" id="line-10-2"></span>   <span class="ID">size1</span> = (<span class="ID">x1</span>, <span class="ID">y1</span>, <span class="ID">dx1</span>, <span class="ID">dy1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_11">  11</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_11"></span><span class="anchor" id="line-11-2"></span>   <span class="ID">x2</span> = (<span class="ID">size1</span>[<span class="Number">1</span>] + <span class="ID">left</span> + <span class="ResWord">buffer</span>) / <span class="ID">_width</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_12">  12</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_12"></span><span class="anchor" id="line-12-2"></span>   <span class="ID">y2</span> = <span class="ID">bottom</span> / <span class="ID">_height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_13">  13</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_13"></span><span class="anchor" id="line-13-2"></span>   <span class="ID">dx2</span> = <span class="ID">size2</span>[<span class="Number">1</span>] / <span class="ID">_width</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_14">  14</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_14"></span><span class="anchor" id="line-14-2"></span>   <span class="ID">dy2</span> = <span class="ID">size2</span>[<span class="Number">0</span>] / <span class="ID">_height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_15">  15</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_15"></span><span class="anchor" id="line-15-2"></span>   <span class="ID">size2</span> = (<span class="ID">x2</span>, <span class="ID">y2</span>, <span class="ID">dx2</span>, <span class="ID">dy2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_16">  16</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_16"></span><span class="anchor" id="line-16-2"></span>   <span class="ID">figure</span> = <span class="ID">pylab</span>.<span class="ID">figure</span>(<span class="ID">figsize</span>=(<span class="ID">_width</span> * <span class="ID">height</span> / <span class="ID">_height</span>, <span class="ID">height</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_17">  17</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_17"></span><span class="anchor" id="line-17-2"></span>   <span class="ID">axis1</span> = <span class="ResWord">apply</span>(<span class="ID">pylab</span>.<span class="ID">axes</span>, <span class="ID">size1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_18">  18</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_18"></span><span class="anchor" id="line-18-2"></span>   <span class="ID">pylab</span>.<span class="ID">imshow</span>(<span class="ID">X1</span>, <span class="ID">aspect</span>=<span class="String">'</span><span class="String">preserve</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_19">  19</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_19"></span><span class="anchor" id="line-19-2"></span>   <span class="ID">axis2</span> = <span class="ResWord">apply</span>(<span class="ID">pylab</span>.<span class="ID">axes</span>, <span class="ID">size2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_20">  20</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_20"></span><span class="anchor" id="line-20-2"></span>   <span class="ID">pylab</span>.<span class="ID">imshow</span>(<span class="ID">X2</span>, <span class="ID">aspect</span>=<span class="String">'</span><span class="String">preserve</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_21">  21</a> </span><span class="LineAnchor" id="CA-a5ef672b85a2f12101694d6bcb98934b0cfd71b3_21"></span><span class="anchor" id="line-21-2"></span>   <span class="ResWord">return</span> <span class="ID">axes1</span>, <span class="ID">axes2</span>, <span class="ID">figure</span></span>
+</pre></div></div><span class="anchor" id="line-108"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-109"></span><ul><li style="list-style-type:none"><p class="line891"><a href="../../CategoryCookbookMatplotlib.html">CategoryCookbookMatplotlib</a> <span class="anchor" id="line-110"></span></li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="AdjustingImageSize37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

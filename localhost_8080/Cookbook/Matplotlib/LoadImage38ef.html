@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/LoadImage?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/LoadImage - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/LoadImage" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FLoadImage&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="LoadImage456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="LoadImage5c48.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FLoadImage%22" rel="nofollow" title="Click to do a full-text search for this title">LoadImage</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="LoadImage.html">LoadImage</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LoadImage37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Image processing often works on gray scale images that were stored as PNG files. How do we import / export that file into <tt>python</tt>? <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><ul><li><p class="line862">Here is a recipy to do this with Matplotlib using the <tt>imread</tt> function (your image is called <tt>lena.png</tt>). <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_1">   1</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">imread</span>, <span class="ID">imshow</span>, <span class="ID">gray</span>, <span class="ID">mean</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_2">   2</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_2"></span><span class="anchor" id="line-2-1"></span><span class="ID">a</span> = <span class="ID">imread</span>(<span class="String">'</span><span class="String">lena.png</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_3">   3</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment">#generates a RGB image, so do</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_4">   4</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">aa</span>=<span class="ID">mean</span>(<span class="ID">a</span>,<span class="Number">2</span>) <span class="Comment"># to get a 2-D array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_5">   5</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">imshow</span>(<span class="ID">aa</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_6">   6</a> </span><span class="LineAnchor" id="CA-a1f2dd6771325b1b71b162638d1766a0cbe1ff16_6"></span><span class="anchor" id="line-6-1"></span><span class="ID">gray</span>()</span>
+</pre></div></div><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></li></ul><p class="line874">This permits to do some processing for further exporting such as for <span class="anchor" id="line-14"></span><a href="converting_a_matrix_to_a_raster_image.html">converting a matrix to a raster image</a>. In the newest version of pylab (check that your <tt>pylab.matplotlib.__version__</tt> is superior to <tt>'0.98.0'</tt>) you get directly a 2D numpy array if the image is grayscale. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><ul><li><p class="line862">to write an image, do <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-889c71f7532d1f2526fa30ef67b0db92448b8da4\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_1">   1</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">import</span> <span class="ID">Image</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_2">   2</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">mode</span> = <span class="String">'</span><span class="String">L</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_3">   3</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_3"></span><span class="anchor" id="line-3-2"></span><span class="ID">size</span>= (<span class="Number">256</span>, <span class="Number">256</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_4">   4</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">imNew</span>=<span class="ID">Image</span>.<span class="ID">new</span>(<span class="ID">mode</span> , <span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_5">   5</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_5"></span><span class="anchor" id="line-5-2"></span><span class="ID">mat</span> = <span class="ID">numpy</span>.<span class="ID">random</span>.<span class="ID">uniform</span>(<span class="ID">size</span> = <span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_6">   6</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_6"></span><span class="anchor" id="line-6-2"></span><span class="ID">data</span> = <span class="ID">numpy</span>.<span class="ID">ravel</span>(<span class="ID">mat</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_7">   7</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">data</span> = <span class="ID">numpy</span>.<span class="ID">floor</span>(<span class="ID">data</span> * <span class="Number">256</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_8">   8</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_8"></span><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_9">   9</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">imNew</span>.<span class="ID">putdata</span>(<span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_10">  10</a> </span><span class="LineAnchor" id="CA-889c71f7532d1f2526fa30ef67b0db92448b8da4_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">imNew</span>.<span class="ID">save</span>(<span class="String">&quot;</span><span class="String">rand.png</span><span class="String">&quot;</span>)</span>
+</pre></div></div><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li><li class="gap"><p class="line862">this kind of functions live also under <tt>scipy.misc</tt>, see for instance <tt>scipy.misc.imsave</tt> to create a color image:<span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_1">   1</a> </span><span class="LineAnchor" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">from</span> <span class="ID">scipy.misc</span> <span class="ResWord">import</span> <span class="ID">imsave</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_2">   2</a> </span><span class="LineAnchor" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_2"></span><span class="anchor" id="line-2-3"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_3">   3</a> </span><span class="LineAnchor" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_3"></span><span class="anchor" id="line-3-3"></span><span class="ID">a</span> = <span class="ID">numpy</span>.<span class="ID">zeros</span>((<span class="Number">4</span>,<span class="Number">4</span>,<span class="Number">3</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_4">   4</a> </span><span class="LineAnchor" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_4"></span><span class="anchor" id="line-4-3"></span><span class="ID">a</span>[<span class="Number">0</span>,<span class="Number">0</span>,:] = [<span class="Number">128</span>, <span class="Number">0</span> , <span class="Number">255</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_5">   5</a> </span><span class="LineAnchor" id="CA-9ba051404fa537afa6263c97bcd5be89da9fb4e3_5"></span><span class="anchor" id="line-5-3"></span><span class="ID">imsave</span>(<span class="String">'</span><span class="String">graybackground_with_a_greyish_blue_square_on_top.png</span><span class="String">'</span>,<span class="ID">a</span>)</span>
+</pre></div></div><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span></li><li class="gap"><p class="line862">to define the range, use:<span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-efc1cec3effadba3b213c4d3342e5937e55309d2\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-efc1cec3effadba3b213c4d3342e5937e55309d2" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-efc1cec3effadba3b213c4d3342e5937e55309d2_1">   1</a> </span><span class="LineAnchor" id="CA-efc1cec3effadba3b213c4d3342e5937e55309d2_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">from</span> <span class="ID">scipy.misc</span> <span class="ResWord">import</span> <span class="ID">toimage</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-efc1cec3effadba3b213c4d3342e5937e55309d2_2">   2</a> </span><span class="LineAnchor" id="CA-efc1cec3effadba3b213c4d3342e5937e55309d2_2"></span><span class="anchor" id="line-2-4"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-efc1cec3effadba3b213c4d3342e5937e55309d2_3">   3</a> </span><span class="LineAnchor" id="CA-efc1cec3effadba3b213c4d3342e5937e55309d2_3"></span><span class="anchor" id="line-3-4"></span><span class="ID">a</span> = <span class="ID">numpy</span>.<span class="ID">random</span>.<span class="ID">rand</span>(<span class="Number">25</span>,<span class="Number">50</span>) <span class="Comment">#between 0. and 1.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-efc1cec3effadba3b213c4d3342e5937e55309d2_4">   4</a> </span><span class="LineAnchor" id="CA-efc1cec3effadba3b213c4d3342e5937e55309d2_4"></span><span class="anchor" id="line-4-4"></span><span class="ID">toimage</span>(<span class="ID">a</span>, <span class="ID">cmin</span>=<span class="Number">0.</span>, <span class="ID">cmax</span>=<span class="Number">2.</span>).<span class="ID">save</span>(<span class="String">'</span><span class="String">low_contrast_snow.png</span><span class="String">'</span>)</span>
+</pre></div></div><p class="line862"> (adapted from <a class="http" href="../../../external.html?link=http://telin.ugent.be/~slippens/drupal/scipy_unscaledimsave">http://telin.ugent.be/~slippens/drupal/scipy_unscaledimsave</a> )<span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></li><li class="gap"><p class="line862">there was another (more direct) method suggested by <a class="http" href="../../../external.html?link=http://jehiah.cz/archive/creating-images-with-numpy">http://jehiah.cz/archive/creating-images-with-numpy</a> <span class="anchor" id="line-48"></span></li></ul><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-49"></span><a href="../../CategoryCookbookMatplotlib.html">Category<strong class="highlight">Cookbook</strong>Matplotlib</a> <span class="anchor" id="line-50"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/LoadImage  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LoadImage37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/LoadImage">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/LoadImage?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:09 GMT -->
+</html>
+

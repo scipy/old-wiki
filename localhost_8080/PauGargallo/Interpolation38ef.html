@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/PauGargallo/Interpolation?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>PauGargallo/Interpolation - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: PauGargallo/Interpolation" href="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=PauGargallo%2FInterpolation&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation?action=print">
+<link rel="Up" href="../PauGargallo.html">
+<link rel="Appendix" title="interpn.png" href="Interpolatione1c4.html?action=AttachFile&amp;do=view&amp;target=interpn.png">
+<link rel="Appendix" title="visual_test.png" href="Interpolation3821.html?action=AttachFile&amp;do=view&amp;target=visual_test.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Interpolation456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../PauGargallo.html">PauGargallo</a></li><li><a class="backlink" href="Interpolation34e4.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22PauGargallo%2FInterpolation%22" rel="nofollow" title="Click to do a full-text search for this title">Interpolation</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Interpolation.html">PauGargallo/Interpolation</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Interpolation37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><img alt="visual_test.png" class="attachment" src="visual_testc151.png?action=AttachFile&amp;do=get&amp;target=visual_test.png" title="visual_test.png" /> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">Look at <a href="../Cookbook/Interpolation.html"><strong class="highlight">Cookbook</strong>/Interpolation</a> before reading this. <span class="anchor" id="line-4"></span>SciPy probably has the interpolation functions you need. <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line862">Here are some <strong>homemade</strong> interpolating functions I use that may be usefull to others. <span class="anchor" id="line-7"></span>They may still contain a lot of bugs, but... <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-cfdb0026b93c2a1438477bb947877e98e9f3a962\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_1">   1</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_2">   2</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_3">   3</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_3"></span><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_4">   4</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">def</span> <span class="ID">interpn_nearest</span>( <span class="ID">z</span>, <span class="ID">targetcoords</span>, <span class="ID">bincoords</span>=<span class="ResWord">None</span> ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_5">   5</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_5"></span><span class="anchor" id="line-5-1"></span>        <span class="String">'''Interpolate some data, z, located at bincoords in the target locations targetcoords</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_6">   6</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_6"></span><span class="anchor" id="line-6-1"></span><span class="String">        using nearest neighbor interpolation.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_7">   7</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_7"></span><span class="anchor" id="line-7-1"></span><span class="String">                z - is the data array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_8">   8</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_8"></span><span class="anchor" id="line-8-1"></span><span class="String">                targetcoords - are the coordinates where we want to evaluate the data.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_9">   9</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_9"></span><span class="anchor" id="line-9-1"></span><span class="String">                        It must have a format so that z[targetcoords] would make sense</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_10">  10</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_10"></span><span class="anchor" id="line-10-1"></span><span class="String">                        if targetcoords where integers.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_11">  11</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_11"></span><span class="anchor" id="line-11-1"></span><span class="String">                        mgrid and ogrid can be used to get such a format.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_12">  12</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_12"></span><span class="anchor" id="line-12-1"></span><span class="String">                bincoords - is a list of arrays. Each array should containt.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_13">  13</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_13"></span><span class="anchor" id="line-13-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_14">  14</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_14"></span><span class="anchor" id="line-14-1"></span>        <span class="ID">coords</span> = <span class="ID">interpn_check_data</span>(<span class="ID">z</span>,<span class="ID">targetcoords</span>,<span class="ID">bincoords</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_15">  15</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_15"></span><span class="anchor" id="line-15-1"></span>        <span class="ID">indices</span> = [ <span class="ID">c</span>.<span class="ID">round</span>().<span class="ID">astype</span>(<span class="String">'</span><span class="String">i</span><span class="String">'</span>) <span class="ResWord">for</span> <span class="ID">c</span> <span class="ResWord">in</span> <span class="ID">coords</span> ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_16">  16</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_16"></span><span class="anchor" id="line-16-1"></span>        <span class="ResWord">return</span> <span class="ID">z</span>[<span class="ID">indices</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_17">  17</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_17"></span><span class="anchor" id="line-17-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_18">  18</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_18"></span><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_19">  19</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_19"></span><span class="anchor" id="line-19-1"></span><span class="ResWord">def</span> <span class="ID">interpn_linear</span>( <span class="ID">z</span>, <span class="ID">targetcoords</span>, <span class="ID">bincoords</span>=<span class="ResWord">None</span> ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_20">  20</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_20"></span><span class="anchor" id="line-20-1"></span>        <span class="String">'''Interpolate some data, z, located at bincoords in the target locations targetcoords</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_21">  21</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_21"></span><span class="anchor" id="line-21-1"></span><span class="String">        using linear interpolation.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_22">  22</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_22"></span><span class="anchor" id="line-22-1"></span><span class="String">                z - is the data array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_23">  23</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_23"></span><span class="anchor" id="line-23-1"></span><span class="String">                targetcoords - are the coordinates where we want to evaluate the data.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_24">  24</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_24"></span><span class="anchor" id="line-24-1"></span><span class="String">                        It must have a format so that z[targetcoords] would make sense</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_25">  25</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_25"></span><span class="anchor" id="line-25-1"></span><span class="String">                        if targetcoords where integers.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_26">  26</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_26"></span><span class="anchor" id="line-26-1"></span><span class="String">                        mgrid and ogrid can be used to get such a format.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_27">  27</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_27"></span><span class="anchor" id="line-27-1"></span><span class="String">                bincoords - is a list of arrays. Each array should containt.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_28">  28</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_28"></span><span class="anchor" id="line-28-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_29">  29</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_29"></span><span class="anchor" id="line-29-1"></span>        <span class="ID">coords</span> = <span class="ID">interpn_check_data</span>(<span class="ID">z</span>,<span class="ID">targetcoords</span>,<span class="ID">bincoords</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_30">  30</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_30"></span><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_31">  31</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_31"></span><span class="anchor" id="line-31-1"></span>        <span class="ID">indices</span> = [ <span class="ID">x</span>.<span class="ID">astype</span>(<span class="String">'</span><span class="String">i</span><span class="String">'</span>) <span class="ResWord">for</span> <span class="ID">x</span> <span class="ResWord">in</span> <span class="ID">coords</span> ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_32">  32</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_32"></span><span class="anchor" id="line-32-1"></span>        <span class="ID">weights</span> = [ <span class="ID">x</span>-<span class="ID">i</span> <span class="ResWord">for</span> <span class="ID">x</span>,<span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">coords</span>,<span class="ID">indices</span>) ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_33">  33</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_33"></span><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_34">  34</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_34"></span><span class="anchor" id="line-34-1"></span>        <span class="ID">res</span> = <span class="ID">z</span>[<span class="ID">indices</span>]*<span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_35">  35</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_35"></span><span class="anchor" id="line-35-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_36">  36</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_36"></span><span class="anchor" id="line-36-1"></span>        <span class="ResWord">for</span> <span class="ID">selector</span> <span class="ResWord">in</span> <span class="ID">ndindex</span>( *<span class="ID">z</span>.<span class="ID">ndim</span>*(<span class="Number">2</span>,) ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_37">  37</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_37"></span><span class="anchor" id="line-37-1"></span>                <span class="ID">weight</span> = <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_38">  38</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_38"></span><span class="anchor" id="line-38-1"></span>                <span class="ResWord">for</span> <span class="ID">w</span>,<span class="ID">s</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">weights</span>,<span class="ID">selector</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_39">  39</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_39"></span><span class="anchor" id="line-39-1"></span>                        <span class="ResWord">if</span> <span class="ID">s</span>: <span class="ID">weight</span> = <span class="ID">weight</span>*<span class="ID">w</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_40">  40</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_40"></span><span class="anchor" id="line-40-1"></span>                        <span class="ResWord">else</span>: <span class="ID">weight</span> = <span class="ID">weight</span>*(<span class="Number">1</span>-<span class="ID">w</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_41">  41</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_41"></span><span class="anchor" id="line-41-1"></span>                <span class="ID">value</span> = <span class="ID">z</span>[ [ <span class="ID">i</span>+<span class="ID">s</span> <span class="ResWord">for</span> <span class="ID">i</span>,<span class="ID">s</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">indices</span>,<span class="ID">selector</span>) ] ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_42">  42</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_42"></span><span class="anchor" id="line-42-1"></span>                <span class="ID">res</span> += <span class="ID">weight</span>*<span class="ID">value</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_43">  43</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_43"></span><span class="anchor" id="line-43-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_44">  44</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_44"></span><span class="anchor" id="line-44-1"></span>        <span class="ResWord">return</span> <span class="ID">res</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_45">  45</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_45"></span><span class="anchor" id="line-45-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_46">  46</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_46"></span><span class="anchor" id="line-46-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_47">  47</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_47"></span><span class="anchor" id="line-47-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_48">  48</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_48"></span><span class="anchor" id="line-48-1"></span><span class="ResWord">def</span> <span class="ID">rebin</span>( <span class="ID">a</span>, <span class="ID">newshape</span> ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_49">  49</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_49"></span><span class="anchor" id="line-49-1"></span>        <span class="String">'''Rebin an array to a new shape, without interpolation.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_50">  50</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_50"></span><span class="anchor" id="line-50-1"></span><span class="String">        This can be usefull if the array type is not a vector space.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_51">  51</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_51"></span><span class="anchor" id="line-51-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_52">  52</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_52"></span><span class="anchor" id="line-52-1"></span>        <span class="ResWord">assert</span> <span class="ID">a</span>.<span class="ID">ndim</span> == <span class="ResWord">len</span>(<span class="ID">newshape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_53">  53</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_53"></span><span class="anchor" id="line-53-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_54">  54</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_54"></span><span class="anchor" id="line-54-1"></span>        <span class="ID">slices</span> = [ <span class="ResWord">slice</span>(<span class="Number">0</span>,<span class="ID">old</span>, <span class="ResWord">float</span>(<span class="ID">old</span>)/<span class="ID">new</span>) <span class="ResWord">for</span> <span class="ID">old</span>,<span class="ID">new</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">a</span>.<span class="ID">shape</span>,<span class="ID">newshape</span>) ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_55">  55</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_55"></span><span class="anchor" id="line-55-1"></span>        <span class="ID">coordinates</span> = <span class="ID">ogrid</span>[<span class="ID">slices</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_56">  56</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_56"></span><span class="anchor" id="line-56-1"></span>        <span class="ID">indices</span> = [ <span class="ID">c</span>.<span class="ID">astype</span>(<span class="String">'</span><span class="String">i</span><span class="String">'</span>) <span class="ResWord">for</span> <span class="ID">c</span> <span class="ResWord">in</span> <span class="ID">coordinates</span> ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_57">  57</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_57"></span><span class="anchor" id="line-57-1"></span>        <span class="ResWord">return</span> <span class="ID">a</span>[<span class="ID">indices</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_58">  58</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_58"></span><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_59">  59</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_59"></span><span class="anchor" id="line-59-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_60">  60</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_60"></span><span class="anchor" id="line-60-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_61">  61</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_61"></span><span class="anchor" id="line-61-1"></span><span class="Comment">#################################</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_62">  62</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_62"></span><span class="anchor" id="line-62-1"></span><span class="Comment">## more internal functions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_63">  63</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_63"></span><span class="anchor" id="line-63-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_64">  64</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_64"></span><span class="anchor" id="line-64-1"></span><span class="ResWord">def</span> <span class="ID">array_coordinates</span>( <span class="ID">targetx</span>, <span class="ID">binx</span> ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_65">  65</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_65"></span><span class="anchor" id="line-65-1"></span>        <span class="String">'''Computes the coordinates in an array reference.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_66">  66</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_66"></span><span class="anchor" id="line-66-1"></span><span class="String">                targetx are the coordinates of the points that we want to get in the array reference.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_67">  67</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_67"></span><span class="anchor" id="line-67-1"></span><span class="String">                binx    are the coordinates of the array bins</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_68">  68</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_68"></span><span class="anchor" id="line-68-1"></span><span class="String">        Example:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_69">  69</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_69"></span><span class="anchor" id="line-69-1"></span><span class="String">                &gt;&gt;&gt; array_coordinates( [2, 10], [1, 3, 13] )</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_70">  70</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_70"></span><span class="anchor" id="line-70-1"></span><span class="String">                [0.5, 1.7]</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_71">  71</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_71"></span><span class="anchor" id="line-71-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_72">  72</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_72"></span><span class="anchor" id="line-72-1"></span>        <span class="ID">tol</span> = <span class="Number">1e-12</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_73">  73</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_73"></span><span class="anchor" id="line-73-1"></span>        <span class="ID">binx</span> = <span class="ID">asarray</span>(<span class="ID">binx</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_74">  74</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_74"></span><span class="anchor" id="line-74-1"></span>        <span class="ID">nx</span> = <span class="ID">clip</span>( <span class="ID">targetx</span>, <span class="ID">binx</span>.<span class="ID">min</span>()*(<span class="Number">1</span>+<span class="ID">tol</span>), <span class="ID">binx</span>.<span class="ID">max</span>()*(<span class="Number">1</span>-<span class="ID">tol</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_75">  75</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_75"></span><span class="anchor" id="line-75-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_76">  76</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_76"></span><span class="anchor" id="line-76-1"></span>        <span class="ID">i</span> = <span class="ID">searchsorted</span>( <span class="ID">binx</span>, <span class="ID">nx</span> )      <span class="Comment"># index of the biggest smaller bin</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_77">  77</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_77"></span><span class="anchor" id="line-77-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_78">  78</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_78"></span><span class="anchor" id="line-78-1"></span>        <span class="ID">bx</span> = <span class="ID">empty</span>((<span class="ResWord">len</span>(<span class="ID">binx</span>)+<span class="Number">2</span>,), <span class="String">'</span><span class="String">d</span><span class="String">'</span>)   <span class="Comment"># avoid probles at the border</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_79">  79</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_79"></span><span class="anchor" id="line-79-1"></span>        <span class="ID">bx</span>[<span class="Number">0</span>] = <span class="ID">binx</span>[<span class="Number">0</span>] - <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_80">  80</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_80"></span><span class="anchor" id="line-80-1"></span>        <span class="ID">bx</span>[<span class="Number">1</span>:-<span class="Number">1</span>] = <span class="ID">binx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_81">  81</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_81"></span><span class="anchor" id="line-81-1"></span>        <span class="ID">bx</span>[-<span class="Number">1</span>] = <span class="ID">binx</span>[-<span class="Number">1</span>] + <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_82">  82</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_82"></span><span class="anchor" id="line-82-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_83">  83</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_83"></span><span class="anchor" id="line-83-1"></span>        <span class="ResWord">return</span> <span class="ID">i</span>-<span class="Number">1</span> + ( <span class="ID">nx</span> - <span class="ID">bx</span>[<span class="ID">i</span>] )/( <span class="ID">bx</span>[<span class="ID">i</span>+<span class="Number">1</span>] - <span class="ID">bx</span>[<span class="ID">i</span>] )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_84">  84</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_84"></span><span class="anchor" id="line-84-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_85">  85</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_85"></span><span class="anchor" id="line-85-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_86">  86</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_86"></span><span class="anchor" id="line-86-1"></span><span class="ResWord">def</span> <span class="ID">interpn_check_data</span>( <span class="ID">z</span>, <span class="ID">targetcoords</span>, <span class="ID">bincoords</span> ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_87">  87</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_87"></span><span class="anchor" id="line-87-1"></span>        <span class="String">'''Check the validity of the input data for intepn_x functions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_88">  88</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_88"></span><span class="anchor" id="line-88-1"></span><span class="String">        and returns the target coordinates in the array reference</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_89">  89</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_89"></span><span class="anchor" id="line-89-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_90">  90</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_90"></span><span class="anchor" id="line-90-1"></span>        <span class="ID">dim</span> = <span class="ID">z</span>.<span class="ID">ndim</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_91">  91</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_91"></span><span class="anchor" id="line-91-1"></span>        <span class="ResWord">if</span> <span class="ID">bincoords</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_92">  92</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_92"></span><span class="anchor" id="line-92-1"></span>                <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">bincoords</span>) != <span class="ID">dim</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_93">  93</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_93"></span><span class="anchor" id="line-93-1"></span>                        <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="String">'</span><span class="String">bincoords shape mismatch.</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_94">  94</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_94"></span><span class="anchor" id="line-94-1"></span>                <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">dim</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_95">  95</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_95"></span><span class="anchor" id="line-95-1"></span>                        <span class="ResWord">if</span> <span class="ID">prod</span>(<span class="ID">bincoords</span>[<span class="ID">i</span>].<span class="ID">shape</span>) != <span class="ID">z</span>.<span class="ID">shape</span>[<span class="ID">i</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_96">  96</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_96"></span><span class="anchor" id="line-96-1"></span>                                <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="String">'</span><span class="String">bincoords shape mismatch.</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_97">  97</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_97"></span><span class="anchor" id="line-97-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_98">  98</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_98"></span><span class="anchor" id="line-98-1"></span>                <span class="ID">coords</span> = [ <span class="ID">array_coordinates</span>(<span class="ID">targetcoords</span>[<span class="ID">i</span>],<span class="ID">bincoords</span>[<span class="ID">i</span>].<span class="ID">ravel</span>()) <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">dim</span>) ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_99">  99</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_99"></span><span class="anchor" id="line-99-1"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_100"> 100</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_100"></span><span class="anchor" id="line-100-1"></span>                <span class="ID">coords</span> = <span class="ID">targetcoords</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_101"> 101</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_101"></span><span class="anchor" id="line-101-1"></span>        <span class="ResWord">return</span> <span class="ID">coords</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_102"> 102</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_102"></span><span class="anchor" id="line-102-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_103"> 103</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_103"></span><span class="anchor" id="line-103-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_104"> 104</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_104"></span><span class="anchor" id="line-104-1"></span><span class="ResWord">def</span> <span class="ID">interp2_linear</span>( <span class="ID">z</span>, <span class="ID">tx</span>, <span class="ID">ty</span>, <span class="ID">binx</span>=<span class="ResWord">None</span>, <span class="ID">biny</span>=<span class="ResWord">None</span>  ):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_105"> 105</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_105"></span><span class="anchor" id="line-105-1"></span>        <span class="String">'''Toy function just like interpn_linear in 2 dimensions.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_106"> 106</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_106"></span><span class="anchor" id="line-106-1"></span><span class="String">        This function exists just to help the understanding and mantaining of interpn_linear.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_107"> 107</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_107"></span><span class="anchor" id="line-107-1"></span><span class="String">        '''</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_108"> 108</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_108"></span><span class="anchor" id="line-108-1"></span>        <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">binx</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: <span class="ID">tx</span> = <span class="ID">array_coordinates</span>( <span class="ID">tx</span>,<span class="ID">binx</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_109"> 109</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_109"></span><span class="anchor" id="line-109-1"></span>        <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">biny</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: <span class="ID">ty</span> = <span class="ID">array_coordinates</span>( <span class="ID">ty</span>,<span class="ID">biny</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_110"> 110</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_110"></span><span class="anchor" id="line-110-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_111"> 111</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_111"></span><span class="anchor" id="line-111-1"></span>        <span class="ID">ix</span> = <span class="ID">tx</span>.<span class="ID">astype</span>(<span class="String">'</span><span class="String">i</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_112"> 112</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_112"></span><span class="anchor" id="line-112-1"></span>        <span class="ID">iy</span> = <span class="ID">ty</span>.<span class="ID">astype</span>(<span class="String">'</span><span class="String">i</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_113"> 113</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_113"></span><span class="anchor" id="line-113-1"></span>        <span class="ID">wx</span> = <span class="ID">tx</span>-<span class="ID">ix</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_114"> 114</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_114"></span><span class="anchor" id="line-114-1"></span>        <span class="ID">wy</span> = <span class="ID">ty</span>-<span class="ID">iy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_115"> 115</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_115"></span><span class="anchor" id="line-115-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_116"> 116</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_116"></span><span class="anchor" id="line-116-1"></span>        <span class="ResWord">return</span>    (<span class="Number">1</span>-<span class="ID">wy</span>)*(<span class="Number">1</span>-<span class="ID">wx</span>) * <span class="ID">z</span>[<span class="ID">iy</span>  ,<span class="ID">ix</span>  ] \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_117"> 117</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_117"></span><span class="anchor" id="line-117-1"></span>                + (<span class="Number">1</span>-<span class="ID">wy</span>)*   <span class="ID">wx</span>  * <span class="ID">z</span>[<span class="ID">iy</span>  ,<span class="ID">ix</span>+<span class="Number">1</span>] \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_118"> 118</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_118"></span><span class="anchor" id="line-118-1"></span>                +    <span class="ID">wy</span> *(<span class="Number">1</span>-<span class="ID">wx</span>) * <span class="ID">z</span>[<span class="ID">iy</span>+<span class="Number">1</span>,<span class="ID">ix</span>  ] \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_119"> 119</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_119"></span><span class="anchor" id="line-119-1"></span>                +    <span class="ID">wy</span> *   <span class="ID">wx</span>  * <span class="ID">z</span>[<span class="ID">iy</span>+<span class="Number">1</span>,<span class="ID">ix</span>+<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_120"> 120</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_120"></span><span class="anchor" id="line-120-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_121"> 121</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_121"></span><span class="anchor" id="line-121-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_122"> 122</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_122"></span><span class="anchor" id="line-122-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_123"> 123</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_123"></span><span class="anchor" id="line-123-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_124"> 124</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_124"></span><span class="anchor" id="line-124-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_125"> 125</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_125"></span><span class="anchor" id="line-125-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_126"> 126</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_126"></span><span class="anchor" id="line-126-1"></span><span class="Comment">###########################################</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_127"> 127</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_127"></span><span class="anchor" id="line-127-1"></span><span class="Comment">## some visual testing</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_128"> 128</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_128"></span><span class="anchor" id="line-128-1"></span><span class="Comment">##</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_129"> 129</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_129"></span><span class="anchor" id="line-129-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_130"> 130</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_130"></span><span class="anchor" id="line-130-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_131"> 131</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_131"></span><span class="anchor" id="line-131-1"></span><span class="ResWord">def</span> <span class="ID">test</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_132"> 132</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_132"></span><span class="anchor" id="line-132-1"></span>        <span class="ID">x</span>,<span class="ID">y</span> = <span class="ID">ogrid</span>[ -<span class="Number">1</span>:<span class="Number">1</span>:<span class="Number">10j</span>, -<span class="Number">1</span>:<span class="Number">1</span>:<span class="Number">10j</span> ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_133"> 133</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_133"></span><span class="anchor" id="line-133-1"></span>        <span class="ID">z</span> = <span class="ID">sin</span>( <span class="ID">x</span>**<span class="Number">2</span> + <span class="ID">y</span>**<span class="Number">2</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_134"> 134</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_134"></span><span class="anchor" id="line-134-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_135"> 135</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_135"></span><span class="anchor" id="line-135-1"></span>        <span class="ID">binx</span> = (<span class="ID">x</span>,<span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_136"> 136</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_136"></span><span class="anchor" id="line-136-1"></span>        <span class="ID">tx</span> = <span class="ID">ogrid</span>[ -<span class="Number">2</span>:<span class="Number">2</span>:<span class="Number">100j</span>, -<span class="Number">2</span>:<span class="Number">2</span>:<span class="Number">100j</span> ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_137"> 137</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_137"></span><span class="anchor" id="line-137-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_138"> 138</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_138"></span><span class="anchor" id="line-138-1"></span>        <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">221</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_139"> 139</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_139"></span><span class="anchor" id="line-139-1"></span>        <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">original</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_140"> 140</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_140"></span><span class="anchor" id="line-140-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>(<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_141"> 141</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_141"></span><span class="anchor" id="line-141-1"></span>        <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">223</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_142"> 142</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_142"></span><span class="anchor" id="line-142-1"></span>        <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">interpn_nearest</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_143"> 143</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_143"></span><span class="anchor" id="line-143-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>( <span class="ID">interpn_nearest</span>( <span class="ID">z</span>, <span class="ID">tx</span>, <span class="ID">binx</span> ) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_144"> 144</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_144"></span><span class="anchor" id="line-144-1"></span>        <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">222</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_145"> 145</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_145"></span><span class="anchor" id="line-145-1"></span>        <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">interpn_linear</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_146"> 146</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_146"></span><span class="anchor" id="line-146-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>( <span class="ID">interpn_linear</span>( <span class="ID">z</span>, <span class="ID">tx</span>, <span class="ID">binx</span> ) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_147"> 147</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_147"></span><span class="anchor" id="line-147-1"></span>        <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">224</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_148"> 148</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_148"></span><span class="anchor" id="line-148-1"></span>        <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">interp2_linear</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_149"> 149</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_149"></span><span class="anchor" id="line-149-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>( <span class="ID">interp2_linear</span>( <span class="ID">z</span>, <span class="ID">tx</span>[<span class="Number">0</span>],<span class="ID">tx</span>[<span class="Number">1</span>], <span class="ID">x</span>.<span class="ID">ravel</span>(),<span class="ID">y</span>.<span class="ID">ravel</span>() ) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_150"> 150</a> </span><span class="LineAnchor" id="CA-cfdb0026b93c2a1438477bb947877e98e9f3a962_150"></span><span class="anchor" id="line-150-1"></span>        <span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-162"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: PauGargallo/Interpolation  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Interpolation37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/PauGargallo/Interpolation">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/PauGargallo/Interpolation?highlight=%28%28Cookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:12 GMT -->
+</html>
+

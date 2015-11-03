@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:16:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/MayaVi/ScriptingMayavi2/Filters - SciPy</title>
+<script type="text/javascript" src="../../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/ScriptingMayavi2/Filters" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FScriptingMayavi2%2FFilters&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters?action=print">
+<link rel="Up" href="../ScriptingMayavi2.html">
+<link rel="Appendix" title="filter_eg.png" href="Filters6bd5.html?action=AttachFile&amp;do=view&amp;target=filter_eg.png">
+<link rel="Appendix" title="filter_eug1.png" href="Filtersaef0.html?action=AttachFile&amp;do=view&amp;target=filter_eug1.png">
+<link rel="Appendix" title="filter_eug2.png" href="Filters2f5b.html?action=AttachFile&amp;do=view&amp;target=filter_eug2.png">
+<link rel="Appendix" title="filter_p2c.png" href="Filtersba6d.html?action=AttachFile&amp;do=view&amp;target=filter_p2c.png">
+<link rel="Appendix" title="filter_thrld1.png" href="Filtersccb7.html?action=AttachFile&amp;do=view&amp;target=filter_thrld1.png">
+<link rel="Appendix" title="filter_thrld2.png" href="Filtersf706.html?action=AttachFile&amp;do=view&amp;target=filter_thrld2.png">
+<link rel="Search" href="../../../FindPage.html">
+<link rel="Index" href="../../../TitleIndex.html">
+<link rel="Glossary" href="../../../WordIndex.html">
+<link rel="Help" href="../../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Filters456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../../Cookbook.html">Cookbook</a></li><li><a href="../../MayaVi.html">MayaVi</a></li><li><a href="../ScriptingMayavi2.html">ScriptingMayavi2</a></li><li><a class="backlink" href="Filters4a2c.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FScriptingMayavi2%2FFilters%22" rel="nofollow" title="Click to do a full-text search for this title">Filters</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Filters.html">Filters</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Filters37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#ExtractUnstructuredGrid_filter">ExtractUnstructuredGrid filter</a></li><li>
+<a href="#ExtractGrid_filter">ExtractGrid filter</a></li><li>
+<a href="#Threshold_filter">Threshold filter</a></li><li>
+<a href="#PointToCellData_filter">PointToCellData filter</a></li><li>
+<a href="#WarpScalar_filter">WarpScalar filter</a></li><li>
+<a href="#TransformData_filter">TransformData filter</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">Well, until now, examples above are quite simple: scalars or vectors data are presented in the &quot;vaccum&quot;, i.e. there is not object or material or whatsoever. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">In others words, how can one display some object, say a metallic parallellepiped, for example, in a scalars or vectors field ? <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">The first filter you will be presented here deals with this problem. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
+<h1 id="ExtractUnstructuredGrid_filter">ExtractUnstructuredGrid filter</h1>
+<span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line874">For this example, we suppose several hypotheses: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><ul><li>the mesh of the volume data is made of 76x60x72 cubic cells (8 vertices); thus, the VTK object cell used for the &quot;vaccum&quot; is called VTK_HEXAHEDRON (#12). Cell ids begins at 0 and ends at #342880. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></li><li class="gap">a metallic parallellepiped is immersed in a EM field spreading over the whole volume data ; this object is made of faceted cells (4 vertices), called VTK_QUAD (#9) cells in VTK denomination. These faceted cells are used here because of the null EM field within the parallellepiped. Cell ids begin at #342881 and end at #345966. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span></li><li class="gap"><p class="line862">as there are different kinds of cells, the UnstructuredGrid data set must be used (see <a class="http" href="../../../../external.html?link=http://www.vtk.org/pdf/file-formats.pdf">http://www.vtk.org/pdf/file-formats.pdf</a> to know how UnstructuredGrid files must be written, VTK cells syntax, etc). <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span></li></ul><p class="line874">To display the metallic parallellepiped as a separate object from the vaccum, you have to extract the cells corresponding to this object. Thus, you will be able to display this object using the Surface module for example. <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">First, import ExtractUnstructuredGrid filter and Surface module, as usual: <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-b90045e0e2df9b44630cc4bdcbe991755c73813a" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.surface</span> <span class="ResWord">import</span> <span class="ID">Surface</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.filters.extract_unstructured_grid</span> <span class="ResWord">import</span> <span class="ID">ExtractUnstructuredGrid</span></span>
+</pre></div></div><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line874">then <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line867"><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-c95d363b1bdbc95f4a06b969ad91a6921bed267d" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="Comment">### for the metallic parallellepiped</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_object</span> = <span class="ID">src</span>  <span class="Comment"># current object must be set to the source</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ID">eug1</span> = <span class="ID">ExtractUnstructuredGrid</span>()</span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">eug1</span>)</span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_minimum</span> = <span class="Number">342881</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_maximum</span> = <span class="Number">345966</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="ID">s</span> = <span class="ID">Surface</span>()                       <span class="Comment"># the metallic is displayed using Surface module</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">eug1</span>.<span class="ID">add_module</span>(<span class="ID">s</span>)                  <span class="Comment"># the module must be added to the current filter</span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">s</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">scalar_visibility</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">s</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">color</span> = (<span class="Number">0.509804</span>, <span class="Number">0.5098040</span>, <span class="Number">0.5490196</span>) <span class="Comment"># grey color for the metallic parallellepiped</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="Comment">### we need also extract the required cells for and only for the vaccum</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_object</span> = <span class="ID">src</span>  <span class="Comment"># current object must be set to the source</span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">eug2</span> = <span class="ID">ExtractUnstructuredGrid</span>()</span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">eug2</span>)</span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_minimum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_maximum</span> = <span class="Number">342880</span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span></span>
+<span class="line"><span class="anchor" id="line-21-1"></span><span class="Comment">### here, we can display the EM field using ScalarCutPlane/VectorCutPlane,</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span><span class="Comment">### Surface, Vectors modules as usual</span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span>.../...</span>
+</pre></div></div><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line874">This should look like this: <span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><p class="line867"><img alt="filter_eug1.png" class="attachment" src="filter_eug14169.png?action=AttachFile&amp;do=get&amp;target=filter_eug1.png" title="filter_eug1.png" /> <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><p class="line874">For this first example, there was only one object, and it was faceted. <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line862">Now, say we have a second object, not metallic but dielectric (so the EM field within it should not be null). Thus we have to use some 3D cells, as VTK_HEXAHEDRON cells (cell ids go from #345967 to #349094). We also want to display the field on the surface on the metallic object <em>and</em> in the dielectric object. <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line867"><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-707a6d181d4533a619aff44a770958f5115b74b0" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="Comment">### for the metallic parallellepiped</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span><span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_object</span> = <span class="ID">src</span></span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ID">eug1</span> = <span class="ID">ExtractUnstructuredGrid</span>()</span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">eug1</span>)</span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_minimum</span> = <span class="Number">342881</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ID">eug1</span>.<span class="ID">filter</span>.<span class="ID">cell_maximum</span> = <span class="Number">345966</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="ID">s</span> = <span class="ID">Surface</span>()</span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="ID">eug1</span>.<span class="ID">add_module</span>(<span class="ID">s</span>)</span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ID">s</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">scalar_visibility</span> = <span class="ResWord">True</span> <span class="Comment"># scalar field on the surface</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="Comment">### for the dielectric parallellepiped</span></span>
+<span class="line"><span class="anchor" id="line-13-2"></span><span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_object</span> = <span class="ID">src</span></span>
+<span class="line"><span class="anchor" id="line-14-2"></span><span class="ID">eug2</span> = <span class="ID">ExtractUnstructuredGrid</span>()</span>
+<span class="line"><span class="anchor" id="line-15-2"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">eug2</span>)</span>
+<span class="line"><span class="anchor" id="line-16-2"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-17-2"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_minimum</span> = <span class="Number">345967</span></span>
+<span class="line"><span class="anchor" id="line-18-2"></span><span class="ID">eug2</span>.<span class="ID">filter</span>.<span class="ID">cell_maximum</span> = <span class="Number">349094</span></span>
+<span class="line"><span class="anchor" id="line-19-2"></span><span class="ID">s</span> = <span class="ID">Surface</span>()</span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="ID">eug2</span>.<span class="ID">add_module</span>(<span class="ID">s</span>)</span>
+<span class="line"><span class="anchor" id="line-21-2"></span><span class="ID">s</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">scalar_visibility</span> = <span class="ResWord">True</span> <span class="Comment"># scalar field set to on</span></span>
+<span class="line"><span class="anchor" id="line-22-2"></span><span class="ID">s</span>.<span class="ID">enable_contours</span> = <span class="ResWord">True</span>                <span class="Comment"># in the volume</span></span>
+<span class="line"><span class="anchor" id="line-23-2"></span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="Comment">### we need also extract the required cells for and only for the vaccum</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span><span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_object</span> = <span class="ID">src</span>  <span class="Comment"># current object must be set to the source</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span><span class="ID">eug3</span> = <span class="ID">ExtractUnstructuredGrid</span>()</span>
+<span class="line"><span class="anchor" id="line-27-1"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">eug3</span>)</span>
+<span class="line"><span class="anchor" id="line-28-1"></span><span class="ID">eug3</span>.<span class="ID">filter</span>.<span class="ID">cell_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span><span class="ID">eug3</span>.<span class="ID">filter</span>.<span class="ID">cell_minimum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span><span class="ID">eug3</span>.<span class="ID">filter</span>.<span class="ID">cell_maximum</span> = <span class="Number">342880</span></span>
+<span class="line"><span class="anchor" id="line-31-1"></span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span>.../...</span>
+</pre></div></div><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><p class="line874">This should render this: <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867"><img alt="filter_eug2.png" class="attachment" src="filter_eug2c799.png?action=AttachFile&amp;do=get&amp;target=filter_eug2.png" title="filter_eug2.png" /> <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line867">
+<h1 id="ExtractGrid_filter">ExtractGrid filter</h1>
+<span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><p class="line862">Using ExtractGrid filter is easier, because it works (only) on structured grids: you only have to set min/max values for x, y, z coordinates. Thus, you can cut a subvolume of your data. You can also apply a ratio on each coordinates, to decrease the cells number. <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><p class="line874">Import, as usual, the required modules and/or filter: <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-853ff24aa956b04be25695041a0da00b1a00eb8f" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.surface</span> <span class="ResWord">import</span> <span class="ID">Surface</span></span>
+<span class="line"><span class="anchor" id="line-2-4"></span></span>
+<span class="line"><span class="anchor" id="line-3-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.filters.extract_grid</span> <span class="ResWord">import</span> <span class="ID">ExtractGrid</span></span>
+</pre></div></div><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><p class="line874">then you can set filter's limits as: <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><p class="line867"><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><pre><span class="anchor" id="line-1"></span>eg = ExtractGrid()
+<span class="anchor" id="line-2"></span>script.add_filter(eg)
+<span class="anchor" id="line-3"></span>eg.x_min, eg.x_max = 10, 40
+<span class="anchor" id="line-4"></span>eg.y_min, eg.y_max = 10, 40
+<span class="anchor" id="line-5"></span>eg.z_min, eg.z_max = 10, 40
+<span class="anchor" id="line-6"></span>
+<span class="anchor" id="line-7"></span># eg.x_ratio = 2
+<span class="anchor" id="line-8"></span># eg.y_ratio = 2
+<span class="anchor" id="line-9"></span># eg.z_ratio = 2
+<span class="anchor" id="line-10"></span>
+<span class="anchor" id="line-11"></span># same example using Surface module
+<span class="anchor" id="line-12"></span>s = Surface()
+<span class="anchor" id="line-13"></span>s.enable_contours = True
+<span class="anchor" id="line-14"></span>s.contour.auto_contours = True
+<span class="anchor" id="line-15"></span>s.contour.number_of_contours = 10
+<span class="anchor" id="line-16"></span>s.actor.property.opacity = 0.2
+<span class="anchor" id="line-17"></span>script.add_module(s)
+<span class="anchor" id="line-18"></span>s.contour.minimum_contour = 0
+<span class="anchor" id="line-19"></span>s.contour.maximum_contour = 1
+<span class="anchor" id="line-20"></span>s.module_manager.scalar_lut_manager.data_range = [0, 1]</pre><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line867"><img alt="filter_eg.png" class="attachment" src="filter_eg4feb.png?action=AttachFile&amp;do=get&amp;target=filter_eg.png" title="filter_eg.png" /> <span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line867">
+<h1 id="Threshold_filter">Threshold filter</h1>
+<span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line874">Using this filter, you can consider scalars values contained in a specific range. <span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><p class="line862">Suppose that your scalars data spread from 0 to 1, but you are only interested by the values in the range [0.4, 0.6] and you want to play with the slidebar of the IsoSurface module within this range, around 0.5. By default, min &amp; max values of the slidebar will be set to 0 &amp; 1, because of your data range: <span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><p class="line867"><img alt="filter_thrld1.png" class="attachment" src="filter_thrld17157.png?action=AttachFile&amp;do=get&amp;target=filter_thrld1.png" title="filter_thrld1.png" /> <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line862">To play more accurately with the slidebar of the IsoSurface module, you have to set min &amp; max values to the required values, i.e. 0.4 &amp; 0.6. Thus, if you want to see your scalars data around 0.5, you can set the slidebar from 0.4 to 0.6 more easily than in the case where slidebar goes form 0 to 1. <span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><p class="line874">The Threshold filter can help you to do this. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line874">Begin to import the module and the filter first: <span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line867"><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-8221c321e90ac44ae169c6c14faf9308cac26fe0" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.iso_surface</span> <span class="ResWord">import</span> <span class="ID">IsoSurface</span></span>
+<span class="line"><span class="anchor" id="line-2-5"></span></span>
+<span class="line"><span class="anchor" id="line-3-5"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.filters.threshold</span> <span class="ResWord">import</span> <span class="ID">Threshold</span></span>
+</pre></div></div><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><p class="line874">then, set the threshold values: <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line867"><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-61a0305259d5a78c3595265c7b6463c86157bfe7" lang="en"><span class="line"><span class="anchor" id="line-1-12"></span><span class="ID">thh</span> = <span class="ID">Threshold</span>()</span>
+<span class="line"><span class="anchor" id="line-2-6"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">thh</span>)</span>
+<span class="line"><span class="anchor" id="line-3-6"></span><span class="ID">thh</span>.<span class="ID">lower_threshold</span> = <span class="Number">0.4</span></span>
+<span class="line"><span class="anchor" id="line-4-3"></span><span class="ID">thh</span>.<span class="ID">upper_threshold</span> = <span class="Number">0.6</span></span>
+<span class="line"><span class="anchor" id="line-5-3"></span><span class="ID">isosurf</span> = <span class="ID">IsoSurface</span>()</span>
+<span class="line"><span class="anchor" id="line-6-3"></span><span class="ID">thh</span>.<span class="ID">add_module</span>(<span class="ID">isosurf</span>)</span>
+<span class="line"><span class="anchor" id="line-7-3"></span><span class="ID">isosurf</span>.<span class="ID">contour</span>.<span class="ID">contours</span> = [<span class="Number">0.5</span>]</span>
+<span class="line"><span class="anchor" id="line-8-3"></span><span class="ID">isosurf</span>.<span class="ID">compute_normals</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-9-3"></span><span class="ID">isosurf</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">opacity</span> = <span class="Number">0.2</span></span>
+<span class="line"><span class="anchor" id="line-10-3"></span><span class="ID">isosurf</span>.<span class="ID">module_manager</span>.<span class="ID">scalar_lut_manager</span>.<span class="ID">data_range</span> = [<span class="Number">0</span>, <span class="Number">1</span>]</span>
+</pre></div></div><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><p class="line874">and you're done ! <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><p class="line874">This should look like this: <span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><p class="line867"><img alt="filter_thrld2.png" class="attachment" src="filter_thrld286b3.png?action=AttachFile&amp;do=get&amp;target=filter_thrld2.png" title="filter_thrld2.png" /> <span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><p class="line862">You can notice on the two previous figures that the Threshold module approximates bounds to the nearest values (there are not strictly equal to 0.4 &amp; 0.6). <span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><p class="line867">
+<h1 id="PointToCellData_filter">PointToCellData filter</h1>
+<span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><p class="line874">Generally, data are interpolated between each point. Thus, they look like nicer. <span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><p class="line862">But maybe in some case, you don't want them to be interpolated, and see the data &quot;as they are&quot;: they are not displayed as points, but as cells. In this case, you can use the PointToCellData filter. <span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><p class="line862">Let's see again the example using the ScalarCutPlane module, and import the PointToCellData filter: <span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><p class="line867"><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-1b157d8cd49ef065f22919a323b54dbf67ce952b" lang="en"><span class="line"><span class="anchor" id="line-1-14"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.scalar_cut_plane</span> <span class="ResWord">import</span> <span class="ID">ScalarCutPlane</span></span>
+<span class="line"><span class="anchor" id="line-2-7"></span></span>
+<span class="line"><span class="anchor" id="line-3-7"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.filters.point_to_cell_data</span> <span class="ResWord">import</span> <span class="ID">PointToCellData</span></span>
+</pre></div></div><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><p class="line862">then add the ScalarCutPlane module &quot;above&quot; the PointToCellData filter, as usual: <span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><p class="line867"><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-f6a50a2b8f7d7f47ef00f9f164af09f3ed910139" lang="en"><span class="line"><span class="anchor" id="line-1-16"></span><span class="ID">ptocd</span> = <span class="ID">PointToCellData</span>()</span>
+<span class="line"><span class="anchor" id="line-2-8"></span><span class="ID">script</span>.<span class="ID">add_filter</span>(<span class="ID">ptocd</span>)</span>
+<span class="line"><span class="anchor" id="line-3-8"></span><span class="ID">scp</span> = <span class="ID">ScalarCutPlane</span>()</span>
+<span class="line"><span class="anchor" id="line-4-4"></span><span class="ID">ptocd</span>.<span class="ID">add_module</span>(<span class="ID">scp</span>)</span>
+<span class="line"><span class="anchor" id="line-5-4"></span><span class="ID">scp</span>.<span class="ID">implicit_plane</span>.<span class="ID">normal</span> = (<span class="Number">1</span>, <span class="Number">0</span>, <span class="Number">0</span>)</span>
+<span class="line"><span class="anchor" id="line-6-4"></span><span class="ID">scp</span>.<span class="ID">implicit_plane</span>.<span class="ID">origin</span> = (<span class="Number">10</span>, <span class="Number">25</span>, <span class="Number">25</span>)</span>
+<span class="line"><span class="anchor" id="line-7-4"></span><span class="ID">scp</span>.<span class="ID">implicit_plane</span>.<span class="ID">widget</span>.<span class="ID">enabled</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-8-4"></span><span class="ID">scp</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">diffuse</span> = <span class="Number">0.0</span></span>
+<span class="line"><span class="anchor" id="line-9-4"></span><span class="ID">scp</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">ambient</span> = <span class="Number">1.0</span></span>
+<span class="line"><span class="anchor" id="line-10-4"></span><span class="ID">scp</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">opacity</span> = <span class="Number">1.0</span></span>
+<span class="line"><span class="anchor" id="line-11-3"></span><span class="ID">scp</span>.<span class="ID">module_manager</span>.<span class="ID">scalar_lut_manager</span>.<span class="ID">data_range</span> = [<span class="Number">0</span>, <span class="Number">1</span>]</span>
+</pre></div></div><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><p class="line862">Thus, you can see your data on each cell and not as points (compare to the first figure showing the use of the ScalarCutPlane module): <span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><p class="line867"><img alt="filter_p2c.png" class="attachment" src="filter_p2c60fb.png?action=AttachFile&amp;do=get&amp;target=filter_p2c.png" title="filter_p2c.png" /> <span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><p class="line867">
+<h1 id="WarpScalar_filter">WarpScalar filter</h1>
+<span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><p class="line862">You can use the WarpScalar filter to warp a 2D surface for example. See <a href="../Examples-2.html">Example using mlab (surf_regular_mlab.py)</a>. <span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><p class="line867">
+<h1 id="TransformData_filter">TransformData filter</h1>
+<span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-228"></span><a href="../../../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-229"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MayaVi/ScriptingMayavi2/Filters  (last edited 2015-10-24 17:48:25 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Filters37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/Filters by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:16:58 GMT -->
+</html>
+

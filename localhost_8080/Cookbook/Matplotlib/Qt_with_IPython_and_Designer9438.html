@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/Qt_with_IPython_and_Designer - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Qt_with_IPython_and_Designer" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FQt_with_IPython_and_Designer&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="designer_edit_custom_widgets.png" href="Qt_with_IPython_and_Designer84d1.html?action=AttachFile&amp;do=view&amp;target=designer_edit_custom_widgets.png">
+<link rel="Appendix" title="designer_form_settings_comment.png" href="Qt_with_IPython_and_Designer42ce.html?action=AttachFile&amp;do=view&amp;target=designer_form_settings_comment.png">
+<link rel="Appendix" title="designer_full_workspace.png" href="Qt_with_IPython_and_Designered7b.html?action=AttachFile&amp;do=view&amp;target=designer_full_workspace.png">
+<link rel="Appendix" title="designer_new_widget.png" href="Qt_with_IPython_and_Designer4631.html?action=AttachFile&amp;do=view&amp;target=designer_new_widget.png">
+<link rel="Appendix" title="designer_newopen.png" href="Qt_with_IPython_and_Designer3d72.html?action=AttachFile&amp;do=view&amp;target=designer_newopen.png">
+<link rel="Appendix" title="designer_wizard.png" href="Qt_with_IPython_and_Designer60b2.html?action=AttachFile&amp;do=view&amp;target=designer_wizard.png">
+<link rel="Appendix" title="ipython_interacted.png" href="Qt_with_IPython_and_Designer8e9d.html?action=AttachFile&amp;do=view&amp;target=ipython_interacted.png">
+<link rel="Appendix" title="ipython_invoked.png" href="Qt_with_IPython_and_Designer990e.html?action=AttachFile&amp;do=view&amp;target=ipython_invoked.png">
+<link rel="Appendix" title="main_mpl_tutorial.py" href="Qt_with_IPython_and_Designer4e9d.html?action=AttachFile&amp;do=view&amp;target=main_mpl_tutorial.py">
+<link rel="Appendix" title="mplwidget.py" href="Qt_with_IPython_and_Designer4834.html?action=AttachFile&amp;do=view&amp;target=mplwidget.py">
+<link rel="Appendix" title="mplwidget_tutorial.py" href="Qt_with_IPython_and_Designer34e5.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.py">
+<link rel="Appendix" title="mplwidget_tutorial.ui" href="Qt_with_IPython_and_Designer0f0b.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.ui">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Qt_with_IPython_and_Designer456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Qt_with_IPython_and_Designer2357.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FQt_with_IPython_and_Designer%22" rel="nofollow" title="Click to do a full-text search for this title">Qt_with_IPython_and_Designer</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Qt_with_IPython_and_Designer.html">Qt_with_IPy...nd_Designer</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Qt_with_IPython_and_Designer37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Example code for embedding Matplotlib in Qt applications is given at <a class="http" href="../../../external.html?link=http://cvs.sourceforge.net/viewcvs.py/matplotlib/matplotlib/examples/">embedding_in_qt.py</a>.  This recipe extends that basic formula for integration with other powerful tools.  In particular, we bring together the use of the GUI creation tool made by <a class="http" href="../../../external.html?link=http://www.trolltech.com/">Trolltech</a> (the creators of Qt) and the ability to interact with a running Qt application via <a class="http" href="../../../external.html?link=http://ipython.scipy.org/">IPython</a>. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">A basic tutorial for using Designer (along with the pertinent system requirements) has been posted by <a class="http" href="../../../external.html?link=http://www.cs.usfca.edu/~afedosov/qttut/">Alex Fedosov</a>.  Please review it before continuing. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">However, for our purposes, we will create a much simpler design in Designer. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">Open Designer, and create a new &quot;Main Window&quot;: <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><img alt="designer_newopen.png" class="attachment" src="designer_newopen1228.png?action=AttachFile&amp;do=get&amp;target=designer_newopen.png" title="designer_newopen.png" /> <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line874">When the wizard appears, remove all of the menus and toolbars that it suggests to generate: <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867"><img alt="designer_wizard.png" class="attachment" src="designer_wizard39ce.png?action=AttachFile&amp;do=get&amp;target=designer_wizard.png" title="designer_wizard.png" /> <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line874">Now add a custom widget to your project as: <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line867"><img alt="designer_edit_custom_widgets.png" class="attachment" src="designer_edit_custom_widgetscab5.png?action=AttachFile&amp;do=get&amp;target=designer_edit_custom_widgets.png" title="designer_edit_custom_widgets.png" /> <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line862">Give this new widget the name of <tt>MatplotlibWidget</tt> and set the size to 400, 300: <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line867"><img alt="designer_new_widget.png" class="attachment" src="designer_new_widget1c36.png?action=AttachFile&amp;do=get&amp;target=designer_new_widget.png" title="designer_new_widget.png" /> <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">The <tt>MatplotlibWidget</tt> should now appear in your toolbox.  Click on it and then click in the Form that has been created.  Also perform &quot;Lay Out Vertically (Ctrl+L)&quot; and &quot;Adjust Size (Ctrl+J)&quot; operations on the Form (without the widget being selected) if you know what those are.  At this point your workspace might look something like this: <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867"><img alt="designer_full_workspace.png" class="attachment" src="designer_full_workspace49d8.png?action=AttachFile&amp;do=get&amp;target=designer_full_workspace.png" title="designer_full_workspace.png" /> <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">Now we need to get the &quot;import&quot; setting put in, as specified <a class="http" href="../../../external.html?link=http://www.river-bank.demon.co.uk/docs/pyqt/PyQt.html#AEN95">here</a>: <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line867"><img alt="designer_form_settings_comment.png" class="attachment" src="designer_form_settings_comment5a74.png?action=AttachFile&amp;do=get&amp;target=designer_form_settings_comment.png" title="designer_form_settings_comment.png" /> <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line862">Of course, you'll also need the file that will then be included: <a class="attachment" href="Qt_with_IPython_and_Designer4834.html?action=AttachFile&amp;do=view&amp;target=mplwidget.py" title="">mplwidget.py</a>. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line874">The product of all of these operations in Designer is a .ui file.  So, save the Form we've been working on and call it &quot;mplwidget_tutorial.ui&quot;. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line874">One of the things that can mess this up is that Designer automatically increments the names given to widget instances (Form1, Form2, matplotlibWidget1, matplotlibWidget2, etc.) so if those don't match up with what I used, you may need to make some logical adjustments to your procedure.   <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line862">Now, we use the tool pyuic (included with <a class="http" href="../../../external.html?link=http://www.riverbankcomputing.co.uk/pyqt/index.php">PyQt</a> to convert this .ui file into a Python class.  This is easily accomplished with: <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line867"><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><pre><span class="anchor" id="line-1-1"></span>pyuic mplwidget_tutorial.ui &gt; mplwidget_tutorial.py</pre><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><p class="line862">Go ahead and view the contents of mplwidget_tutorial.py and compare it with what <a class="attachment" href="Qt_with_IPython_and_Designer34e5.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.py" title="I got">I got</a>.  You can also look at my <a class="attachment" href="Qt_with_IPython_and_Designer0f0b.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.ui" title="">mplwidget_tutorial.ui</a>  <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><p class="line862">Now, it's nice to have the invocation written up in its own <a class="attachment" href="Qt_with_IPython_and_Designer4e9d.html?action=AttachFile&amp;do=view&amp;target=main_mpl_tutorial.py" title="">main_mpl_tutorial.py</a> file, which is amazingly short: <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><p class="line867"><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-1-2"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-ab22052b5f32f451964f48e8775c406c3fa83e54\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-ab22052b5f32f451964f48e8775c406c3fa83e54" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-ab22052b5f32f451964f48e8775c406c3fa83e54_1">   1</a> </span><span class="LineAnchor" id="CA-ab22052b5f32f451964f48e8775c406c3fa83e54_1"></span><span class="anchor" id="line-1-3"></span><span class="ResWord">from</span> <span class="ID">mplwidget_tutorial</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ab22052b5f32f451964f48e8775c406c3fa83e54_2">   2</a> </span><span class="LineAnchor" id="CA-ab22052b5f32f451964f48e8775c406c3fa83e54_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ab22052b5f32f451964f48e8775c406c3fa83e54_3">   3</a> </span><span class="LineAnchor" id="CA-ab22052b5f32f451964f48e8775c406c3fa83e54_3"></span><span class="anchor" id="line-3-1"></span><span class="ID">f</span> = <span class="ID">Form1</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ab22052b5f32f451964f48e8775c406c3fa83e54_4">   4</a> </span><span class="LineAnchor" id="CA-ab22052b5f32f451964f48e8775c406c3fa83e54_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">f</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><p class="line862">Then, we want to start ipython and instantiate the window.  In order to succeed in this endeavor, there are a bunch of packages (each with minimum version requirements) you'll need, like python2.3-ipython, python2.3-qt3, and so on.  The most important one, though, is ipython &gt;= 0.6.13 (I think).  From that version on, there is a super-great feature that adds an invocation switch <tt>-qthread</tt> that starts a QApplication in a separate thread, in such a way that the ipython prompt can still interact with it. <span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><p class="line867"><img alt="ipython_invoked.png" class="attachment" src="ipython_invoked66b5.png?action=AttachFile&amp;do=get&amp;target=ipython_invoked.png" title="ipython_invoked.png" /> <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line874">So, if the above command doesn't work for you, check the version.  It may also be invoked as &quot;python2.3-ipython&quot; depending on your configuration. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line874">Okay, now comes the coolest part: the interaction. <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line867"><img alt="ipython_interacted.png" class="attachment" src="ipython_interacted819f.png?action=AttachFile&amp;do=get&amp;target=ipython_interacted.png" title="ipython_interacted.png" /> <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line874">And, it is very easy to go back to Designer, add a button, re-run pyuic, and you've got another version. <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-67"></span><a href="../../CategoryCookbookMatplotlib.html"><strong class="highlight">CategoryCookbook</strong>Matplotlib</a> <span class="anchor" id="line-68"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/Qt_with_IPython_and_Designer  (last edited 2015-10-24 17:48:26 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Qt_with_IPython_and_Designer37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+</html>
+

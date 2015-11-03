@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/LoktaVolterraTutorial?action=show&redirect=LoktaVolterraTutorial by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:26:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/LoktaVolterraTutorial - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/LoktaVolterraTutorial" href="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FLoktaVolterraTutorial&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="rabbits_and_foxes_1.png" href="LoktaVolterraTutorialf5b0.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_1.png">
+<link rel="Appendix" title="rabbits_and_foxes_1v2.png" href="LoktaVolterraTutorial1145.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_1v2.png">
+<link rel="Appendix" title="rabbits_and_foxes_2.png" href="LoktaVolterraTutorial8d44.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_2.png">
+<link rel="Appendix" title="rabbits_and_foxes_2v2.png" href="LoktaVolterraTutorial1235.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_2v2.png">
+<link rel="Appendix" title="rabbits_and_foxes_2v3.png" href="LoktaVolterraTutorial3909.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_2v3.png">
+<link rel="Appendix" title="rabbits_and_foxes_3.png" href="LoktaVolterraTutorial8ec9.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_3.png">
+<link rel="Appendix" title="rabbits_and_foxes_3v2.png" href="LoktaVolterraTutorialaaa8.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_3v2.png">
+<link rel="Appendix" title="tutorial_lokta-voltera.py" href="LoktaVolterraTutorialebc1.html?action=AttachFile&amp;do=view&amp;target=tutorial_lokta-voltera.py">
+<link rel="Appendix" title="tutorial_lokta-voltera_v2.py" href="LoktaVolterraTutoriale780.html?action=AttachFile&amp;do=view&amp;target=tutorial_lokta-voltera_v2.py">
+<link rel="Appendix" title="tutorial_lokta-voltera_v3.py" href="LoktaVolterraTutorial7fc8.html?action=AttachFile&amp;do=view&amp;target=tutorial_lokta-voltera_v3.py">
+<link rel="Appendix" title="tutorial_lokta-voltera_v4.py" href="LoktaVolterraTutorial5bb1.html?action=AttachFile&amp;do=view&amp;target=tutorial_lokta-voltera_v4.py">
+<link rel="Appendix" title="zombie_nodead_nobirths.png" href="LoktaVolterraTutorialc5c3.html?action=AttachFile&amp;do=view&amp;target=zombie_nodead_nobirths.png">
+<link rel="Appendix" title="zombie_somedead_10births.png" href="LoktaVolterraTutorial3329.html?action=AttachFile&amp;do=view&amp;target=zombie_somedead_10births.png">
+<link rel="Appendix" title="zombie_somedead_nobirths.png" href="LoktaVolterraTutorialec79.html?action=AttachFile&amp;do=view&amp;target=zombie_somedead_nobirths.png">
+<link rel="Appendix" title="zombie_somedeaddead_nobirths.png" href="LoktaVolterraTutorial5354.html?action=AttachFile&amp;do=view&amp;target=zombie_somedeaddead_nobirths.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="LoktaVolterraTutorial456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="../AllPages8a00.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FLoktaVolterraTutorial%22" rel="nofollow" title="Click to do a full-text search for this title">LoktaVolterraTutorial</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="LoktaVolterraTutorial.html">LoktaVolterraTutorial</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="info"><strong>Redirected from page "<a href="../LoktaVolterraTutorial75f4.html?action=show">LoktaVolterraTutorial</a>"</strong><br></div></p><a class="clear-link" href="LoktaVolterraTutorial.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LoktaVolterraTutorial37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line874">This example describes how to integrate ODEs with the scipy.integrate module, and how to use the matplotlib module to plot trajectories, direction fields and other information. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line862">You can get the source code for this tutorial here: <a class="attachment" href="LoktaVolterraTutorial5bb1.html?action=AttachFile&amp;do=view&amp;target=tutorial_lokta-voltera_v4.py" title="">tutorial_lokta-voltera_v4.py</a> . <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867">
+<h2 id="Presentation_of_the_Lotka-Volterra_Model">Presentation of the Lotka-Volterra Model</h2>
+<span class="anchor" id="line-7"></span><p class="line874">We will have a look at the Lotka-Volterra model, also known as the predator-prey equations, which is a pair of first order, non-linear, differential equations frequently used to describe the dynamics of biological systems in which two species interact, one a predator and the other its prey. The model was proposed independently by Alfred J. Lotka in 1925 and Vito Volterra in 1926, and can be described by <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><pre><span class="anchor" id="line-1"></span>du/dt =  a*u -   b*u*v
+<span class="anchor" id="line-2"></span>dv/dt = -c*v + d*b*u*v</pre><span class="anchor" id="line-13"></span><p class="line867"><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p>with the following notations:</p>
+<ul class="simple">
+<li>u: number of preys (for example, rabbits)</li><li>v: number of predators (for example, foxes)</li><li>a, b, c, d are constant parameters defining the behavior of the population:<ul>
+<li>a is the natural growing rate of rabbits, when there's no fox</li><li>b is the natural dying rate of rabbits, due to predation</li><li>c is the natural dying rate of fox, when there's no rabbit</li><li>d is the factor describing how many caught rabbits let create a new fox</li></ul>
+</li></ul>
+<span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line874">We will use X=[u, v] to describe the state of both populations. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line874">Definition of the equations: <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line867"><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9edf627579bb383e43574e213ef10303ed432460\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9edf627579bb383e43574e213ef10303ed432460" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_1">   1</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_2">   2</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span> <span class="ResWord">as</span> <span class="ID">p</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_3">   3</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment"># Definition of parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_4">   4</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">a</span> = <span class="Number">1.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_5">   5</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">b</span> = <span class="Number">0.1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_6">   6</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_6"></span><span class="anchor" id="line-6-1"></span><span class="ID">c</span> = <span class="Number">1.5</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_7">   7</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">d</span> = <span class="Number">0.75</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_8">   8</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">def</span> <span class="ID">dX_dt</span>(<span class="ID">X</span>, <span class="ID">t</span>=<span class="Number">0</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_9">   9</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_9"></span><span class="anchor" id="line-9-1"></span>    <span class="String">&quot;&quot;&quot; Return the growth rate of fox and rabbit populations. &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_10">  10</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_10"></span><span class="anchor" id="line-10-1"></span>    <span class="ResWord">return</span> <span class="ID">array</span>([ <span class="ID">a</span>*<span class="ID">X</span>[<span class="Number">0</span>] -   <span class="ID">b</span>*<span class="ID">X</span>[<span class="Number">0</span>]*<span class="ID">X</span>[<span class="Number">1</span>] ,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9edf627579bb383e43574e213ef10303ed432460_11">  11</a> </span><span class="LineAnchor" id="CA-9edf627579bb383e43574e213ef10303ed432460_11"></span><span class="anchor" id="line-11-1"></span>                  -<span class="ID">c</span>*<span class="ID">X</span>[<span class="Number">1</span>] + <span class="ID">d</span>*<span class="ID">b</span>*<span class="ID">X</span>[<span class="Number">0</span>]*<span class="ID">X</span>[<span class="Number">1</span>] ])</span>
+</pre></div></div><span class="anchor" id="line-50"></span><p class="line867">
+<h3 id="Population_equilibrium">Population equilibrium</h3>
+<span class="anchor" id="line-51"></span><p class="line862">Before using SciPy to integrate this system, we will have a closer look at  position equilibrium. Equilibrium occurs when the growth rate is equal to 0. This gives two fixed points: <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867"><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_1">   1</a> </span><span class="LineAnchor" id="CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">X_f0</span> = <span class="ID">array</span>([     <span class="Number">0.</span> ,  <span class="Number">0.</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_2">   2</a> </span><span class="LineAnchor" id="CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">X_f1</span> = <span class="ID">array</span>([ <span class="ID">c</span>/(<span class="ID">d</span>*<span class="ID">b</span>), <span class="ID">a</span>/<span class="ID">b</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_3">   3</a> </span><span class="LineAnchor" id="CA-d76ea6eddbe19dcaa753ea4aace1c96b47e8b971_3"></span><span class="anchor" id="line-3-2"></span><span class="ResWord">all</span>(<span class="ID">dX_dt</span>(<span class="ID">X_f0</span>) == <span class="ID">zeros</span>(<span class="Number">2</span>) ) <span class="ResWord">and</span> <span class="ResWord">all</span>(<span class="ID">dX_dt</span>(<span class="ID">X_f1</span>) == <span class="ID">zeros</span>(<span class="Number">2</span>)) <span class="Comment"># =&gt; True</span></span>
+</pre></div></div><span class="anchor" id="line-59"></span><p class="line867">
+<h3 id="Stability_of_the_fixed_points">Stability of the fixed points</h3>
+<span class="anchor" id="line-60"></span><p class="line874">Near these two points, the system can be linearized: dX_dt = A_f*X where A is the Jacobian matrix evaluated at the corresponding point. We have to define the Jacobian matrix: <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line867"><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-77439a3d0943cea9eca15d29c21add5c47cd3eff\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-77439a3d0943cea9eca15d29c21add5c47cd3eff" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_1">   1</a> </span><span class="LineAnchor" id="CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">def</span> <span class="ID">d2X_dt2</span>(<span class="ID">X</span>, <span class="ID">t</span>=<span class="Number">0</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_2">   2</a> </span><span class="LineAnchor" id="CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_2"></span><span class="anchor" id="line-2-3"></span>    <span class="String">&quot;&quot;&quot; Return the Jacobian matrix evaluated in X. &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_3">   3</a> </span><span class="LineAnchor" id="CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_3"></span><span class="anchor" id="line-3-3"></span>    <span class="ResWord">return</span> <span class="ID">array</span>([[<span class="ID">a</span> -<span class="ID">b</span>*<span class="ID">X</span>[<span class="Number">1</span>],   -<span class="ID">b</span>*<span class="ID">X</span>[<span class="Number">0</span>]     ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_4">   4</a> </span><span class="LineAnchor" id="CA-77439a3d0943cea9eca15d29c21add5c47cd3eff_4"></span><span class="anchor" id="line-4-2"></span>                  [<span class="ID">b</span>*<span class="ID">d</span>*<span class="ID">X</span>[<span class="Number">1</span>] ,   -<span class="ID">c</span> +<span class="ID">b</span>*<span class="ID">d</span>*<span class="ID">X</span>[<span class="Number">0</span>]] ])</span>
+</pre></div></div><span class="anchor" id="line-69"></span><p class="line874">So near X_f0, which represents the extinction of both species, we have: <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line867"><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b_1">   1</a> </span><span class="LineAnchor" id="CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b_1"></span><span class="anchor" id="line-1-8"></span><span class="ID">A_f0</span> = <span class="ID">d2X_dt2</span>(<span class="ID">X_f0</span>)                    <span class="Comment"># &gt;&gt;&gt; array([[ 1. , -0. ],</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b_2">   2</a> </span><span class="LineAnchor" id="CA-1d159987df8eed27d0df7f67f8879c31e8a73e0b_2"></span><span class="anchor" id="line-2-4"></span>                                        <span class="Comment">#            [ 0. , -1.5]])</span></span>
+</pre></div></div><span class="anchor" id="line-76"></span><p class="line862">Near X_f0, the number of rabbits increase and the population of foxes decrease. The origin is therefore a <a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Saddle_point">saddle point</a>. <span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line874">Near X_f1, we have: <span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><p class="line867"><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-426bf5dce8b713ccfb696027e7f37b182ef79491\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_1">   1</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_1"></span><span class="anchor" id="line-1-10"></span><span class="ID">A_f1</span> = <span class="ID">d2X_dt2</span>(<span class="ID">X_f1</span>)                    <span class="Comment"># &gt;&gt;&gt; array([[ 0.  , -2.  ],</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_2">   2</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_2"></span><span class="anchor" id="line-2-5"></span>                                        <span class="Comment">#            [ 0.75,  0.  ]])</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_3">   3</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_3"></span><span class="anchor" id="line-3-4"></span><span class="Comment"># whose eigenvalues are +/- sqrt(c*a).j:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_4">   4</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_4"></span><span class="anchor" id="line-4-3"></span><span class="ID">lambda1</span>, <span class="ID">lambda2</span> = <span class="ID">linalg</span>.<span class="ID">eigvals</span>(<span class="ID">A_f1</span>) <span class="Comment"># &gt;&gt;&gt; (1.22474j, -1.22474j)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_5">   5</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_5"></span><span class="anchor" id="line-5-2"></span><span class="Comment"># They are imaginary numbers. The fox and rabbit populations are periodic as follows from further</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_6">   6</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_6"></span><span class="anchor" id="line-6-2"></span><span class="Comment"># analysis. Their period is given by:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-426bf5dce8b713ccfb696027e7f37b182ef79491_7">   7</a> </span><span class="LineAnchor" id="CA-426bf5dce8b713ccfb696027e7f37b182ef79491_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">T_f1</span> = <span class="Number">2</span>*<span class="ID">pi</span>/<span class="ResWord">abs</span>(<span class="ID">lambda1</span>)                <span class="Comment"># &gt;&gt;&gt; 5.130199</span></span>
+</pre></div></div><span class="anchor" id="line-90"></span><p class="line867">
+<h2 id="Integrating_the_ODE_using_scipy.integrate">Integrating the ODE using scipy.integrate</h2>
+<span class="anchor" id="line-91"></span><p class="line874">Now we will use the scipy.integrate module to integrate the ODEs. This module offers a method named odeint, which is very easy to use to integrate ODEs: <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><p class="line867"><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-fc1bae6f37f0b00aca9521a0c497abc205298314\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-fc1bae6f37f0b00aca9521a0c497abc205298314_1">   1</a> </span><span class="LineAnchor" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314_1"></span><span class="anchor" id="line-1-12"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">integrate</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fc1bae6f37f0b00aca9521a0c497abc205298314_2">   2</a> </span><span class="LineAnchor" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314_2"></span><span class="anchor" id="line-2-6"></span><span class="ID">t</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="Number">15</span>,  <span class="Number">1000</span>)              <span class="Comment"># time</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fc1bae6f37f0b00aca9521a0c497abc205298314_3">   3</a> </span><span class="LineAnchor" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314_3"></span><span class="anchor" id="line-3-5"></span><span class="ID">X0</span> = <span class="ID">array</span>([<span class="Number">10</span>, <span class="Number">5</span>])                     <span class="Comment"># initials conditions: 10 rabbits and 5 foxes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fc1bae6f37f0b00aca9521a0c497abc205298314_4">   4</a> </span><span class="LineAnchor" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314_4"></span><span class="anchor" id="line-4-4"></span><span class="ID">X</span>, <span class="ID">infodict</span> = <span class="ID">integrate</span>.<span class="ID">odeint</span>(<span class="ID">dX_dt</span>, <span class="ID">X0</span>, <span class="ID">t</span>, <span class="ID">full_output</span>=<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fc1bae6f37f0b00aca9521a0c497abc205298314_5">   5</a> </span><span class="LineAnchor" id="CA-fc1bae6f37f0b00aca9521a0c497abc205298314_5"></span><span class="anchor" id="line-5-3"></span><span class="ID">infodict</span>[<span class="String">'</span><span class="String">message</span><span class="String">'</span>]                     <span class="Comment"># &gt;&gt;&gt; 'Integration successful.'</span></span>
+</pre></div></div><span class="anchor" id="line-101"></span><p class="line867"><tt class="backtick">infodict</tt> is optional, and you can omit the <tt class="backtick">full_output</tt> argument if you don't want it. Type &quot;info(odeint)&quot; if you want more information about odeint inputs and outputs. <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><p class="line874">We can now use Matplotlib to plot the evolution of both populations: <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><p class="line867"><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-1e806061ded332181b5d1c20c54bf09611fdd1b4\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_1">   1</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_1"></span><span class="anchor" id="line-1-14"></span><span class="ID">rabbits</span>, <span class="ID">foxes</span> = <span class="ID">X</span>.<span class="ID">T</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_2">   2</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_2"></span><span class="anchor" id="line-2-7"></span><span class="ID">f1</span> = <span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_3">   3</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_3"></span><span class="anchor" id="line-3-6"></span><span class="ID">p</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">rabbits</span>, <span class="String">'</span><span class="String">r-</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Rabbits</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_4">   4</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_4"></span><span class="anchor" id="line-4-5"></span><span class="ID">p</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">foxes</span>  , <span class="String">'</span><span class="String">b-</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Foxes</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_5">   5</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_5"></span><span class="anchor" id="line-5-4"></span><span class="ID">p</span>.<span class="ID">grid</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_6">   6</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_6"></span><span class="anchor" id="line-6-3"></span><span class="ID">p</span>.<span class="ID">legend</span>(<span class="ID">loc</span>=<span class="String">'</span><span class="String">best</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_7">   7</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_7"></span><span class="anchor" id="line-7-3"></span><span class="ID">p</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_8">   8</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_8"></span><span class="anchor" id="line-8-2"></span><span class="ID">p</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">population</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_9">   9</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_9"></span><span class="anchor" id="line-9-2"></span><span class="ID">p</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Evolution of fox and rabbit populations</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_10">  10</a> </span><span class="LineAnchor" id="CA-1e806061ded332181b5d1c20c54bf09611fdd1b4_10"></span><span class="anchor" id="line-10-2"></span><span class="ID">f1</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">rabbits_and_foxes_1.png</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-118"></span><p class="line867"><img alt="rabbits_and_foxes_1v2.png" class="attachment" src="rabbits_and_foxes_1v28376.png?action=AttachFile&amp;do=get&amp;target=rabbits_and_foxes_1v2.png" title="rabbits_and_foxes_1v2.png" /> <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><p class="line874">The populations are indeed periodic, and their period is close to the value T_f1 that we computed. <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><p class="line867">
+<h2 id="Plotting_direction_fields_and_trajectories_in_the_phase_plane">Plotting direction fields and trajectories in the phase plane</h2>
+<span class="anchor" id="line-123"></span><p class="line874">We will plot some trajectories in a phase plane for different starting <span class="anchor" id="line-124"></span>points between X_f0 and X_f1. <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><p class="line874">We will use Matplotlib's colormap to define colors for the trajectories. <span class="anchor" id="line-127"></span>These colormaps are very useful to make nice plots. <span class="anchor" id="line-128"></span>Have a look at <a class="http" href="../../external.html?link=http://www.scipy.org/Cookbook/Matplotlib/Show_colormaps">ShowColormaps</a> if you want more information. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line867"><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-aa2676b6efdcdd38447aa02938351c90e055d7c1\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_1">   1</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_1"></span><span class="anchor" id="line-1-16"></span><span class="ID">values</span>  = <span class="ID">linspace</span>(<span class="Number">0.3</span>, <span class="Number">0.9</span>, <span class="Number">5</span>)                          <span class="Comment"># position of X0 between X_f0 and X_f1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_2">   2</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_2"></span><span class="anchor" id="line-2-8"></span><span class="ID">vcolors</span> = <span class="ID">p</span>.<span class="ID">cm</span>.<span class="ID">autumn_r</span>(<span class="ID">linspace</span>(<span class="Number">0.3</span>, <span class="Number">1.</span>, <span class="ResWord">len</span>(<span class="ID">values</span>)))  <span class="Comment"># colors for each trajectory</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_3">   3</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_3"></span><span class="anchor" id="line-3-7"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_4">   4</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_4"></span><span class="anchor" id="line-4-6"></span><span class="ID">f2</span> = <span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_5">   5</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_5"></span><span class="anchor" id="line-5-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_6">   6</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_6"></span><span class="anchor" id="line-6-4"></span><span class="Comment">#-------------------------------------------------------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_7">   7</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_7"></span><span class="anchor" id="line-7-4"></span><span class="Comment"># plot trajectories</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_8">   8</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_8"></span><span class="anchor" id="line-8-3"></span><span class="ResWord">for</span> <span class="ID">v</span>, <span class="ID">col</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">values</span>, <span class="ID">vcolors</span>): </span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_9">   9</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_9"></span><span class="anchor" id="line-9-3"></span>    <span class="ID">X0</span> = <span class="ID">v</span> * <span class="ID">X_f1</span>                               <span class="Comment"># starting point</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_10">  10</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_10"></span><span class="anchor" id="line-10-3"></span>    <span class="ID">X</span> = <span class="ID">integrate</span>.<span class="ID">odeint</span>( <span class="ID">dX_dt</span>, <span class="ID">X0</span>, <span class="ID">t</span>)         <span class="Comment"># we don't need infodict here</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_11">  11</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_11"></span><span class="anchor" id="line-11-2"></span>    <span class="ID">p</span>.<span class="ID">plot</span>( <span class="ID">X</span>[:,<span class="Number">0</span>], <span class="ID">X</span>[:,<span class="Number">1</span>], <span class="ID">lw</span>=<span class="Number">3.5</span>*<span class="ID">v</span>, <span class="ID">color</span>=<span class="ID">col</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">X0=(</span><span class="String">%</span><span class="String">.f, </span><span class="String">%</span><span class="String">.f)</span><span class="String">'</span> % ( <span class="ID">X0</span>[<span class="Number">0</span>], <span class="ID">X0</span>[<span class="Number">1</span>]) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_12">  12</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_13">  13</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_13"></span><span class="anchor" id="line-13-1"></span><span class="Comment">#-------------------------------------------------------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_14">  14</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_14"></span><span class="anchor" id="line-14-1"></span><span class="Comment"># define a grid and compute direction at each point</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_15">  15</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">ymax</span> = <span class="ID">p</span>.<span class="ID">ylim</span>(<span class="ID">ymin</span>=<span class="Number">0</span>)[<span class="Number">1</span>]                        <span class="Comment"># get axis limits</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_16">  16</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">xmax</span> = <span class="ID">p</span>.<span class="ID">xlim</span>(<span class="ID">xmin</span>=<span class="Number">0</span>)[<span class="Number">1</span>] </span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_17">  17</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">nb_points</span>   = <span class="Number">20</span>                      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_18">  18</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_18"></span><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_19">  19</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">x</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="ID">xmax</span>, <span class="ID">nb_points</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_20">  20</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">y</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="ID">ymax</span>, <span class="ID">nb_points</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_21">  21</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_21"></span><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_22">  22</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_22"></span><span class="anchor" id="line-22-1"></span><span class="ID">X1</span> , <span class="ID">Y1</span>  = <span class="ID">meshgrid</span>(<span class="ID">x</span>, <span class="ID">y</span>)                       <span class="Comment"># create a grid</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_23">  23</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_23"></span><span class="anchor" id="line-23-1"></span><span class="ID">DX1</span>, <span class="ID">DY1</span> = <span class="ID">dX_dt</span>([<span class="ID">X1</span>, <span class="ID">Y1</span>])                      <span class="Comment"># compute growth rate on the gridt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_24">  24</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">M</span> = (<span class="ID">hypot</span>(<span class="ID">DX1</span>, <span class="ID">DY1</span>))                           <span class="Comment"># Norm of the growth rate </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_25">  25</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">M</span>[ <span class="ID">M</span> == <span class="Number">0</span>] = <span class="Number">1.</span>                                 <span class="Comment"># Avoid zero division errors </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_26">  26</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_26"></span><span class="anchor" id="line-26-1"></span><span class="ID">DX1</span> /= <span class="ID">M</span>                                        <span class="Comment"># Normalize each arrows</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_27">  27</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_27"></span><span class="anchor" id="line-27-1"></span><span class="ID">DY1</span> /= <span class="ID">M</span>                                  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_28">  28</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_28"></span><span class="anchor" id="line-28-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_29">  29</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_29"></span><span class="anchor" id="line-29-1"></span><span class="Comment">#-------------------------------------------------------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_30">  30</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_30"></span><span class="anchor" id="line-30-1"></span><span class="Comment"># Drow direction fields, using matplotlib 's quiver function</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_31">  31</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_31"></span><span class="anchor" id="line-31-1"></span><span class="Comment"># I choose to plot normalized arrows and to use colors to give information on</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_32">  32</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_32"></span><span class="anchor" id="line-32-1"></span><span class="Comment"># the growth speed</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_33">  33</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_33"></span><span class="anchor" id="line-33-1"></span><span class="ID">p</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Trajectories and direction fields</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_34">  34</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">Q</span> = <span class="ID">p</span>.<span class="ID">quiver</span>(<span class="ID">X1</span>, <span class="ID">Y1</span>, <span class="ID">DX1</span>, <span class="ID">DY1</span>, <span class="ID">M</span>, <span class="ID">pivot</span>=<span class="String">'</span><span class="String">mid</span><span class="String">'</span>, <span class="ID">cmap</span>=<span class="ID">p</span>.<span class="ID">cm</span>.<span class="ID">jet</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_35">  35</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_35"></span><span class="anchor" id="line-35-1"></span><span class="ID">p</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Number of rabbits</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_36">  36</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_36"></span><span class="anchor" id="line-36-1"></span><span class="ID">p</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Number of foxes</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_37">  37</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_37"></span><span class="anchor" id="line-37-1"></span><span class="ID">p</span>.<span class="ID">legend</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_38">  38</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_38"></span><span class="anchor" id="line-38-1"></span><span class="ID">p</span>.<span class="ID">grid</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_39">  39</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_39"></span><span class="anchor" id="line-39-1"></span><span class="ID">p</span>.<span class="ID">xlim</span>(<span class="Number">0</span>, <span class="ID">xmax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_40">  40</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_40"></span><span class="anchor" id="line-40-1"></span><span class="ID">p</span>.<span class="ID">ylim</span>(<span class="Number">0</span>, <span class="ID">ymax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_41">  41</a> </span><span class="LineAnchor" id="CA-aa2676b6efdcdd38447aa02938351c90e055d7c1_41"></span><span class="anchor" id="line-41-1"></span><span class="ID">f2</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">rabbits_and_foxes_2.png</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><p class="line867"><img alt="rabbits_and_foxes_2v3.png" class="attachment" src="rabbits_and_foxes_2v3b1af.png?action=AttachFile&amp;do=get&amp;target=rabbits_and_foxes_2v3.png" title="rabbits_and_foxes_2v3.png" /> <span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><p class="line874">This graph shows us that changing either the fox or the rabbit population can have an unintuitive effect. If, in order to decrease the number of rabbits, we introduce foxes, this can lead to an increase of rabbits in the long run, depending on the time of intervention. <span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><p class="line867">
+<h2 id="Plotting_contours">Plotting contours</h2>
+<span class="anchor" id="line-179"></span><p class="line874">We can verify that the function IF defined below remains constant along a trajectory: <span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><p class="line867"><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-1-17"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_1">   1</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_1"></span><span class="anchor" id="line-1-18"></span><span class="ResWord">def</span> <span class="ID">IF</span>(<span class="ID">X</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_2">   2</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_2"></span><span class="anchor" id="line-2-9"></span>    <span class="ID">u</span>, <span class="ID">v</span> = <span class="ID">X</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_3">   3</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_3"></span><span class="anchor" id="line-3-8"></span>    <span class="ResWord">return</span> <span class="ID">u</span>**(<span class="ID">c</span>/<span class="ID">a</span>) * <span class="ID">v</span> * <span class="ID">exp</span>( -(<span class="ID">b</span>/<span class="ID">a</span>)*(<span class="ID">d</span>*<span class="ID">u</span>+<span class="ID">v</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_4">   4</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_4"></span><span class="anchor" id="line-4-7"></span><span class="Comment"># We will verify that IF remains constant for different trajectories</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_5">   5</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_5"></span><span class="anchor" id="line-5-6"></span><span class="ResWord">for</span> <span class="ID">v</span> <span class="ResWord">in</span> <span class="ID">values</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_6">   6</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_6"></span><span class="anchor" id="line-6-5"></span>    <span class="ID">X0</span> = <span class="ID">v</span> * <span class="ID">X_f1</span>                               <span class="Comment"># starting point</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_7">   7</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_7"></span><span class="anchor" id="line-7-5"></span>    <span class="ID">X</span> = <span class="ID">integrate</span>.<span class="ID">odeint</span>( <span class="ID">dX_dt</span>, <span class="ID">X0</span>, <span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_8">   8</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_8"></span><span class="anchor" id="line-8-4"></span>    <span class="ID">I</span> = <span class="ID">IF</span>(<span class="ID">X</span>.<span class="ID">T</span>)                                 <span class="Comment"># compute IF along the trajectory</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_9">   9</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_9"></span><span class="anchor" id="line-9-4"></span>    <span class="ID">I_mean</span> = <span class="ID">I</span>.<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_10">  10</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_10"></span><span class="anchor" id="line-10-4"></span>    <span class="ID">delta</span> = <span class="Number">100</span> * (<span class="ID">I</span>.<span class="ID">max</span>()-<span class="ID">I</span>.<span class="ID">min</span>())/<span class="ID">I_mean</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_11">  11</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_11"></span><span class="anchor" id="line-11-3"></span>    <span class="ResWord">print</span> <span class="String">'</span><span class="String">X0=(</span><span class="String">%</span><span class="String">2.f,</span><span class="String">%</span><span class="String">2.f) =&gt; I ~ </span><span class="String">%.1f</span><span class="String"> |delta = </span><span class="String">%.3G</span><span class="String"> </span><span class="String">%%</span><span class="String">'</span> % (<span class="ID">X0</span>[<span class="Number">0</span>], <span class="ID">X0</span>[<span class="Number">1</span>], <span class="ID">I_mean</span>, <span class="ID">delta</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_12">  12</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_12"></span><span class="anchor" id="line-12-2"></span><span class="Comment"># &gt;&gt;&gt; X0=( 6, 3) =&gt; I ~ 20.8 |delta = 6.19E-05 %</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_13">  13</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_13"></span><span class="anchor" id="line-13-2"></span><span class="Comment">#     X0=( 9, 4) =&gt; I ~ 39.4 |delta = 2.67E-05 %</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_14">  14</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_14"></span><span class="anchor" id="line-14-2"></span><span class="Comment">#     X0=(12, 6) =&gt; I ~ 55.7 |delta = 1.82E-05 %</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_15">  15</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_15"></span><span class="anchor" id="line-15-2"></span><span class="Comment">#     X0=(15, 8) =&gt; I ~ 66.8 |delta = 1.12E-05 %</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_16">  16</a> </span><span class="LineAnchor" id="CA-e7384388dc9c7dc66e5c7e4acf4acdff56b9538e_16"></span><span class="anchor" id="line-16-2"></span><span class="Comment">#     X0=(18, 9) =&gt; I ~ 72.4 |delta = 4.68E-06 %</span></span>
+</pre></div></div><span class="anchor" id="line-200"></span><p class="line874">Plotting iso-contours of IF can be a good representation of trajectories, without having to integrate the ODE <span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><p class="line867"><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-1-19"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-dbd2a3ab86ee3a77983c61d54a939563867880fd\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_1">   1</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_1"></span><span class="anchor" id="line-1-20"></span><span class="Comment">#-------------------------------------------------------</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_2">   2</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_2"></span><span class="anchor" id="line-2-10"></span><span class="Comment"># plot iso contours</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_3">   3</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_3"></span><span class="anchor" id="line-3-9"></span><span class="ID">nb_points</span> = <span class="Number">80</span>                              <span class="Comment"># grid size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_4">   4</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_4"></span><span class="anchor" id="line-4-8"></span><span class="ID">x</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="ID">xmax</span>, <span class="ID">nb_points</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_5">   5</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_5"></span><span class="anchor" id="line-5-7"></span><span class="ID">y</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="ID">ymax</span>, <span class="ID">nb_points</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_6">   6</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_6"></span><span class="anchor" id="line-6-6"></span><span class="ID">X2</span> , <span class="ID">Y2</span>  = <span class="ID">meshgrid</span>(<span class="ID">x</span>, <span class="ID">y</span>)                   <span class="Comment"># create the grid</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_7">   7</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_7"></span><span class="anchor" id="line-7-6"></span><span class="ID">Z2</span> = <span class="ID">IF</span>([<span class="ID">X2</span>, <span class="ID">Y2</span>])                           <span class="Comment"># compute IF on each point</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_8">   8</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_8"></span><span class="anchor" id="line-8-5"></span><span class="ID">f3</span> = <span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_9">   9</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_9"></span><span class="anchor" id="line-9-5"></span><span class="ID">CS</span> = <span class="ID">p</span>.<span class="ID">contourf</span>(<span class="ID">X2</span>, <span class="ID">Y2</span>, <span class="ID">Z2</span>, <span class="ID">cmap</span>=<span class="ID">p</span>.<span class="ID">cm</span>.<span class="ID">Purples_r</span>, <span class="ID">alpha</span>=<span class="Number">0.5</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_10">  10</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_10"></span><span class="anchor" id="line-10-5"></span><span class="ID">CS2</span> = <span class="ID">p</span>.<span class="ID">contour</span>(<span class="ID">X2</span>, <span class="ID">Y2</span>, <span class="ID">Z2</span>, <span class="ID">colors</span>=<span class="String">'</span><span class="String">black</span><span class="String">'</span>, <span class="ID">linewidths</span>=<span class="Number">2.</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_11">  11</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_11"></span><span class="anchor" id="line-11-4"></span><span class="ID">p</span>.<span class="ID">clabel</span>(<span class="ID">CS2</span>, <span class="ID">inline</span>=<span class="Number">1</span>, <span class="ID">fontsize</span>=<span class="Number">16</span>, <span class="ID">fmt</span>=<span class="String">'</span><span class="String">%</span><span class="String">.f</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_12">  12</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_12"></span><span class="anchor" id="line-12-3"></span><span class="ID">p</span>.<span class="ID">grid</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_13">  13</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_13"></span><span class="anchor" id="line-13-3"></span><span class="ID">p</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Number of rabbits</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_14">  14</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_14"></span><span class="anchor" id="line-14-3"></span><span class="ID">p</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Number of foxes</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_15">  15</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_15"></span><span class="anchor" id="line-15-3"></span><span class="ID">p</span>.<span class="ID">ylim</span>(<span class="Number">1</span>, <span class="ID">ymax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_16">  16</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_16"></span><span class="anchor" id="line-16-3"></span><span class="ID">p</span>.<span class="ID">xlim</span>(<span class="Number">1</span>, <span class="ID">xmax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_17">  17</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_17"></span><span class="anchor" id="line-17-2"></span><span class="ID">p</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">IF contours</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_18">  18</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_18"></span><span class="anchor" id="line-18-2"></span><span class="ID">f3</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">rabbits_and_foxes_3.png</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_19">  19</a> </span><span class="LineAnchor" id="CA-dbd2a3ab86ee3a77983c61d54a939563867880fd_19"></span><span class="anchor" id="line-19-2"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-224"></span><p class="line867"><img alt="rabbits_and_foxes_3v2.png" class="attachment" src="rabbits_and_foxes_3v2a65c.png?action=AttachFile&amp;do=get&amp;target=rabbits_and_foxes_3v2.png" title="rabbits_and_foxes_3v2.png" /> <span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-227"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-228"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/LoktaVolterraTutorial  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="LoktaVolterraTutorial37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/LoktaVolterraTutorial">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/LoktaVolterraTutorial?action=show&redirect=LoktaVolterraTutorial by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:26:58 GMT -->
+</html>
+

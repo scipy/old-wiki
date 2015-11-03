@@ -1,0 +1,377 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values?highlight=%28%28CategoryCookbookMatplotlib%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/Plotting_Images_with_Special_Values - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Plotting_Images_with_Special_Values" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FPlotting_Images_with_Special_Values&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="sentinel.png" href="Plotting_Images_with_Special_Values36c4.html?action=AttachFile&amp;do=view&amp;target=sentinel.png">
+<link rel="Appendix" title="sentinel_pristine.png" href="Plotting_Images_with_Special_Valuesaa18.html?action=AttachFile&amp;do=view&amp;target=sentinel_pristine.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Plotting_Images_with_Special_Values456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Plotting_Images_with_Special_Values717b.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FPlotting_Images_with_Special_Values%22" rel="nofollow" title="Click to do a full-text search for this title">Plotting_Images_with_Special_Values</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Plotting_Images_with_Special_Values.html">Plotting_Im...cial_Values</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Plotting_Images_with_Special_Values37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Image plotting requires data, a colormap, and a normalization. A common desire is to show missing data or other values in a specified color. The following code shows an example of how to do this. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">The code creates a new <tt>SentinelMap</tt> Colormap subclass and a <tt>SentinelNorm</tt> norm subclass. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">The <tt>SentinelMap</tt> initialization takes a dictionary of value, color pairs. The data is already assumed to be normalized (except for the sentinels which are preserved). The RGB values at the sentinel values are replaced by the specified  colors. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">The <tt>SentinelNorm</tt> class normalizes the data in the standard way except for one sublety. <tt>SentinelNorm</tt> takes an &quot;ignore&quot; argument. The ignored values need to be excluded from the normalization so that they do not skew the results.  <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">I use a not particularly wonderful algorithm of explicitly sorting the data and using the first non-sentinel values to define the min and max. This can probably be improved, but for my purposes was easy and sufficient. The data is then normalized including the sentinels. Finally, the sentinels are replaced. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-ede78cab6d3b6a61b2306e068c852490250002d5\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_1">   1</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib.colors</span> <span class="ResWord">import</span> <span class="ID">Colormap</span>, <span class="ID">normalize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_2">   2</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.numerix</span> <span class="ResWord">as</span> <span class="ID">nx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_3">   3</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">from</span> <span class="ID">types</span> <span class="ResWord">import</span> <span class="ID">IntType</span>, <span class="ID">FloatType</span>, <span class="ID">ListType</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_4">   4</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_4"></span><span class="anchor" id="line-4-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_5">   5</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_5"></span><span class="anchor" id="line-5-1"></span><span class="ResWord">class</span> <span class="ID">SentinelMap</span>(<span class="ID">Colormap</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_6">   6</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_6"></span><span class="anchor" id="line-6-1"></span>        <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ID">cmap</span>, <span class="ID">sentinels</span>={}):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_7">   7</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_7"></span><span class="anchor" id="line-7-1"></span>                <span class="Comment"># boilerplate stuff</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_8">   8</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_8"></span><span class="anchor" id="line-8-1"></span>                <span class="ResWord">self</span>.<span class="ID">N</span> = <span class="ID">cmap</span>.<span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_9">   9</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_9"></span><span class="anchor" id="line-9-1"></span>                <span class="ResWord">self</span>.<span class="ID">name</span> = <span class="String">'</span><span class="String">SentinelMap</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_10">  10</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_10"></span><span class="anchor" id="line-10-1"></span>                <span class="ResWord">self</span>.<span class="ID">cmap</span> = <span class="ID">cmap</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_11">  11</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_11"></span><span class="anchor" id="line-11-1"></span>                <span class="ResWord">self</span>.<span class="ID">sentinels</span> = <span class="ID">sentinels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_12">  12</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_12"></span><span class="anchor" id="line-12-1"></span>                <span class="ResWord">for</span> <span class="ID">rgb</span> <span class="ResWord">in</span> <span class="ID">sentinels</span>.<span class="ID">values</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_13">  13</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_13"></span><span class="anchor" id="line-13-1"></span>                        <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">rgb</span>)!=<span class="Number">3</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_14">  14</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_14"></span><span class="anchor" id="line-14-1"></span>                                <span class="ResWord">raise</span> <span class="ID">ValueError</span>(<span class="String">'</span><span class="String">sentinel color must be RGB</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_15">  15</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_15"></span><span class="anchor" id="line-15-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_16">  16</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_16"></span><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_17">  17</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_17"></span><span class="anchor" id="line-17-1"></span>        <span class="ResWord">def</span> <span class="ID">__call__</span>(<span class="ResWord">self</span>, <span class="ID">scaledImageData</span>, <span class="ID">alpha</span>=<span class="Number">1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_18">  18</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_18"></span><span class="anchor" id="line-18-1"></span>                <span class="Comment"># assumes the data is already normalized (ignoring sentinels)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_19">  19</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_19"></span><span class="anchor" id="line-19-1"></span>                <span class="Comment"># clip to be on the safe side</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_20">  20</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_20"></span><span class="anchor" id="line-20-1"></span>                <span class="ID">rgbaValues</span> = <span class="ResWord">self</span>.<span class="ID">cmap</span>(<span class="ID">nx</span>.<span class="ID">clip</span>(<span class="ID">scaledImageData</span>, <span class="Number">0.</span>,<span class="Number">1.</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_21">  21</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_21"></span><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_22">  22</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_22"></span><span class="anchor" id="line-22-1"></span>                <span class="Comment">#replace sentinel data with sentinel colors</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_23">  23</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_23"></span><span class="anchor" id="line-23-1"></span>                <span class="ResWord">for</span> <span class="ID">sentinel</span>,<span class="ID">rgb</span> <span class="ResWord">in</span> <span class="ResWord">self</span>.<span class="ID">sentinels</span>.<span class="ID">items</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_24">  24</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_24"></span><span class="anchor" id="line-24-1"></span>                        <span class="ID">r</span>,<span class="ID">g</span>,<span class="ID">b</span> = <span class="ID">rgb</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_25">  25</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_25"></span><span class="anchor" id="line-25-1"></span>                        <span class="ID">rgbaValues</span>[:,:,<span class="Number">0</span>] =  <span class="ID">nx</span>.<span class="ID">where</span>(<span class="ID">scaledImageData</span>==<span class="ID">sentinel</span>, <span class="ID">r</span>, <span class="ID">rgbaValues</span>[:,:,<span class="Number">0</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_26">  26</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_26"></span><span class="anchor" id="line-26-1"></span>                        <span class="ID">rgbaValues</span>[:,:,<span class="Number">1</span>] =  <span class="ID">nx</span>.<span class="ID">where</span>(<span class="ID">scaledImageData</span>==<span class="ID">sentinel</span>, <span class="ID">g</span>, <span class="ID">rgbaValues</span>[:,:,<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_27">  27</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_27"></span><span class="anchor" id="line-27-1"></span>                        <span class="ID">rgbaValues</span>[:,:,<span class="Number">2</span>] =  <span class="ID">nx</span>.<span class="ID">where</span>(<span class="ID">scaledImageData</span>==<span class="ID">sentinel</span>, <span class="ID">b</span>, <span class="ID">rgbaValues</span>[:,:,<span class="Number">2</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_28">  28</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_28"></span><span class="anchor" id="line-28-1"></span>                        <span class="ID">rgbaValues</span>[:,:,<span class="Number">3</span>] =  <span class="ID">nx</span>.<span class="ID">where</span>(<span class="ID">scaledImageData</span>==<span class="ID">sentinel</span>, <span class="ID">alpha</span>, <span class="ID">rgbaValues</span>[:,:,<span class="Number">3</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_29">  29</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_29"></span><span class="anchor" id="line-29-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_30">  30</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_30"></span><span class="anchor" id="line-30-1"></span>                <span class="ResWord">return</span> <span class="ID">rgbaValues</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_31">  31</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_31"></span><span class="anchor" id="line-31-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_32">  32</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_32"></span><span class="anchor" id="line-32-1"></span><span class="ResWord">class</span> <span class="ID">SentinelNorm</span>(<span class="ID">normalize</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_33">  33</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_33"></span><span class="anchor" id="line-33-1"></span>        <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_34">  34</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_34"></span><span class="anchor" id="line-34-1"></span><span class="String">        Leave the sentinel unchanged</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_35">  35</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_35"></span><span class="anchor" id="line-35-1"></span><span class="String">        &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_36">  36</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_36"></span><span class="anchor" id="line-36-1"></span>        <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ID">ignore</span>=[], <span class="ID">vmin</span>=<span class="ResWord">None</span>, <span class="ID">vmax</span>=<span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_37">  37</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_37"></span><span class="anchor" id="line-37-1"></span>                <span class="ResWord">self</span>.<span class="ID">vmin</span>=<span class="ID">vmin</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_38">  38</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_38"></span><span class="anchor" id="line-38-1"></span>                <span class="ResWord">self</span>.<span class="ID">vmax</span>=<span class="ID">vmax</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_39">  39</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_39"></span><span class="anchor" id="line-39-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_40">  40</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_40"></span><span class="anchor" id="line-40-1"></span>                <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">ignore</span>) <span class="ResWord">in</span> [<span class="ID">IntType</span>, <span class="ID">FloatType</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_41">  41</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_41"></span><span class="anchor" id="line-41-1"></span>                        <span class="ResWord">self</span>.<span class="ID">ignore</span> = [<span class="ID">ignore</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_42">  42</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_42"></span><span class="anchor" id="line-42-1"></span>                <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_43">  43</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_43"></span><span class="anchor" id="line-43-1"></span>                        <span class="ResWord">self</span>.<span class="ID">ignore</span> = <span class="ResWord">list</span>(<span class="ID">ignore</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_44">  44</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_44"></span><span class="anchor" id="line-44-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_45">  45</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_45"></span><span class="anchor" id="line-45-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_46">  46</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_46"></span><span class="anchor" id="line-46-1"></span>        <span class="ResWord">def</span> <span class="ID">__call__</span>(<span class="ResWord">self</span>, <span class="ID">value</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_47">  47</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_47"></span><span class="anchor" id="line-47-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_48">  48</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_48"></span><span class="anchor" id="line-48-1"></span>                <span class="ID">vmin</span> = <span class="ResWord">self</span>.<span class="ID">vmin</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_49">  49</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_49"></span><span class="anchor" id="line-49-1"></span>                <span class="ID">vmax</span> = <span class="ResWord">self</span>.<span class="ID">vmax</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_50">  50</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_50"></span><span class="anchor" id="line-50-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_51">  51</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_51"></span><span class="anchor" id="line-51-1"></span>                <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">value</span>) <span class="ResWord">in</span> [<span class="ID">IntType</span>, <span class="ID">FloatType</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_52">  52</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_52"></span><span class="anchor" id="line-52-1"></span>                        <span class="ID">vtype</span> = <span class="String">'</span><span class="String">scalar</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_53">  53</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_53"></span><span class="anchor" id="line-53-1"></span>                        <span class="ID">val</span> = <span class="ID">array</span>([<span class="ID">value</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_54">  54</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_54"></span><span class="anchor" id="line-54-1"></span>                <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_55">  55</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_55"></span><span class="anchor" id="line-55-1"></span>                        <span class="ID">vtype</span> = <span class="String">'</span><span class="String">array</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_56">  56</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_56"></span><span class="anchor" id="line-56-1"></span>                        <span class="ID">val</span> = <span class="ID">nx</span>.<span class="ID">asarray</span>(<span class="ID">value</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_57">  57</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_57"></span><span class="anchor" id="line-57-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_58">  58</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_58"></span><span class="anchor" id="line-58-1"></span>                <span class="Comment"># if both vmin is None and vmax is None, we'll automatically</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_59">  59</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_59"></span><span class="anchor" id="line-59-1"></span>                <span class="Comment"># norm the data to vmin/vmax of the actual data, so the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_60">  60</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_60"></span><span class="anchor" id="line-60-1"></span>                <span class="Comment"># clipping step won't be needed.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_61">  61</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_61"></span><span class="anchor" id="line-61-1"></span>                <span class="ResWord">if</span> <span class="ID">vmin</span> <span class="ResWord">is</span> <span class="ResWord">None</span> <span class="ResWord">and</span> <span class="ID">vmax</span> <span class="ResWord">is</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_62">  62</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_62"></span><span class="anchor" id="line-62-1"></span>                        <span class="ID">needs_clipping</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_63">  63</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_63"></span><span class="anchor" id="line-63-1"></span>                <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_64">  64</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_64"></span><span class="anchor" id="line-64-1"></span>                        <span class="ID">needs_clipping</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_65">  65</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_65"></span><span class="anchor" id="line-65-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_66">  66</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_66"></span><span class="anchor" id="line-66-1"></span>                <span class="ResWord">if</span> <span class="ID">vmin</span> <span class="ResWord">is</span> <span class="ResWord">None</span> <span class="ResWord">or</span> <span class="ID">vmax</span> <span class="ResWord">is</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_67">  67</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_67"></span><span class="anchor" id="line-67-1"></span>                        <span class="ID">rval</span> = <span class="ID">nx</span>.<span class="ID">ravel</span>(<span class="ID">val</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_68">  68</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_68"></span><span class="anchor" id="line-68-1"></span>                        <span class="Comment">#do this if sentinels (values to ignore in data)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_69">  69</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_69"></span><span class="anchor" id="line-69-1"></span>                        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">ignore</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_70">  70</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_70"></span><span class="anchor" id="line-70-1"></span>                                <span class="ID">sortValues</span>=<span class="ID">nx</span>.<span class="ID">sort</span>(<span class="ID">rval</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_71">  71</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_71"></span><span class="anchor" id="line-71-1"></span>                                <span class="ResWord">if</span> <span class="ID">vmin</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: </span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_72">  72</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_72"></span><span class="anchor" id="line-72-1"></span>                                        <span class="Comment"># find the lowest non-sentinel value</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_73">  73</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_73"></span><span class="anchor" id="line-73-1"></span>                                        <span class="ResWord">for</span> <span class="ID">thisVal</span> <span class="ResWord">in</span> <span class="ID">sortValues</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_74">  74</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_74"></span><span class="anchor" id="line-74-1"></span>                                                <span class="ResWord">if</span> <span class="ID">thisVal</span> <span class="ResWord">not</span> <span class="ResWord">in</span> <span class="ResWord">self</span>.<span class="ID">ignore</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_75">  75</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_75"></span><span class="anchor" id="line-75-1"></span>                                                        <span class="ID">vmin</span>=<span class="ID">thisVal</span> <span class="Comment">#vmin is the lowest non-sentinel value</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_76">  76</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_76"></span><span class="anchor" id="line-76-1"></span>                                                        <span class="ResWord">break</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_77">  77</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_77"></span><span class="anchor" id="line-77-1"></span>                                        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_78">  78</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_78"></span><span class="anchor" id="line-78-1"></span>                                                <span class="ID">vmin</span>=<span class="Number">0.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_79">  79</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_79"></span><span class="anchor" id="line-79-1"></span>                                <span class="ResWord">if</span> <span class="ID">vmax</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: </span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_80">  80</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_80"></span><span class="anchor" id="line-80-1"></span>                                        <span class="ResWord">for</span> <span class="ID">thisVal</span> <span class="ResWord">in</span> <span class="ID">sortValues</span>[::-<span class="Number">1</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_81">  81</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_81"></span><span class="anchor" id="line-81-1"></span>                                                <span class="ResWord">if</span> <span class="ID">thisVal</span> <span class="ResWord">not</span> <span class="ResWord">in</span> <span class="ResWord">self</span>.<span class="ID">ignore</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_82">  82</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_82"></span><span class="anchor" id="line-82-1"></span>                                                        <span class="ID">vmax</span>=<span class="ID">thisVal</span> <span class="Comment">#vmax is the greatest non-sentinel value</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_83">  83</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_83"></span><span class="anchor" id="line-83-1"></span>                                                        <span class="ResWord">break</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_84">  84</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_84"></span><span class="anchor" id="line-84-1"></span>                                        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_85">  85</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_85"></span><span class="anchor" id="line-85-1"></span>                                                <span class="ID">vmax</span>=<span class="Number">0.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_86">  86</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_86"></span><span class="anchor" id="line-86-1"></span>                        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_87">  87</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_87"></span><span class="anchor" id="line-87-1"></span>                                <span class="ResWord">if</span> <span class="ID">vmin</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: <span class="ID">vmin</span> = <span class="ResWord">min</span>(<span class="ID">rval</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_88">  88</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_88"></span><span class="anchor" id="line-88-1"></span>                                <span class="ResWord">if</span> <span class="ID">vmax</span> <span class="ResWord">is</span> <span class="ResWord">None</span>: <span class="ID">vmax</span> = <span class="ResWord">max</span>(<span class="ID">rval</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_89">  89</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_89"></span><span class="anchor" id="line-89-1"></span>                <span class="ResWord">if</span> <span class="ID">vmin</span> &gt; <span class="ID">vmax</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_90">  90</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_90"></span><span class="anchor" id="line-90-1"></span>                        <span class="ResWord">raise</span> <span class="ID">ValueError</span>(<span class="String">&quot;</span><span class="String">minvalue must be less than or equal to maxvalue</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_91">  91</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_91"></span><span class="anchor" id="line-91-1"></span>                <span class="ResWord">elif</span> <span class="ID">vmin</span>==<span class="ID">vmax</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_92">  92</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_92"></span><span class="anchor" id="line-92-1"></span>                        <span class="ResWord">return</span> <span class="Number">0.</span>*<span class="ID">value</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_93">  93</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_93"></span><span class="anchor" id="line-93-1"></span>                <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_94">  94</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_94"></span><span class="anchor" id="line-94-1"></span>                        <span class="ResWord">if</span> <span class="ID">needs_clipping</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_95">  95</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_95"></span><span class="anchor" id="line-95-1"></span>                                <span class="ID">val</span> = <span class="ID">nx</span>.<span class="ID">clip</span>(<span class="ID">val</span>,<span class="ID">vmin</span>, <span class="ID">vmax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_96">  96</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_96"></span><span class="anchor" id="line-96-1"></span>                        <span class="ID">result</span> = (<span class="Number">1.0</span>/(<span class="ID">vmax</span>-<span class="ID">vmin</span>))*(<span class="ID">val</span>-<span class="ID">vmin</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_97">  97</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_97"></span><span class="anchor" id="line-97-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_98">  98</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_98"></span><span class="anchor" id="line-98-1"></span>                <span class="Comment"># replace sentinels with original (non-normalized) values</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_99">  99</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_99"></span><span class="anchor" id="line-99-1"></span>                <span class="ResWord">for</span> <span class="ID">thisIgnore</span> <span class="ResWord">in</span> <span class="ResWord">self</span>.<span class="ID">ignore</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_100"> 100</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_100"></span><span class="anchor" id="line-100-1"></span>                        <span class="ID">result</span> = <span class="ID">nx</span>.<span class="ID">where</span>(<span class="ID">val</span>==<span class="ID">thisIgnore</span>,<span class="ID">thisIgnore</span>,<span class="ID">result</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_101"> 101</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_101"></span><span class="anchor" id="line-101-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_102"> 102</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_102"></span><span class="anchor" id="line-102-1"></span>                <span class="ResWord">if</span> <span class="ID">vtype</span> == <span class="String">'</span><span class="String">scalar</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_103"> 103</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_103"></span><span class="anchor" id="line-103-1"></span>                        <span class="ID">result</span> = <span class="ID">result</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_104"> 104</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_104"></span><span class="anchor" id="line-104-1"></span>                <span class="ResWord">return</span> <span class="ID">result</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_105"> 105</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_105"></span><span class="anchor" id="line-105-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_106"> 106</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_106"></span><span class="anchor" id="line-106-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_107"> 107</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_107"></span><span class="anchor" id="line-107-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span>==<span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_108"> 108</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_108"></span><span class="anchor" id="line-108-1"></span>        <span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_109"> 109</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_109"></span><span class="anchor" id="line-109-1"></span>        <span class="ResWord">import</span> <span class="ID">matplotlib.colors</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_110"> 110</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_110"></span><span class="anchor" id="line-110-1"></span>        <span class="ID">n</span>=<span class="Number">100</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_111"> 111</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_111"></span><span class="anchor" id="line-111-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_112"> 112</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_112"></span><span class="anchor" id="line-112-1"></span>        <span class="Comment"># create a random array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_113"> 113</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_113"></span><span class="anchor" id="line-113-1"></span>        <span class="ID">X</span> = <span class="ID">nx</span>.<span class="ID">mlab</span>.<span class="ID">rand</span>(<span class="ID">n</span>,<span class="ID">n</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_114"> 114</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_114"></span><span class="anchor" id="line-114-1"></span>        <span class="ID">cmBase</span> = <span class="ID">pylab</span>.<span class="ID">cm</span>.<span class="ID">jet</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_115"> 115</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_115"></span><span class="anchor" id="line-115-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_116"> 116</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_116"></span><span class="anchor" id="line-116-1"></span>        <span class="Comment"># plot it array as an image</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_117"> 117</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_117"></span><span class="anchor" id="line-117-1"></span>        <span class="ID">pylab</span>.<span class="ID">figure</span>(<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_118"> 118</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_118"></span><span class="anchor" id="line-118-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>(<span class="ID">X</span>, <span class="ID">cmap</span>=<span class="ID">cmBase</span>, <span class="ID">interpolation</span>=<span class="String">'</span><span class="String">nearest</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_119"> 119</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_119"></span><span class="anchor" id="line-119-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_120"> 120</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_120"></span><span class="anchor" id="line-120-1"></span>        <span class="Comment"># define the sentinels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_121"> 121</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_121"></span><span class="anchor" id="line-121-1"></span>        <span class="ID">sentinel1</span> = -<span class="Number">10</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_122"> 122</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_122"></span><span class="anchor" id="line-122-1"></span>        <span class="ID">sentinel2</span> = <span class="Number">10</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_123"> 123</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_123"></span><span class="anchor" id="line-123-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_124"> 124</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_124"></span><span class="anchor" id="line-124-1"></span>        <span class="Comment"># replace some data with sentinels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_125"> 125</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_125"></span><span class="anchor" id="line-125-1"></span>        <span class="ID">X</span>[<span class="ResWord">int</span>(.<span class="Number">1</span>*<span class="ID">n</span>):<span class="ResWord">int</span>(.<span class="Number">2</span>*<span class="ID">n</span>), <span class="ResWord">int</span>(.<span class="Number">5</span>*<span class="ID">n</span>):<span class="ResWord">int</span>(.<span class="Number">7</span>*<span class="ID">n</span>)]  = <span class="ID">sentinel1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_126"> 126</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_126"></span><span class="anchor" id="line-126-1"></span>        <span class="ID">X</span>[<span class="ResWord">int</span>(.<span class="Number">6</span>*<span class="ID">n</span>):<span class="ResWord">int</span>(.<span class="Number">8</span>*<span class="ID">n</span>), <span class="ResWord">int</span>(.<span class="Number">2</span>*<span class="ID">n</span>):<span class="ResWord">int</span>(.<span class="Number">3</span>*<span class="ID">n</span>)]  = <span class="ID">sentinel2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_127"> 127</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_127"></span><span class="anchor" id="line-127-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_128"> 128</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_128"></span><span class="anchor" id="line-128-1"></span>        <span class="Comment"># define the colormap and norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_129"> 129</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_129"></span><span class="anchor" id="line-129-1"></span>        <span class="ID">rgb1</span> = (<span class="Number">0.</span>,<span class="Number">0.</span>,<span class="Number">0.</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_130"> 130</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_130"></span><span class="anchor" id="line-130-1"></span>        <span class="ID">rgb2</span> = (<span class="Number">1.</span>,<span class="Number">0.</span>,<span class="Number">0.</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_131"> 131</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_131"></span><span class="anchor" id="line-131-1"></span>        <span class="ID">cmap</span> = <span class="ID">SentinelMap</span>(<span class="ID">cmBase</span>, <span class="ID">sentinels</span>={<span class="ID">sentinel1</span>:<span class="ID">rgb1</span>,<span class="ID">sentinel2</span>:<span class="ID">rgb2</span>,})</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_132"> 132</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_132"></span><span class="anchor" id="line-132-1"></span>        <span class="ID">norm</span> = <span class="ID">SentinelNorm</span>(<span class="ID">ignore</span>=[<span class="ID">sentinel1</span>,<span class="ID">sentinel2</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_133"> 133</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_133"></span><span class="anchor" id="line-133-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_134"> 134</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_134"></span><span class="anchor" id="line-134-1"></span>        <span class="Comment"># plot with the modified colormap and norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_135"> 135</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_135"></span><span class="anchor" id="line-135-1"></span>        <span class="ID">pylab</span>.<span class="ID">figure</span>(<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_136"> 136</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_136"></span><span class="anchor" id="line-136-1"></span>        <span class="ID">pylab</span>.<span class="ID">imshow</span>(<span class="ID">X</span>, <span class="ID">cmap</span> = <span class="ID">cmap</span>, <span class="ID">norm</span>=<span class="ID">norm</span>, <span class="ID">interpolation</span>=<span class="String">'</span><span class="String">nearest</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_137"> 137</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_137"></span><span class="anchor" id="line-137-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-ede78cab6d3b6a61b2306e068c852490250002d5_138"> 138</a> </span><span class="LineAnchor" id="CA-ede78cab6d3b6a61b2306e068c852490250002d5_138"></span><span class="anchor" id="line-138-1"></span>        <span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line874">If the preceeding code is run from a prompt, two images are generated. The first is <span class="anchor" id="line-153"></span>a pristine image of random data. The second image is the data modified by setting <span class="anchor" id="line-154"></span>some blocks to sentinel values and then plotting the sentinels in specific colors. <span class="anchor" id="line-155"></span>A sample result is shown below. <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><p class="line867"><img alt="sentinel_pristine.png" class="attachment" src="sentinel_pristine9540.png?action=AttachFile&amp;do=get&amp;target=sentinel_pristine.png" title="sentinel_pristine.png" /> <span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><p class="line867"><img alt="sentinel.png" class="attachment" src="sentinel7629.png?action=AttachFile&amp;do=get&amp;target=sentinel.png" title="sentinel.png" /> <span class="anchor" id="line-160"></span><hr /><p class="line874"> <span class="anchor" id="line-161"></span><a href="../../CategoryCookbookMatplotlib.html"><strong class="highlight">CategoryCookbookMatplotlib</strong></a> <span class="anchor" id="line-162"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/Plotting_Images_with_Special_Values  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Plotting_Images_with_Special_Values37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Plotting_Images_with_Special_Values?highlight=%28%28CategoryCookbookMatplotlib%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:01 GMT -->
+</html>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/MayaVi/InstallPythonStuffFromSource - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/InstallPythonStuffFromSource" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FInstallPythonStuffFromSource&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="InstallPythonStuffFromSource456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../MayaVi.html">MayaVi</a></li><li><a class="backlink" href="../../AllPagesfbba.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FInstallPythonStuffFromSource%22" rel="nofollow" title="Click to do a full-text search for this title">InstallPythonStuffFromSource</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="InstallPythonStuffFromSource.html">InstallPyth...fFromSource</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="InstallPythonStuffFromSource.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="InstallPythonStuffFromSource37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">Following <a class="http" href="../../../external.html?link=http://www.enthought.com/enthought/wiki/GrabbingAndBuilding">http://www.enthought.com/enthought/wiki/GrabbingAndBuilding</a>, you have to build/install <span class="anchor" id="line-2"></span>VTK 5.0 and a few python extensions from sources. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line874">All needed installation information for a given python module or VTK can be reached on its webpage. <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line874">For the impatient, these informations are resumed here. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line874">Note about configure script: If you don't specify the destination where the packages will be installed, they will be installed by defaut in /usr/local. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">We make the choice here to install them in a personnal directory, say ~/Mayavi2. So we set the environment variable DESTDIR to ~/Mayavi2, and will refer it later as DESTDIR: <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line874">Under sh shell-like, type: <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><pre><span class="anchor" id="line-1"></span>export DESTDIR=~/Mayavi2</pre><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line874">Under csh shell-like, type: <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><pre><span class="anchor" id="line-1-1"></span>setenv DESTDIR ~/Mayavi2</pre><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">Is is also supposed that you download and uncompress all tarball sources in a specific directory, <span class="anchor" id="line-23"></span>named src/, for example. <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867">
+<h3 id="Installing_python2.3.2Fpython2.4">Installing python2.3/python2.4</h3>
+<span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">Download Python-2.3.5.tar.bz2 at <a class="http" href="../../../external.html?link=http://www.python.org/download/releases/2.3.5">http://www.python.org/download/releases/2.3.5</a> or Python-2.4.3.tar.bz2 at <a class="http" href="../../../external.html?link=http://www.python.org/download/releases/2.4.3">http://www.python.org/download/releases/2.4.3</a> and untar it in src/: <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><pre><span class="anchor" id="line-1-2"></span>cd src &amp;&amp; tar xvfj Python-2.4.3.tar.bz2</pre><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line874">Then run: <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><pre><span class="anchor" id="line-1-3"></span>cd Python-2.4.3/ &amp;&amp; ./configure --enable-shared --enable-unicode=ucs4 --prefix=$DESTDIR</pre><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line862">Then you can make &amp; make install: <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><pre><span class="anchor" id="line-1-4"></span>make &amp;&amp; make install</pre><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line867">
+<h3 id="Installing_VTK_5.0">Installing VTK 5.0</h3>
+<span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line862">Download vtk-5.0.0.tar.gz and vtkdata-5.0.0.tar.gz at <a class="http" href="../../../external.html?link=http://public.kitware.com/VTK/get-software.php">http://public.kitware.com/VTK/get-software.php</a> and untar them in src/: <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line867"><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><pre><span class="anchor" id="line-1-5"></span>cd src/ &amp;&amp; tar xvfz vtk-5.0.0.tar.gz &amp;&amp; tar xvfz vtkdata-5.0.0.tar.gz</pre><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">Note: cmake package must be installed before proceed. <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line874">Run: <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><pre><span class="anchor" id="line-1-6"></span>cd VTK &amp;&amp; ccmake .</pre><span class="anchor" id="line-56"></span><p class="line874">to create the required Makefile. <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line874">Press on &quot;c&quot; to configure. <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line874">Then press &quot;enter&quot; on the selected item to toggle flag. <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line874">You should specify some information, notably about some libraries location <span class="anchor" id="line-63"></span>(tcl/tk libs + dev packages and python2.3/python2.4 you have just installed) if ccmake does not find them, and the destination (set it to DESTDIR). <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><p class="line874">Don't forget to set flag &quot;VTK_WRAP_PYTHON&quot; to on (and &quot;VTK_WRAP_TCL&quot; if you want to use Tcl/Tk): <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><pre><span class="anchor" id="line-1-7"></span>BUILD_EXAMPLES                   ON
+<span class="anchor" id="line-2"></span>BUILD_SHARED_LIBS                ON
+<span class="anchor" id="line-3"></span>CMAKE_BACKWARDS_COMPATIBILITY    2.0
+<span class="anchor" id="line-4"></span>CMAKE_BUILD_TYPE
+<span class="anchor" id="line-5"></span>CMAKE_INSTALL_PREFIX             DESTDIR
+<span class="anchor" id="line-6"></span>VTK_DATA_ROOT                    DESTDIR/VTKData
+<span class="anchor" id="line-7"></span>VTK_USE_PARALLEL                 OFF
+<span class="anchor" id="line-8"></span>VTK_USE_RENDERING                ON
+<span class="anchor" id="line-9"></span>VTK_WRAP_JAVA                    OFF
+<span class="anchor" id="line-10"></span>VTK_WRAP_PYTHON                  ON
+<span class="anchor" id="line-11"></span>VTK_WRAP_TCL                     ON</pre><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><p class="line874">Press &quot;c&quot; to continue configuration: <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><pre><span class="anchor" id="line-1-8"></span>PYTHON_INCLUDE_PATH             *DESTDIR/include/python2.4
+<span class="anchor" id="line-2-1"></span>PYTHON_LIBRARY                  *DESTDIR/lib/libpython2.4.so
+<span class="anchor" id="line-3-1"></span>TCL_INCLUDE_PATH                */usr/include/tcl8.4
+<span class="anchor" id="line-4-1"></span>TCL_LIBRARY                     */usr/lib/libtcl8.4.so                                            
+<span class="anchor" id="line-5-1"></span>TK_INCLUDE_PATH                 */usr/include/tcl8.4
+<span class="anchor" id="line-6-1"></span>TK_LIBRARY                      */usr/lib/libtk8.4.so
+<span class="anchor" id="line-7-1"></span>VTK_USE_RPATH                   *OFF
+<span class="anchor" id="line-8-1"></span>BUILD_EXAMPLES                   ON
+<span class="anchor" id="line-9-1"></span>BUILD_SHARED_LIBS                ON
+<span class="anchor" id="line-10-1"></span>CMAKE_BACKWARDS_COMPATIBILITY    2.0
+<span class="anchor" id="line-11-1"></span>CMAKE_BUILD_TYPE                 
+<span class="anchor" id="line-12"></span>CMAKE_INSTALL_PREFIX             DESTDIR
+<span class="anchor" id="line-13"></span>VTK_DATA_ROOT                    DESTDIR/VTKData
+<span class="anchor" id="line-14"></span>VTK_USE_PARALLEL                 OFF
+<span class="anchor" id="line-15"></span>VTK_USE_RENDERING                ON
+<span class="anchor" id="line-16"></span>VTK_WRAP_JAVA                    OFF
+<span class="anchor" id="line-17"></span>VTK_WRAP_PYTHON                  ON
+<span class="anchor" id="line-18"></span>VTK_WRAP_TCL                     ON</pre><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><p class="line874">Note: you can press &quot;t&quot; to get more configuration options. <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line874">Press &quot;c&quot; and then &quot;g&quot; to exit configuration, then type: <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><pre><span class="anchor" id="line-1-9"></span>make &amp;&amp; make install</pre><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line867">
+<h3 id="Installing_wx-Python2.6">Installing wx-Python2.6</h3>
+<span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><p class="line862">Download wxPython-src-2.6.3.2.tar.gz at <a class="https" href="../../../external.html?link=https://sourceforge.net/project/showfiles.php?group_id=10718">https://sourceforge.net/project/showfiles.php?group_id=10718</a> and untar it in src/: <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><pre><span class="anchor" id="line-1-10"></span>cd src/ &amp;&amp; tar xvfz wxPython-src-2.6.3.2.tar.gz</pre><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><p class="line862">Note: You should have GTK 2 installed i.e. you should have libgtk-2.6.* <tt class="backtick">and</tt> libgtk2.6.*-dev packages installed. <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line874">Then run: <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><pre><span class="anchor" id="line-1-11"></span>cd wxPython-src-2.6.3.2/ &amp;&amp; ./configure --enable-unicode --with-opengl --prefix=$DESTDIR</pre><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><p class="line874">Then you can do: <span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><pre><span class="anchor" id="line-1-12"></span>make; make -C contrib/src/animate; make -C contrib/src/gizmos; make -C contrib/src/stc</pre><span class="anchor" id="line-127"></span><p class="line874">or follow instructions on wx-Python2.6 webpage, creating a little script which runs <span class="anchor" id="line-128"></span>automatically the commands above. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line874">Then install all: <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><pre><span class="anchor" id="line-1-13"></span>make install; make -C contrib/src/animate install ; make -C contrib/src/gizmos install; make -C contrib/src/stc install</pre><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><p class="line874">To build python modules: <span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><pre><span class="anchor" id="line-1-14"></span>cd wxPython</pre><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><p class="line874">and run: <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><pre><span class="anchor" id="line-1-15"></span>./setup.py build_ext --inplace --debug UNICODE=1</pre><span class="anchor" id="line-144"></span><p class="line874">and install them: <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><pre><span class="anchor" id="line-1-16"></span>./setup.py install UNICODE=1 --prefix=$DESTDIR</pre><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><p class="line867">
+<h3 id="Installing_scipy_0.5_.26_numpy_1.0">Installing scipy 0.5 &amp; numpy 1.0</h3>
+<span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><p class="line862">Download scipy-0.5.1.tar.gz at <a class="http" href="../../../external.html?link=http://www.scipy.org/Download">http://www.scipy.org/Download</a> <span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><p class="line874">Before installing scipy, you have to download and install: <span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><ul><li><p class="line862">numpy-1.0.tar.gz (<a class="http" href="../../../external.html?link=http://sourceforge.net/project/showfiles.php?group_id=1369&amp;package_id=175103">http://sourceforge.net/project/showfiles.php?group_id=1369&amp;package_id=175103</a>) <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span></li><li class="gap">Atlas libraries (you could install it with your packages manager, no need to build it in src/) <span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span></li></ul><p class="line874">No special option are required to install these python extensions. <span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><p class="line874">To install these packages in our $DESTDIR, simply change directory and type: <span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><pre><span class="anchor" id="line-1-17"></span>./setup.py install --prefix=$DESTDIR</pre><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line867">
+<h3 id="That.27s_all.2C_folks_.21">That's all, folks !</h3>
+<span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><p class="line862">Before installing MayaVi2, you have to set some environment variables, to tell MayaVi2 where python extensions can be found. <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><p class="line874">Under sh shell-like, type: <span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><pre><span class="anchor" id="line-1-18"></span>export PYTHONPATH=$DESTDIR:$PYTHONPATH
+<span class="anchor" id="line-2-2"></span>export LD_LIBRARY_PATH=$DESTDIR:$LD_LIBRARY_PATH</pre><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><p class="line874">Under csh shell-like, type: <span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><pre><span class="anchor" id="line-1-19"></span>setenv PYTHONPATH ${DESTDIR}:${PYTHONPATH}
+<span class="anchor" id="line-2-3"></span>setenv LD_LIBRARY_PATH ${DESTDIR}:${LD_LIBRARY_PATH}</pre><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-183"></span><a href="../../CategoryInstallation.html">CategoryInstallation</a> <span class="anchor" id="line-184"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="InstallPythonStuffFromSource37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/InstallPythonStuffFromSource?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+</html>
+

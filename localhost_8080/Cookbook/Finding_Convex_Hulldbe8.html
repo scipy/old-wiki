@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Finding_Convex_Hull?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Finding_Convex_Hull - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Finding_Convex_Hull" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FFinding_Convex_Hull&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="convex_hull.png" href="Finding_Convex_Hullb3ca.html?action=AttachFile&amp;do=view&amp;target=convex_hull.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Finding_Convex_Hull456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Finding_Convex_Hullfc17.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FFinding_Convex_Hull%22" rel="nofollow" title="Click to do a full-text search for this title">Finding_Convex_Hull</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Finding_Convex_Hull.html">Finding_Convex_Hull</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Finding_Convex_Hull.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Finding_Convex_Hull37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Finding_the_Convex_Hull_of_a_2-D_Dataset">Finding the Convex Hull of a 2-D Dataset</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Finding_the_Convex_Hull_of_a_2-D_Dataset">Finding the Convex Hull of a 2-D Dataset</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">This code finds the subsets of points describing the convex hull around a set of 2-D data points. The code optionally uses pylab to animate its progress. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><img alt="convex_hull.png" class="attachment" src="convex_hulle292.png?action=AttachFile&amp;do=get&amp;target=convex_hull.png" title="convex_hull.png" /> <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-02211f2b6352e6a885fae8da3444356f2e755979" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">n</span>, <span class="ID">pylab</span> <span class="ResWord">as</span> <span class="ID">p</span>, <span class="ID">time</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ResWord">def</span> <span class="ID">_angle_to_point</span>(<span class="ID">point</span>, <span class="ID">centre</span>):</span>
+<span class="line"><span class="anchor" id="line-4-1"></span>    <span class="String">'''calculate angle in 2-D between points and x axis'''</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span>    <span class="ID">delta</span> = <span class="ID">point</span> - <span class="ID">centre</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span>    <span class="ID">res</span> = <span class="ID">n</span>.<span class="ID">arctan</span>(<span class="ID">delta</span>[<span class="Number">1</span>] / <span class="ID">delta</span>[<span class="Number">0</span>])</span>
+<span class="line"><span class="anchor" id="line-7-1"></span>    <span class="ResWord">if</span> <span class="ID">delta</span>[<span class="Number">0</span>] &lt; <span class="Number">0</span>:</span>
+<span class="line"><span class="anchor" id="line-8-1"></span>        <span class="ID">res</span> += <span class="ID">n</span>.<span class="ID">pi</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span>    <span class="ResWord">return</span> <span class="ID">res</span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ResWord">def</span> <span class="ID">_draw_triangle</span>(<span class="ID">p1</span>, <span class="ID">p2</span>, <span class="ID">p3</span>, **<span class="ID">kwargs</span>):</span>
+<span class="line"><span class="anchor" id="line-13-1"></span>    <span class="ID">tmp</span> = <span class="ID">n</span>.<span class="ID">vstack</span>((<span class="ID">p1</span>,<span class="ID">p2</span>,<span class="ID">p3</span>))</span>
+<span class="line"><span class="anchor" id="line-14-1"></span>    <span class="ID">x</span>,<span class="ID">y</span> = [<span class="ID">x</span>[<span class="Number">0</span>] <span class="ResWord">for</span> <span class="ID">x</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">tmp</span>.<span class="ID">transpose</span>())]</span>
+<span class="line"><span class="anchor" id="line-15-1"></span>    <span class="ID">p</span>.<span class="ID">fill</span>(<span class="ID">x</span>,<span class="ID">y</span>, **<span class="ID">kwargs</span>)</span>
+<span class="line"><span class="anchor" id="line-16-1"></span>    <span class="Comment">#time.sleep(0.2)</span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ResWord">def</span> <span class="ID">area_of_triangle</span>(<span class="ID">p1</span>, <span class="ID">p2</span>, <span class="ID">p3</span>):</span>
+<span class="line"><span class="anchor" id="line-20-1"></span>    <span class="String">'''calculate area of any triangle given co-ordinates of the corners'''</span></span>
+<span class="line"><span class="anchor" id="line-21-1"></span>    <span class="ResWord">return</span> <span class="ID">n</span>.<span class="ID">linalg</span>.<span class="ID">norm</span>(<span class="ID">n</span>.<span class="ID">cross</span>((<span class="ID">p2</span> - <span class="ID">p1</span>), (<span class="ID">p3</span> - <span class="ID">p1</span>)))/<span class="Number">2.</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="ResWord">def</span> <span class="ID">convex_hull</span>(<span class="ID">points</span>, <span class="ID">graphic</span>=<span class="ResWord">True</span>, <span class="ID">smidgen</span>=<span class="Number">0.0075</span>):</span>
+<span class="line"><span class="anchor" id="line-25-1"></span>    <span class="String">'''Calculate subset of points that make a convex hull around points</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-27-1"></span><span class="String">Recursively eliminates points that lie inside two neighbouring points until only convex hull is remaining.</span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span><span class="String">:Parameters:</span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span><span class="String">    points : ndarray (2 x m)</span></span>
+<span class="line"><span class="anchor" id="line-31-1"></span><span class="String">        array of points for which to find hull</span></span>
+<span class="line"><span class="anchor" id="line-32-1"></span><span class="String">    graphic : bool</span></span>
+<span class="line"><span class="anchor" id="line-33-1"></span><span class="String">        use pylab to show progress?</span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span><span class="String">    smidgen : float</span></span>
+<span class="line"><span class="anchor" id="line-35-1"></span><span class="String">        offset for graphic number labels - useful values depend on your data range</span></span>
+<span class="line"><span class="anchor" id="line-36-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-37-1"></span><span class="String">:Returns:</span></span>
+<span class="line"><span class="anchor" id="line-38-1"></span><span class="String">    hull_points : ndarray (2 x n)</span></span>
+<span class="line"><span class="anchor" id="line-39-1"></span><span class="String">        convex hull surrounding points</span></span>
+<span class="line"><span class="anchor" id="line-40-1"></span><span class="String">'''</span></span>
+<span class="line"><span class="anchor" id="line-41-1"></span>    <span class="ResWord">if</span> <span class="ID">graphic</span>:</span>
+<span class="line"><span class="anchor" id="line-42-1"></span>        <span class="ID">p</span>.<span class="ID">clf</span>()</span>
+<span class="line"><span class="anchor" id="line-43-1"></span>        <span class="ID">p</span>.<span class="ID">plot</span>(<span class="ID">points</span>[<span class="Number">0</span>], <span class="ID">points</span>[<span class="Number">1</span>], <span class="String">'</span><span class="String">ro</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-44-1"></span>    <span class="ID">n_pts</span> = <span class="ID">points</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-45-1"></span>    <span class="ResWord">assert</span>(<span class="ID">n_pts</span> &gt; <span class="Number">5</span>)</span>
+<span class="line"><span class="anchor" id="line-46-1"></span>    <span class="ID">centre</span> = <span class="ID">points</span>.<span class="ID">mean</span>(<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-47-1"></span>    <span class="ResWord">if</span> <span class="ID">graphic</span>: <span class="ID">p</span>.<span class="ID">plot</span>((<span class="ID">centre</span>[<span class="Number">0</span>],),(<span class="ID">centre</span>[<span class="Number">1</span>],),<span class="String">'</span><span class="String">bo</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-48-1"></span>    <span class="ID">angles</span> = <span class="ID">n</span>.<span class="ID">apply_along_axis</span>(<span class="ID">_angle_to_point</span>, <span class="Number">0</span>, <span class="ID">points</span>, <span class="ID">centre</span>)</span>
+<span class="line"><span class="anchor" id="line-49-1"></span>    <span class="ID">pts_ord</span> = <span class="ID">points</span>[:,<span class="ID">angles</span>.<span class="ID">argsort</span>()]</span>
+<span class="line"><span class="anchor" id="line-50-1"></span>    <span class="ResWord">if</span> <span class="ID">graphic</span>:</span>
+<span class="line"><span class="anchor" id="line-51-1"></span>        <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">xrange</span>(<span class="ID">n_pts</span>):</span>
+<span class="line"><span class="anchor" id="line-52-1"></span>            <span class="ID">p</span>.<span class="ID">text</span>(<span class="ID">pts_ord</span>[<span class="Number">0</span>,<span class="ID">i</span>] + <span class="ID">smidgen</span>, <span class="ID">pts_ord</span>[<span class="Number">1</span>,<span class="ID">i</span>] + <span class="ID">smidgen</span>, \</span>
+<span class="line"><span class="anchor" id="line-53-1"></span>                   <span class="String">'</span><span class="String">%d</span><span class="String">'</span> % <span class="ID">i</span>)</span>
+<span class="line"><span class="anchor" id="line-54-1"></span>    <span class="ID">pts</span> = [<span class="ID">x</span>[<span class="Number">0</span>] <span class="ResWord">for</span> <span class="ID">x</span> <span class="ResWord">in</span> <span class="ResWord">zip</span>(<span class="ID">pts_ord</span>.<span class="ID">transpose</span>())]</span>
+<span class="line"><span class="anchor" id="line-55-1"></span>    <span class="ID">prev_pts</span> = <span class="ResWord">len</span>(<span class="ID">pts</span>) + <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-56-1"></span>    <span class="ID">k</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-57-1"></span>    <span class="ResWord">while</span> <span class="ID">prev_pts</span> &gt; <span class="ID">n_pts</span>:</span>
+<span class="line"><span class="anchor" id="line-58-1"></span>        <span class="ID">prev_pts</span> = <span class="ID">n_pts</span></span>
+<span class="line"><span class="anchor" id="line-59-1"></span>        <span class="ID">n_pts</span> = <span class="ResWord">len</span>(<span class="ID">pts</span>)</span>
+<span class="line"><span class="anchor" id="line-60-1"></span>        <span class="ResWord">if</span> <span class="ID">graphic</span>: <span class="ID">p</span>.<span class="ID">gca</span>().<span class="ID">patches</span> = []</span>
+<span class="line"><span class="anchor" id="line-61-1"></span>        <span class="ID">i</span> = -<span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-62-1"></span>        <span class="ResWord">while</span> <span class="ID">i</span> &lt; (<span class="ID">n_pts</span> - <span class="Number">2</span>):</span>
+<span class="line"><span class="anchor" id="line-63-1"></span>            <span class="ID">Aij</span> = <span class="ID">area_of_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[<span class="ID">i</span>],     <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">1</span>) % <span class="ID">n_pts</span>])</span>
+<span class="line"><span class="anchor" id="line-64-1"></span>            <span class="ID">Ajk</span> = <span class="ID">area_of_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">1</span>) % <span class="ID">n_pts</span>], \</span>
+<span class="line"><span class="anchor" id="line-65-1"></span>                                   <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">2</span>) % <span class="ID">n_pts</span>])</span>
+<span class="line"><span class="anchor" id="line-66-1"></span>            <span class="ID">Aik</span> = <span class="ID">area_of_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[<span class="ID">i</span>],     <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">2</span>) % <span class="ID">n_pts</span>])</span>
+<span class="line"><span class="anchor" id="line-67-1"></span>            <span class="ResWord">if</span> <span class="ID">graphic</span>:</span>
+<span class="line"><span class="anchor" id="line-68-1"></span>                <span class="ID">_draw_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[<span class="ID">i</span>], <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">1</span>) % <span class="ID">n_pts</span>], \</span>
+<span class="line"><span class="anchor" id="line-69-1"></span>                               <span class="ID">facecolor</span>=<span class="String">'</span><span class="String">blue</span><span class="String">'</span>, <span class="ID">alpha</span> = <span class="Number">0.2</span>)</span>
+<span class="line"><span class="anchor" id="line-70-1"></span>                <span class="ID">_draw_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">1</span>) % <span class="ID">n_pts</span>], \</span>
+<span class="line"><span class="anchor" id="line-71-1"></span>                               <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">2</span>) % <span class="ID">n_pts</span>], \</span>
+<span class="line"><span class="anchor" id="line-72-1"></span>                               <span class="ID">facecolor</span>=<span class="String">'</span><span class="String">green</span><span class="String">'</span>, <span class="ID">alpha</span> = <span class="Number">0.2</span>)</span>
+<span class="line"><span class="anchor" id="line-73-1"></span>                <span class="ID">_draw_triangle</span>(<span class="ID">centre</span>, <span class="ID">pts</span>[<span class="ID">i</span>], <span class="ID">pts</span>[(<span class="ID">i</span> + <span class="Number">2</span>) % <span class="ID">n_pts</span>], \</span>
+<span class="line"><span class="anchor" id="line-74-1"></span>                               <span class="ID">facecolor</span>=<span class="String">'</span><span class="String">red</span><span class="String">'</span>, <span class="ID">alpha</span> = <span class="Number">0.2</span>)</span>
+<span class="line"><span class="anchor" id="line-75-1"></span>            <span class="ResWord">if</span> <span class="ID">Aij</span> + <span class="ID">Ajk</span> &lt; <span class="ID">Aik</span>:</span>
+<span class="line"><span class="anchor" id="line-76-1"></span>                <span class="ResWord">if</span> <span class="ID">graphic</span>: <span class="ID">p</span>.<span class="ID">plot</span>((<span class="ID">pts</span>[<span class="ID">i</span> + <span class="Number">1</span>][<span class="Number">0</span>],),(<span class="ID">pts</span>[<span class="ID">i</span> + <span class="Number">1</span>][<span class="Number">1</span>],),<span class="String">'</span><span class="String">go</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-77-1"></span>                <span class="ResWord">del</span> <span class="ID">pts</span>[<span class="ID">i</span>+<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-78-1"></span>            <span class="ID">i</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-79-1"></span>            <span class="ID">n_pts</span> = <span class="ResWord">len</span>(<span class="ID">pts</span>)</span>
+<span class="line"><span class="anchor" id="line-80-1"></span>        <span class="ID">k</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-81-1"></span>    <span class="ResWord">return</span> <span class="ID">n</span>.<span class="ID">asarray</span>(<span class="ID">pts</span>)</span>
+<span class="line"><span class="anchor" id="line-82-1"></span></span>
+<span class="line"><span class="anchor" id="line-83-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="anchor" id="line-84-1"></span>    <span class="ID">points</span> = <span class="ID">n</span>.<span class="ID">random</span>.<span class="ID">random_sample</span>((<span class="Number">2</span>,<span class="Number">40</span>))</span>
+<span class="line"><span class="anchor" id="line-85-1"></span>    <span class="ID">hull_pts</span> = <span class="ID">convex_hull</span>(<span class="ID">points</span>)</span>
+</pre></div></div><span class="anchor" id="line-96"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-97"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-98"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Finding_Convex_Hull37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Finding_Convex_Hull">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Finding_Convex_Hull?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

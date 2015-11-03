@@ -1,0 +1,820 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=data.0.3.csv by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:41:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:data.0.3.csv of Cookbook/dbase - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/dbase" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2Fdbase&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="data.0.3.csv" href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">
+<link rel="Appendix" title="data.csv" href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">
+<link rel="Appendix" title="dbase.0.1.py" href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">
+<link rel="Appendix" title="dbase.0.2.py" href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">
+<link rel="Appendix" title="dbase.0.3.py" href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">
+<link rel="Appendix" title="dbase.0.4.py" href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">
+<link rel="Appendix" title="dbase.0.5.py" href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">
+<link rel="Appendix" title="dbase.0.6.py" href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">
+<link rel="Appendix" title="dbase.0.7.py" href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">
+<link rel="Appendix" title="dbase.py" href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">
+<link rel="Appendix" title="dbase.pydoc" href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">
+<link rel="Appendix" title="dbase_pydoc.0.1.txt" href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">
+<link rel="Appendix" title="dbase_pydoc.0.2.txt" href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">
+<link rel="Appendix" title="ex_plot.0.1.png" href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">
+<link rel="Appendix" title="ex_plot.png" href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">
+<link rel="Appendix" title="ex_plot1.png" href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">
+<link rel="Appendix" title="example_plot.png" href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">
+<link rel="Appendix" title="pydoc" href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="dbase456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:data.0.3.csv of Cookbook/dbase</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="dbase.html">Cookbook/dbase</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'data.0.3.csv'</h2><a class="download" href="data.0.3e200.csv?action=AttachFile&amp;do=get&amp;target=data.0.3.csv">Download</a><br><br><form action="../../external.html?link=http://localhost:8080/Cookbook/dbase" method="GET" name="dbw.form"><div><div><table id="dbw.table"><tbody><tr>  <td class="hcolumn0"><strong>date</strong></td>
+  <td class="hcolumn1"><strong>a</strong></td>
+  <td class="hcolumn2"><strong>b</strong></td>
+  <td class="hcolumn3"><strong>c</strong></td>
+  <td class="hcolumn4"><strong>id</strong></td>
+</tr>
+<tr>  <td abbr="08 Jan 01" class="column0">08 Jan 01</td>
+  <td abbr="-0.328021" class="column1">-0.328021</td>
+  <td abbr="-1.129557" class="column2">-1.129557</td>
+  <td abbr="0.8952337" class="column3">0.8952337</td>
+  <td abbr="id0" class="column4">id0</td>
+</tr>
+<tr>  <td abbr="15 Jan 01" class="column0">15 Jan 01</td>
+  <td abbr="-0.260981" class="column1">-0.260981</td>
+  <td abbr="0.4325461" class="column2">0.4325461</td>
+  <td abbr="0.7999590" class="column3">0.7999590</td>
+  <td abbr="id1" class="column4">id1</td>
+</tr>
+<tr>  <td abbr="22 Jan 01" class="column0">22 Jan 01</td>
+  <td abbr="-0.708168" class="column1">-0.708168</td>
+  <td abbr="-0.165642" class="column2">-0.165642</td>
+  <td abbr="-1.214248" class="column3">-1.214248</td>
+  <td abbr="id2" class="column4">id2</td>
+</tr>
+<tr>  <td abbr="29 Jan 01" class="column0">29 Jan 01</td>
+  <td abbr="0.1050947" class="column1">0.1050947</td>
+  <td abbr="-0.478825" class="column2">-0.478825</td>
+  <td abbr="-0.097188" class="column3">-0.097188</td>
+  <td abbr="id3" class="column4">id3</td>
+</tr>
+<tr>  <td abbr="05 Feb 01" class="column0">05 Feb 01</td>
+  <td abbr="-1.481598" class="column1">-1.481598</td>
+  <td abbr="-0.790544" class="column2">-0.790544</td>
+  <td abbr="0.7121697" class="column3">0.7121697</td>
+  <td abbr="id4" class="column4">id4</td>
+</tr>
+<tr>  <td abbr="12 Feb 01" class="column0">12 Feb 01</td>
+  <td abbr="" class="column1"></td>
+  <td abbr="-1.553156" class="column2">-1.553156</td>
+  <td abbr="0.6342381" class="column3">0.6342381</td>
+  <td abbr="id5" class="column4">id5</td>
+</tr>
+<tr>  <td abbr="19 Feb 01" class="column0">19 Feb 01</td>
+  <td abbr="-1.929297" class="column1">-1.929297</td>
+  <td abbr="-0.437420" class="column2">-0.437420</td>
+  <td abbr="1.2770649" class="column3">1.2770649</td>
+  <td abbr="id6" class="column4">id6</td>
+</tr>
+<tr>  <td abbr="26 Feb 01" class="column0">26 Feb 01</td>
+  <td abbr="0.1923718" class="column1">0.1923718</td>
+  <td abbr="0.9142394" class="column2">0.9142394</td>
+  <td abbr="-0.960986" class="column3">-0.960986</td>
+  <td abbr="id7" class="column4">id7</td>
+</tr>
+<tr>  <td abbr="05 Mar 01" class="column0">05 Mar 01</td>
+  <td abbr="2.2220150" class="column1">2.2220150</td>
+  <td abbr="-0.018480" class="column2">-0.018480</td>
+  <td abbr="0.2474163" class="column3">0.2474163</td>
+  <td abbr="" class="column4"></td>
+</tr>
+<tr>  <td abbr="12 Mar 01" class="column0">12 Mar 01</td>
+  <td abbr="-0.754264" class="column1">-0.754264</td>
+  <td abbr="-0.097793" class="column2">-0.097793</td>
+  <td abbr="" class="column3"></td>
+  <td abbr="id9" class="column4">id9</td>
+</tr>
+<tr>  <td abbr="19 Mar 01" class="column0">19 Mar 01</td>
+  <td abbr="-0.367744" class="column1">-0.367744</td>
+  <td abbr="0.6224510" class="column2">0.6224510</td>
+  <td abbr="-0.190760" class="column3">-0.190760</td>
+  <td abbr="id10" class="column4">id10</td>
+</tr>
+<tr>  <td abbr="26 Mar 01" class="column0">26 Mar 01</td>
+  <td abbr="-1.252687" class="column1">-1.252687</td>
+  <td abbr="-0.306277" class="column2">-0.306277</td>
+  <td abbr="1.2155012" class="column3">1.2155012</td>
+  <td abbr="id11" class="column4">id11</td>
+</tr>
+<tr>  <td abbr="02 Apr 01" class="column0">02 Apr 01</td>
+  <td abbr="-0.125288" class="column1">-0.125288</td>
+  <td abbr="-0.182373" class="column2">-0.182373</td>
+  <td abbr="-0.496704" class="column3">-0.496704</td>
+  <td abbr="id12" class="column4">id12</td>
+</tr>
+<tr>  <td abbr="09 Apr 01" class="column0">09 Apr 01</td>
+  <td abbr="1.2110727" class="column1">1.2110727</td>
+  <td abbr="-0.094084" class="column2">-0.094084</td>
+  <td abbr="-0.235893" class="column3">-0.235893</td>
+  <td abbr="id13" class="column4">id13</td>
+</tr>
+<tr>  <td abbr="16 Apr 01" class="column0">16 Apr 01</td>
+  <td abbr="2.2960686" class="column1">2.2960686</td>
+  <td abbr="1.2877342" class="column2">1.2877342</td>
+  <td abbr="0.3869560" class="column3">0.3869560</td>
+  <td abbr="id14" class="column4">id14</td>
+</tr>
+<tr>  <td abbr="23 Apr 01" class="column0">23 Apr 01</td>
+  <td abbr="-1.333424" class="column1">-1.333424</td>
+  <td abbr="-0.548684" class="column2">-0.548684</td>
+  <td abbr="-1.192088" class="column3">-1.192088</td>
+  <td abbr="id15" class="column4">id15</td>
+</tr>
+<tr>  <td abbr="30 Apr 01" class="column0">30 Apr 01</td>
+  <td abbr="0.5405122" class="column1">0.5405122</td>
+  <td abbr="0.0481936" class="column2">0.0481936</td>
+  <td abbr="0.7592832" class="column3">0.7592832</td>
+  <td abbr="id16" class="column4">id16</td>
+</tr>
+<tr>  <td abbr="07 May 01" class="column0">07 May 01</td>
+  <td abbr="-1.296131" class="column1">-1.296131</td>
+  <td abbr="1.1276968" class="column2">1.1276968</td>
+  <td abbr="-0.628129" class="column3">-0.628129</td>
+  <td abbr="id17" class="column4">id17</td>
+</tr>
+<tr>  <td abbr="14 May 01" class="column0">14 May 01</td>
+  <td abbr="-0.431517" class="column1">-0.431517</td>
+  <td abbr="0.5483255" class="column2">0.5483255</td>
+  <td abbr="-0.772051" class="column3">-0.772051</td>
+  <td abbr="id18" class="column4">id18</td>
+</tr>
+<tr>  <td abbr="21 May 01" class="column0">21 May 01</td>
+  <td abbr="-0.658965" class="column1">-0.658965</td>
+  <td abbr="-0.180493" class="column2">-0.180493</td>
+  <td abbr="-0.374585" class="column3">-0.374585</td>
+  <td abbr="id19" class="column4">id19</td>
+</tr>
+<tr>  <td abbr="28 May 01" class="column0">28 May 01</td>
+  <td abbr="-1.583708" class="column1">-1.583708</td>
+  <td abbr="-0.331486" class="column2">-0.331486</td>
+  <td abbr="-0.677144" class="column3">-0.677144</td>
+  <td abbr="id20" class="column4">id20</td>
+</tr>
+<tr>  <td abbr="04 Jun 01" class="column0">04 Jun 01</td>
+  <td abbr="-0.101745" class="column1">-0.101745</td>
+  <td abbr="0.1005937" class="column2">0.1005937</td>
+  <td abbr="0.8919951" class="column3">0.8919951</td>
+  <td abbr="id21" class="column4">id21</td>
+</tr>
+<tr>  <td abbr="11 Jun 01" class="column0">11 Jun 01</td>
+  <td abbr="-1.992176" class="column1">-1.992176</td>
+  <td abbr="-0.114224" class="column2">-0.114224</td>
+  <td abbr="-0.132164" class="column3">-0.132164</td>
+  <td abbr="id22" class="column4">id22</td>
+</tr>
+<tr>  <td abbr="18 Jun 01" class="column0">18 Jun 01</td>
+  <td abbr="2.0550678" class="column1">2.0550678</td>
+  <td abbr="-0.240351" class="column2">-0.240351</td>
+  <td abbr="-2.101066" class="column3">-2.101066</td>
+  <td abbr="id23" class="column4">id23</td>
+</tr>
+<tr>  <td abbr="25 Jun 01" class="column0">25 Jun 01</td>
+  <td abbr="1.0997173" class="column1">1.0997173</td>
+  <td abbr="0.1419186" class="column2">0.1419186</td>
+  <td abbr="1.9227101" class="column3">1.9227101</td>
+  <td abbr="id24" class="column4">id24</td>
+</tr>
+<tr>  <td abbr="02 Jul 01" class="column0">02 Jul 01</td>
+  <td abbr="-1.580850" class="column1">-1.580850</td>
+  <td abbr="-0.874299" class="column2">-0.874299</td>
+  <td abbr="-0.008259" class="column3">-0.008259</td>
+  <td abbr="id25" class="column4">id25</td>
+</tr>
+<tr>  <td abbr="09 Jul 01" class="column0">09 Jul 01</td>
+  <td abbr="1.0082679" class="column1">1.0082679</td>
+  <td abbr="-0.348940" class="column2">-0.348940</td>
+  <td abbr="0.6544556" class="column3">0.6544556</td>
+  <td abbr="id26" class="column4">id26</td>
+</tr>
+<tr>  <td abbr="16 Jul 01" class="column0">16 Jul 01</td>
+  <td abbr="-1.625109" class="column1">-1.625109</td>
+  <td abbr="-1.855809" class="column2">-1.855809</td>
+  <td abbr="0.3137926" class="column3">0.3137926</td>
+  <td abbr="id27" class="column4">id27</td>
+</tr>
+<tr>  <td abbr="23 Jul 01" class="column0">23 Jul 01</td>
+  <td abbr="1.5899304" class="column1">1.5899304</td>
+  <td abbr="-0.276005" class="column2">-0.276005</td>
+  <td abbr="-0.244301" class="column3">-0.244301</td>
+  <td abbr="id28" class="column4">id28</td>
+</tr>
+<tr>  <td abbr="30 Jul 01" class="column0">30 Jul 01</td>
+  <td abbr="0.7752711" class="column1">0.7752711</td>
+  <td abbr="0.0626655" class="column2">0.0626655</td>
+  <td abbr="-1.094201" class="column3">-1.094201</td>
+  <td abbr="id29" class="column4">id29</td>
+</tr>
+<tr>  <td abbr="06 Aug 01" class="column0">06 Aug 01</td>
+  <td abbr="1.9418355" class="column1">1.9418355</td>
+  <td abbr="0.0013587" class="column2">0.0013587</td>
+  <td abbr="-0.000417" class="column3">-0.000417</td>
+  <td abbr="id30" class="column4">id30</td>
+</tr>
+<tr>  <td abbr="13 Aug 01" class="column0">13 Aug 01</td>
+  <td abbr="0.1839656" class="column1">0.1839656</td>
+  <td abbr="-0.904714" class="column2">-0.904714</td>
+  <td abbr="1.1832802" class="column3">1.1832802</td>
+  <td abbr="id31" class="column4">id31</td>
+</tr>
+<tr>  <td abbr="20 Aug 01" class="column0">20 Aug 01</td>
+  <td abbr="0.0106713" class="column1">0.0106713</td>
+  <td abbr="-0.881298" class="column2">-0.881298</td>
+  <td abbr="-1.160488" class="column3">-1.160488</td>
+  <td abbr="id32" class="column4">id32</td>
+</tr>
+<tr>  <td abbr="27 Aug 01" class="column0">27 Aug 01</td>
+  <td abbr="0.7456086" class="column1">0.7456086</td>
+  <td abbr="-0.489798" class="column2">-0.489798</td>
+  <td abbr="2.0931653" class="column3">2.0931653</td>
+  <td abbr="id33" class="column4">id33</td>
+</tr>
+<tr>  <td abbr="03 Sep 01" class="column0">03 Sep 01</td>
+  <td abbr="-0.929283" class="column1">-0.929283</td>
+  <td abbr="-0.982509" class="column2">-0.982509</td>
+  <td abbr="0.6774728" class="column3">0.6774728</td>
+  <td abbr="id34" class="column4">id34</td>
+</tr>
+<tr>  <td abbr="10 Sep 01" class="column0">10 Sep 01</td>
+  <td abbr="-0.023065" class="column1">-0.023065</td>
+  <td abbr="-0.903243" class="column2">-0.903243</td>
+  <td abbr="0.6455499" class="column3">0.6455499</td>
+  <td abbr="id35" class="column4">id35</td>
+</tr>
+<tr>  <td abbr="17 Sep 01" class="column0">17 Sep 01</td>
+  <td abbr="-1.003867" class="column1">-1.003867</td>
+  <td abbr="0.6932569" class="column2">0.6932569</td>
+  <td abbr="0.7559876" class="column3">0.7559876</td>
+  <td abbr="id36" class="column4">id36</td>
+</tr>
+<tr>  <td abbr="24 Sep 01" class="column0">24 Sep 01</td>
+  <td abbr="-0.114883" class="column1">-0.114883</td>
+  <td abbr="-0.531269" class="column2">-0.531269</td>
+  <td abbr="-0.372965" class="column3">-0.372965</td>
+  <td abbr="id37" class="column4">id37</td>
+</tr>
+<tr>  <td abbr="01 Oct 01" class="column0">01 Oct 01</td>
+  <td abbr="-0.582343" class="column1">-0.582343</td>
+  <td abbr="0.6353952" class="column2">0.6353952</td>
+  <td abbr="2.8645925" class="column3">2.8645925</td>
+  <td abbr="id38" class="column4">id38</td>
+</tr>
+<tr>  <td abbr="08 Oct 01" class="column0">08 Oct 01</td>
+  <td abbr="-1.187380" class="column1">-1.187380</td>
+  <td abbr="-1.850716" class="column2">-1.850716</td>
+  <td abbr="0.5983382" class="column3">0.5983382</td>
+  <td abbr="id39" class="column4">id39</td>
+</tr>
+<tr>  <td abbr="15 Oct 01" class="column0">15 Oct 01</td>
+  <td abbr="0.8936352" class="column1">0.8936352</td>
+  <td abbr="0.3254558" class="column2">0.3254558</td>
+  <td abbr="1.4311554" class="column3">1.4311554</td>
+  <td abbr="id40" class="column4">id40</td>
+</tr>
+<tr>  <td abbr="22 Oct 01" class="column0">22 Oct 01</td>
+  <td abbr="1.4456471" class="column1">1.4456471</td>
+  <td abbr="0.4114442" class="column2">0.4114442</td>
+  <td abbr="0.1357020" class="column3">0.1357020</td>
+  <td abbr="id41" class="column4">id41</td>
+</tr>
+<tr>  <td abbr="29 Oct 01" class="column0">29 Oct 01</td>
+  <td abbr="-0.616259" class="column1">-0.616259</td>
+  <td abbr="-0.471775" class="column2">-0.471775</td>
+  <td abbr="-0.232813" class="column3">-0.232813</td>
+  <td abbr="id42" class="column4">id42</td>
+</tr>
+<tr>  <td abbr="05 Nov 01" class="column0">05 Nov 01</td>
+  <td abbr="0.1549853" class="column1">0.1549853</td>
+  <td abbr="-1.212228" class="column2">-1.212228</td>
+  <td abbr="0.8184086" class="column3">0.8184086</td>
+  <td abbr="id43" class="column4">id43</td>
+</tr>
+<tr>  <td abbr="12 Nov 01" class="column0">12 Nov 01</td>
+  <td abbr="1.3204980" class="column1">1.3204980</td>
+  <td abbr="-0.556760" class="column2">-0.556760</td>
+  <td abbr="0.1182070" class="column3">0.1182070</td>
+  <td abbr="id44" class="column4">id44</td>
+</tr>
+<tr>  <td abbr="19 Nov 01" class="column0">19 Nov 01</td>
+  <td abbr="-1.088209" class="column1">-1.088209</td>
+  <td abbr="-0.346121" class="column2">-0.346121</td>
+  <td abbr="1.4085936" class="column3">1.4085936</td>
+  <td abbr="id45" class="column4">id45</td>
+</tr>
+<tr>  <td abbr="26 Nov 01" class="column0">26 Nov 01</td>
+  <td abbr="1.0657740" class="column1">1.0657740</td>
+  <td abbr="0.2354580" class="column2">0.2354580</td>
+  <td abbr="-1.666686" class="column3">-1.666686</td>
+  <td abbr="id46" class="column4">id46</td>
+</tr>
+<tr>  <td abbr="03 Dec 01" class="column0">03 Dec 01</td>
+  <td abbr="-1.395950" class="column1">-1.395950</td>
+  <td abbr="0.3658511" class="column2">0.3658511</td>
+  <td abbr="-0.139219" class="column3">-0.139219</td>
+  <td abbr="id47" class="column4">id47</td>
+</tr>
+<tr>  <td abbr="10 Dec 01" class="column0">10 Dec 01</td>
+  <td abbr="0.0635834" class="column1">0.0635834</td>
+  <td abbr="0.5695323" class="column2">0.5695323</td>
+  <td abbr="-2.103450" class="column3">-2.103450</td>
+  <td abbr="id48" class="column4">id48</td>
+</tr>
+<tr>  <td abbr="17 Dec 01" class="column0">17 Dec 01</td>
+  <td abbr="1.3691980" class="column1">1.3691980</td>
+  <td abbr="0.4613167" class="column2">0.4613167</td>
+  <td abbr="-0.182454" class="column3">-0.182454</td>
+  <td abbr="id49" class="column4">id49</td>
+</tr>
+<tr>  <td abbr="24 Dec 01" class="column0">24 Dec 01</td>
+  <td abbr="-0.849642" class="column1">-0.849642</td>
+  <td abbr="-0.143087" class="column2">-0.143087</td>
+  <td abbr="1.0978822" class="column3">1.0978822</td>
+  <td abbr="id50" class="column4">id50</td>
+</tr>
+<tr>  <td abbr="31 Dec 01" class="column0">31 Dec 01</td>
+  <td abbr="0.8286167" class="column1">0.8286167</td>
+  <td abbr="0.6351664" class="column2">0.6351664</td>
+  <td abbr="-0.479894" class="column3">-0.479894</td>
+  <td abbr="id51" class="column4">id51</td>
+</tr>
+<tr>  <td abbr="07 Jan 02" class="column0">07 Jan 02</td>
+  <td abbr="1.3735760" class="column1">1.3735760</td>
+  <td abbr="-2.030103" class="column2">-2.030103</td>
+  <td abbr="-0.205465" class="column3">-0.205465</td>
+  <td abbr="id52" class="column4">id52</td>
+</tr>
+<tr>  <td abbr="14 Jan 02" class="column0">14 Jan 02</td>
+  <td abbr="0.7040579" class="column1">0.7040579</td>
+  <td abbr="-0.045775" class="column2">-0.045775</td>
+  <td abbr="-1.975840" class="column3">-1.975840</td>
+  <td abbr="id53" class="column4">id53</td>
+</tr>
+<tr>  <td abbr="21 Jan 02" class="column0">21 Jan 02</td>
+  <td abbr="0.1857259" class="column1">0.1857259</td>
+  <td abbr="-0.657037" class="column2">-0.657037</td>
+  <td abbr="-0.017403" class="column3">-0.017403</td>
+  <td abbr="id54" class="column4">id54</td>
+</tr>
+<tr>  <td abbr="28 Jan 02" class="column0">28 Jan 02</td>
+  <td abbr="-0.730734" class="column1">-0.730734</td>
+  <td abbr="-0.941166" class="column2">-0.941166</td>
+  <td abbr="0.3748611" class="column3">0.3748611</td>
+  <td abbr="id55" class="column4">id55</td>
+</tr>
+<tr>  <td abbr="04 Feb 02" class="column0">04 Feb 02</td>
+  <td abbr="-2.452130" class="column1">-2.452130</td>
+  <td abbr="-2.448480" class="column2">-2.448480</td>
+  <td abbr="0.7851022" class="column3">0.7851022</td>
+  <td abbr="id56" class="column4">id56</td>
+</tr>
+<tr>  <td abbr="11 Feb 02" class="column0">11 Feb 02</td>
+  <td abbr="-0.499369" class="column1">-0.499369</td>
+  <td abbr="0.8484074" class="column2">0.8484074</td>
+  <td abbr="0.0175972" class="column3">0.0175972</td>
+  <td abbr="id57" class="column4">id57</td>
+</tr>
+<tr>  <td abbr="18 Feb 02" class="column0">18 Feb 02</td>
+  <td abbr="0.7173024" class="column1">0.7173024</td>
+  <td abbr="0.6054566" class="column2">0.6054566</td>
+  <td abbr="-0.012723" class="column3">-0.012723</td>
+  <td abbr="id58" class="column4">id58</td>
+</tr>
+<tr>  <td abbr="25 Feb 02" class="column0">25 Feb 02</td>
+  <td abbr="-0.191135" class="column1">-0.191135</td>
+  <td abbr="0.0612160" class="column2">0.0612160</td>
+  <td abbr="-0.593081" class="column3">-0.593081</td>
+  <td abbr="id59" class="column4">id59</td>
+</tr>
+<tr>  <td abbr="04 Mar 02" class="column0">04 Mar 02</td>
+  <td abbr="2.0729664" class="column1">2.0729664</td>
+  <td abbr="-0.544393" class="column2">-0.544393</td>
+  <td abbr="0.3582210" class="column3">0.3582210</td>
+  <td abbr="id60" class="column4">id60</td>
+</tr>
+<tr>  <td abbr="11 Mar 02" class="column0">11 Mar 02</td>
+  <td abbr="0.8942179" class="column1">0.8942179</td>
+  <td abbr="0.2062513" class="column2">0.2062513</td>
+  <td abbr="-1.084942" class="column3">-1.084942</td>
+  <td abbr="id61" class="column4">id61</td>
+</tr>
+<tr>  <td abbr="18 Mar 02" class="column0">18 Mar 02</td>
+  <td abbr="0.8752367" class="column1">0.8752367</td>
+  <td abbr="1.4419879" class="column2">1.4419879</td>
+  <td abbr="0.9792775" class="column3">0.9792775</td>
+  <td abbr="id62" class="column4">id62</td>
+</tr>
+<tr>  <td abbr="25 Mar 02" class="column0">25 Mar 02</td>
+  <td abbr="-0.525527" class="column1">-0.525527</td>
+  <td abbr="-1.164889" class="column2">-1.164889</td>
+  <td abbr="0.2375346" class="column3">0.2375346</td>
+  <td abbr="id63" class="column4">id63</td>
+</tr>
+<tr>  <td abbr="01 Apr 02" class="column0">01 Apr 02</td>
+  <td abbr="-1.222403" class="column1">-1.222403</td>
+  <td abbr="-0.216296" class="column2">-0.216296</td>
+  <td abbr="0.6592154" class="column3">0.6592154</td>
+  <td abbr="id64" class="column4">id64</td>
+</tr>
+<tr>  <td abbr="08 Apr 02" class="column0">08 Apr 02</td>
+  <td abbr="0.0910020" class="column1">0.0910020</td>
+  <td abbr="2.3100814" class="column2">2.3100814</td>
+  <td abbr="2.4616851" class="column3">2.4616851</td>
+  <td abbr="id65" class="column4">id65</td>
+</tr>
+<tr>  <td abbr="15 Apr 02" class="column0">15 Apr 02</td>
+  <td abbr="0.0185858" class="column1">0.0185858</td>
+  <td abbr="-0.577592" class="column2">-0.577592</td>
+  <td abbr="1.4826156" class="column3">1.4826156</td>
+  <td abbr="id66" class="column4">id66</td>
+</tr>
+<tr>  <td abbr="22 Apr 02" class="column0">22 Apr 02</td>
+  <td abbr="0.4133278" class="column1">0.4133278</td>
+  <td abbr="0.0712426" class="column2">0.0712426</td>
+  <td abbr="-0.904662" class="column3">-0.904662</td>
+  <td abbr="id67" class="column4">id67</td>
+</tr>
+<tr>  <td abbr="29 Apr 02" class="column0">29 Apr 02</td>
+  <td abbr="-0.151979" class="column1">-0.151979</td>
+  <td abbr="0.0555770" class="column2">0.0555770</td>
+  <td abbr="0.2969367" class="column3">0.2969367</td>
+  <td abbr="id68" class="column4">id68</td>
+</tr>
+<tr>  <td abbr="06 May 02" class="column0">06 May 02</td>
+  <td abbr="0.3314526" class="column1">0.3314526</td>
+  <td abbr="-0.207019" class="column2">-0.207019</td>
+  <td abbr="-1.574262" class="column3">-1.574262</td>
+  <td abbr="id69" class="column4">id69</td>
+</tr>
+<tr>  <td abbr="13 May 02" class="column0">13 May 02</td>
+  <td abbr="-1.565384" class="column1">-1.565384</td>
+  <td abbr="0.4397211" class="column2">0.4397211</td>
+  <td abbr="-0.310139" class="column3">-0.310139</td>
+  <td abbr="id70" class="column4">id70</td>
+</tr>
+<tr>  <td abbr="20 May 02" class="column0">20 May 02</td>
+  <td abbr="-0.965609" class="column1">-0.965609</td>
+  <td abbr="-2.056427" class="column2">-2.056427</td>
+  <td abbr="0.3290816" class="column3">0.3290816</td>
+  <td abbr="id71" class="column4">id71</td>
+</tr>
+<tr>  <td abbr="27 May 02" class="column0">27 May 02</td>
+  <td abbr="0.4513683" class="column1">0.4513683</td>
+  <td abbr="1.1365681" class="column2">1.1365681</td>
+  <td abbr="-1.634567" class="column3">-1.634567</td>
+  <td abbr="id72" class="column4">id72</td>
+</tr>
+<tr>  <td abbr="03 Jun 02" class="column0">03 Jun 02</td>
+  <td abbr="-0.937170" class="column1">-0.937170</td>
+  <td abbr="1.1927771" class="column2">1.1927771</td>
+  <td abbr="1.7187862" class="column3">1.7187862</td>
+  <td abbr="id73" class="column4">id73</td>
+</tr>
+<tr>  <td abbr="10 Jun 02" class="column0">10 Jun 02</td>
+  <td abbr="1.2436279" class="column1">1.2436279</td>
+  <td abbr="-0.674292" class="column2">-0.674292</td>
+  <td abbr="-0.472032" class="column3">-0.472032</td>
+  <td abbr="id74" class="column4">id74</td>
+</tr>
+<tr>  <td abbr="17 Jun 02" class="column0">17 Jun 02</td>
+  <td abbr="-0.356063" class="column1">-0.356063</td>
+  <td abbr="-0.304004" class="column2">-0.304004</td>
+  <td abbr="-1.415707" class="column3">-1.415707</td>
+  <td abbr="id75" class="column4">id75</td>
+</tr>
+<tr>  <td abbr="24 Jun 02" class="column0">24 Jun 02</td>
+  <td abbr="0.3226874" class="column1">0.3226874</td>
+  <td abbr="0.2442027" class="column2">0.2442027</td>
+  <td abbr="0.1585797" class="column3">0.1585797</td>
+  <td abbr="id76" class="column4">id76</td>
+</tr>
+<tr>  <td abbr="01 Jul 02" class="column0">01 Jul 02</td>
+  <td abbr="-0.365984" class="column1">-0.365984</td>
+  <td abbr="-0.542843" class="column2">-0.542843</td>
+  <td abbr="-0.170154" class="column3">-0.170154</td>
+  <td abbr="id77" class="column4">id77</td>
+</tr>
+<tr>  <td abbr="08 Jul 02" class="column0">08 Jul 02</td>
+  <td abbr="0.5475851" class="column1">0.5475851</td>
+  <td abbr="0.0814164" class="column2">0.0814164</td>
+  <td abbr="0.4830474" class="column3">0.4830474</td>
+  <td abbr="id78" class="column4">id78</td>
+</tr>
+<tr>  <td abbr="15 Jul 02" class="column0">15 Jul 02</td>
+  <td abbr="0.2405640" class="column1">0.2405640</td>
+  <td abbr="-0.519793" class="column2">-0.519793</td>
+  <td abbr="0.0940386" class="column3">0.0940386</td>
+  <td abbr="id79" class="column4">id79</td>
+</tr>
+<tr>  <td abbr="22 Jul 02" class="column0">22 Jul 02</td>
+  <td abbr="0.3817829" class="column1">0.3817829</td>
+  <td abbr="0.1291505" class="column2">0.1291505</td>
+  <td abbr="-0.704774" class="column3">-0.704774</td>
+  <td abbr="id80" class="column4">id80</td>
+</tr>
+<tr>  <td abbr="29 Jul 02" class="column0">29 Jul 02</td>
+  <td abbr="1.4334272" class="column1">1.4334272</td>
+  <td abbr="-0.534777" class="column2">-0.534777</td>
+  <td abbr="-0.097884" class="column3">-0.097884</td>
+  <td abbr="id81" class="column4">id81</td>
+</tr>
+<tr>  <td abbr="05 Aug 02" class="column0">05 Aug 02</td>
+  <td abbr="0.7268083" class="column1">0.7268083</td>
+  <td abbr="-1.770865" class="column2">-1.770865</td>
+  <td abbr="-0.431674" class="column3">-0.431674</td>
+  <td abbr="id82" class="column4">id82</td>
+</tr>
+<tr>  <td abbr="12 Aug 02" class="column0">12 Aug 02</td>
+  <td abbr="-0.527507" class="column1">-0.527507</td>
+  <td abbr="-0.401423" class="column2">-0.401423</td>
+  <td abbr="-1.253853" class="column3">-1.253853</td>
+  <td abbr="id83" class="column4">id83</td>
+</tr>
+<tr>  <td abbr="19 Aug 02" class="column0">19 Aug 02</td>
+  <td abbr="-0.645440" class="column1">-0.645440</td>
+  <td abbr="-0.383837" class="column2">-0.383837</td>
+  <td abbr="-0.249441" class="column3">-0.249441</td>
+  <td abbr="id84" class="column4">id84</td>
+</tr>
+<tr>  <td abbr="26 Aug 02" class="column0">26 Aug 02</td>
+  <td abbr="-0.729152" class="column1">-0.729152</td>
+  <td abbr="-1.366337" class="column2">-1.366337</td>
+  <td abbr="-0.459693" class="column3">-0.459693</td>
+  <td abbr="id85" class="column4">id85</td>
+</tr>
+<tr>  <td abbr="02 Sep 02" class="column0">02 Sep 02</td>
+  <td abbr="2.3557741" class="column1">2.3557741</td>
+  <td abbr="-0.524893" class="column2">-0.524893</td>
+  <td abbr="-0.293700" class="column3">-0.293700</td>
+  <td abbr="id86" class="column4">id86</td>
+</tr>
+<tr>  <td abbr="09 Sep 02" class="column0">09 Sep 02</td>
+  <td abbr="1.2733338" class="column1">1.2733338</td>
+  <td abbr="1.9863681" class="column2">1.9863681</td>
+  <td abbr="-0.371009" class="column3">-0.371009</td>
+  <td abbr="id87" class="column4">id87</td>
+</tr>
+<tr>  <td abbr="16 Sep 02" class="column0">16 Sep 02</td>
+  <td abbr="-0.052053" class="column1">-0.052053</td>
+  <td abbr="-0.005284" class="column2">-0.005284</td>
+  <td abbr="-1.334305" class="column3">-1.334305</td>
+  <td abbr="id88" class="column4">id88</td>
+</tr>
+<tr>  <td abbr="23 Sep 02" class="column0">23 Sep 02</td>
+  <td abbr="0.2601590" class="column1">0.2601590</td>
+  <td abbr="0.4511092" class="column2">0.4511092</td>
+  <td abbr="-0.985552" class="column3">-0.985552</td>
+  <td abbr="id89" class="column4">id89</td>
+</tr>
+<tr>  <td abbr="30 Sep 02" class="column0">30 Sep 02</td>
+  <td abbr="-1.278913" class="column1">-1.278913</td>
+  <td abbr="0.2917295" class="column2">0.2917295</td>
+  <td abbr="0.5867315" class="column3">0.5867315</td>
+  <td abbr="id90" class="column4">id90</td>
+</tr>
+<tr>  <td abbr="07 Oct 02" class="column0">07 Oct 02</td>
+  <td abbr="0.0678503" class="column1">0.0678503</td>
+  <td abbr="-1.782833" class="column2">-1.782833</td>
+  <td abbr="0.4427356" class="column3">0.4427356</td>
+  <td abbr="id91" class="column4">id91</td>
+</tr>
+<tr>  <td abbr="14 Oct 02" class="column0">14 Oct 02</td>
+  <td abbr="-0.314832" class="column1">-0.314832</td>
+  <td abbr="-0.188674" class="column2">-0.188674</td>
+  <td abbr="1.8062438" class="column3">1.8062438</td>
+  <td abbr="id92" class="column4">id92</td>
+</tr>
+<tr>  <td abbr="21 Oct 02" class="column0">21 Oct 02</td>
+  <td abbr="-0.169611" class="column1">-0.169611</td>
+  <td abbr="-1.398503" class="column2">-1.398503</td>
+  <td abbr="-0.160561" class="column3">-0.160561</td>
+  <td abbr="id93" class="column4">id93</td>
+</tr>
+<tr>  <td abbr="28 Oct 02" class="column0">28 Oct 02</td>
+  <td abbr="0.8611628" class="column1">0.8611628</td>
+  <td abbr="-0.666537" class="column2">-0.666537</td>
+  <td abbr="0.0056154" class="column3">0.0056154</td>
+  <td abbr="id94" class="column4">id94</td>
+</tr>
+<tr>  <td abbr="04 Nov 02" class="column0">04 Nov 02</td>
+  <td abbr="-1.149512" class="column1">-1.149512</td>
+  <td abbr="-0.071897" class="column2">-0.071897</td>
+  <td abbr="-0.313277" class="column3">-0.313277</td>
+  <td abbr="id95" class="column4">id95</td>
+</tr>
+<tr>  <td abbr="11 Nov 02" class="column0">11 Nov 02</td>
+  <td abbr="-0.604115" class="column1">-0.604115</td>
+  <td abbr="2.1048325" class="column2">2.1048325</td>
+  <td abbr="-1.074250" class="column3">-1.074250</td>
+  <td abbr="id96" class="column4">id96</td>
+</tr>
+<tr>  <td abbr="18 Nov 02" class="column0">18 Nov 02</td>
+  <td abbr="-0.461368" class="column1">-0.461368</td>
+  <td abbr="-0.439890" class="column2">-0.439890</td>
+  <td abbr="-0.253612" class="column3">-0.253612</td>
+  <td abbr="id97" class="column4">id97</td>
+</tr>
+<tr>  <td abbr="25 Nov 02" class="column0">25 Nov 02</td>
+  <td abbr="1.3826636" class="column1">1.3826636</td>
+  <td abbr="0.8825024" class="column2">0.8825024</td>
+  <td abbr="1.0222928" class="column3">1.0222928</td>
+  <td abbr="id98" class="column4">id98</td>
+</tr>
+<tr>  <td abbr="02 Dec 02" class="column0">02 Dec 02</td>
+  <td abbr="0.1984902" class="column1">0.1984902</td>
+  <td abbr="1.8192602" class="column2">1.8192602</td>
+  <td abbr="0.0765272" class="column3">0.0765272</td>
+  <td abbr="id99" class="column4">id99</td>
+</tr>
+<tr>  <td abbr="" class="column0"></td>
+  <td abbr="" class="column1"></td>
+  <td abbr="" class="column2"></td>
+  <td abbr="" class="column3"></td>
+  <td abbr="" class="column4"></td>
+</tr>
+</tbody></table></div></div></form><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/dbase" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="data.0.3.csv"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327c57.6a7b1680e76266063e25b97d89c6449afc88e3fc">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="data.0.3e200.csv?action=AttachFile&amp;do=get&amp;target=data.0.3.csv">get</a>&nbsp;| <a href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">view</a>] (2007-01-14 23:35:05, 4.5 KB) [[attachment:data.0.3.csv]]</li><li>[<a href="data76e5.csv?action=AttachFile&amp;do=get&amp;target=data.csv">get</a>&nbsp;| <a href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">view</a>] (2007-01-07 18:13:31, 4.0 KB) [[attachment:data.csv]]</li><li>[<a href="dbase.0.1b943.py?action=AttachFile&amp;do=get&amp;target=dbase.0.1.py">get</a>&nbsp;| <a href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">view</a>] (2007-01-07 18:00:31, 16.1 KB) [[attachment:dbase.0.1.py]]</li><li>[<a href="dbase.0.274aa.py?action=AttachFile&amp;do=get&amp;target=dbase.0.2.py">get</a>&nbsp;| <a href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">view</a>] (2007-01-14 22:55:13, 5.6 KB) [[attachment:dbase.0.2.py]]</li><li>[<a href="dbase.0.32133.py?action=AttachFile&amp;do=get&amp;target=dbase.0.3.py">get</a>&nbsp;| <a href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">view</a>] (2007-01-14 23:31:35, 18.1 KB) [[attachment:dbase.0.3.py]]</li><li>[<a href="dbase.0.4bd63.py?action=AttachFile&amp;do=get&amp;target=dbase.0.4.py">get</a>&nbsp;| <a href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">view</a>] (2007-01-14 23:51:16, 18.4 KB) [[attachment:dbase.0.4.py]]</li><li>[<a href="dbase.0.5f856.py?action=AttachFile&amp;do=get&amp;target=dbase.0.5.py">get</a>&nbsp;| <a href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">view</a>] (2007-01-14 23:54:23, 18.4 KB) [[attachment:dbase.0.5.py]]</li><li>[<a href="dbase.0.6312b.py?action=AttachFile&amp;do=get&amp;target=dbase.0.6.py">get</a>&nbsp;| <a href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">view</a>] (2007-01-15 06:33:06, 18.4 KB) [[attachment:dbase.0.6.py]]</li><li>[<a href="dbase.0.7f434.py?action=AttachFile&amp;do=get&amp;target=dbase.0.7.py">get</a>&nbsp;| <a href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">view</a>] (2007-01-19 05:53:14, 19.1 KB) [[attachment:dbase.0.7.py]]</li><li>[<a href="dbase211c.py?action=AttachFile&amp;do=get&amp;target=dbase.py">get</a>&nbsp;| <a href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">view</a>] (2007-01-07 07:50:10, 15.8 KB) [[attachment:dbase.py]]</li><li>[<a href="dbase07fe.pydoc?action=AttachFile&amp;do=get&amp;target=dbase.pydoc">get</a>&nbsp;| <a href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">view</a>] (2007-01-07 07:52:21, 7.6 KB) [[attachment:dbase.pydoc]]</li><li>[<a href="dbase_pydoc.0.1d60b.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.1.txt">get</a>&nbsp;| <a href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">view</a>] (2007-01-07 18:01:44, 7.9 KB) [[attachment:dbase_pydoc.0.1.txt]]</li><li>[<a href="dbase_pydoc.0.230c3.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.2.txt">get</a>&nbsp;| <a href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">view</a>] (2007-01-14 22:56:04, 8.2 KB) [[attachment:dbase_pydoc.0.2.txt]]</li><li>[<a href="ex_plot.0.1c9c7.png?action=AttachFile&amp;do=get&amp;target=ex_plot.0.1.png">get</a>&nbsp;| <a href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">view</a>] (2007-01-07 18:02:50, 27.7 KB) [[attachment:ex_plot.0.1.png]]</li><li>[<a href="ex_plot59eb.png?action=AttachFile&amp;do=get&amp;target=ex_plot.png">get</a>&nbsp;| <a href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">view</a>] (2007-01-07 08:01:04, 87.7 KB) [[attachment:ex_plot.png]]</li><li>[<a href="ex_plot1f462.png?action=AttachFile&amp;do=get&amp;target=ex_plot1.png">get</a>&nbsp;| <a href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">view</a>] (2007-01-07 08:03:54, 28.2 KB) [[attachment:ex_plot1.png]]</li><li>[<a href="example_plotd84c.png?action=AttachFile&amp;do=get&amp;target=example_plot.png">get</a>&nbsp;| <a href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">view</a>] (2007-01-07 07:57:21, 895.9 KB) [[attachment:example_plot.png]]</li><li>[<a href="pydocef5d?action=AttachFile&amp;do=get&amp;target=pydoc">get</a>&nbsp;| <a href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">view</a>] (2007-01-07 07:51:51, 34.3 KB) [[attachment:pydoc]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=data.0.3.csv by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:42:15 GMT -->
+</html>
+

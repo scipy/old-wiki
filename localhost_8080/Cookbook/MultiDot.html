@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MultiDot by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:21:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/MultiDot - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MultiDot" href="../../external.html?link=http://localhost:8080/Cookbook/MultiDot?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMultiDot&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/MultiDot?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/MultiDot?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/MultiDot">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="MultiDot456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="MultiDot4bad.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMultiDot%22" rel="nofollow" title="Click to do a full-text search for this title">MultiDot</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="MultiDot.html">Cookbook/MultiDot</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="MultiDot37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/MultiDot">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">The matrix multiplication function, numpy.dot(), only takes two arguments.  That means to multiply more than two arrays together you end up with nested function calls which are hard to read: <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><pre><span class="anchor" id="line-1"></span>  dot(dot(dot(a,b),c),d)</pre><span class="anchor" id="line-5"></span><p class="line874">versus infix notation where you'd just be able to write <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><pre><span class="anchor" id="line-1-1"></span>  a*b*c*d</pre><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">There are a couple of ways to define an 'mdot' function that acts like dot but accepts more than two arguments.  Using one of these allows you to write the above expression as  <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><pre><span class="anchor" id="line-1-2"></span>mdot(a,b,c,d)</pre><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line867">
+<h2 id="Using_reduce">Using reduce</h2>
+<span class="anchor" id="line-17"></span><p class="line874">The simplest way it to just use reduce. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867"><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-26a78322caff2bd7f7dcda7833c63a5de831878a\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-26a78322caff2bd7f7dcda7833c63a5de831878a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-26a78322caff2bd7f7dcda7833c63a5de831878a_1">   1</a> </span><span class="LineAnchor" id="CA-26a78322caff2bd7f7dcda7833c63a5de831878a_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">def</span> <span class="ID">mdot</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-26a78322caff2bd7f7dcda7833c63a5de831878a_2">   2</a> </span><span class="LineAnchor" id="CA-26a78322caff2bd7f7dcda7833c63a5de831878a_2"></span><span class="anchor" id="line-2-1"></span>    <span class="ResWord">return</span> <span class="ResWord">reduce</span>(<span class="ID">numpy</span>.<span class="ID">dot</span>, <span class="ID">args</span>)</span>
+</pre></div></div><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line862">Or use the equivalent loop (which is apparently the preferred style <a class="http" href="../../external.html?link=http://www.python.org/dev/peps/pep-3100/#id53">for Py3K</a>): <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5995f507007647d902a357d6ab41f661a7c10b1e\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5995f507007647d902a357d6ab41f661a7c10b1e_1">   1</a> </span><span class="LineAnchor" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">def</span> <span class="ID">mdot</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5995f507007647d902a357d6ab41f661a7c10b1e_2">   2</a> </span><span class="LineAnchor" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e_2"></span><span class="anchor" id="line-2-2"></span>    <span class="ID">ret</span> = <span class="ID">args</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5995f507007647d902a357d6ab41f661a7c10b1e_3">   3</a> </span><span class="LineAnchor" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e_3"></span><span class="anchor" id="line-3-1"></span>    <span class="ResWord">for</span> <span class="ID">a</span> <span class="ResWord">in</span> <span class="ID">args</span>[<span class="Number">1</span>:]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5995f507007647d902a357d6ab41f661a7c10b1e_4">   4</a> </span><span class="LineAnchor" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e_4"></span><span class="anchor" id="line-4-1"></span>        <span class="ID">ret</span> = <span class="ID">dot</span>(<span class="ID">ret</span>,<span class="ID">a</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5995f507007647d902a357d6ab41f661a7c10b1e_5">   5</a> </span><span class="LineAnchor" id="CA-5995f507007647d902a357d6ab41f661a7c10b1e_5"></span><span class="anchor" id="line-5-1"></span>    <span class="ResWord">return</span> <span class="ID">ret</span></span>
+</pre></div></div><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line862">This will always give you left to right associativity, i.e. the expression is interpreted as <tt class="backtick">(((a*b)*c)*d)</tt>.   <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line874">You also can make a right-associative version of the loop: <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b35113df7b330fbed43829abd78824de732fdb57\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b35113df7b330fbed43829abd78824de732fdb57" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b35113df7b330fbed43829abd78824de732fdb57_1">   1</a> </span><span class="LineAnchor" id="CA-b35113df7b330fbed43829abd78824de732fdb57_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">def</span> <span class="ID">mdotr</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b35113df7b330fbed43829abd78824de732fdb57_2">   2</a> </span><span class="LineAnchor" id="CA-b35113df7b330fbed43829abd78824de732fdb57_2"></span><span class="anchor" id="line-2-3"></span>    <span class="ID">ret</span> = <span class="ID">args</span>[-<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b35113df7b330fbed43829abd78824de732fdb57_3">   3</a> </span><span class="LineAnchor" id="CA-b35113df7b330fbed43829abd78824de732fdb57_3"></span><span class="anchor" id="line-3-2"></span>    <span class="ResWord">for</span> <span class="ID">a</span> <span class="ResWord">in</span> <span class="ResWord">reversed</span>(<span class="ID">args</span>[:-<span class="Number">1</span>]):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b35113df7b330fbed43829abd78824de732fdb57_4">   4</a> </span><span class="LineAnchor" id="CA-b35113df7b330fbed43829abd78824de732fdb57_4"></span><span class="anchor" id="line-4-2"></span>        <span class="ID">ret</span> = <span class="ID">dot</span>(<span class="ID">a</span>,<span class="ID">ret</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b35113df7b330fbed43829abd78824de732fdb57_5">   5</a> </span><span class="LineAnchor" id="CA-b35113df7b330fbed43829abd78824de732fdb57_5"></span><span class="anchor" id="line-5-2"></span>    <span class="ResWord">return</span> <span class="ID">ret</span></span>
+</pre></div></div><span class="anchor" id="line-45"></span><p class="line862">which evaluates as <tt class="backtick">(a*(b*(c*d)))</tt>.  But sometimes you'd like to have finer control since the order in which matrix multiplies are performed can have a big impact on performance.  The next version gives that control. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><p class="line867">
+<h2 id="Controlling_order_of_evaluation">Controlling order of evaluation</h2>
+<span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><p class="line862">If we're willing to sacrifice Numpy's ability to treat tuples as arrays, we can use tuples as grouping constructs.  This version of <tt class="backtick">mdot</tt> allows syntax like this: <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><pre><span class="anchor" id="line-1-3"></span>   mdot(a,((b,c),d))</pre><p class="line874"> <span class="anchor" id="line-53"></span>to control the order in which the pairwise <tt class="backtick">dot</tt> calls are made. <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line867"><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_1">   1</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">import</span> <span class="ID">types</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_2">   2</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_2"></span><span class="anchor" id="line-2-4"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_3">   3</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_3"></span><span class="anchor" id="line-3-3"></span><span class="ResWord">def</span> <span class="ID">mdot</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_4">   4</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_4"></span><span class="anchor" id="line-4-3"></span>   <span class="String">&quot;&quot;&quot;Multiply all the arguments using matrix product rules.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_5">   5</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_5"></span><span class="anchor" id="line-5-3"></span><span class="String">   The output is equivalent to multiplying the arguments one by one</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_6">   6</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_6"></span><span class="anchor" id="line-6-1"></span><span class="String">   from left to right using dot().</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_7">   7</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_7"></span><span class="anchor" id="line-7-1"></span><span class="String">   Precedence can be controlled by creating tuples of arguments,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_8">   8</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_8"></span><span class="anchor" id="line-8-1"></span><span class="String">   for instance mdot(a,((b,c),d)) multiplies a (a*((b*c)*d)).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_9">   9</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_9"></span><span class="anchor" id="line-9-1"></span><span class="String">   Note that this means the output of dot(a,b) and mdot(a,b) will differ if</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_10">  10</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_10"></span><span class="anchor" id="line-10-1"></span><span class="String">   a or b is a pure tuple of numbers.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_11">  11</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_11"></span><span class="anchor" id="line-11-1"></span><span class="String">   &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_12">  12</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_12"></span><span class="anchor" id="line-12-1"></span>   <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">args</span>)==<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_13">  13</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_13"></span><span class="anchor" id="line-13-1"></span>       <span class="ResWord">return</span> <span class="ID">args</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_14">  14</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_14"></span><span class="anchor" id="line-14-1"></span>   <span class="ResWord">elif</span> <span class="ResWord">len</span>(<span class="ID">args</span>)==<span class="Number">2</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_15">  15</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_15"></span><span class="anchor" id="line-15-1"></span>       <span class="ResWord">return</span> <span class="ID">_mdot_r</span>(<span class="ID">args</span>[<span class="Number">0</span>],<span class="ID">args</span>[<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_16">  16</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_16"></span><span class="anchor" id="line-16-1"></span>   <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_17">  17</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_17"></span><span class="anchor" id="line-17-1"></span>       <span class="ResWord">return</span> <span class="ID">_mdot_r</span>(<span class="ID">args</span>[:-<span class="Number">1</span>],<span class="ID">args</span>[-<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_18">  18</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_18"></span><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_19">  19</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_19"></span><span class="anchor" id="line-19-1"></span><span class="ResWord">def</span> <span class="ID">_mdot_r</span>(<span class="ID">a</span>,<span class="ID">b</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_20">  20</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_20"></span><span class="anchor" id="line-20-1"></span>   <span class="String">&quot;&quot;&quot;Recursive helper for mdot&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_21">  21</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_21"></span><span class="anchor" id="line-21-1"></span>   <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">a</span>)==<span class="ID">types</span>.<span class="ID">TupleType</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_22">  22</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_22"></span><span class="anchor" id="line-22-1"></span>       <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">a</span>)&gt;<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_23">  23</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_23"></span><span class="anchor" id="line-23-1"></span>           <span class="ID">a</span> = <span class="ID">mdot</span>(*<span class="ID">a</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_24">  24</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_24"></span><span class="anchor" id="line-24-1"></span>       <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_25">  25</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_25"></span><span class="anchor" id="line-25-1"></span>           <span class="ID">a</span> = <span class="ID">a</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_26">  26</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_26"></span><span class="anchor" id="line-26-1"></span>   <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">b</span>)==<span class="ID">types</span>.<span class="ID">TupleType</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_27">  27</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_27"></span><span class="anchor" id="line-27-1"></span>       <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">b</span>)&gt;<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_28">  28</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_28"></span><span class="anchor" id="line-28-1"></span>           <span class="ID">b</span> = <span class="ID">mdot</span>(*<span class="ID">b</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_29">  29</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_29"></span><span class="anchor" id="line-29-1"></span>       <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_30">  30</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_30"></span><span class="anchor" id="line-30-1"></span>           <span class="ID">b</span> = <span class="ID">b</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_31">  31</a> </span><span class="LineAnchor" id="CA-9c5c1b28450e2bc023f6c897db11db8f83d71dd1_31"></span><span class="anchor" id="line-31-1"></span>   <span class="ResWord">return</span> <span class="ID">numpy</span>.<span class="ID">dot</span>(<span class="ID">a</span>,<span class="ID">b</span>)</span>
+</pre></div></div><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line867">
+<h2 id="Multiply">Multiply</h2>
+<span class="anchor" id="line-90"></span><p class="line862">Note that the elementwise multiplication function <tt class="backtick">numpy.multiply</tt> has the same two-argument limitation as <tt class="backtick">numpy.dot</tt>.  The exact same generalized forms can be defined for multiply. <span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><p class="line874">Left associative versions: <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156_1">   1</a> </span><span class="LineAnchor" id="CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156_1"></span><span class="anchor" id="line-1-10"></span><span class="ResWord">def</span> <span class="ID">mmultiply</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156_2">   2</a> </span><span class="LineAnchor" id="CA-e4bf8fc45d8e08e38ff08ca3a27a215bf7d6c156_2"></span><span class="anchor" id="line-2-5"></span>    <span class="ResWord">return</span> <span class="ResWord">reduce</span>(<span class="ID">numpy</span>.<span class="ID">multiply</span>, <span class="ID">args</span>)</span>
+</pre></div></div><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><p class="line867"><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b1863936a5fa6920143697feadb189648efb9342\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b1863936a5fa6920143697feadb189648efb9342" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b1863936a5fa6920143697feadb189648efb9342_1">   1</a> </span><span class="LineAnchor" id="CA-b1863936a5fa6920143697feadb189648efb9342_1"></span><span class="anchor" id="line-1-12"></span><span class="ResWord">def</span> <span class="ID">mmultiply</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1863936a5fa6920143697feadb189648efb9342_2">   2</a> </span><span class="LineAnchor" id="CA-b1863936a5fa6920143697feadb189648efb9342_2"></span><span class="anchor" id="line-2-6"></span>    <span class="ID">ret</span> = <span class="ID">args</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1863936a5fa6920143697feadb189648efb9342_3">   3</a> </span><span class="LineAnchor" id="CA-b1863936a5fa6920143697feadb189648efb9342_3"></span><span class="anchor" id="line-3-4"></span>    <span class="ResWord">for</span> <span class="ID">a</span> <span class="ResWord">in</span> <span class="ID">args</span>[<span class="Number">1</span>:]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1863936a5fa6920143697feadb189648efb9342_4">   4</a> </span><span class="LineAnchor" id="CA-b1863936a5fa6920143697feadb189648efb9342_4"></span><span class="anchor" id="line-4-4"></span>        <span class="ID">ret</span> = <span class="ID">multiply</span>(<span class="ID">ret</span>,<span class="ID">a</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1863936a5fa6920143697feadb189648efb9342_5">   5</a> </span><span class="LineAnchor" id="CA-b1863936a5fa6920143697feadb189648efb9342_5"></span><span class="anchor" id="line-5-4"></span>    <span class="ResWord">return</span> <span class="ID">ret</span></span>
+</pre></div></div><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><p class="line874">Right-associative version: <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_1">   1</a> </span><span class="LineAnchor" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_1"></span><span class="anchor" id="line-1-14"></span><span class="ResWord">def</span> <span class="ID">mmultiplyr</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_2">   2</a> </span><span class="LineAnchor" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_2"></span><span class="anchor" id="line-2-7"></span>    <span class="ID">ret</span> = <span class="ID">args</span>[-<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_3">   3</a> </span><span class="LineAnchor" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_3"></span><span class="anchor" id="line-3-5"></span>    <span class="ResWord">for</span> <span class="ID">a</span> <span class="ResWord">in</span> <span class="ResWord">reversed</span>(<span class="ID">args</span>[:-<span class="Number">1</span>]):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_4">   4</a> </span><span class="LineAnchor" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_4"></span><span class="anchor" id="line-4-5"></span>        <span class="ID">ret</span> = <span class="ID">multiply</span>(<span class="ID">a</span>,<span class="ID">ret</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_5">   5</a> </span><span class="LineAnchor" id="CA-e6628ea86054f2f0a44001764c4fb4edd8be6de2_5"></span><span class="anchor" id="line-5-5"></span>    <span class="ResWord">return</span> <span class="ID">ret</span></span>
+</pre></div></div><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><p class="line874">Version using tuples to control order of evaluation: <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_1">   1</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_1"></span><span class="anchor" id="line-1-16"></span><span class="ResWord">import</span> <span class="ID">types</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_2">   2</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_2"></span><span class="anchor" id="line-2-8"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_3">   3</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_3"></span><span class="anchor" id="line-3-6"></span><span class="ResWord">def</span> <span class="ID">mmultiply</span>(*<span class="ID">args</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_4">   4</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_4"></span><span class="anchor" id="line-4-6"></span>   <span class="String">&quot;&quot;&quot;Multiply all the arguments using elementwise product.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_5">   5</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_5"></span><span class="anchor" id="line-5-6"></span><span class="String">   The output is equivalent to multiplying the arguments one by one</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_6">   6</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_6"></span><span class="anchor" id="line-6-2"></span><span class="String">   from left to right using multiply().</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_7">   7</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_7"></span><span class="anchor" id="line-7-2"></span><span class="String">   Precedence can be controlled by creating tuples of arguments,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_8">   8</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_8"></span><span class="anchor" id="line-8-2"></span><span class="String">   for instance mmultiply(a,((b,c),d)) multiplies a (a*((b*c)*d)).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_9">   9</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_9"></span><span class="anchor" id="line-9-2"></span><span class="String">   Note that this means the output of multiply(a,b) and mmultiply(a,b) will differ if</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_10">  10</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_10"></span><span class="anchor" id="line-10-2"></span><span class="String">   a or b is a pure tuple of numbers.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_11">  11</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_11"></span><span class="anchor" id="line-11-2"></span><span class="String">   &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_12">  12</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_12"></span><span class="anchor" id="line-12-2"></span>   <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">args</span>)==<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_13">  13</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_13"></span><span class="anchor" id="line-13-2"></span>       <span class="ResWord">return</span> <span class="ID">args</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_14">  14</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_14"></span><span class="anchor" id="line-14-2"></span>   <span class="ResWord">elif</span> <span class="ResWord">len</span>(<span class="ID">args</span>)==<span class="Number">2</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_15">  15</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_15"></span><span class="anchor" id="line-15-2"></span>       <span class="ResWord">return</span> <span class="ID">_mmultiply_r</span>(<span class="ID">args</span>[<span class="Number">0</span>],<span class="ID">args</span>[<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_16">  16</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_16"></span><span class="anchor" id="line-16-2"></span>   <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_17">  17</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_17"></span><span class="anchor" id="line-17-2"></span>       <span class="ResWord">return</span> <span class="ID">_mmultiply_r</span>(<span class="ID">args</span>[:-<span class="Number">1</span>],<span class="ID">args</span>[-<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_18">  18</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_18"></span><span class="anchor" id="line-18-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_19">  19</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_19"></span><span class="anchor" id="line-19-2"></span><span class="ResWord">def</span> <span class="ID">_mmultiply_r</span>(<span class="ID">a</span>,<span class="ID">b</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_20">  20</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_20"></span><span class="anchor" id="line-20-2"></span>   <span class="String">&quot;&quot;&quot;Recursive helper for mmultiply&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_21">  21</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_21"></span><span class="anchor" id="line-21-2"></span>   <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">a</span>)==<span class="ID">types</span>.<span class="ID">TupleType</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_22">  22</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_22"></span><span class="anchor" id="line-22-2"></span>       <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">a</span>)&gt;<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_23">  23</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_23"></span><span class="anchor" id="line-23-2"></span>           <span class="ID">a</span> = <span class="ID">mmultiply</span>(*<span class="ID">a</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_24">  24</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_24"></span><span class="anchor" id="line-24-2"></span>       <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_25">  25</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_25"></span><span class="anchor" id="line-25-2"></span>           <span class="ID">a</span> = <span class="ID">a</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_26">  26</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_26"></span><span class="anchor" id="line-26-2"></span>   <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">b</span>)==<span class="ID">types</span>.<span class="ID">TupleType</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_27">  27</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_27"></span><span class="anchor" id="line-27-2"></span>       <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">b</span>)&gt;<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_28">  28</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_28"></span><span class="anchor" id="line-28-2"></span>           <span class="ID">b</span> = <span class="ID">mmultiply</span>(*<span class="ID">b</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_29">  29</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_29"></span><span class="anchor" id="line-29-2"></span>       <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_30">  30</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_30"></span><span class="anchor" id="line-30-2"></span>           <span class="ID">b</span> = <span class="ID">b</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_31">  31</a> </span><span class="LineAnchor" id="CA-dac6149ee7589d1cc79f1fedda1d59d8f66aeb1b_31"></span><span class="anchor" id="line-31-2"></span>   <span class="ResWord">return</span> <span class="ID">numpy</span>.<span class="ID">multiply</span>(<span class="ID">a</span>,<span class="ID">b</span>)</span>
+</pre></div></div><span class="anchor" id="line-151"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MultiDot  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="MultiDot37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/MultiDot">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MultiDot by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:21:12 GMT -->
+</html>
+

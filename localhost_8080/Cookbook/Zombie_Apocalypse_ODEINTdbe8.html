@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Zombie_Apocalypse_ODEINT - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Zombie_Apocalypse_ODEINT" href="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FZombie_Apocalypse_ODEINT&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="zombie_nodead_nobirths.png" href="Zombie_Apocalypse_ODEINTc5c3.html?action=AttachFile&amp;do=view&amp;target=zombie_nodead_nobirths.png">
+<link rel="Appendix" title="zombie_somedead_10birth.png" href="Zombie_Apocalypse_ODEINT6549.html?action=AttachFile&amp;do=view&amp;target=zombie_somedead_10birth.png">
+<link rel="Appendix" title="zombie_somedead_nobirth.png" href="Zombie_Apocalypse_ODEINT4012.html?action=AttachFile&amp;do=view&amp;target=zombie_somedead_nobirth.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Zombie_Apocalypse_ODEINT456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Zombie_Apocalypse_ODEINT189a.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FZombie_Apocalypse_ODEINT%22" rel="nofollow" title="Click to do a full-text search for this title">Zombie_Apocalypse_ODEINT</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Zombie_Apocalypse_ODEINT.html">Zombie_Apocalypse_ODEINT</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Zombie_Apocalypse_ODEINT.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Zombie_Apocalypse_ODEINT37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h2 id="Modeling_a_Zombie_Apocalypse">Modeling a Zombie Apocalypse</h2>
+<span class="anchor" id="line-2"></span><p class="line862">This example demonstrates how to solve a system of first order ODEs using <a href="../SciPy.html">SciPy</a>.  Note that a Nth order equation can also be solved using <a href="../SciPy.html">SciPy</a> by transforming it into <a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Ordinary_differential_equation#Reduction_to_a_first_order_system">a system of first order equations</a>.  In a this lighthearted example, a system of ODEs can be used to model a &quot;zombie invasion&quot;, using the equations specified in <a class="http" href="../../external.html?link=http://mysite.science.uottawa.ca/rsmith43/Zombies.pdf">Munz et al. 2009</a>. <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line874">The system is given as: <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><pre><span class="anchor" id="line-1"></span>dS/dt = P - B*S*Z - d*S
+<span class="anchor" id="line-2"></span>dZ/dt = B*S*Z + G*R - A*S*Z
+<span class="anchor" id="line-3"></span>dR/dt = d*S + A*S*Z - G*R</pre><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p>with the following notations:</p>
+<ul class="simple">
+<li>S: the number of susceptible victims</li><li>Z: the number of zombies</li><li>R: the number of people &quot;killed&quot;</li><li>P: the population birth rate</li><li>d: the chance of a natural death</li><li>B: the chance the &quot;zombie disease&quot; is transmitted (an alive person becomes a zombie)</li><li>G: the chance a dead person is resurrected into a zombie</li><li>A: the chance a zombie is totally destroyed</li></ul>
+<span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line874">This involves solving a system of first order ODEs given by: <span class="anchor" id="line-25"></span>d<strong>y</strong>/dt = <strong>f</strong>(<strong>y</strong>, t) <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">Where <strong>y</strong> = [S, Z, R]. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line874">The code used to solve this system is below: <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867"><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9ec8aa31707fce65386b95c319541ababd1e1a2d\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_1">   1</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_1"></span><span class="anchor" id="line-1-2"></span><span class="Comment"># zombie apocalypse modeling</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_2">   2</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_3">   3</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_4">   4</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">from</span> <span class="ID">scipy.integrate</span> <span class="ResWord">import</span> <span class="ID">odeint</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_5">   5</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">plt</span>.<span class="ID">ion</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_6">   6</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_6"></span><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_7">   7</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">P</span> = <span class="Number">0</span>       <span class="Comment"># birth rate</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_8">   8</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_8"></span><span class="anchor" id="line-8-1"></span><span class="ID">d</span> = <span class="Number">0.0001</span>  <span class="Comment"># natural death percent (per day)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_9">   9</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">B</span> = <span class="Number">0.0095</span>  <span class="Comment"># transmission percent  (per day)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_10">  10</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">G</span> = <span class="Number">0.0001</span>  <span class="Comment"># resurect percent (per day)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_11">  11</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">A</span> = <span class="Number">0.0001</span>  <span class="Comment"># destroy percent  (per day)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_12">  12</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_13">  13</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_13"></span><span class="anchor" id="line-13-1"></span><span class="Comment"># solve the system dy/dt = f(y, t)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_14">  14</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_14"></span><span class="anchor" id="line-14-1"></span><span class="ResWord">def</span> <span class="ID">f</span>(<span class="ID">y</span>, <span class="ID">t</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_15">  15</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_15"></span><span class="anchor" id="line-15-1"></span>        <span class="ID">Si</span> = <span class="ID">y</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_16">  16</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_16"></span><span class="anchor" id="line-16-1"></span>        <span class="ID">Zi</span> = <span class="ID">y</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_17">  17</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_17"></span><span class="anchor" id="line-17-1"></span>        <span class="ID">Ri</span> = <span class="ID">y</span>[<span class="Number">2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_18">  18</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_18"></span><span class="anchor" id="line-18-1"></span>        <span class="Comment"># the model equations (see Munz et al. 2009)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_19">  19</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_19"></span><span class="anchor" id="line-19-1"></span>        <span class="ID">f0</span> = <span class="ID">P</span> - <span class="ID">B</span>*<span class="ID">Si</span>*<span class="ID">Zi</span> - <span class="ID">d</span>*<span class="ID">Si</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_20">  20</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_20"></span><span class="anchor" id="line-20-1"></span>        <span class="ID">f1</span> = <span class="ID">B</span>*<span class="ID">Si</span>*<span class="ID">Zi</span> + <span class="ID">G</span>*<span class="ID">Ri</span> - <span class="ID">A</span>*<span class="ID">Si</span>*<span class="ID">Zi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_21">  21</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_21"></span><span class="anchor" id="line-21-1"></span>        <span class="ID">f2</span> = <span class="ID">d</span>*<span class="ID">Si</span> + <span class="ID">A</span>*<span class="ID">Si</span>*<span class="ID">Zi</span> - <span class="ID">G</span>*<span class="ID">Ri</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_22">  22</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_22"></span><span class="anchor" id="line-22-1"></span>        <span class="ResWord">return</span> [<span class="ID">f0</span>, <span class="ID">f1</span>, <span class="ID">f2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_23">  23</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_23"></span><span class="anchor" id="line-23-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_24">  24</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_24"></span><span class="anchor" id="line-24-1"></span><span class="Comment"># initial conditions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_25">  25</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">S0</span> = <span class="Number">500.</span>               <span class="Comment"># initial population</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_26">  26</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_26"></span><span class="anchor" id="line-26-1"></span><span class="ID">Z0</span> = <span class="Number">0</span>                  <span class="Comment"># initial zombie population</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_27">  27</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_27"></span><span class="anchor" id="line-27-1"></span><span class="ID">R0</span> = <span class="Number">0</span>                  <span class="Comment"># initial death population</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_28">  28</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_28"></span><span class="anchor" id="line-28-1"></span><span class="ID">y0</span> = [<span class="ID">S0</span>, <span class="ID">Z0</span>, <span class="ID">R0</span>]       <span class="Comment"># initial condition vector</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_29">  29</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_29"></span><span class="anchor" id="line-29-1"></span><span class="ID">t</span>  = <span class="ID">np</span>.<span class="ID">linspace</span>(<span class="Number">0</span>, <span class="Number">5.</span>, <span class="Number">1000</span>)   <span class="Comment"># time grid</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_30">  30</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_30"></span><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_31">  31</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_31"></span><span class="anchor" id="line-31-1"></span><span class="Comment"># solve the DEs</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_32">  32</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_32"></span><span class="anchor" id="line-32-1"></span><span class="ID">soln</span> = <span class="ID">odeint</span>(<span class="ID">f</span>, <span class="ID">y0</span>, <span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_33">  33</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_33"></span><span class="anchor" id="line-33-1"></span><span class="ID">S</span> = <span class="ID">soln</span>[:, <span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_34">  34</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">Z</span> = <span class="ID">soln</span>[:, <span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_35">  35</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_35"></span><span class="anchor" id="line-35-1"></span><span class="ID">R</span> = <span class="ID">soln</span>[:, <span class="Number">2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_36">  36</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_36"></span><span class="anchor" id="line-36-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_37">  37</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_37"></span><span class="anchor" id="line-37-1"></span><span class="Comment"># plot results</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_38">  38</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_38"></span><span class="anchor" id="line-38-1"></span><span class="ID">plt</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_39">  39</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_39"></span><span class="anchor" id="line-39-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">S</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Living</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_40">  40</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_40"></span><span class="anchor" id="line-40-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">Z</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Zombies</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_41">  41</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_41"></span><span class="anchor" id="line-41-1"></span><span class="ID">plt</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Days from outbreak</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_42">  42</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_42"></span><span class="anchor" id="line-42-1"></span><span class="ID">plt</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Population</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_43">  43</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_43"></span><span class="anchor" id="line-43-1"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Zombie Apocalypse - No Init. Dead Pop.; No New Births.</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_44">  44</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_44"></span><span class="anchor" id="line-44-1"></span><span class="ID">plt</span>.<span class="ID">legend</span>(<span class="ID">loc</span>=<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_45">  45</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_45"></span><span class="anchor" id="line-45-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_46">  46</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_46"></span><span class="anchor" id="line-46-1"></span><span class="Comment"># change the initial conditions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_47">  47</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_47"></span><span class="anchor" id="line-47-1"></span><span class="ID">R0</span> = <span class="Number">0.01</span>*<span class="ID">S0</span>   <span class="Comment"># 1% of initial pop is dead</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_48">  48</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_48"></span><span class="anchor" id="line-48-1"></span><span class="ID">y0</span> = [<span class="ID">S0</span>, <span class="ID">Z0</span>, <span class="ID">R0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_49">  49</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_49"></span><span class="anchor" id="line-49-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_50">  50</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_50"></span><span class="anchor" id="line-50-1"></span><span class="Comment"># solve the DEs</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_51">  51</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_51"></span><span class="anchor" id="line-51-1"></span><span class="ID">soln</span> = <span class="ID">odeint</span>(<span class="ID">f</span>, <span class="ID">y0</span>, <span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_52">  52</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_52"></span><span class="anchor" id="line-52-1"></span><span class="ID">S</span> = <span class="ID">soln</span>[:, <span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_53">  53</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_53"></span><span class="anchor" id="line-53-1"></span><span class="ID">Z</span> = <span class="ID">soln</span>[:, <span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_54">  54</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_54"></span><span class="anchor" id="line-54-1"></span><span class="ID">R</span> = <span class="ID">soln</span>[:, <span class="Number">2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_55">  55</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_55"></span><span class="anchor" id="line-55-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_56">  56</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_56"></span><span class="anchor" id="line-56-1"></span><span class="ID">plt</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_57">  57</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_57"></span><span class="anchor" id="line-57-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">S</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Living</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_58">  58</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_58"></span><span class="anchor" id="line-58-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">Z</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Zombies</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_59">  59</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_59"></span><span class="anchor" id="line-59-1"></span><span class="ID">plt</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Days from outbreak</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_60">  60</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_60"></span><span class="anchor" id="line-60-1"></span><span class="ID">plt</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Population</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_61">  61</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_61"></span><span class="anchor" id="line-61-1"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Zombie Apocalypse - 1</span><span class="String">%</span><span class="String"> Init. Pop. is Dead; No New Births.</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_62">  62</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_62"></span><span class="anchor" id="line-62-1"></span><span class="ID">plt</span>.<span class="ID">legend</span>(<span class="ID">loc</span>=<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_63">  63</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_63"></span><span class="anchor" id="line-63-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_64">  64</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_64"></span><span class="anchor" id="line-64-1"></span><span class="Comment"># change the initial conditions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_65">  65</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_65"></span><span class="anchor" id="line-65-1"></span><span class="ID">R0</span> = <span class="Number">0.01</span>*<span class="ID">S0</span>   <span class="Comment"># 1% of initial pop is dead</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_66">  66</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_66"></span><span class="anchor" id="line-66-1"></span><span class="ID">P</span>  = <span class="Number">10</span>        <span class="Comment"># 10 new births daily</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_67">  67</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_67"></span><span class="anchor" id="line-67-1"></span><span class="ID">y0</span> = [<span class="ID">S0</span>, <span class="ID">Z0</span>, <span class="ID">R0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_68">  68</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_68"></span><span class="anchor" id="line-68-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_69">  69</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_69"></span><span class="anchor" id="line-69-1"></span><span class="Comment"># solve the DEs</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_70">  70</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_70"></span><span class="anchor" id="line-70-1"></span><span class="ID">soln</span> = <span class="ID">odeint</span>(<span class="ID">f</span>, <span class="ID">y0</span>, <span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_71">  71</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_71"></span><span class="anchor" id="line-71-1"></span><span class="ID">S</span> = <span class="ID">soln</span>[:, <span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_72">  72</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_72"></span><span class="anchor" id="line-72-1"></span><span class="ID">Z</span> = <span class="ID">soln</span>[:, <span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_73">  73</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_73"></span><span class="anchor" id="line-73-1"></span><span class="ID">R</span> = <span class="ID">soln</span>[:, <span class="Number">2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_74">  74</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_74"></span><span class="anchor" id="line-74-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_75">  75</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_75"></span><span class="anchor" id="line-75-1"></span><span class="ID">plt</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_76">  76</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_76"></span><span class="anchor" id="line-76-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">S</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Living</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_77">  77</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_77"></span><span class="anchor" id="line-77-1"></span><span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">Z</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">Zombies</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_78">  78</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_78"></span><span class="anchor" id="line-78-1"></span><span class="ID">plt</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Days from outbreak</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_79">  79</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_79"></span><span class="anchor" id="line-79-1"></span><span class="ID">plt</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Population</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_80">  80</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_80"></span><span class="anchor" id="line-80-1"></span><span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">Zombie Apocalypse - 1</span><span class="String">%</span><span class="String"> Init. Pop. is Dead; 10 Daily Births</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_81">  81</a> </span><span class="LineAnchor" id="CA-9ec8aa31707fce65386b95c319541ababd1e1a2d_81"></span><span class="anchor" id="line-81-1"></span><span class="ID">plt</span>.<span class="ID">legend</span>(<span class="ID">loc</span>=<span class="Number">0</span>)</span>
+</pre></div></div><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><p class="line867"><img alt="zombie_nodead_nobirths.png" class="attachment" src="zombie_nodead_nobirthsda5d.png?action=AttachFile&amp;do=get&amp;target=zombie_nodead_nobirths.png" title="zombie_nodead_nobirths.png" /> <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line867"><img alt="zombie_somedead_nobirth.png" class="attachment" src="zombie_somedead_nobirth9359.png?action=AttachFile&amp;do=get&amp;target=zombie_somedead_nobirth.png" title="zombie_somedead_nobirth.png" /> <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><p class="line867"><img alt="zombie_somedead_10birth.png" class="attachment" src="zombie_somedead_10birth67ff.png?action=AttachFile&amp;do=get&amp;target=zombie_somedead_10birth.png" title="zombie_somedead_10birth.png" /> <span class="anchor" id="line-121"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Zombie_Apocalypse_ODEINT37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Zombie_Apocalypse_ODEINT?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

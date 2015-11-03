@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/BuildingArrays?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/BuildingArrays - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/BuildingArrays" href="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FBuildingArrays&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="BuildingArrays456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="BuildingArrays5e21.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FBuildingArrays%22" rel="nofollow" title="Click to do a full-text search for this title">BuildingArrays</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="BuildingArrays.html">Cookbook/BuildingArrays</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BuildingArrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">This is a brief introduction to array objects, their declaration and use in scipy. A comprehensive list of examples of Numpy functions for arrays can be found at <a href="../Numpy_Example_List_With_Doc.html">Numpy_Example_List_With_Doc</a> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Basics">Basics</h1>
+<span class="anchor" id="line-4"></span><p class="line874">Numerical arrays are not yet defined in the standard python language. To load the array object and its methods into the namespace, the numpy package must be imported: <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867"><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-417f7732121e8525754a96e007202d7278e9e629" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+</pre></div></div><span class="anchor" id="line-10"></span><p class="line874">Arrays can be created from the usual python lists and tuples using the array function. For example, <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867"><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-53cae059298abfa7cf36d51cfab71ac15100851a" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ID">a</span> = <span class="ID">array</span>([<span class="Number">1</span>,<span class="Number">2</span>,<span class="Number">3</span>])</span>
+</pre></div></div><span class="anchor" id="line-16"></span><p class="line862">returns a one dimensional array of integers. The array instance <tt>a</tt> has a large set of methods and properties attached to it. For example, <tt>a.shape</tt> is the dimension of the array. In this case, it would simply be <tt>(3,)</tt>. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line874">One big difference between array objects and python's sequences object is the definition of the mathematical operators. Whereas the addition of two lists concatenates those list, the addition of two arrays adds the arrays element-wise. For example : <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867"><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-43cada458343559a8d766261bcbb96d66eb6b3a4" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span>&gt;&gt;&gt; <span class="ID">b</span> = <span class="ID">array</span>((<span class="Number">10</span>,<span class="Number">11</span>,<span class="Number">12</span>))</span>
+<span class="line"><span class="anchor" id="line-2-1"></span>&gt;&gt;&gt; <span class="ID">a</span> + <span class="ID">b</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ID">array</span>([<span class="Number">11</span>,<span class="Number">13</span>,<span class="Number">15</span>])</span>
+</pre></div></div><span class="anchor" id="line-26"></span><p class="line874">Subtraction, multiplication and division are defined similarly. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line862">A common gotcha for beginners is the type definition of arrays. Unless otherwise instructed, the array construct uses the type of its argument. Since <tt>a</tt> was created from a list of integers, it is defined as an integer array, more precisely : <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867"><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-cc374656851b640cc7683d32a13f851b61e586e9" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span>&gt;&gt;&gt; <span class="ID">a</span>.<span class="ID">dtype</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ID">dtype</span>(<span class="String">'</span><span class="String">&lt;i4</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-35"></span><p class="line874">Accordingly, mathematical operations such as division will operate as usual in python, that is, will return an integer answer : <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867"><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-dd5578c72a89a244afa71388a1c80b983fc936ec" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span>&gt;&gt;&gt; <span class="ID">a</span>/<span class="Number">3</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span><span class="ID">array</span>([<span class="Number">0</span>,<span class="Number">0</span>,<span class="Number">1</span>])</span>
+</pre></div></div><span class="anchor" id="line-42"></span><p class="line862">To obtain the expected answer, one solution is to force the casting of integers into real numbers by dividing by a real number <tt>3.</tt>. A more careful approach is to define the type at initialization time : <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line867"><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-48a07068ba02d8648bbd89d4d11a3ba33d0e4814" lang="en"><span class="line"><span class="anchor" id="line-1-12"></span>&gt;&gt;&gt; <span class="ID">a</span> = <span class="ID">array</span>([<span class="Number">1</span>,<span class="Number">2</span>,<span class="Number">3</span>], <span class="ID">dtype</span>=<span class="ResWord">float</span>)</span>
+</pre></div></div><span class="anchor" id="line-48"></span><p class="line874">Another way to cast is by using Numpy's built-in cast functions astype and cast. These allow you to change the type of data you're working with: <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line867"><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-d5dd8576989a5c1085c6189e638698e0d50b2eba" lang="en"><span class="line"><span class="anchor" id="line-1-14"></span>&gt;&gt;&gt; <span class="ID">a</span> = <span class="ID">array</span>([<span class="Number">1</span>,<span class="Number">2</span>,<span class="Number">3</span>], <span class="ID">dtype</span>=<span class="ResWord">int</span>)</span>
+<span class="line"><span class="anchor" id="line-2-4"></span>&gt;&gt;&gt; <span class="ID">b</span> = <span class="ID">a</span>.<span class="ID">astype</span>(<span class="String">'</span><span class="String">float</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-55"></span><p class="line862">The elements of an array are accessed using the bracket notation <tt>a[i]</tt> where <tt>i</tt> is an integer index starting at 0. Sub-arrays can be accessed by using general indexes of the form <em>start:stop:step. </em>a[start:stop:step] will return a reference to a sub-array of array a starting with (including) the element at index <em>start </em>going up to (but not including) the element at index stop in steps of <em>step</em>. e.g.: <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867"><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-78d9761b58e4d9ef17b4a5a12400d18141b65ec6" lang="en"><span class="line"><span class="anchor" id="line-1-16"></span>&gt;&gt;&gt;<span class="ID">data</span> = <span class="ID">array</span>([<span class="Number">0.5</span>, <span class="Number">1.2</span>, <span class="Number">2.2</span>, <span class="Number">3.4</span>, <span class="Number">3.5</span>, <span class="Number">3.4</span>, <span class="Number">3.4</span>, <span class="Number">3.4</span>], <span class="ResWord">float</span>)</span>
+<span class="line"><span class="anchor" id="line-2-5"></span>&gt;&gt;&gt;<span class="ID">t</span>  = <span class="ID">arange</span>(<span class="ResWord">len</span>(<span class="ID">data</span>), <span class="ID">dtype</span>=<span class="String">'</span><span class="String">float</span><span class="String">'</span>) * <span class="Number">2</span>*<span class="ID">pi</span>/(<span class="ResWord">len</span>(<span class="ID">data</span>)-<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-3-2"></span>&gt;&gt;&gt;<span class="ID">t</span>[:]              <span class="Comment"># get all t-values</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ID">array</span>([ <span class="Number">0.</span>        ,  <span class="Number">0.8975979</span> ,  <span class="Number">1.7951958</span> ,  <span class="Number">2.6927937</span> ,  <span class="Number">3.5903916</span> ,</span>
+<span class="line"><span class="anchor" id="line-5-1"></span>        <span class="Number">4.48798951</span>,  <span class="Number">5.38558741</span>,  <span class="Number">6.28318531</span>])</span>
+<span class="line"><span class="anchor" id="line-6-1"></span>&gt;&gt;&gt;<span class="ID">t</span>[<span class="Number">2</span>:<span class="Number">4</span>]            <span class="Comment"># get sub-array with the elements at the indexes 2,3</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">array</span>([ <span class="Number">1.7951958</span>,  <span class="Number">2.6927937</span>])</span>
+<span class="line"><span class="anchor" id="line-8-1"></span>&gt;&gt;&gt;<span class="ID">t</span>[<span class="ResWord">slice</span>(<span class="Number">2</span>,<span class="Number">4</span>)]     <span class="Comment"># the same using slice</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">array</span>([ <span class="Number">1.7951958</span>,  <span class="Number">2.6927937</span>])</span>
+<span class="line"><span class="anchor" id="line-10-1"></span>&gt;&gt;&gt;<span class="ID">t</span>[<span class="Number">0</span>:<span class="Number">6</span>:<span class="Number">2</span>]          <span class="Comment"># every even-indexed value up to but excluding 6</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">array</span>([ <span class="Number">0.</span>       ,  <span class="Number">1.7951958</span>,  <span class="Number">3.5903916</span>])</span>
+</pre></div></div><span class="anchor" id="line-71"></span><p class="line862">Furthermore, there is the possibility to access array-elements using bool-arrays. The bool-array has the  indexes of elements  which  are to be  accessed set to <em>True.</em> <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><p class="line867"><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-1-17"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-94648d1be6d0c9099db32210c758cee3f77553b1" lang="en"><span class="line"><span class="anchor" id="line-1-18"></span>&gt;&gt;&gt;<span class="ID">i</span>=<span class="ID">array</span>(<span class="ResWord">len</span>(<span class="ID">t</span>)*[<span class="ResWord">False</span>],<span class="ResWord">bool</span>)   <span class="Comment"># create an bool-array for indexing</span></span>
+<span class="line"><span class="anchor" id="line-2-6"></span>&gt;&gt;&gt;<span class="ID">i</span>[<span class="Number">2</span>]=<span class="ResWord">True</span>;<span class="ID">i</span>[<span class="Number">4</span>]=<span class="ResWord">True</span>;<span class="ID">i</span>[<span class="Number">6</span>]=<span class="ResWord">True</span>  <span class="Comment"># we want elements with indexes 2,4 and 6</span></span>
+<span class="line"><span class="anchor" id="line-3-3"></span>&gt;&gt;&gt;<span class="ID">t</span>[<span class="ID">i</span>]</span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">array</span>([ <span class="Number">1.7951958</span> ,  <span class="Number">3.5903916</span> ,  <span class="Number">5.38558741</span>])</span>
+</pre></div></div><span class="anchor" id="line-80"></span><p class="line867"><em> </em> <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line874">We can use this syntax to make slightly more elaborate constructs. Consider the data[:] and t[:] arrays defined before. Suppose we want to get the four (t[i]/data[i])-pairs with the four t[i]-values being closest to a point p=1.8. We could proceed as follows: <span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line867"><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-1-19"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-fb8a5fc413db8e879d027af5fadcf89f62ba46f2" lang="en"><span class="line"><span class="anchor" id="line-1-20"></span>&gt;&gt;&gt;<span class="ID">p</span>=<span class="Number">1.8</span>                            <span class="Comment"># set our point</span></span>
+<span class="line"><span class="anchor" id="line-2-7"></span>&gt;&gt;&gt;<span class="ResWord">abs</span>(<span class="ID">t</span>-<span class="ID">p</span>)                         <span class="Comment"># how much do the t[:]-values differ from p?</span></span>
+<span class="line"><span class="anchor" id="line-3-4"></span><span class="ID">array</span>([ <span class="Number">1.8</span>       ,  <span class="Number">0.9024021</span> ,  <span class="Number">0.0048042</span> ,  <span class="Number">0.8927937</span> ,  <span class="Number">1.7903916</span> ,</span>
+<span class="line"><span class="anchor" id="line-4-3"></span>        <span class="Number">2.68798951</span>,  <span class="Number">3.58558741</span>,  <span class="Number">4.48318531</span>])</span>
+<span class="line"><span class="anchor" id="line-5-2"></span>&gt;&gt;&gt;<span class="ID">dt_m</span> = <span class="ID">sort</span>(<span class="ResWord">abs</span>(<span class="ID">t</span>-<span class="ID">p</span>))[<span class="Number">3</span>]         <span class="Comment"># how large is the 4-th largest absolute distance between the</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span>&gt;&gt;&gt;                                 <span class="Comment"># t[:]-values and p</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span>&gt;&gt;&gt;</span>
+<span class="line"><span class="anchor" id="line-8-2"></span>&gt;&gt;&gt;<span class="ResWord">abs</span>(<span class="ID">t</span>-<span class="ID">p</span>)&lt;=<span class="ID">dt_m</span>                   <span class="Comment"># where are the four elements of t[:]closest to p ?</span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="ID">array</span>([<span class="ResWord">False</span>, <span class="ResWord">True</span>, <span class="ResWord">True</span>, <span class="ResWord">True</span>, <span class="ResWord">True</span>, <span class="ResWord">False</span>, <span class="ResWord">False</span>, <span class="ResWord">False</span>], <span class="ID">dtype</span>=<span class="ResWord">bool</span>)</span>
+<span class="line"><span class="anchor" id="line-10-2"></span>&gt;&gt;&gt;<span class="ID">y_p</span> = <span class="ID">data</span>[<span class="ResWord">abs</span>(<span class="ID">t</span>-<span class="ID">p</span>)&lt;=<span class="ID">dt_m</span>]       <span class="Comment"># construct the sub-arrays; (1) get the 4 t[:]-values</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span>&gt;&gt;&gt;<span class="ID">t_p</span> = <span class="ID">t</span>[<span class="ResWord">abs</span>(<span class="ID">t</span>-<span class="ID">p</span>)&lt;=<span class="ID">dt_m</span>]          <span class="Comment"># (2) get the data t[:]-values corresponding to the 4 t[:] values</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span>&gt;&gt;&gt;<span class="ID">y_p</span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="ID">array</span>([ <span class="Number">1.2</span>,  <span class="Number">2.2</span>,  <span class="Number">3.4</span>,  <span class="Number">3.5</span>])</span>
+<span class="line"><span class="anchor" id="line-14-1"></span>&gt;&gt;&gt;<span class="ID">t_p</span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ID">array</span>([ <span class="Number">0.8975979</span>,  <span class="Number">1.7951958</span>,  <span class="Number">2.6927937</span>,  <span class="Number">3.5903916</span>])</span>
+</pre></div></div><span class="anchor" id="line-102"></span><p class="line874">It has to be kept in mind that slicing returns a reference to the data. As a consequence, changes in the returned sub-array cause changes in the original array and vice versa. If one wants to copy only the values one can use the copy()-method of the matrix object. For example: <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867"><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-1-21"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-eaa723dc05e87a3dd6d4c5eebbfee934248520d0" lang="en"><span class="line"><span class="anchor" id="line-1-22"></span><span class="Comment"># first lets define a 2-d matrix</span></span>
+<span class="line"><span class="anchor" id="line-2-8"></span>&gt;&gt;&gt; <span class="ID">A</span> = <span class="ID">array</span>([[<span class="Number">0</span>,   <span class="Number">1</span>,  <span class="Number">2</span>,  <span class="Number">3</span>],   <span class="Comment"># initialize 2-d array</span></span>
+<span class="line"><span class="anchor" id="line-3-5"></span>...            [<span class="Number">4</span>,   <span class="Number">5</span>,  <span class="Number">6</span>,  <span class="Number">7</span>],</span>
+<span class="line"><span class="anchor" id="line-4-4"></span>...            [<span class="Number">8</span>,   <span class="Number">9</span>, <span class="Number">10</span>, <span class="Number">11</span>],</span>
+<span class="line"><span class="anchor" id="line-5-3"></span>...            [<span class="Number">12</span>, <span class="Number">13</span>, <span class="Number">14</span>, <span class="Number">15</span>]])</span>
+<span class="line"><span class="anchor" id="line-6-3"></span>&gt;&gt;&gt;<span class="ID">A</span></span>
+<span class="line"><span class="anchor" id="line-7-3"></span><span class="ID">array</span>([[ <span class="Number">0</span>,  <span class="Number">1</span>,  <span class="Number">2</span>,  <span class="Number">3</span>],</span>
+<span class="line"><span class="anchor" id="line-8-3"></span>       [ <span class="Number">4</span>,  <span class="Number">5</span>,  <span class="Number">6</span>,  <span class="Number">7</span>],</span>
+<span class="line"><span class="anchor" id="line-9-3"></span>       [ <span class="Number">8</span>,  <span class="Number">9</span>, <span class="Number">10</span>, <span class="Number">11</span>],</span>
+<span class="line"><span class="anchor" id="line-10-3"></span>       [<span class="Number">12</span>, <span class="Number">13</span>, <span class="Number">14</span>, <span class="Number">15</span>]])</span>
+<span class="line"><span class="anchor" id="line-11-3"></span>&gt;&gt;&gt;</span>
+<span class="line"><span class="anchor" id="line-12-2"></span>&gt;&gt;&gt;<span class="ID">b</span>=<span class="ID">A</span>[<span class="Number">1</span>:<span class="Number">3</span>,<span class="Number">0</span>:<span class="Number">2</span>]                    <span class="Comment"># let's get a sub-matrix containing the cross-section of</span></span>
+<span class="line"><span class="anchor" id="line-13-2"></span>&gt;&gt;&gt;                                <span class="Comment"># rows 1,2 and columns 0,1</span></span>
+<span class="line"><span class="anchor" id="line-14-2"></span>&gt;&gt;&gt;                                <span class="Comment"># !attention! this assigns to b a reference to the</span></span>
+<span class="line"><span class="anchor" id="line-15-2"></span>&gt;&gt;&gt;                                <span class="Comment"># sub-matrix of A</span></span>
+<span class="line"><span class="anchor" id="line-16-1"></span>&gt;&gt;&gt;</span>
+<span class="line"><span class="anchor" id="line-17-1"></span>&gt;&gt;&gt;<span class="ID">b</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="ID">array</span>([[<span class="Number">4</span>, <span class="Number">5</span>],</span>
+<span class="line"><span class="anchor" id="line-19-1"></span>       [<span class="Number">8</span>, <span class="Number">9</span>]])</span>
+<span class="line"><span class="anchor" id="line-20-1"></span>&gt;&gt;&gt;<span class="ID">c</span>=<span class="ID">A</span>[<span class="Number">1</span>:<span class="Number">3</span>,<span class="Number">0</span>:<span class="Number">2</span>].<span class="ID">copy</span>()             <span class="Comment"># copy the entries</span></span>
+<span class="line"><span class="anchor" id="line-21-1"></span>&gt;&gt;&gt;<span class="ID">c</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span><span class="ID">array</span>([[<span class="Number">4</span>, <span class="Number">5</span>],</span>
+<span class="line"><span class="anchor" id="line-23-1"></span>       [<span class="Number">8</span>, <span class="Number">9</span>]])</span>
+<span class="line"><span class="anchor" id="line-24-1"></span>&gt;&gt;&gt;<span class="ID">A</span>[<span class="Number">1</span>:<span class="Number">3</span>,<span class="Number">0</span>:<span class="Number">2</span>] = <span class="Number">42</span>                 <span class="Comment"># we can also assign by slicing (this also changes shallow copies)</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span>&gt;&gt;&gt;<span class="ID">b</span>                               <span class="Comment"># b also affected (only a reference to sub matrix)</span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span><span class="ID">array</span>([[<span class="Number">42</span>, <span class="Number">42</span>],</span>
+<span class="line"><span class="anchor" id="line-27-1"></span>        [<span class="Number">42</span>, <span class="Number">42</span>]])</span>
+<span class="line"><span class="anchor" id="line-28-1"></span>&gt;&gt;&gt;<span class="ID">c</span>                               <span class="Comment"># still the same (deep copy)</span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span><span class="ID">array</span>([[<span class="Number">4</span>, <span class="Number">5</span>],</span>
+<span class="line"><span class="anchor" id="line-30-1"></span>       [<span class="Number">8</span>, <span class="Number">9</span>]])</span>
+</pre></div></div><span class="anchor" id="line-137"></span><p class="line867">
+<h1 id="Matrix_dot_product">Matrix dot product</h1>
+<span class="anchor" id="line-138"></span><p class="line874">The next example creates two matrices: a and b, and computes the dot product axb (in other words, the standard matrix product) <span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><p class="line867"><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-1-23"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-a986934187952f5899254ed0e4366bff2fb8ca59" lang="en"><span class="line"><span class="anchor" id="line-1-24"></span>&gt;&gt;&gt; <span class="ID">a</span> = <span class="ID">array</span>([[<span class="Number">1</span>,<span class="Number">2</span>],[<span class="Number">2</span>,<span class="Number">3</span>]])</span>
+<span class="line"><span class="anchor" id="line-2-9"></span>&gt;&gt;&gt; <span class="ID">b</span> = <span class="ID">array</span>([[<span class="Number">7</span>,<span class="Number">1</span>],[<span class="Number">0</span>,<span class="Number">1</span>]])</span>
+<span class="line"><span class="anchor" id="line-3-6"></span>&gt;&gt;&gt; <span class="ID">dot</span>(<span class="ID">a</span>,<span class="ID">b</span>)</span>
+</pre></div></div><span class="anchor" id="line-146"></span><p class="line867">
+<h1 id="Automatic_array_creation">Automatic array creation</h1>
+<span class="anchor" id="line-147"></span><p class="line862">Scipy (via Numpy) provides numerous ways to create arrays automatically. For example, to create a vector of evenly spaced numbers, the linspace function can be called. This is often useful to compute the result of a function on some domain. For example, to compute the value of the <tt>sine</tt> function on one period, we would define a vector going from 0 to 2 pi and compute the value of the function for all values in this vector : <span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><p class="line867"><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-1-25"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-5ea37259cdc62804bd77f081babc5f0297080941" lang="en"><span class="line"><span class="anchor" id="line-1-26"></span>&gt;&gt;&gt; <span class="ID">x</span> = <span class="ID">linspace</span>(<span class="Number">0</span>, <span class="Number">2</span>*<span class="ID">pi</span>, <span class="Number">100</span>)</span>
+<span class="line"><span class="anchor" id="line-2-10"></span>&gt;&gt;&gt; <span class="ID">y</span> = <span class="ID">sin</span>(<span class="ID">x</span>)</span>
+</pre></div></div><span class="anchor" id="line-154"></span><p class="line862">The same can be done on a N dimensional grid using the <tt>nd_grid</tt> class and some of its object creation methods <tt>mgrid</tt> and <tt>ogrid</tt>. For example, <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line867"><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-1-27"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-172aa40f908fce19786a0812ad9ede42eccc8009" lang="en"><span class="line"><span class="anchor" id="line-1-28"></span>&gt;&gt;&gt; <span class="ID">x</span>,<span class="ID">y</span> = <span class="ID">mgrid</span>[<span class="Number">0</span>:<span class="Number">10</span>:.<span class="Number">1</span>, <span class="Number">0</span>:<span class="Number">10</span>:.<span class="Number">2</span>]</span>
+</pre></div></div><span class="anchor" id="line-160"></span><p class="line874">returns two matrices, x and y, whose elements range from 0 to 10 (non-inclusively) in .1 and .2 increments respectively. These matrices can be used to compute the value of a function at the points (x_i, y_i) defined by those grids : <span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><p class="line867"><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-1-29"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-9ee795005f9ab2007196fbd2d5e5313169b59d6f" lang="en"><span class="line"><span class="anchor" id="line-1-30"></span>&gt;&gt;&gt; <span class="ID">z</span> = (<span class="ID">x</span>+<span class="ID">y</span>)**<span class="Number">2</span></span>
+</pre></div></div><span class="anchor" id="line-166"></span><p class="line874">The ogrid object has the exact same behavior, but instead of storing an N-D matrix into memory, it stores only the 1-D vector that defines it. For large matrices, this can lead to significant economy of memory space. <span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><p class="line862">Other useful functions to create matrices are <tt>zeros(size)</tt> and <tt>ones(size)</tt> who initialize arrays full of zeros and ones. Note that those will be float arrays by default. This may lead to curious behaviour for the unawares. For example, let's initialize a matrix with zeros, and then place values in it element by element. <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><p class="line867"><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-1-31"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-580de936076e7ea9ce4e84c525d320197ded1e6f" lang="en"><span class="line"><span class="anchor" id="line-1-32"></span><span class="ID">mz</span> = <span class="ID">zeros</span>((<span class="Number">2</span>,<span class="Number">2</span>), <span class="ID">dtype</span>=<span class="ResWord">int</span>)</span>
+<span class="line"><span class="anchor" id="line-2-11"></span><span class="ID">mz</span>[<span class="Number">0</span>,<span class="Number">0</span>] = .<span class="Number">5</span>**<span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-3-7"></span><span class="ID">mz</span>[<span class="Number">1</span>,<span class="Number">1</span>] = <span class="Number">1.6</span>**<span class="Number">2</span></span>
+</pre></div></div><span class="anchor" id="line-176"></span><p class="line874">In this example, we are trying to store floating point numbers in an integer array. Thus, the numbers are then recast to integers, so that if we print the matrix, we obtain : <span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><p class="line867"><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-1-33"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-a6597bf1ee02f002a400f8873d322d6a5079dad4" lang="en"><span class="line"><span class="anchor" id="line-1-34"></span><span class="ID">array</span>([[<span class="Number">0</span>, <span class="Number">0</span>],</span>
+<span class="line"><span class="anchor" id="line-2-12"></span>       [<span class="Number">0</span>, <span class="Number">2</span>]])</span>
+</pre></div></div><span class="anchor" id="line-183"></span><p class="line874">To create real number arrays, one simply need to state the type explicitly in the call to the function : <span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><p class="line867"><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-1-35"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-413e726451efc7d469baf6e8b5aac7632a83f76a" lang="en"><span class="line"><span class="anchor" id="line-1-36"></span><span class="ID">mz</span> = <span class="ID">zeros</span>((<span class="Number">2</span>,<span class="Number">2</span>), <span class="ID">dtype</span>=<span class="ResWord">float</span>)</span>
+</pre></div></div><span class="anchor" id="line-189"></span><p class="line867">
+<h1 id="Repeating_array_segments">Repeating array segments</h1>
+<span class="anchor" id="line-190"></span><p class="line874">The ndarray.repeat() method returns a new array with dimensions repeated from the old one. <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><p class="line867"><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-1-37"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-1eaa052f0fb2685b5c8834532226ba09bc92c6a1" lang="en"><span class="line"><span class="anchor" id="line-1-38"></span>&gt;&gt;&gt; <span class="ID">a</span> = <span class="ID">array</span>([[<span class="Number">0</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-2-13"></span>...            [<span class="Number">2</span>, <span class="Number">3</span>]])</span>
+<span class="line"><span class="anchor" id="line-3-8"></span>&gt;&gt;&gt; <span class="ID">a</span>.<span class="ID">repeat</span>(<span class="Number">2</span>, <span class="ID">axis</span>=<span class="Number">0</span>) <span class="Comment"># repeats each row twice in succession</span></span>
+<span class="line"><span class="anchor" id="line-4-5"></span><span class="ID">array</span>([[<span class="Number">0</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-5-4"></span>       [<span class="Number">0</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-6-4"></span>       [<span class="Number">2</span>, <span class="Number">3</span>],</span>
+<span class="line"><span class="anchor" id="line-7-4"></span>       [<span class="Number">2</span>, <span class="Number">3</span>]])</span>
+<span class="line"><span class="anchor" id="line-8-4"></span>&gt;&gt;&gt; <span class="ID">a</span>.<span class="ID">repeat</span>(<span class="Number">3</span>, <span class="ID">axis</span>=<span class="Number">1</span>) <span class="Comment"># repeats each column 3 times in succession</span></span>
+<span class="line"><span class="anchor" id="line-9-4"></span><span class="ID">array</span>([[<span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-10-4"></span>       [<span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">3</span>, <span class="Number">3</span>, <span class="Number">3</span>]])</span>
+<span class="line"><span class="anchor" id="line-11-4"></span>&gt;&gt;&gt; <span class="ID">a</span>.<span class="ID">repeat</span>(<span class="Number">2</span>, <span class="ID">axis</span>=<span class="ResWord">None</span>) <span class="Comment"># flattens (ravels), then repeats each element twice</span></span>
+<span class="line"><span class="anchor" id="line-12-3"></span><span class="ID">array</span>([<span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">3</span>, <span class="Number">3</span>])</span>
+</pre></div></div><span class="anchor" id="line-207"></span><p class="line874">These can be combined to do some useful things, like enlarging image data stored in a 2D array: <span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><p class="line867"><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-1-39"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-e117dfa06b3a873b9239092f951077780fcc2c54" lang="en"><span class="line"><span class="anchor" id="line-1-40"></span><span class="ResWord">def</span> <span class="ID">enlarge</span>(<span class="ID">a</span>, <span class="ID">x</span>=<span class="Number">2</span>, <span class="ID">y</span>=<span class="ResWord">None</span>):</span>
+<span class="line"><span class="anchor" id="line-2-14"></span>    <span class="String">&quot;&quot;&quot;Enlarges 2D image array a using simple pixel repetition in both dimensions.</span></span>
+<span class="line"><span class="anchor" id="line-3-9"></span><span class="String">    Enlarges by factor x horizontally and factor y vertically.</span></span>
+<span class="line"><span class="anchor" id="line-4-6"></span><span class="String">    If y is left as None, uses factor x for both dimensions.&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-5-5"></span>    <span class="ID">a</span> = <span class="ID">asarray</span>(<span class="ID">a</span>)</span>
+<span class="line"><span class="anchor" id="line-6-5"></span>    <span class="ResWord">assert</span> <span class="ID">a</span>.<span class="ID">ndim</span> == <span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-7-5"></span>    <span class="ResWord">if</span> <span class="ID">y</span> == <span class="ResWord">None</span>:</span>
+<span class="line"><span class="anchor" id="line-8-5"></span>        <span class="ID">y</span> = <span class="ID">x</span></span>
+<span class="line"><span class="anchor" id="line-9-5"></span>    <span class="ResWord">for</span> <span class="ID">factor</span> <span class="ResWord">in</span> (<span class="ID">x</span>, <span class="ID">y</span>):</span>
+<span class="line"><span class="anchor" id="line-10-5"></span>        <span class="ResWord">assert</span> <span class="ID">factor</span>.<span class="ID">__class__</span> == <span class="ResWord">int</span></span>
+<span class="line"><span class="anchor" id="line-11-5"></span>        <span class="ResWord">assert</span> <span class="ID">factor</span> &gt; <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-12-4"></span>    <span class="ResWord">return</span> <span class="ID">a</span>.<span class="ID">repeat</span>(<span class="ID">y</span>, <span class="ID">axis</span>=<span class="Number">0</span>).<span class="ID">repeat</span>(<span class="ID">x</span>, <span class="ID">axis</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-13-3"></span>&gt;&gt;&gt; <span class="ID">enlarge</span>(<span class="ID">a</span>, <span class="ID">x</span>=<span class="Number">2</span>, <span class="ID">y</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-14-3"></span><span class="ID">array</span>([[<span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">1</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-15-3"></span>       [<span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">1</span>, <span class="Number">1</span>],</span>
+<span class="line"><span class="anchor" id="line-16-2"></span>       [<span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">3</span>, <span class="Number">3</span>],</span>
+<span class="line"><span class="anchor" id="line-17-2"></span>       [<span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">3</span>, <span class="Number">3</span>]])</span>
+</pre></div></div><span class="anchor" id="line-229"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-230"></span><ul><li style="list-style-type:none"><p class="line891"><a href="../CategoryCookbook.html"><strong class="highlight">CategoryCookbook</strong></a> <span class="anchor" id="line-231"></span></li></ul><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/BuildingArrays  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BuildingArrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/BuildingArrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/BuildingArrays?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+</html>
+

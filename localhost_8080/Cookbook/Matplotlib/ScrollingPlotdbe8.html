@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/ScrollingPlot?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/ScrollingPlot - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/ScrollingPlot" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FScrollingPlot&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="ScrollingPlot456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="ScrollingPlot12ef.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FScrollingPlot%22" rel="nofollow" title="Click to do a full-text search for this title">ScrollingPlot</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="ScrollingPlot.html">ScrollingPlot</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="ScrollingPlot.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ScrollingPlot37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Controlling_an_Embedded_Plot_with_wx_Scrollbars">Controlling an Embedded Plot with wx Scrollbars</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">When plotting a very long sequence in a matplotlib canvas embedded in <span class="anchor" id="line-4"></span>a wxPython application, it sometimes is useful to be able to display a portion of the sequence without resorting to a scrollable window so that both axes remain visible. Here is how to do so: <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867"><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-09c2bd04e8943377e1b65782b899e7a698629589\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-09c2bd04e8943377e1b65782b899e7a698629589" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_1">   1</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> <span class="ID">arange</span>, <span class="ID">sin</span>, <span class="ID">pi</span>, <span class="ResWord">float</span>, <span class="ID">size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_2">   2</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_3">   3</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_4">   4</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">'</span><span class="String">WXAgg</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_5">   5</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_5"></span><span class="anchor" id="line-5-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_wxagg</span> <span class="ResWord">import</span> <span class="ID">FigureCanvasWxAgg</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_6">   6</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_6"></span><span class="anchor" id="line-6-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.figure</span> <span class="ResWord">import</span> <span class="ID">Figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_7">   7</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_7"></span><span class="anchor" id="line-7-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_8">   8</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_9">   9</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_9"></span><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_10">  10</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_10"></span><span class="anchor" id="line-10-1"></span><span class="ResWord">class</span> <span class="ID">MyFrame</span>(<span class="ID">wx</span>.<span class="ID">Frame</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_11">  11</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_11"></span><span class="anchor" id="line-11-1"></span>    <span class="ResWord">def</span> <span class="ID">__init__</span>(<span class="ResWord">self</span>, <span class="ID">parent</span>, <span class="ResWord">id</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_12">  12</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_12"></span><span class="anchor" id="line-12-1"></span>        <span class="ID">wx</span>.<span class="ID">Frame</span>.<span class="ID">__init__</span>(<span class="ResWord">self</span>,<span class="ID">parent</span>, <span class="ResWord">id</span>, <span class="String">'</span><span class="String">scrollable plot</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_13">  13</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_13"></span><span class="anchor" id="line-13-1"></span>                <span class="ID">style</span>=<span class="ID">wx</span>.<span class="ID">DEFAULT_FRAME_STYLE</span> ^ <span class="ID">wx</span>.<span class="ID">RESIZE_BORDER</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_14">  14</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_14"></span><span class="anchor" id="line-14-1"></span>                <span class="ID">size</span>=(<span class="Number">800</span>, <span class="Number">400</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_15">  15</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_15"></span><span class="anchor" id="line-15-1"></span>        <span class="ResWord">self</span>.<span class="ID">panel</span> = <span class="ID">wx</span>.<span class="ID">Panel</span>(<span class="ResWord">self</span>, -<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_16">  16</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_16"></span><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_17">  17</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_17"></span><span class="anchor" id="line-17-1"></span>        <span class="ResWord">self</span>.<span class="ID">fig</span> = <span class="ID">Figure</span>((<span class="Number">5</span>, <span class="Number">4</span>), <span class="Number">75</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_18">  18</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_18"></span><span class="anchor" id="line-18-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span> = <span class="ID">FigureCanvasWxAgg</span>(<span class="ResWord">self</span>.<span class="ID">panel</span>, -<span class="Number">1</span>, <span class="ResWord">self</span>.<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_19">  19</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_19"></span><span class="anchor" id="line-19-1"></span>        <span class="ResWord">self</span>.<span class="ID">scroll_range</span> = <span class="Number">400</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_20">  20</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_20"></span><span class="anchor" id="line-20-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">SetScrollbar</span>(<span class="ID">wx</span>.<span class="ID">HORIZONTAL</span>, <span class="Number">0</span>, <span class="Number">5</span>, </span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_21">  21</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_21"></span><span class="anchor" id="line-21-1"></span>                                 <span class="ResWord">self</span>.<span class="ID">scroll_range</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_22">  22</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_22"></span><span class="anchor" id="line-22-1"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_23">  23</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_23"></span><span class="anchor" id="line-23-1"></span>        <span class="ID">sizer</span> = <span class="ID">wx</span>.<span class="ID">BoxSizer</span>(<span class="ID">wx</span>.<span class="ID">VERTICAL</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_24">  24</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_24"></span><span class="anchor" id="line-24-1"></span>        <span class="ID">sizer</span>.<span class="ID">Add</span>(<span class="ResWord">self</span>.<span class="ID">canvas</span>, -<span class="Number">1</span>, <span class="ID">wx</span>.<span class="ID">EXPAND</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_25">  25</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_25"></span><span class="anchor" id="line-25-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_26">  26</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_26"></span><span class="anchor" id="line-26-1"></span>        <span class="ResWord">self</span>.<span class="ID">panel</span>.<span class="ID">SetSizer</span>(<span class="ID">sizer</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_27">  27</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_27"></span><span class="anchor" id="line-27-1"></span>        <span class="ResWord">self</span>.<span class="ID">panel</span>.<span class="ID">Fit</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_28">  28</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_28"></span><span class="anchor" id="line-28-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_29">  29</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_29"></span><span class="anchor" id="line-29-1"></span>        <span class="ResWord">self</span>.<span class="ID">init_data</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_30">  30</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_30"></span><span class="anchor" id="line-30-1"></span>        <span class="ResWord">self</span>.<span class="ID">init_plot</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_31">  31</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_31"></span><span class="anchor" id="line-31-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_32">  32</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_32"></span><span class="anchor" id="line-32-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">Bind</span>(<span class="ID">wx</span>.<span class="ID">EVT_SCROLLWIN</span>, <span class="ResWord">self</span>.<span class="ID">OnScrollEvt</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_33">  33</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_33"></span><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_34">  34</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_34"></span><span class="anchor" id="line-34-1"></span>    <span class="ResWord">def</span> <span class="ID">init_data</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_35">  35</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_35"></span><span class="anchor" id="line-35-1"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_36">  36</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_36"></span><span class="anchor" id="line-36-1"></span>        <span class="Comment"># Generate some data to plot:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_37">  37</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_37"></span><span class="anchor" id="line-37-1"></span>        <span class="ResWord">self</span>.<span class="ID">dt</span> = <span class="Number">0.01</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_38">  38</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_38"></span><span class="anchor" id="line-38-1"></span>        <span class="ResWord">self</span>.<span class="ID">t</span> = <span class="ID">arange</span>(<span class="Number">0</span>,<span class="Number">5</span>,<span class="ResWord">self</span>.<span class="ID">dt</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_39">  39</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_39"></span><span class="anchor" id="line-39-1"></span>        <span class="ResWord">self</span>.<span class="ID">x</span> = <span class="ID">sin</span>(<span class="Number">2</span>*<span class="ID">pi</span>*<span class="ResWord">self</span>.<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_40">  40</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_40"></span><span class="anchor" id="line-40-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_41">  41</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_41"></span><span class="anchor" id="line-41-1"></span>        <span class="Comment"># Extents of data sequence: </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_42">  42</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_42"></span><span class="anchor" id="line-42-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_min</span> = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_43">  43</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_43"></span><span class="anchor" id="line-43-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_max</span> = <span class="ResWord">len</span>(<span class="ResWord">self</span>.<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_44">  44</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_44"></span><span class="anchor" id="line-44-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_45">  45</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_45"></span><span class="anchor" id="line-45-1"></span>        <span class="Comment"># Size of plot window:       </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_46">  46</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_46"></span><span class="anchor" id="line-46-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_window</span> = <span class="Number">100</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_47">  47</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_47"></span><span class="anchor" id="line-47-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_48">  48</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_48"></span><span class="anchor" id="line-48-1"></span>        <span class="Comment"># Indices of data interval to be plotted:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_49">  49</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_49"></span><span class="anchor" id="line-49-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_start</span> = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_50">  50</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_50"></span><span class="anchor" id="line-50-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_end</span> = <span class="ResWord">self</span>.<span class="ID">i_start</span> + <span class="ResWord">self</span>.<span class="ID">i_window</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_51">  51</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_51"></span><span class="anchor" id="line-51-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_52">  52</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_52"></span><span class="anchor" id="line-52-1"></span>    <span class="ResWord">def</span> <span class="ID">init_plot</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_53">  53</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_53"></span><span class="anchor" id="line-53-1"></span>        <span class="ResWord">self</span>.<span class="ID">axes</span> = <span class="ResWord">self</span>.<span class="ID">fig</span>.<span class="ID">add_subplot</span>(<span class="Number">111</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_54">  54</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_54"></span><span class="anchor" id="line-54-1"></span>        <span class="ResWord">self</span>.<span class="ID">plot_data</span> = \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_55">  55</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_55"></span><span class="anchor" id="line-55-1"></span>                  <span class="ResWord">self</span>.<span class="ID">axes</span>.<span class="ID">plot</span>(<span class="ResWord">self</span>.<span class="ID">t</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_56">  56</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_56"></span><span class="anchor" id="line-56-1"></span>                                 <span class="ResWord">self</span>.<span class="ID">x</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>])[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_57">  57</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_57"></span><span class="anchor" id="line-57-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_58">  58</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_58"></span><span class="anchor" id="line-58-1"></span>    <span class="ResWord">def</span> <span class="ID">draw_plot</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_59">  59</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_59"></span><span class="anchor" id="line-59-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_60">  60</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_60"></span><span class="anchor" id="line-60-1"></span>        <span class="Comment"># Update data in plot:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_61">  61</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_61"></span><span class="anchor" id="line-61-1"></span>        <span class="ResWord">self</span>.<span class="ID">plot_data</span>.<span class="ID">set_xdata</span>(<span class="ResWord">self</span>.<span class="ID">t</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_62">  62</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_62"></span><span class="anchor" id="line-62-1"></span>        <span class="ResWord">self</span>.<span class="ID">plot_data</span>.<span class="ID">set_ydata</span>(<span class="ResWord">self</span>.<span class="ID">x</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_63">  63</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_63"></span><span class="anchor" id="line-63-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_64">  64</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_64"></span><span class="anchor" id="line-64-1"></span>        <span class="Comment"># Adjust plot limits:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_65">  65</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_65"></span><span class="anchor" id="line-65-1"></span>        <span class="ResWord">self</span>.<span class="ID">axes</span>.<span class="ID">set_xlim</span>((<span class="ResWord">min</span>(<span class="ResWord">self</span>.<span class="ID">t</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>]),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_66">  66</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_66"></span><span class="anchor" id="line-66-1"></span>                           <span class="ResWord">max</span>(<span class="ResWord">self</span>.<span class="ID">t</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>])))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_67">  67</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_67"></span><span class="anchor" id="line-67-1"></span>        <span class="ResWord">self</span>.<span class="ID">axes</span>.<span class="ID">set_ylim</span>((<span class="ResWord">min</span>(<span class="ResWord">self</span>.<span class="ID">x</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>]),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_68">  68</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_68"></span><span class="anchor" id="line-68-1"></span>                            <span class="ResWord">max</span>(<span class="ResWord">self</span>.<span class="ID">x</span>[<span class="ResWord">self</span>.<span class="ID">i_start</span>:<span class="ResWord">self</span>.<span class="ID">i_end</span>])))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_69">  69</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_69"></span><span class="anchor" id="line-69-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_70">  70</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_70"></span><span class="anchor" id="line-70-1"></span>        <span class="Comment"># Redraw:                  </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_71">  71</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_71"></span><span class="anchor" id="line-71-1"></span>        <span class="ResWord">self</span>.<span class="ID">canvas</span>.<span class="ID">draw</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_72">  72</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_72"></span><span class="anchor" id="line-72-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_73">  73</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_73"></span><span class="anchor" id="line-73-1"></span>    <span class="ResWord">def</span> <span class="ID">OnScrollEvt</span>(<span class="ResWord">self</span>, <span class="ID">event</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_74">  74</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_74"></span><span class="anchor" id="line-74-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_75">  75</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_75"></span><span class="anchor" id="line-75-1"></span>        <span class="Comment"># Update the indices of the plot:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_76">  76</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_76"></span><span class="anchor" id="line-76-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_start</span> = <span class="ResWord">self</span>.<span class="ID">i_min</span> + <span class="ID">event</span>.<span class="ID">GetPosition</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_77">  77</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_77"></span><span class="anchor" id="line-77-1"></span>        <span class="ResWord">self</span>.<span class="ID">i_end</span> = <span class="ResWord">self</span>.<span class="ID">i_min</span> + <span class="ResWord">self</span>.<span class="ID">i_window</span> + <span class="ID">event</span>.<span class="ID">GetPosition</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_78">  78</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_78"></span><span class="anchor" id="line-78-1"></span>        <span class="ResWord">self</span>.<span class="ID">draw_plot</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_79">  79</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_79"></span><span class="anchor" id="line-79-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_80">  80</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_80"></span><span class="anchor" id="line-80-1"></span><span class="ResWord">class</span> <span class="ID">MyApp</span>(<span class="ID">wx</span>.<span class="ID">App</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_81">  81</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_81"></span><span class="anchor" id="line-81-1"></span>    <span class="ResWord">def</span> <span class="ID">OnInit</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_82">  82</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_82"></span><span class="anchor" id="line-82-1"></span>        <span class="ResWord">self</span>.<span class="ID">frame</span> = <span class="ID">MyFrame</span>(<span class="ID">parent</span>=<span class="ResWord">None</span>,<span class="ResWord">id</span>=-<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_83">  83</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_83"></span><span class="anchor" id="line-83-1"></span>        <span class="ResWord">self</span>.<span class="ID">frame</span>.<span class="ID">Show</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_84">  84</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_84"></span><span class="anchor" id="line-84-1"></span>        <span class="ResWord">self</span>.<span class="ID">SetTopWindow</span>(<span class="ResWord">self</span>.<span class="ID">frame</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_85">  85</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_85"></span><span class="anchor" id="line-85-1"></span>        <span class="ResWord">return</span> <span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_86">  86</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_86"></span><span class="anchor" id="line-86-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_87">  87</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_87"></span><span class="anchor" id="line-87-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_88">  88</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_88"></span><span class="anchor" id="line-88-1"></span>    <span class="ID">app</span> = <span class="ID">MyApp</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-09c2bd04e8943377e1b65782b899e7a698629589_89">  89</a> </span><span class="LineAnchor" id="CA-09c2bd04e8943377e1b65782b899e7a698629589_89"></span><span class="anchor" id="line-89-1"></span>    <span class="ID">app</span>.<span class="ID">MainLoop</span>()</span>
+</pre></div></div><span class="anchor" id="line-97"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ScrollingPlot37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/ScrollingPlot">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/ScrollingPlot?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+</html>
+

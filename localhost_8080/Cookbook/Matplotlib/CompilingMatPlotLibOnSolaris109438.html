@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10 - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FCompilingMatPlotLibOnSolaris10&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="CompilingMatPlotLibOnSolaris10456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="CompilingMatPlotLibOnSolaris107efa.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FCompilingMatPlotLibOnSolaris10%22" rel="nofollow" title="Click to do a full-text search for this title">CompilingMatPlotLibOnSolaris10</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="CompilingMatPlotLibOnSolaris10.html">CompilingMa...OnSolaris10</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CompilingMatPlotLibOnSolaris1037dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><a class="http" href="../../../external.html?link=http://blogs.sun.com/migi/entry/opensolaris_howto_install_sun_studio">how to install sunstudio</a> and <a class="http" href="../../../external.html?link=http://blogs.sun.com/yongsun/entry/build_matplotlib_0_98_3">build matplotlib on solaris 10</a> might give some hints. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">JDH said: <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><pre><span class="anchor" id="line-1-1"></span>&gt; Hi Erik -- if you succeed, then we'll have convincing proof that
+<span class="anchor" id="line-2-1"></span>&gt; compiling mpl on solaris is easier than giving up the sauce.</pre><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line874">Well, it has turned out to be easier than giving up the sauce (at least <span class="anchor" id="line-11"></span>for me), but only by a whisker.  In the end, the fix is incredibly simple <span class="anchor" id="line-12"></span>(if you consider recompiling python and manually adjusting the <span class="anchor" id="line-13"></span>auto-produced pyconfig.h incredibly simple, anyway).  After two solid days <span class="anchor" id="line-14"></span>of commenting this and that out, recompiling everything and its mother 76 <span class="anchor" id="line-15"></span>different ways from Sunday, poring over a legion of Solaris sys includes, <span class="anchor" id="line-16"></span>slaughtering a few spotlessly white lambs and one pure black sheep, <span class="anchor" id="line-17"></span>wrapping the bones and tendons and viscera in a double layer of fat and <span class="anchor" id="line-18"></span>burning the offering to Delphic Apollo, I found the answer: <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><ul><li style="list-style-type:none">1 download Python 2.4.2 <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span>2 after extracting it and running ./configure, edit the generated pyconfig.h as follows: <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><ul><li style="list-style-type:none">i) if _XOPEN_SOURCE is defined to be 600 (i.e., if the line &quot;#define _XOPEN_SOURCE 600&quot; appears in the file), redefine it to 500 <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span>ii) if _XOPEN_SOURCE_EXTENDED is defined at all (i.e. if the line &quot;#define _XOPEN_SOURCE_EXTENDED 1&quot; appears in the file), comment out its definition <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></li></ul><p class="line862">3 make &amp;&amp; make install <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span></li></ul><p class="line874">The problem was with Solaris's support for the X/Open standards.  To make <span class="anchor" id="line-31"></span>a long story short, you can use Open Group Technical Standard, Issue 6 <span class="anchor" id="line-32"></span>(XPG6/UNIX 03/SUSv3) (_XOPEN_SOURCE == 600) if and only if you are using <span class="anchor" id="line-33"></span>an ISO C99 compiler.  If you use X/Open CAE Specification, Issue 5 <span class="anchor" id="line-34"></span>(XPG5/UNIX 98/SUSv2) (_XOPEN_SOURCE == 500), you don't have to use an ISO <span class="anchor" id="line-35"></span>C99 compiler.  For full details, see the Solaris header file <span class="anchor" id="line-36"></span>/usr/include/sys/feature_tests.h. <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line874">This is why muhpubuh (AKA matplotlib---long story) compiles <span class="anchor" id="line-39"></span>on Solaris 10 if you have the big bucks and can afford Sun's <a class="nonexistent" href="../../OpenStudio.html">OpenStudio</a> 10 <span class="anchor" id="line-40"></span>compiler.  gcc does not have full C99 support yet.  In particular, its <span class="anchor" id="line-41"></span>lack of support for the wide character library makes the build go <span class="anchor" id="line-42"></span>bust.  (See, e.g., <a class="http" href="../../../external.html?link=http://gcc.gnu.org/c99status.html">http://gcc.gnu.org/c99status.html</a>.) <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">More helpful links on the wchar problem with Python.h and Solaris : <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><ul><li><p class="line891"><a class="http" href="../../../external.html?link=http://lists.schmorp.de/pipermail/rxvt-unicode/2005q2/000092.html">http://lists.schmorp.de/pipermail/rxvt-unicode/2005q2/000092.html</a> <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span></li><li class="gap"><p class="line891"><a class="http" href="../../../external.html?link=http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6395191">http://bugs.opensolaris.org/bugdatabase/view_bug.do?bug_id=6395191</a> <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span></li><li class="gap"><p class="line891"><a class="http" href="../../../external.html?link=http://mail.python.org/pipermail/patches/2005-June/017820.html">http://mail.python.org/pipermail/patches/2005-June/017820.html</a> <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span></li><li class="gap"><p class="line891"><a class="http" href="../../../external.html?link=http://mail.python.org/pipermail/python-bugs-list/2005-November/030900.html">http://mail.python.org/pipermail/python-bugs-list/2005-November/030900.html</a> <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span></li></ul><p class="line867"><a href="../../CategoryCookbookMatplotlib.html"><strong class="highlight">CategoryCookbook</strong>Matplotlib</a> <span class="anchor" id="line-55"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CompilingMatPlotLibOnSolaris1037dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/CompilingMatPlotLibOnSolaris10?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:18:17 GMT -->
+</html>
+

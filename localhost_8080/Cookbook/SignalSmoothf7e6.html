@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/SignalSmooth?action=AttachFile&do=view&target=cookb_signalsmooth.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:cookb_signalsmooth.py of Cookbook/SignalSmooth - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/SignalSmooth" href="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FSignalSmooth&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="convolved.png" href="SignalSmooth9e70.html?action=AttachFile&amp;do=view&amp;target=convolved.png">
+<link rel="Appendix" title="cookb_signalsmooth.py" href="SignalSmoothf7e6.html?action=AttachFile&amp;do=view&amp;target=cookb_signalsmooth.py">
+<link rel="Appendix" title="noisy.png" href="SignalSmoothf1d1.html?action=AttachFile&amp;do=view&amp;target=noisy.png">
+<link rel="Appendix" title="smoothsignal.jpg" href="SignalSmooth78db.html?action=AttachFile&amp;do=view&amp;target=smoothsignal.jpg">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="SignalSmooth456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:cookb_signalsmooth.py of Cookbook/SignalSmooth</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="SignalSmooth.html">Cookbook/SignalSmooth</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="SignalSmooth37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'cookb_signalsmooth.py'</h2><a class="download" href="cookb_signalsmoothb842.py?action=AttachFile&amp;do=get&amp;target=cookb_signalsmooth.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-0af777101886089c16547b50f69568e8c47f9551\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-0af777101886089c16547b50f69568e8c47f9551" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_1">   1</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_1"></span><span class="anchor" id="line-1-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_2">   2</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_2"></span><span class="anchor" id="line-2"></span><span class="String">cookb_signalsmooth.py</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_3">   3</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_3"></span><span class="anchor" id="line-3"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_4">   4</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_4"></span><span class="anchor" id="line-4"></span><span class="String">from: http://scipy.org/Cookbook/SignalSmooth</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_5">   5</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_5"></span><span class="anchor" id="line-5"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_6">   6</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_6"></span><span class="anchor" id="line-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_7">   7</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_8">   8</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_8"></span><span class="anchor" id="line-8"></span><span class="ResWord">import</span> <span class="ID">matplotlib.pyplot</span> <span class="ResWord">as</span> <span class="ID">plt</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_9">   9</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_9"></span><span class="anchor" id="line-9"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_10">  10</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_10"></span><span class="anchor" id="line-10"></span><span class="ResWord">def</span> <span class="ID">smooth</span>(<span class="ID">x</span>, <span class="ID">window_len</span>=<span class="Number">10</span>, <span class="ID">window</span>=<span class="String">'</span><span class="String">hanning</span><span class="String">'</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_11">  11</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_11"></span><span class="anchor" id="line-11"></span>    <span class="String">&quot;&quot;&quot;smooth the data using a window with requested size.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_12">  12</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_12"></span><span class="anchor" id="line-12"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_13">  13</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_13"></span><span class="anchor" id="line-13"></span><span class="String">    This method is based on the convolution of a scaled window with the signal.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_14">  14</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_14"></span><span class="anchor" id="line-14"></span><span class="String">    The signal is prepared by introducing reflected copies of the signal </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_15">  15</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_15"></span><span class="anchor" id="line-15"></span><span class="String">    (with the window size) in both ends so that transient parts are minimized</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_16">  16</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_16"></span><span class="anchor" id="line-16"></span><span class="String">    in the begining and end part of the output signal.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_17">  17</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_17"></span><span class="anchor" id="line-17"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_18">  18</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_18"></span><span class="anchor" id="line-18"></span><span class="String">    input:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_19">  19</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_19"></span><span class="anchor" id="line-19"></span><span class="String">        x: the input signal </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_20">  20</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_20"></span><span class="anchor" id="line-20"></span><span class="String">        window_len: the dimension of the smoothing window</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_21">  21</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_21"></span><span class="anchor" id="line-21"></span><span class="String">        window: the type of window from 'flat', 'hanning', 'hamming', 'bartlett', 'blackman'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_22">  22</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_22"></span><span class="anchor" id="line-22"></span><span class="String">            flat window will produce a moving average smoothing.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_23">  23</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_23"></span><span class="anchor" id="line-23"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_24">  24</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_24"></span><span class="anchor" id="line-24"></span><span class="String">    output:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_25">  25</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_25"></span><span class="anchor" id="line-25"></span><span class="String">        the smoothed signal</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_26">  26</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_26"></span><span class="anchor" id="line-26"></span><span class="String">        </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_27">  27</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_27"></span><span class="anchor" id="line-27"></span><span class="String">    example:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_28">  28</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_28"></span><span class="anchor" id="line-28"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_29">  29</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_29"></span><span class="anchor" id="line-29"></span><span class="String">    import numpy as np    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_30">  30</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_30"></span><span class="anchor" id="line-30"></span><span class="String">    t = np.linspace(-2,2,0.1)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_31">  31</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_31"></span><span class="anchor" id="line-31"></span><span class="String">    x = np.sin(t)+np.random.randn(len(t))*0.1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_32">  32</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_32"></span><span class="anchor" id="line-32"></span><span class="String">    y = smooth(x)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_33">  33</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_33"></span><span class="anchor" id="line-33"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_34">  34</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_34"></span><span class="anchor" id="line-34"></span><span class="String">    see also: </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_35">  35</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_35"></span><span class="anchor" id="line-35"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_36">  36</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_36"></span><span class="anchor" id="line-36"></span><span class="String">    numpy.hanning, numpy.hamming, numpy.bartlett, numpy.blackman, numpy.convolve</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_37">  37</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_37"></span><span class="anchor" id="line-37"></span><span class="String">    scipy.signal.lfilter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_38">  38</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_38"></span><span class="anchor" id="line-38"></span><span class="String"> </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_39">  39</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_39"></span><span class="anchor" id="line-39"></span><span class="String">    TODO: the window parameter could be the window itself if an array instead of a string   </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_40">  40</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_40"></span><span class="anchor" id="line-40"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_41">  41</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_41"></span><span class="anchor" id="line-41"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_42">  42</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_42"></span><span class="anchor" id="line-42"></span>    <span class="ResWord">if</span> <span class="ID">x</span>.<span class="ID">ndim</span> != <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_43">  43</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_43"></span><span class="anchor" id="line-43"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="String">&quot;</span><span class="String">smooth only accepts 1 dimension arrays.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_44">  44</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_44"></span><span class="anchor" id="line-44"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_45">  45</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_45"></span><span class="anchor" id="line-45"></span>    <span class="ResWord">if</span> <span class="ID">x</span>.<span class="ID">size</span> &lt; <span class="ID">window_len</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_46">  46</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_46"></span><span class="anchor" id="line-46"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="String">&quot;</span><span class="String">Input vector needs to be bigger than window size.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_47">  47</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_47"></span><span class="anchor" id="line-47"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_48">  48</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_48"></span><span class="anchor" id="line-48"></span>    <span class="ResWord">if</span> <span class="ID">window_len</span> &lt; <span class="Number">3</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_49">  49</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_49"></span><span class="anchor" id="line-49"></span>        <span class="ResWord">return</span> <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_50">  50</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_50"></span><span class="anchor" id="line-50"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_51">  51</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_51"></span><span class="anchor" id="line-51"></span>    <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">window</span> <span class="ResWord">in</span> [<span class="String">'</span><span class="String">flat</span><span class="String">'</span>, <span class="String">'</span><span class="String">hanning</span><span class="String">'</span>, <span class="String">'</span><span class="String">hamming</span><span class="String">'</span>, <span class="String">'</span><span class="String">bartlett</span><span class="String">'</span>, <span class="String">'</span><span class="String">blackman</span><span class="String">'</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_52">  52</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_52"></span><span class="anchor" id="line-52"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="String">&quot;</span><span class="String">Window is on of </span><span class="String">'</span><span class="String">flat</span><span class="String">'</span><span class="String">, </span><span class="String">'</span><span class="String">hanning</span><span class="String">'</span><span class="String">, </span><span class="String">'</span><span class="String">hamming</span><span class="String">'</span><span class="String">, </span><span class="String">'</span><span class="String">bartlett</span><span class="String">'</span><span class="String">, </span><span class="String">'</span><span class="String">blackman</span><span class="String">'</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_53">  53</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_53"></span><span class="anchor" id="line-53"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_54">  54</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_54"></span><span class="anchor" id="line-54"></span>    <span class="ID">s</span>=<span class="ID">np</span>.<span class="ID">r_</span>[<span class="Number">2</span>*<span class="ID">x</span>[<span class="Number">0</span>]-<span class="ID">x</span>[<span class="ID">window_len</span>:<span class="Number">1</span>:-<span class="Number">1</span>], <span class="ID">x</span>, <span class="Number">2</span>*<span class="ID">x</span>[-<span class="Number">1</span>]-<span class="ID">x</span>[-<span class="Number">1</span>:-<span class="ID">window_len</span>:-<span class="Number">1</span>]]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_55">  55</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_55"></span><span class="anchor" id="line-55"></span>    <span class="Comment">#print(len(s))</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_56">  56</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_56"></span><span class="anchor" id="line-56"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_57">  57</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_57"></span><span class="anchor" id="line-57"></span>    <span class="ResWord">if</span> <span class="ID">window</span> == <span class="String">'</span><span class="String">flat</span><span class="String">'</span>: <span class="Comment">#moving average</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_58">  58</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_58"></span><span class="anchor" id="line-58"></span>        <span class="ID">w</span> = <span class="ID">np</span>.<span class="ID">ones</span>(<span class="ID">window_len</span>,<span class="String">'</span><span class="String">d</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_59">  59</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_59"></span><span class="anchor" id="line-59"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_60">  60</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_60"></span><span class="anchor" id="line-60"></span>        <span class="ID">w</span> = <span class="ResWord">getattr</span>(<span class="ID">np</span>, <span class="ID">window</span>)(<span class="ID">window_len</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_61">  61</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_61"></span><span class="anchor" id="line-61"></span>    <span class="ID">y</span> = <span class="ID">np</span>.<span class="ID">convolve</span>(<span class="ID">w</span>/<span class="ID">w</span>.<span class="ID">sum</span>(), <span class="ID">s</span>, <span class="ID">mode</span>=<span class="String">'</span><span class="String">same</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_62">  62</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_62"></span><span class="anchor" id="line-62"></span>    <span class="ResWord">return</span> <span class="ID">y</span>[<span class="ID">window_len</span>-<span class="Number">1</span>:-<span class="ID">window_len</span>+<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_63">  63</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_63"></span><span class="anchor" id="line-63"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_64">  64</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_64"></span><span class="anchor" id="line-64"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_65">  65</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_65"></span><span class="anchor" id="line-65"></span><span class="Comment">#*********** part2: 2d</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_66">  66</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_66"></span><span class="anchor" id="line-66"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_67">  67</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_67"></span><span class="anchor" id="line-67"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">signal</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_68">  68</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_68"></span><span class="anchor" id="line-68"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_69">  69</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_69"></span><span class="anchor" id="line-69"></span><span class="ResWord">def</span> <span class="ID">gauss_kern</span>(<span class="ID">size</span>, <span class="ID">sizey</span>=<span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_70">  70</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_70"></span><span class="anchor" id="line-70"></span>    <span class="String">&quot;&quot;&quot; Returns a normalized 2D gauss kernel array for convolutions &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_71">  71</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_71"></span><span class="anchor" id="line-71"></span>    <span class="ID">size</span> = <span class="ResWord">int</span>(<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_72">  72</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_72"></span><span class="anchor" id="line-72"></span>    <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">sizey</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_73">  73</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_73"></span><span class="anchor" id="line-73"></span>        <span class="ID">sizey</span> = <span class="ID">size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_74">  74</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_74"></span><span class="anchor" id="line-74"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_75">  75</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_75"></span><span class="anchor" id="line-75"></span>        <span class="ID">sizey</span> = <span class="ResWord">int</span>(<span class="ID">sizey</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_76">  76</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_76"></span><span class="anchor" id="line-76"></span>    <span class="ID">x</span>, <span class="ID">y</span> = <span class="ID">np</span>.<span class="ID">mgrid</span>[-<span class="ID">size</span>:<span class="ID">size</span>+<span class="Number">1</span>, -<span class="ID">sizey</span>:<span class="ID">sizey</span>+<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_77">  77</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_77"></span><span class="anchor" id="line-77"></span>    <span class="ID">g</span> = <span class="ID">np</span>.<span class="ID">exp</span>(-(<span class="ID">x</span>**<span class="Number">2</span>/<span class="ResWord">float</span>(<span class="ID">size</span>) + <span class="ID">y</span>**<span class="Number">2</span>/<span class="ResWord">float</span>(<span class="ID">sizey</span>)))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_78">  78</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_78"></span><span class="anchor" id="line-78"></span>    <span class="ResWord">return</span> <span class="ID">g</span> / <span class="ID">g</span>.<span class="ID">sum</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_79">  79</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_79"></span><span class="anchor" id="line-79"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_80">  80</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_80"></span><span class="anchor" id="line-80"></span><span class="ResWord">def</span> <span class="ID">blur_image</span>(<span class="ID">im</span>, <span class="ID">n</span>, <span class="ID">ny</span>=<span class="ResWord">None</span>) :</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_81">  81</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_81"></span><span class="anchor" id="line-81"></span>    <span class="String">&quot;&quot;&quot; blurs the image by convolving with a gaussian kernel of typical</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_82">  82</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_82"></span><span class="anchor" id="line-82"></span><span class="String">        size n. The optional keyword argument ny allows for a different</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_83">  83</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_83"></span><span class="anchor" id="line-83"></span><span class="String">        size in the y direction.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_84">  84</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_84"></span><span class="anchor" id="line-84"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_85">  85</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_85"></span><span class="anchor" id="line-85"></span>    <span class="ID">g</span> = <span class="ID">gauss_kern</span>(<span class="ID">n</span>, <span class="ID">sizey</span>=<span class="ID">ny</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_86">  86</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_86"></span><span class="anchor" id="line-86"></span>    <span class="ID">improc</span> = <span class="ID">signal</span>.<span class="ID">convolve</span>(<span class="ID">im</span>, <span class="ID">g</span>, <span class="ID">mode</span>=<span class="String">'</span><span class="String">valid</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_87">  87</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_87"></span><span class="anchor" id="line-87"></span>    <span class="ResWord">return</span>(<span class="ID">improc</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_88">  88</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_88"></span><span class="anchor" id="line-88"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_89">  89</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_89"></span><span class="anchor" id="line-89"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_90">  90</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_90"></span><span class="anchor" id="line-90"></span><span class="ResWord">def</span> <span class="ID">smooth_demo</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_91">  91</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_91"></span><span class="anchor" id="line-91"></span>    <span class="ID">t</span> = <span class="ID">np</span>.<span class="ID">linspace</span>(-<span class="Number">4</span>,<span class="Number">4</span>,<span class="Number">100</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_92">  92</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_92"></span><span class="anchor" id="line-92"></span>    <span class="ID">x</span> = <span class="ID">np</span>.<span class="ID">sin</span>(<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_93">  93</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_93"></span><span class="anchor" id="line-93"></span>    <span class="ID">xn</span> = <span class="ID">x</span> + <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">randn</span>(<span class="ResWord">len</span>(<span class="ID">t</span>)) * <span class="Number">0.1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_94">  94</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_94"></span><span class="anchor" id="line-94"></span>    <span class="ID">y</span> = <span class="ID">smooth</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_95">  95</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_95"></span><span class="anchor" id="line-95"></span>    <span class="ID">ws</span> = <span class="Number">31</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_96">  96</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_96"></span><span class="anchor" id="line-96"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_97">  97</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_97"></span><span class="anchor" id="line-97"></span>    <span class="ID">plt</span>.<span class="ID">subplot</span>(<span class="Number">211</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_98">  98</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_98"></span><span class="anchor" id="line-98"></span>    <span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">np</span>.<span class="ID">ones</span>(<span class="ID">ws</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_99">  99</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_99"></span><span class="anchor" id="line-99"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_100"> 100</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_100"></span><span class="anchor" id="line-100"></span>    <span class="ID">windows</span>=[<span class="String">'</span><span class="String">flat</span><span class="String">'</span>, <span class="String">'</span><span class="String">hanning</span><span class="String">'</span>, <span class="String">'</span><span class="String">hamming</span><span class="String">'</span>, <span class="String">'</span><span class="String">bartlett</span><span class="String">'</span>, <span class="String">'</span><span class="String">blackman</span><span class="String">'</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_101"> 101</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_101"></span><span class="anchor" id="line-101"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_102"> 102</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_102"></span><span class="anchor" id="line-102"></span>    <span class="ID">plt</span>.<span class="ID">hold</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_103"> 103</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_103"></span><span class="anchor" id="line-103"></span>    <span class="ResWord">for</span> <span class="ID">w</span> <span class="ResWord">in</span> <span class="ID">windows</span>[<span class="Number">1</span>:]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_104"> 104</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_104"></span><span class="anchor" id="line-104"></span>        <span class="Comment">#eval('plt.plot('+w+'(ws) )')</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_105"> 105</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_105"></span><span class="anchor" id="line-105"></span>        <span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ResWord">getattr</span>(<span class="ID">np</span>, <span class="ID">w</span>)(<span class="ID">ws</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_106"> 106</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_106"></span><span class="anchor" id="line-106"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_107"> 107</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_107"></span><span class="anchor" id="line-107"></span>    <span class="ID">plt</span>.<span class="ID">axis</span>([<span class="Number">0</span>,<span class="Number">30</span>,<span class="Number">0</span>,<span class="Number">1.1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_108"> 108</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_108"></span><span class="anchor" id="line-108"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_109"> 109</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_109"></span><span class="anchor" id="line-109"></span>    <span class="ID">plt</span>.<span class="ID">legend</span>(<span class="ID">windows</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_110"> 110</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_110"></span><span class="anchor" id="line-110"></span>    <span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">&quot;</span><span class="String">The smoothing windows</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_111"> 111</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_111"></span><span class="anchor" id="line-111"></span>    <span class="ID">plt</span>.<span class="ID">subplot</span>(<span class="Number">212</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_112"> 112</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_112"></span><span class="anchor" id="line-112"></span>    <span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_113"> 113</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_113"></span><span class="anchor" id="line-113"></span>    <span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">xn</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_114"> 114</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_114"></span><span class="anchor" id="line-114"></span>    <span class="ResWord">for</span> <span class="ID">w</span> <span class="ResWord">in</span> <span class="ID">windows</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_115"> 115</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_115"></span><span class="anchor" id="line-115"></span>        <span class="ID">plt</span>.<span class="ID">plot</span>(<span class="ID">smooth</span>(<span class="ID">xn</span>,<span class="Number">10</span>,<span class="ID">w</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_116"> 116</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_116"></span><span class="anchor" id="line-116"></span>    <span class="ID">l</span> = [<span class="String">'</span><span class="String">original signal</span><span class="String">'</span>, <span class="String">'</span><span class="String">signal with noise</span><span class="String">'</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_117"> 117</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_117"></span><span class="anchor" id="line-117"></span>    <span class="ID">l</span>.<span class="ID">extend</span>(<span class="ID">windows</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_118"> 118</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_118"></span><span class="anchor" id="line-118"></span>    <span class="ID">plt</span>.<span class="ID">legend</span>(<span class="ID">l</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_119"> 119</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_119"></span><span class="anchor" id="line-119"></span>    <span class="ID">plt</span>.<span class="ID">title</span>(<span class="String">&quot;</span><span class="String">Smoothing a noisy signal</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_120"> 120</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_120"></span><span class="anchor" id="line-120"></span>    <span class="Comment">#plt.show()</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_121"> 121</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_121"></span><span class="anchor" id="line-121"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_122"> 122</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_122"></span><span class="anchor" id="line-122"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_123"> 123</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_123"></span><span class="anchor" id="line-123"></span><span class="ResWord">if</span> <span class="ID">__name__</span>==<span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_124"> 124</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_124"></span><span class="anchor" id="line-124"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_125"> 125</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_125"></span><span class="anchor" id="line-125"></span>    <span class="Comment"># part 1: 1d</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_126"> 126</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_126"></span><span class="anchor" id="line-126"></span>    <span class="ID">smooth_demo</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_127"> 127</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_127"></span><span class="anchor" id="line-127"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_128"> 128</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_128"></span><span class="anchor" id="line-128"></span>    <span class="Comment"># part 2: 2d</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_129"> 129</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_129"></span><span class="anchor" id="line-129"></span>    <span class="ID">X</span>, <span class="ID">Y</span> = <span class="ID">np</span>.<span class="ID">mgrid</span>[-<span class="Number">70</span>:<span class="Number">70</span>, -<span class="Number">70</span>:<span class="Number">70</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_130"> 130</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_130"></span><span class="anchor" id="line-130"></span>    <span class="ID">Z</span> = <span class="ID">np</span>.<span class="ID">cos</span>((<span class="ID">X</span>**<span class="Number">2</span>+<span class="ID">Y</span>**<span class="Number">2</span>)/<span class="Number">200.</span>)+ <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">normal</span>(<span class="ID">size</span>=<span class="ID">X</span>.<span class="ID">shape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_131"> 131</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_131"></span><span class="anchor" id="line-131"></span>    <span class="ID">Z2</span> = <span class="ID">blur_image</span>(<span class="ID">Z</span>, <span class="Number">3</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_132"> 132</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_132"></span><span class="anchor" id="line-132"></span>    <span class="ID">plt</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_133"> 133</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_133"></span><span class="anchor" id="line-133"></span>    <span class="ID">plt</span>.<span class="ID">imshow</span>(<span class="ID">Z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_134"> 134</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_134"></span><span class="anchor" id="line-134"></span>    <span class="ID">plt</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_135"> 135</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_135"></span><span class="anchor" id="line-135"></span>    <span class="ID">plt</span>.<span class="ID">imshow</span>(<span class="ID">Z2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_136"> 136</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_136"></span><span class="anchor" id="line-136"></span>    <span class="ID">plt</span>.<span class="ID">show</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0af777101886089c16547b50f69568e8c47f9551_137"> 137</a> </span><span class="LineAnchor" id="CA-0af777101886089c16547b50f69568e8c47f9551_137"></span><span class="anchor" id="line-137"></span>    </span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="cookb_signalsmooth.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="005632800f.937d1b1046c31c8301516da0b50260d269a281c0">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="convolved1857.png?action=AttachFile&amp;do=get&amp;target=convolved.png">get</a>&nbsp;| <a href="SignalSmooth9e70.html?action=AttachFile&amp;do=view&amp;target=convolved.png">view</a>] (2006-11-01 10:46:08, 39.6 KB) [[attachment:convolved.png]]</li><li>[<a href="cookb_signalsmoothb842.py?action=AttachFile&amp;do=get&amp;target=cookb_signalsmooth.py">get</a>&nbsp;| <a href="SignalSmoothf7e6.html?action=AttachFile&amp;do=view&amp;target=cookb_signalsmooth.py">view</a>] (2009-06-02 19:25:53, 3.6 KB) [[attachment:cookb_signalsmooth.py]]</li><li>[<a href="noisyafc3.png?action=AttachFile&amp;do=get&amp;target=noisy.png">get</a>&nbsp;| <a href="SignalSmoothf1d1.html?action=AttachFile&amp;do=view&amp;target=noisy.png">view</a>] (2006-11-01 10:45:43, 43.2 KB) [[attachment:noisy.png]]</li><li>[<a href="smoothsignald53f.jpg?action=AttachFile&amp;do=get&amp;target=smoothsignal.jpg">get</a>&nbsp;| <a href="SignalSmooth78db.html?action=AttachFile&amp;do=view&amp;target=smoothsignal.jpg">view</a>] (2006-10-31 23:30:44, 30.4 KB) [[attachment:smoothsignal.jpg]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="SignalSmooth37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/SignalSmooth">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/SignalSmooth?action=AttachFile&do=view&target=cookb_signalsmooth.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:12 GMT -->
+</html>
+

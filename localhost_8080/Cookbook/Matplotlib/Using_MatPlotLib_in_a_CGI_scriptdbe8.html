@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FUsing_MatPlotLib_in_a_CGI_script&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Using_MatPlotLib_in_a_CGI_script456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Using_MatPlotLib_in_a_CGI_script357b.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FUsing_MatPlotLib_in_a_CGI_script%22" rel="nofollow" title="Click to do a full-text search for this title">Using_MatPlotLib_in_a_CGI_script</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Using_MatPlotLib_in_a_CGI_script.html">Using_MatPl..._CGI_script</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Using_MatPlotLib_in_a_CGI_script.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Using_MatPlotLib_in_a_CGI_script37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Trying to use matplotlib in a python CGI script naïvely will most likely result in the following error: <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><pre><span class="anchor" id="line-1"></span>...
+<span class="anchor" id="line-2"></span>352, in _get_configdir
+<span class="anchor" id="line-3"></span>raise RuntimeError(&quot;'%s' is not a writable dir; you must set
+<span class="anchor" id="line-4"></span>environment variable HOME to be a writable dir &quot;%h)
+<span class="anchor" id="line-5"></span>RuntimeError: '&lt;WebServer DocumentRoot&gt;' is not a writable dir; you must set
+<span class="anchor" id="line-6"></span>environment variable HOME to be a writable dir</pre><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line862">Matplotlib needs the environment variable HOME to point to a writable directory. One way to accomplish this is to set this environment variable from within the CGI script on runtime (another way would be to modify the <tt>.htaccess</tt> file but that would be not as portable). The following template can be used for a cgi that uses matplotlib to create a png image: <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867"><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_1">   1</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_1"></span><span class="anchor" id="line-1-2"></span><span class="Comment">#!/usr/bin/python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_2">   2</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">os</span>,<span class="ID">sys</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_3">   3</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">cgi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_4">   4</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">import</span> <span class="ID">cgitb</span>; <span class="ID">cgitb</span>.<span class="ID">enable</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_5">   5</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_5"></span><span class="anchor" id="line-5-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_6">   6</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_6"></span><span class="anchor" id="line-6-1"></span><span class="Comment"># set HOME environment variable to a directory the httpd server can write to</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_7">   7</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">os</span>.<span class="ID">environ</span>[ <span class="String">'</span><span class="String">HOME</span><span class="String">'</span> ] = <span class="String">'</span><span class="String">/tmp/</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_8">   8</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_8"></span><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_9">   9</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_9"></span><span class="anchor" id="line-9-1"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_10">  10</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_10"></span><span class="anchor" id="line-10-1"></span><span class="Comment"># chose a non-GUI backend</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_11">  11</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>( <span class="String">'</span><span class="String">Agg</span><span class="String">'</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_12">  12</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_13">  13</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_13"></span><span class="anchor" id="line-13-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_14">  14</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_14"></span><span class="anchor" id="line-14-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_15">  15</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_15"></span><span class="anchor" id="line-15-1"></span><span class="Comment">#Deals with inputing data into python from the html form</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_16">  16</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">form</span> = <span class="ID">cgi</span>.<span class="ID">FieldStorage</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_17">  17</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_17"></span><span class="anchor" id="line-17-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_18">  18</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_18"></span><span class="anchor" id="line-18-1"></span><span class="Comment"># construct your plot</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_19">  19</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>([<span class="Number">1</span>,<span class="Number">2</span>,<span class="Number">3</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_20">  20</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_20"></span><span class="anchor" id="line-20-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_21">  21</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_21"></span><span class="anchor" id="line-21-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Content-Type: image/png</span><span class="SPChar">\n</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_22">  22</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_22"></span><span class="anchor" id="line-22-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_23">  23</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_23"></span><span class="anchor" id="line-23-1"></span><span class="Comment"># save the plot as a png and output directly to webserver</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_24">  24</a> </span><span class="LineAnchor" id="CA-43cf9913aca0ca28f6e8f716f0a4693715f16abd_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>( <span class="ID">sys</span>.<span class="ID">stdout</span>, <span class="ID">format</span>=<span class="String">'</span><span class="String">png</span><span class="String">'</span> )</span>
+</pre></div></div><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line862">This image can then be accessed with a URL such as: <a class="http" href="../../../external.html?link=http://localhost/showpng.py">http://localhost/showpng.py</a> <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line874">As documented,some backends will not allow the output to be sent to sys.stdout. It is possible to replace the last line with the following to work around this:  <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_1">   1</a> </span><span class="LineAnchor" id="CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>( <span class="String">&quot;</span><span class="String">tempfile.png</span><span class="String">&quot;</span>, <span class="ID">format</span>=<span class="String">'</span><span class="String">png</span><span class="String">'</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_2">   2</a> </span><span class="LineAnchor" id="CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_2"></span><span class="anchor" id="line-2-2"></span><span class="ResWord">import</span> <span class="ID">shutil</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_3">   3</a> </span><span class="LineAnchor" id="CA-9558403d883c970ef86ab03a3da3f3fbc2cb77c8_3"></span><span class="anchor" id="line-3-2"></span><span class="ID">shutil</span>.<span class="ID">copyfileobj</span>(<span class="ResWord">open</span>(<span class="String">&quot;</span><span class="String">tempfile.png</span><span class="String">&quot;</span>,<span class="String">'</span><span class="String">rb</span><span class="String">'</span>), <span class="ID">sys</span>.<span class="ID">stdout</span>)</span>
+</pre></div></div><span class="anchor" id="line-48"></span><p class="line874">(Of course it is necessary to create and delete proper temp files to use this in production.) <span class="anchor" id="line-49"></span><hr /><p class="line874"> <span class="anchor" id="line-50"></span><a href="../../CategoryCookbookMatplotlib.html">CategoryCookbookMatplotlib</a> <span class="anchor" id="line-51"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Using_MatPlotLib_in_a_CGI_script37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Using_MatPlotLib_in_a_CGI_script?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+</html>
+

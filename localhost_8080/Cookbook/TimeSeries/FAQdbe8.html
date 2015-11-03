@@ -1,0 +1,759 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/TimeSeries/FAQ?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/TimeSeries/FAQ - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/TimeSeries/FAQ" href="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FTimeSeries%2FFAQ&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ?action=print">
+<link rel="Up" href="../TimeSeries.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="FAQ456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../TimeSeries.html">TimeSeries</a></li><li><a class="backlink" href="FAQ8755.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FTimeSeries%2FFAQ%22" rel="nofollow" title="Click to do a full-text search for this title">FAQ</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="FAQ.html">Cookbook/TimeSeries/FAQ</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="FAQ.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FAQ37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><strong>Recipies and FAQ for the Timeseries Scikit</strong> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#FAQ">FAQ</a><ol><li>
+<a href="#General_threads">General threads</a></li><li>
+<a href="#Reading_data_and_creating_timeseries_objects">Reading data and creating timeseries objects</a><ol><li>
+<a href="#masking_NoData_values">masking NoData values</a><ol><li>
+<a href="#Question">Question</a></li><li>
+<a href="#Answer">Answer</a></li><li>
+<a href="#More_extensive_answer">More extensive answer</a></li></ol></li><li>
+<a href="#frequencies">frequencies</a><ol><li>
+<a href="#Question-1">Question</a></li><li>
+<a href="#Answer-1">Answer</a></li></ol></li><li>
+<a href="#hour_of_the_day">hour of the day</a><ol><li>
+<a href="#Question-2">Question</a></li><li>
+<a href="#Answer-2">Answer</a></li></ol></li><li>
+<a href="#use_the_datetime_information_of_the_time_series">use the datetime information of the time series</a><ol><li>
+<a href="#Question-3">Question</a></li><li>
+<a href="#Answer-3">Answer</a></li></ol></li><li>
+<a href="#using_the_result_of_time_series_operations">using the result of time series operations</a><ol><li>
+<a href="#Question-4">Question</a></li><li>
+<a href="#Answer-4">Answer</a></li></ol></li></ol></li><li>
+<a href="#Plotting">Plotting</a></li></ol></li><li>
+<a href="#About_this_page">About this page</a><ol><li>
+<a href="#Source">Source</a></li><li>
+<a href="#todo">todo</a></li></ol></li></ol></div> <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">NOTE: <span class="anchor" id="line-6"></span>The official documentation and important remarks from the developers can be found at the <a class="http" href="../../../external.html?link=http://pytseries.sourceforge.net/">timseries scikit sourceforge page</a>. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867">
+<h1 id="FAQ">FAQ</h1>
+<span class="anchor" id="line-9"></span><p class="line867">
+<h2 id="General_threads">General threads</h2>
+<span class="anchor" id="line-10"></span><ol type="1"><li><p class="line862">time series analysis - <a class="http" href="../../../external.html?link=http://article.gmane.org/gmane.comp.python.scientific.user/13949">http://article.gmane.org/gmane.comp.python.scientific.user/13949</a> <span class="anchor" id="line-11"></span></li><li>time series: Python vs. R URL missing!!! <span class="anchor" id="line-12"></span></li><li><p class="line862">roadmap/plans for timeseries package -  <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/14599">http://permalink.gmane.org/gmane.comp.python.scientific.user/14599</a> <span class="anchor" id="line-13"></span></li></ol><p class="line867">
+<h2 id="Reading_data_and_creating_timeseries_objects">Reading data and creating timeseries objects</h2>
+<span class="anchor" id="line-14"></span><p class="line867">
+<h3 id="masking_NoData_values">masking NoData values</h3>
+<span class="anchor" id="line-15"></span><p class="line867">
+<h4 id="Question">Question</h4>
+<span class="anchor" id="line-16"></span><p class="line862">In my original data nodata values are marked with &quot;-999&quot;. How can I import the data or create the time series and exclude these no  data points from further processing? (flagging no data in timeseries  - <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/14455">http://permalink.gmane.org/gmane.comp.python.scientific.user/14455</a>) <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867">
+<h4 id="Answer">Answer</h4>
+<span class="anchor" id="line-19"></span><ul><li>use masked_where from maskedarray <span class="anchor" id="line-20"></span></li></ul><p class="line867"><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-7f918446794e7ebd08f39e4d228b72980865d396\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-7f918446794e7ebd08f39e4d228b72980865d396" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-7f918446794e7ebd08f39e4d228b72980865d396_1">   1</a> </span><span class="LineAnchor" id="CA-7f918446794e7ebd08f39e4d228b72980865d396_1"></span><span class="anchor" id="line-1-2"></span><span class="ID">myvalues_ts_hourly</span> = <span class="ID">masked_where</span>(<span class="ID">myvalues_ts_hourly</span> , -<span class="Number">999</span>)</span>
+</pre></div></div><span class="anchor" id="line-24"></span><ul><li>Use indexing <span class="anchor" id="line-25"></span></li></ul><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-c2f8e7776d6347a09f3ce4fb0181e2fbcc000a45\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-c2f8e7776d6347a09f3ce4fb0181e2fbcc000a45" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-c2f8e7776d6347a09f3ce4fb0181e2fbcc000a45_1">   1</a> </span><span class="LineAnchor" id="CA-c2f8e7776d6347a09f3ce4fb0181e2fbcc000a45_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">myvalues_ts_hourly</span>[<span class="ID">myvalues_ts_hourly</span>==-<span class="Number">999</span>] = <span class="ID">M</span>.<span class="ID">masked</span></span>
+</pre></div></div><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line867">
+<h4 id="More_extensive_answer">More extensive answer</h4>
+<span class="anchor" id="line-31"></span><p class="line867"><strong>* START SAMPLE DATA (tmp.txt) *</strong> <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><p class="line867"><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><form action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ" method="GET" name="dbw.form"><div><div><table id="dbw.table"><tbody><tr>  <td class="hcolumn0"><strong>date</strong></td>
+  <td class="hcolumn1"><strong>hour_of_day</strong></td>
+  <td class="hcolumn2"><strong>value</strong></td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="1" class="column1">1</td>
+  <td abbr="247" class="column2">247</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="2" class="column1">2</td>
+  <td abbr="889" class="column2">889</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="3" class="column1">3</td>
+  <td abbr="914" class="column2">914</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="4" class="column1">4</td>
+  <td abbr="292" class="column2">292</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="5" class="column1">5</td>
+  <td abbr="183" class="column2">183</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="6" class="column1">6</td>
+  <td abbr="251" class="column2">251</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="7" class="column1">7</td>
+  <td abbr="953" class="column2">953</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="8" class="column1">8</td>
+  <td abbr="156" class="column2">156</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="9" class="column1">9</td>
+  <td abbr="991" class="column2">991</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="10" class="column1">10</td>
+  <td abbr="557" class="column2">557</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="11" class="column1">11</td>
+  <td abbr="581" class="column2">581</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="12" class="column1">12</td>
+  <td abbr="354" class="column2">354</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="13" class="column1">13</td>
+  <td abbr="485" class="column2">485</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="14" class="column1">14</td>
+  <td abbr="655" class="column2">655</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="15" class="column1">15</td>
+  <td abbr="-999" class="column2">-999</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="16" class="column1">16</td>
+  <td abbr="-999" class="column2">-999</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="17" class="column1">17</td>
+  <td abbr="-999" class="column2">-999</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="18" class="column1">18</td>
+  <td abbr="744" class="column2">744</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="19" class="column1">19</td>
+  <td abbr="445" class="column2">445</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="20" class="column1">20</td>
+  <td abbr="374" class="column2">374</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="21" class="column1">21</td>
+  <td abbr="168" class="column2">168</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="22" class="column1">22</td>
+  <td abbr="995" class="column2">995</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="23" class="column1">23</td>
+  <td abbr="943" class="column2">943</td>
+</tr>
+<tr>  <td abbr="01.02.2004" class="column0">01.02.2004</td>
+  <td abbr="24" class="column1">24</td>
+  <td abbr="326" class="column2">326</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="1" class="column1">1</td>
+  <td abbr="83.98" class="column2">83.98</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="2" class="column1">2</td>
+  <td abbr="302.26" class="column2">302.26</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="3" class="column1">3</td>
+  <td abbr="310.76" class="column2">310.76</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="4" class="column1">4</td>
+  <td abbr="-999" class="column2">-999</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="5" class="column1">5</td>
+  <td abbr="62.22" class="column2">62.22</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="6" class="column1">6</td>
+  <td abbr="85.34" class="column2">85.34</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="7" class="column1">7</td>
+  <td abbr="324.02" class="column2">324.02</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="8" class="column1">8</td>
+  <td abbr="53.04" class="column2">53.04</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="9" class="column1">9</td>
+  <td abbr="336.94" class="column2">336.94</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="10" class="column1">10</td>
+  <td abbr="189.38" class="column2">189.38</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="11" class="column1">11</td>
+  <td abbr="197.54" class="column2">197.54</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="12" class="column1">12</td>
+  <td abbr="120.36" class="column2">120.36</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="13" class="column1">13</td>
+  <td abbr="164.9" class="column2">164.9</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="14" class="column1">14</td>
+  <td abbr="222.7" class="column2">222.7</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="15" class="column1">15</td>
+  <td abbr="34.74" class="column2">34.74</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="16" class="column1">16</td>
+  <td abbr="85.34" class="column2">85.34</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="17" class="column1">17</td>
+  <td abbr="53.04" class="column2">53.04</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="18" class="column1">18</td>
+  <td abbr="252.96" class="column2">252.96</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="19" class="column1">19</td>
+  <td abbr="151.3" class="column2">151.3</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="20" class="column1">20</td>
+  <td abbr="-999" class="column2">-999</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="21" class="column1">21</td>
+  <td abbr="57.12" class="column2">57.12</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="22" class="column1">22</td>
+  <td abbr="338.3" class="column2">338.3</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="23" class="column1">23</td>
+  <td abbr="320.62" class="column2">320.62</td>
+</tr>
+<tr>  <td abbr="02.02.2004" class="column0">02.02.2004</td>
+  <td abbr="24" class="column1">24</td>
+  <td abbr="110.84" class="column2">110.84</td>
+</tr>
+</tbody></table></div></div></form><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line867"><strong>* END SAMPLE DATA *</strong> <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line867"><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-6fe062fbdc858a6c83549830578b0b45029ac366\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_1">   1</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_2">   2</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">maskedarray</span> <span class="ResWord">as</span> <span class="ID">M</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_3">   3</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">timeseries</span> <span class="ResWord">as</span> <span class="ID">ts</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_4">   4</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">data</span> = <span class="ID">N</span>.<span class="ID">loadtxt</span>(<span class="String">&quot;</span><span class="String">tmp.txt</span><span class="String">&quot;</span>, <span class="ID">dtype</span>=<span class="String">'</span><span class="String">|S10</span><span class="String">'</span>, <span class="ID">skiprows</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_5">   5</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">dates</span> = <span class="ID">ts</span>.<span class="ID">date_array</span>([<span class="ID">ts</span>.<span class="ID">Date</span>(<span class="ID">freq</span>=<span class="String">'</span><span class="String">H</span><span class="String">'</span>,<span class="ID">string</span>=<span class="String">&quot;</span><span class="String">%s</span><span class="String"> </span><span class="String">%s</span><span class="String">:00</span><span class="String">&quot;</span> %</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_6">   6</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_6"></span><span class="anchor" id="line-6-1"></span>(<span class="ID">d</span>[<span class="Number">0</span>],<span class="ResWord">int</span>(<span class="ID">d</span>[<span class="Number">1</span>])-<span class="Number">1</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_7">   7</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_7"></span><span class="anchor" id="line-7-1"></span>                       <span class="ResWord">for</span> <span class="ID">d</span> <span class="ResWord">in</span> <span class="ID">data</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_8">   8</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_8"></span><span class="anchor" id="line-8-1"></span>                      <span class="ID">freq</span>=<span class="String">'</span><span class="String">H</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_9">   9</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">series</span> = <span class="ID">ts</span>.<span class="ID">time_series</span>(<span class="ID">data</span>[:,-<span class="Number">1</span>].<span class="ID">astype</span>(<span class="ID">N</span>.<span class="ID">float_</span>),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_10">  10</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_10"></span><span class="anchor" id="line-10-1"></span>                        <span class="ID">dates</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-6fe062fbdc858a6c83549830578b0b45029ac366_11">  11</a> </span><span class="LineAnchor" id="CA-6fe062fbdc858a6c83549830578b0b45029ac366_11"></span><span class="anchor" id="line-11-1"></span>                        <span class="ID">mask</span>=(<span class="ID">data</span>[:,-<span class="Number">1</span>]==<span class="String">'</span><span class="String">-999</span><span class="String">'</span>))</span>
+</pre></div></div><span class="anchor" id="line-100"></span><p class="line867">
+<h3 id="frequencies">frequencies</h3>
+<span class="anchor" id="line-101"></span><p class="line867">
+<h4 id="Question-1">Question</h4>
+<span class="anchor" id="line-102"></span><p class="line874">Is there a example data set for at least one year on a high temporal resolution: 15min or at least 1h. Having such a common data set one could set up tutorials examples and debug or ask questions easier because all will have the same (non-confidetial) data on the disk. <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867">
+<h4 id="Answer-1">Answer</h4>
+<span class="anchor" id="line-105"></span><p class="line874">For hours, you have the 'hourly' frequency. For 15min, you have the 'minutely'  frequency, from which you can select every other 15th point. <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><p class="line862">(cf. Re: roadmap/plans for timeseries package - <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/1459">http://permalink.gmane.org/gmane.comp.python.scientific.user/1459</a>) <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line867">
+<h3 id="hour_of_the_day">hour of the day</h3>
+<span class="anchor" id="line-110"></span><p class="line862">(cf.: assignment of hours of day in time series - <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/14597">http://permalink.gmane.org/gmane.comp.python.scientific.user/14597</a>) When exchanging agrregated data sets (e.g. with hourly frequency) the data is often presented as follows: desired report output <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><p class="line867"><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><form action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ" method="GET" name="dbw.form"><div><div><table id="dbw.table-1"><tbody><tr>  <td class="hcolumn0"><strong> date</strong></td>
+  <td class="hcolumn1"><strong> hour_of_day</strong></td>
+  <td class="hcolumn2"><strong> value</strong></td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="1:00" class="column1">1:00</td>
+  <td abbr="247" class="column2">247</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="2:00" class="column1">2:00</td>
+  <td abbr="889" class="column2">889</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="3:00" class="column1">3:00</td>
+  <td abbr="914" class="column2">914</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="4:00" class="column1">4:00</td>
+  <td abbr="292" class="column2">292</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="5:00" class="column1">5:00</td>
+  <td abbr="183" class="column2">183</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="6:00" class="column1">6:00</td>
+  <td abbr="251" class="column2">251</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="7:00" class="column1">7:00</td>
+  <td abbr="953" class="column2">953</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="8:00" class="column1">8:00</td>
+  <td abbr="156" class="column2">156</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="9:00" class="column1">9:00</td>
+  <td abbr="991" class="column2">991</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="10:00" class="column1">10:00</td>
+  <td abbr="557" class="column2">557</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="11:00" class="column1">11:00</td>
+  <td abbr="581" class="column2">581</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="12:00" class="column1">12:00</td>
+  <td abbr="354" class="column2">354</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="13:00" class="column1">13:00</td>
+  <td abbr="485" class="column2">485</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="14:00" class="column1">14:00</td>
+  <td abbr="655" class="column2">655</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="15:00" class="column1">15:00</td>
+  <td abbr="862" class="column2">862</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="16:00" class="column1">16:00</td>
+  <td abbr="399" class="column2">399</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="17:00" class="column1">17:00</td>
+  <td abbr="598" class="column2">598</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="18:00" class="column1">18:00</td>
+  <td abbr="744" class="column2">744</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="19:00" class="column1">19:00</td>
+  <td abbr="445" class="column2">445</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="20:00" class="column1">20:00</td>
+  <td abbr="374" class="column2">374</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="21:00" class="column1">21:00</td>
+  <td abbr="168" class="column2">168</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="22:00" class="column1">22:00</td>
+  <td abbr="995" class="column2">995</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="23:00" class="column1">23:00</td>
+  <td abbr="943" class="column2">943</td>
+</tr>
+<tr>  <td abbr=" 1-Feb-2004" class="column0"> 1-Feb-2004</td>
+  <td abbr="24:00" class="column1">24:00</td>
+  <td abbr="326" class="column2">326</td>
+</tr>
+</tbody></table></div></div></form><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><p class="line862">This formatting may be the result of some logging devices which for instance record 5 minutes averaged values which have been taken with a device using a sample rate of 16 sec. As well, syntetically generated data sets which have been created by scientifc models or from remote sensing information can have such a format. When creating a timeseries object the start hour should be set to zero (0) internally to achieve a correct assignment of the hours (01:00 h is the end of the period 00:00 h - 01:00 h =&gt; data for this period starts at 00:00 h). For the output one can be customized as shown below in the answer. The python built-in module datetime can help here. <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line867">
+<h4 id="Question-2">Question</h4>
+<span class="anchor" id="line-143"></span><p class="line874">I have hourly measurements where hour 1 represents the end of the period 0:00-1:00, 2 the end of the period 1:00-2:00, ... , 24 the end of the period 23:00 to 24:00. <span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><p class="line874">When I plot these hourly time series from February to November the curve is continued into December because of that matter. time series then assumes that the value for hour 0:00 of dec, 01 is 0 which then leads do a wrong plotting behaviour. <span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><p class="line874">I want to achieve that hour 24 is accounted as the last measurement period of a day and not as the first measurement of the next day (like 0:00). <span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><p class="line867">
+<h4 id="Answer-2">Answer</h4>
+<span class="anchor" id="line-150"></span><p class="line874">Since the time &quot;24:00&quot; doesn't actually exist (as far as I am aware anyway), you will have to rely on somewhat of a hack to get your desired output. Try this: <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5cf50116c32273c16c218c9ee028653e7f479bff\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5cf50116c32273c16c218c9ee028653e7f479bff_1">   1</a> </span><span class="LineAnchor" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff_1"></span><span class="anchor" id="line-1-8"></span><span class="ResWord">import</span> <span class="ID">timeseries</span> <span class="ResWord">as</span> <span class="ID">ts</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5cf50116c32273c16c218c9ee028653e7f479bff_2">   2</a> </span><span class="LineAnchor" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">series</span> = <span class="ID">ts</span>.<span class="ID">time_series</span>(<span class="ResWord">range</span>(<span class="Number">400</span>, <span class="Number">430</span>), <span class="ID">start_date</span>=<span class="ID">ts</span>.<span class="ID">now</span>(<span class="String">'</span><span class="String">hourly</span><span class="String">'</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5cf50116c32273c16c218c9ee028653e7f479bff_3">   3</a> </span><span class="LineAnchor" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff_3"></span><span class="anchor" id="line-3-2"></span><span class="ID">hours</span> = <span class="ID">ts</span>.<span class="ID">time_series</span>(<span class="ID">series</span>.<span class="ID">hour</span> + <span class="Number">1</span>, <span class="ID">dates</span>=<span class="ID">series</span>.<span class="ID">dates</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5cf50116c32273c16c218c9ee028653e7f479bff_4">   4</a> </span><span class="LineAnchor" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">hour_fmtfunc</span> = <span class="ResWord">lambda</span> <span class="ID">x</span> : <span class="String">'</span><span class="String">%i</span><span class="String">:00</span><span class="String">'</span> % <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5cf50116c32273c16c218c9ee028653e7f479bff_5">   5</a> </span><span class="LineAnchor" id="CA-5cf50116c32273c16c218c9ee028653e7f479bff_5"></span><span class="anchor" id="line-5-2"></span><span class="ID">ts</span>.<span class="ID">Report</span>(<span class="ID">hours</span>, <span class="ID">series</span>, <span class="ID">datefmt</span>=<span class="String">'</span><span class="String">%d</span><span class="String">-</span><span class="String">%</span><span class="String">b-</span><span class="String">%</span><span class="String">Y</span><span class="String">'</span>, <span class="ID">delim</span>=<span class="String">'</span><span class="String">  </span><span class="String">'</span>, <span class="ID">fmtfunc</span>=[<span class="ResWord">None</span> <span class="ID">hour_fmtfunc</span>,])()</span>
+</pre></div></div><span class="anchor" id="line-159"></span><p class="line867"><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><form action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ" method="GET" name="dbw.form"><div><div><table id="dbw.table-2"><tbody><tr>  <td class="hcolumn0"><strong>date time</strong></td>
+  <td class="hcolumn1"><strong> value</strong></td>
+</tr>
+<tr>  <td abbr="06-Jan-2008  23:00" class="column0">06-Jan-2008  23:00</td>
+  <td abbr="  400" class="column1">  400</td>
+</tr>
+<tr>  <td abbr="06-Jan-2008  24:00" class="column0">06-Jan-2008  24:00</td>
+  <td abbr="  401" class="column1">  401</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   1:00" class="column0">07-Jan-2008   1:00</td>
+  <td abbr="  402" class="column1">  402</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   2:00" class="column0">07-Jan-2008   2:00</td>
+  <td abbr="  403" class="column1">  403</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   3:00" class="column0">07-Jan-2008   3:00</td>
+  <td abbr="  404" class="column1">  404</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   4:00" class="column0">07-Jan-2008   4:00</td>
+  <td abbr="  405" class="column1">  405</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   5:00" class="column0">07-Jan-2008   5:00</td>
+  <td abbr="  406" class="column1">  406</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   6:00" class="column0">07-Jan-2008   6:00</td>
+  <td abbr="  407" class="column1">  407</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   7:00" class="column0">07-Jan-2008   7:00</td>
+  <td abbr="  408" class="column1">  408</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   8:00" class="column0">07-Jan-2008   8:00</td>
+  <td abbr="  409" class="column1">  409</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008   9:00" class="column0">07-Jan-2008   9:00</td>
+  <td abbr="  410" class="column1">  410</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  10:00" class="column0">07-Jan-2008  10:00</td>
+  <td abbr="  411" class="column1">  411</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  11:00" class="column0">07-Jan-2008  11:00</td>
+  <td abbr="  412" class="column1">  412</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  12:00" class="column0">07-Jan-2008  12:00</td>
+  <td abbr="  413" class="column1">  413</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  13:00" class="column0">07-Jan-2008  13:00</td>
+  <td abbr="  414" class="column1">  414</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  14:00" class="column0">07-Jan-2008  14:00</td>
+  <td abbr="  415" class="column1">  415</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  15:00" class="column0">07-Jan-2008  15:00</td>
+  <td abbr="  416" class="column1">  416</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  16:00" class="column0">07-Jan-2008  16:00</td>
+  <td abbr="  417" class="column1">  417</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  17:00" class="column0">07-Jan-2008  17:00</td>
+  <td abbr="  418" class="column1">  418</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  18:00" class="column0">07-Jan-2008  18:00</td>
+  <td abbr="  419" class="column1">  419</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  19:00" class="column0">07-Jan-2008  19:00</td>
+  <td abbr="  420" class="column1">  420</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  20:00" class="column0">07-Jan-2008  20:00</td>
+  <td abbr="  421" class="column1">  421</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  21:00" class="column0">07-Jan-2008  21:00</td>
+  <td abbr="  422" class="column1">  422</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  22:00" class="column0">07-Jan-2008  22:00</td>
+  <td abbr="  423" class="column1">  423</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  23:00" class="column0">07-Jan-2008  23:00</td>
+  <td abbr="  424" class="column1">  424</td>
+</tr>
+<tr>  <td abbr="07-Jan-2008  24:00" class="column0">07-Jan-2008  24:00</td>
+  <td abbr="  425" class="column1">  425</td>
+</tr>
+<tr>  <td abbr="08-Jan-2008   1:00" class="column0">08-Jan-2008   1:00</td>
+  <td abbr="  426" class="column1">  426</td>
+</tr>
+<tr>  <td abbr="08-Jan-2008   2:00" class="column0">08-Jan-2008   2:00</td>
+  <td abbr="  427" class="column1">  427</td>
+</tr>
+<tr>  <td abbr="08-Jan-2008   3:00" class="column0">08-Jan-2008   3:00</td>
+  <td abbr="  428" class="column1">  428</td>
+</tr>
+<tr>  <td abbr="08-Jan-2008   4:00" class="column0">08-Jan-2008   4:00</td>
+  <td abbr="  429" class="column1">  429</td>
+</tr>
+</tbody></table></div></div></form><span class="anchor" id="line-192"></span><p class="line862">Manipulations &amp; Operations with time series <span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><p class="line867">
+<h3 id="use_the_datetime_information_of_the_time_series">use the datetime information of the time series</h3>
+<span class="anchor" id="line-195"></span><p class="line862">(Re: roadmap/plans for timeseries package - <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/14598">http://permalink.gmane.org/gmane.comp.python.scientific.user/14598</a>) A example: <span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><p class="line867">
+<h4 id="Question-3">Question</h4>
+<span class="anchor" id="line-198"></span><p class="line874">One has to get rainfall intensity during early morning hours. For such a filter the information on the corresponding hours are neccessary. <span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><p class="line867">
+<h4 id="Answer-3">Answer</h4>
+<span class="anchor" id="line-201"></span><p class="line867"><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_1">   1</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_1"></span><span class="anchor" id="line-1-10"></span><span class="ResWord">import</span> <span class="ID">timeseries</span> <span class="ResWord">as</span> <span class="ID">ts</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_2">   2</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_2"></span><span class="anchor" id="line-2-3"></span><span class="ID">data</span> = <span class="ID">ts</span>.<span class="ID">time_series</span>(<span class="ResWord">range</span>(<span class="Number">100</span>), <span class="ID">start_date</span>=<span class="ID">ts</span>.<span class="ID">today</span>(<span class="String">'</span><span class="String">hourly</span><span class="String">'</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_3">   3</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_3"></span><span class="anchor" id="line-3-3"></span><span class="ID">hours</span> = <span class="ID">data</span>.<span class="ID">hour</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_4">   4</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_4"></span><span class="anchor" id="line-4-3"></span><span class="ID">filtered_data</span> = <span class="ID">data</span>[(<span class="ID">hours</span> &lt; <span class="Number">7</span>) &amp; (<span class="ID">hours</span> &gt; <span class="Number">3</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_5">   5</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_5"></span><span class="anchor" id="line-5-3"></span><span class="ID">filtered_data</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_6">   6</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_6"></span><span class="anchor" id="line-6-2"></span><span class="ID">timeseries</span>([<span class="Number">80</span>  <span class="Number">6</span>  <span class="Number">7</span>  <span class="Number">8</span> <span class="Number">30</span> <span class="Number">31</span> <span class="Number">32</span> <span class="Number">54</span> <span class="Number">55</span> <span class="Number">56</span> <span class="Number">78</span> <span class="Number">79</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_7">   7</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">dates</span> = [<span class="Number">07</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">04</span>:<span class="Number">00</span> <span class="Number">07</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">05</span>:<span class="Number">00</span> <span class="Number">07</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">06</span>:<span class="Number">00</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_8">   8</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_8"></span><span class="anchor" id="line-8-2"></span><span class="Number">08</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">04</span>:<span class="Number">00</span> <span class="Number">08</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">05</span>:<span class="Number">00</span> <span class="Number">08</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">06</span>:<span class="Number">00</span> <span class="Number">09</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">04</span>:<span class="Number">00</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_9">   9</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_9"></span><span class="anchor" id="line-9-2"></span><span class="Number">09</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">05</span>:<span class="Number">00</span> <span class="Number">09</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">06</span>:<span class="Number">00</span> <span class="Number">10</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">04</span>:<span class="Number">00</span> <span class="Number">10</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">05</span>:<span class="Number">00</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_10">  10</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_10"></span><span class="anchor" id="line-10-2"></span><span class="Number">10</span>-<span class="ID">Jan</span>-<span class="Number">2008</span> <span class="Number">06</span>:<span class="Number">00</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_11">  11</a> </span><span class="LineAnchor" id="CA-a0db50fb9250ec2c5037624d996cb8a1f34efc39_11"></span><span class="anchor" id="line-11-2"></span>          <span class="ID">freq</span>  = <span class="ID">H</span>)</span>
+</pre></div></div><span class="anchor" id="line-214"></span><p class="line867">
+<h3 id="using_the_result_of_time_series_operations">using the result of time series operations</h3>
+<span class="anchor" id="line-215"></span><p class="line867">
+<h4 id="Question-4">Question</h4>
+<span class="anchor" id="line-216"></span><p class="line874">How can one save the read the result of time series operations into a array? <span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><p class="line874">For instance, if I convert data in an hourly frequency to daily averages  how to I read the daily averages into a array for further processing? <span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><p class="line874">when I print out my daily timeseries converted from hourly data I get  something like this: <span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><p class="line867"><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-345072749c222b9d2d1264a4cde62cc426c5d51a\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_1">   1</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_1"></span><span class="anchor" id="line-1-12"></span><span class="ID">In</span>: <span class="ID">myvalues_ts_daily</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_2">   2</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_2"></span><span class="anchor" id="line-2-4"></span><span class="ID">Out</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_3">   3</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_3"></span><span class="anchor" id="line-3-4"></span><span class="ID">timeseries</span>([  <span class="Number">1.4</span>   <span class="Number">89.4</span>  <span class="Number">3.5</span> ...,  <span class="Number">11.5</span>  <span class="Number">1.6</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_4">   4</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_4"></span><span class="anchor" id="line-4-4"></span>     <span class="Number">0.</span>        ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_5">   5</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_5"></span><span class="anchor" id="line-5-4"></span>            <span class="ID">dates</span> = [<span class="Number">01</span>-<span class="ID">Dec</span>-<span class="Number">2006</span> <span class="Number">01</span>-<span class="ID">Feb</span>-<span class="Number">1995</span> ...],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-345072749c222b9d2d1264a4cde62cc426c5d51a_6">   6</a> </span><span class="LineAnchor" id="CA-345072749c222b9d2d1264a4cde62cc426c5d51a_6"></span><span class="anchor" id="line-6-3"></span>            <span class="ID">freq</span>  = <span class="ID">D</span>)</span>
+</pre></div></div><span class="anchor" id="line-231"></span><p class="line874">What I would like is an array with just the values of the daily averages . Additional a report-like array output with the format day value <span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><p class="line867"><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><pre><span class="anchor" id="line-1"></span>1   3
+<span class="anchor" id="line-2"></span>2   11</pre><span class="anchor" id="line-237"></span><p class="line867">
+<h4 id="Answer-4">Answer</h4>
+<span class="anchor" id="line-238"></span><p class="line867">&gt; For instance, if I convert data in an hourly frequency to daily averages &gt; &gt; how to I read the daily averages into a array for further processing? <span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><ol type="1"><li>possibility #1: use the keyword func while converting. <span class="anchor" id="line-241"></span></li></ol><p class="line867"><tt>avgdata&nbsp;=&nbsp;convert(data,'D',&nbsp;func=maskedarray.mean)</tt> <span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><ol type="1"><li>possibility #2: <span class="anchor" id="line-244"></span></li></ol><p class="line874">If you don't use the keyword func, you end up with a 2d array, each row being  a day, each column an hour. Just use maskedarray.mean on each row avgdata = convert(data,'D').mean(-1) <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><p class="line862">If you only want the values, use the .series attribute, it will give you a  view of the array as a <a class="nonexistent" href="../../MaskedArray.html">MaskedArray</a>. <span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><p class="line867">
+<h2 id="Plotting">Plotting</h2>
+<span class="anchor" id="line-249"></span><p class="line862">Word of caution... the timeseries plotting stuff does not currently support frequencies higher than daily (eg. hourly, minutely, etc...). Support for these frequencies could be added without too much trouble, but just haven't got around to it yet. (Cf. Re: roadmap/plans for timeseries package - <a class="http" href="../../../external.html?link=http://permalink.gmane.org/gmane.comp.python.scientific.user/14598">http://permalink.gmane.org/gmane.comp.python.scientific.user/14598</a>) <span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><p class="line867">
+<h1 id="About_this_page">About this page</h1>
+<span class="anchor" id="line-252"></span><p class="line867">
+<h2 id="Source">Source</h2>
+<span class="anchor" id="line-253"></span><ul><li>Most information presented here has been compiled from discussions at the scipy mailing list. <span class="anchor" id="line-254"></span></li></ul><p class="line867">
+<h2 id="todo">todo</h2>
+<span class="anchor" id="line-255"></span><ul><li>Use one data set consistently for the examples <span class="anchor" id="line-256"></span></li><li>offer the code for download <span class="anchor" id="line-257"></span></li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FAQ37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/TimeSeries/FAQ">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/TimeSeries/FAQ?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

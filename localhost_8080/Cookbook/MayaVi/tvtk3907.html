@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/tvtk?action=AttachFile&do=view&target=Simple_tvtk_cone.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:53:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:Simple_tvtk_cone.py of Cookbook/MayaVi/tvtk - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/tvtk" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2Ftvtk&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Appendix" title="Simple_tvtk_cone.py" href="tvtk3907.html?action=AttachFile&amp;do=view&amp;target=Simple_tvtk_cone.py">
+<link rel="Appendix" title="Vis_quad.py" href="tvtk9035.html?action=AttachFile&amp;do=view&amp;target=Vis_quad.py">
+<link rel="Appendix" title="ivtk_example.png" href="tvtk050c.html?action=AttachFile&amp;do=view&amp;target=ivtk_example.png">
+<link rel="Appendix" title="simple_tvtk_cone.py" href="tvtk144b.html?action=AttachFile&amp;do=view&amp;target=simple_tvtk_cone.py">
+<link rel="Appendix" title="vis_quad.png" href="tvtkabd5.html?action=AttachFile&amp;do=view&amp;target=vis_quad.png">
+<link rel="Appendix" title="vis_quad.py" href="tvtkfc5a.html?action=AttachFile&amp;do=view&amp;target=vis_quad.py">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="tvtk456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:Simple_tvtk_cone.py of Cookbook/MayaVi/tvtk</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="tvtk.html">Cookbook/MayaVi/tvtk</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="tvtk37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'Simple_tvtk_cone.py'</h2><a class="download" href="Simple_tvtk_conef8ce.py?action=AttachFile&amp;do=get&amp;target=Simple_tvtk_cone.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-357d9ee50db90a56db783223a837bd7390ee575c\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-357d9ee50db90a56db783223a837bd7390ee575c" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_1">   1</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_1"></span><span class="anchor" id="line-1-1"></span><span class="ResWord">from</span> <span class="ID">enthought.tvtk.api</span> <span class="ResWord">import</span> <span class="ID">tvtk</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_2">   2</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_2"></span><span class="anchor" id="line-2"></span><span class="ID">cs</span> = <span class="ID">tvtk</span>.<span class="ID">ConeSource</span>(<span class="ID">resolution</span>=<span class="Number">100</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_3">   3</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_3"></span><span class="anchor" id="line-3"></span><span class="ID">mapper</span> = <span class="ID">tvtk</span>.<span class="ID">PolyDataMapper</span>(<span class="ResWord">input</span>=<span class="ID">cs</span>.<span class="ID">output</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_4">   4</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_4"></span><span class="anchor" id="line-4"></span><span class="ID">actor</span> = <span class="ID">tvtk</span>.<span class="ID">Actor</span>(<span class="ID">mapper</span>=<span class="ID">mapper</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_5">   5</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_6">   6</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_6"></span><span class="anchor" id="line-6"></span><span class="Comment"># create a renderer:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_7">   7</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_7"></span><span class="anchor" id="line-7"></span><span class="ID">renderer</span> = <span class="ID">tvtk</span>.<span class="ID">Renderer</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_8">   8</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_8"></span><span class="anchor" id="line-8"></span><span class="Comment"># create a render window and hand it the renderer:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_9">   9</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_9"></span><span class="anchor" id="line-9"></span><span class="ID">render_window</span> = <span class="ID">tvtk</span>.<span class="ID">RenderWindow</span>(<span class="ID">size</span>=(<span class="Number">400</span>,<span class="Number">400</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_10">  10</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_10"></span><span class="anchor" id="line-10"></span><span class="ID">render_window</span>.<span class="ID">add_renderer</span>(<span class="ID">renderer</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_11">  11</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_11"></span><span class="anchor" id="line-11"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_12">  12</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_12"></span><span class="anchor" id="line-12"></span><span class="Comment"># create interactor and hand it the render window</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_13">  13</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_13"></span><span class="anchor" id="line-13"></span><span class="Comment"># This handles mouse interaction with window.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_14">  14</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_14"></span><span class="anchor" id="line-14"></span><span class="ID">interactor</span> = <span class="ID">tvtk</span>.<span class="ID">RenderWindowInteractor</span>(<span class="ID">render_window</span>=<span class="ID">render_window</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_15">  15</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_15"></span><span class="anchor" id="line-15"></span><span class="ID">renderer</span>.<span class="ID">add_actor</span>(<span class="ID">actor</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_16">  16</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_16"></span><span class="anchor" id="line-16"></span><span class="ID">interactor</span>.<span class="ID">initialize</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-357d9ee50db90a56db783223a837bd7390ee575c_17">  17</a> </span><span class="LineAnchor" id="CA-357d9ee50db90a56db783223a837bd7390ee575c_17"></span><span class="anchor" id="line-17"></span><span class="ID">interactor</span>.<span class="ID">start</span>()</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="Simple_tvtk_cone.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327f9f.dfe89c0f7b9475b9c1fb0f9d889d284dfde9fa35">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="Simple_tvtk_conef8ce.py?action=AttachFile&amp;do=get&amp;target=Simple_tvtk_cone.py">get</a>&nbsp;| <a href="tvtk3907.html?action=AttachFile&amp;do=view&amp;target=Simple_tvtk_cone.py">view</a>] (2006-07-19 11:38:53, 0.6 KB) [[attachment:Simple_tvtk_cone.py]]</li><li>[<a href="Vis_quad6f1d.py?action=AttachFile&amp;do=get&amp;target=Vis_quad.py">get</a>&nbsp;| <a href="tvtk9035.html?action=AttachFile&amp;do=view&amp;target=Vis_quad.py">view</a>] (2006-07-19 11:39:56, 1.7 KB) [[attachment:Vis_quad.py]]</li><li>[<a href="ivtk_example6e7e.png?action=AttachFile&amp;do=get&amp;target=ivtk_example.png">get</a>&nbsp;| <a href="tvtk050c.html?action=AttachFile&amp;do=view&amp;target=ivtk_example.png">view</a>] (2006-02-21 11:32:24, 45.4 KB) [[attachment:ivtk_example.png]]</li><li>[<a href="simple_tvtk_cone8571.py?action=AttachFile&amp;do=get&amp;target=simple_tvtk_cone.py">get</a>&nbsp;| <a href="tvtk144b.html?action=AttachFile&amp;do=view&amp;target=simple_tvtk_cone.py">view</a>] (2006-02-21 08:48:15, 0.6 KB) [[attachment:simple_tvtk_cone.py]]</li><li>[<a href="vis_quad1ad9.png?action=AttachFile&amp;do=get&amp;target=vis_quad.png">get</a>&nbsp;| <a href="tvtkabd5.html?action=AttachFile&amp;do=view&amp;target=vis_quad.png">view</a>] (2006-02-21 08:47:59, 18.4 KB) [[attachment:vis_quad.png]]</li><li>[<a href="vis_quadfc21.py?action=AttachFile&amp;do=get&amp;target=vis_quad.py">get</a>&nbsp;| <a href="tvtkfc5a.html?action=AttachFile&amp;do=view&amp;target=vis_quad.py">view</a>] (2006-02-20 10:50:33, 1.7 KB) [[attachment:vis_quad.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="tvtk37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/tvtk">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/tvtk?action=AttachFile&do=view&target=Simple_tvtk_cone.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:53:32 GMT -->
+</html>
+

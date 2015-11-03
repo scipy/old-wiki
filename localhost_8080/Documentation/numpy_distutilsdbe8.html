@@ -1,0 +1,587 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Documentation/numpy_distutils?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Documentation/numpy_distutils - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Documentation/numpy_distutils" href="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Documentation%2Fnumpy_distutils&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils?action=print">
+<link rel="Up" href="../Additional_Documentation741c.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="numpy_distutils456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Additional_Documentation741c.html">Documentation</a></li><li><a class="backlink" href="../AllPages07a7.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Documentation%2Fnumpy_distutils%22" rel="nofollow" title="Click to do a full-text search for this title">numpy_distutils</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="numpy_distutils.html">numpy_distutils</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="numpy_distutils.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="numpy_distutils37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Please commit any changes to SVN source and then paste-and-copy the changes to this page. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><span class="anchor" id="line-267"></span><span class="anchor" id="line-268"></span><span class="anchor" id="line-269"></span><span class="anchor" id="line-270"></span><span class="anchor" id="line-271"></span><span class="anchor" id="line-272"></span><span class="anchor" id="line-273"></span><span class="anchor" id="line-274"></span><span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span><span class="anchor" id="line-277"></span><span class="anchor" id="line-278"></span><span class="anchor" id="line-279"></span><span class="anchor" id="line-280"></span><span class="anchor" id="line-281"></span><span class="anchor" id="line-282"></span><span class="anchor" id="line-283"></span><span class="anchor" id="line-284"></span><span class="anchor" id="line-285"></span><span class="anchor" id="line-286"></span><span class="anchor" id="line-287"></span><span class="anchor" id="line-288"></span><span class="anchor" id="line-289"></span><span class="anchor" id="line-290"></span><span class="anchor" id="line-291"></span><span class="anchor" id="line-292"></span><span class="anchor" id="line-293"></span><span class="anchor" id="line-294"></span><span class="anchor" id="line-295"></span><span class="anchor" id="line-296"></span><span class="anchor" id="line-297"></span><span class="anchor" id="line-298"></span><span class="anchor" id="line-299"></span><span class="anchor" id="line-300"></span><span class="anchor" id="line-301"></span><span class="anchor" id="line-302"></span><span class="anchor" id="line-303"></span><span class="anchor" id="line-304"></span><span class="anchor" id="line-305"></span><span class="anchor" id="line-306"></span><span class="anchor" id="line-307"></span><span class="anchor" id="line-308"></span><span class="anchor" id="line-309"></span><span class="anchor" id="line-310"></span><span class="anchor" id="line-311"></span><span class="anchor" id="line-312"></span><span class="anchor" id="line-313"></span><span class="anchor" id="line-314"></span><span class="anchor" id="line-315"></span><span class="anchor" id="line-316"></span><span class="anchor" id="line-317"></span><span class="anchor" id="line-318"></span><span class="anchor" id="line-319"></span><span class="anchor" id="line-320"></span><span class="anchor" id="line-321"></span><span class="anchor" id="line-322"></span><span class="anchor" id="line-323"></span><span class="anchor" id="line-324"></span><span class="anchor" id="line-325"></span><span class="anchor" id="line-326"></span><span class="anchor" id="line-327"></span><span class="anchor" id="line-328"></span><span class="anchor" id="line-329"></span><span class="anchor" id="line-330"></span><span class="anchor" id="line-331"></span><span class="anchor" id="line-332"></span><span class="anchor" id="line-333"></span><span class="anchor" id="line-334"></span><span class="anchor" id="line-335"></span><span class="anchor" id="line-336"></span><span class="anchor" id="line-337"></span><span class="anchor" id="line-338"></span><span class="anchor" id="line-339"></span><span class="anchor" id="line-340"></span><span class="anchor" id="line-341"></span><span class="anchor" id="line-342"></span><span class="anchor" id="line-343"></span><span class="anchor" id="line-344"></span><span class="anchor" id="line-345"></span><span class="anchor" id="line-346"></span><span class="anchor" id="line-347"></span><span class="anchor" id="line-348"></span><span class="anchor" id="line-349"></span><span class="anchor" id="line-350"></span><span class="anchor" id="line-351"></span><span class="anchor" id="line-352"></span><span class="anchor" id="line-353"></span><span class="anchor" id="line-354"></span><span class="anchor" id="line-355"></span><span class="anchor" id="line-356"></span><span class="anchor" id="line-357"></span><span class="anchor" id="line-358"></span><span class="anchor" id="line-359"></span><span class="anchor" id="line-360"></span><span class="anchor" id="line-361"></span><span class="anchor" id="line-362"></span><span class="anchor" id="line-363"></span><span class="anchor" id="line-364"></span><span class="anchor" id="line-365"></span><span class="anchor" id="line-366"></span><span class="anchor" id="line-367"></span><span class="anchor" id="line-368"></span><span class="anchor" id="line-369"></span><span class="anchor" id="line-370"></span><span class="anchor" id="line-371"></span><span class="anchor" id="line-372"></span><span class="anchor" id="line-373"></span><span class="anchor" id="line-374"></span><span class="anchor" id="line-375"></span><span class="anchor" id="line-376"></span><span class="anchor" id="line-377"></span><span class="anchor" id="line-378"></span><span class="anchor" id="line-379"></span><span class="anchor" id="line-380"></span><span class="anchor" id="line-381"></span><span class="anchor" id="line-382"></span><span class="anchor" id="line-383"></span><span class="anchor" id="line-384"></span><span class="anchor" id="line-385"></span><span class="anchor" id="line-386"></span><span class="anchor" id="line-387"></span><span class="anchor" id="line-388"></span><span class="anchor" id="line-389"></span><span class="anchor" id="line-390"></span><span class="anchor" id="line-391"></span><span class="anchor" id="line-392"></span><span class="anchor" id="line-393"></span><span class="anchor" id="line-394"></span><span class="anchor" id="line-395"></span><span class="anchor" id="line-396"></span><span class="anchor" id="line-397"></span><span class="anchor" id="line-398"></span><span class="anchor" id="line-399"></span><span class="anchor" id="line-400"></span><span class="anchor" id="line-401"></span><span class="anchor" id="line-402"></span><span class="anchor" id="line-403"></span><span class="anchor" id="line-404"></span><span class="anchor" id="line-405"></span><span class="anchor" id="line-406"></span><span class="anchor" id="line-407"></span><span class="anchor" id="line-408"></span><span class="anchor" id="line-409"></span><span class="anchor" id="line-410"></span><span class="anchor" id="line-411"></span><span class="anchor" id="line-412"></span><span class="anchor" id="line-413"></span><span class="anchor" id="line-414"></span><span class="anchor" id="line-415"></span><span class="anchor" id="line-416"></span><span class="anchor" id="line-417"></span><span class="anchor" id="line-418"></span><span class="anchor" id="line-419"></span><span class="anchor" id="line-420"></span><span class="anchor" id="line-421"></span><span class="anchor" id="line-422"></span><span class="anchor" id="line-423"></span><span class="anchor" id="line-424"></span><span class="anchor" id="line-425"></span><span class="anchor" id="line-426"></span><span class="anchor" id="line-427"></span><span class="anchor" id="line-428"></span><span class="anchor" id="line-429"></span><span class="anchor" id="line-430"></span><span class="anchor" id="line-431"></span><span class="anchor" id="line-432"></span><span class="anchor" id="line-433"></span><span class="anchor" id="line-434"></span><span class="anchor" id="line-435"></span><span class="anchor" id="line-436"></span><span class="anchor" id="line-437"></span><span class="anchor" id="line-438"></span><span class="anchor" id="line-439"></span><span class="anchor" id="line-440"></span><span class="anchor" id="line-441"></span><span class="anchor" id="line-442"></span><span class="anchor" id="line-443"></span><span class="anchor" id="line-444"></span><span class="anchor" id="line-445"></span><span class="anchor" id="line-446"></span><span class="anchor" id="line-447"></span><span class="anchor" id="line-448"></span><span class="anchor" id="line-449"></span><span class="anchor" id="line-450"></span><span class="anchor" id="line-451"></span><span class="anchor" id="line-452"></span><span class="anchor" id="line-453"></span><span class="anchor" id="line-454"></span><span class="anchor" id="line-455"></span><span class="anchor" id="line-456"></span><span class="anchor" id="line-457"></span><span class="anchor" id="line-458"></span><span class="anchor" id="line-459"></span><span class="anchor" id="line-460"></span><span class="anchor" id="line-461"></span><span class="anchor" id="line-462"></span><span class="anchor" id="line-463"></span><span class="anchor" id="line-464"></span><span class="anchor" id="line-465"></span><span class="anchor" id="line-466"></span><span class="anchor" id="line-467"></span><span class="anchor" id="line-468"></span><span class="anchor" id="line-469"></span><span class="anchor" id="line-470"></span><span class="anchor" id="line-471"></span><span class="anchor" id="line-472"></span><span class="anchor" id="line-473"></span><span class="anchor" id="line-474"></span><span class="anchor" id="line-475"></span><span class="anchor" id="line-476"></span><span class="anchor" id="line-477"></span><span class="anchor" id="line-478"></span><span class="anchor" id="line-479"></span><span class="anchor" id="line-480"></span><span class="anchor" id="line-481"></span><span class="anchor" id="line-482"></span><span class="anchor" id="line-483"></span><span class="anchor" id="line-484"></span><span class="anchor" id="line-485"></span><span class="anchor" id="line-486"></span><span class="anchor" id="line-487"></span><span class="anchor" id="line-488"></span><span class="anchor" id="line-489"></span><span class="anchor" id="line-490"></span><span class="anchor" id="line-491"></span><span class="anchor" id="line-492"></span><span class="anchor" id="line-493"></span><span class="anchor" id="line-494"></span><span class="anchor" id="line-495"></span><span class="anchor" id="line-496"></span><span class="anchor" id="line-497"></span><span class="anchor" id="line-498"></span><span class="anchor" id="line-499"></span><span class="anchor" id="line-500"></span><span class="anchor" id="line-501"></span><span class="anchor" id="line-502"></span><span class="anchor" id="line-503"></span><span class="anchor" id="line-504"></span><span class="anchor" id="line-505"></span><span class="anchor" id="line-506"></span><span class="anchor" id="line-507"></span><span class="anchor" id="line-508"></span><span class="anchor" id="line-509"></span><span class="anchor" id="line-510"></span><span class="anchor" id="line-511"></span><span class="anchor" id="line-512"></span><span class="anchor" id="line-513"></span><h1>NumPy Distutils - Users Guide</h1>
+<table class="docinfo" frame="void" rules="none">
+<col class="docinfo-name" />
+<col class="docinfo-content" />
+<tbody valign="top">
+<tr><th class="docinfo-name">Author:</th>
+<td>Pearu Peterson &lt;<a class="mailto reference external" href="mailto:pearu&#64;cens.ioc.ee">pearu&#64;cens.ioc.ee</a>&gt;</td></tr>
+<tr class="field"><th class="docinfo-name">Discussions to:</th><td class="field-body"><a class="mailto reference external" href="mailto:scipy-dev&#64;scipy.org">scipy-dev&#64;scipy.org</a></td>
+</tr>
+<tr class="field"><th class="docinfo-name">Created:</th><td class="field-body">October 2005</td>
+</tr>
+<tr><th class="docinfo-name">Revision:</th>
+<td>1802</td></tr>
+<tr class="field"><th class="docinfo-name">SVN source:</th><td class="field-body">$HeadURL: <a class="http reference external" href="../../external.html?link=http://svn.scipy.org/svn/numpy/trunk/numpy/doc/DISTUTILS.txt">http://svn.scipy.org/svn/numpy/trunk/numpy/doc/DISTUTILS.txt</a> $</td>
+</tr>
+</tbody>
+</table>
+
+<div class="section" id="scipy-structure">
+<h3>SciPy structure</h3>
+<p>Currently SciPy project consists of two packages:</p>
+<ul class="simple">
+<li>NumPy (previously called SciPy core) --- it provides packages like:<ul>
+<li>numpy.distutils - extension to Python distutils</li><li>numpy.f2py - a tool to bind Fortran/C codes to Python</li><li>numpy.core - future replacement of Numeric and numarray packages</li><li>numpy.lib - extra utility functions</li><li>numpy.testing - numpy-style tools for unit testing</li><li>etc</li></ul>
+</li><li>SciPy --- a collection of scientific tools for Python.</li></ul>
+<p>The aim of this document is to describe how to add new tools to SciPy.</p>
+</div>
+<div class="section" id="requirements-for-scipy-packages">
+<h3>Requirements for SciPy packages</h3>
+<p>SciPy consists of Python packages, called SciPy packages, that are
+available to Python users via <tt>scipy</tt> name space. Each SciPy package
+may contain other SciPy packages. And so on. So, SciPy directory tree
+is a tree of packages with arbitrary depth and width. Any SciPy
+package may depend on NumPy packages but the dependence on other
+SciPy packages should be kept minimal or zero.</p>
+<p>A SciPy package contains in addition to its sources, the following
+files and directories:</p>
+<ul class="simple">
+<li><tt>setup.py</tt> --- building script</li><li><tt>info.py</tt>  --- contains documentation and import flags</li><li><tt>__init__.py</tt> --- package initializer</li><li><tt>tests/</tt> --- directory of unittests</li></ul>
+<p>Their contents will be described below.</p>
+</div>
+<div class="section" id="the-setup-py-file">
+<h3>The <tt>setup.py</tt> file</h3>
+<p>In order to add a Python package to SciPy, its building script (the
+<tt>setup.py</tt> file) must meet certain requirements. The minimal and the
+most important one is that it must define a function
+<tt>configuration(parent_package='',top_path=None)</tt> that returns a
+dictionary suitable for passing to <tt>numpy.distutils.core.setup(..)</tt>
+function. In order to simplify the construction of such an distionary,
+<tt>numpy.distutils.misc_util</tt> provides a class <tt>Configuration</tt>, the
+usage of will be described below.</p>
+<div class="section" id="scipy-pure-python-package-example">
+<h4>SciPy pure Python package example</h4>
+<p>Here follows a minimal example for a pure Python SciPy package
+<tt>setup.py</tt> file that will be explained in detail below:</p>
+<pre>#!/usr/bin/env python
+def configuration(parent_package='',top_path=None):
+    from numpy.distutils.misc_util import Configuration
+    config = Configuration('mypackage',parent_package,top_path)
+    return config
+
+if __name__ == &quot;__main__&quot;:
+    from numpy.distutils.core import setup
+    setup(**configuration(top_path='').todict())</pre><p>The first argument <tt>parent_package</tt> of the main configuration
+function will contain a name of the parent SciPy package and the
+second argument <tt>top_path</tt> contains the name of the directory where
+the main <tt>setup.py</tt> script is located. Both arguments should be
+passed to the <tt>Configuration</tt> constructor after the name of the
+current package.</p>
+<p>The <tt>Configuration</tt> constructor has also fourth optional argument,
+<tt>package_path</tt>, that can be used when package files are located in
+some other location than the directory of the <tt>setup.py</tt> file.</p>
+<p>Remaining <tt>Configuration</tt> arguments are all keyword arguments that will
+be used to initialize attributes of <tt>Configuration</tt>
+instance. Usually, these keywords are the same as the ones that
+<tt>setup(..)</tt> function would expect, for example, <tt>packages</tt>,
+<tt>ext_modules</tt>, <tt>data_files</tt>, <tt>include_dirs</tt>, <tt>libraries</tt>,
+<tt>headers</tt>, <tt>scripts</tt>, <tt>package_dir</tt>, etc.  However, the direct
+specification of these keywords is not recommended as the content of
+these keyword arguments will not be processed or checked for the
+consistency of SciPy building system.</p>
+<p>Finally, <tt>Configuration</tt> has <tt>.todict()</tt> method that returns all
+the configuration data as a dictionary suitable for passing on to the
+<tt>setup(..)</tt> function.</p>
+</div>
+<div class="section" id="configuration-instance-attributes">
+<h4><tt>Configuration</tt> instance attributes</h4>
+<p>In addition to attributes that can be specified via keyword arguments
+to <tt>Configuration</tt> constructor, <tt>Configuration</tt> instance (let us
+denote as <tt>config</tt>) has the following attributes that can be useful
+in writing setup scripts:</p>
+<ul class="simple">
+<li><tt>config.name</tt> - full name of the current package. The names of parent
+packages can be extracted as <tt>config.name.split('.')</tt>.</li><li><tt>config.local_path</tt> - path to the location of current <tt>setup.py</tt> file.</li><li><tt>config.top_path</tt> - path to the location of main <tt>setup.py</tt> file.</li></ul>
+</div>
+<div class="section" id="configuration-instance-methods">
+<h4><tt>Configuration</tt> instance methods</h4>
+<ul>
+<li><p><tt>config.todict()</tt> --- returns configuration distionary suitable for
+passing to <tt>numpy.distutils.core.setup(..)</tt> function.</p>
+</li><li><p><tt>config.paths(*paths) --- applies ``glob.glob(..)</tt> to items of
+<tt>paths</tt> if necessary. Fixes <tt>paths</tt> item that is relative to
+<tt>config.local_path</tt>.</p>
+</li><li><p><tt>config.get_subpackage(subpackage_name,subpackage_path=None)</tt> ---
+returns SciPy subpackage configuration. Subpackage is looked in the
+current directory under the name <tt>subpackage_name</tt> but the path
+can be specified also via optional <tt>subpackage_path</tt> argument.
+If <tt>subpackage_name</tt> is specified as <tt>None</tt> then the subpackage
+name will be taken the basename of <tt>subpackage_path</tt>.</p>
+</li><li><p><tt>config.add_subpackage(subpackage_name,subpackage_path=None)</tt> ---
+add SciPy subpackage configuration to the current one. The meaning
+and usage of arguments is explained above, see
+<tt>config.get_subpackage()</tt> method.</p>
+</li><li><p><tt>config.add_data_files(*files)</tt> --- prepend <tt>files</tt> to <tt>data_files</tt>
+list. If <tt>files</tt> item is a tuple then its first element defines
+the suffix of where data files are copied relative to package installation
+directory and the second element specifies the path to data
+files. By default data files are copied under package installation
+directory. For example,</p>
+<pre>config.add_data_files('foo.dat',
+                      ('fun',['gun.dat','nun/pun.dat','/tmp/sun.dat']),
+                      'bar/car.dat'.
+                      '/full/path/to/can.dat',
+                      )</pre><p>will install data files to the following locations:</p>
+<pre>&lt;installation path of config.name package&gt;/
+  foo.dat
+  fun/
+    gun.dat
+    nun/
+      pun.dat
+  sun.dat
+  bar/
+    car.dat
+  can.dat</pre><p>Path to data files can be a function taking no arguments and
+returning path(s) to data files -- this is a useful when data files
+are generated while building the package. (XXX: explain the step
+when this function are called exactly)</p>
+</li><li><p><tt>config.add_data_dir(data_path)</tt> --- add directory <tt>data_path</tt>
+recursively to <tt>data_files</tt>. The whole directory tree starting at
+<tt>data_path</tt> will be copied under package installation directory.
+If <tt>data_path</tt> is a tuple then its first element defines
+the suffix of where data files are copied relative to package installation
+directory and the second element specifies the path to data directory.
+By default data directory are copied under package installation
+directory. For example,</p>
+<pre>config.add_data_dir('fun')  # fun/ contains foo.dat bar/car.dat
+config.add_data_dir(('sun','fun'))
+config.add_data_dir(('gun','/full/path/to/fun'))</pre><p>will install data files to the following locations</p>
+<blockquote>
+<dl><dt>&lt;installation path of config.name package&gt;/</dt>
+<dd><dl><dt>fun/</dt>
+<dd><p class="first">foo.dat
+bar/</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 192)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote class="last">
+<p>car.dat</p>
+</blockquote>
+</dd>
+<dt>sun/</dt>
+<dd><p class="first">foo.dat
+bar/</p>
+<div class="system-message">
+<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">&lt;string&gt;</tt>, line 196)</p>
+<p>Unexpected indentation.</p>
+</div>
+<blockquote class="last">
+<p>car.dat</p>
+</blockquote>
+</dd>
+<dt>gun/</dt>
+<dd><p class="first last">foo.dat
+car.dat</p>
+</dd>
+</dl></dd>
+</dl></blockquote>
+</li><li><p><tt>config.add_include_dirs(*paths)</tt> --- prepend <tt>paths</tt> to
+<tt>include_dirs</tt> list. This list will be visible to all extension
+modules of the current package.</p>
+</li><li><p><tt>config.add_headers(*files)</tt> --- prepend <tt>files</tt> to <tt>headers</tt>
+list. By default, headers will be installed under
+<tt>&lt;prefix&gt;/include/pythonX.X/&lt;config.name.replace('.','/')&gt;/</tt>
+directory. If <tt>files</tt> item is a tuple then it's first argument
+specifies the installation suffix relative to
+<tt>&lt;prefix&gt;/include/pythonX.X/</tt> path.</p>
+</li><li><p><tt>config.add_scripts(*files)</tt> --- prepend <tt>files</tt> to <tt>scripts</tt>
+list. Scripts will be installed under <tt>&lt;prefix&gt;/bin/</tt> directory.</p>
+</li><li><p><tt>config.add_extension(name,sources,*kw)</tt> --- create and add an
+<tt>Extension</tt> instance to <tt>ext_modules</tt> list. The first argument
+<tt>name</tt> defines the name of the extension module that will be
+installed under <tt>config.name</tt> package. The second argument is
+a list of sources. <tt>add_extension</tt> method takes also keyword
+arguments that are passed on to the <tt>Extension</tt> constructor.
+The list of allowed keywords is the following: <tt>include_dirs</tt>,
+<tt>define_macros</tt>, <tt>undef_macros</tt>, <tt>library_dirs</tt>, <tt>libraries</tt>,
+<tt>runtime_library_dirs</tt>, <tt>extra_objects</tt>, <tt>extra_compile_args</tt>,
+<tt>extra_link_args</tt>, <tt>export_symbols</tt>, <tt>swig_opts</tt>, <tt>depends</tt>,
+<tt>language</tt>, <tt>f2py_options</tt>, <tt>module_dirs</tt>, <tt>extra_info</tt>.</p>
+<p>Note that <tt>config.paths</tt> method is applied to all lists that
+may contain paths. <tt>extra_info</tt> is a dictionary or a list
+of dictionaries that content will be appended to keyword arguments.
+The list <tt>depends</tt> contains paths to files or directories
+that the sources of the extension module depend on. If any path
+in the <tt>depends</tt> list is newer than the extension module, then
+the module will be rebuilt.</p>
+<p>The list of sources may contain functions ('source generators')
+with a pattern <tt>def &lt;funcname&gt;(ext, build_dir): return
+&lt;source(s) or None&gt;</tt>. If <tt>funcname</tt> returns <tt>None</tt>, no sources
+are generated. And if the <tt>Extension</tt> instance has no sources
+after processing all source generators, no extension module will
+be built. This is the recommended way to conditionally define
+extension modules. Source generator functions are called by the
+<tt>build_src</tt> command of <tt>numpy.distutils</tt>.</p>
+<p>For example, here is a typical source generator function:</p>
+<pre>def generate_source(ext,build_dir):
+    import os
+    from distutils.dep_util import newer
+    target = os.path.join(build_dir,'somesource.c')
+    if newer(target,__file__):
+        # create target file
+    return target</pre><p>The first argument contains the Extension instance that can be
+useful to access its attributes like <tt>depends</tt>, <tt>sources</tt>,
+etc. lists and modify them during the building process.
+The second argument gives a path to a build directory that must
+be used when creating files to a disk.</p>
+</li><li><p><tt>config.add_library(name, sources, **build_info)</tt> --- add
+a library to <tt>libraries</tt> list. Allowed keywords arguments
+are <tt>depends</tt>, <tt>macros</tt>, <tt>include_dirs</tt>,
+<tt>extra_compiler_args</tt>, <tt>f2py_options</tt>. See <tt>.add_extension()</tt>
+method for more information on arguments.</p>
+</li><li><p><tt>config.have_f77c()</tt> --- return True if Fortran 77 compiler is
+available (read: a simple Fortran 77 code compiled succesfully).</p>
+</li><li><p><tt>config.have_f90c()</tt> --- return True if Fortran 90 compiler is
+available (read: a simple Fortran 90 code compiled succesfully).</p>
+</li><li><p><tt>config.get_version()</tt> --- return version string of the current package,
+<tt>None</tt> if version information could not be detected. This methods
+scans files <tt>__version__.py</tt>, <tt>&lt;packagename&gt;_version.py</tt>,
+<tt>version.py</tt>, <tt>__svn_version__.py</tt> for string variables
+<tt>version</tt>, <tt>__version__</tt>, <tt>&lt;packagename&gt;_version</tt>.</p>
+</li><li><p><tt>config.make_svn_version_py()</tt> --- appends a data function to
+<tt>data_files</tt> list that will generate <tt>__svn_version__.py</tt> file
+to the current package directory. The file will be removed from
+the source directory when Python exits.</p>
+</li><li><p><tt>config.get_build_temp_dir()</tt> --- return a path to a temporary
+directory. This is the place where one should build temporary
+files.</p>
+</li><li><p><tt>config.get_distribution()</tt> --- return distutils <tt>Distribution</tt>
+instance.</p>
+</li><li><p><tt>config.get_config_cmd()</tt> --- returns <tt>numpy.distutils</tt> config
+command instance.</p>
+</li></ul>
+</div>
+<div class="section" id="template-files">
+<h4>Template files</h4>
+<p>XXX: Describe how files with extensions <tt>.f.src</tt>, <tt>.pyf.src</tt>,
+<tt>.c.src</tt>, etc. are pre-processed by the <tt>build_src</tt> command.</p>
+</div>
+<div class="section" id="useful-functions-in-numpy-distutils-misc-util">
+<h4>Useful functions in <tt>numpy.distutils.misc_util</tt></h4>
+<ul class="simple">
+<li><tt>get_numpy_include_dirs()</tt> --- return a list of NumPy base
+include directories. NumPy base include directories contain
+header files such as <tt>numpy/arrayobject.h</tt>, <tt>numpy/funcobject.h</tt>
+etc. For installed NumPy the returned list has length 1
+but when building NumPy the list may contain more directories,
+for example, a path to <tt>config.h</tt> file that
+<tt>numpy/base/setup.py</tt> file generates and is used by <tt>numpy</tt>
+header files.</li><li><tt>append_path(prefix,path)</tt> --- smart append <tt>path</tt> to <tt>prefix</tt>.</li><li><tt>def get_cmd(cmdname,_cache={})</tt> --- returns <tt>numpy.distutils</tt>
+command instance.</li><li><tt>all_strings(lst)</tt></li><li><tt>has_f_sources(sources)</tt></li><li><tt>has_cxx_sources(sources)</tt></li><li><tt>filter_sources(sources)</tt> --- return <tt>c_sources, cxx_sources,
+f_sources, fmodule_sources</tt></li><li><tt>get_dependencies(sources)</tt></li><li><tt>is_local_src_dir(directory)</tt></li><li><tt>get_ext_source_files(ext)</tt></li><li><tt>get_script_files(scripts)</tt></li><li><tt>get_lib_source_files(lib)</tt></li><li><tt>get_data_files(data)</tt></li><li><tt>dot_join(*args)</tt></li><li><tt>get_frame(level=0)</tt></li><li><tt>cyg2win32(path)</tt></li><li><tt>terminal_has_colors()</tt>, <tt>red_text(s)</tt>, <tt>green_text(s)</tt>,
+<tt>yellow_text(s)</tt>, <tt>blue_text(s)</tt>, <tt>cyan_text(s)</tt></li><li><tt>get_path(mod_name,parent_path=None)</tt></li><li><tt>allpath(name)</tt></li><li><tt>cxx_ext_match</tt>, <tt>fortran_ext_match</tt>, <tt>f90_ext_match</tt>,
+<tt>f90_module_name_match</tt></li></ul>
+</div>
+<div class="section" id="numpy-distutils-system-info-module">
+<h4><tt>numpy.distutils.system_info</tt> module</h4>
+<ul class="simple">
+<li><tt>get_info(name,notfound_action=0)</tt></li><li><tt>combine_paths(*args,**kws)</tt></li><li><tt>show_all()</tt></li></ul>
+</div>
+<div class="section" id="numpy-distutils-cpuinfo-module">
+<h4><tt>numpy.distutils.cpuinfo</tt> module</h4>
+<ul class="simple">
+<li><tt>cpuinfo</tt></li></ul>
+</div>
+<div class="section" id="numpy-distutils-log-module">
+<h4><tt>numpy.distutils.log</tt> module</h4>
+<ul class="simple">
+<li><tt>set_verbosity(v)</tt></li></ul>
+</div>
+<div class="section" id="numpy-distutils-exec-command-module">
+<h4><tt>numpy.distutils.exec_command</tt> module</h4>
+<ul class="simple">
+<li><tt>get_pythonexe()</tt></li><li><tt>splitcmdline(line)</tt></li><li><tt>find_executable(exe, path=None)</tt></li><li><tt>exec_command( command, execute_in='', use_shell=None, use_tee=None, **env )</tt></li></ul>
+</div>
+</div>
+<div class="section" id="the-info-py-file">
+<h3>The <tt>info.py</tt> file</h3>
+<p>Scipy package import hooks assume that each Scipy package contains
+<tt>info.py</tt> file that contains overall documentation about the package
+and some variables defining the order of package imports, dependence
+relations between packages, etc.</p>
+<p>The following information will be looked in the <tt>info.py</tt> file:</p>
+<dl><dt>__doc__</dt>
+<dd>The documentation string of the package.</dd>
+<dt>__doc_title__</dt>
+<dd>The title of the package. If not defined then the first non-empty
+line of <tt>__doc__</tt> will be used.</dd>
+<dt>__all__</dt>
+<dd>List of symbols that package exports. Optional.</dd>
+<dt>global_symbols</dt>
+<dd>List of names that should be imported to numpy name space. To import
+all symbols to <tt>numpy</tt> namespace, define <tt>global_symbols=['*']</tt>.</dd>
+<dt>depends</dt>
+<dd>List of names that the package depends on. Prefix <tt>numpy.</tt>
+will be automatically added to package names. For example,
+use <tt>testing</tt> to indicate dependence on <tt>numpy.testing</tt>
+package. Default value is <tt>[]</tt>.</dd>
+<dt>postpone_import</dt>
+<dd>Boolean variable indicating that importing the package should be
+postponed until the first attempt of its usage. Default value is <tt>False</tt>.
+Depreciated.</dd>
+</dl></div>
+<div class="section" id="the-init-py-file">
+<h3>The <tt>__init__.py</tt> file</h3>
+<p>To speed up the import time as well as to minimize memory usage, numpy
+uses ppimport hooks to transparently postpone importing large modules
+that might not be used during the Scipy usage session. But in order to
+have an access to the documentation of all Scipy packages, including
+of the postponed packages, the documentation string of a package (that would
+usually reside in <tt>__init__.py</tt> file) should be copied also
+to <tt>info.py</tt> file.</p>
+<p>So, the header a typical <tt>__init__.py</tt> file is:</p>
+<pre>#
+# Package ... - ...
+#
+
+from info import __doc__
+...
+
+from numpy.testing import ScipyTest
+test = ScipyTest().test</pre></div>
+<div class="section" id="the-tests-directory">
+<h3>The <tt>tests/</tt> directory</h3>
+<p>Ideally, every Python code, extension module, or subpackage in Scipy
+package directory should have the corresponding <tt>test_&lt;name&gt;.py</tt>
+file in <tt>tests/</tt> directory.  This file should define classes
+derived from <tt>ScipyTestCase</tt> (or from <tt>unittest.TestCase</tt>) class
+and have names starting with <tt>test</tt>. The methods of these classes
+which names start with <tt>bench</tt>, <tt>check</tt>, or <tt>test</tt>, are passed
+on to unittest machinery. In addition, the value of the first optional
+argument of these methods determine the level of the corresponding
+test. Default level is 1.</p>
+<p>A minimal example of a <tt>test_yyy.py</tt> file that implements tests for
+a Scipy package module <tt>numpy.xxx.yyy</tt> containing a function
+<tt>zzz()</tt>, is shown below:</p>
+<pre>import sys
+from numpy.testing import *
+
+set_package_path()
+# import xxx symbols
+from xxx.yyy import zzz
+restore_path()
+
+#Optional:
+set_local_path()
+# import modules that are located in the same directory as this file.
+restore_path()
+
+class test_zzz(ScipyTestCase):
+    def check_simple(self, level=1):
+        assert zzz()=='Hello from zzz'
+    #...
+
+if __name__ == &quot;__main__&quot;:
+    ScipyTest().run()</pre><p><tt>ScipyTestCase</tt> is derived from <tt>unittest.TestCase</tt> and it
+basically only implements an additional method <tt>measure(self,
+code_str, times=1)</tt>.</p>
+<p><tt>numpy.testing</tt> module provides also the following convenience
+functions:</p>
+<pre>assert_equal(actual,desired,err_msg='',verbose=1)
+assert_almost_equal(actual,desired,decimal=7,err_msg='',verbose=1)
+assert_approx_equal(actual,desired,significant=7,err_msg='',verbose=1)
+assert_array_equal(x,y,err_msg='')
+assert_array_almost_equal(x,y,decimal=6,err_msg='')
+rand(*shape) # returns random array with a given shape</pre><p><tt>ScipyTest</tt> can be used for running <tt>tests/test_*.py</tt> scripts.
+For instance, to run all test scripts of the module <tt>xxx</tt>, execute
+in Python:</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; ScipyTest('xxx').test(level=1,verbosity=1)
+</pre>
+</blockquote>
+<p>or equivalently,</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; import xxx
+&gt;&gt;&gt; ScipyTest(xxx).test(level=1,verbosity=1)
+</pre>
+</blockquote>
+<p>To run only tests for <tt>xxx.yyy</tt> module, execute:</p>
+<blockquote>
+<pre class="doctest-block">
+&gt;&gt;&gt; ScipyTest('xxx.yyy').test(level=1,verbosity=1)
+</pre>
+</blockquote>
+<p>To take the level and verbosity parameters for tests from
+<tt>sys.argv</tt>, use <tt>ScipyTest.run()</tt> method (this is supported only
+when <tt>optparse</tt> is installed).</p>
+</div>
+<span class="anchor" id="line-514"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="numpy_distutils37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Documentation/numpy_distutils">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Documentation/numpy_distutils?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:28 GMT -->
+</html>
+

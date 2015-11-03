@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:12:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Matplotlib/Matplotlib_and_Zope - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Matplotlib_and_Zope" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FMatplotlib_and_Zope&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Matplotlib_and_Zope456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Matplotlib_and_Zope4c2c.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FMatplotlib_and_Zope%22" rel="nofollow" title="Click to do a full-text search for this title">Matplotlib_and_Zope</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Matplotlib_and_Zope.html">Matplotlib_and_Zope</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib_and_Zope37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><ol type="0"><li>Prerequisites: You need to have the following installed to successfully run this example: Zope, Matplotlib (on top of Zope's Python), Python Image Library (PIL). And one more thing - probably every body does this right, but just in case - zope instance home directory has to be writable, for following to work. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span></li><li class="gap">Create a file (e.g. mpl.py) in INSTANCEHOME\Extensions: <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span></li></ol><p class="line867"><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-aa41dfab1cce6ac285090b04f53550e966e062d7\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_1">   1</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_2">   2</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_2"></span><span class="anchor" id="line-2-1"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">'</span><span class="String">Agg</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_3">   3</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_4">   4</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">from</span> <span class="ID">os</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_5">   5</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_5"></span><span class="anchor" id="line-5-1"></span><span class="ResWord">from</span> <span class="ID">StringIO</span> <span class="ResWord">import</span> <span class="ID">StringIO</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_6">   6</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_6"></span><span class="anchor" id="line-6-1"></span><span class="ResWord">from</span> <span class="ID">PIL</span> <span class="ResWord">import</span> <span class="ID">Image</span> <span class="ResWord">as</span> <span class="ID">PILImage</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_7">   7</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_7"></span><span class="anchor" id="line-7-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_agg</span> <span class="ResWord">import</span> <span class="ID">FigureCanvasAgg</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_8">   8</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">def</span> <span class="ID">chart</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_9">   9</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_9"></span><span class="anchor" id="line-9-1"></span>    <span class="ID">clf</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_10">  10</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_10"></span><span class="anchor" id="line-10-1"></span>    <span class="ID">img_dpi</span>=<span class="Number">72</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_11">  11</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_11"></span><span class="anchor" id="line-11-1"></span>    <span class="ID">width</span>=<span class="Number">400</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_12">  12</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_12"></span><span class="anchor" id="line-12-1"></span>    <span class="ID">height</span>=<span class="Number">300</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_13">  13</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_13"></span><span class="anchor" id="line-13-1"></span>    <span class="ID">fig</span>=<span class="ID">figure</span>(<span class="ID">dpi</span>=<span class="ID">img_dpi</span>, <span class="ID">figsize</span>=(<span class="ID">width</span>/<span class="ID">img_dpi</span>, <span class="ID">height</span>/<span class="ID">img_dpi</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_14">  14</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_14"></span><span class="anchor" id="line-14-1"></span>    <span class="ID">x</span>=<span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">2</span>*<span class="ID">pi</span>+<span class="Number">0.1</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_15">  15</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_15"></span><span class="anchor" id="line-15-1"></span>    <span class="ID">sine</span>=<span class="ID">plot</span>(<span class="ID">x</span>, <span class="ID">sin</span>(<span class="ID">x</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_16">  16</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_16"></span><span class="anchor" id="line-16-1"></span>    <span class="ID">legend</span>(<span class="ID">sine</span>, <span class="String">&quot;</span><span class="String">y=sin x</span><span class="String">&quot;</span>, <span class="String">&quot;</span><span class="String">upper right</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_17">  17</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_17"></span><span class="anchor" id="line-17-1"></span>    <span class="ID">xlabel</span>(<span class="String">'</span><span class="String">x</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_18">  18</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_18"></span><span class="anchor" id="line-18-1"></span>    <span class="ID">ylabel</span>(<span class="String">'</span><span class="String">y=sin x</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_19">  19</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_19"></span><span class="anchor" id="line-19-1"></span>    <span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_20">  20</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_20"></span><span class="anchor" id="line-20-1"></span>    <span class="ID">canvas</span> = <span class="ID">FigureCanvasAgg</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_21">  21</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_21"></span><span class="anchor" id="line-21-1"></span>    <span class="ID">canvas</span>.<span class="ID">draw</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_22">  22</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_22"></span><span class="anchor" id="line-22-1"></span>    <span class="ID">size</span> = (<span class="ResWord">int</span>(<span class="ID">canvas</span>.<span class="ID">figure</span>.<span class="ID">get_figwidth</span>())*<span class="ID">img_dpi</span>, <span class="ResWord">int</span>(<span class="ID">canvas</span>.<span class="ID">figure</span>.<span class="ID">get_figheight</span>())*<span class="ID">img_dpi</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_23">  23</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_23"></span><span class="anchor" id="line-23-1"></span>    <span class="ID">buf</span>=<span class="ID">canvas</span>.<span class="ID">tostring_rgb</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_24">  24</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_24"></span><span class="anchor" id="line-24-1"></span>    <span class="ID">im</span>=<span class="ID">PILImage</span>.<span class="ID">fromstring</span>(<span class="String">'</span><span class="String">RGB</span><span class="String">'</span>, <span class="ID">size</span>, <span class="ID">buf</span>, <span class="String">'</span><span class="String">raw</span><span class="String">'</span>, <span class="String">'</span><span class="String">RGB</span><span class="String">'</span>, <span class="Number">0</span>, <span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_25">  25</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_25"></span><span class="anchor" id="line-25-1"></span>    <span class="ID">imgdata</span>=<span class="ID">StringIO</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_26">  26</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_26"></span><span class="anchor" id="line-26-1"></span>    <span class="ID">im</span>.<span class="ID">save</span>(<span class="ID">imgdata</span>, <span class="String">'</span><span class="String">PNG</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_27">  27</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_27"></span><span class="anchor" id="line-27-1"></span>    <span class="ResWord">self</span>.<span class="ID">REQUEST</span>.<span class="ID">RESPONSE</span>.<span class="ID">setHeader</span>(<span class="String">'</span><span class="String">Pragma</span><span class="String">'</span>, <span class="String">'</span><span class="String">no-cache</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_28">  28</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_28"></span><span class="anchor" id="line-28-1"></span>    <span class="ResWord">self</span>.<span class="ID">REQUEST</span>.<span class="ID">RESPONSE</span>.<span class="ID">setHeader</span>(<span class="String">'</span><span class="String">Content-Type</span><span class="String">'</span>, <span class="String">'</span><span class="String">image/png</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-aa41dfab1cce6ac285090b04f53550e966e062d7_29">  29</a> </span><span class="LineAnchor" id="CA-aa41dfab1cce6ac285090b04f53550e966e062d7_29"></span><span class="anchor" id="line-29-1"></span>    <span class="ResWord">return</span> <span class="ID">imgdata</span>.<span class="ID">getvalue</span>()</span>
+</pre></div></div><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line862">2. Then create an external method in ZMI (e.g. Id -&gt; mplchart, module name -&gt;  <span class="anchor" id="line-38"></span>mpl, function name -&gt; chart). <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">3. Click the Test tab and you should see the sine plot. <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-43"></span><a href="../../CategoryCookbookMatplotlib.html">CategoryCookbookMatplotlib</a> <span class="anchor" id="line-44"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/Matplotlib_and_Zope  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib_and_Zope37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Matplotlib_and_Zope by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:12:03 GMT -->
+</html>
+

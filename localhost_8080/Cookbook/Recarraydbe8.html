@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Recarray?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Recarray - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Recarray" href="../../external.html?link=http://localhost:8080/Cookbook/Recarray?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FRecarray&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Recarray?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Recarray?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Recarray">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Recarray456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Recarray9e43.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FRecarray%22" rel="nofollow" title="Click to do a full-text search for this title">Recarray</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Recarray.html">Cookbook/Recarray</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Recarray.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Recarray37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Recarray">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Addressing_Array_Columns_by_Name">Addressing Array Columns by Name</h1>
+<span class="anchor" id="line-2"></span><p class="line874">There are two very closely related ways to access array columns by name: recarrays and structured arrays.  Structured arrays are just ndarrays with a complicated data type: <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line867"><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-1caab40e2e0d0290c4453b57a08556b5dda3cc18" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ID">In</span> [<span class="Number">1</span>]: <span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ID">In</span> [<span class="Number">2</span>]: <span class="ID">ones</span>(<span class="Number">3</span>, <span class="ID">dtype</span>=<span class="ID">dtype</span>([(<span class="String">'</span><span class="String">foo</span><span class="String">'</span>, <span class="ResWord">int</span>), (<span class="String">'</span><span class="String">bar</span><span class="String">'</span>, <span class="ResWord">float</span>)]))</span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ID">Out</span>[<span class="Number">2</span>]:</span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ID">array</span>([(<span class="Number">1</span>, <span class="Number">1.0</span>), (<span class="Number">1</span>, <span class="Number">1.0</span>), (<span class="Number">1</span>, <span class="Number">1.0</span>)],</span>
+<span class="line"><span class="anchor" id="line-5-1"></span>      <span class="ID">dtype</span>=[(<span class="String">'</span><span class="String">foo</span><span class="String">'</span>, <span class="String">'</span><span class="String">&lt;i4</span><span class="String">'</span>), (<span class="String">'</span><span class="String">bar</span><span class="String">'</span>, <span class="String">'</span><span class="String">&lt;f8</span><span class="String">'</span>)])</span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">In</span> [<span class="Number">3</span>]: <span class="ID">r</span> = <span class="ID">_</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">In</span> [<span class="Number">4</span>]: <span class="ID">r</span>[<span class="String">'</span><span class="String">foo</span><span class="String">'</span>]</span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="ID">Out</span>[<span class="Number">4</span>]: <span class="ID">array</span>([<span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">1</span>])</span>
+</pre></div></div><span class="anchor" id="line-15"></span><p class="line874">recarray is a subclass of ndarray that just adds attribute access to structured arrays: <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line867"><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-73fd7e5cf9c6bb331fa2922243b19478364caa99" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ID">In</span> [<span class="Number">10</span>]: <span class="ID">r2</span> = <span class="ID">r</span>.<span class="ID">view</span>(<span class="ID">recarray</span>)</span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ID">In</span> [<span class="Number">11</span>]: <span class="ID">r2</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ID">Out</span>[<span class="Number">11</span>]:</span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">recarray</span>([(<span class="Number">1</span>, <span class="Number">1.0</span>), (<span class="Number">1</span>, <span class="Number">1.0</span>), (<span class="Number">1</span>, <span class="Number">1.0</span>)],</span>
+<span class="line"><span class="anchor" id="line-5-2"></span>      <span class="ID">dtype</span>=[(<span class="String">'</span><span class="String">foo</span><span class="String">'</span>, <span class="String">'</span><span class="String">&lt;i4</span><span class="String">'</span>), (<span class="String">'</span><span class="String">bar</span><span class="String">'</span>, <span class="String">'</span><span class="String">&lt;f8</span><span class="String">'</span>)])</span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ID">In</span> [<span class="Number">12</span>]: <span class="ID">r2</span>.<span class="ID">foo</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ID">Out</span>[<span class="Number">12</span>]: <span class="ID">array</span>([<span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">1</span>])</span>
+</pre></div></div><span class="anchor" id="line-27"></span><p class="line874">One downside of recarrays is that the attribute access feature slows down all field accesses, even the r['foo'] form, because it sticks a bunch of pure Python code in the middle. Much code won't notice this, but if you end up having to iterate over an array of records, this will be a hotspot for you. <span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line874">Structured arrays are sometimes confusingly called record arrays. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><ul><li style="list-style-type:none">- lightly adapted from a Robert Kern post of Thu, 26 Jun 2008 15:25:11 -0500 <span class="anchor" id="line-32"></span></li></ul><p class="line867">
+<h1 id="Converting_to_regular_arrays_and_reshaping">Converting to regular arrays and reshaping</h1>
+<span class="anchor" id="line-33"></span><p class="line874">A little script showing how to efficiently reformat structured arrays into normal ndarrays. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line862">Based on: <a class="http" href="../../external.html?link=http://old.nabble.com/printing-structured-arrays-td27794203.html">printing structured arrays</a>. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867"><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-7cdeaa5e815bbe1ccb5f365a4d17dcd078ac652c" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span></span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ID">data</span> = [ (<span class="Number">1</span>, <span class="Number">2</span>), (<span class="Number">3</span>, <span class="Number">4.1</span>), (<span class="Number">13</span>, <span class="Number">77</span>) ]</span>
+<span class="line"><span class="anchor" id="line-4-3"></span><span class="ID">dtype</span> = [(<span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="ResWord">float</span>), (<span class="String">'</span><span class="String">y</span><span class="String">'</span>, <span class="ResWord">float</span>)]</span>
+<span class="line"><span class="anchor" id="line-5-3"></span></span>
+<span class="line"><span class="anchor" id="line-6-3"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> ndarray</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-7-3"></span><span class="ID">nd</span> = <span class="ID">np</span>.<span class="ID">array</span>(<span class="ID">data</span>)</span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="ResWord">print</span> <span class="ID">nd</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ResWord">print</span> (<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured array</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-11-1"></span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ID">struct_1dtype</span> = <span class="ID">np</span>.<span class="ID">array</span>(<span class="ID">data</span>, <span class="ID">dtype</span>=<span class="ID">dtype</span>)</span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="ResWord">print</span> <span class="ID">struct_1dtype</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured to ndarray</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="ID">struct_1dtype_float</span> = <span class="ID">struct_1dtype</span>.<span class="ID">view</span>(<span class="ID">np</span>.<span class="ID">ndarray</span>).<span class="ID">reshape</span>(<span class="ResWord">len</span>(<span class="ID">struct_1dtype</span>), -<span class="Number">1</span>) </span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="ResWord">print</span> <span class="ID">struct_1dtype_float</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured to float: alternative ways</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">struct_1dtype_float_alt</span> = <span class="ID">struct_1dtype</span>.<span class="ID">view</span>((<span class="ID">np</span>.<span class="ID">float</span>, <span class="ResWord">len</span>(<span class="ID">struct_1dtype</span>.<span class="ID">dtype</span>.<span class="ID">names</span>)))</span>
+<span class="line"><span class="anchor" id="line-21-1"></span><span class="ResWord">print</span> <span class="ID">struct_1dtype_float_alt</span></span>
+<span class="line"><span class="anchor" id="line-22-1"></span></span>
+<span class="line"><span class="anchor" id="line-23-1"></span><span class="Comment"># with heterogeneous dtype.</span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="ID">struct_diffdtype</span> = <span class="ID">np</span>.<span class="ID">array</span>([(<span class="Number">1.0</span>, <span class="String">'</span><span class="String">string1</span><span class="String">'</span>, <span class="Number">2.0</span>), (<span class="Number">3.0</span>, <span class="String">'</span><span class="String">string2</span><span class="String">'</span>, <span class="Number">4.1</span>)],</span>
+<span class="line"><span class="anchor" id="line-25-1"></span><span class="ID">dtype</span>=[(<span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="ResWord">float</span>),(<span class="String">'</span><span class="String">str_var</span><span class="String">'</span>, <span class="String">'</span><span class="String">a7</span><span class="String">'</span>),(<span class="String">'</span><span class="String">y</span><span class="String">'</span>,<span class="ResWord">float</span>)])</span>
+<span class="line"><span class="anchor" id="line-26-1"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured array with different dtypes</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-27-1"></span><span class="ResWord">print</span> <span class="ID">struct_diffdtype</span></span>
+<span class="line"><span class="anchor" id="line-28-1"></span><span class="ID">struct_diffdtype_nd</span> = <span class="ID">struct_diffdtype</span>[[<span class="String">'</span><span class="String">str_var</span><span class="String">'</span>, <span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="String">'</span><span class="String">y</span><span class="String">'</span>]].<span class="ID">view</span>(<span class="ID">np</span>.<span class="ID">ndarray</span>).<span class="ID">reshape</span>(<span class="ResWord">len</span>(<span class="ID">struct_diffdtype</span>), -<span class="Number">1</span>) </span>
+<span class="line"><span class="anchor" id="line-29-1"></span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="anchor" id="line-31-1"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured array with different dtypes to reshaped ndarray</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-32-1"></span><span class="ResWord">print</span> <span class="ID">struct_diffdtype_nd</span></span>
+<span class="line"><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span></span>
+<span class="line"><span class="anchor" id="line-35-1"></span><span class="ResWord">print</span>(<span class="String">'</span><span class="SPChar">\n</span><span class="String"> structured array with different dtypes to reshaped float array ommiting string columns</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-36-1"></span><span class="ID">struct_diffdtype_float</span> = <span class="ID">struct_diffdtype</span>[[<span class="String">'</span><span class="String">x</span><span class="String">'</span>, <span class="String">'</span><span class="String">y</span><span class="String">'</span>]].<span class="ID">view</span>(<span class="ResWord">float</span>).<span class="ID">reshape</span>(<span class="ResWord">len</span>(<span class="ID">struct_diffdtype</span>),-<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-37-1"></span><span class="ResWord">print</span> <span class="ID">struct_diffdtype_float</span></span>
+</pre></div></div><span class="anchor" id="line-79"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Recarray37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Recarray">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Recarray?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/mlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:15:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/MayaVi/mlab - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/mlab" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2Fmlab&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Appendix" title="simple_example.png" href="mlab831f.html?action=AttachFile&amp;do=view&amp;target=simple_example.png">
+<link rel="Appendix" title="simpleexample.png" href="mlaba636.html?action=AttachFile&amp;do=view&amp;target=simpleexample.png">
+<link rel="Appendix" title="tvtk.mlab_example.png" href="mlab1023.html?action=AttachFile&amp;do=view&amp;target=tvtk.mlab_example.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="mlab456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../MayaVi.html">MayaVi</a></li><li><a class="backlink" href="mlab34af.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2Fmlab%22" rel="nofollow" title="Click to do a full-text search for this title">mlab</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="mlab.html">Cookbook/MayaVi/mlab</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mlab37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><div><table><tbody><tr>  <td style="background-color: #80FF80"><p class="line862"> This page is about the tvtk.tools.mlab module. You are strongly advised to use the more recent <a class="http" href="../../../external.html?link=http://enthought.github.com/mayavi/mayavi/mlab.html">mayavi.mlab module</a> which can also be used from <em>ipython -wthread</em> or as a library inside another application.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">The <tt class="backtick"></tt>mlab.py<tt class="backtick"></tt> module allows for simple 3D plotting of objects. It provides an object oriented approch to 3d visualization. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line862">It relies on the simple TVTK module, rather than on the full blown Mayavi application. As a result it has less dependencies. However, it is harder to extend and more limited. The developers are not planning any feature addition to this module, and we strongly advise you to use the Mayavi mlab module, which provides the same usecases, but with more functionalities and is under constant development. For more information, you can read <a class="http" href="../../../external.html?link=http://enthought.github.com/mayavi/mayavi/mlab.html">the relevant section of the Mayavi user guide</a> <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867"><strong> Table of Contents </strong> <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#A_Simple_Example">A Simple Example</a></li><li>
+<a href="#Changing_axis_and_colour">Changing axis and colour</a></li><li>
+<a href="#List_of_different_functionalities">List of different functionalities</a></li></ol></div> <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><p class="line867">
+<h1 id="A_Simple_Example">A Simple Example</h1>
+<span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><div><table><tbody><tr>  <td style="background-color: #FF8080"><p class="line862"> <strong>Important:</strong> All these examples must be run in &quot;ipython -wthread&quot; or in a Wx application (like pycrust, or the Mayavi2 application). They <strong>will not work</strong> if you don't use this option.</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><p class="line862">Start with <tt class="backtick">ipython&nbsp;-wthread</tt> and paste the following code:: <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line867"><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-fbf9ffe9c285755f45c6afad54b17205d0332b35\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_1">   1</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">scipy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_2">   2</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_3">   3</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment"># prepare some interesting function:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_4">   4</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">def</span> <span class="ID">f</span>(<span class="ID">x</span>, <span class="ID">y</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_5">   5</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_5"></span><span class="anchor" id="line-5-1"></span>    <span class="ResWord">return</span> <span class="Number">3.0</span>*<span class="ID">scipy</span>.<span class="ID">sin</span>(<span class="ID">x</span>*<span class="ID">y</span>+<span class="Number">1e-4</span>)/(<span class="ID">x</span>*<span class="ID">y</span>+<span class="Number">1e-4</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_6">   6</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_6"></span><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_7">   7</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">x</span> = <span class="ID">scipy</span>.<span class="ID">arange</span>(-<span class="Number">7.</span>, <span class="Number">7.05</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_8">   8</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_8"></span><span class="anchor" id="line-8-1"></span><span class="ID">y</span> = <span class="ID">scipy</span>.<span class="ID">arange</span>(-<span class="Number">5.</span>, <span class="Number">5.05</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_9">   9</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_9"></span><span class="anchor" id="line-9-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_10">  10</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_10"></span><span class="anchor" id="line-10-1"></span><span class="Comment"># 3D visualization of f:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_11">  11</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_11"></span><span class="anchor" id="line-11-1"></span><span class="ResWord">from</span> <span class="ID">enthought.tvtk.tools</span> <span class="ResWord">import</span> <span class="ID">mlab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_12">  12</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_12"></span><span class="anchor" id="line-12-1"></span><span class="ID">fig</span> = <span class="ID">mlab</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_13">  13</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_13"></span><span class="anchor" id="line-13-1"></span><span class="ID">s</span> = <span class="ID">mlab</span>.<span class="ID">SurfRegular</span>(<span class="ID">x</span>, <span class="ID">y</span>, <span class="ID">f</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_14">  14</a> </span><span class="LineAnchor" id="CA-fbf9ffe9c285755f45c6afad54b17205d0332b35_14"></span><span class="anchor" id="line-14-1"></span><span class="ID">fig</span>.<span class="ID">add</span>(<span class="ID">s</span>)</span>
+</pre></div></div><span class="anchor" id="line-35"></span><p class="line867"><img alt="simple_example.png" class="attachment" src="simple_example089d.png?action=AttachFile&amp;do=get&amp;target=simple_example.png" title="simple_example.png" /> <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line867">
+<h1 id="Changing_axis_and_colour">Changing axis and colour</h1>
+<span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line867"><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_1">   1</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_2">   2</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_2"></span><span class="anchor" id="line-2-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_3">   3</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_3"></span><span class="anchor" id="line-3-2"></span>[<span class="ID">x</span>,<span class="ID">y</span>]=<span class="ID">mgrid</span>[-<span class="Number">5</span>:<span class="Number">5</span>:<span class="Number">0.1</span>,-<span class="Number">5</span>:<span class="Number">5</span>:<span class="Number">0.1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_4">   4</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">r</span>=<span class="ID">sqrt</span>(<span class="ID">x</span>**<span class="Number">2</span>+<span class="ID">y</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_5">   5</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_5"></span><span class="anchor" id="line-5-2"></span><span class="ID">z</span>=<span class="ID">sin</span>(<span class="Number">3</span>*<span class="ID">r</span>)/(<span class="ID">r</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_6">   6</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_6"></span><span class="anchor" id="line-6-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_7">   7</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_7"></span><span class="anchor" id="line-7-2"></span><span class="ResWord">from</span> <span class="ID">enthought.tvtk.tools</span> <span class="ResWord">import</span> <span class="ID">mlab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_8">   8</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_8"></span><span class="anchor" id="line-8-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_9">   9</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_9"></span><span class="anchor" id="line-9-2"></span><span class="Comment"># Open a viewer without the object browser:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_10">  10</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_10"></span><span class="anchor" id="line-10-2"></span><span class="ID">f</span>=<span class="ID">mlab</span>.<span class="ID">figure</span>(<span class="ID">browser</span>=<span class="ResWord">False</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_11">  11</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_11"></span><span class="anchor" id="line-11-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_12">  12</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_12"></span><span class="anchor" id="line-12-2"></span><span class="ID">s</span>=<span class="ID">mlab</span>.<span class="ID">Surf</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">z</span>,<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_13">  13</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_13"></span><span class="anchor" id="line-13-2"></span><span class="ID">f</span>.<span class="ID">add</span>(<span class="ID">s</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_14">  14</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_14"></span><span class="anchor" id="line-14-2"></span><span class="ID">s</span>.<span class="ID">scalar_bar</span>.<span class="ID">title</span>=<span class="String">'</span><span class="String">sinc(r)</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_15">  15</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">s</span>.<span class="ID">show_scalar_bar</span>=<span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_16">  16</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_16"></span><span class="anchor" id="line-16-1"></span><span class="Comment"># LUT means &quot;Look-Up Table&quot;, it give the mapping between scalar value and color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_17">  17</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">s</span>.<span class="ID">lut_type</span>=<span class="String">'</span><span class="String">blue-red</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_18">  18</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_18"></span><span class="anchor" id="line-18-1"></span><span class="Comment"># The current figure has two objects, the outline object originaly present, </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_19">  19</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_19"></span><span class="anchor" id="line-19-1"></span><span class="Comment"># and the surf object that we added.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_20">  20</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">f</span>.<span class="ID">objects</span>[<span class="Number">0</span>].<span class="ID">axis</span>.<span class="ID">z_label</span>=<span class="String">'</span><span class="String">value</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_21">  21</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_21"></span><span class="anchor" id="line-21-1"></span><span class="ID">t</span>=<span class="ID">mlab</span>.<span class="ID">Title</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_22">  22</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_22"></span><span class="anchor" id="line-22-1"></span><span class="ID">t</span>.<span class="ID">text</span>=<span class="String">'</span><span class="String">Sampling function</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_23">  23</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_23"></span><span class="anchor" id="line-23-1"></span><span class="ID">f</span>.<span class="ID">add</span>(<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_24">  24</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_24"></span><span class="anchor" id="line-24-1"></span><span class="Comment"># Edit the title properties with the GUI:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_25">  25</a> </span><span class="LineAnchor" id="CA-7d3817d4cb949bc79f5c4c32eaf121f0523adaaf_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">t</span>.<span class="ID">edit_traits</span>()</span>
+</pre></div></div><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><p class="line867"><img alt="tvtk.mlab_example.png" class="attachment" src="tvtk.mlab_examplea793.png?action=AttachFile&amp;do=get&amp;target=tvtk.mlab_example.png" title="tvtk.mlab_example.png" /> <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line867">
+<h1 id="List_of_different_functionalities">List of different functionalities</h1>
+<span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><p class="line874">The implementation provided here is object oriented and each <span class="anchor" id="line-72"></span>visualization capability is implemented as a class that has traits. <span class="anchor" id="line-73"></span>So each of these may be configured.  Each visualization class derives <span class="anchor" id="line-74"></span>(ultimately) from MLabBase which is responsible for adding/removing <span class="anchor" id="line-75"></span>its actors into the render window.  The classes all require that the <span class="anchor" id="line-76"></span><a class="nonexistent" href="../../RenderWindow.html">RenderWindow</a> be a <tt class="backtick">pyface.tvtk.scene.Scene</tt> instance (this constraint <span class="anchor" id="line-77"></span>can be relaxed if necessary later on). <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line874">This module offers the following broad class of functionality: <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><ul><li><p class="line891"><strong>Figure</strong> <span class="anchor" id="line-82"></span><ul><li style="list-style-type:none">This basically manages all of the objects rendered.  Just like <span class="anchor" id="line-83"></span>figure in any Matlab like environment.  A convenience function <span class="anchor" id="line-84"></span><p class="line862">called <tt class="backtick">figure</tt> may be used to create a nice Figure instance. <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span></li></ul></li><li class="gap"><p class="line891"><strong>Glyphs</strong> <span class="anchor" id="line-87"></span><ul><li style="list-style-type:none">This and its subclasses let one place glyphs at points specified <span class="anchor" id="line-88"></span><p class="line862">as inputs.  The subclasses are: <tt class="backtick">Arrows</tt>, <tt class="backtick">Cones</tt>, <tt class="backtick">Cubes</tt>,  <span class="anchor" id="line-89"></span><tt class="backtick">Cylinders</tt>, <tt class="backtick">Spheres</tt>, and <tt class="backtick">Points</tt>. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></li></ul></li><li class="gap"><p class="line891"><strong>Line3</strong> <span class="anchor" id="line-92"></span><ul><li style="list-style-type:none">Draws lines between the points specified at initialization time. <span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span></li></ul></li><li class="gap"><p class="line891"><strong>Outline</strong> <span class="anchor" id="line-95"></span><ul><li style="list-style-type:none">Draws an outline for the contained objects. <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span></li></ul></li><li class="gap"><p class="line891"><strong>Title</strong> <span class="anchor" id="line-98"></span><ul><li style="list-style-type:none">Draws a title for the entire figure. <span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span></li></ul></li><li class="gap"><p class="line891"><strong>LUTBase</strong> <span class="anchor" id="line-101"></span><ul><li style="list-style-type:none">Manages a lookup table and a scalar bar (legend) for it.  This  <span class="anchor" id="line-102"></span>is subclassed by all classes that need a LUT. <span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span></li></ul></li><li class="gap"><p class="line891"><strong><a class="nonexistent" href="../../SurfRegular.html">SurfRegular</a></strong> <span class="anchor" id="line-105"></span><ul><li style="list-style-type:none"><p class="line891"><a class="nonexistent" href="../../MayaVi1.html">MayaVi1</a>'s imv.surf like functionality that plots surfaces given x (1D), y(1D) <span class="anchor" id="line-106"></span>and z (or a callable) arrays. <span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span></li></ul></li><li class="gap"><p class="line891"><strong>SurfRegularC</strong> <span class="anchor" id="line-109"></span><ul><li style="list-style-type:none">Also plots contour lines. <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span></li></ul></li><li class="gap"><p class="line891"><strong><a class="nonexistent" href="../../TriMesh.html">TriMesh</a></strong> <span class="anchor" id="line-112"></span><ul><li style="list-style-type:none">Given triangle connectivity and points, plots a mesh of them. <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span></li></ul></li><li class="gap"><p class="line891"><strong><a class="nonexistent" href="../../FancyTriMesh.html">FancyTriMesh</a></strong> <span class="anchor" id="line-115"></span><ul><li style="list-style-type:none">Plots the mesh using tubes and spheres so its fancier. <span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span></li></ul></li><li class="gap"><p class="line891"><strong>Mesh</strong> <span class="anchor" id="line-118"></span><ul><li style="list-style-type:none">Given x, y generated from scipy.mgrid, and a z to go with it.  Along with optional <span class="anchor" id="line-119"></span>scalars.  This class builds the triangle connectivity (assuming that x, y are from <span class="anchor" id="line-120"></span>scipy.mgrid) and builds a mesh and shows it. <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span></li></ul></li><li class="gap"><p class="line891"><strong><a class="nonexistent" href="../../FancyMesh.html">FancyMesh</a></strong> <span class="anchor" id="line-123"></span><ul><li style="list-style-type:none">Like mesh but shows the mesh using tubes and spheres. <span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span></li></ul></li><li class="gap"><p class="line891"><strong>Surf</strong> <span class="anchor" id="line-126"></span><ul><li style="list-style-type:none">This generates a surface mesh just like Mesh but renders the mesh as <span class="anchor" id="line-127"></span>a surface. <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span></li></ul></li><li class="gap"><p class="line891"><strong>Contour3</strong> <span class="anchor" id="line-130"></span><ul><li style="list-style-type:none">Shows contour for a mesh. <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span></li></ul></li><li class="gap"><p class="line891"><strong><a class="nonexistent" href="../../ImShow.html">ImShow</a></strong> <span class="anchor" id="line-133"></span><ul><li style="list-style-type:none">Allows one to view large numeric arrays as image data using an image <span class="anchor" id="line-134"></span><p class="line862">actor.  This is just like <a class="nonexistent" href="../../MayaVi1.html">MayaVi1</a>'s <tt class="backtick">mayavi.tools.imv.viewi</tt>. <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span></li></ul></li></ul><p class="line862">To see nice examples of all of these look at the <tt class="backtick">test_*</tt> functions at <span class="anchor" id="line-137"></span>the end of this file.  Here is a quick example that uses these test <span class="anchor" id="line-138"></span>functions: <span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><p class="line867"><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_1">   1</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_1"></span><span class="anchor" id="line-1-6"></span><span class="ResWord">from</span> <span class="ID">enthought.tvtk.tools</span> <span class="ResWord">import</span> <span class="ID">mlab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_2">   2</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_2"></span><span class="anchor" id="line-2-3"></span><span class="ID">f</span> = <span class="ID">mlab</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_3">   3</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_3"></span><span class="anchor" id="line-3-3"></span><span class="ID">mlab</span>.<span class="ID">test_surf</span>(<span class="ID">f</span>) <span class="Comment"># Create a spherical harmonic.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_4">   4</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_4"></span><span class="anchor" id="line-4-3"></span><span class="ID">f</span>.<span class="ID">pop</span>() <span class="Comment"># Remove it.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_5">   5</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_5"></span><span class="anchor" id="line-5-3"></span><span class="ID">mlab</span>.<span class="ID">test_molecule</span>(<span class="ID">f</span>) <span class="Comment"># Show a caffeine molecule.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_6">   6</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_6"></span><span class="anchor" id="line-6-3"></span><span class="ID">f</span>.<span class="ID">renwin</span>.<span class="ID">reset_zoom</span>() <span class="Comment"># Scale the view.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_7">   7</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_7"></span><span class="anchor" id="line-7-3"></span><span class="ID">f</span>.<span class="ID">pop</span>() <span class="Comment"># Remove this.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_8">   8</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_8"></span><span class="anchor" id="line-8-3"></span><span class="ID">mlab</span>.<span class="ID">test_lines</span>(<span class="ID">f</span>) <span class="Comment"># Show pretty lines.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_9">   9</a> </span><span class="LineAnchor" id="CA-2530821fca3227e4e73b1b9cdcb1fd1d889d86f8_9"></span><span class="anchor" id="line-9-3"></span><span class="ID">f</span>.<span class="ID">clear</span>() <span class="Comment"># Remove all the stuff on screen.</span></span>
+</pre></div></div><span class="anchor" id="line-151"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MayaVi/mlab  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mlab37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/mlab">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/mlab by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:15:41 GMT -->
+</html>
+

@@ -1,0 +1,69 @@
+Index: gtk/gdk.override
+===================================================================
+--- gtk/gdk.override	(revision 2808)
++++ gtk/gdk.override	(working copy)
+@@ -43,7 +43,7 @@
+ #define GDK_DISPLAY(object) (GDK_DISPLAY_OBJECT(object))
+ 
+ #ifdef HAVE_NUMPY
+-#  include <Numeric/arrayobject.h>
++#  include <numpy/arrayobject.h>
+ static int have_numpy(void);
+ #endif
+ 
+Index: configure.in
+===================================================================
+--- configure.in	(revision 2808)
++++ configure.in	(working copy)
+@@ -270,8 +270,9 @@
+ 
+ if test "x$enable_numpy" != xno; then
+   save_CPPFLAGS="$CPPFLAGS"
+-  CPPFLAGS="$CPPFLAGS $PYTHON_INCLUDES"
+-  AC_CHECK_HEADER([Numeric/arrayobject.h],
++  numpy_INCLUDES=`$PYTHON -c "import numpy; print numpy.get_include()"`
++  CPPFLAGS="$CPPFLAGS $PYTHON_INCLUDES -I$numpy_INCLUDES"
++  AC_CHECK_HEADER([numpy/arrayobject.h],
+     [AC_DEFINE(HAVE_NUMPY,,[whether to include numeric python support])],,
+     [#include <Python.h>])
+   CPPFLAGS="$save_CPPFLAGS"
+Index: setup.py
+===================================================================
+--- setup.py	(revision 2808)
++++ setup.py	(working copy)
+@@ -231,16 +231,16 @@
+         data_files.append((DEFS_DIR, ('pangocairo.defs',)))
+         GLOBAL_MACROS.append(('HAVE_PYCAIRO',1))
+ if gtk.can_build():
+-    if '--disable-numeric' in sys.argv:
+-        sys.argv.remove('--disable-numeric')
++    if '--disable-numpy' in sys.argv:
++        sys.argv.remove('--disable-numpy')
+     else:
+         try:
+-            import Numeric
+-            Numeric # pyflakes
++            import numpy
++            numpy # pyflakes
+             GLOBAL_MACROS.append(('HAVE_NUMPY', 1))
+         except ImportError:
+-            print ('* Numeric module could not be found, '
+-                   'will build without Numeric support.')
++            print ('* numpy module could not be found, '
++                   'will build without NumPy support.')
+     ext_modules.append(gtk)
+     data_files.append((os.path.join(INCLUDE_DIR, 'pygtk'), ('gtk/pygtk.h',)))
+     data_files.append((DEFS_DIR, ('gtk/gdk.defs', 'gtk/gdk-types.defs',
+Index: README
+===================================================================
+--- README	(revision 2808)
++++ README	(working copy)
+@@ -52,7 +52,7 @@
+     GTK+ 2.10.0 or higher for 2.10 API
+   * libglade 2.5.0 or higher (optional)
+   * pycairo 0.5.0 or higher (optional)
+-  * Numeric (optional)
++  * NumPy (optional)
+ 
+ This release is supporting the following GTK+ releases:
+ 

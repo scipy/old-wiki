@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=AttachFile&do=view&target=MPL_size_test.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:46:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:MPL_size_test.py of Cookbook/Matplotlib/AdjustingImageSize - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/AdjustingImageSize" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FAdjustingImageSize&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="MPL_size_test.py" href="AdjustingImageSized037.html?action=AttachFile&amp;do=view&amp;target=MPL_size_test.py">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="AdjustingImageSize456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:MPL_size_test.py of Cookbook/Matplotlib/AdjustingImageSize</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="AdjustingImageSize.html">AdjustingImageSize</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="AdjustingImageSize37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'MPL_size_test.py'</h2><a class="download" href="MPL_size_test434b.py?action=AttachFile&amp;do=get&amp;target=MPL_size_test.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_1">   1</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment">#!/usr/bin/env python2.4</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_2">   2</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_2"></span><span class="anchor" id="line-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_3">   3</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_3"></span><span class="anchor" id="line-3"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_4">   4</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_4"></span><span class="anchor" id="line-4"></span><span class="String">This is a small demo file that helps teach how to adjust figure sizes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_5">   5</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_5"></span><span class="anchor" id="line-5"></span><span class="String">for matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_6">   6</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_6"></span><span class="anchor" id="line-6"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_7">   7</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_7"></span><span class="anchor" id="line-7"></span><span class="String">First a little introduction:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_8">   8</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_8"></span><span class="anchor" id="line-8"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_9">   9</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_9"></span><span class="anchor" id="line-9"></span><span class="String">There are three parameters define an image size (this is not MPL specific):</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_10">  10</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_10"></span><span class="anchor" id="line-10"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_11">  11</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_11"></span><span class="anchor" id="line-11"></span><span class="String">Size in length units (inches, cm, pt, etc): i.e. 5&quot;x7&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_12">  12</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_12"></span><span class="anchor" id="line-12"></span><span class="String">Size in pixels: i.e. 800x600 pixels</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_13">  13</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_13"></span><span class="anchor" id="line-13"></span><span class="String">Dots per inch (dpi) i.e. 100 dpi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_14">  14</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_14"></span><span class="anchor" id="line-14"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_15">  15</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_15"></span><span class="anchor" id="line-15"></span><span class="String">Only two of these are independent, so if you define two of them, the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_16">  16</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_16"></span><span class="anchor" id="line-16"></span><span class="String">third can be calculated from the others.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_17">  17</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_17"></span><span class="anchor" id="line-17"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_18">  18</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_18"></span><span class="anchor" id="line-18"></span><span class="String">When displaying on a computer screen (or saved to a PNG), the size in</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_19">  19</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_19"></span><span class="anchor" id="line-19"></span><span class="String">length units is irrelevant, the pixels are simply displayed. When</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_20">  20</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_20"></span><span class="anchor" id="line-20"></span><span class="String">printed, or saved to PS, EPS or PDF (all designed to support printing),</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_21">  21</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_21"></span><span class="anchor" id="line-21"></span><span class="String">then the Size or dpi is used to determine how to scale the image.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_22">  22</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_22"></span><span class="anchor" id="line-22"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_23">  23</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_23"></span><span class="anchor" id="line-23"></span><span class="String">Now I'm getting into how MPL works:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_24">  24</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_24"></span><span class="anchor" id="line-24"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_25">  25</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_25"></span><span class="anchor" id="line-25"></span><span class="String">1) The size of a figure is defined in length units (inches), and can be</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_26">  26</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_26"></span><span class="anchor" id="line-26"></span><span class="String">set by:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_27">  27</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_27"></span><span class="anchor" id="line-27"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_28">  28</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_28"></span><span class="anchor" id="line-28"></span><span class="String">Figure.set_figsize_inches( (w,h) )</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_29">  29</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_29"></span><span class="anchor" id="line-29"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_30">  30</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_30"></span><span class="anchor" id="line-30"></span><span class="String">2) The layout of the figure is defined in 'figure units' so that as the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_31">  31</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_31"></span><span class="anchor" id="line-31"></span><span class="String">figure size is changed, the layout (eg axes positions) will update.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_32">  32</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_32"></span><span class="anchor" id="line-32"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_33">  33</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_33"></span><span class="anchor" id="line-33"></span><span class="String">3) Size of text, width of lines, etc is defined in terms of length units</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_34">  34</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_34"></span><span class="anchor" id="line-34"></span><span class="String">(points?).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_35">  35</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_35"></span><span class="anchor" id="line-35"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_36">  36</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_36"></span><span class="anchor" id="line-36"></span><span class="String">4) When displaying to the screen, or creating an image (PNG) the pixel</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_37">  37</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_37"></span><span class="anchor" id="line-37"></span><span class="String">size of text and line widths, etc is determined by the dpi setting,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_38">  38</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_38"></span><span class="anchor" id="line-38"></span><span class="String">which is set by:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_39">  39</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_39"></span><span class="anchor" id="line-39"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_40">  40</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_40"></span><span class="anchor" id="line-40"></span><span class="String">Figure.set_dpi( val )</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_41">  41</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_41"></span><span class="anchor" id="line-41"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_42">  42</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_42"></span><span class="anchor" id="line-42"></span><span class="String">The trick here is that when printing, it's natural to think in terms of</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_43">  43</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_43"></span><span class="anchor" id="line-43"></span><span class="String">inches, but when creating an image (for a web page, for instance), it is</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_44">  44</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_44"></span><span class="anchor" id="line-44"></span><span class="String">natural to think in terms of pixel size. However, as of 0.84, pixel size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_45">  45</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_45"></span><span class="anchor" id="line-45"></span><span class="String">can only be set directly in the GTK* back-ends, with the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_46">  46</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_46"></span><span class="anchor" id="line-46"></span><span class="String">canvas.resize(w,h) method. (remember that you can only set two of the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_47">  47</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_47"></span><span class="anchor" id="line-47"></span><span class="String">three size parameters, the third must be calculated from the other</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_48">  48</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_48"></span><span class="anchor" id="line-48"></span><span class="String">two).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_49">  49</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_49"></span><span class="anchor" id="line-49"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_50">  50</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_50"></span><span class="anchor" id="line-50"></span><span class="String">Another trick:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_51">  51</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_51"></span><span class="anchor" id="line-51"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_52">  52</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_52"></span><span class="anchor" id="line-52"></span><span class="String">Figure.savefig() overrides the ppi setting in figure, and uses a default</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_53">  53</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_53"></span><span class="anchor" id="line-53"></span><span class="String">(which on my system at least is 100ppi). I you want to overide it, you</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_54">  54</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_54"></span><span class="anchor" id="line-54"></span><span class="String">can specify the ppi in the savefig call:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_55">  55</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_55"></span><span class="anchor" id="line-55"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_56">  56</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_56"></span><span class="anchor" id="line-56"></span><span class="String">Figure.savefig(filename, ppi=value)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_57">  57</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_57"></span><span class="anchor" id="line-57"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_58">  58</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_58"></span><span class="anchor" id="line-58"></span><span class="String">The following code will hopefully make this more clear, at least for</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_59">  59</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_59"></span><span class="anchor" id="line-59"></span><span class="String">generating PNGs for web pages and the like.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_60">  60</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_60"></span><span class="anchor" id="line-60"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_61">  61</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_61"></span><span class="anchor" id="line-61"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_62">  62</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_62"></span><span class="anchor" id="line-62"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_63">  63</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_63"></span><span class="anchor" id="line-63"></span><span class="ResWord">import</span> <span class="ID">matplotlib</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_64">  64</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_64"></span><span class="anchor" id="line-64"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">using MPL version:</span><span class="String">&quot;</span>, <span class="ID">matplotlib</span>.<span class="ID">__version__</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_65">  65</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_65"></span><span class="anchor" id="line-65"></span><span class="ID">matplotlib</span>.<span class="ID">use</span>(<span class="String">&quot;</span><span class="String">WXAgg</span><span class="String">&quot;</span>) <span class="Comment"># do this before pylab so you don'tget the default back end.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_66">  66</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_66"></span><span class="anchor" id="line-66"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_67">  67</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_67"></span><span class="anchor" id="line-67"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_68">  68</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_68"></span><span class="anchor" id="line-68"></span><span class="ResWord">import</span> <span class="ID">matplotlib.numerix</span> <span class="ResWord">as</span> <span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_69">  69</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_69"></span><span class="anchor" id="line-69"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_70">  70</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_70"></span><span class="anchor" id="line-70"></span><span class="Comment"># Generate and plot some simple data:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_71">  71</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_71"></span><span class="anchor" id="line-71"></span><span class="ID">x</span> = <span class="ID">N</span>.<span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">2</span>*<span class="ID">N</span>.<span class="ID">pi</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_72">  72</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_72"></span><span class="anchor" id="line-72"></span><span class="ID">y</span> = <span class="ID">N</span>.<span class="ID">sin</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_73">  73</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_73"></span><span class="anchor" id="line-73"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_74">  74</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_74"></span><span class="anchor" id="line-74"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">x</span>,<span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_75">  75</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_75"></span><span class="anchor" id="line-75"></span><span class="ID">F</span> = <span class="ID">pylab</span>.<span class="ID">gcf</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_76">  76</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_76"></span><span class="anchor" id="line-76"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_77">  77</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_77"></span><span class="anchor" id="line-77"></span><span class="Comment"># Now check everything with the defaults:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_78">  78</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_78"></span><span class="anchor" id="line-78"></span><span class="ID">DPI</span> = <span class="ID">F</span>.<span class="ID">get_dpi</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_79">  79</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_79"></span><span class="anchor" id="line-79"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">DPI:</span><span class="String">&quot;</span>, <span class="ID">DPI</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_80">  80</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_80"></span><span class="anchor" id="line-80"></span><span class="ID">DefaultSize</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_81">  81</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_81"></span><span class="anchor" id="line-81"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Default size in Inches</span><span class="String">&quot;</span>, <span class="ID">DefaultSize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_82">  82</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_82"></span><span class="anchor" id="line-82"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Which should result in a </span><span class="String">%i</span><span class="String"> x </span><span class="String">%i</span><span class="String"> Image</span><span class="String">&quot;</span>%(<span class="ID">DPI</span>*<span class="ID">DefaultSize</span>[<span class="Number">0</span>], <span class="ID">DPI</span>*<span class="ID">DefaultSize</span>[<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_83">  83</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_83"></span><span class="anchor" id="line-83"></span><span class="Comment"># the default is 100dpi for savefig:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_84">  84</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_84"></span><span class="anchor" id="line-84"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test1.png</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_85">  85</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_85"></span><span class="anchor" id="line-85"></span><span class="Comment"># this gives me a 797 x 566 pixel image, which is about 100 DPI</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_86">  86</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_86"></span><span class="anchor" id="line-86"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_87">  87</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_87"></span><span class="anchor" id="line-87"></span><span class="Comment"># Now make the image twice as big, while keeping the fonts and all the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_88">  88</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_88"></span><span class="anchor" id="line-88"></span><span class="Comment"># same size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_89">  89</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_89"></span><span class="anchor" id="line-89"></span><span class="ID">F</span>.<span class="ID">set_figsize_inches</span>( (<span class="ID">DefaultSize</span>[<span class="Number">0</span>]*<span class="Number">2</span>, <span class="ID">DefaultSize</span>[<span class="Number">1</span>]*<span class="Number">2</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_90">  90</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_90"></span><span class="anchor" id="line-90"></span><span class="ID">Size</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_91">  91</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_91"></span><span class="anchor" id="line-91"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Size in Inches</span><span class="String">&quot;</span>, <span class="ID">Size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_92">  92</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_92"></span><span class="anchor" id="line-92"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test2.png</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_93">  93</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_93"></span><span class="anchor" id="line-93"></span><span class="Comment"># this results in a 1595x1132 image</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_94">  94</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_94"></span><span class="anchor" id="line-94"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_95">  95</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_95"></span><span class="anchor" id="line-95"></span><span class="Comment"># Now make the image twice as big, making all the fonts and lines</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_96">  96</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_96"></span><span class="anchor" id="line-96"></span><span class="Comment"># bigger too.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_97">  97</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_97"></span><span class="anchor" id="line-97"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_98">  98</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_98"></span><span class="anchor" id="line-98"></span><span class="ID">F</span>.<span class="ID">set_figsize_inches</span>( <span class="ID">DefaultSize</span> )<span class="Comment"># resetthe size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_99">  99</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_99"></span><span class="anchor" id="line-99"></span><span class="ID">Size</span> = <span class="ID">F</span>.<span class="ID">get_size_inches</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_100"> 100</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_100"></span><span class="anchor" id="line-100"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Size in Inches</span><span class="String">&quot;</span>, <span class="ID">Size</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_101"> 101</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_101"></span><span class="anchor" id="line-101"></span><span class="ID">F</span>.<span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">test3.png</span><span class="String">&quot;</span>, <span class="ID">dpi</span> = (<span class="Number">200</span>)) <span class="Comment"># change the dpi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_102"> 102</a> </span><span class="LineAnchor" id="CA-a1cf2ed7660feec424b5685b2d575cc11e0f38ca_102"></span><span class="anchor" id="line-102"></span><span class="Comment"># this also results in a 1595x1132 image, but the fonts are larger.</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="MPL_size_test.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327d32.54d756021559eba904e1f84cb3c90f7291da9321">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="MPL_size_test434b.py?action=AttachFile&amp;do=get&amp;target=MPL_size_test.py">get</a>&nbsp;| <a href="AdjustingImageSized037.html?action=AttachFile&amp;do=view&amp;target=MPL_size_test.py">view</a>] (2006-01-22 20:55:33, 3.2 KB) [[attachment:MPL_size_test.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="AdjustingImageSize37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/AdjustingImageSize">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/AdjustingImageSize?action=AttachFile&do=view&target=MPL_size_test.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:46:39 GMT -->
+</html>
+

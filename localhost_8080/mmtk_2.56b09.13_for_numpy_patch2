@@ -1,0 +1,2602 @@
+Only in MMTK-2.5.13-numpy/: 1
+Only in MMTK-2.5.13-numpy/: build
+Only in MMTK-2.5.13-numpy/config: intlen
+Only in MMTK-2.5.13-numpy/config: libm_test
+diff -rc MMTK-2.5.13/Examples/LangevinDynamics/LangevinDynamics.py MMTK-2.5.13-numpy/Examples/LangevinDynamics/LangevinDynamics.py
+*** MMTK-2.5.13/Examples/LangevinDynamics/LangevinDynamics.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/LangevinDynamics/LangevinDynamics.py	2006-09-20 18:03:25.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements a Langevin integrator.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 8,14 ****
+                   Units, ParticleProperties
+  import MMTK_langevin
+  import MMTK_forcefield
+! import Numeric, operator
+  
+  #
+  # Langevin integrator
+--- 10,16 ----
+                   Units, ParticleProperties
+  import MMTK_langevin
+  import MMTK_forcefield
+! import numpy.oldnumeric as Numeric, operator
+  
+  #
+  # Langevin integrator
+diff -rc MMTK-2.5.13/Examples/MonteCarlo/backbone.py MMTK-2.5.13-numpy/Examples/MonteCarlo/backbone.py
+*** MMTK-2.5.13/Examples/MonteCarlo/backbone.py	2005-12-20 10:11:54.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/MonteCarlo/backbone.py	2006-09-20 18:03:25.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Generate an ensemble of backbone configurations for a protein using
+  # a simplified protein model which consists only of the C_alpha atoms.
+  # The ensemble is written to a trajectory file.
+***************
+*** 9,15 ****
+  from MMTK.NormalModes import NormalModes
+  from MMTK.Random import gaussian
+  from MMTK.Trajectory import Trajectory, SnapshotGenerator, TrajectoryOutput
+! import Numeric
+  
+  # Construct the system. The scaling factor of 0.1 for the CalphaForceField
+  # was determined empirically for a C-phycocyanin dimer at 300 K; its value
+--- 11,17 ----
+  from MMTK.NormalModes import NormalModes
+  from MMTK.Random import gaussian
+  from MMTK.Trajectory import Trajectory, SnapshotGenerator, TrajectoryOutput
+! import numpy.oldnumeric as Numeric
+  
+  # Construct the system. The scaling factor of 0.1 for the CalphaForceField
+  # was determined empirically for a C-phycocyanin dimer at 300 K; its value
+diff -rc MMTK-2.5.13/Examples/NormalModes/constrained_modes.py MMTK-2.5.13-numpy/Examples/NormalModes/constrained_modes.py
+*** MMTK-2.5.13/Examples/NormalModes/constrained_modes.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/NormalModes/constrained_modes.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # A normal mode calculation in the subspace of residue rigid-body motion.
+  #
+  
+***************
+*** 9,15 ****
+  from MMTK.Minimization import ConjugateGradientMinimizer
+  from MMTK.Trajectory import StandardLogOutput
+  
+! import Numeric
+  
+  # Construct system
+  universe = InfiniteUniverse(Amber94ForceField())
+--- 11,17 ----
+  from MMTK.Minimization import ConjugateGradientMinimizer
+  from MMTK.Trajectory import StandardLogOutput
+  
+! import numpy.oldnumeric as Numeric
+  
+  # Construct system
+  universe = InfiniteUniverse(Amber94ForceField())
+diff -rc MMTK-2.5.13/Examples/NormalModes/mode_analysis.py MMTK-2.5.13-numpy/Examples/NormalModes/mode_analysis.py
+*** MMTK-2.5.13/Examples/NormalModes/mode_analysis.py	2005-12-20 10:11:54.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/NormalModes/mode_analysis.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,7 ****
+  from MMTK import *
+  from MMTK.Subspace import Subspace
+  from Scientific.Statistics.Histogram import WeightedHistogram, Histogram
+! import Numeric
+  
+  modes = load('~/proteins/lysozyme/lysozyme.umodes')
+  universe = modes.universe
+--- 1,9 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  from MMTK import *
+  from MMTK.Subspace import Subspace
+  from Scientific.Statistics.Histogram import WeightedHistogram, Histogram
+! import numpy.oldnumeric as Numeric
+  
+  modes = load('~/proteins/lysozyme/lysozyme.umodes')
+  universe = modes.universe
+diff -rc MMTK-2.5.13/Examples/Proteins/rotamers.py MMTK-2.5.13-numpy/Examples/Proteins/rotamers.py
+*** MMTK-2.5.13/Examples/Proteins/rotamers.py	2005-12-20 10:58:13.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/Proteins/rotamers.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,10 ****
+  # Modify sidechain dihedral angles
+  #
+  
+  from MMTK import *
+  from MMTK.Proteins import Protein
+  from MMTK.Trajectory import Trajectory, SnapshotGenerator, TrajectoryOutput
+! import Numeric; N = Numeric
+  
+  # Construct system: lysozyme in vaccuum
+  universe = InfiniteUniverse()
+--- 1,12 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Modify sidechain dihedral angles
+  #
+  
+  from MMTK import *
+  from MMTK.Proteins import Protein
+  from MMTK.Trajectory import Trajectory, SnapshotGenerator, TrajectoryOutput
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  # Construct system: lysozyme in vaccuum
+  universe = InfiniteUniverse()
+diff -rc MMTK-2.5.13/Examples/Trajectories/calpha_trajectory.py MMTK-2.5.13-numpy/Examples/Trajectories/calpha_trajectory.py
+*** MMTK-2.5.13/Examples/Trajectories/calpha_trajectory.py	2005-12-20 10:11:54.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/Trajectories/calpha_trajectory.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This program reads a trajecory containing one or more proteins
+  # and extracts a trajectory for a C-alpha model, which it stores in
+  # a new trajectory. This trajectory is smaller and easier to analyze
+***************
+*** 12,18 ****
+  from MMTK import *
+  from MMTK.Trajectory import Trajectory, TrajectoryOutput, SnapshotGenerator
+  from MMTK.Proteins import Protein, PeptideChain
+! import Numeric
+  
+  # Open the input trajectory.
+  trajectory = Trajectory(None, 'full_trajectory.nc')
+--- 14,20 ----
+  from MMTK import *
+  from MMTK.Trajectory import Trajectory, TrajectoryOutput, SnapshotGenerator
+  from MMTK.Proteins import Protein, PeptideChain
+! import numpy.oldnumeric as Numeric
+  
+  # Open the input trajectory.
+  trajectory = Trajectory(None, 'full_trajectory.nc')
+diff -rc MMTK-2.5.13/Examples/Visualization/additional_objects.py MMTK-2.5.13-numpy/Examples/Visualization/additional_objects.py
+*** MMTK-2.5.13/Examples/Visualization/additional_objects.py	2005-12-20 10:11:54.000000000 -0700
+--- MMTK-2.5.13-numpy/Examples/Visualization/additional_objects.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,9 ****
+  # Generate a protein backbone representation plus an indication
+  # of the principal axes of inertia by arrows.
+  #
+  from MMTK import *
+  from MMTK.Proteins import Protein
+! import Numeric, LinearAlgebra
+  # Import the graphics module. Substitute any other graphics
+  # module name to make the example use that module.
+  from Scientific.Visualization import VRML; module = VRML
+--- 1,11 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Generate a protein backbone representation plus an indication
+  # of the principal axes of inertia by arrows.
+  #
+  from MMTK import *
+  from MMTK.Proteins import Protein
+! import numpy.oldnumeric as Numeric, numpy.oldnumeric.linear_algebra as LinearAlgebra
+  # Import the graphics module. Substitute any other graphics
+  # module name to make the example use that module.
+  from Scientific.Visualization import VRML; module = VRML
+diff -rc MMTK-2.5.13/Include/MMTK/core.h MMTK-2.5.13-numpy/Include/MMTK/core.h
+*** MMTK-2.5.13/Include/MMTK/core.h	2005-12-20 10:11:55.000000000 -0700
+--- MMTK-2.5.13-numpy/Include/MMTK/core.h	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 8,14 ****
+  #ifndef MMTK_H
+  
+  #include "Python.h"
+! #include "Numeric/arrayobject.h"
+  
+  /* MinGW doesn't have this */
+  #ifndef M_PI
+--- 8,14 ----
+  #ifndef MMTK_H
+  
+  #include "Python.h"
+! #include "numpy/oldnumeric.h"
+  
+  /* MinGW doesn't have this */
+  #ifndef M_PI
+diff -rc MMTK-2.5.13/Include/MMTK/numeric.pxi MMTK-2.5.13-numpy/Include/MMTK/numeric.pxi
+*** MMTK-2.5.13/Include/MMTK/numeric.pxi	2005-12-20 10:58:14.000000000 -0700
+--- MMTK-2.5.13-numpy/Include/MMTK/numeric.pxi	2006-09-20 18:04:09.000000000 -0600
+***************
+*** 1,4 ****
+! cdef extern from "Numeric/arrayobject.h": 
+  
+      void import_array()
+  
+--- 1,4 ----
+! cdef extern from "numpy/oldnumeric.h": 
+  
+      void import_array()
+  
+diff -rc MMTK-2.5.13/MMTK/ChargeFit.py MMTK-2.5.13-numpy/MMTK/ChargeFit.py
+*** MMTK-2.5.13/MMTK/ChargeFit.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ChargeFit.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module contains code for charge fitting.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 19,25 ****
+  
+  
+  from MMTK import Random, Units, Utility
+! import LinearAlgebra, Numeric, operator
+  from Scientific.Geometry import Vector
+  
+  class ChargeFit:
+--- 21,27 ----
+  
+  
+  from MMTK import Random, Units, Utility
+! import numpy.oldnumeric.linear_algebra as LinearAlgebra, numpy.oldnumeric as Numeric, operator
+  from Scientific.Geometry import Vector
+  
+  class ChargeFit:
+diff -rc MMTK-2.5.13/MMTK/ChemicalObjects.py MMTK-2.5.13-numpy/MMTK/ChemicalObjects.py
+*** MMTK-2.5.13/MMTK/ChemicalObjects.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ChemicalObjects.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements classes that represent atoms, molecules, and
+  # complexes. They are made as copies from blueprints in the database.
+  #
+***************
+*** 10,16 ****
+  from Scientific.Geometry.Transformation import Rotation, Translation
+  from Scientific.DictWithDefault import DictWithDefault
+  from Scientific.Geometry import Objects3D
+! import copy, Numeric, operator, string, types
+  
+  #
+  # The base class for all chemical objects.
+--- 12,18 ----
+  from Scientific.Geometry.Transformation import Rotation, Translation
+  from Scientific.DictWithDefault import DictWithDefault
+  from Scientific.Geometry import Objects3D
+! import copy, numpy.oldnumeric as Numeric, operator, string, types
+  
+  #
+  # The base class for all chemical objects.
+diff -rc MMTK-2.5.13/MMTK/Collections.py MMTK-2.5.13-numpy/MMTK/Collections.py
+*** MMTK-2.5.13/MMTK/Collections.py	2005-12-20 10:58:20.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Collections.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module defines collections of chemical objects.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 7,13 ****
+  import ConfigIO, Utility, Units, ParticleProperties, Visualization
+  from Scientific.Geometry import Vector, Tensor, Objects3D
+  from Scientific.Geometry import Quaternion, Transformation
+! import copy, Numeric, operator, types
+  
+  #
+  # This class defines groups of atoms. It is used as a base class
+--- 9,15 ----
+  import ConfigIO, Utility, Units, ParticleProperties, Visualization
+  from Scientific.Geometry import Vector, Tensor, Objects3D
+  from Scientific.Geometry import Quaternion, Transformation
+! import copy, numpy.oldnumeric as Numeric, operator, types
+  
+  #
+  # This class defines groups of atoms. It is used as a base class
+***************
+*** 119,125 ****
+      def rotationalConstants(self, conf=None):
+          """Returns a sorted array of rotational constants A, B, C
+          in internal units."""
+!         from Numeric import sort
+          from Units import h, pi
+          com, i = self.centerAndMomentOfInertia(conf)
+          pmi = i.eigenvalues()
+--- 121,127 ----
+      def rotationalConstants(self, conf=None):
+          """Returns a sorted array of rotational constants A, B, C
+          in internal units."""
+!         from numpy.oldnumeric import sort
+          from Units import h, pi
+          com, i = self.centerAndMomentOfInertia(conf)
+          pmi = i.eigenvalues()
+***************
+*** 208,214 ****
+          k = 2.*k
+          for i in range(4):
+              k[i, i] = k[i, i] + possq - Numeric.add.reduce(pos*pos)
+!         import LinearAlgebra
+          e, v = LinearAlgebra.eigenvectors(k)
+          i = Numeric.argmin(e)
+          v = v[i]
+--- 210,216 ----
+          k = 2.*k
+          for i in range(4):
+              k[i, i] = k[i, i] + possq - Numeric.add.reduce(pos*pos)
+!         import numpy.oldnumeric.linear_algebra as LinearAlgebra
+          e, v = LinearAlgebra.eigenvectors(k)
+          i = Numeric.argmin(e)
+          v = v[i]
+***************
+*** 259,272 ****
+            IIl   : x y z <--> a c b
+            IIIl  : x y z <--> b a c
+          """
+!         from LinearAlgebra import determinant
+          cm, inertia = self.centerAndMomentOfInertia()
+          self.translateBy(-cm)
+          ev, diag = inertia.diagonalization()
+          if determinant(diag.array) < 0:
+              diag.array[0] = -diag.array[0]
+          if repr != None:
+!             from Numeric import argsort, array
+              seq = argsort(ev)
+              if repr == 'Ir':
+                  seq = array([seq[1], seq[2], seq[0]])
+--- 261,274 ----
+            IIl   : x y z <--> a c b
+            IIIl  : x y z <--> b a c
+          """
+!         from numpy.oldnumeric.linear_algebra import determinant
+          cm, inertia = self.centerAndMomentOfInertia()
+          self.translateBy(-cm)
+          ev, diag = inertia.diagonalization()
+          if determinant(diag.array) < 0:
+              diag.array[0] = -diag.array[0]
+          if repr != None:
+!             from numpy.oldnumeric import argsort, array
+              seq = argsort(ev)
+              if repr == 'Ir':
+                  seq = array([seq[1], seq[2], seq[0]])
+diff -rc MMTK-2.5.13/MMTK/ConfigIO.py MMTK-2.5.13-numpy/MMTK/ConfigIO.py
+*** MMTK-2.5.13/MMTK/ConfigIO.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ConfigIO.py	2006-09-20 18:03:26.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module deals with input and output of configurations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 11,17 ****
+                                            rotatePoint
+  from Scientific.Geometry import Vector
+  from Scientific.Visualization import VRML
+! import Numeric, os, string
+  
+  #
+  # This class represents a Z-Matrix. Z-Matrix data consists of a list
+--- 13,19 ----
+                                            rotatePoint
+  from Scientific.Geometry import Vector
+  from Scientific.Visualization import VRML
+! import numpy.oldnumeric as Numeric, os, string
+  
+  #
+  # This class represents a Z-Matrix. Z-Matrix data consists of a list
+diff -rc MMTK-2.5.13/MMTK/Database/Atoms/deut.py MMTK-2.5.13-numpy/MMTK/Database/Atoms/deut.py
+*** MMTK-2.5.13/MMTK/Database/Atoms/deut.py	2005-12-20 10:11:56.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Database/Atoms/deut.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,6 ****
+  from MMTK import *
+  from MMTK.ChemicalObjects import Group
+! from Numeric import sqrt
+  
+  residues = ['alanine', 'arginine', 'asparagine', 'aspartic_acid',
+              'cysteine', 'cystine_ss', 'glutamic_acid', 'glutamine',
+--- 1,8 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  from MMTK import *
+  from MMTK.ChemicalObjects import Group
+! from numpy.oldnumeric import sqrt
+  
+  residues = ['alanine', 'arginine', 'asparagine', 'aspartic_acid',
+              'cysteine', 'cystine_ss', 'glutamic_acid', 'glutamine',
+diff -rc MMTK-2.5.13/MMTK/DCD.py MMTK-2.5.13-numpy/MMTK/DCD.py
+*** MMTK-2.5.13/MMTK/DCD.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/DCD.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements a DCD reader/writer
+  #
+  # Written by Lutz Ehrlich
+***************
+*** 6,12 ****
+  #
+  import MMTK_DCD
+  import PDB, Trajectory, Units
+! import copy, Numeric, operator
+  
+  
+  class DCDReader(Trajectory.TrajectoryGenerator):
+--- 8,14 ----
+  #
+  import MMTK_DCD
+  import PDB, Trajectory, Units
+! import copy, numpy.oldnumeric as Numeric, operator
+  
+  
+  class DCDReader(Trajectory.TrajectoryGenerator):
+diff -rc MMTK-2.5.13/MMTK/Deformation.py MMTK-2.5.13-numpy/MMTK/Deformation.py
+*** MMTK-2.5.13/MMTK/Deformation.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Deformation.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Deformation energy module
+  #
+  # Written by Konrad Hinsen
+***************
+*** 17,23 ****
+  except ImportError:
+      pass
+  import ParticleProperties
+! import Numeric
+  
+  #
+  # Deformation energy evaluations
+--- 19,25 ----
+  except ImportError:
+      pass
+  import ParticleProperties
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # Deformation energy evaluations
+diff -rc MMTK-2.5.13/MMTK/Dynamics.py MMTK-2.5.13-numpy/MMTK/Dynamics.py
+*** MMTK-2.5.13/MMTK/Dynamics.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Dynamics.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements MD integrators
+  #
+  # Written by Konrad Hinsen
+***************
+*** 9,15 ****
+  
+  import Environment, Features, ThreadManager, Trajectory, Units
+  import MMTK_dynamics
+! import Numeric, operator
+  
+  try:
+      import threading
+--- 11,17 ----
+  
+  import Environment, Features, ThreadManager, Trajectory, Units
+  import MMTK_dynamics
+! import numpy.oldnumeric as Numeric, operator
+  
+  try:
+      import threading
+diff -rc MMTK-2.5.13/MMTK/Environment.py MMTK-2.5.13-numpy/MMTK/Environment.py
+*** MMTK-2.5.13/MMTK/Environment.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Environment.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,10 ****
+  # This module defines environment objects for universes.
+  #
+  # Written by Konrad Hinsen
+  # last revision: 2005-8-30
+  #
+  
+! import Numeric
+  
+  #
+  # The environment object base class
+--- 1,12 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module defines environment objects for universes.
+  #
+  # Written by Konrad Hinsen
+  # last revision: 2005-8-30
+  #
+  
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # The environment object base class
+diff -rc MMTK-2.5.13/MMTK/Field.py MMTK-2.5.13-numpy/MMTK/Field.py
+*** MMTK-2.5.13/MMTK/Field.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Field.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module defines scalar and vector fields in molecular systems
+  #
+  # Written by Konrad Hinsen
+***************
+*** 22,28 ****
+  import Collections, ParticleProperties, Visualization
+  from Scientific.Visualization import Color
+  from Scientific.Geometry import Vector, TensorAnalysis
+! import Numeric
+  
+  class AtomicField:
+  
+--- 24,30 ----
+  import Collections, ParticleProperties, Visualization
+  from Scientific.Visualization import Color
+  from Scientific.Geometry import Vector, TensorAnalysis
+! import numpy.oldnumeric as Numeric
+  
+  class AtomicField:
+  
+diff -rc MMTK-2.5.13/MMTK/ForceFields/BondedInteractions.py MMTK-2.5.13-numpy/MMTK/ForceFields/BondedInteractions.py
+*** MMTK-2.5.13/MMTK/ForceFields/BondedInteractions.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/BondedInteractions.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements classes that represent force fields
+  # for bonded interactions.
+  #
+***************
+*** 10,16 ****
+  from ForceField import ForceField, ForceFieldData
+  from MMTK import Utility
+  from Scientific.Geometry import Vector
+! import Numeric
+  
+  #
+  # The base class BondedForceField provides the common
+--- 12,18 ----
+  from ForceField import ForceField, ForceFieldData
+  from MMTK import Utility
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # The base class BondedForceField provides the common
+diff -rc MMTK-2.5.13/MMTK/ForceFields/BondFF.py MMTK-2.5.13-numpy/MMTK/ForceFields/BondFF.py
+*** MMTK-2.5.13/MMTK/ForceFields/BondFF.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/BondFF.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Detailed harmonic force field for proteins
+  #
+  # Written by Konrad Hinsen
+***************
+*** 10,16 ****
+  from ForceField import ForceField, CompoundForceField
+  from MMTK_deformation import DeformationTerm
+  from Scientific.Geometry import Transformation
+! import Numeric
+  
+  class BondForceField(AmberBondedForceField):
+  
+--- 12,18 ----
+  from ForceField import ForceField, CompoundForceField
+  from MMTK_deformation import DeformationTerm
+  from Scientific.Geometry import Transformation
+! import numpy.oldnumeric as Numeric
+  
+  class BondForceField(AmberBondedForceField):
+  
+diff -rc MMTK-2.5.13/MMTK/ForceFields/CalphaFF.py MMTK-2.5.13-numpy/MMTK/ForceFields/CalphaFF.py
+*** MMTK-2.5.13/MMTK/ForceFields/CalphaFF.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/CalphaFF.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # C-alpha force field
+  #
+  # Written by Konrad Hinsen
+***************
+*** 9,15 ****
+  from ForceField import ForceField, ForceFieldData
+  from MMTK_forcefield import NonbondedList, NonbondedListTerm
+  from MMTK_deformation import CalphaTerm
+! import Numeric
+  
+  #
+  # The deformation force field class
+--- 11,17 ----
+  from ForceField import ForceField, ForceFieldData
+  from MMTK_forcefield import NonbondedList, NonbondedListTerm
+  from MMTK_deformation import CalphaTerm
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # The deformation force field class
+diff -rc MMTK-2.5.13/MMTK/ForceFields/DeformationFF.py MMTK-2.5.13-numpy/MMTK/ForceFields/DeformationFF.py
+*** MMTK-2.5.13/MMTK/ForceFields/DeformationFF.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/DeformationFF.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Deformation force field
+  #
+  # Written by Konrad Hinsen
+***************
+*** 12,18 ****
+      from MMTK_deformation import DeformationTerm
+  except ImportError:
+      pass
+! import Numeric
+  
+  #
+  # The deformation force field class
+--- 14,20 ----
+      from MMTK_deformation import DeformationTerm
+  except ImportError:
+      pass
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # The deformation force field class
+diff -rc MMTK-2.5.13/MMTK/ForceFields/ForceField.py MMTK-2.5.13-numpy/MMTK/ForceFields/ForceField.py
+*** MMTK-2.5.13/MMTK/ForceFields/ForceField.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/ForceField.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements classes that represent general force fields
+  # and force field evaluators.
+  #
+***************
+*** 8,14 ****
+  _undocumented = 1
+  
+  from MMTK import ParticleProperties, Universe, Utility
+! import copy, Numeric, operator, string
+  from MMTK_energy_term import PyEnergyTerm as EnergyTerm
+  
+  # Class definitions
+--- 10,16 ----
+  _undocumented = 1
+  
+  from MMTK import ParticleProperties, Universe, Utility
+! import copy, numpy.oldnumeric as Numeric, operator, string
+  from MMTK_energy_term import PyEnergyTerm as EnergyTerm
+  
+  # Class definitions
+diff -rc MMTK-2.5.13/MMTK/ForceFields/ForceFieldTest.py MMTK-2.5.13-numpy/MMTK/ForceFields/ForceFieldTest.py
+*** MMTK-2.5.13/MMTK/ForceFields/ForceFieldTest.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/ForceFieldTest.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements test functions.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 11,17 ****
+  
+  from MMTK import Utility
+  from Scientific.Geometry import Vector, ex, ey, ez
+! import Numeric
+  
+  #
+  # Check consistency of energies and gradients.
+--- 13,19 ----
+  
+  from MMTK import Utility
+  from Scientific.Geometry import Vector, ex, ey, ez
+! import numpy.oldnumeric as Numeric
+  
+  #
+  # Check consistency of energies and gradients.
+diff -rc MMTK-2.5.13/MMTK/ForceFields/NonBondedInteractions.py MMTK-2.5.13-numpy/MMTK/ForceFields/NonBondedInteractions.py
+*** MMTK-2.5.13/MMTK/ForceFields/NonBondedInteractions.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/NonBondedInteractions.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements classes that represent force fields
+  # for non-bonded interactions
+  #
+***************
+*** 10,16 ****
+  from MMTK import Units, Utility
+  from ForceField import ForceField
+  from Scientific.Geometry import Vector
+! import Numeric, umath
+  
+  # Class definitions
+  
+--- 12,18 ----
+  from MMTK import Units, Utility
+  from ForceField import ForceField
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as Numeric, numpy.oldnumeric as umath
+  
+  # Class definitions
+  
+diff -rc MMTK-2.5.13/MMTK/ForceFields/Restraints.py MMTK-2.5.13-numpy/MMTK/ForceFields/Restraints.py
+*** MMTK-2.5.13/MMTK/ForceFields/Restraints.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ForceFields/Restraints.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Harmonic restraint terms that can be added to a force field.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 25,31 ****
+  from ForceField import ForceField
+  from MMTK_forcefield import HarmonicDistanceTerm, HarmonicAngleTerm, \
+                              CosineDihedralTerm
+! import Numeric
+  
+  class HarmonicDistanceRestraint(ForceField):
+  
+--- 27,33 ----
+  from ForceField import ForceField
+  from MMTK_forcefield import HarmonicDistanceTerm, HarmonicAngleTerm, \
+                              CosineDihedralTerm
+! import numpy.oldnumeric as Numeric
+  
+  class HarmonicDistanceRestraint(ForceField):
+  
+diff -rc MMTK-2.5.13/MMTK/FourierBasis.py MMTK-2.5.13-numpy/MMTK/FourierBasis.py
+*** MMTK-2.5.13/MMTK/FourierBasis.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/FourierBasis.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Fourier basis for low-frequency normal mode calculations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 13,19 ****
+  
+  import ParticleProperties
+  from Scientific.Geometry import Vector
+! import Numeric
+  
+  class FourierBasis:
+  
+--- 15,21 ----
+  
+  import ParticleProperties
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as Numeric
+  
+  class FourierBasis:
+  
+diff -rc MMTK-2.5.13/MMTK/Geometry.py MMTK-2.5.13-numpy/MMTK/Geometry.py
+*** MMTK-2.5.13/MMTK/Geometry.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Geometry.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module defines some geometrical objects in 3D-space.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 12,18 ****
+  """
+  
+  from Scientific.Geometry import Vector
+! import Numeric as N
+  
+  # Error type
+  class GeomError(Exception):
+--- 14,20 ----
+  """
+  
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as N
+  
+  # Error type
+  class GeomError(Exception):
+***************
+*** 150,156 ****
+  
+  ##      def coordList(self, no_nulls = 0):
+  ##          result = []
+! ##          from Numeric import arange
+  ##          for normal in [Vector(1,0,0), Vector(0,1,0), Vector(0,0,1),\
+  ##                         Vector(1,1,1)]:
+  ##              v0 = normal.cross(randomDirection())
+--- 152,158 ----
+  
+  ##      def coordList(self, no_nulls = 0):
+  ##          result = []
+! ##          from numpy.oldnumeric import arange
+  ##          for normal in [Vector(1,0,0), Vector(0,1,0), Vector(0,0,1),\
+  ##                         Vector(1,1,1)]:
+  ##              v0 = normal.cross(randomDirection())
+***************
+*** 404,410 ****
+  
+  ##      def coordList(self):
+  ##          result = []
+! ##          from Numeric import arange
+  ##          v0 = self.normal.cross(randomDirection())
+  ##          for u in arange(0, 2*N.pi, N.pi/64):
+  ##              v = rotateDirection(v0, self.normal, u)
+--- 406,412 ----
+  
+  ##      def coordList(self):
+  ##          result = []
+! ##          from numpy.oldnumeric import arange
+  ##          v0 = self.normal.cross(randomDirection())
+  ##          for u in arange(0, 2*N.pi, N.pi/64):
+  ##              v = rotateDirection(v0, self.normal, u)
+diff -rc MMTK-2.5.13/MMTK/InternalCoordinates.py MMTK-2.5.13-numpy/MMTK/InternalCoordinates.py
+*** MMTK-2.5.13/MMTK/InternalCoordinates.py	2005-12-20 10:58:28.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/InternalCoordinates.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Manipulation of internal coordinates
+  #
+  # Written by Konrad Hinsen
+***************
+*** 5,11 ****
+  #
+  
+  import MMTK
+! import Numeric; N = Numeric
+  from copy import copy
+  
+  #
+--- 7,13 ----
+  #
+  
+  import MMTK
+! import numpy.oldnumeric as Numeric; N = Numeric
+  from copy import copy
+  
+  #
+diff -rc MMTK-2.5.13/MMTK/Minimization.py MMTK-2.5.13-numpy/MMTK/Minimization.py
+*** MMTK-2.5.13/MMTK/Minimization.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Minimization.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements energy minimizers.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 6,12 ****
+  
+  import Features, ThreadManager, Trajectory, Units
+  from MMTK_minimization import conjugateGradient, steepestDescent
+! import Numeric, operator
+  
+  try:
+      import threading
+--- 8,14 ----
+  
+  import Features, ThreadManager, Trajectory, Units
+  from MMTK_minimization import conjugateGradient, steepestDescent
+! import numpy.oldnumeric as Numeric, operator
+  
+  try:
+      import threading
+diff -rc MMTK-2.5.13/MMTK/MolecularSurface.py MMTK-2.5.13-numpy/MMTK/MolecularSurface.py
+*** MMTK-2.5.13/MMTK/MolecularSurface.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/MolecularSurface.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  #
+  # Copyright 2000 by Peter McCluskey (pcm@rahul.net).
+  # You may do anything you want with it, provided this notice is kept intact.
+***************
+*** 27,33 ****
+  import surfm
+  from MMTK.Collections import GroupOfAtoms, Collection
+  from MMTK import Vector
+! import Numeric
+  
+  def surfaceAndVolume(self, probe_radius = 0.):
+      """Returns the molecular surface and volume of |object|,
+--- 29,35 ----
+  import surfm
+  from MMTK.Collections import GroupOfAtoms, Collection
+  from MMTK import Vector
+! import numpy.oldnumeric as Numeric
+  
+  def surfaceAndVolume(self, probe_radius = 0.):
+      """Returns the molecular surface and volume of |object|,
+diff -rc MMTK-2.5.13/MMTK/NormalModes/BrownianModes.py MMTK-2.5.13-numpy/MMTK/NormalModes/BrownianModes.py
+*** MMTK-2.5.13/MMTK/NormalModes/BrownianModes.py	2005-12-20 10:58:40.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/NormalModes/BrownianModes.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Brownian normal mode calculations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 9,15 ****
+  
+  
+  from MMTK import Features, Units, ParticleProperties
+! import Numeric; N = Numeric
+  
+  from MMTK.NormalModes import Core
+  
+--- 11,17 ----
+  
+  
+  from MMTK import Features, Units, ParticleProperties
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  from MMTK.NormalModes import Core
+  
+diff -rc MMTK-2.5.13/MMTK/NormalModes/Core.py MMTK-2.5.13-numpy/MMTK/NormalModes/Core.py
+*** MMTK-2.5.13/MMTK/NormalModes/Core.py	2005-12-20 10:58:40.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/NormalModes/Core.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Common aspect of normal mode calculations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 7,13 ****
+  _undocumented = 1
+  
+  from MMTK import Units, ParticleProperties, Visualization
+! import Numeric; N = Numeric
+  import copy
+  
+  #
+--- 9,15 ----
+  _undocumented = 1
+  
+  from MMTK import Units, ParticleProperties, Visualization
+! import numpy.oldnumeric as Numeric; N = Numeric
+  import copy
+  
+  #
+***************
+*** 177,189 ****
+                  from lapack_mmtk import dsyev
+              except ImportError: pass
+          if dsyev is None:
+!             from LinearAlgebra import eigenvectors
+              _symmetrize(self.array)
+              ev, modes = eigenvectors(self.array)
+              self.array = modes
+!             if ev.typecode() == N.Complex:
+                  ev = ev.real
+!             if modes.typecode() == N.Complex:
+                  modes = modes.real
+          else:
+              ev = N.zeros((self.nmodes,), N.Float)
+--- 179,191 ----
+                  from lapack_mmtk import dsyev
+              except ImportError: pass
+          if dsyev is None:
+!             from numpy.oldnumeric.linear_algebra import eigenvectors
+              _symmetrize(self.array)
+              ev, modes = eigenvectors(self.array)
+              self.array = modes
+!             if ev.dtype.char == N.Complex:
+                  ev = ev.real
+!             if modes.dtype.char == N.Complex:
+                  modes = modes.real
+          else:
+              ev = N.zeros((self.nmodes,), N.Float)
+diff -rc MMTK-2.5.13/MMTK/NormalModes/EnergeticModes.py MMTK-2.5.13-numpy/MMTK/NormalModes/EnergeticModes.py
+*** MMTK-2.5.13/MMTK/NormalModes/EnergeticModes.py	2005-12-20 10:58:40.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/NormalModes/EnergeticModes.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Energetic normal mode calculations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 9,15 ****
+  
+  from MMTK import Features, Units, ParticleProperties
+  from MMTK.NormalModes import Core
+! import Numeric; N = Numeric
+  
+  #
+  # Class for a single mode
+--- 11,17 ----
+  
+  from MMTK import Features, Units, ParticleProperties
+  from MMTK.NormalModes import Core
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  #
+  # Class for a single mode
+diff -rc MMTK-2.5.13/MMTK/NormalModes/VibrationalModes.py MMTK-2.5.13-numpy/MMTK/NormalModes/VibrationalModes.py
+*** MMTK-2.5.13/MMTK/NormalModes/VibrationalModes.py	2005-12-20 10:58:40.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/NormalModes/VibrationalModes.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Vibrational normal mode calculations.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 8,14 ****
+  """
+  
+  from MMTK import Features, Units, ParticleProperties
+! import Numeric; N = Numeric
+  
+  from MMTK.NormalModes import Core
+  
+--- 10,16 ----
+  """
+  
+  from MMTK import Features, Units, ParticleProperties
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  from MMTK.NormalModes import Core
+  
+diff -rc MMTK-2.5.13/MMTK/ParticleProperties.py MMTK-2.5.13-numpy/MMTK/ParticleProperties.py
+*** MMTK-2.5.13/MMTK/ParticleProperties.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ParticleProperties.py	2006-09-20 18:03:27.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements classes that represent the atomic properties in a
+  # simulation, i.e. configurations, force vectors, etc.
+  #
+***************
+*** 9,15 ****
+  from Scientific.Geometry import Vector, isVector, Tensor, isTensor
+  from Scientific.indexing import index_expression
+  import copy
+! import Numeric; N = Numeric
+  
+  #
+  # Base class for all properties defined for a universe.
+--- 11,17 ----
+  from Scientific.Geometry import Vector, isVector, Tensor, isTensor
+  from Scientific.indexing import index_expression
+  import copy
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  #
+  # Base class for all properties defined for a universe.
+diff -rc MMTK-2.5.13/MMTK/ProteinFriction.py MMTK-2.5.13-numpy/MMTK/ProteinFriction.py
+*** MMTK-2.5.13/MMTK/ProteinFriction.py	2005-12-20 10:58:46.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/ProteinFriction.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Friction constants for protein C-alpha models
+  #
+  # Written by Konrad Hinsen
+***************
+*** 5,11 ****
+  #
+  
+  import MMTK.Collection, MMTK.ParticleProperties
+! import Numeric
+  
+  def calphaFrictionConstants(protein, set=2):
+      """Return a Class:MMTK.ParticleScalar object containing estimated
+--- 7,13 ----
+  #
+  
+  import MMTK.Collection, MMTK.ParticleProperties
+! import numpy.oldnumeric as Numeric
+  
+  def calphaFrictionConstants(protein, set=2):
+      """Return a Class:MMTK.ParticleScalar object containing estimated
+diff -rc MMTK-2.5.13/MMTK/Random.py MMTK-2.5.13-numpy/MMTK/Random.py
+*** MMTK-2.5.13/MMTK/Random.py	2005-12-20 11:12:09.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Random.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Functions for finding random points and orientations.
+  #
+  # Written by: Konrad Hinsen
+***************
+*** 12,25 ****
+  Numerical Python) and whrandom (in the Python standard library).
+  """
+  
+! import Numeric as N
+  from Scientific.Geometry import Vector
+! from Numeric import dot
+  from Scientific.Geometry.Transformation import Rotation
+  import ParticleProperties, Units
+  
+  try:
+!     import RNG
+  except ImportError:
+      RNG = None
+  
+--- 14,27 ----
+  Numerical Python) and whrandom (in the Python standard library).
+  """
+  
+! import numpy.oldnumeric as N
+  from Scientific.Geometry import Vector
+! from numpy.oldnumeric import dot
+  from Scientific.Geometry.Transformation import Rotation
+  import ParticleProperties, Units
+  
+  try:
+!     import numpy.oldnumeric.rng as RNG
+  except ImportError:
+      RNG = None
+  
+***************
+*** 28,34 ****
+  
+      random = __import__('random')
+      import whrandom
+!     from RandomArray import uniform, seed
+      seed(1, 1)
+      whrandom.seed(1, 1, 1)
+  
+--- 30,36 ----
+  
+      random = __import__('random')
+      import whrandom
+!     from numpy.oldnumeric.random_array import uniform, seed
+      seed(1, 1)
+      whrandom.seed(1, 1, 1)
+  
+diff -rc MMTK-2.5.13/MMTK/Solvation.py MMTK-2.5.13-numpy/MMTK/Solvation.py
+*** MMTK-2.5.13/MMTK/Solvation.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Solvation.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module contains code for solvation.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 15,21 ****
+  from Trajectory import Trajectory, TrajectoryOutput, SnapshotGenerator, \
+                         StandardLogOutput
+  import copy, sys
+! import Numeric; N = Numeric
+  
+  #
+  # Calculate the number of solvent molecules
+--- 17,23 ----
+  from Trajectory import Trajectory, TrajectoryOutput, SnapshotGenerator, \
+                         StandardLogOutput
+  import copy, sys
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  #
+  # Calculate the number of solvent molecules
+diff -rc MMTK-2.5.13/MMTK/Subspace.py MMTK-2.5.13-numpy/MMTK/Subspace.py
+*** MMTK-2.5.13/MMTK/Subspace.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Subspace.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements subspaces for motion analysis etc.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 12,18 ****
+  
+  import Utility, ParticleProperties
+  from Scientific.Geometry import Vector
+! import Numeric
+  
+  
+  class ParticleVectorSet:
+--- 14,20 ----
+  
+  import Utility, ParticleProperties
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as Numeric
+  
+  
+  class ParticleVectorSet:
+diff -rc MMTK-2.5.13/MMTK/Tk/ProteinVisualization.py MMTK-2.5.13-numpy/MMTK/Tk/ProteinVisualization.py
+*** MMTK-2.5.13/MMTK/Tk/ProteinVisualization.py	2005-12-20 10:13:17.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Tk/ProteinVisualization.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,9 ****
+  # Display proteins on a TkVisualizationCanvas
+  
+  _undocumented = 1
+  
+  
+! import Numeric
+  
+  class ProteinBackboneGraphics:
+  
+--- 1,11 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Display proteins on a TkVisualizationCanvas
+  
+  _undocumented = 1
+  
+  
+! import numpy.oldnumeric as Numeric
+  
+  class ProteinBackboneGraphics:
+  
+diff -rc MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryInspector.py MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryInspector.py
+*** MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryInspector.py	2005-12-20 10:13:24.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryInspector.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This class provides access to selected data from a trajectory
+  # via an interface that can be accessed remotely by Pyro. It
+  # can be used by programs that wish to inspect a trajectory that
+***************
+*** 8,14 ****
+  #
+  
+  from Scientific.IO.NetCDF import NetCDFFile
+! import Numeric
+  
+  class TrajectoryInspector:
+  
+--- 10,16 ----
+  #
+  
+  from Scientific.IO.NetCDF import NetCDFFile
+! import numpy.oldnumeric as Numeric
+  
+  class TrajectoryInspector:
+  
+diff -rc MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryServer.py MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryServer.py
+*** MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryServer.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryServer.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Pyro-based trajectory server
+  #
+  # Written by Konrad Hinsen
+***************
+*** 5,11 ****
+  #
+  
+  from TrajectoryInspector import TrajectoryInspector
+! import Numeric # to enable pickling of arrays
+  import Pyro.core, Pyro.naming
+  import socket, sys
+  
+--- 7,13 ----
+  #
+  
+  from TrajectoryInspector import TrajectoryInspector
+! import numpy.oldnumeric as Numeric # to enable pickling of arrays
+  import Pyro.core, Pyro.naming
+  import socket, sys
+  
+diff -rc MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryViewer.py MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryViewer.py
+*** MMTK-2.5.13/MMTK/Tools/TrajectoryViewer/TrajectoryViewer.py	2005-12-20 10:52:00.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Tools/TrajectoryViewer/TrajectoryViewer.py	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Trajectory viewer for MMTK trajectory files
+  #
+  # Written by Konrad Hinsen
+***************
+*** 14,20 ****
+  import Dialog, FileDialog
+  from Scientific.DictWithDefault import DictWithDefault
+  from Scientific.IO import ArrayIO
+! import Numeric, os, string, tempfile, time
+  import MMTK, MMTK.Trajectory
+  from TrajectoryInspector import TrajectoryInspector
+  
+--- 16,22 ----
+  import Dialog, FileDialog
+  from Scientific.DictWithDefault import DictWithDefault
+  from Scientific.IO import ArrayIO
+! import numpy.oldnumeric as Numeric, os, string, tempfile, time
+  import MMTK, MMTK.Trajectory
+  from TrajectoryInspector import TrajectoryInspector
+  
+***************
+*** 579,585 ****
+                      dt = self.time[jump-1] + self.time[jump+1] \
+                           - 2*self.time[jump]
+                      self.time[jump:] = \
+!                          (self.time[jump:] + dt).astype(self.time.typecode())
+          except KeyError:
+              self.time = 1.*Numeric.arange(self.inspector.numberOfSteps())
+          self.plotlist = []
+--- 581,587 ----
+                      dt = self.time[jump-1] + self.time[jump+1] \
+                           - 2*self.time[jump]
+                      self.time[jump:] = \
+!                          (self.time[jump:] + dt).astype(self.time.dtype.char)
+          except KeyError:
+              self.time = 1.*Numeric.arange(self.inspector.numberOfSteps())
+          self.plotlist = []
+diff -rc MMTK-2.5.13/MMTK/Trajectory.py MMTK-2.5.13-numpy/MMTK/Trajectory.py
+*** MMTK-2.5.13/MMTK/Trajectory.py	2005-12-20 10:52:01.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Trajectory.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements trajetories and trajectory generators.
+  #
+  # Written by Konrad Hinsen
+***************
+*** 6,12 ****
+  
+  import Collections, Units, Universe, Utility, ParticleProperties, Visualization
+  from Scientific.Geometry import Vector
+! import Numeric, copy, os, string, sys, types
+  
+  # Report error if the netCDF module is not available.
+  try:
+--- 8,14 ----
+  
+  import Collections, Units, Universe, Utility, ParticleProperties, Visualization
+  from Scientific.Geometry import Vector
+! import numpy.oldnumeric as Numeric, copy, os, string, sys, types
+  
+  # Report error if the netCDF module is not available.
+  try:
+***************
+*** 876,882 ****
+  
+          quaternions = Numeric.zeros((steps, 4), Numeric.Float)
+          fit = Numeric.zeros((steps,), Numeric.Float)
+!         import LinearAlgebra
+          for i in range(steps):
+              e, v = LinearAlgebra.eigenvectors(k[i])
+              j = Numeric.argmin(e)
+--- 878,884 ----
+  
+          quaternions = Numeric.zeros((steps, 4), Numeric.Float)
+          fit = Numeric.zeros((steps,), Numeric.Float)
+!         import numpy.oldnumeric.linear_algebra as LinearAlgebra
+          for i in range(steps):
+              e, v = LinearAlgebra.eigenvectors(k[i])
+              j = Numeric.argmin(e)
+diff -rc MMTK-2.5.13/MMTK/Units.py MMTK-2.5.13-numpy/MMTK/Units.py
+*** MMTK-2.5.13/MMTK/Units.py	2005-12-20 10:13:24.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Units.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # Define unit conversion factors and physical constants
+  #
+  # Written by Konrad Hinsen
+***************
+*** 48,55 ****
+  me = (electron mass)
+  """
+  
+! from umath import pi
+! import umath
+  
+  # Prefixes
+  
+--- 50,57 ----
+  me = (electron mass)
+  """
+  
+! from numpy.oldnumeric import pi
+! import numpy.oldnumeric as umath
+  
+  # Prefixes
+  
+diff -rc MMTK-2.5.13/MMTK/Universe.py MMTK-2.5.13-numpy/MMTK/Universe.py
+*** MMTK-2.5.13/MMTK/Universe.py	2005-12-20 10:52:01.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Universe.py	2006-09-20 18:03:28.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module implements the various types of universes
+  # (infinite, periodic etc.). A universe defines the
+  # geometry of space, the force field, and external interactions
+***************
+*** 11,17 ****
+         Random, Utility, ParticleProperties, Visualization
+  from Scientific.Geometry import Transformation
+  from Scientific.Geometry import Vector, isVector
+! import Numeric; N = Numeric
+  import copy, operator, string
+  
+  try:
+--- 13,19 ----
+         Random, Utility, ParticleProperties, Visualization
+  from Scientific.Geometry import Transformation
+  from Scientific.Geometry import Vector, isVector
+! import numpy.oldnumeric as Numeric; N = Numeric
+  import copy, operator, string
+  
+  try:
+diff -rc MMTK-2.5.13/MMTK/Utility.py MMTK-2.5.13-numpy/MMTK/Utility.py
+*** MMTK-2.5.13/MMTK/Utility.py	2005-12-20 10:52:01.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Utility.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module contains useful functions that are needed in various
+  # places.
+  #
+***************
+*** 9,15 ****
+  
+  import Database
+  import os, string, sys, types
+! import Numeric
+  
+  # Constants
+  
+--- 11,17 ----
+  
+  import Database
+  import os, string, sys, types
+! import numpy.oldnumeric as Numeric
+  
+  # Constants
+  
+diff -rc MMTK-2.5.13/MMTK/Visualization.py MMTK-2.5.13-numpy/MMTK/Visualization.py
+*** MMTK-2.5.13/MMTK/Visualization.py	2005-12-20 10:52:01.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/Visualization.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # This module contains interfaces to external visualization programs
+  # and a visualization base class
+  #
+***************
+*** 31,37 ****
+  """
+  
+  import ConfigIO, PDB, Universe, Units, Utility
+! import Numeric, string, sys, tempfile, os
+  
+  #
+  # If you want temporary files in a non-standard directory, make
+--- 33,39 ----
+  """
+  
+  import ConfigIO, PDB, Universe, Units, Utility
+! import numpy.oldnumeric as Numeric, string, sys, tempfile, os
+  
+  #
+  # If you want temporary files in a non-standard directory, make
+diff -rc MMTK-2.5.13/MMTK/XML.py MMTK-2.5.13-numpy/MMTK/XML.py
+*** MMTK-2.5.13/MMTK/XML.py	2005-12-20 10:58:52.000000000 -0700
+--- MMTK-2.5.13-numpy/MMTK/XML.py	2006-09-20 18:03:29.000000000 -0600
+***************
+*** 1,3 ****
+--- 1,5 ----
++ ## Automatically adapted for numpy.oldnumeric Sep 20, 2006 by -c
++ 
+  # XML I/O
+  #
+  # Written by Konrad Hinsen
+***************
+*** 7,13 ****
+  import MMTK
+  from MMTK.MoleculeFactory import MoleculeFactory
+  from cElementTree import iterparse
+! import Numeric; N = Numeric
+  
+  
+  class XMLMoleculeFactory(MoleculeFactory):
+--- 9,15 ----
+  import MMTK
+  from MMTK.MoleculeFactory import MoleculeFactory
+  from cElementTree import iterparse
+! import numpy.oldnumeric as Numeric; N = Numeric
+  
+  
+  class XMLMoleculeFactory(MoleculeFactory):
+diff -rc MMTK-2.5.13/setup.py MMTK-2.5.13-numpy/setup.py
+*** MMTK-2.5.13/setup.py	2005-12-20 10:52:01.000000000 -0700
+--- MMTK-2.5.13-numpy/setup.py	2006-09-20 18:06:21.000000000 -0600
+***************
+*** 166,171 ****
+--- 166,173 ----
+  
+  #################################################################
+  
++ import numpy
++ incldirs = ['Include', numpy.get_include()]
+  setup (name = package_name,
+         version = pkginfo.__version__,
+         description = "Molecular Modelling Toolkit",
+***************
+*** 190,232 ****
+         ext_modules = [Extension('lapack_mmtk',
+                                  ['Src/lapack_subset.c', 'Src/lapack_mmtk.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_DCD',
+                                  ['Src/MMTK_DCD.c', 'Src/ReadDCD.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_deformation',
+                                  ['Src/MMTK_deformation.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_dynamics',
+                                  ['Src/MMTK_dynamics.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_minimization',
+                                  ['Src/MMTK_minimization.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_surface',
+                                  ['Src/MMTK_surface.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_trajectory',
+                                  ['Src/MMTK_trajectory.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_universe',
+                                  ['Src/MMTK_universe.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_forcefield',
+--- 192,234 ----
+         ext_modules = [Extension('lapack_mmtk',
+                                  ['Src/lapack_subset.c', 'Src/lapack_mmtk.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_DCD',
+                                  ['Src/MMTK_DCD.c', 'Src/ReadDCD.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_deformation',
+                                  ['Src/MMTK_deformation.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_dynamics',
+                                  ['Src/MMTK_dynamics.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_minimization',
+                                  ['Src/MMTK_minimization.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_surface',
+                                  ['Src/MMTK_surface.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_trajectory',
+                                  ['Src/MMTK_trajectory.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_universe',
+                                  ['Src/MMTK_universe.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),
+                        Extension('MMTK_forcefield',
+***************
+*** 252,260 ****
+                                   'Src/dpmta/src/dpmta_slvglobals.c',
+                                   'Src/dpmta/src/dpmta_distmisc.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=['Include', 'Src',
+!                                               'Src/dpmta/src',
+!                                               'Src/dpmta/mpole'],
+                                  define_macros = [('WITH_DPMTA', None),
+                                                   ('SERIAL', None),
+                                                   ('VIRIAL', None),
+--- 254,262 ----
+                                   'Src/dpmta/src/dpmta_slvglobals.c',
+                                   'Src/dpmta/src/dpmta_distmisc.c'],
+                                  extra_compile_args = high_opt,
+!                                 include_dirs=incldirs+['Src',
+!                                                        'Src/dpmta/src',
+!                                                        'Src/dpmta/mpole'],
+                                  define_macros = [('WITH_DPMTA', None),
+                                                   ('SERIAL', None),
+                                                   ('VIRIAL', None),
+***************
+*** 263,269 ****
+                                  libraries=libraries),
+                        Extension('MMTK_energy_term',
+                                  ['Src/MMTK_energy_term.c'],
+!                                 include_dirs=['Include'],
+                                  libraries=libraries,
+                                  define_macros=macros),                      
+                        ],
+--- 265,271 ----
+                                  libraries=libraries),
+                        Extension('MMTK_energy_term',
+                                  ['Src/MMTK_energy_term.c'],
+!                                 include_dirs=incldirs,
+                                  libraries=libraries,
+                                  define_macros=macros),                      
+                        ],
+Only in MMTK-2.5.13-numpy/: setup.py~
+diff -rc MMTK-2.5.13/Src/lapack_mmtk.c MMTK-2.5.13-numpy/Src/lapack_mmtk.c
+*** MMTK-2.5.13/Src/lapack_mmtk.c	2005-12-20 10:13:43.000000000 -0700
+--- MMTK-2.5.13-numpy/Src/lapack_mmtk.c	2006-09-20 18:03:30.000000000 -0600
+***************
+*** 1,5 ****
+  #include "Python.h"
+! #include "Numeric/arrayobject.h"
+  
+  typedef struct { float r, i; } f2c_complex;
+  typedef struct { double r, i; } f2c_doublecomplex;
+--- 1,5 ----
+  #include "Python.h"
+! #include "numpy/oldnumeric.h"
+  
+  typedef struct { float r, i; } f2c_complex;
+  typedef struct { double r, i; } f2c_doublecomplex;
+diff -rc MMTK-2.5.13/Src/MMTK_energy_term.c MMTK-2.5.13-numpy/Src/MMTK_energy_term.c
+*** MMTK-2.5.13/Src/MMTK_energy_term.c	2005-12-20 10:58:53.000000000 -0700
+--- MMTK-2.5.13-numpy/Src/MMTK_energy_term.c	2006-09-20 18:05:09.000000000 -0600
+***************
+*** 1,11 ****
+! /* Generated by Pyrex 0.9.3 on Tue Nov  8 11:49:42 2005 */
+  
+  #include "Python.h"
+  #include "structmember.h"
+  #ifndef PY_LONG_LONG
+    #define PY_LONG_LONG LONG_LONG
+  #endif
+! #include "Numeric/arrayobject.h"
+  #include "MMTK/core.h"
+  #include "MMTK/universe.h"
+  #include "MMTK/forcefield.h"
+--- 1,17 ----
+! /* Generated by Pyrex 0.9.4.1 on Wed Sep 20 18:05:09 2006 */
+  
+  #include "Python.h"
+  #include "structmember.h"
+  #ifndef PY_LONG_LONG
+    #define PY_LONG_LONG LONG_LONG
+  #endif
+! #ifdef __cplusplus
+! #define __PYX_EXTERN_C extern "C"
+! #else
+! #define __PYX_EXTERN_C extern
+! #endif
+! __PYX_EXTERN_C double pow(double, double);
+! #include "numpy/oldnumeric.h"
+  #include "MMTK/core.h"
+  #include "MMTK/universe.h"
+  #include "MMTK/forcefield.h"
+***************
+*** 38,48 ****
+  static PyObject *__pyx_b;
+  static int __pyx_lineno;
+  static char *__pyx_filename;
+! staticforward char **__pyx_f;
+  
+  /* Declarations from MMTK_energy_term */
+  
+- staticforward PyTypeObject __pyx_type_16MMTK_energy_term_PyEnergyTerm;
+  
+  struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm {
+    PyFFEnergyTermObject __pyx_base;
+--- 44,53 ----
+  static PyObject *__pyx_b;
+  static int __pyx_lineno;
+  static char *__pyx_filename;
+! static char **__pyx_f;
+  
+  /* Declarations from MMTK_energy_term */
+  
+  
+  struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm {
+    PyFFEnergyTermObject __pyx_base;
+***************
+*** 63,71 ****
+--- 68,81 ----
+  
+  /* Implementation of MMTK_energy_term */
+  
++ static char (__pyx_k2[]) = "numpy.oldnumeric";
+  
+  static PyObject *__pyx_n_MMTK;
++ static PyObject *__pyx_n_numpy;
+  static PyObject *__pyx_n_Numeric;
++ static PyObject *__pyx_n_oldnumeric;
++ 
++ static PyObject *__pyx_k2p;
+  
+  static PyObject *__pyx_n___init__;
+  
+***************
+*** 83,95 ****
+    Py_INCREF(__pyx_v_name);
+    Py_INCREF(__pyx_v_universe);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":18 */
+    __pyx_1 = PyObject_GetAttr(((PyObject*)__pyx_ptype_16MMTK_energy_term_EnergyTerm), __pyx_n___init__); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+    __pyx_2 = PyTuple_New(1); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+    Py_INCREF(__pyx_v_name);
+    PyTuple_SET_ITEM(__pyx_2, 0, __pyx_v_name);
+    __pyx_3 = PyTuple_New(4); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+!   Py_INCREF((PyObject *)__pyx_v_self);
+    PyTuple_SET_ITEM(__pyx_3, 0, __pyx_v_self);
+    Py_INCREF(__pyx_v_universe);
+    PyTuple_SET_ITEM(__pyx_3, 1, __pyx_v_universe);
+--- 93,105 ----
+    Py_INCREF(__pyx_v_name);
+    Py_INCREF(__pyx_v_universe);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":18 */
+    __pyx_1 = PyObject_GetAttr(((PyObject*)__pyx_ptype_16MMTK_energy_term_EnergyTerm), __pyx_n___init__); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+    __pyx_2 = PyTuple_New(1); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+    Py_INCREF(__pyx_v_name);
+    PyTuple_SET_ITEM(__pyx_2, 0, __pyx_v_name);
+    __pyx_3 = PyTuple_New(4); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 18; goto __pyx_L1;}
+!   Py_INCREF(__pyx_v_self);
+    PyTuple_SET_ITEM(__pyx_3, 0, __pyx_v_self);
+    Py_INCREF(__pyx_v_universe);
+    PyTuple_SET_ITEM(__pyx_3, 1, __pyx_v_universe);
+***************
+*** 102,116 ****
+    Py_DECREF(__pyx_3); __pyx_3 = 0;
+    Py_DECREF(__pyx_2); __pyx_2 = 0;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":19 */
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.eval_func = ((void (*))__pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm->c_evaluate);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":20 */
+    Py_INCREF(__pyx_v_universe);
+    Py_DECREF(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->universe);
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->universe = __pyx_v_universe;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":21 */
+    Py_INCREF(Py_None);
+    Py_DECREF(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->configuration);
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->configuration = Py_None;
+--- 112,126 ----
+    Py_DECREF(__pyx_3); __pyx_3 = 0;
+    Py_DECREF(__pyx_2); __pyx_2 = 0;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":19 */
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.eval_func = ((void (*))__pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm->c_evaluate);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":20 */
+    Py_INCREF(__pyx_v_universe);
+    Py_DECREF(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->universe);
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->universe = __pyx_v_universe;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":21 */
+    Py_INCREF(Py_None);
+    Py_DECREF(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->configuration);
+    ((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->configuration = Py_None;
+***************
+*** 150,164 ****
+    PyObject *__pyx_5 = 0;
+    Py_INCREF((PyObject *)__pyx_v_self);
+    Py_INCREF(__pyx_v_name);
+!   __pyx_v_names = Py_None; Py_INCREF(__pyx_v_names);
+!   __pyx_v_i = Py_None; Py_INCREF(__pyx_v_i);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":24 */
+    if (PyObject_Cmp(__pyx_v_name, __pyx_n_name, &__pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; goto __pyx_L1;}
+    __pyx_1 = __pyx_1 == 0;
+    if (__pyx_1) {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":25 */
+      __pyx_2 = PyString_FromString(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.evaluator_name); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; goto __pyx_L1;}
+      __pyx_r = __pyx_2;
+      __pyx_2 = 0;
+--- 160,174 ----
+    PyObject *__pyx_5 = 0;
+    Py_INCREF((PyObject *)__pyx_v_self);
+    Py_INCREF(__pyx_v_name);
+!   __pyx_v_names = Py_None; Py_INCREF(Py_None);
+!   __pyx_v_i = Py_None; Py_INCREF(Py_None);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":24 */
+    if (PyObject_Cmp(__pyx_v_name, __pyx_n_name, &__pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 24; goto __pyx_L1;}
+    __pyx_1 = __pyx_1 == 0;
+    if (__pyx_1) {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":25 */
+      __pyx_2 = PyString_FromString(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.evaluator_name); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 25; goto __pyx_L1;}
+      __pyx_r = __pyx_2;
+      __pyx_2 = 0;
+***************
+*** 169,181 ****
+    __pyx_1 = __pyx_1 == 0;
+    if (__pyx_1) {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":27 */
+      __pyx_2 = PyList_New(0); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; goto __pyx_L1;}
+      Py_DECREF(__pyx_v_names);
+      __pyx_v_names = __pyx_2;
+      __pyx_2 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":28 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_range); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+      __pyx_3 = PyInt_FromLong(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.nterms); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+      __pyx_4 = PyTuple_New(1); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+--- 179,191 ----
+    __pyx_1 = __pyx_1 == 0;
+    if (__pyx_1) {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":27 */
+      __pyx_2 = PyList_New(0); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 27; goto __pyx_L1;}
+      Py_DECREF(__pyx_v_names);
+      __pyx_v_names = __pyx_2;
+      __pyx_2 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":28 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_range); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+      __pyx_3 = PyInt_FromLong(((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.nterms); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+      __pyx_4 = PyTuple_New(1); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 28; goto __pyx_L1;}
+***************
+*** 197,203 ****
+        __pyx_v_i = __pyx_4;
+        __pyx_4 = 0;
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":29 */
+        __pyx_3 = PyObject_GetAttr(__pyx_v_names, __pyx_n_append); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+        __pyx_1 = PyInt_AsLong(__pyx_v_i); if (PyErr_Occurred()) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+        __pyx_4 = PyString_FromString((((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.term_names[__pyx_1])); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+--- 207,213 ----
+        __pyx_v_i = __pyx_4;
+        __pyx_4 = 0;
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":29 */
+        __pyx_3 = PyObject_GetAttr(__pyx_v_names, __pyx_n_append); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+        __pyx_1 = PyInt_AsLong(__pyx_v_i); if (PyErr_Occurred()) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+        __pyx_4 = PyString_FromString((((struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)__pyx_v_self)->__pyx_base.term_names[__pyx_1])); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 29; goto __pyx_L1;}
+***************
+*** 212,218 ****
+      __pyx_L4:;
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":30 */
+      __pyx_3 = __Pyx_GetName(__pyx_b, __pyx_n_tuple); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; goto __pyx_L1;}
+      __pyx_5 = PyTuple_New(1); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; goto __pyx_L1;}
+      Py_INCREF(__pyx_v_names);
+--- 222,228 ----
+      __pyx_L4:;
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":30 */
+      __pyx_3 = __Pyx_GetName(__pyx_b, __pyx_n_tuple); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; goto __pyx_L1;}
+      __pyx_5 = PyTuple_New(1); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 30; goto __pyx_L1;}
+      Py_INCREF(__pyx_v_names);
+***************
+*** 227,233 ****
+    }
+    /*else*/ {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":32 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; goto __pyx_L1;}
+      __Pyx_Raise(__pyx_2, __pyx_v_name, 0);
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+--- 237,243 ----
+    }
+    /*else*/ {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":32 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 32; goto __pyx_L1;}
+      __Pyx_Raise(__pyx_2, __pyx_v_name, 0);
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+***************
+*** 235,241 ****
+    }
+    __pyx_L2:;
+  
+!   __pyx_r = Py_None; Py_INCREF(__pyx_r);
+    goto __pyx_L0;
+    __pyx_L1:;
+    Py_XDECREF(__pyx_2);
+--- 245,251 ----
+    }
+    __pyx_L2:;
+  
+!   __pyx_r = Py_None; Py_INCREF(Py_None);
+    goto __pyx_L0;
+    __pyx_L1:;
+    Py_XDECREF(__pyx_2);
+***************
+*** 276,294 ****
+    PyObject *__pyx_7 = 0;
+    Py_INCREF((PyObject *)__pyx_v_self);
+    Py_INCREF(__pyx_v_eval);
+!   __pyx_v_energy_dict = Py_None; Py_INCREF(__pyx_v_energy_dict);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":37 */
+    __pyx_v_do_gradients = (__pyx_v_energy->gradients != 0);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":38 */
+    __pyx_v_do_fc = (__pyx_v_energy->force_constants != 0);
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":39 */
+    __pyx_1 = __pyx_v_self->configuration == Py_None;
+    if (__pyx_1) {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":40 */
+      __pyx_2 = __Pyx_GetName(__pyx_m, __pyx_n_MMTK); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; goto __pyx_L1;}
+      __pyx_3 = PyObject_GetAttr(__pyx_2, __pyx_n_Configuration); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; goto __pyx_L1;}
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+--- 286,304 ----
+    PyObject *__pyx_7 = 0;
+    Py_INCREF((PyObject *)__pyx_v_self);
+    Py_INCREF(__pyx_v_eval);
+!   __pyx_v_energy_dict = Py_None; Py_INCREF(Py_None);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":37 */
+    __pyx_v_do_gradients = (__pyx_v_energy->gradients != 0);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":38 */
+    __pyx_v_do_fc = (__pyx_v_energy->force_constants != 0);
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":39 */
+    __pyx_1 = __pyx_v_self->configuration == Py_None;
+    if (__pyx_1) {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":40 */
+      __pyx_2 = __Pyx_GetName(__pyx_m, __pyx_n_MMTK); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; goto __pyx_L1;}
+      __pyx_3 = PyObject_GetAttr(__pyx_2, __pyx_n_Configuration); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 40; goto __pyx_L1;}
+      Py_DECREF(__pyx_2); __pyx_2 = 0;
+***************
+*** 309,315 ****
+    }
+    /*else*/ {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":43 */
+      __pyx_3 = (PyObject *)__pyx_v_input->coordinates;
+      Py_INCREF(__pyx_3);
+      if (PyObject_SetAttr(__pyx_v_self->configuration, __pyx_n_array, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; goto __pyx_L1;}
+--- 319,325 ----
+    }
+    /*else*/ {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":43 */
+      __pyx_3 = (PyObject *)__pyx_v_input->coordinates;
+      Py_INCREF(__pyx_3);
+      if (PyObject_SetAttr(__pyx_v_self->configuration, __pyx_n_array, __pyx_3) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 43; goto __pyx_L1;}
+***************
+*** 317,326 ****
+    }
+    __pyx_L2:;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":44 */
+    /*try:*/ {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":45 */
+      __pyx_4 = PyObject_GetAttr(((PyObject *)__pyx_v_self), __pyx_n_evaluate); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; goto __pyx_L3;}
+      __pyx_2 = PyInt_FromLong(__pyx_v_do_gradients); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; goto __pyx_L3;}
+      __pyx_3 = PyInt_FromLong(__pyx_v_do_fc); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; goto __pyx_L3;}
+--- 327,336 ----
+    }
+    __pyx_L2:;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":44 */
+    /*try:*/ {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":45 */
+      __pyx_4 = PyObject_GetAttr(((PyObject *)__pyx_v_self), __pyx_n_evaluate); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 45; goto __pyx_L3;}
+      __pyx_2 = PyInt_FromLong(__pyx_v_do_gradients); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; goto __pyx_L3;}
+      __pyx_3 = PyInt_FromLong(__pyx_v_do_fc); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 46; goto __pyx_L3;}
+***************
+*** 345,376 ****
+    Py_XDECREF(__pyx_5); __pyx_5 = 0;
+    Py_XDECREF(__pyx_2); __pyx_2 = 0;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":47 */
+    /*except:*/ {
+      __Pyx_AddTraceback("MMTK_energy_term.c_evaluate");
+      __pyx_3 = __Pyx_GetExcValue(); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; goto __pyx_L1;}
+      Py_DECREF(__pyx_3); __pyx_3 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":48 */
+      __pyx_v_energy->error = 1;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":49 */
+      __Pyx_ReRaise();
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; goto __pyx_L1;}
+      goto __pyx_L4;
+    }
+    __pyx_L4:;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":50 */
+    __pyx_4 = PyObject_GetItem(__pyx_v_energy_dict, __pyx_n_energy); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; goto __pyx_L1;}
+    __pyx_6 = PyFloat_AsDouble(__pyx_4); if (PyErr_Occurred()) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; goto __pyx_L1;}
+    Py_DECREF(__pyx_4); __pyx_4 = 0;
+    (__pyx_v_energy->energy_terms[__pyx_v_self->__pyx_base.index]) = __pyx_6;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":51 */
+    /*try:*/ {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":53 */
+      __pyx_5 = PyFloat_FromDouble((__pyx_v_energy->energy_terms[__pyx_v_self->__pyx_base.virial_index])); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+      __pyx_2 = PyObject_GetItem(__pyx_v_energy_dict, __pyx_n_virial); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+      __pyx_3 = PyNumber_Add(__pyx_5, __pyx_2); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+--- 355,386 ----
+    Py_XDECREF(__pyx_5); __pyx_5 = 0;
+    Py_XDECREF(__pyx_2); __pyx_2 = 0;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":47 */
+    /*except:*/ {
+      __Pyx_AddTraceback("MMTK_energy_term.c_evaluate");
+      __pyx_3 = __Pyx_GetExcValue(); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 47; goto __pyx_L1;}
+      Py_DECREF(__pyx_3); __pyx_3 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":48 */
+      __pyx_v_energy->error = 1;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":49 */
+      __Pyx_ReRaise();
+      {__pyx_filename = __pyx_f[0]; __pyx_lineno = 49; goto __pyx_L1;}
+      goto __pyx_L4;
+    }
+    __pyx_L4:;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":50 */
+    __pyx_4 = PyObject_GetItem(__pyx_v_energy_dict, __pyx_n_energy); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; goto __pyx_L1;}
+    __pyx_6 = PyFloat_AsDouble(__pyx_4); if (PyErr_Occurred()) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 50; goto __pyx_L1;}
+    Py_DECREF(__pyx_4); __pyx_4 = 0;
+    (__pyx_v_energy->energy_terms[__pyx_v_self->__pyx_base.index]) = __pyx_6;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":51 */
+    /*try:*/ {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":53 */
+      __pyx_5 = PyFloat_FromDouble((__pyx_v_energy->energy_terms[__pyx_v_self->__pyx_base.virial_index])); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+      __pyx_2 = PyObject_GetItem(__pyx_v_energy_dict, __pyx_n_virial); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+      __pyx_3 = PyNumber_Add(__pyx_5, __pyx_2); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 53; goto __pyx_L5;}
+***************
+*** 387,393 ****
+    Py_XDECREF(__pyx_2); __pyx_2 = 0;
+    Py_XDECREF(__pyx_3); __pyx_3 = 0;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":54 */
+    __pyx_4 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; goto __pyx_L1;}
+    __pyx_1 = PyErr_ExceptionMatches(__pyx_4);
+    Py_DECREF(__pyx_4); __pyx_4 = 0;
+--- 397,403 ----
+    Py_XDECREF(__pyx_2); __pyx_2 = 0;
+    Py_XDECREF(__pyx_3); __pyx_3 = 0;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":54 */
+    __pyx_4 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; goto __pyx_L1;}
+    __pyx_1 = PyErr_ExceptionMatches(__pyx_4);
+    Py_DECREF(__pyx_4); __pyx_4 = 0;
+***************
+*** 396,416 ****
+      __pyx_5 = __Pyx_GetExcValue(); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; goto __pyx_L1;}
+      Py_DECREF(__pyx_5); __pyx_5 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":55 */
+      __pyx_v_energy->virial_available = 0;
+      goto __pyx_L6;
+    }
+    goto __pyx_L1;
+    __pyx_L6:;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":56 */
+    __pyx_1 = __pyx_v_do_gradients;
+    if (__pyx_1) {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":57 */
+      /*try:*/ {
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":58 */
+        __pyx_2 = __Pyx_GetName(__pyx_m, __pyx_n_Numeric); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; goto __pyx_L8;}
+        __pyx_3 = PyObject_GetAttr(__pyx_2, __pyx_n_add); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; goto __pyx_L8;}
+        Py_DECREF(__pyx_2); __pyx_2 = 0;
+--- 406,426 ----
+      __pyx_5 = __Pyx_GetExcValue(); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 54; goto __pyx_L1;}
+      Py_DECREF(__pyx_5); __pyx_5 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":55 */
+      __pyx_v_energy->virial_available = 0;
+      goto __pyx_L6;
+    }
+    goto __pyx_L1;
+    __pyx_L6:;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":56 */
+    __pyx_1 = __pyx_v_do_gradients;
+    if (__pyx_1) {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":57 */
+      /*try:*/ {
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":58 */
+        __pyx_2 = __Pyx_GetName(__pyx_m, __pyx_n_Numeric); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; goto __pyx_L8;}
+        __pyx_3 = PyObject_GetAttr(__pyx_2, __pyx_n_add); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 58; goto __pyx_L8;}
+        Py_DECREF(__pyx_2); __pyx_2 = 0;
+***************
+*** 441,447 ****
+      Py_XDECREF(__pyx_7); __pyx_7 = 0;
+      Py_XDECREF(__pyx_4); __pyx_4 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":61 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+      __pyx_5 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+      __pyx_3 = PyTuple_New(2); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+--- 451,457 ----
+      Py_XDECREF(__pyx_7); __pyx_7 = 0;
+      Py_XDECREF(__pyx_4); __pyx_4 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":61 */
+      __pyx_2 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+      __pyx_5 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_5) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+      __pyx_3 = PyTuple_New(2); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+***************
+*** 456,465 ****
+        __pyx_7 = __Pyx_GetExcValue(); if (!__pyx_7) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+        Py_DECREF(__pyx_7); __pyx_7 = 0;
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":62 */
+        __pyx_v_energy->error = 1;
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":63 */
+        __Pyx_ReRaise();
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; goto __pyx_L1;}
+        goto __pyx_L9;
+--- 466,475 ----
+        __pyx_7 = __Pyx_GetExcValue(); if (!__pyx_7) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 61; goto __pyx_L1;}
+        Py_DECREF(__pyx_7); __pyx_7 = 0;
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":62 */
+        __pyx_v_energy->error = 1;
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":63 */
+        __Pyx_ReRaise();
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 63; goto __pyx_L1;}
+        goto __pyx_L9;
+***************
+*** 470,483 ****
+    }
+    __pyx_L7:;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":64 */
+    __pyx_1 = __pyx_v_do_fc;
+    if (__pyx_1) {
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":65 */
+      /*try:*/ {
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":66 */
+        __pyx_4 = __Pyx_GetName(__pyx_m, __pyx_n_Numeric); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; goto __pyx_L11;}
+        __pyx_2 = PyObject_GetAttr(__pyx_4, __pyx_n_add); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; goto __pyx_L11;}
+        Py_DECREF(__pyx_4); __pyx_4 = 0;
+--- 480,493 ----
+    }
+    __pyx_L7:;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":64 */
+    __pyx_1 = __pyx_v_do_fc;
+    if (__pyx_1) {
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":65 */
+      /*try:*/ {
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":66 */
+        __pyx_4 = __Pyx_GetName(__pyx_m, __pyx_n_Numeric); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; goto __pyx_L11;}
+        __pyx_2 = PyObject_GetAttr(__pyx_4, __pyx_n_add); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 66; goto __pyx_L11;}
+        Py_DECREF(__pyx_4); __pyx_4 = 0;
+***************
+*** 508,514 ****
+      Py_XDECREF(__pyx_3); __pyx_3 = 0;
+      Py_XDECREF(__pyx_5); __pyx_5 = 0;
+  
+!     /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":69 */
+      __pyx_7 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_7) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+      __pyx_4 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+      __pyx_2 = PyTuple_New(2); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+--- 518,524 ----
+      Py_XDECREF(__pyx_3); __pyx_3 = 0;
+      Py_XDECREF(__pyx_5); __pyx_5 = 0;
+  
+!     /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":69 */
+      __pyx_7 = __Pyx_GetName(__pyx_b, __pyx_n_KeyError); if (!__pyx_7) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+      __pyx_4 = __Pyx_GetName(__pyx_b, __pyx_n_AttributeError); if (!__pyx_4) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+      __pyx_2 = PyTuple_New(2); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+***************
+*** 523,532 ****
+        __pyx_3 = __Pyx_GetExcValue(); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+        Py_DECREF(__pyx_3); __pyx_3 = 0;
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":70 */
+        __pyx_v_energy->error = 1;
+  
+!       /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":71 */
+        __Pyx_ReRaise();
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; goto __pyx_L1;}
+        goto __pyx_L12;
+--- 533,542 ----
+        __pyx_3 = __Pyx_GetExcValue(); if (!__pyx_3) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 69; goto __pyx_L1;}
+        Py_DECREF(__pyx_3); __pyx_3 = 0;
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":70 */
+        __pyx_v_energy->error = 1;
+  
+!       /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":71 */
+        __Pyx_ReRaise();
+        {__pyx_filename = __pyx_f[0]; __pyx_lineno = 71; goto __pyx_L1;}
+        goto __pyx_L12;
+***************
+*** 566,585 ****
+    {&__pyx_n_force_constants, "force_constants"},
+    {&__pyx_n_gradients, "gradients"},
+    {&__pyx_n_name, "name"},
+    {&__pyx_n_range, "range"},
+    {&__pyx_n_term_names, "term_names"},
+    {&__pyx_n_tuple, "tuple"},
+    {&__pyx_n_virial, "virial"},
+    {0, 0}
+  };
+  static struct __pyx_vtabstruct_16MMTK_energy_term_PyEnergyTerm __pyx_vtable_16MMTK_energy_term_PyEnergyTerm;
+  
+  static PyObject *__pyx_tp_new_16MMTK_energy_term_PyEnergyTerm(PyTypeObject *t, PyObject *a, PyObject *k) {
+    PyObject *o = __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_new(t, a, k);
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+!   p->__pyx_vtab = (struct __pyx_vtabstruct_16MMTK_energy_term_PyEnergyTerm *)__pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm;
+!   p->universe = Py_None; Py_INCREF(p->universe);
+!   p->configuration = Py_None; Py_INCREF(p->configuration);
+    return o;
+  }
+  
+--- 576,602 ----
+    {&__pyx_n_force_constants, "force_constants"},
+    {&__pyx_n_gradients, "gradients"},
+    {&__pyx_n_name, "name"},
++   {&__pyx_n_numpy, "numpy"},
++   {&__pyx_n_oldnumeric, "oldnumeric"},
+    {&__pyx_n_range, "range"},
+    {&__pyx_n_term_names, "term_names"},
+    {&__pyx_n_tuple, "tuple"},
+    {&__pyx_n_virial, "virial"},
+    {0, 0}
+  };
++ 
++ static __Pyx_StringTabEntry __pyx_string_tab[] = {
++   {&__pyx_k2p, __pyx_k2, sizeof(__pyx_k2)},
++   {0, 0, 0}
++ };
+  static struct __pyx_vtabstruct_16MMTK_energy_term_PyEnergyTerm __pyx_vtable_16MMTK_energy_term_PyEnergyTerm;
+  
+  static PyObject *__pyx_tp_new_16MMTK_energy_term_PyEnergyTerm(PyTypeObject *t, PyObject *a, PyObject *k) {
+    PyObject *o = __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_new(t, a, k);
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+!   *(struct __pyx_vtabstruct_16MMTK_energy_term_PyEnergyTerm **)&p->__pyx_vtab = __pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm;
+!   p->universe = Py_None; Py_INCREF(Py_None);
+!   p->configuration = Py_None; Py_INCREF(Py_None);
+    return o;
+  }
+  
+***************
+*** 593,599 ****
+  static int __pyx_tp_traverse_16MMTK_energy_term_PyEnergyTerm(PyObject *o, visitproc v, void *a) {
+    int e;
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+!   __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_traverse(o, v, a);
+    if (p->universe) {
+      e = (*v)(p->universe, a); if (e) return e;
+    }
+--- 610,616 ----
+  static int __pyx_tp_traverse_16MMTK_energy_term_PyEnergyTerm(PyObject *o, visitproc v, void *a) {
+    int e;
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+!   e = __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_traverse(o, v, a); if (e) return e;
+    if (p->universe) {
+      e = (*v)(p->universe, a); if (e) return e;
+    }
+***************
+*** 607,615 ****
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+    __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_clear(o);
+    Py_XDECREF(p->universe);
+!   p->universe = Py_None; Py_INCREF(p->universe);
+    Py_XDECREF(p->configuration);
+!   p->configuration = Py_None; Py_INCREF(p->configuration);
+    return 0;
+  }
+  
+--- 624,632 ----
+    struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *p = (struct __pyx_obj_16MMTK_energy_term_PyEnergyTerm *)o;
+    __pyx_ptype_16MMTK_energy_term_EnergyTerm->tp_clear(o);
+    Py_XDECREF(p->universe);
+!   p->universe = Py_None; Py_INCREF(Py_None);
+    Py_XDECREF(p->configuration);
+!   p->configuration = Py_None; Py_INCREF(Py_None);
+    return 0;
+  }
+  
+***************
+*** 698,704 ****
+    0, /*bf_getcharbuffer*/
+  };
+  
+! statichere PyTypeObject __pyx_type_16MMTK_energy_term_PyEnergyTerm = {
+    PyObject_HEAD_INIT(0)
+    0, /*ob_size*/
+    "MMTK_energy_term.PyEnergyTerm", /*tp_name*/
+--- 715,721 ----
+    0, /*bf_getcharbuffer*/
+  };
+  
+! PyTypeObject __pyx_type_16MMTK_energy_term_PyEnergyTerm = {
+    PyObject_HEAD_INIT(0)
+    0, /*ob_size*/
+    "MMTK_energy_term.PyEnergyTerm", /*tp_name*/
+***************
+*** 751,770 ****
+    {0, 0, 0, 0}
+  };
+  
+! DL_EXPORT(void) initMMTK_energy_term(void); /*proto*/
+! DL_EXPORT(void) initMMTK_energy_term(void) {
+    PyObject *__pyx_1 = 0;
+    __pyx_m = Py_InitModule4("MMTK_energy_term", __pyx_methods, 0, 0, PYTHON_API_VERSION);
+    if (!__pyx_m) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    __pyx_b = PyImport_AddModule("__builtin__");
+    if (!__pyx_b) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    if (__Pyx_InternStrings(__pyx_intern_tab) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    __pyx_ptype_16MMTK_energy_term_ArrayType = __Pyx_ImportType("Numeric", "ArrayType", sizeof(PyArrayObject)); if (!__pyx_ptype_16MMTK_energy_term_ArrayType) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 27; goto __pyx_L1;}
+    __pyx_ptype_16MMTK_energy_term_EnergyTerm = __Pyx_ImportType("MMTK_forcefield", "EnergyTerm", sizeof(PyFFEnergyTermObject)); if (!__pyx_ptype_16MMTK_energy_term_EnergyTerm) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 72; goto __pyx_L1;}
+    __pyx_ptype_16MMTK_energy_term_EnergyEvaluator = __Pyx_ImportType("MMTK_forcefield", "EnergyEvaluator", sizeof(PyFFEvaluatorObject)); if (!__pyx_ptype_16MMTK_energy_term_EnergyEvaluator) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 80; goto __pyx_L1;}
+    __pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm = &__pyx_vtable_16MMTK_energy_term_PyEnergyTerm;
+!   __pyx_vtable_16MMTK_energy_term_PyEnergyTerm.c_evaluate = (void *)__pyx_f_16MMTK_energy_term_12PyEnergyTerm_c_evaluate;
+    __pyx_type_16MMTK_energy_term_PyEnergyTerm.tp_base = __pyx_ptype_16MMTK_energy_term_EnergyTerm;
+    __pyx_type_16MMTK_energy_term_PyEnergyTerm.tp_free = _PyObject_GC_Del;
+    if (PyType_Ready(&__pyx_type_16MMTK_energy_term_PyEnergyTerm) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; goto __pyx_L1;}
+--- 768,792 ----
+    {0, 0, 0, 0}
+  };
+  
+! static void __pyx_init_filenames(void); /*proto*/
+! 
+! PyMODINIT_FUNC initMMTK_energy_term(void); /*proto*/
+! PyMODINIT_FUNC initMMTK_energy_term(void) {
+    PyObject *__pyx_1 = 0;
++   PyObject *__pyx_2 = 0;
++   __pyx_init_filenames();
+    __pyx_m = Py_InitModule4("MMTK_energy_term", __pyx_methods, 0, 0, PYTHON_API_VERSION);
+    if (!__pyx_m) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    __pyx_b = PyImport_AddModule("__builtin__");
+    if (!__pyx_b) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    if (__Pyx_InternStrings(__pyx_intern_tab) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
++   if (__Pyx_InitStrings(__pyx_string_tab) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 7; goto __pyx_L1;};
+    __pyx_ptype_16MMTK_energy_term_ArrayType = __Pyx_ImportType("Numeric", "ArrayType", sizeof(PyArrayObject)); if (!__pyx_ptype_16MMTK_energy_term_ArrayType) {__pyx_filename = __pyx_f[1]; __pyx_lineno = 27; goto __pyx_L1;}
+    __pyx_ptype_16MMTK_energy_term_EnergyTerm = __Pyx_ImportType("MMTK_forcefield", "EnergyTerm", sizeof(PyFFEnergyTermObject)); if (!__pyx_ptype_16MMTK_energy_term_EnergyTerm) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 72; goto __pyx_L1;}
+    __pyx_ptype_16MMTK_energy_term_EnergyEvaluator = __Pyx_ImportType("MMTK_forcefield", "EnergyEvaluator", sizeof(PyFFEvaluatorObject)); if (!__pyx_ptype_16MMTK_energy_term_EnergyEvaluator) {__pyx_filename = __pyx_f[2]; __pyx_lineno = 80; goto __pyx_L1;}
+    __pyx_vtabptr_16MMTK_energy_term_PyEnergyTerm = &__pyx_vtable_16MMTK_energy_term_PyEnergyTerm;
+!   *(void **)&__pyx_vtable_16MMTK_energy_term_PyEnergyTerm.c_evaluate = (void *)__pyx_f_16MMTK_energy_term_12PyEnergyTerm_c_evaluate;
+    __pyx_type_16MMTK_energy_term_PyEnergyTerm.tp_base = __pyx_ptype_16MMTK_energy_term_EnergyTerm;
+    __pyx_type_16MMTK_energy_term_PyEnergyTerm.tp_free = _PyObject_GC_Del;
+    if (PyType_Ready(&__pyx_type_16MMTK_energy_term_PyEnergyTerm) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 12; goto __pyx_L1;}
+***************
+*** 781,800 ****
+    /* "../Include/MMTK/forcefield.pxi":84 */
+    import_MMTK_forcefield();
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":9 */
+    __pyx_1 = __Pyx_Import(__pyx_n_MMTK, 0); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; goto __pyx_L1;}
+    if (PyObject_SetAttr(__pyx_m, __pyx_n_MMTK, __pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; goto __pyx_L1;}
+    Py_DECREF(__pyx_1); __pyx_1 = 0;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":10 */
+!   __pyx_1 = __Pyx_Import(__pyx_n_Numeric, 0); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+!   if (PyObject_SetAttr(__pyx_m, __pyx_n_Numeric, __pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+    Py_DECREF(__pyx_1); __pyx_1 = 0;
+  
+!   /* "/Volumes/hao/hinsen/mmtk2/Src/MMTK_energy_term.pyx":34 */
+    return;
+    __pyx_L1:;
+    Py_XDECREF(__pyx_1);
+    __Pyx_AddTraceback("MMTK_energy_term");
+  }
+  
+--- 803,830 ----
+    /* "../Include/MMTK/forcefield.pxi":84 */
+    import_MMTK_forcefield();
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":9 */
+    __pyx_1 = __Pyx_Import(__pyx_n_MMTK, 0); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; goto __pyx_L1;}
+    if (PyObject_SetAttr(__pyx_m, __pyx_n_MMTK, __pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 9; goto __pyx_L1;}
+    Py_DECREF(__pyx_1); __pyx_1 = 0;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":10 */
+!   __pyx_1 = __Pyx_Import(__pyx_k2p, 0); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+!   if (PyObject_SetAttr(__pyx_m, __pyx_n_numpy, __pyx_1) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+    Py_DECREF(__pyx_1); __pyx_1 = 0;
+  
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":10 */
+!   __pyx_1 = __Pyx_GetName(__pyx_m, __pyx_n_numpy); if (!__pyx_1) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+!   __pyx_2 = PyObject_GetAttr(__pyx_1, __pyx_n_oldnumeric); if (!__pyx_2) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+!   Py_DECREF(__pyx_1); __pyx_1 = 0;
+!   if (PyObject_SetAttr(__pyx_m, __pyx_n_Numeric, __pyx_2) < 0) {__pyx_filename = __pyx_f[0]; __pyx_lineno = 10; goto __pyx_L1;}
+!   Py_DECREF(__pyx_2); __pyx_2 = 0;
+! 
+!   /* "/home/oliphant/downloads/torrents/MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx":34 */
+    return;
+    __pyx_L1:;
+    Py_XDECREF(__pyx_1);
++   Py_XDECREF(__pyx_2);
+    __Pyx_AddTraceback("MMTK_energy_term");
+  }
+  
+***************
+*** 803,812 ****
+    "numeric.pxi",
+    "forcefield.pxi",
+  };
+- statichere char **__pyx_f = __pyx_filenames;
+  
+  /* Runtime support code */
+  
+  static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list) {
+      PyObject *__import__ = 0;
+      PyObject *empty_list = 0;
+--- 833,845 ----
+    "numeric.pxi",
+    "forcefield.pxi",
+  };
+  
+  /* Runtime support code */
+  
++ static void __pyx_init_filenames(void) {
++   __pyx_f = __pyx_filenames;
++ }
++ 
+  static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list) {
+      PyObject *__import__ = 0;
+      PyObject *empty_list = 0;
+***************
+*** 961,966 ****
+--- 994,1009 ----
+      return 0;
+  }
+  
++ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t) {
++     while (t->p) {
++         *t->p = PyString_FromStringAndSize(t->s, t->n - 1);
++         if (!*t->p)
++             return -1;
++         ++t;
++     }
++     return 0;
++ }
++ 
+  static PyTypeObject *__Pyx_ImportType(char *module_name, char *class_name, 
+      long size) 
+  {
+diff -rc MMTK-2.5.13/Src/MMTK_energy_term.pyx MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx
+*** MMTK-2.5.13/Src/MMTK_energy_term.pyx	2005-12-20 10:58:54.000000000 -0700
+--- MMTK-2.5.13-numpy/Src/MMTK_energy_term.pyx	2006-09-20 18:04:36.000000000 -0600
+***************
+*** 7,13 ****
+  include 'MMTK/forcefield.pxi'
+  
+  import MMTK
+! import Numeric
+  
+  cdef class PyEnergyTerm(EnergyTerm):
+  
+--- 7,13 ----
+  include 'MMTK/forcefield.pxi'
+  
+  import MMTK
+! import numpy.oldnumeric; Numeric=numpy.oldnumeric
+  
+  cdef class PyEnergyTerm(EnergyTerm):
+  

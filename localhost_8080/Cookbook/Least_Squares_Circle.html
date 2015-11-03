@@ -1,0 +1,631 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Least_Squares_Circle by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:09:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Least_Squares_Circle - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Least_Squares_Circle" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FLeast_Squares_Circle&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="arc_residu2_v1.png" href="Least_Squares_Circle1460.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v1.png">
+<link rel="Appendix" title="arc_residu2_v2.png" href="Least_Squares_Circledc35.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v2.png">
+<link rel="Appendix" title="arc_residu2_v3.png" href="Least_Squares_Circle2b5e.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v3.png">
+<link rel="Appendix" title="arc_residu2_v4.png" href="Least_Squares_Circlec5f0.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v4.png">
+<link rel="Appendix" title="arc_residu2_v5.png" href="Least_Squares_Circleb5fc.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v5.png">
+<link rel="Appendix" title="arc_residu2_v6.png" href="Least_Squares_Circle7b11.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v6.png">
+<link rel="Appendix" title="arc_v1.png" href="Least_Squares_Circle2ff1.html?action=AttachFile&amp;do=view&amp;target=arc_v1.png">
+<link rel="Appendix" title="arc_v2.png" href="Least_Squares_Circlefa64.html?action=AttachFile&amp;do=view&amp;target=arc_v2.png">
+<link rel="Appendix" title="arc_v3.png" href="Least_Squares_Circle039a.html?action=AttachFile&amp;do=view&amp;target=arc_v3.png">
+<link rel="Appendix" title="arc_v4.png" href="Least_Squares_Circlecbe7.html?action=AttachFile&amp;do=view&amp;target=arc_v4.png">
+<link rel="Appendix" title="arc_v5.png" href="Least_Squares_Circlec123.html?action=AttachFile&amp;do=view&amp;target=arc_v5.png">
+<link rel="Appendix" title="full_cercle_residu2_v1.png" href="Least_Squares_Circled194.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v1.png">
+<link rel="Appendix" title="full_cercle_residu2_v2.png" href="Least_Squares_Circlefa34.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v2.png">
+<link rel="Appendix" title="full_cercle_residu2_v3.png" href="Least_Squares_Circle6219.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v3.png">
+<link rel="Appendix" title="full_cercle_residu2_v4.png" href="Least_Squares_Circle2927.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v4.png">
+<link rel="Appendix" title="full_cercle_residu2_v5.png" href="Least_Squares_Circle22a9.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v5.png">
+<link rel="Appendix" title="full_cercle_v1.png" href="Least_Squares_Circleb62b.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v1.png">
+<link rel="Appendix" title="full_cercle_v2.png" href="Least_Squares_Circle2eba.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v2.png">
+<link rel="Appendix" title="full_cercle_v3.png" href="Least_Squares_Circleb7f8.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v3.png">
+<link rel="Appendix" title="full_cercle_v4.png" href="Least_Squares_Circlec5b2.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v4.png">
+<link rel="Appendix" title="full_cercle_v5.png" href="Least_Squares_Circle2dd0.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v5.png">
+<link rel="Appendix" title="least_squares_circle.py" href="Least_Squares_Circle264b.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle.py">
+<link rel="Appendix" title="least_squares_circle_v1.py" href="Least_Squares_Circleae9f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1.py">
+<link rel="Appendix" title="least_squares_circle_v1b.py" href="Least_Squares_Circle298f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1b.py">
+<link rel="Appendix" title="least_squares_circle_v1c.py" href="Least_Squares_Circlec4f1.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1c.py">
+<link rel="Appendix" title="least_squares_circle_v1d.py" href="Least_Squares_Circlee308.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1d.py">
+<link rel="Appendix" title="least_squares_circle_v2.py" href="Least_Squares_Circle13d8.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v2.py">
+<link rel="Appendix" title="least_squares_circle_v3.py" href="Least_Squares_Circled609.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v3.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Least_Squares_Circle456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Least_Squares_Circle11ea.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FLeast_Squares_Circle%22" rel="nofollow" title="Click to do a full-text search for this title">Least_Squares_Circle</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Least_Squares_Circle.html">Least_Squares_Circle</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Least_Squares_Circle37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Using_an_algebraic_approximation">Using an algebraic approximation</a></li><li>
+<a href="#Using_scipy.optimize.leastsq">Using scipy.optimize.leastsq</a><ol><li>
+<a href="#Basic_usage">Basic usage</a></li><li>
+<a href="#Advanced_usage.2C_with_jacobian_function">Advanced usage, with jacobian function</a></li></ol></li><li>
+<a href="#Using_scipy.odr">Using scipy.odr</a><ol><li>
+<a href="#Basic_usage-1">Basic usage</a></li><li>
+<a href="#Advanced_usage.2C_with_jacobian_functions">Advanced usage, with jacobian functions</a></li></ol></li><li>
+<a href="#Comparison_of_the_three_methods">Comparison of the three methods</a><ol><li>
+<a href="#Data_points_all_around_the_circle">Data points all around the circle</a></li><li>
+<a href="#Data_points_around_an_arc">Data points around an arc</a></li><li>
+<a href="#Conclusion">Conclusion</a></li></ol></li></ol></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h2 id="Introduction">Introduction</h2>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">This page gathers different methods used to find the least squares circle fitting a set of 2D points (x,y). <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line862">The full code of this analysis is available here: <a class="attachment" href="Least_Squares_Circlee308.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1d.py" title="">least_squares_circle_v1d.py</a>. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line874">Finding the least squares circle corresponds to finding the center of the circle (xc, yc) and its radius Rc which minimize the residu function defined below: <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674_1">   1</a> </span><span class="LineAnchor" id="CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674_1"></span><span class="anchor" id="line-1-2"></span><span class="ID">Ri</span> = <span class="ID">sqrt</span>( (<span class="ID">x</span> - <span class="ID">xc</span>)**<span class="Number">2</span> + (<span class="ID">y</span> - <span class="ID">yc</span>)**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674_2">   2</a> </span><span class="LineAnchor" id="CA-f750d686bbdd5aba97d61697a215fa2dc7ca5674_2"></span><span class="anchor" id="line-2-1"></span><span class="ID">residu</span> = <span class="ResWord">sum</span>( (<span class="ID">Ri</span> - <span class="ID">Rc</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><p class="line874">This is a nonlinear problem. <span class="anchor" id="line-19"></span>We well see three approaches to the problem, and compare there results, as well as their speeds. <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line867">
+<h2 id="Using_an_algebraic_approximation">Using an algebraic approximation</h2>
+<span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">As detailed in <a class="http" href="../../external.html?link=http://www.dtcenter.org/met/users/docs/write_ups/circle_fit.pdf">this document</a>  <span class="anchor" id="line-24"></span>this problem can be approximated by a linear one if we define the function to minimize as follow: <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-de2bc1800cd9d8575c5dd3cd1571611612f302f8\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-de2bc1800cd9d8575c5dd3cd1571611612f302f8" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-de2bc1800cd9d8575c5dd3cd1571611612f302f8_1">   1</a> </span><span class="LineAnchor" id="CA-de2bc1800cd9d8575c5dd3cd1571611612f302f8_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">residu_2</span> = <span class="ResWord">sum</span>( (<span class="ID">Ri</span>**<span class="Number">2</span> - <span class="ID">Rc</span>**<span class="Number">2</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line874">This leads to the following method, using linalg.solve : <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_1">   1</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_1"></span><span class="anchor" id="line-1-6"></span><span class="Comment"># == METHOD 1 ==</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_2">   2</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">method_1</span> = <span class="String">'</span><span class="String">algebraic</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_3">   3</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_3"></span><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_4">   4</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_4"></span><span class="anchor" id="line-4-1"></span><span class="Comment"># coordinates of the barycenter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_5">   5</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_5"></span><span class="anchor" id="line-5-1"></span><span class="ID">x_m</span> = <span class="ID">mean</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_6">   6</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_6"></span><span class="anchor" id="line-6-1"></span><span class="ID">y_m</span> = <span class="ID">mean</span>(<span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_7">   7</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_7"></span><span class="anchor" id="line-7-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_8">   8</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_8"></span><span class="anchor" id="line-8-1"></span><span class="Comment"># calculation of the reduced coordinates</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_9">   9</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">u</span> = <span class="ID">x</span> - <span class="ID">x_m</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_10">  10</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">v</span> = <span class="ID">y</span> - <span class="ID">y_m</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_11">  11</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_11"></span><span class="anchor" id="line-11-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_12">  12</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_12"></span><span class="anchor" id="line-12-1"></span><span class="Comment"># linear system defining the center (uc, vc) in reduced coordinates:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_13">  13</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_13"></span><span class="anchor" id="line-13-1"></span><span class="Comment">#    Suu * uc +  Suv * vc = (Suuu + Suvv)/2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_14">  14</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_14"></span><span class="anchor" id="line-14-1"></span><span class="Comment">#    Suv * uc +  Svv * vc = (Suuv + Svvv)/2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_15">  15</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">Suv</span>  = <span class="ResWord">sum</span>(<span class="ID">u</span>*<span class="ID">v</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_16">  16</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">Suu</span>  = <span class="ResWord">sum</span>(<span class="ID">u</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_17">  17</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">Svv</span>  = <span class="ResWord">sum</span>(<span class="ID">v</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_18">  18</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_18"></span><span class="anchor" id="line-18-1"></span><span class="ID">Suuv</span> = <span class="ResWord">sum</span>(<span class="ID">u</span>**<span class="Number">2</span> * <span class="ID">v</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_19">  19</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">Suvv</span> = <span class="ResWord">sum</span>(<span class="ID">u</span> * <span class="ID">v</span>**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_20">  20</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">Suuu</span> = <span class="ResWord">sum</span>(<span class="ID">u</span>**<span class="Number">3</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_21">  21</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_21"></span><span class="anchor" id="line-21-1"></span><span class="ID">Svvv</span> = <span class="ResWord">sum</span>(<span class="ID">v</span>**<span class="Number">3</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_22">  22</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_22"></span><span class="anchor" id="line-22-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_23">  23</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_23"></span><span class="anchor" id="line-23-1"></span><span class="Comment"># Solving the linear system</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_24">  24</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">A</span> = <span class="ID">array</span>([ [ <span class="ID">Suu</span>, <span class="ID">Suv</span> ], [<span class="ID">Suv</span>, <span class="ID">Svv</span>]])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_25">  25</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">B</span> = <span class="ID">array</span>([ <span class="ID">Suuu</span> + <span class="ID">Suvv</span>, <span class="ID">Svvv</span> + <span class="ID">Suuv</span> ])/<span class="Number">2.0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_26">  26</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_26"></span><span class="anchor" id="line-26-1"></span><span class="ID">uc</span>, <span class="ID">vc</span> = <span class="ID">linalg</span>.<span class="ID">solve</span>(<span class="ID">A</span>, <span class="ID">B</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_27">  27</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_27"></span><span class="anchor" id="line-27-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_28">  28</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_28"></span><span class="anchor" id="line-28-1"></span><span class="ID">xc_1</span> = <span class="ID">x_m</span> + <span class="ID">uc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_29">  29</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_29"></span><span class="anchor" id="line-29-1"></span><span class="ID">yc_1</span> = <span class="ID">y_m</span> + <span class="ID">vc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_30">  30</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_30"></span><span class="anchor" id="line-30-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_31">  31</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_31"></span><span class="anchor" id="line-31-1"></span><span class="Comment"># Calcul des distances au centre (xc_1, yc_1)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_32">  32</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_32"></span><span class="anchor" id="line-32-1"></span><span class="ID">Ri_1</span>     = <span class="ID">sqrt</span>((<span class="ID">x</span>-<span class="ID">xc_1</span>)**<span class="Number">2</span> + (<span class="ID">y</span>-<span class="ID">yc_1</span>)**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_33">  33</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_33"></span><span class="anchor" id="line-33-1"></span><span class="ID">R_1</span>      = <span class="ID">mean</span>(<span class="ID">Ri_1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_34">  34</a> </span><span class="LineAnchor" id="CA-37514f9ad4f1f66e268ee2cc0c5022afc856a11f_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">residu_1</span> = <span class="ResWord">sum</span>((<span class="ID">Ri_1</span>-<span class="ID">R_1</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><p class="line874"> <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line867">
+<h2 id="Using_scipy.optimize.leastsq">Using scipy.optimize.leastsq</h2>
+<span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line874">Scipy comes will several tools to solve the nonlinear problem above. <span class="anchor" id="line-73"></span>Among them, <a class="http" href="../../external.html?link=http://docs.scipy.org/doc/scipy/reference/tutorial/optimize.html#least-square-fitting-leastsq">scipy.optimize.leastsq</a> is very simple to use in this case. <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line874">Indeed, once the center of the circle is defined, the radius can be calculated directly and is equal to mean(Ri). So there is only two parameters left: xc and yc. <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><p class="line867">
+<h3 id="Basic_usage">Basic usage</h3>
+<span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line867"><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-9cbc96c33677caed56e94107990ce6c6fb54367d\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_1">   1</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_1"></span><span class="anchor" id="line-1-8"></span><span class="Comment">#  == METHOD 2 ==</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_2">   2</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_2"></span><span class="anchor" id="line-2-3"></span><span class="ResWord">from</span> <span class="ID">scipy</span>      <span class="ResWord">import</span> <span class="ID">optimize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_3">   3</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_3"></span><span class="anchor" id="line-3-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_4">   4</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">method_2</span> = <span class="String">&quot;</span><span class="String">leastsq</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_5">   5</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_5"></span><span class="anchor" id="line-5-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_6">   6</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_6"></span><span class="anchor" id="line-6-2"></span><span class="ResWord">def</span> <span class="ID">calc_R</span>(<span class="ID">xc</span>, <span class="ID">yc</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_7">   7</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_7"></span><span class="anchor" id="line-7-2"></span>    <span class="String">&quot;&quot;&quot; calculate the distance of each 2D points from the center (xc, yc) &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_8">   8</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_8"></span><span class="anchor" id="line-8-2"></span>    <span class="ResWord">return</span> <span class="ID">sqrt</span>((<span class="ID">x</span>-<span class="ID">xc</span>)**<span class="Number">2</span> + (<span class="ID">y</span>-<span class="ID">yc</span>)**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_9">   9</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_9"></span><span class="anchor" id="line-9-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_10">  10</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_10"></span><span class="anchor" id="line-10-2"></span><span class="ResWord">def</span> <span class="ID">f_2</span>(<span class="ID">c</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_11">  11</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_11"></span><span class="anchor" id="line-11-2"></span>    <span class="String">&quot;&quot;&quot; calculate the algebraic distance between the data points and the mean circle centered at c=(xc, yc) &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_12">  12</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_12"></span><span class="anchor" id="line-12-2"></span>    <span class="ID">Ri</span> = <span class="ID">calc_R</span>(*<span class="ID">c</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_13">  13</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_13"></span><span class="anchor" id="line-13-2"></span>    <span class="ResWord">return</span> <span class="ID">Ri</span> - <span class="ID">Ri</span>.<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_14">  14</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_14"></span><span class="anchor" id="line-14-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_15">  15</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_15"></span><span class="anchor" id="line-15-2"></span><span class="ID">center_estimate</span> = <span class="ID">x_m</span>, <span class="ID">y_m</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_16">  16</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_16"></span><span class="anchor" id="line-16-2"></span><span class="ID">center_2</span>, <span class="ID">ier</span> = <span class="ID">optimize</span>.<span class="ID">leastsq</span>(<span class="ID">f_2</span>, <span class="ID">center_estimate</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_17">  17</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_17"></span><span class="anchor" id="line-17-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_18">  18</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_18"></span><span class="anchor" id="line-18-2"></span><span class="ID">xc_2</span>, <span class="ID">yc_2</span> = <span class="ID">center_2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_19">  19</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_19"></span><span class="anchor" id="line-19-2"></span><span class="ID">Ri_2</span>       = <span class="ID">calc_R</span>(*<span class="ID">center_2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_20">  20</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_20"></span><span class="anchor" id="line-20-2"></span><span class="ID">R_2</span>        = <span class="ID">Ri_2</span>.<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-9cbc96c33677caed56e94107990ce6c6fb54367d_21">  21</a> </span><span class="LineAnchor" id="CA-9cbc96c33677caed56e94107990ce6c6fb54367d_21"></span><span class="anchor" id="line-21-2"></span><span class="ID">residu_2</span>   = <span class="ResWord">sum</span>((<span class="ID">Ri_2</span> - <span class="ID">R_2</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867">
+<h3 id="Advanced_usage.2C_with_jacobian_function">Advanced usage, with jacobian function</h3>
+<span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line874">To gain in speed, it is possible to tell optimize.leastsq how to compute the jacobian of the function by adding a Dfun argument: <span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_1">   1</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_1"></span><span class="anchor" id="line-1-10"></span><span class="Comment"># == METHOD 2b ==</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_2">   2</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_2"></span><span class="anchor" id="line-2-4"></span><span class="ID">method_2b</span>  = <span class="String">&quot;</span><span class="String">leastsq with jacobian</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_3">   3</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_3"></span><span class="anchor" id="line-3-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_4">   4</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_4"></span><span class="anchor" id="line-4-3"></span><span class="ResWord">def</span> <span class="ID">calc_R</span>(<span class="ID">xc</span>, <span class="ID">yc</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_5">   5</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_5"></span><span class="anchor" id="line-5-3"></span>    <span class="String">&quot;&quot;&quot; calculate the distance of each data points from the center (xc, yc) &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_6">   6</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_6"></span><span class="anchor" id="line-6-3"></span>    <span class="ResWord">return</span> <span class="ID">sqrt</span>((<span class="ID">x</span>-<span class="ID">xc</span>)**<span class="Number">2</span> + (<span class="ID">y</span>-<span class="ID">yc</span>)**<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_7">   7</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_7"></span><span class="anchor" id="line-7-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_8">   8</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_8"></span><span class="anchor" id="line-8-3"></span><span class="ResWord">def</span> <span class="ID">f_2b</span>(<span class="ID">c</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_9">   9</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_9"></span><span class="anchor" id="line-9-3"></span>    <span class="String">&quot;&quot;&quot; calculate the algebraic distance between the 2D points and the mean circle centered at c=(xc, yc) &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_10">  10</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_10"></span><span class="anchor" id="line-10-3"></span>    <span class="ID">Ri</span> = <span class="ID">calc_R</span>(*<span class="ID">c</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_11">  11</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_11"></span><span class="anchor" id="line-11-3"></span>    <span class="ResWord">return</span> <span class="ID">Ri</span> - <span class="ID">Ri</span>.<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_12">  12</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_12"></span><span class="anchor" id="line-12-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_13">  13</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_13"></span><span class="anchor" id="line-13-3"></span><span class="ResWord">def</span> <span class="ID">Df_2b</span>(<span class="ID">c</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_14">  14</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_14"></span><span class="anchor" id="line-14-3"></span>    <span class="String">&quot;&quot;&quot; Jacobian of f_2b</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_15">  15</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_15"></span><span class="anchor" id="line-15-3"></span><span class="String">    The axis corresponding to derivatives must be coherent with the col_deriv option of leastsq&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_16">  16</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_16"></span><span class="anchor" id="line-16-3"></span>    <span class="ID">xc</span>, <span class="ID">yc</span>     = <span class="ID">c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_17">  17</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_17"></span><span class="anchor" id="line-17-3"></span>    <span class="ID">df2b_dc</span>    = <span class="ID">empty</span>((<span class="ResWord">len</span>(<span class="ID">c</span>), <span class="ID">x</span>.<span class="ID">size</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_18">  18</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_18"></span><span class="anchor" id="line-18-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_19">  19</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_19"></span><span class="anchor" id="line-19-3"></span>    <span class="ID">Ri</span> = <span class="ID">calc_R</span>(<span class="ID">xc</span>, <span class="ID">yc</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_20">  20</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_20"></span><span class="anchor" id="line-20-3"></span>    <span class="ID">df2b_dc</span>[<span class="Number">0</span>] = (<span class="ID">xc</span> - <span class="ID">x</span>)/<span class="ID">Ri</span>                   <span class="Comment"># dR/dxc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_21">  21</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_21"></span><span class="anchor" id="line-21-3"></span>    <span class="ID">df2b_dc</span>[<span class="Number">1</span>] = (<span class="ID">yc</span> - <span class="ID">y</span>)/<span class="ID">Ri</span>                   <span class="Comment"># dR/dyc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_22">  22</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_22"></span><span class="anchor" id="line-22-2"></span>    <span class="ID">df2b_dc</span>    = <span class="ID">df2b_dc</span> - <span class="ID">df2b_dc</span>.<span class="ID">mean</span>(<span class="ID">axis</span>=<span class="Number">1</span>)[:, <span class="ID">newaxis</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_23">  23</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_23"></span><span class="anchor" id="line-23-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_24">  24</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_24"></span><span class="anchor" id="line-24-2"></span>    <span class="ResWord">return</span> <span class="ID">df2b_dc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_25">  25</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_25"></span><span class="anchor" id="line-25-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_26">  26</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_26"></span><span class="anchor" id="line-26-2"></span><span class="ID">center_estimate</span> = <span class="ID">x_m</span>, <span class="ID">y_m</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_27">  27</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_27"></span><span class="anchor" id="line-27-2"></span><span class="ID">center_2b</span>, <span class="ID">ier</span> = <span class="ID">optimize</span>.<span class="ID">leastsq</span>(<span class="ID">f_2b</span>, <span class="ID">center_estimate</span>, <span class="ID">Dfun</span>=<span class="ID">Df_2b</span>, <span class="ID">col_deriv</span>=<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_28">  28</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_28"></span><span class="anchor" id="line-28-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_29">  29</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_29"></span><span class="anchor" id="line-29-2"></span><span class="ID">xc_2b</span>, <span class="ID">yc_2b</span> = <span class="ID">center_2b</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_30">  30</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_30"></span><span class="anchor" id="line-30-2"></span><span class="ID">Ri_2b</span>        = <span class="ID">calc_R</span>(*<span class="ID">center_2b</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_31">  31</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_31"></span><span class="anchor" id="line-31-2"></span><span class="ID">R_2b</span>         = <span class="ID">Ri_2b</span>.<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_32">  32</a> </span><span class="LineAnchor" id="CA-40c7c2cd0af0db9c72b0005d8534874a693a7a7c_32"></span><span class="anchor" id="line-32-2"></span><span class="ID">residu_2b</span>    = <span class="ResWord">sum</span>((<span class="ID">Ri_2b</span> - <span class="ID">R_2b</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><p class="line867">
+<h2 id="Using_scipy.odr">Using scipy.odr</h2>
+<span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><p class="line862">Scipy has a dedicated package to deal with orthogonal distance regression, namely <a class="http" href="../../external.html?link=http://docs.scipy.org/doc/scipy/reference/odr.html">scipy.odr</a>. <span class="anchor" id="line-146"></span>This package can handle both explict and implicit function definition, and we will used the second form in this case. <span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><p class="line874">Here is the implicit definition of the circle: <span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-8674df6f9ef1413ec4173a4e1349e976213f537a\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-8674df6f9ef1413ec4173a4e1349e976213f537a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-8674df6f9ef1413ec4173a4e1349e976213f537a_1">   1</a> </span><span class="LineAnchor" id="CA-8674df6f9ef1413ec4173a4e1349e976213f537a_1"></span><span class="anchor" id="line-1-12"></span>(<span class="ID">x</span> - <span class="ID">xc</span>)**<span class="Number">2</span> + (<span class="ID">y</span>-<span class="ID">yc</span>)**<span class="Number">2</span> - <span class="ID">Rc</span>**<span class="Number">2</span> = <span class="Number">0</span></span>
+</pre></div></div><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><p class="line867">
+<h3 id="Basic_usage-1">Basic usage</h3>
+<span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><p class="line874">This leads to the following code: <span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-f3269155c83bd405234d0a2615c0096df8bee3df\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_1">   1</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_1"></span><span class="anchor" id="line-1-14"></span><span class="Comment"># == METHOD 3 ==</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_2">   2</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_2"></span><span class="anchor" id="line-2-5"></span><span class="ResWord">from</span> <span class="ID">scipy</span>      <span class="ResWord">import</span>  <span class="ID">odr</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_3">   3</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_3"></span><span class="anchor" id="line-3-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_4">   4</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_4"></span><span class="anchor" id="line-4-4"></span><span class="ID">method_3</span> = <span class="String">&quot;</span><span class="String">odr</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_5">   5</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_5"></span><span class="anchor" id="line-5-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_6">   6</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_6"></span><span class="anchor" id="line-6-4"></span><span class="ResWord">def</span> <span class="ID">f_3</span>(<span class="ID">beta</span>, <span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_7">   7</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_7"></span><span class="anchor" id="line-7-4"></span>    <span class="String">&quot;&quot;&quot; implicit definition of the circle &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_8">   8</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_8"></span><span class="anchor" id="line-8-4"></span>    <span class="ResWord">return</span> (<span class="ID">x</span>[<span class="Number">0</span>]-<span class="ID">beta</span>[<span class="Number">0</span>])**<span class="Number">2</span> + (<span class="ID">x</span>[<span class="Number">1</span>]-<span class="ID">beta</span>[<span class="Number">1</span>])**<span class="Number">2</span> -<span class="ID">beta</span>[<span class="Number">2</span>]**<span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_9">   9</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_9"></span><span class="anchor" id="line-9-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_10">  10</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_10"></span><span class="anchor" id="line-10-4"></span><span class="Comment"># initial guess for parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_11">  11</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_11"></span><span class="anchor" id="line-11-4"></span><span class="ID">R_m</span> = <span class="ID">calc_R</span>(<span class="ID">x_m</span>, <span class="ID">y_m</span>).<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_12">  12</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_12"></span><span class="anchor" id="line-12-4"></span><span class="ID">beta0</span> = [ <span class="ID">x_m</span>, <span class="ID">y_m</span>, <span class="ID">R_m</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_13">  13</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_13"></span><span class="anchor" id="line-13-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_14">  14</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_14"></span><span class="anchor" id="line-14-4"></span><span class="Comment"># for implicit function :</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_15">  15</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_15"></span><span class="anchor" id="line-15-4"></span><span class="Comment">#       data.x contains both coordinates of the points (data.x = [x, y])</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_16">  16</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_16"></span><span class="anchor" id="line-16-4"></span><span class="Comment">#       data.y is the dimensionality of the response</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_17">  17</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_17"></span><span class="anchor" id="line-17-4"></span><span class="ID">lsc_data</span>  = <span class="ID">odr</span>.<span class="ID">Data</span>(<span class="ID">row_stack</span>([<span class="ID">x</span>, <span class="ID">y</span>]), <span class="ID">y</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_18">  18</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_18"></span><span class="anchor" id="line-18-4"></span><span class="ID">lsc_model</span> = <span class="ID">odr</span>.<span class="ID">Model</span>(<span class="ID">f_3</span>, <span class="ID">implicit</span>=<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_19">  19</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_19"></span><span class="anchor" id="line-19-4"></span><span class="ID">lsc_odr</span>   = <span class="ID">odr</span>.<span class="ID">ODR</span>(<span class="ID">lsc_data</span>, <span class="ID">lsc_model</span>, <span class="ID">beta0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_20">  20</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_20"></span><span class="anchor" id="line-20-4"></span><span class="ID">lsc_out</span>   = <span class="ID">lsc_odr</span>.<span class="ID">run</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_21">  21</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_21"></span><span class="anchor" id="line-21-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_22">  22</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_22"></span><span class="anchor" id="line-22-3"></span><span class="ID">xc_3</span>, <span class="ID">yc_3</span>, <span class="ID">R_3</span> = <span class="ID">lsc_out</span>.<span class="ID">beta</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_23">  23</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_23"></span><span class="anchor" id="line-23-3"></span><span class="ID">Ri_3</span> = <span class="ID">calc_R</span>([<span class="ID">xc_3</span>, <span class="ID">yc_3</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-f3269155c83bd405234d0a2615c0096df8bee3df_24">  24</a> </span><span class="LineAnchor" id="CA-f3269155c83bd405234d0a2615c0096df8bee3df_24"></span><span class="anchor" id="line-24-3"></span><span class="ID">residu_3</span> = <span class="ResWord">sum</span>((<span class="ID">Ri_3</span> - <span class="ID">R_3</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><p class="line867">
+<h3 id="Advanced_usage.2C_with_jacobian_functions">Advanced usage, with jacobian functions</h3>
+<span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><p class="line874">One of the advantages of the implicit function definition is that its derivatives are very easily calculated. <span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><p class="line874">This can be used to complete the model: <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><span class="anchor" id="line-247"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_1">   1</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_1"></span><span class="anchor" id="line-1-16"></span><span class="Comment"># == METHOD 3b ==</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_2">   2</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_2"></span><span class="anchor" id="line-2-6"></span><span class="ID">method_3b</span>  = <span class="String">&quot;</span><span class="String">odr with jacobian</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_3">   3</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_3"></span><span class="anchor" id="line-3-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_4">   4</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_4"></span><span class="anchor" id="line-4-5"></span><span class="ResWord">def</span> <span class="ID">f_3b</span>(<span class="ID">beta</span>, <span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_5">   5</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_5"></span><span class="anchor" id="line-5-5"></span>    <span class="String">&quot;&quot;&quot; implicit definition of the circle &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_6">   6</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_6"></span><span class="anchor" id="line-6-5"></span>    <span class="ResWord">return</span> (<span class="ID">x</span>[<span class="Number">0</span>]-<span class="ID">beta</span>[<span class="Number">0</span>])**<span class="Number">2</span> + (<span class="ID">x</span>[<span class="Number">1</span>]-<span class="ID">beta</span>[<span class="Number">1</span>])**<span class="Number">2</span> -<span class="ID">beta</span>[<span class="Number">2</span>]**<span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_7">   7</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_7"></span><span class="anchor" id="line-7-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_8">   8</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_8"></span><span class="anchor" id="line-8-5"></span><span class="ResWord">def</span> <span class="ID">jacb</span>(<span class="ID">beta</span>, <span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_9">   9</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_9"></span><span class="anchor" id="line-9-5"></span>    <span class="String">&quot;&quot;&quot; Jacobian function with respect to the parameters beta.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_10">  10</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_10"></span><span class="anchor" id="line-10-5"></span><span class="String">    return df_3b/dbeta</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_11">  11</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_11"></span><span class="anchor" id="line-11-5"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_12">  12</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_12"></span><span class="anchor" id="line-12-5"></span>    <span class="ID">xc</span>, <span class="ID">yc</span>, <span class="ID">r</span> = <span class="ID">beta</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_13">  13</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_13"></span><span class="anchor" id="line-13-5"></span>    <span class="ID">xi</span>, <span class="ID">yi</span>    = <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_14">  14</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_14"></span><span class="anchor" id="line-14-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_15">  15</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_15"></span><span class="anchor" id="line-15-5"></span>    <span class="ID">df_db</span>    = <span class="ID">empty</span>((<span class="ID">beta</span>.<span class="ID">size</span>, <span class="ID">x</span>.<span class="ID">shape</span>[<span class="Number">1</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_16">  16</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_16"></span><span class="anchor" id="line-16-5"></span>    <span class="ID">df_db</span>[<span class="Number">0</span>] =  <span class="Number">2</span>*(<span class="ID">xc</span>-<span class="ID">xi</span>)                     <span class="Comment"># d_f/dxc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_17">  17</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_17"></span><span class="anchor" id="line-17-5"></span>    <span class="ID">df_db</span>[<span class="Number">1</span>] =  <span class="Number">2</span>*(<span class="ID">yc</span>-<span class="ID">yi</span>)                     <span class="Comment"># d_f/dyc</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_18">  18</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_18"></span><span class="anchor" id="line-18-5"></span>    <span class="ID">df_db</span>[<span class="Number">2</span>] = -<span class="Number">2</span>*<span class="ID">r</span>                           <span class="Comment"># d_f/dr</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_19">  19</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_19"></span><span class="anchor" id="line-19-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_20">  20</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_20"></span><span class="anchor" id="line-20-5"></span>    <span class="ResWord">return</span> <span class="ID">df_db</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_21">  21</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_21"></span><span class="anchor" id="line-21-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_22">  22</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_22"></span><span class="anchor" id="line-22-4"></span><span class="ResWord">def</span> <span class="ID">jacd</span>(<span class="ID">beta</span>, <span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_23">  23</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_23"></span><span class="anchor" id="line-23-4"></span>    <span class="String">&quot;&quot;&quot; Jacobian function with respect to the input x.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_24">  24</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_24"></span><span class="anchor" id="line-24-4"></span><span class="String">    return df_3b/dx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_25">  25</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_25"></span><span class="anchor" id="line-25-3"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_26">  26</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_26"></span><span class="anchor" id="line-26-3"></span>    <span class="ID">xc</span>, <span class="ID">yc</span>, <span class="ID">r</span> = <span class="ID">beta</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_27">  27</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_27"></span><span class="anchor" id="line-27-3"></span>    <span class="ID">xi</span>, <span class="ID">yi</span>    = <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_28">  28</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_28"></span><span class="anchor" id="line-28-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_29">  29</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_29"></span><span class="anchor" id="line-29-3"></span>    <span class="ID">df_dx</span>    = <span class="ID">empty_like</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_30">  30</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_30"></span><span class="anchor" id="line-30-3"></span>    <span class="ID">df_dx</span>[<span class="Number">0</span>] =  <span class="Number">2</span>*(<span class="ID">xi</span>-<span class="ID">xc</span>)                     <span class="Comment"># d_f/dxi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_31">  31</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_31"></span><span class="anchor" id="line-31-3"></span>    <span class="ID">df_dx</span>[<span class="Number">1</span>] =  <span class="Number">2</span>*(<span class="ID">yi</span>-<span class="ID">yc</span>)                     <span class="Comment"># d_f/dyi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_32">  32</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_32"></span><span class="anchor" id="line-32-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_33">  33</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_33"></span><span class="anchor" id="line-33-2"></span>    <span class="ResWord">return</span> <span class="ID">df_dx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_34">  34</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_34"></span><span class="anchor" id="line-34-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_35">  35</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_35"></span><span class="anchor" id="line-35-1"></span><span class="ResWord">def</span> <span class="ID">calc_estimate</span>(<span class="ID">data</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_36">  36</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_36"></span><span class="anchor" id="line-36-1"></span>    <span class="String">&quot;&quot;&quot; Return a first estimation on the parameter from the data  &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_37">  37</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_37"></span><span class="anchor" id="line-37-1"></span>    <span class="ID">xc0</span>, <span class="ID">yc0</span> = <span class="ID">data</span>.<span class="ID">x</span>.<span class="ID">mean</span>(<span class="ID">axis</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_38">  38</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_38"></span><span class="anchor" id="line-38-1"></span>    <span class="ID">r0</span> = <span class="ID">sqrt</span>((<span class="ID">data</span>.<span class="ID">x</span>[<span class="Number">0</span>]-<span class="ID">xc0</span>)**<span class="Number">2</span> +(<span class="ID">data</span>.<span class="ID">x</span>[<span class="Number">1</span>] -<span class="ID">yc0</span>)**<span class="Number">2</span>).<span class="ID">mean</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_39">  39</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_39"></span><span class="anchor" id="line-39-1"></span>    <span class="ResWord">return</span> <span class="ID">xc0</span>, <span class="ID">yc0</span>, <span class="ID">r0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_40">  40</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_40"></span><span class="anchor" id="line-40-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_41">  41</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_41"></span><span class="anchor" id="line-41-1"></span><span class="Comment"># for implicit function :</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_42">  42</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_42"></span><span class="anchor" id="line-42-1"></span><span class="Comment">#       data.x contains both coordinates of the points</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_43">  43</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_43"></span><span class="anchor" id="line-43-1"></span><span class="Comment">#       data.y is the dimensionality of the response</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_44">  44</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_44"></span><span class="anchor" id="line-44-1"></span><span class="ID">lsc_data</span>  = <span class="ID">odr</span>.<span class="ID">Data</span>(<span class="ID">row_stack</span>([<span class="ID">x</span>, <span class="ID">y</span>]), <span class="ID">y</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_45">  45</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_45"></span><span class="anchor" id="line-45-1"></span><span class="ID">lsc_model</span> = <span class="ID">odr</span>.<span class="ID">Model</span>(<span class="ID">f_3b</span>, <span class="ID">implicit</span>=<span class="ResWord">True</span>, <span class="ID">estimate</span>=<span class="ID">calc_estimate</span>, <span class="ID">fjacd</span>=<span class="ID">jacd</span>, <span class="ID">fjacb</span>=<span class="ID">jacb</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_46">  46</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_46"></span><span class="anchor" id="line-46-1"></span><span class="ID">lsc_odr</span>   = <span class="ID">odr</span>.<span class="ID">ODR</span>(<span class="ID">lsc_data</span>, <span class="ID">lsc_model</span>)    <span class="Comment"># beta0 has been replaced by an estimate function</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_47">  47</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_47"></span><span class="anchor" id="line-47-1"></span><span class="ID">lsc_odr</span>.<span class="ID">set_job</span>(<span class="ID">deriv</span>=<span class="Number">3</span>)                    <span class="Comment"># use user derivatives function without checking</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_48">  48</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_48"></span><span class="anchor" id="line-48-1"></span><span class="ID">lsc_odr</span>.<span class="ID">set_iprint</span>(<span class="ResWord">iter</span>=<span class="Number">1</span>, <span class="ID">iter_step</span>=<span class="Number">1</span>)     <span class="Comment"># print details for each iteration</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_49">  49</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_49"></span><span class="anchor" id="line-49-1"></span><span class="ID">lsc_out</span>   = <span class="ID">lsc_odr</span>.<span class="ID">run</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_50">  50</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_50"></span><span class="anchor" id="line-50-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_51">  51</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_51"></span><span class="anchor" id="line-51-1"></span><span class="ID">xc_3b</span>, <span class="ID">yc_3b</span>, <span class="ID">R_3b</span> = <span class="ID">lsc_out</span>.<span class="ID">beta</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_52">  52</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_52"></span><span class="anchor" id="line-52-1"></span><span class="ID">Ri_3b</span>       = <span class="ID">calc_R</span>(<span class="ID">xc_3b</span>, <span class="ID">yc_3b</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_53">  53</a> </span><span class="LineAnchor" id="CA-d7ac26b7c0feaf39f0dad84669b763d81e8ea0eb_53"></span><span class="anchor" id="line-53-1"></span><span class="ID">residu_3b</span>   = <span class="ResWord">sum</span>((<span class="ID">Ri_3b</span> - <span class="ID">R_3b</span>)**<span class="Number">2</span>)</span>
+</pre></div></div><p class="line874"> <span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><p class="line867">
+<h2 id="Comparison_of_the_three_methods">Comparison of the three methods</h2>
+<span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><p class="line874">We will compare the results of these three methods in two cases: <span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><ul><li>when 2D points are all around the circle <span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span></li><li class="gap">when 2D points are in a small arc <span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span></li></ul><p class="line867">
+<h3 id="Data_points_all_around_the_circle">Data points all around the circle</h3>
+<span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><p class="line874">Here is an example with data points all around the circle: <span class="anchor" id="line-260"></span><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><span class="anchor" id="line-265"></span><span class="anchor" id="line-1-17"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-dd599ba1a1ecc9a19c51b2708897a710558332d9\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-dd599ba1a1ecc9a19c51b2708897a710558332d9" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_1">   1</a> </span><span class="LineAnchor" id="CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_1"></span><span class="anchor" id="line-1-18"></span><span class="Comment"># Coordinates of the 2D points</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_2">   2</a> </span><span class="LineAnchor" id="CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_2"></span><span class="anchor" id="line-2-7"></span><span class="ID">x</span> = <span class="ID">r_</span>[  <span class="Number">9</span>,  <span class="Number">35</span>, -<span class="Number">13</span>,  <span class="Number">10</span>,  <span class="Number">23</span>,   <span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_3">   3</a> </span><span class="LineAnchor" id="CA-dd599ba1a1ecc9a19c51b2708897a710558332d9_3"></span><span class="anchor" id="line-3-6"></span><span class="ID">y</span> = <span class="ID">r_</span>[ <span class="Number">34</span>,  <span class="Number">10</span>,   <span class="Number">6</span>, -<span class="Number">14</span>,  <span class="Number">27</span>, -<span class="Number">10</span>]</span>
+</pre></div></div><span class="anchor" id="line-266"></span><span class="anchor" id="line-267"></span><p class="line874">This gives: <span class="anchor" id="line-268"></span><span class="anchor" id="line-269"></span><div><table style="width: &amp;quot;100%&amp;quot"><tbody><tr>  <td colspan="8" style="text-align: center"><p class="line891"><strong>SUMMARY</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-270"></span><p class="line891"><strong>Method</strong></td>
+  <td><p class="line862"> <strong>Xc</strong> </td>
+  <td><p class="line862">  <strong>Yc</strong> </td>
+  <td><p class="line862"> <strong>Rc</strong> </td>
+  <td><p class="line891"><strong>nb_calls</strong> </td>
+  <td><p class="line862"> <strong>std(Ri)</strong></td>
+  <td><p class="line862"> <strong>residu</strong> </td>
+  <td><p class="line862"> <strong>residu2</strong> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-271"></span><p class="line862">algebraic              </td>
+  <td><p class="line862">  10.55231 </td>
+  <td><p class="line862"> 9.70590</td>
+  <td><p class="line862"> 23.33482</td>
+  <td><p class="line862">  1</td>
+  <td><p class="line862"> 1.135135</td>
+  <td><p class="line862"> 7.731195</td>
+  <td><p class="line862"> 16236.34</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-272"></span><p class="line862">leastsq                </td>
+  <td><p class="line862">  10.50009 </td>
+  <td><p class="line862"> 9.65995</td>
+  <td><p class="line862"> 23.33353</td>
+  <td><p class="line862"> 15</td>
+  <td><p class="line862"> 1.133715</td>
+  <td><p class="line862"> 7.711852</td>
+  <td><p class="line862"> 16276.89</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-273"></span><p class="line862">leastsq with jacobian  </td>
+  <td><p class="line862">  10.50009 </td>
+  <td><p class="line862"> 9.65995</td>
+  <td><p class="line862"> 23.33353</td>
+  <td><p class="line862">  7</td>
+  <td><p class="line862"> 1.133715</td>
+  <td><p class="line862"> 7.711852</td>
+  <td><p class="line862"> 16276.89</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-274"></span><p class="line862">odr                    </td>
+  <td><p class="line862">  10.50009 </td>
+  <td><p class="line862"> 9.65995</td>
+  <td><p class="line862"> 23.33353</td>
+  <td><p class="line862"> 82</td>
+  <td><p class="line862"> 1.133715</td>
+  <td><p class="line862"> 7.711852</td>
+  <td><p class="line862"> 16276.89</td>
+</tr>
+<tr>  <td><span class="anchor" id="line-275"></span><p class="line862">odr with jacobian      </td>
+  <td><p class="line862">  10.50009 </td>
+  <td><p class="line862"> 9.65995</td>
+  <td><p class="line862"> 23.33353</td>
+  <td><p class="line862"> 16</td>
+  <td><p class="line862"> 1.133715</td>
+  <td><p class="line862"> 7.711852</td>
+  <td><p class="line862"> 16276.89</td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-276"></span><span class="anchor" id="line-277"></span><p class="line874">Note: <span class="anchor" id="line-278"></span><span class="anchor" id="line-279"></span><ul><li><p class="line891"><tt class="backtick">nb_calls</tt> correspond to the number of function calls of the function to be minimized, and do not take into account the number of calls to derivatives function. This differs from the number of iteration as ODR can make multiple calls during an iteration. <span class="anchor" id="line-280"></span><span class="anchor" id="line-281"></span></li><li class="gap"><p class="line862">as shown on the figures below, the two functions <tt class="backtick">residu</tt> and <tt class="backtick">residu_2</tt> are not equivalent, but their minima are close in this case. <span class="anchor" id="line-282"></span><span class="anchor" id="line-283"></span></li></ul><p class="line867"><img alt="full_cercle_v5.png" class="attachment" src="full_cercle_v5f911.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v5.png" title="full_cercle_v5.png" /> <span class="anchor" id="line-284"></span><img alt="full_cercle_residu2_v5.png" class="attachment" src="full_cercle_residu2_v55c38.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v5.png" title="full_cercle_residu2_v5.png" /> <span class="anchor" id="line-285"></span><span class="anchor" id="line-286"></span><p class="line867">
+<h3 id="Data_points_around_an_arc">Data points around an arc</h3>
+<span class="anchor" id="line-287"></span><span class="anchor" id="line-288"></span><span class="anchor" id="line-289"></span><p class="line874">Here is an example where data points form an arc: <span class="anchor" id="line-290"></span><span class="anchor" id="line-291"></span><p class="line867"><span class="anchor" id="line-292"></span><span class="anchor" id="line-293"></span><span class="anchor" id="line-294"></span><span class="anchor" id="line-295"></span><span class="anchor" id="line-1-19"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-028b661ea3dc964736b46ec573e410cc5b9e1a17\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-028b661ea3dc964736b46ec573e410cc5b9e1a17" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-028b661ea3dc964736b46ec573e410cc5b9e1a17_1">   1</a> </span><span class="LineAnchor" id="CA-028b661ea3dc964736b46ec573e410cc5b9e1a17_1"></span><span class="anchor" id="line-1-20"></span><span class="ID">x</span> = <span class="ID">r_</span>[<span class="Number">36</span>, <span class="Number">36</span>, <span class="Number">19</span>, <span class="Number">18</span>, <span class="Number">33</span>, <span class="Number">26</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-028b661ea3dc964736b46ec573e410cc5b9e1a17_2">   2</a> </span><span class="LineAnchor" id="CA-028b661ea3dc964736b46ec573e410cc5b9e1a17_2"></span><span class="anchor" id="line-2-8"></span><span class="ID">y</span> = <span class="ID">r_</span>[<span class="Number">14</span>, <span class="Number">10</span>, <span class="Number">28</span>, <span class="Number">31</span>, <span class="Number">18</span>, <span class="Number">26</span>]</span>
+</pre></div></div><span class="anchor" id="line-296"></span><span class="anchor" id="line-297"></span><div><table style="width: &amp;quot;100%&amp;quot"><tbody><tr>  <td colspan="8" style="text-align: center"><p class="line891"><strong>SUMMARY</strong></td>
+</tr>
+<tr>  <td><span class="anchor" id="line-298"></span><p class="line891"><strong>Method</strong></td>
+  <td><p class="line862"> <strong>Xc</strong> </td>
+  <td><p class="line862">  <strong>Yc</strong> </td>
+  <td><p class="line862"> <strong>Rc</strong> </td>
+  <td><p class="line891"><strong>nb_calls</strong> </td>
+  <td><p class="line862"> <strong>std(Ri)</strong></td>
+  <td><p class="line862"> <strong>residu</strong> </td>
+  <td><p class="line862"> <strong>residu2</strong> </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-299"></span><p class="line862"> algebraic             </td>
+  <td><p class="line862">  15.05503</td>
+  <td><p class="line862"> 8.83615</td>
+  <td><p class="line862">  20.82995</td>
+  <td><p class="line862">   1</td>
+  <td><p class="line862">  0.930508</td>
+  <td><p class="line862">  5.195076</td>
+  <td><p class="line862">   9153.40 </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-300"></span><p class="line862"> leastsq               </td>
+  <td><p class="line862">   9.88760</td>
+  <td><p class="line862"> 3.68753</td>
+  <td><p class="line862">  27.35040</td>
+  <td><p class="line862">  24</td>
+  <td><p class="line862">  0.820825</td>
+  <td><p class="line862">  4.042522</td>
+  <td><p class="line862">  12001.98 </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-301"></span><p class="line862"> leastsq with jacobian </td>
+  <td><p class="line862">   9.88759</td>
+  <td><p class="line862"> 3.68752</td>
+  <td><p class="line862">  27.35041</td>
+  <td><p class="line862">  10</td>
+  <td><p class="line862">  0.820825</td>
+  <td><p class="line862">  4.042522</td>
+  <td><p class="line862">  12001.98 </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-302"></span><p class="line862"> odr                   </td>
+  <td><p class="line862">   9.88757</td>
+  <td><p class="line862"> 3.68750</td>
+  <td><p class="line862">  27.35044</td>
+  <td><p class="line862"> 472</td>
+  <td><p class="line862">  0.820825</td>
+  <td><p class="line862">  4.042522</td>
+  <td><p class="line862">  12002.01 </td>
+</tr>
+<tr>  <td><span class="anchor" id="line-303"></span><p class="line862"> odr with jacobian     </td>
+  <td><p class="line862">   9.88757</td>
+  <td><p class="line862"> 3.68750</td>
+  <td><p class="line862">  27.35044</td>
+  <td><p class="line862"> 109</td>
+  <td><p class="line862">  0.820825</td>
+  <td><p class="line862">  4.042522</td>
+  <td><p class="line862">  12002.01 </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-304"></span><span class="anchor" id="line-305"></span><span class="anchor" id="line-306"></span><p class="line867"><img alt="arc_v5.png" class="attachment" src="arc_v5d32c.png?action=AttachFile&amp;do=get&amp;target=arc_v5.png" title="arc_v5.png" /> <span class="anchor" id="line-307"></span><img alt="arc_residu2_v6.png" class="attachment" src="arc_residu2_v68efd.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v6.png" title="arc_residu2_v6.png" /> <span class="anchor" id="line-308"></span><span class="anchor" id="line-309"></span><p class="line867">
+<h3 id="Conclusion">Conclusion</h3>
+<span class="anchor" id="line-310"></span><span class="anchor" id="line-311"></span><p class="line874">ODR and leastsq gives the same results. <span class="anchor" id="line-312"></span><span class="anchor" id="line-313"></span><span class="anchor" id="line-314"></span><p class="line874">Optimize.leastsq is the most efficient method, and can be two to ten times faster than ODR, at least as regards the number of function call. <span class="anchor" id="line-315"></span><span class="anchor" id="line-316"></span><span class="anchor" id="line-317"></span><p class="line874">Adding a function to compute the jacobian can lead to decrease the number of function calls by a factor of two to five. <span class="anchor" id="line-318"></span><span class="anchor" id="line-319"></span><p class="line874">In this case, to use ODR seems a bit overkill but it can be very handy for more complex use cases like ellipses. <span class="anchor" id="line-320"></span><span class="anchor" id="line-321"></span><span class="anchor" id="line-322"></span><p class="line874">The algebraic approximation gives good results when the points are all around the circle but is limited when there is only an arc to fit. <span class="anchor" id="line-323"></span><span class="anchor" id="line-324"></span><span class="anchor" id="line-325"></span><p class="line874">Indeed, the two errors functions to minimize are not equivalent when data points are not all exactly on a circle. The algebraic method leads in most of the case to a smaller radius than that of the least squares circle, as its error function is based on squared distances and not on the distance themselves. <span class="anchor" id="line-326"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Least_Squares_Circle  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Least_Squares_Circle37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Least_Squares_Circle by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:09:43 GMT -->
+</html>
+

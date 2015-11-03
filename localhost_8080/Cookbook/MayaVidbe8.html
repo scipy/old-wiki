@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/MayaVi - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi" href="../../external.html?link=http://localhost:8080/Cookbook/MayaVi?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/MayaVi?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/MayaVi?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="5_2_1.png" href="MayaVif8f6.html?action=AttachFile&amp;do=view&amp;target=5_2_1.png">
+<link rel="Appendix" title="mayavi.png" href="MayaVifb9c.html?action=AttachFile&amp;do=view&amp;target=mayavi.png">
+<link rel="Appendix" title="mayavi2.png" href="MayaVi9a89.html?action=AttachFile&amp;do=view&amp;target=mayavi2.png">
+<link rel="Appendix" title="mlab.png" href="MayaVidf07.html?action=AttachFile&amp;do=view&amp;target=mlab.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/MayaVi">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="MayaVi456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="MayaVic5a6.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%22" rel="nofollow" title="Click to do a full-text search for this title">MayaVi</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="MayaVi.html">Cookbook/MayaVi</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="MayaVi.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="MayaVi37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/MayaVi">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><a class="http" href="../../external.html?link=http://code.enthought.com/projects/mayavi/">Mayavi2</a> is a interactive program allowing elaborate 3D plots of scientific data in Python with scipy. <span class="anchor" id="line-2"></span>It is the successor of <a class="http" href="../../external.html?link=http://mayavi.sf.net/">MayaVi</a> for 3D visualization.  <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><div><table><tbody><tr>  <td style="background-color: #80FF80"><p class="line862"> The information on this page is a bit old and outdated. You are invited to refer to the <a class="http" href="../../external.html?link=http://enthought.github.com/mayavi/mayavi/">Mayavi2 user guide</a> as a reference. For a quick introduction to scripting, see <a class="http" href="../../external.html?link=http://enthought.github.com/mayavi/mayavi/mlab.html">mlab</a>. In recent versions of Mayavi2, the user guide can be accessed in the help menu, but the user guide for the latest version of Mayavi can also be found <a class="http" href="../../external.html?link=http://enthought.github.com/mayavi/mayavi/">on line</a>. </td>
+</tr>
+</tbody></table></div><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line862">If you need more help, you are invited to ask questions on the <a class="https" href="../../external.html?link=https://mail.enthought.com/mailman/listinfo/enthought-dev">Enthought-dev</a> mailing list. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><p class="line867"><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><pre><span class="anchor" id="line-1"></span>#class right
+<span class="anchor" id="line-2"></span>## Snazzy graphics here...
+<span class="anchor" id="line-3"></span>inline:mayavi2.png
+<span class="anchor" id="line-4"></span>
+<span class="anchor" id="line-5"></span>!Mayavi2 relies on [http://www.vtk.org VTK], and especially a python interface to it: [https://svn.enthought.com/enthought/wiki/TVTK TVTK].
+<span class="anchor" id="line-6"></span>
+<span class="anchor" id="line-7"></span>
+<span class="anchor" id="line-8"></span>A mayavi2 session.</pre><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line867">
+<h1 id="MayaVi2_topics">MayaVi2 topics</h1>
+<span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867">MayaVi2 can be used as an interactive program or not, as it will be presented here. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><ul><li><p class="line862">For installation of MayaVi2 in the enthought tool suite see the <a class="http" href="../../external.html?link=http://enthought.github.com/mayavi/mayavi/installation.html">Mayavi documentation</a> <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span></li><li class="gap"><p class="line862">Using MayaVi2: <span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><ul><li style="list-style-type:none"><p class="line862">There are (at least) two ways to use MayaVi2: <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><ul><li><p class="line891"><a href="MayaVi/RunningMayavi2.html">Running MayaVi2</a> on the command line. <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span></li><li class="gap"><p class="line891"><a href="MayaVi/ScriptingMayavi2.html">Scripting MayaVi2</a> in Python. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span></li></ul></li></ul></li><li class="gap"><p class="line891"><a href="MayaVi/Examples-2.html">Scripting Examples</a> (all provided in MayaVi2 svn tree): <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><ul><li>Using Contour Module (contour.py) <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span></li><li class="gap">Using Glyph Module (glyph.py) <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span></li><li class="gap">Using Mayavi2 without GUI (nongui.py) <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span></li><li class="gap">A 3D array as numerical source (numeric_source.py) <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span></li><li class="gap">Using Streamline Module (streamline.py) <span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span></li><li class="gap"><p class="line862">Using ImagePlaneWidget Module (test.py) <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span></li><li class="gap"><p class="line862">Plotting a surface from a matrix (surf_regular_mlab.py). See also <a href="MayaVi/Surf.html">Cookbook/MayaVi/Surf</a> <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span></li></ul></li><li class="gap"><p class="line891"><a href="MayaVi/Tips.html">Tips</a>: General tips for MayaVi2 and around. <span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span></li></ul><p class="line867">
+<h1 id="TVTK">TVTK</h1>
+<span class="anchor" id="line-55"></span><p class="line867"><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><pre><span class="anchor" id="line-1-1"></span>#class inline
+<span class="anchor" id="line-2-1"></span>## Snazzy graphics here...
+<span class="anchor" id="line-3-1"></span>inline:mlab.png
+<span class="anchor" id="line-4-1"></span>
+<span class="anchor" id="line-5-1"></span>Using the mlab module from ipython</pre><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><ul><li><p class="line891"><a href="MayaVi/mlab.html">Mlab</a>: module allowing to drive VTK from Python to do 3D plots ala matlab. <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span></li><li class="gap"><p class="line891"><a href="MayaVi/tvtk.html">tvtk</a>: Traited VTK, including iVTK <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span></li></ul><p class="line867"><img alt="5_2_1.png" class="attachment" src="5_2_19298.png?action=AttachFile&amp;do=get&amp;target=5_2_1.png" title="5_2_1.png" /> <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line867"><strong>Visualization of the (5,2,1) orbital of the H-atom using an iso-surface and a semi-transparant scalar cut plane.</strong> <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-73"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-74"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="MayaVi37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/MayaVi">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:05 GMT -->
+</html>
+

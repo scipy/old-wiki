@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/WikiSandBox?action=AttachFile&do=view&target=tst.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 22:29:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:tst.py of WikiSandBox - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: WikiSandBox" href="../external.html?link=http://localhost:8080/WikiSandBox?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=WikiSandBox&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/WikiSandBox?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/WikiSandBox?action=print">
+<link rel="Appendix" title="mytest.tdraw" href="WikiSandBox0794.html?action=AttachFile&amp;do=view&amp;target=mytest.tdraw">
+<link rel="Appendix" title="rabbits_and_foxes_1.png" href="WikiSandBoxf5b0.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_1.png">
+<link rel="Appendix" title="tst.py" href="WikiSandBox8b91.html?action=AttachFile&amp;do=view&amp;target=tst.py">
+<link rel="Appendix" title="tst.txt" href="WikiSandBoxf8a6.html?action=AttachFile&amp;do=view&amp;target=tst.txt">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/WikiSandBox">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="WikiSandBox456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:tst.py of WikiSandBox</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="WikiSandBox.html">WikiSandBox</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="WikiSandBox37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/WikiSandBox">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'tst.py'</h2><a class="download" href="tst3716.py?action=AttachFile&amp;do=get&amp;target=tst.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-895dd9da74b92254ad54d1611b6acca1937c781f\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_1">   1</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_2">   2</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_2"></span><span class="anchor" id="line-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_3">   3</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_3"></span><span class="anchor" id="line-3"></span><span class="String">Example: simple line plot.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_4">   4</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_4"></span><span class="anchor" id="line-4"></span><span class="String">Show how to make and save a simple line plot with labels, title and grid</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_5">   5</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_5"></span><span class="anchor" id="line-5"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_6">   6</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_6"></span><span class="anchor" id="line-6"></span><span class="ResWord">import</span> <span class="ID">math</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_7">   7</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_8">   8</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_8"></span><span class="anchor" id="line-8"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_9">   9</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_9"></span><span class="anchor" id="line-9"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_10">  10</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_10"></span><span class="anchor" id="line-10"></span><span class="ID">t</span> = <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="Number">0.0</span>, <span class="Number">1.0</span>+<span class="Number">0.01</span>, <span class="Number">0.01</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_11">  11</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_11"></span><span class="anchor" id="line-11"></span><span class="ID">s</span> = <span class="ID">numpy</span>.<span class="ID">cos</span>(<span class="Number">2</span>*<span class="Number">2</span>*<span class="ID">math</span>.<span class="ID">pi</span>*<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_12">  12</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_12"></span><span class="anchor" id="line-12"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">s</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_13">  13</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_13"></span><span class="anchor" id="line-13"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_14">  14</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_14"></span><span class="anchor" id="line-14"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (s)</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_15">  15</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_15"></span><span class="anchor" id="line-15"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">voltage (mV)</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_16">  16</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_16"></span><span class="anchor" id="line-16"></span><span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">About as simple as it gets, folks</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_17">  17</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_17"></span><span class="anchor" id="line-17"></span><span class="ID">pylab</span>.<span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_18">  18</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_18"></span><span class="anchor" id="line-18"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">simple_plot</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_19">  19</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_19"></span><span class="anchor" id="line-19"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-895dd9da74b92254ad54d1611b6acca1937c781f_20">  20</a> </span><span class="LineAnchor" id="CA-895dd9da74b92254ad54d1611b6acca1937c781f_20"></span><span class="anchor" id="line-20"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../external.html?link=http://localhost:8080/WikiSandBox" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="tst.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="005632829e.fefa845f875ead5f755e9eb4d095f40c1234626b">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="mytest182b.tdraw?action=AttachFile&amp;do=get&amp;target=mytest.tdraw">get</a>&nbsp;| <a href="WikiSandBox0794.html?action=AttachFile&amp;do=view&amp;target=mytest.tdraw">view</a>&nbsp;| <a href="WikiSandBox184d.html?action=twikidraw&amp;do=modify&amp;target=mytest.tdraw">edit</a>] (2015-10-24 17:48:27, 10.0 KB) [[attachment:mytest.tdraw]]</li><li>[<a href="rabbits_and_foxes_1a8c6.png?action=AttachFile&amp;do=get&amp;target=rabbits_and_foxes_1.png">get</a>&nbsp;| <a href="WikiSandBoxf5b0.html?action=AttachFile&amp;do=view&amp;target=rabbits_and_foxes_1.png">view</a>] (2007-11-11 12:52:17, 55.6 KB) [[attachment:rabbits_and_foxes_1.png]]</li><li>[<a href="tst3716.py?action=AttachFile&amp;do=get&amp;target=tst.py">get</a>&nbsp;| <a href="WikiSandBox8b91.html?action=AttachFile&amp;do=view&amp;target=tst.py">view</a>] (2006-02-05 21:25:27, 0.4 KB) [[attachment:tst.py]]</li><li>[<a href="tst077e.txt?action=AttachFile&amp;do=get&amp;target=tst.txt">get</a>&nbsp;| <a href="WikiSandBoxf8a6.html?action=AttachFile&amp;do=view&amp;target=tst.txt">view</a>] (2007-03-30 00:12:35, 0.1 KB) [[attachment:tst.txt]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="WikiSandBox37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/WikiSandBox">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/WikiSandBox?action=AttachFile&do=view&target=tst.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 22:29:01 GMT -->
+</html>
+

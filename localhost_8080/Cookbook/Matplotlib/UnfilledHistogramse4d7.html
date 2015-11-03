@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/UnfilledHistograms?action=AttachFile&do=view&target=histOutline.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:51:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:histOutline.py of Cookbook/Matplotlib/UnfilledHistograms - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/UnfilledHistograms" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FUnfilledHistograms&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="histNofill.py" href="UnfilledHistogramsa8b9.html?action=AttachFile&amp;do=view&amp;target=histNofill.py">
+<link rel="Appendix" title="histOutline.py" href="UnfilledHistogramse4d7.html?action=AttachFile&amp;do=view&amp;target=histOutline.py">
+<link rel="Appendix" title="hist_outline.png" href="UnfilledHistograms538a.html?action=AttachFile&amp;do=view&amp;target=hist_outline.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="UnfilledHistograms456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:histOutline.py of Cookbook/Matplotlib/UnfilledHistograms</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="UnfilledHistograms.html">UnfilledHistograms</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="UnfilledHistograms37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'histOutline.py'</h2><a class="download" href="histOutline13b5.py?action=AttachFile&amp;do=get&amp;target=histOutline.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_1">   1</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment"># code from http://www.scipy.org/Cookbook/Matplotlib/UnfilledHistograms?action=AttachFile&amp;do=get&amp;target=histNofill.py</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_2">   2</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_2"></span><span class="anchor" id="line-2"></span><span class="ResWord">from</span> <span class="ID">matplotlib</span> <span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_3">   3</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_3"></span><span class="anchor" id="line-3"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_4">   4</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_4"></span><span class="anchor" id="line-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_5">   5</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_6">   6</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_6"></span><span class="anchor" id="line-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_7">   7</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">def</span> <span class="ID">histOutline</span>(<span class="ID">dataIn</span>, *<span class="ID">args</span>, **<span class="ID">kwargs</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_8">   8</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_8"></span><span class="anchor" id="line-8"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_9">   9</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_9"></span><span class="anchor" id="line-9"></span><span class="String">    Make a histogram that can be plotted with plot() so that</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_10">  10</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_10"></span><span class="anchor" id="line-10"></span><span class="String">    the histogram just has the outline rather than bars as it</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_11">  11</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_11"></span><span class="anchor" id="line-11"></span><span class="String">    usually does.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_12">  12</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_12"></span><span class="anchor" id="line-12"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_13">  13</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_13"></span><span class="anchor" id="line-13"></span><span class="String">    Example Usage:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_14">  14</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_14"></span><span class="anchor" id="line-14"></span><span class="String">    binsIn = numpy.arange(0, 1, 0.1)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_15">  15</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_15"></span><span class="anchor" id="line-15"></span><span class="String">    angle = pylab.rand(50)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_16">  16</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_16"></span><span class="anchor" id="line-16"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_17">  17</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_17"></span><span class="anchor" id="line-17"></span><span class="String">    (bins, data) = histOutline(binsIn, angle)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_18">  18</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_18"></span><span class="anchor" id="line-18"></span><span class="String">    plot(bins, data, 'k-', linewidth=2)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_19">  19</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_19"></span><span class="anchor" id="line-19"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_20">  20</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_20"></span><span class="anchor" id="line-20"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_21">  21</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_21"></span><span class="anchor" id="line-21"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_22">  22</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_22"></span><span class="anchor" id="line-22"></span>    (<span class="ID">histIn</span>, <span class="ID">binsIn</span>) = <span class="ID">np</span>.<span class="ID">histogram</span>(<span class="ID">dataIn</span>, *<span class="ID">args</span>, **<span class="ID">kwargs</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_23">  23</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_23"></span><span class="anchor" id="line-23"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_24">  24</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_24"></span><span class="anchor" id="line-24"></span>    <span class="ID">stepSize</span> = <span class="ID">binsIn</span>[<span class="Number">1</span>] - <span class="ID">binsIn</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_25">  25</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_25"></span><span class="anchor" id="line-25"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_26">  26</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_26"></span><span class="anchor" id="line-26"></span>    <span class="ID">bins</span> = <span class="ID">np</span>.<span class="ID">zeros</span>(<span class="ResWord">len</span>(<span class="ID">binsIn</span>)*<span class="Number">2</span> + <span class="Number">2</span>, <span class="ID">dtype</span>=<span class="ID">np</span>.<span class="ID">float</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_27">  27</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_27"></span><span class="anchor" id="line-27"></span>    <span class="ID">data</span> = <span class="ID">np</span>.<span class="ID">zeros</span>(<span class="ResWord">len</span>(<span class="ID">binsIn</span>)*<span class="Number">2</span> + <span class="Number">2</span>, <span class="ID">dtype</span>=<span class="ID">np</span>.<span class="ID">float</span>)    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_28">  28</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_28"></span><span class="anchor" id="line-28"></span>    <span class="ResWord">for</span> <span class="ID">bb</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ResWord">len</span>(<span class="ID">binsIn</span>)):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_29">  29</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_29"></span><span class="anchor" id="line-29"></span>        <span class="ID">bins</span>[<span class="Number">2</span>*<span class="ID">bb</span> + <span class="Number">1</span>] = <span class="ID">binsIn</span>[<span class="ID">bb</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_30">  30</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_30"></span><span class="anchor" id="line-30"></span>        <span class="ID">bins</span>[<span class="Number">2</span>*<span class="ID">bb</span> + <span class="Number">2</span>] = <span class="ID">binsIn</span>[<span class="ID">bb</span>] + <span class="ID">stepSize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_31">  31</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_31"></span><span class="anchor" id="line-31"></span>        <span class="ResWord">if</span> <span class="ID">bb</span> &lt; <span class="ResWord">len</span>(<span class="ID">histIn</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_32">  32</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_32"></span><span class="anchor" id="line-32"></span>            <span class="ID">data</span>[<span class="Number">2</span>*<span class="ID">bb</span> + <span class="Number">1</span>] = <span class="ID">histIn</span>[<span class="ID">bb</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_33">  33</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_33"></span><span class="anchor" id="line-33"></span>            <span class="ID">data</span>[<span class="Number">2</span>*<span class="ID">bb</span> + <span class="Number">2</span>] = <span class="ID">histIn</span>[<span class="ID">bb</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_34">  34</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_34"></span><span class="anchor" id="line-34"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_35">  35</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_35"></span><span class="anchor" id="line-35"></span>    <span class="ID">bins</span>[<span class="Number">0</span>] = <span class="ID">bins</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_36">  36</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_36"></span><span class="anchor" id="line-36"></span>    <span class="ID">bins</span>[-<span class="Number">1</span>] = <span class="ID">bins</span>[-<span class="Number">2</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_37">  37</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_37"></span><span class="anchor" id="line-37"></span>    <span class="ID">data</span>[<span class="Number">0</span>] = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_38">  38</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_38"></span><span class="anchor" id="line-38"></span>    <span class="ID">data</span>[-<span class="Number">1</span>] = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_39">  39</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_39"></span><span class="anchor" id="line-39"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_40">  40</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_40"></span><span class="anchor" id="line-40"></span>    <span class="ResWord">return</span> (<span class="ID">bins</span>, <span class="ID">data</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_41">  41</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_41"></span><span class="anchor" id="line-41"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_42">  42</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_42"></span><span class="anchor" id="line-42"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_43">  43</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_43"></span><span class="anchor" id="line-43"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_44">  44</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_44"></span><span class="anchor" id="line-44"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_45">  45</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_45"></span><span class="anchor" id="line-45"></span>    <span class="ID">binsIn</span> = <span class="ID">np</span>.<span class="ID">arange</span>(<span class="Number">0</span>, <span class="Number">1</span>, <span class="Number">0.1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_46">  46</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_46"></span><span class="anchor" id="line-46"></span>    <span class="ID">angle</span> = <span class="ID">pylab</span>.<span class="ID">rand</span>(<span class="Number">50</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_47">  47</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_47"></span><span class="anchor" id="line-47"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_48">  48</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_48"></span><span class="anchor" id="line-48"></span>    <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">121</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_49">  49</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_49"></span><span class="anchor" id="line-49"></span>    <span class="ID">pylab</span>.<span class="ID">hist</span>(<span class="ID">angle</span>,<span class="ID">binsIn</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_50">  50</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_50"></span><span class="anchor" id="line-50"></span>    <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">&quot;</span><span class="String">regular histogram</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_51">  51</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_51"></span><span class="anchor" id="line-51"></span>    <span class="ID">pylab</span>.<span class="ID">axis</span>(<span class="ID">xmax</span>=<span class="Number">1.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_52">  52</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_52"></span><span class="anchor" id="line-52"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_53">  53</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_53"></span><span class="anchor" id="line-53"></span>    <span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">122</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_54">  54</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_54"></span><span class="anchor" id="line-54"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_55">  55</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_55"></span><span class="anchor" id="line-55"></span>    (<span class="ID">bins</span>, <span class="ID">data</span>) = <span class="ID">histOutline</span>(<span class="ID">angle</span>, <span class="ID">binsIn</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_56">  56</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_56"></span><span class="anchor" id="line-56"></span>    <span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">bins</span>, <span class="ID">data</span>, <span class="String">'</span><span class="String">k-</span><span class="String">'</span>, <span class="ID">linewidth</span>=<span class="Number">2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_57">  57</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_57"></span><span class="anchor" id="line-57"></span>    <span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">&quot;</span><span class="String">histOutline Demo</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_58">  58</a> </span><span class="LineAnchor" id="CA-5aabb6ad5226eca06d0a5fdaa15d214ef6d87344_58"></span><span class="anchor" id="line-58"></span>    <span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="histOutline.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327e09.1c11974d7678b92fe89a0e347d1b4fef82f8d031">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="histNofill2ec9.py?action=AttachFile&amp;do=get&amp;target=histNofill.py">get</a>&nbsp;| <a href="UnfilledHistogramsa8b9.html?action=AttachFile&amp;do=view&amp;target=histNofill.py">view</a>] (2007-12-06 20:35:33, 1.6 KB) [[attachment:histNofill.py]]</li><li>[<a href="histOutline13b5.py?action=AttachFile&amp;do=get&amp;target=histOutline.py">get</a>&nbsp;| <a href="UnfilledHistogramse4d7.html?action=AttachFile&amp;do=view&amp;target=histOutline.py">view</a>] (2009-07-01 22:45:26, 1.4 KB) [[attachment:histOutline.py]]</li><li>[<a href="hist_outlineb5b2.png?action=AttachFile&amp;do=get&amp;target=hist_outline.png">get</a>&nbsp;| <a href="UnfilledHistograms538a.html?action=AttachFile&amp;do=view&amp;target=hist_outline.png">view</a>] (2007-12-06 20:35:06, 12.0 KB) [[attachment:hist_outline.png]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="UnfilledHistograms37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/UnfilledHistograms">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/UnfilledHistograms?action=AttachFile&do=view&target=histOutline.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:51:54 GMT -->
+</html>
+

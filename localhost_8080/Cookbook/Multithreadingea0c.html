@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Multithreading?action=AttachFile&do=view&target=handythread.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:54:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:handythread.py of Cookbook/Multithreading - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Multithreading" href="../../external.html?link=http://localhost:8080/Cookbook/Multithreading?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMultithreading&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Multithreading?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Multithreading?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="handythread.py" href="Multithreadingea0c.html?action=AttachFile&amp;do=view&amp;target=handythread.py">
+<link rel="Appendix" title="test_handythread.py" href="Multithreading7139.html?action=AttachFile&amp;do=view&amp;target=test_handythread.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Multithreading">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Multithreading456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:handythread.py of Cookbook/Multithreading</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Multithreading.html">Cookbook/Multithreading</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Multithreading37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Multithreading">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'handythread.py'</h2><a class="download" href="handythreadd40c.py?action=AttachFile&amp;do=get&amp;target=handythread.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_1">   1</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_1"></span><span class="anchor" id="line-1-1"></span><span class="ResWord">import</span> <span class="ID">sys</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_2">   2</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_2"></span><span class="anchor" id="line-2"></span><span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_3">   3</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_3"></span><span class="anchor" id="line-3"></span><span class="ResWord">import</span> <span class="ID">threading</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_4">   4</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_4"></span><span class="anchor" id="line-4"></span><span class="ResWord">from</span> <span class="ID">itertools</span> <span class="ResWord">import</span> <span class="ID">izip</span>, <span class="ID">count</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_5">   5</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_6">   6</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_6"></span><span class="anchor" id="line-6"></span><span class="ResWord">def</span> <span class="ID">foreach</span>(<span class="ID">f</span>,<span class="ID">l</span>,<span class="ID">threads</span>=<span class="Number">3</span>,<span class="ID">return_</span>=<span class="ResWord">False</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_7">   7</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_7"></span><span class="anchor" id="line-7"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_8">   8</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_8"></span><span class="anchor" id="line-8"></span><span class="String">    Apply f to each element of l, in parallel</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_9">   9</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_9"></span><span class="anchor" id="line-9"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_10">  10</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_10"></span><span class="anchor" id="line-10"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_11">  11</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_11"></span><span class="anchor" id="line-11"></span>    <span class="ResWord">if</span> <span class="ID">threads</span>&gt;<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_12">  12</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_12"></span><span class="anchor" id="line-12"></span>        <span class="ID">iteratorlock</span> = <span class="ID">threading</span>.<span class="ID">Lock</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_13">  13</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_13"></span><span class="anchor" id="line-13"></span>        <span class="ID">exceptions</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_14">  14</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_14"></span><span class="anchor" id="line-14"></span>        <span class="ResWord">if</span> <span class="ID">return_</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_15">  15</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_15"></span><span class="anchor" id="line-15"></span>            <span class="ID">n</span> = <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_16">  16</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_16"></span><span class="anchor" id="line-16"></span>            <span class="ID">d</span> = {}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_17">  17</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_17"></span><span class="anchor" id="line-17"></span>            <span class="ID">i</span> = <span class="ID">izip</span>(<span class="ID">count</span>(),<span class="ID">l</span>.<span class="ID">__iter__</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_18">  18</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_18"></span><span class="anchor" id="line-18"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_19">  19</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_19"></span><span class="anchor" id="line-19"></span>            <span class="ID">i</span> = <span class="ID">l</span>.<span class="ID">__iter__</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_20">  20</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_20"></span><span class="anchor" id="line-20"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_21">  21</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_21"></span><span class="anchor" id="line-21"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_22">  22</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_22"></span><span class="anchor" id="line-22"></span>        <span class="ResWord">def</span> <span class="ID">runall</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_23">  23</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_23"></span><span class="anchor" id="line-23"></span>            <span class="ResWord">while</span> <span class="ResWord">True</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_24">  24</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_24"></span><span class="anchor" id="line-24"></span>                <span class="ID">iteratorlock</span>.<span class="ID">acquire</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_25">  25</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_25"></span><span class="anchor" id="line-25"></span>                <span class="ResWord">try</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_26">  26</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_26"></span><span class="anchor" id="line-26"></span>                    <span class="ResWord">try</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_27">  27</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_27"></span><span class="anchor" id="line-27"></span>                        <span class="ResWord">if</span> <span class="ID">exceptions</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_28">  28</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_28"></span><span class="anchor" id="line-28"></span>                            <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_29">  29</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_29"></span><span class="anchor" id="line-29"></span>                        <span class="ID">v</span> = <span class="ID">i</span>.<span class="ID">next</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_30">  30</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_30"></span><span class="anchor" id="line-30"></span>                    <span class="ResWord">finally</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_31">  31</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_31"></span><span class="anchor" id="line-31"></span>                        <span class="ID">iteratorlock</span>.<span class="ID">release</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_32">  32</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_32"></span><span class="anchor" id="line-32"></span>                <span class="ResWord">except</span> <span class="ID">StopIteration</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_33">  33</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_33"></span><span class="anchor" id="line-33"></span>                    <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_34">  34</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_34"></span><span class="anchor" id="line-34"></span>                <span class="ResWord">try</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_35">  35</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_35"></span><span class="anchor" id="line-35"></span>                    <span class="ResWord">if</span> <span class="ID">return_</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_36">  36</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_36"></span><span class="anchor" id="line-36"></span>                        <span class="ID">n</span>,<span class="ID">x</span> = <span class="ID">v</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_37">  37</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_37"></span><span class="anchor" id="line-37"></span>                        <span class="ID">d</span>[<span class="ID">n</span>] = <span class="ID">f</span>(<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_38">  38</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_38"></span><span class="anchor" id="line-38"></span>                    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_39">  39</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_39"></span><span class="anchor" id="line-39"></span>                        <span class="ID">f</span>(<span class="ID">v</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_40">  40</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_40"></span><span class="anchor" id="line-40"></span>                <span class="ResWord">except</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_41">  41</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_41"></span><span class="anchor" id="line-41"></span>                    <span class="ID">e</span> = <span class="ID">sys</span>.<span class="ID">exc_info</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_42">  42</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_42"></span><span class="anchor" id="line-42"></span>                    <span class="ID">iteratorlock</span>.<span class="ID">acquire</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_43">  43</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_43"></span><span class="anchor" id="line-43"></span>                    <span class="ResWord">try</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_44">  44</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_44"></span><span class="anchor" id="line-44"></span>                        <span class="ID">exceptions</span>.<span class="ID">append</span>(<span class="ID">e</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_45">  45</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_45"></span><span class="anchor" id="line-45"></span>                    <span class="ResWord">finally</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_46">  46</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_46"></span><span class="anchor" id="line-46"></span>                        <span class="ID">iteratorlock</span>.<span class="ID">release</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_47">  47</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_47"></span><span class="anchor" id="line-47"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_48">  48</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_48"></span><span class="anchor" id="line-48"></span>        <span class="ID">threadlist</span> = [<span class="ID">threading</span>.<span class="ID">Thread</span>(<span class="ID">target</span>=<span class="ID">runall</span>) <span class="ResWord">for</span> <span class="ID">j</span> <span class="ResWord">in</span> <span class="ResWord">xrange</span>(<span class="ID">threads</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_49">  49</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_49"></span><span class="anchor" id="line-49"></span>        <span class="ResWord">for</span> <span class="ID">t</span> <span class="ResWord">in</span> <span class="ID">threadlist</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_50">  50</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_50"></span><span class="anchor" id="line-50"></span>            <span class="ID">t</span>.<span class="ID">start</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_51">  51</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_51"></span><span class="anchor" id="line-51"></span>        <span class="ResWord">for</span> <span class="ID">t</span> <span class="ResWord">in</span> <span class="ID">threadlist</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_52">  52</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_52"></span><span class="anchor" id="line-52"></span>            <span class="ID">t</span>.<span class="ID">join</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_53">  53</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_53"></span><span class="anchor" id="line-53"></span>        <span class="ResWord">if</span> <span class="ID">exceptions</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_54">  54</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_54"></span><span class="anchor" id="line-54"></span>            <span class="ID">a</span>, <span class="ID">b</span>, <span class="ID">c</span> = <span class="ID">exceptions</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_55">  55</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_55"></span><span class="anchor" id="line-55"></span>            <span class="ResWord">raise</span> <span class="ID">a</span>, <span class="ID">b</span>, <span class="ID">c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_56">  56</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_56"></span><span class="anchor" id="line-56"></span>        <span class="ResWord">if</span> <span class="ID">return_</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_57">  57</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_57"></span><span class="anchor" id="line-57"></span>            <span class="ID">r</span> = <span class="ID">d</span>.<span class="ID">items</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_58">  58</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_58"></span><span class="anchor" id="line-58"></span>            <span class="ID">r</span>.<span class="ID">sort</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_59">  59</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_59"></span><span class="anchor" id="line-59"></span>            <span class="ResWord">return</span> [<span class="ID">v</span> <span class="ResWord">for</span> (<span class="ID">n</span>,<span class="ID">v</span>) <span class="ResWord">in</span> <span class="ID">r</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_60">  60</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_60"></span><span class="anchor" id="line-60"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_61">  61</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_61"></span><span class="anchor" id="line-61"></span>        <span class="ResWord">if</span> <span class="ID">return_</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_62">  62</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_62"></span><span class="anchor" id="line-62"></span>            <span class="ResWord">return</span> [<span class="ID">f</span>(<span class="ID">v</span>) <span class="ResWord">for</span> <span class="ID">v</span> <span class="ResWord">in</span> <span class="ID">l</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_63">  63</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_63"></span><span class="anchor" id="line-63"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_64">  64</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_64"></span><span class="anchor" id="line-64"></span>            <span class="ResWord">for</span> <span class="ID">v</span> <span class="ResWord">in</span> <span class="ID">l</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_65">  65</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_65"></span><span class="anchor" id="line-65"></span>                <span class="ID">f</span>(<span class="ID">v</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_66">  66</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_66"></span><span class="anchor" id="line-66"></span>            <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_67">  67</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_67"></span><span class="anchor" id="line-67"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_68">  68</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_68"></span><span class="anchor" id="line-68"></span><span class="ResWord">def</span> <span class="ID">parallel_map</span>(<span class="ID">f</span>,<span class="ID">l</span>,<span class="ID">threads</span>=<span class="Number">3</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_69">  69</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_69"></span><span class="anchor" id="line-69"></span>    <span class="ResWord">return</span> <span class="ID">foreach</span>(<span class="ID">f</span>,<span class="ID">l</span>,<span class="ID">threads</span>=<span class="ID">threads</span>,<span class="ID">return_</span>=<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_70">  70</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_70"></span><span class="anchor" id="line-70"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_71">  71</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_71"></span><span class="anchor" id="line-71"></span><span class="ResWord">if</span> <span class="ID">__name__</span>==<span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_72">  72</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_72"></span><span class="anchor" id="line-72"></span>    <span class="ResWord">def</span> <span class="ID">f</span>(<span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_73">  73</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_73"></span><span class="anchor" id="line-73"></span>        <span class="ResWord">print</span> <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_74">  74</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_74"></span><span class="anchor" id="line-74"></span>        <span class="ID">time</span>.<span class="ID">sleep</span>(<span class="Number">0.5</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_75">  75</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_75"></span><span class="anchor" id="line-75"></span>    <span class="ID">foreach</span>(<span class="ID">f</span>,<span class="ResWord">range</span>(<span class="Number">10</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_76">  76</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_76"></span><span class="anchor" id="line-76"></span>    <span class="ResWord">def</span> <span class="ID">g</span>(<span class="ID">x</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_77">  77</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_77"></span><span class="anchor" id="line-77"></span>        <span class="ID">time</span>.<span class="ID">sleep</span>(<span class="Number">0.5</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_78">  78</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_78"></span><span class="anchor" id="line-78"></span>        <span class="ResWord">print</span> <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_79">  79</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_79"></span><span class="anchor" id="line-79"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>, <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_80">  80</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_80"></span><span class="anchor" id="line-80"></span>        <span class="ID">time</span>.<span class="ID">sleep</span>(<span class="Number">0.5</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_81">  81</a> </span><span class="LineAnchor" id="CA-bed89c89e418de06f5652ba2cb66e7a7001f79ad_81"></span><span class="anchor" id="line-81"></span>    <span class="ID">foreach</span>(<span class="ID">g</span>,<span class="ResWord">range</span>(<span class="Number">10</span>))</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/Multithreading" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="handythread.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327fbb.d412ed012438ccd05d88404d0d261914b9ae7651">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="handythreadd40c.py?action=AttachFile&amp;do=get&amp;target=handythread.py">get</a>&nbsp;| <a href="Multithreadingea0c.html?action=AttachFile&amp;do=view&amp;target=handythread.py">view</a>] (2008-02-21 18:50:19, 2.0 KB) [[attachment:handythread.py]]</li><li>[<a href="test_handythreaddceb.py?action=AttachFile&amp;do=get&amp;target=test_handythread.py">get</a>&nbsp;| <a href="Multithreading7139.html?action=AttachFile&amp;do=view&amp;target=test_handythread.py">view</a>] (2008-02-21 18:50:31, 0.9 KB) [[attachment:test_handythread.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Multithreading37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Multithreading">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Multithreading?action=AttachFile&do=view&target=handythread.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:54:00 GMT -->
+</html>
+

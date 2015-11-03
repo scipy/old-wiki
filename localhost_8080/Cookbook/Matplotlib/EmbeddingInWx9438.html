@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/EmbeddingInWx?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/EmbeddingInWx - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/EmbeddingInWx" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FEmbeddingInWx&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="EmbeddingInWx456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="EmbeddingInWxd74a.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FEmbeddingInWx%22" rel="nofollow" title="Click to do a full-text search for this title">EmbeddingInWx</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="EmbeddingInWx.html">EmbeddingInWx</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="EmbeddingInWx37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line874">Matplotlib can be embedded in wxPython applications to provide high quality data visualization.  There are two approaches to this, direct embedding and using an embedding library. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><em>Direct embedding</em> is where your put one of the wxPython backend widgets (which subclass <tt>wx.Panel</tt>) directly into your application and draw plots on it using matplotlib's object-oriented API.  This approach is demonstrated by the <a class="http" href="../../../external.html?link=http://cvs.sourceforge.net/viewcvs.py/matplotlib/matplotlib/examples/">embedding_in_wx*.py</a> examples that come with matplotlib.  Neither <tt>FigureCanvasWx</tt> nor <tt>FigureCanvasWxAgg</tt> provide any facilities for user interactions like displaying the coordinates under the mouse, so you'll have to implement such things yourself.  The matplotlib example <a class="http" href="../../../external.html?link=http://cvs.sourceforge.net/viewcvs.py/%2Acheckout%2A/matplotlib/matplotlib/examples/wxcursor_demo.py?content-type=text%2Fplain">wxcursor_demo.py</a> should help you get started. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">An <em>embedding library</em> saves you a lot of time and effort by providing plotting widgets that already support user interactions and other bells and whistles.  There are two such libraries that I am aware of: <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><ol type="1"><li><p class="line862">Matt Newville's <a class="http" href="../../../external.html?link=http://cars9.uchicago.edu/~newville/Python/MPlot/">MPlot</a> package supports drawing 2D line plots using pylab-style <tt>plot()</tt> and <tt>oplot()</tt> methods. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span></li><li class="gap"><p class="line862">Ken McIvor's <a class="http" href="../../../external.html?link=http://agni.phys.iit.edu/~kmcivor/wxmpl/">WxMpl</a> module supports drawing all plot types using matplotlib's object-oriented API. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></li></ol><p class="line874">Each of these libraries has different benefits and drawbacks, so I encourage you to evaluate each of them and select the one that best meets your needs. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867">
+<h1 id="Learning_the_Object-Oriented_API">Learning the Object-Oriented API</h1>
+<span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line862">If you're embedding matplotlib in a wxPython program, you're probably going to have to use Matplotlib's Object-Oriented API to at some point.  Take heart, as it matches the pylab API closely and is easy to pick up.  There are more nuts and bolts to deal with, but that's no problem to someone already programming with wxPython! <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line862">The matplotlib FAQ <a class="http" href="../../../external.html?link=http://matplotlib.sourceforge.net/faq.html#OO&quot;">links</a> to several resources for learning about the OO API.  Once you've got your feet wet, reading the classdocs is the most helpful source of information.  The <a class="http" href="../../../external.html?link=http://matplotlib.sourceforge.net/matplotlib.axes.html#Axes&quot;">matplotlib.axes.Axes</a> class is where most of the plotting methods live, so it's a good place to start after you've conquored creating a Figure. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line874">For your edification, a series of pylab examples have been translated to the OO API.  They are available in a demonstration script that must be run from a command line.  You may use any interactive matplotlib backend to display these plots. <span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line867">
+<h1 id="A_Simple_Application">A Simple Application</h1>
+<span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">Here is a simple example of an application written in wx that embeds a <a href="../../Matplotlib_figure_in_a_wx_panel.html">Matplotlib_figure_in_a_wx_panel</a>. No toolbars, mouse clicks or any of that, just a plot drawn in a panel. Some work has been put into it to make sure that the figure is only redrawn once during a resize. For plots with many points, the redrawing can take some time, so it is best to only redraw when the figure is released. Have a read of the code. <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-27"></span><a href="../../CategoryCookbookMatplotlib.html"><strong class="highlight">CategoryCookbook</strong>Matplotlib</a> <span class="anchor" id="line-28"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/EmbeddingInWx  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="EmbeddingInWx37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/EmbeddingInWx">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/EmbeddingInWx?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+</html>
+

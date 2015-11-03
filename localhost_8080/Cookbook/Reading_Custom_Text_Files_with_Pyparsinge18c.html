@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=AttachFile&do=view&target=data.txt by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:55:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:data.txt of Cookbook/Reading_Custom_Text_Files_with_Pyparsing - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Reading_Custom_Text_Files_with_Pyparsing" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FReading_Custom_Text_Files_with_Pyparsing&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="ConfigNumParser_v0.1.1.py" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py">
+<link rel="Appendix" title="ConfigNumParser_v0.1.py" href="Reading_Custom_Text_Files_with_Pyparsingdcf6.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.py">
+<link rel="Appendix" title="data.txt" href="Reading_Custom_Text_Files_with_Pyparsinge18c.html?action=AttachFile&amp;do=view&amp;target=data.txt">
+<link rel="Appendix" title="data3.txt" href="Reading_Custom_Text_Files_with_Pyparsing032f.html?action=AttachFile&amp;do=view&amp;target=data3.txt">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Reading_Custom_Text_Files_with_Pyparsing456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:data.txt of Cookbook/Reading_Custom_Text_Files_with_Pyparsing</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Reading_Custom_Text_Files_with_Pyparsing.html">Reading_Cus...h_Pyparsing</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Reading_Custom_Text_Files_with_Pyparsing37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'data.txt'</h2><a class="download" href="datafd9b.txt?action=AttachFile&amp;do=get&amp;target=data.txt">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-5d56a188db128fc007f1adc3a71457051828b203\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-5d56a188db128fc007f1adc3a71457051828b203" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_1">   1</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_1"></span><span class="anchor" id="line-1-1"></span># This is is an example file structured in section</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_2">   2</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_2"></span><span class="anchor" id="line-2"></span># with comments begining with '#'</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_3">   3</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_3"></span><span class="anchor" id="line-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_4">   4</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_4"></span><span class="anchor" id="line-4"></span>[ INFOS ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_5">   5</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_5"></span><span class="anchor" id="line-5"></span>Debug          = False</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_6">   6</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_6"></span><span class="anchor" id="line-6"></span>Shape  (mm^<span class="Number">-1</span>) = <span class="Number">2</span>.<span class="Number">3</span>                                                            # here is a unit</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_7">   7</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_7"></span><span class="anchor" id="line-7"></span>Length (mm)    = <span class="Number">25361</span>.<span class="Number">15</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_8">   8</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_8"></span><span class="anchor" id="line-8"></span>Path <span class="Number">1</span>         = C:\\This\is\a\long\path\with some space in it\data.txt</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_9">   9</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_9"></span><span class="anchor" id="line-9"></span>description    = raw values can have multiple lines, but additional lines must start</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_10">  10</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_10"></span><span class="anchor" id="line-10"></span>                 with a whitespace which is automatically skipped</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_11">  11</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_11"></span><span class="anchor" id="line-11"></span>Parent         = None</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_12">  12</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_12"></span><span class="anchor" id="line-12"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_13">  13</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_13"></span><span class="anchor" id="line-13"></span>[ TABLE IN ROWS ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_14">  14</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_14"></span><span class="anchor" id="line-14"></span>Temp    (C)             <span class="Number">100</span>             <span class="Number">200</span>        <span class="Number">300</span>       <span class="Number">450</span>.<span class="Number">0</span>        <span class="Number">600</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_15">  15</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_15"></span><span class="anchor" id="line-15"></span>E XX    (GPa)           <span class="Number">159</span>.<span class="Number">4</span>       <span class="Number">16</span>.<span class="Number">9</span>E+<span class="Number">0</span>       <span class="Number">51</span>.<span class="Number">8</span>      .<span class="Number">15</span>E<span class="Number">02</span>        <span class="Number">4</span>     # Here is a space in the row name</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_16">  16</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_16"></span><span class="anchor" id="line-16"></span>Words               'hundred'   'two hundreds'  'a lot'     'four'      'five'  # Here are QuotedStrings with space</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_17">  17</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_17"></span><span class="anchor" id="line-17"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_18">  18</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_18"></span><span class="anchor" id="line-18"></span>[ TABLE IN COLUMNS ] </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_19">  19</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_19"></span><span class="anchor" id="line-19"></span>STATION         PRECIPITATION   T_MAX_ABS  T_MIN_ABS </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_20">  20</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_20"></span><span class="anchor" id="line-20"></span>(/)                     (mm)    (C)        (C)       # Columns must have a unit</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_21">  21</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_21"></span><span class="anchor" id="line-21"></span>Ajaccio                 <span class="Number">64</span>.<span class="Number">8</span>    <span class="Number">18</span>.<span class="Number">8</span>E+<span class="Number">0</span>    <span class="Number">-2</span>.<span class="Number">6</span>      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_22">  22</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_22"></span><span class="anchor" id="line-22"></span>Auxerre                 <span class="Number">49</span>.<span class="Number">6</span>    <span class="Number">16</span>.<span class="Number">9</span>E+<span class="Number">0</span>    Nan       # Here is a Nan</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_23">  23</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_23"></span><span class="anchor" id="line-23"></span>Bastia                  <span class="Number">114</span>.<span class="Number">2</span>   <span class="Number">20</span>.<span class="Number">8</span>E+<span class="Number">0</span>    <span class="Number">-0</span>.<span class="Number">9</span>      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_24">  24</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_24"></span><span class="anchor" id="line-24"></span>[ MATRIX ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_25">  25</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_25"></span><span class="anchor" id="line-25"></span>True    <span class="Number">2</span>       <span class="Number">3</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_26">  26</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_26"></span><span class="anchor" id="line-26"></span><span class="Number">4</span>.      <span class="Number">5</span>.      <span class="Number">6</span>.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-5d56a188db128fc007f1adc3a71457051828b203_27">  27</a> </span><span class="LineAnchor" id="CA-5d56a188db128fc007f1adc3a71457051828b203_27"></span><span class="anchor" id="line-27"></span><span class="Number">7</span>.      nan     <span class="Number">8</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="data.txt"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327fe9.194c5ede4613971880da2f4d0f4d50b6056e2dd9">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="ConfigNumParser_v0.1.1d696.py?action=AttachFile&amp;do=get&amp;target=ConfigNumParser_v0.1.1.py">get</a>&nbsp;| <a href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py">view</a>] (2010-04-09 19:33:09, 13.4 KB) [[attachment:ConfigNumParser_v0.1.1.py]]</li><li>[<a href="ConfigNumParser_v0.1cdbc.py?action=AttachFile&amp;do=get&amp;target=ConfigNumParser_v0.1.py">get</a>&nbsp;| <a href="Reading_Custom_Text_Files_with_Pyparsingdcf6.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.py">view</a>] (2010-04-07 20:44:40, 13.3 KB) [[attachment:ConfigNumParser_v0.1.py]]</li><li>[<a href="datafd9b.txt?action=AttachFile&amp;do=get&amp;target=data.txt">get</a>&nbsp;| <a href="Reading_Custom_Text_Files_with_Pyparsinge18c.html?action=AttachFile&amp;do=view&amp;target=data.txt">view</a>] (2010-04-07 21:22:55, 1.2 KB) [[attachment:data.txt]]</li><li>[<a href="data36027.txt?action=AttachFile&amp;do=get&amp;target=data3.txt">get</a>&nbsp;| <a href="Reading_Custom_Text_Files_with_Pyparsing032f.html?action=AttachFile&amp;do=view&amp;target=data3.txt">view</a>] (2010-04-09 18:26:48, 1.3 KB) [[attachment:data3.txt]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Reading_Custom_Text_Files_with_Pyparsing37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=AttachFile&do=view&target=data.txt by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:55:28 GMT -->
+</html>
+

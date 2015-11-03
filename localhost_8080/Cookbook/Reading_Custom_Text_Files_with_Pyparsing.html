@@ -1,0 +1,483 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:21:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Reading_Custom_Text_Files_with_Pyparsing - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Reading_Custom_Text_Files_with_Pyparsing" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FReading_Custom_Text_Files_with_Pyparsing&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="ConfigNumParser_v0.1.1.py" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py">
+<link rel="Appendix" title="ConfigNumParser_v0.1.py" href="Reading_Custom_Text_Files_with_Pyparsingdcf6.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.py">
+<link rel="Appendix" title="data.txt" href="Reading_Custom_Text_Files_with_Pyparsinge18c.html?action=AttachFile&amp;do=view&amp;target=data.txt">
+<link rel="Appendix" title="data3.txt" href="Reading_Custom_Text_Files_with_Pyparsing032f.html?action=AttachFile&amp;do=view&amp;target=data3.txt">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Reading_Custom_Text_Files_with_Pyparsing456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="../AllPagesfe7f.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FReading_Custom_Text_Files_with_Pyparsing%22" rel="nofollow" title="Click to do a full-text search for this title">Reading_Custom_Text_Files_with_Pyparsing</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Reading_Custom_Text_Files_with_Pyparsing.html">Reading_Cus...h_Pyparsing</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Reading_Custom_Text_Files_with_Pyparsing37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Defining_a_parser_for_parameter_declarations">Defining a parser for parameter declarations</a><ol><li>
+<a href="#First_steps_with_pyparsing">First steps with pyparsing</a></li><li>
+<a href="#Converting_data_into_Python_objects">Converting data into Python objects</a></li><li>
+<a href="#Some_words_on_whitespace_characters">Some words on whitespace characters</a></li><li>
+<a href="#Converting_variables_names">Converting variables names</a></li><li>
+<a href="#Dealing_with_raw_text">Dealing with raw text</a></li><li>
+<a href="#Structuring_data">Structuring data</a></li></ol></li><li>
+<a href="#Defining_a_parser_for_tables">Defining a parser for tables</a><ol><li>
+<a href="#Using_the_Forward_element">Using the Forward element</a></li><li>
+<a href="#Structuring_our_data">Structuring our data</a></li></ol></li><li>
+<a href="#Building_the_final_parser">Building the final parser</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><p class="line862">In this cookbook, we will focus on using <a class="http" href="../../external.html?link=http://pyparsing.wikispaces.com/">pyparsing</a> and numpy to read a structured text file like this one, <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing032f.html?action=AttachFile&amp;do=view&amp;target=data3.txt" title="data.txt">data.txt</a>: <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867"><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><pre><span class="anchor" id="line-1"></span># This is is an example file structured in section
+<span class="anchor" id="line-2"></span># with comments begining with '#'
+<span class="anchor" id="line-3"></span>
+<span class="anchor" id="line-4"></span>[ INFOS ]
+<span class="anchor" id="line-5"></span>Debug          = False
+<span class="anchor" id="line-6"></span>Shape  (mm^-1) = 2.3                                                            # here is a unit
+<span class="anchor" id="line-7"></span>Length (mm)    = 25361.15
+<span class="anchor" id="line-8"></span>Path 1         = C:\\This\is\a\long\path\with some space in it\data.txt
+<span class="anchor" id="line-9"></span>description    = raw values can have multiple lines, but additional lines must start
+<span class="anchor" id="line-10"></span>                 with a whitespace which is automatically skipped
+<span class="anchor" id="line-11"></span>Parent         = None
+<span class="anchor" id="line-12"></span>
+<span class="anchor" id="line-13"></span>[ EMPTY SECTION ]
+<span class="anchor" id="line-14"></span># empty section should not be taken into account
+<span class="anchor" id="line-15"></span>
+<span class="anchor" id="line-16"></span>[ TABLE IN ROWS ]
+<span class="anchor" id="line-17"></span>Temp    (C)             100             200        300       450.0        600
+<span class="anchor" id="line-18"></span>E XX    (GPa)           159.4       16.9E+0       51.8      .15E02        4     # Here is a space in the row name
+<span class="anchor" id="line-19"></span>Words               'hundred'   'two hundreds'  'a lot'     'four'      'five'  # Here are QuotedStrings with space
+<span class="anchor" id="line-20"></span>
+<span class="anchor" id="line-21"></span>[ TABLE IN COLUMNS ] 
+<span class="anchor" id="line-22"></span>STATION         PRECIPITATION   T_MAX_ABS  T_MIN_ABS 
+<span class="anchor" id="line-23"></span>(/)                     (mm)    (C)        (C)       # Columns must have a unit
+<span class="anchor" id="line-24"></span>Ajaccio                 64.8    18.8E+0    -2.6      
+<span class="anchor" id="line-25"></span>Auxerre                 49.6    16.9E+0    Nan       # Here is a Nan
+<span class="anchor" id="line-26"></span>Bastia                  114.2   20.8E+0    -0.9      
+<span class="anchor" id="line-27"></span>
+<span class="anchor" id="line-28"></span>[ MATRIX ]
+<span class="anchor" id="line-29"></span>True    2       3
+<span class="anchor" id="line-30"></span>4.      5.      6.
+<span class="anchor" id="line-31"></span>7.      nan     8</pre><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">and we will create a reusable parser class to automatically: <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><ul><li>detect section blocs, among four possible kinds : <span class="anchor" id="line-43"></span><ul><li><p class="line862">a set of variable declarations : <em>name</em> (<em>unit</em>) = <em>value</em>, <em>unit</em> is optional <span class="anchor" id="line-44"></span></li><li>a table defined row by row, where the first column defines the name of the row. This name can have spaces in it if it is followed by an unit, otherwise it can't. <span class="anchor" id="line-45"></span></li><li>a table defined column by column. Column names can't contain spaces and the second row should in this case contains units <span class="anchor" id="line-46"></span></li><li>a matrix containing only numeric values, True, False or NaN <span class="anchor" id="line-47"></span></li></ul></li><li>convert values into the adequate Python or Numpy type (True, False, None, NaN, float, str or array) <span class="anchor" id="line-48"></span></li><li>detect associated units if present <span class="anchor" id="line-49"></span></li><li>return a data structure with the same organization in section as the input file and clean up variable name to get a name compatible with named attribute access <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span></li></ul><p class="line862">Here is a session example with this parser, <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a>: <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867"><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><pre><span class="anchor" id="line-1-1"></span>&gt;&gt;&gt; from ConfigNumParser import *
+<span class="anchor" id="line-2-1"></span>&gt;&gt;&gt; data = parseConfigFile('data.txt')
+<span class="anchor" id="line-3-1"></span>&gt;&gt;&gt; pprint(data.asList())
+<span class="anchor" id="line-4-1"></span>[['infos',
+<span class="anchor" id="line-5-1"></span>  ['debug', False],
+<span class="anchor" id="line-6-1"></span>  ['shape', 2.2999999999999998],
+<span class="anchor" id="line-7-1"></span>  ['length', 25361.150000000001],
+<span class="anchor" id="line-8-1"></span>  ['path_1', 'C:\\\\This\\is\\a\\long\\path\\with some space in it\\data.txt'],
+<span class="anchor" id="line-9-1"></span>  ['description',
+<span class="anchor" id="line-10-1"></span>   'raw values can have multiple lines, but additional lines must start\nwith a whitespace which is automatically skipped'],
+<span class="anchor" id="line-11-1"></span>  ['parent', None],
+<span class="anchor" id="line-12-1"></span>  ['names_', ['debug', 'shape', 'length', 'path_1', 'description', 'parent']],
+<span class="anchor" id="line-13-1"></span>  ['unit_', {'length': 'mm', 'shape': 'mm^-1'}]],
+<span class="anchor" id="line-14-1"></span> ['table_in_rows',
+<span class="anchor" id="line-15-1"></span>  ['temp', array([ 100.,  200.,  300.,  450.,  600.])],
+<span class="anchor" id="line-16-1"></span>  ['e_xx', array([ 159.4,   16.9,   51.8,   15. ,    4. ])],
+<span class="anchor" id="line-17-1"></span>  ['words', array(['hundred', 'two hundreds', 'a lot', 'four', 'five'], dtype='|S12')],
+<span class="anchor" id="line-18-1"></span>  ['names_', ['temp', 'e_xx', 'words']],
+<span class="anchor" id="line-19-1"></span>  ['unit_', {'e_xx': 'GPa', 'temp': 'C'}]],
+<span class="anchor" id="line-20-1"></span> ['table_in_columns',
+<span class="anchor" id="line-21-1"></span>  ['station', array(['Ajaccio', 'Auxerre', 'Bastia'], dtype='|S7')],
+<span class="anchor" id="line-22-1"></span>  ['precipitation', array([  64.8,   49.6,  114.2])],
+<span class="anchor" id="line-23-1"></span>  ['t_max_abs', array([ 18.8,  16.9,  20.8])],
+<span class="anchor" id="line-24-1"></span>  ['t_min_abs', array([-2.6,  NaN, -0.9])],
+<span class="anchor" id="line-25-1"></span>  ['names_', ['station', 'precipitation', 't_max_abs', 't_min_abs']],
+<span class="anchor" id="line-26-1"></span>  ['unit_',  {'precipitation': 'mm', 't_max_abs': 'C', 't_min_abs': 'C'}]],
+<span class="anchor" id="line-27-1"></span> ['matrix',
+<span class="anchor" id="line-28-1"></span>  array([[  1.,   2.,   3.],
+<span class="anchor" id="line-29-1"></span>       [  4.,   5.,   6.],
+<span class="anchor" id="line-30-1"></span>       [  7.,  NaN,   8.]])]]
+<span class="anchor" id="line-31-1"></span>
+<span class="anchor" id="line-32"></span>&gt;&gt;&gt; data.matrix
+<span class="anchor" id="line-33"></span>array([[  1.,   2.,   3.],
+<span class="anchor" id="line-34"></span>       [  4.,   5.,   6.],
+<span class="anchor" id="line-35"></span>       [  7.,  NaN,   8.]])
+<span class="anchor" id="line-36"></span>
+<span class="anchor" id="line-37"></span>&gt;&gt;&gt; data.table_in_columns.t_max_abs
+<span class="anchor" id="line-38"></span>array([ 18.8,  16.9,  20.8])
+<span class="anchor" id="line-39"></span>
+<span class="anchor" id="line-40"></span>&gt;&gt;&gt; data.infos.length, data.infos.unit_['length']
+<span class="anchor" id="line-41"></span>(25361.15, 'mm')</pre><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><p class="line874">This parser add two specials fields in all sections but matrix ones : <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><ul><li><p class="line891"><em>names_</em> : a list containing the names of all variables found in this section <span class="anchor" id="line-100"></span></li><li><p class="line891"><em>unit_</em> : a dict containing the unit corresponding to each variable name, if there is any <span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span></li></ul><p class="line867">
+<h1 id="Defining_a_parser_for_parameter_declarations">Defining a parser for parameter declarations</h1>
+<span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867"><a class="http" href="../../external.html?link=http://pyparsing.wikispaces.com/">pyparsing</a> is an efficient tool to deal with formatted text, and let you process in two steps: <span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><ol type="1"><li>Define rules to identify strings representing sections, variable names, and so on.  With pyparsing, theses rules can be combined easily with the standard operators | and + and creating reusable components becomes  easy too.  <span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span></li><li class="gap">Define actions to be executed on theses fields, to convert them into python objects. <span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span></li></ol><p class="line874">In the file example above, there are four kinds of data: parameter definitions, table in rows, table in columns and matrix. <span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><p class="line874">So, we will define a parser for each one and combine them to define the final parser. <span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><p class="line867">
+<h2 id="First_steps_with_pyparsing">First steps with pyparsing</h2>
+<span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><p class="line862">This section will describe step by step how to build the function <tt class="backtick">paramParser</tt> defined in <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a>, used to parse the bloc [ INFOS ] in the example above. <span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><p class="line874">A parameter declaration has the form: <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><ul><li style="list-style-type:none"><p class="line891"><em>key</em> (<em>unit</em>) = <em>value</em> <span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span></li></ul><ul><li style="list-style-type:none">with: <span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><ul><li><p class="line891"><em>key</em>  : a set of alphanumeric characters or _ <span class="anchor" id="line-126"></span></li><li><p class="line891"><em>unit</em> : an optional set of alphanumeric characters or ^ * / - . _ <span class="anchor" id="line-127"></span></li><li><p class="line891"><em>value</em>: anything to the end of line or to the character # which starts a comment <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span></li></ul></li></ul><p class="line862">This can be translated almost literally with pyparsing syntax (see <a class="http" href="../../external.html?link=http://pyparsing.wikispaces.com/HowToUsePyparsing">how to use pyparsing</a> for more information): <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><p class="line867"><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><pre><span class="anchor" id="line-1-2"></span>from    pyparsing   import *
+<span class="anchor" id="line-2-2"></span># parameter definition
+<span class="anchor" id="line-3-2"></span>keyName       = Word(alphanums + '_')
+<span class="anchor" id="line-4-2"></span>unitDef       = '(' + Word(alphanums + '^*/-._') + ')'
+<span class="anchor" id="line-5-2"></span>paramValueDef = SkipTo('#'|lineEnd)
+<span class="anchor" id="line-6-2"></span>
+<span class="anchor" id="line-7-2"></span>paramDef = keyName + Optional(unitDef) + &quot;=&quot; + empty + paramValueDef</pre><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><p class="line874">It is easy to test what will be found with this pattern in the data file: <span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><p class="line867"><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><pre><span class="anchor" id="line-1-3"></span># print all params found
+<span class="anchor" id="line-2-3"></span>&gt;&gt;&gt; for param in paramDef.searchString(file('data.txt').read()):
+<span class="anchor" id="line-3-3"></span>...     print param.dump()
+<span class="anchor" id="line-4-3"></span>...     print '...'
+<span class="anchor" id="line-5-3"></span>['Context', '=', 'full']
+<span class="anchor" id="line-6-3"></span>...
+<span class="anchor" id="line-7-3"></span>['Temp_ref', '(', 'K', ')', '=', '298.15']
+<span class="anchor" id="line-8-2"></span>...
+<span class="anchor" id="line-9-2"></span>...</pre><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><p class="line874">We can improved it in a few ways: <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><ul><li><p class="line862">suppress meaningless fields '(', '=', ')' from the output, with the use of the <tt class="backtick">Suppress</tt> element,  <span class="anchor" id="line-158"></span></li><li><p class="line862">give a name to the different fields, with the <tt class="backtick">setResultsName</tt> method, or simply just by calling an element with the name in argument <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span></li></ul><p class="line867"><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><pre><span class="anchor" id="line-1-4"></span># parameter definition
+<span class="anchor" id="line-2-4"></span>keyName       = Word(alphanums + '_')
+<span class="anchor" id="line-3-4"></span>unitDef       = Suppress('(') + Word(alphanums + '^*/-._') + Suppress(')')
+<span class="anchor" id="line-4-4"></span>paramValueDef = SkipTo('#'|lineEnd)
+<span class="anchor" id="line-5-4"></span>
+<span class="anchor" id="line-6-4"></span>paramDef = keyName('name') + Optional(unitDef)('unit') + Suppress(&quot;=&quot;+empty) + paramValueDef('value')</pre><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><p class="line874">The test will now give name to results and gives a nicer output: <span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><p class="line867"><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><pre><span class="anchor" id="line-1-5"></span>['Context', 'full']
+<span class="anchor" id="line-2-5"></span>- name: Context
+<span class="anchor" id="line-3-5"></span>- value: full
+<span class="anchor" id="line-4-5"></span>...
+<span class="anchor" id="line-5-5"></span>['Temp_ref', 'K', '298.15']
+<span class="anchor" id="line-6-5"></span>- name: Temp_ref
+<span class="anchor" id="line-7-4"></span>- unit: ['K']
+<span class="anchor" id="line-8-3"></span>- value: 298.15
+<span class="anchor" id="line-9-3"></span>...
+<span class="anchor" id="line-10-2"></span>...</pre><span class="anchor" id="line-183"></span><p class="line867">
+<h2 id="Converting_data_into_Python_objects">Converting data into Python objects</h2>
+<span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><p class="line874">We will detail further what kind of values are expected to let pyparsing handle the conversion. <span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><p class="line874">They can be divided in two parts : <span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><ul><li>Python objects like numbers, True, False, None, NaN or any string between quotes. <span class="anchor" id="line-190"></span></li><li>Raw strings that should not be converted <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span></li></ul><p class="line862">Let's begin with numbers. We can use the <tt class="backtick">Regex</tt> element to rapidly detect strings representing numbers: <span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><p class="line867"><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><pre><span class="anchor" id="line-1-6"></span>from re        import VERBOSE
+<span class="anchor" id="line-2-6"></span>number = Regex(r&quot;&quot;&quot;
+<span class="anchor" id="line-3-6"></span>        [+-]?                           # optional sign
+<span class="anchor" id="line-4-6"></span>         (
+<span class="anchor" id="line-5-6"></span>            (?:\d+(?P&lt;float1&gt;\.\d*)?)   # match 2 or 2.02
+<span class="anchor" id="line-6-6"></span>          |                             # or
+<span class="anchor" id="line-7-5"></span>            (?P&lt;float2&gt;\.\d+)           # match .02
+<span class="anchor" id="line-8-4"></span>         )
+<span class="anchor" id="line-9-4"></span>         (?P&lt;float3&gt;[Ee][+-]?\d+)?      # optional exponent
+<span class="anchor" id="line-10-3"></span>        &quot;&quot;&quot;, flags=VERBOSE
+<span class="anchor" id="line-11-2"></span>        )</pre><span class="anchor" id="line-207"></span><p class="line862">See <a class="http" href="../../external.html?link=http://docs.python.org/library/re.html#module-re">Regular expression operations</a> for more information on regular expressions. We could have built a parser with standard pyparsing elements (<tt class="backtick">Combine</tt>, <tt class="backtick">Optional</tt>, <tt class="backtick">oneOf</tt>, etc.) but  low-level expressions like floating point numbers are said to do really much better using the <tt class="backtick">Regex</tt> class. I know it feels like cheating, but in truth, pyparsing uses a number of re's under the covers. <span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><p class="line862">Now we will define a function to convert this string into python float or integer and set a <tt class="backtick">parseAction</tt> to tell pyparsing to automatically convert a number when it find one: <span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><p class="line867"><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><pre><span class="anchor" id="line-1-7"></span>def convertNumber(t):
+<span class="anchor" id="line-2-7"></span>    &quot;&quot;&quot;Convert a string matching a number to a python number&quot;&quot;&quot;
+<span class="anchor" id="line-3-7"></span>    if t.float1 or t.float2 or t.float3 : return [float(t[0])]
+<span class="anchor" id="line-4-7"></span>    else                                : return [int(t[0])  ]
+<span class="anchor" id="line-5-7"></span>
+<span class="anchor" id="line-6-7"></span>number.setParseAction(convertNumber)</pre><span class="anchor" id="line-219"></span><p class="line862">The <tt class="backtick">convertNumber</tt> function is a simple example of <tt class="backtick">parseAction</tt>: <span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><ul><li><p class="line862">it should accepts a <tt class="backtick">parseResults</tt> object as input value (some functions can accepts 3 parameters, see <tt class="backtick">setParseAction</tt> documentation). A <tt class="backtick">parseResults</tt> object can be used as a list, as a dict or directly with a named attribute if you have named your results. Here we had set three named group float1, float2 and float3 and we can use them to decide whether to use int() or float(). <span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span></li><li class="gap"><p class="line862">it should return either a <tt class="backtick">parseResults</tt> object or a list of results which will be automatically converted to a <tt class="backtick">parseResults</tt> object. <span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span></li></ul><p class="line862">Pyparsing comes with a very convenient function to convert fields to a constant object, namely <tt class="backtick">replaceWith</tt>. This can be used to create a list of element converting strings to python objects: <span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><p class="line867"><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><pre><span class="anchor" id="line-1-8"></span>from numpy     import NAN
+<span class="anchor" id="line-2-8"></span>
+<span class="anchor" id="line-3-8"></span>pyValue_list = [ number                                                        ,
+<span class="anchor" id="line-4-8"></span>                 Keyword('True').setParseAction(replaceWith(True))             ,
+<span class="anchor" id="line-5-8"></span>                 Keyword('False').setParseAction(replaceWith(False))           ,
+<span class="anchor" id="line-6-8"></span>                 Keyword('NAN', caseless=True).setParseAction(replaceWith(NAN)),
+<span class="anchor" id="line-7-6"></span>                 Keyword('None').setParseAction(replaceWith(None))             ,
+<span class="anchor" id="line-8-5"></span>                 QuotedString('&quot;&quot;&quot;', multiline=True)                           ,
+<span class="anchor" id="line-9-5"></span>                 QuotedString(&quot;'''&quot;, multiline=True)                           ,
+<span class="anchor" id="line-10-4"></span>                 QuotedString('&quot;')                                             ,
+<span class="anchor" id="line-11-3"></span>                 QuotedString(&quot;'&quot;)                                             ,
+<span class="anchor" id="line-12-2"></span>               ]
+<span class="anchor" id="line-13-2"></span>
+<span class="anchor" id="line-14-2"></span>pyValue     = MatchFirst( e.setWhitespaceChars(' \t\r') for e in pyValue_list)</pre><span class="anchor" id="line-244"></span><p class="line874">Here we used: <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><ul><li><p class="line891"><tt class="backtick">Keyword</tt> to detect standard python keyword and replace them on the fly   <span class="anchor" id="line-247"></span></li><li><p class="line891"><tt class="backtick">QuotedString</tt> to detect quoted string and automatically unquote them <span class="anchor" id="line-248"></span></li><li><p class="line891"><tt class="backtick">MatchFirst</tt> to build a super element, <tt class="backtick">pyValue</tt> to convert all kind of python values. <span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span></li></ul><p class="line874">Let's see what we get: <span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><p class="line867"><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><pre><span class="anchor" id="line-1-9"></span>&gt;&gt;&gt; test2 = '''
+<span class="anchor" id="line-2-9"></span>&gt;&gt;&gt;     1   2   3.0  0.3 .3  2e2  -.2e+2 +2.2256E-2
+<span class="anchor" id="line-3-9"></span>&gt;&gt;&gt;     True False nan NAN None
+<span class="anchor" id="line-4-9"></span>&gt;&gt;&gt;     &quot;word&quot; &quot;two words&quot;
+<span class="anchor" id="line-5-9"></span>&gt;&gt;&gt;     &quot;&quot;&quot;'more words', he said&quot;&quot;&quot;
+<span class="anchor" id="line-6-9"></span>&gt;&gt;&gt; '''
+<span class="anchor" id="line-7-7"></span>&gt;&gt;&gt; print pyValue.searchString(test2)
+<span class="anchor" id="line-8-6"></span>[[1], [2], [3.0], [0.29999999999999999], [0.29999999999999999], [200.0], [-20.0], [0.022256000000000001],
+<span class="anchor" id="line-9-6"></span>[True], [False], [nan], [nan], [None], ['word'], ['two words'], [&quot;'more words', he said&quot;]]</pre><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><p class="line867">
+<h2 id="Some_words_on_whitespace_characters">Some words on whitespace characters</h2>
+<span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><p class="line862">By default, pyparsing considers any characters in ' \t\r\n') as whitespace and meaningless. If you need to detect ends-of-line you need to change this behavior by using <tt class="backtick">setWhitespaceChars</tt> or <tt class="backtick">setDefaultWhitespaceChars</tt>. <span class="anchor" id="line-267"></span><span class="anchor" id="line-268"></span><p class="line862">As we are going to process tables line by line, we need to configure this and this should be set up <em>at the lowest level</em>: <span class="anchor" id="line-269"></span><span class="anchor" id="line-270"></span><p class="line867"><span class="anchor" id="line-271"></span><span class="anchor" id="line-272"></span><span class="anchor" id="line-273"></span><span class="anchor" id="line-274"></span><span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span><span class="anchor" id="line-277"></span><span class="anchor" id="line-278"></span><span class="anchor" id="line-279"></span><span class="anchor" id="line-280"></span><span class="anchor" id="line-281"></span><span class="anchor" id="line-282"></span><pre><span class="anchor" id="line-1-10"></span>&gt;&gt;&gt; pyValue2     = MatchFirst(pyValue_list)          # default behavior
+<span class="anchor" id="line-2-10"></span>&gt;&gt;&gt; print OneOrMore(pyValue2).searchString(test2)
+<span class="anchor" id="line-3-10"></span>[[1, 2, 3.0, 0.29999999999999999, 0.29999999999999999, 200.0, -20.0, 0.022256000000000001, True, False, nan, nan, None, 'word', 'two words', &quot;'more words', he said&quot;]]
+<span class="anchor" id="line-4-10"></span>
+<span class="anchor" id="line-5-10"></span>&gt;&gt;&gt; # to compare to
+<span class="anchor" id="line-6-10"></span>
+<span class="anchor" id="line-7-8"></span>&gt;&gt;&gt; for r, s, t in OneOrMore(pyValue).searchString(test2)
+<span class="anchor" id="line-8-7"></span>[[1, 2, 3.0, 0.29999999999999999, 0.29999999999999999, 200.0, -20.0, 0.022256000000000001],
+<span class="anchor" id="line-9-7"></span>[True, False, nan, nan, None],
+<span class="anchor" id="line-10-5"></span>['word', 'two words'],
+<span class="anchor" id="line-11-4"></span>[&quot;'more words', he said&quot;]]</pre><span class="anchor" id="line-283"></span><span class="anchor" id="line-284"></span><p class="line867">
+<h2 id="Converting_variables_names">Converting variables names</h2>
+<span class="anchor" id="line-285"></span><span class="anchor" id="line-286"></span><p class="line874">We must also detail what is an acceptable parameter name. <span class="anchor" id="line-287"></span><span class="anchor" id="line-288"></span><p class="line874">As the end of the parameter name is delimited by the = character, we could accept to have spaces in it. But as we want the possibility to access to its value via a named attribute, we need to convert it to a standard form, compatible with python's naming conventions. Here we choose to format parameter names to lowercase, with any set of character in ' -/.' replaced with underscores. <span class="anchor" id="line-289"></span><span class="anchor" id="line-290"></span><p class="line874">Later, we will have to deal with parameter names where spaces can't be allowed. So we will have to define two kind of names: <span class="anchor" id="line-291"></span><span class="anchor" id="line-292"></span><p class="line867"><span class="anchor" id="line-293"></span><span class="anchor" id="line-294"></span><span class="anchor" id="line-295"></span><span class="anchor" id="line-296"></span><span class="anchor" id="line-297"></span><span class="anchor" id="line-298"></span><span class="anchor" id="line-299"></span><span class="anchor" id="line-300"></span><span class="anchor" id="line-301"></span><span class="anchor" id="line-302"></span><span class="anchor" id="line-303"></span><span class="anchor" id="line-304"></span><span class="anchor" id="line-305"></span><span class="anchor" id="line-306"></span><pre><span class="anchor" id="line-1-11"></span>def variableParser(escapedChars, baseChars=alphanums):
+<span class="anchor" id="line-2-11"></span>    &quot;&quot;&quot; Return pattern matching any characters in baseChars separated by
+<span class="anchor" id="line-3-11"></span>    characters defined in escapedChars. Thoses characters are replaced with '_'
+<span class="anchor" id="line-4-11"></span>
+<span class="anchor" id="line-5-11"></span>    The '_' character is therefore automatically in escapedChars.
+<span class="anchor" id="line-6-11"></span>    &quot;&quot;&quot;
+<span class="anchor" id="line-7-9"></span>    escapeDef = Word(escapedChars + '_').setParseAction(replaceWith('_'))
+<span class="anchor" id="line-8-8"></span>    whitespaceChars = ''.join( x for x in ' \t\r' if not x in escapedChars )
+<span class="anchor" id="line-9-8"></span>    escapeDef = escapeDef.setWhitespaceChars(whitespaceChars)
+<span class="anchor" id="line-10-6"></span>    return Combine(Word(baseChars) + Optional(OneOrMore(escapeDef + Word(baseChars))))
+<span class="anchor" id="line-11-5"></span>
+<span class="anchor" id="line-12-3"></span>keyName             = variableParser(' _-./').setParseAction(downcaseTokens)
+<span class="anchor" id="line-13-3"></span>keyNameWithoutSpace = variableParser('_-./').setParseAction(downcaseTokens)</pre><span class="anchor" id="line-307"></span><span class="anchor" id="line-308"></span><p class="line867"><tt class="backtick">downcaseTokens</tt> is a special pyparsing function returning every matching tokens lowercase. <span class="anchor" id="line-309"></span><span class="anchor" id="line-310"></span><p class="line867">
+<h2 id="Dealing_with_raw_text">Dealing with raw text</h2>
+<span class="anchor" id="line-311"></span><span class="anchor" id="line-312"></span><p class="line874">To finish this parser, we now need to add a rule to match raw text following the conditions: <span class="anchor" id="line-313"></span><span class="anchor" id="line-314"></span><ul><li>anything after the # character is considered as a comment and skipped <span class="anchor" id="line-315"></span></li><li>a raw value can be on several lines, but the additional lines must start with a whitespace and not with a [ <span class="anchor" id="line-316"></span><span class="anchor" id="line-317"></span></li></ul><p class="line867"><span class="anchor" id="line-318"></span><span class="anchor" id="line-319"></span><span class="anchor" id="line-320"></span><span class="anchor" id="line-321"></span><span class="anchor" id="line-322"></span><pre><span class="anchor" id="line-1-12"></span># rawValue can be multiline but theses lines should start with a Whitespace
+<span class="anchor" id="line-2-12"></span>rawLine  = CharsNotIn('#\n') + (lineEnd | Suppress('#'+restOfLine))
+<span class="anchor" id="line-3-12"></span>rawValue = Combine( rawLine + ZeroOrMore(White(' \t').suppress()+ NotAny('[') + rawLine))
+<span class="anchor" id="line-4-12"></span>rawValue.setParseAction(lambda t: [x.strip() for x in t])</pre><span class="anchor" id="line-323"></span><span class="anchor" id="line-324"></span><p class="line874">We will also refine our definition of units to handle special cases like (-), (/) or (), corresponding to a blank unit. <span class="anchor" id="line-325"></span><span class="anchor" id="line-326"></span><p class="line874">This leads to: <span class="anchor" id="line-327"></span><span class="anchor" id="line-328"></span><p class="line867"><span class="anchor" id="line-329"></span><span class="anchor" id="line-330"></span><span class="anchor" id="line-331"></span><span class="anchor" id="line-332"></span><pre><span class="anchor" id="line-1-13"></span>unitDef  = Suppress('(') + (Suppress(oneOf('- /')) | Optional(Word(alphanums + '^*/-._'))) + Suppress(')')
+<span class="anchor" id="line-2-13"></span>valueDef = pyValue | rawValue
+<span class="anchor" id="line-3-13"></span>paramDef = keyName('name') + Optional(unitDef)('unit') + Suppress(&quot;=&quot;+empty) + valueDef('value')</pre><span class="anchor" id="line-333"></span><span class="anchor" id="line-334"></span><p class="line867">
+<h2 id="Structuring_data">Structuring data</h2>
+<span class="anchor" id="line-335"></span><span class="anchor" id="line-336"></span><p class="line874">We will try to organize the results in an easy to use data structure. <span class="anchor" id="line-337"></span><span class="anchor" id="line-338"></span><p class="line862">To do so, we will use the <tt class="backtick">Dict</tt> element, which allows access by key as a normal dict or by named attributes. This element takes for every tokens found, its first field as the key name and the following ones as values. This is very handy when you can group data with the <tt class="backtick">Group</tt> element to have only two fields. <span class="anchor" id="line-339"></span><span class="anchor" id="line-340"></span><p class="line874">As we can have three of them (with units) we will put these units aside:  <span class="anchor" id="line-341"></span><span class="anchor" id="line-342"></span><p class="line867"><span class="anchor" id="line-343"></span><span class="anchor" id="line-344"></span><span class="anchor" id="line-345"></span><span class="anchor" id="line-346"></span><span class="anchor" id="line-347"></span><span class="anchor" id="line-348"></span><span class="anchor" id="line-349"></span><span class="anchor" id="line-350"></span><span class="anchor" id="line-351"></span><span class="anchor" id="line-352"></span><span class="anchor" id="line-353"></span><span class="anchor" id="line-354"></span><span class="anchor" id="line-355"></span><span class="anchor" id="line-356"></span><span class="anchor" id="line-357"></span><span class="anchor" id="line-358"></span><span class="anchor" id="line-359"></span><span class="anchor" id="line-360"></span><span class="anchor" id="line-361"></span><span class="anchor" id="line-362"></span><span class="anchor" id="line-363"></span><span class="anchor" id="line-364"></span><span class="anchor" id="line-365"></span><span class="anchor" id="line-366"></span><span class="anchor" id="line-367"></span><pre><span class="anchor" id="line-1-14"></span>def formatBloc(t):
+<span class="anchor" id="line-2-14"></span>    &quot;&quot;&quot; Format the result to have a list of (key, values) easily usable with Dict
+<span class="anchor" id="line-3-14"></span>
+<span class="anchor" id="line-4-13"></span>    Add two fields :
+<span class="anchor" id="line-5-12"></span>        names_ : the list of column names found
+<span class="anchor" id="line-6-12"></span>        units_ : a dict in the form {key : unit}
+<span class="anchor" id="line-7-10"></span>    &quot;&quot;&quot;
+<span class="anchor" id="line-8-9"></span>    rows = []
+<span class="anchor" id="line-9-9"></span>
+<span class="anchor" id="line-10-7"></span>    # store units and names
+<span class="anchor" id="line-11-6"></span>    units = {}
+<span class="anchor" id="line-12-4"></span>    names = []
+<span class="anchor" id="line-13-4"></span>
+<span class="anchor" id="line-14-3"></span>    for row in t :
+<span class="anchor" id="line-15-2"></span>        rows.append(ParseResults([ row.name, row.value ]))
+<span class="anchor" id="line-16-2"></span>        names.append(row.name)
+<span class="anchor" id="line-17-2"></span>        if row.unit : units[row.name] = row.unit[0]
+<span class="anchor" id="line-18-2"></span>
+<span class="anchor" id="line-19-2"></span>    rows.append( ParseResults([ 'names_', names ]))
+<span class="anchor" id="line-20-2"></span>    rows.append( ParseResults([ 'unit_',  units]))
+<span class="anchor" id="line-21-2"></span>
+<span class="anchor" id="line-22-2"></span>    return rows
+<span class="anchor" id="line-23-2"></span>
+<span class="anchor" id="line-24-2"></span>paramParser = Dict( OneOrMore( Group(paramDef)).setParseAction(formatBloc))</pre><span class="anchor" id="line-368"></span><span class="anchor" id="line-369"></span><p class="line862">This <tt class="backtick">paramParser</tt> element is exactly the parser created by the function <tt class="backtick">paramParser</tt> defined in <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a>. <span class="anchor" id="line-370"></span><span class="anchor" id="line-371"></span><p class="line874">Let's see what we get: <span class="anchor" id="line-372"></span><span class="anchor" id="line-373"></span><p class="line867"><span class="anchor" id="line-374"></span><span class="anchor" id="line-375"></span><span class="anchor" id="line-376"></span><span class="anchor" id="line-377"></span><span class="anchor" id="line-378"></span><span class="anchor" id="line-379"></span><span class="anchor" id="line-380"></span><span class="anchor" id="line-381"></span><span class="anchor" id="line-382"></span><span class="anchor" id="line-383"></span><span class="anchor" id="line-384"></span><span class="anchor" id="line-385"></span><span class="anchor" id="line-386"></span><span class="anchor" id="line-387"></span><span class="anchor" id="line-388"></span><span class="anchor" id="line-389"></span><pre><span class="anchor" id="line-1-15"></span>&gt;&gt;&gt; paramParser.ignore('#' + restOfLine)
+<span class="anchor" id="line-2-15"></span>&gt;&gt;&gt; data = paramParser.searchString(file('data.txt').read())[0]
+<span class="anchor" id="line-3-15"></span>&gt;&gt;&gt; print data.dump()
+<span class="anchor" id="line-4-14"></span>[...]
+<span class="anchor" id="line-5-13"></span>- debug: False
+<span class="anchor" id="line-6-13"></span>- description: raw values can have multiple lines, but additional lines must start
+<span class="anchor" id="line-7-11"></span>with a whitespace which is automatically skipped
+<span class="anchor" id="line-8-10"></span>- length: 25361.15
+<span class="anchor" id="line-9-10"></span>- names_: ['debug', 'shape', 'length', 'path_1', 'description', 'parent']
+<span class="anchor" id="line-10-8"></span>- parent: None
+<span class="anchor" id="line-11-7"></span>- path_1: 'C:\\This\is\a\long\path\with some space in it\data.txt'
+<span class="anchor" id="line-12-5"></span>- shape: 2.3
+<span class="anchor" id="line-13-5"></span>- unit_: {'shape': 'mm^-1', 'length': 'mm'}
+<span class="anchor" id="line-14-4"></span>&gt;&gt;&gt; data.length, data.unit_['length']
+<span class="anchor" id="line-15-3"></span>Out[12]: (25361.150000000001, 'mm')</pre><span class="anchor" id="line-390"></span><span class="anchor" id="line-391"></span><p class="line867">
+<h1 id="Defining_a_parser_for_tables">Defining a parser for tables</h1>
+<span class="anchor" id="line-392"></span><span class="anchor" id="line-393"></span><p class="line862">For parsing parameter declarations, we have seen most of the common techniques but one: the use of <tt class="backtick">Forward</tt> element to define parsing rules on the fly. <span class="anchor" id="line-394"></span><span class="anchor" id="line-395"></span><p class="line874">Let's see how this can be used to parse a table defined column by column, according to this schema: <span class="anchor" id="line-396"></span><span class="anchor" id="line-397"></span><span class="anchor" id="line-398"></span><span class="anchor" id="line-399"></span><span class="anchor" id="line-400"></span><span class="anchor" id="line-401"></span><pre><span class="anchor" id="line-1-16"></span>            Name_1       Name_2     ...      Name_n
+<span class="anchor" id="line-2-16"></span>            (unit_1)    (unit_2)    ...     (unit_n)
+<span class="anchor" id="line-3-16"></span>            value_11    value_21    ...     value_n1
+<span class="anchor" id="line-4-15"></span>              ...         ...       ...       ...</pre><span class="anchor" id="line-402"></span><p class="line874">and the following rules: <span class="anchor" id="line-403"></span><span class="anchor" id="line-404"></span><ul><li>Names can't contains any whitespaces. <span class="anchor" id="line-405"></span></li><li>Units are mandatory. <span class="anchor" id="line-406"></span></li><li>Value can be any standard python value (int, number, None, False, True, NaN or quoted strings) or a raw string which can't contains spaces or '['. <span class="anchor" id="line-407"></span><span class="anchor" id="line-408"></span></li></ul><p class="line862">Such a parser can be generated with the <tt class="backtick">tableColParser</tt> function defined in <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a>. <span class="anchor" id="line-409"></span><span class="anchor" id="line-410"></span><p class="line874">The heart of the problem is to tell pyparsing that each line should have the same number of columns, whereas this number is unknown a priori. <span class="anchor" id="line-411"></span><span class="anchor" id="line-412"></span><p class="line867">
+<h2 id="Using_the_Forward_element">Using the Forward element</h2>
+<span class="anchor" id="line-413"></span><span class="anchor" id="line-414"></span><p class="line874">We will get round this problem by defining the pattern corresponding to the unit line and its followers right after reading the header line. <span class="anchor" id="line-415"></span><span class="anchor" id="line-416"></span><p class="line862">Indeed, theses lines can be defined with a <tt class="backtick">Forward</tt> element and we can attach a <tt class="backtick">parseAction</tt> to the header line to redefine these elements later, once we know how many columns we have in the headers. <span class="anchor" id="line-417"></span><span class="anchor" id="line-418"></span><p class="line862">Redefining a <tt class="backtick">Forward</tt> element is done via the &lt;&lt; operator: <span class="anchor" id="line-419"></span><span class="anchor" id="line-420"></span><p class="line867"><span class="anchor" id="line-421"></span><span class="anchor" id="line-422"></span><span class="anchor" id="line-423"></span><span class="anchor" id="line-424"></span><span class="anchor" id="line-425"></span><span class="anchor" id="line-426"></span><span class="anchor" id="line-427"></span><span class="anchor" id="line-428"></span><span class="anchor" id="line-429"></span><span class="anchor" id="line-430"></span><span class="anchor" id="line-431"></span><span class="anchor" id="line-432"></span><span class="anchor" id="line-433"></span><span class="anchor" id="line-434"></span><span class="anchor" id="line-435"></span><span class="anchor" id="line-436"></span><span class="anchor" id="line-437"></span><span class="anchor" id="line-438"></span><span class="anchor" id="line-439"></span><span class="anchor" id="line-440"></span><span class="anchor" id="line-441"></span><span class="anchor" id="line-442"></span><pre><span class="anchor" id="line-1-17"></span># We define ends-of-line and what kind of values we expect in tables
+<span class="anchor" id="line-2-17"></span>EOL          = LineEnd().suppress()
+<span class="anchor" id="line-3-17"></span>tabValueDef  = pyValue | CharsNotIn('[ \t\r\n').setWhitespaceChars(&quot; \t&quot;)
+<span class="anchor" id="line-4-16"></span>
+<span class="anchor" id="line-5-14"></span># We define how to detect the first line, which is a header line
+<span class="anchor" id="line-6-14"></span># following lines will be defined later
+<span class="anchor" id="line-7-12"></span>firstLine    = Group(OneOrMore(keyNameWithoutSpace)+EOL)
+<span class="anchor" id="line-8-11"></span>unitLine     = Forward()
+<span class="anchor" id="line-9-11"></span>tabValueLine = Forward()
+<span class="anchor" id="line-10-9"></span>
+<span class="anchor" id="line-11-8"></span>def defineColNumber(t):
+<span class="anchor" id="line-12-6"></span>    &quot;&quot;&quot; Define unitLine and tabValueLine to match the same number of columns than
+<span class="anchor" id="line-13-6"></span>    the header line&quot;&quot;&quot;
+<span class="anchor" id="line-14-5"></span>    nbcols = len(t.header)
+<span class="anchor" id="line-15-4"></span>    unitLine      &lt;&lt; Group( unitDef*nbcols + EOL)
+<span class="anchor" id="line-16-3"></span>    tabValueLine  &lt;&lt; Group( tabValueDef*nbcols + EOL)
+<span class="anchor" id="line-17-3"></span>
+<span class="anchor" id="line-18-3"></span>tableColDef = (   firstLine('header').setParseAction(defineColNumber)
+<span class="anchor" id="line-19-3"></span>                + unitLine('unit')
+<span class="anchor" id="line-20-3"></span>                + Group(OneOrMore(tabValueLine))('data')
+<span class="anchor" id="line-21-3"></span>              )</pre><span class="anchor" id="line-443"></span><span class="anchor" id="line-444"></span><p class="line867">
+<h2 id="Structuring_our_data">Structuring our data</h2>
+<span class="anchor" id="line-445"></span><span class="anchor" id="line-446"></span><p class="line874">Now will organize our data the same way we did for parameters, but we will use this time the name of the column as the key and we will transform our data into numpy arrays: <span class="anchor" id="line-447"></span><span class="anchor" id="line-448"></span><p class="line867"><span class="anchor" id="line-449"></span><span class="anchor" id="line-450"></span><span class="anchor" id="line-451"></span><span class="anchor" id="line-452"></span><span class="anchor" id="line-453"></span><span class="anchor" id="line-454"></span><span class="anchor" id="line-455"></span><span class="anchor" id="line-456"></span><span class="anchor" id="line-457"></span><span class="anchor" id="line-458"></span><span class="anchor" id="line-459"></span><span class="anchor" id="line-460"></span><span class="anchor" id="line-461"></span><span class="anchor" id="line-462"></span><span class="anchor" id="line-463"></span><span class="anchor" id="line-464"></span><span class="anchor" id="line-465"></span><span class="anchor" id="line-466"></span><span class="anchor" id="line-467"></span><span class="anchor" id="line-468"></span><span class="anchor" id="line-469"></span><span class="anchor" id="line-470"></span><span class="anchor" id="line-471"></span><span class="anchor" id="line-472"></span><span class="anchor" id="line-473"></span><span class="anchor" id="line-474"></span><pre><span class="anchor" id="line-1-18"></span>def formatBloc(t):
+<span class="anchor" id="line-2-18"></span>    &quot;&quot;&quot; Format the result to have a list of (key, values) easily usable
+<span class="anchor" id="line-3-18"></span>    with Dict and transform data into array
+<span class="anchor" id="line-4-17"></span>
+<span class="anchor" id="line-5-15"></span>    Add two fields :
+<span class="anchor" id="line-6-15"></span>        names_ : the list of column names found
+<span class="anchor" id="line-7-13"></span>        units_ : a dict in the form {key : unit}
+<span class="anchor" id="line-8-12"></span>    &quot;&quot;&quot;
+<span class="anchor" id="line-9-12"></span>    columns = []
+<span class="anchor" id="line-10-10"></span>
+<span class="anchor" id="line-11-9"></span>    # store names and units names
+<span class="anchor" id="line-12-7"></span>    names = t.header
+<span class="anchor" id="line-13-7"></span>    units   = {}
+<span class="anchor" id="line-14-6"></span>
+<span class="anchor" id="line-15-5"></span>    transposedData = zip(*t.data)
+<span class="anchor" id="line-16-4"></span>    for header, unit, data in zip(t.header, t.unit, transposedData):
+<span class="anchor" id="line-17-4"></span>        units[header] = unit
+<span class="anchor" id="line-18-4"></span>        columns.append(ParseResults([header, array(data)]))
+<span class="anchor" id="line-19-4"></span>
+<span class="anchor" id="line-20-4"></span>    columns.append(ParseResults(['names_', names]))
+<span class="anchor" id="line-21-4"></span>    columns.append(ParseResults(['unit_'   , units  ]))
+<span class="anchor" id="line-22-3"></span>
+<span class="anchor" id="line-23-3"></span>    return columns
+<span class="anchor" id="line-24-3"></span>
+<span class="anchor" id="line-25-2"></span>tableColParser = Dict(tableColDef.setParseAction(formatBloc))</pre><span class="anchor" id="line-475"></span><span class="anchor" id="line-476"></span><p class="line874">Let's see what we get: <span class="anchor" id="line-477"></span><span class="anchor" id="line-478"></span><p class="line867"><span class="anchor" id="line-479"></span><span class="anchor" id="line-480"></span><span class="anchor" id="line-481"></span><span class="anchor" id="line-482"></span><span class="anchor" id="line-483"></span><span class="anchor" id="line-484"></span><span class="anchor" id="line-485"></span><span class="anchor" id="line-486"></span><span class="anchor" id="line-487"></span><span class="anchor" id="line-488"></span><span class="anchor" id="line-489"></span><pre><span class="anchor" id="line-1-19"></span>&gt;&gt;&gt; tableColParser.ignore('#' + restOfLine)
+<span class="anchor" id="line-2-19"></span>&gt;&gt;&gt; data = tableColParser.searchString(file('data3.txt').read())[0]
+<span class="anchor" id="line-3-19"></span>&gt;&gt;&gt; print data.dump()
+<span class="anchor" id="line-4-18"></span>[...]
+<span class="anchor" id="line-5-16"></span>- names_: ['station', 'precipitation', 't_max_abs', 't_min_abs']
+<span class="anchor" id="line-6-16"></span>- precipitation: [  64.8   49.6  114.2]
+<span class="anchor" id="line-7-14"></span>- station: ['Ajaccio' 'Auxerre' 'Bastia']
+<span class="anchor" id="line-8-13"></span>- t_max_abs: [ 18.8  16.9  20.8]
+<span class="anchor" id="line-9-13"></span>- t_min_abs: [-2.6  NaN -0.9]
+<span class="anchor" id="line-10-11"></span>- unit_: {'station': '/', 'precipitation': 'mm', 't_min_abs': 'C', 't_max_abs': 'C'}</pre><span class="anchor" id="line-490"></span><span class="anchor" id="line-491"></span><p class="line867">
+<h1 id="Building_the_final_parser">Building the final parser</h1>
+<span class="anchor" id="line-492"></span><span class="anchor" id="line-493"></span><p class="line874">We have now three kinds of parsers: <span class="anchor" id="line-494"></span><span class="anchor" id="line-495"></span><ul><li><p class="line891"><tt class="backtick">variableParser&nbsp;&nbsp;:</tt> handle variables names <span class="anchor" id="line-496"></span></li><li><p class="line891"><tt class="backtick">paramParser&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</tt> handle a set of variable definitions <span class="anchor" id="line-497"></span></li><li><p class="line891"><tt class="backtick">tableColParser&nbsp;&nbsp;:</tt> handle tables defined column by column <span class="anchor" id="line-498"></span><span class="anchor" id="line-499"></span></li></ul><p class="line862">There are two more in <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a> : <span class="anchor" id="line-500"></span><span class="anchor" id="line-501"></span><ul><li><p class="line891"><tt class="backtick">tableRowParser&nbsp;&nbsp;:</tt> handle tables defined row by row <span class="anchor" id="line-502"></span></li><li><p class="line891"><tt class="backtick">matrixParser&nbsp;&nbsp;&nbsp;&nbsp;:</tt> handle matrix containg only python values or NaN <span class="anchor" id="line-503"></span><span class="anchor" id="line-504"></span></li></ul><p class="line874">We won't detail them here, because they use exactly the same techniques we've already seen.  <span class="anchor" id="line-505"></span><span class="anchor" id="line-506"></span><p class="line862">We will rather see how to combine them into a complex parser as it is done in the <tt class="backtick">parseConfigFile</tt> function: <span class="anchor" id="line-507"></span><span class="anchor" id="line-508"></span><p class="line867"><span class="anchor" id="line-509"></span><span class="anchor" id="line-510"></span><span class="anchor" id="line-511"></span><span class="anchor" id="line-512"></span><span class="anchor" id="line-513"></span><span class="anchor" id="line-514"></span><span class="anchor" id="line-515"></span><span class="anchor" id="line-516"></span><span class="anchor" id="line-517"></span><span class="anchor" id="line-518"></span><span class="anchor" id="line-519"></span><span class="anchor" id="line-520"></span><span class="anchor" id="line-521"></span><span class="anchor" id="line-522"></span><span class="anchor" id="line-523"></span><span class="anchor" id="line-524"></span><span class="anchor" id="line-525"></span><pre><span class="anchor" id="line-1-20"></span># Section header
+<span class="anchor" id="line-2-20"></span>sectionName = Suppress('[') + keyName + Suppress(']')
+<span class="anchor" id="line-3-20"></span>                                                              
+<span class="anchor" id="line-4-19"></span># Group section name and content 
+<span class="anchor" id="line-5-17"></span>section = Group (sectionName +
+<span class="anchor" id="line-6-17"></span>                  ( paramParser()
+<span class="anchor" id="line-7-15"></span>                  | tableColParser()
+<span class="anchor" id="line-8-14"></span>                  | tableRowParser()
+<span class="anchor" id="line-9-14"></span>                  | matrixParser()
+<span class="anchor" id="line-10-12"></span>            )     )
+<span class="anchor" id="line-11-10"></span>                                                              
+<span class="anchor" id="line-12-8"></span># Build the final parser and suppress empty sections
+<span class="anchor" id="line-13-8"></span>parser = Dict( OneOrMore( section | Suppress(sectionName) )) 
+<span class="anchor" id="line-14-7"></span>                                                              
+<span class="anchor" id="line-15-6"></span># Defines comments
+<span class="anchor" id="line-16-5"></span>parser.ignore('#' + restOfLine)</pre><span class="anchor" id="line-526"></span><span class="anchor" id="line-527"></span><p class="line874">That's all. <span class="anchor" id="line-528"></span><span class="anchor" id="line-529"></span><span class="anchor" id="line-530"></span><p class="line862">The parser can now be use through its method <tt class="backtick">parseString</tt> or <tt class="backtick">parseFile</tt>. <span class="anchor" id="line-531"></span>See <a class="attachment" href="Reading_Custom_Text_Files_with_Pyparsing888e.html?action=AttachFile&amp;do=view&amp;target=ConfigNumParser_v0.1.1.py" title="ConfigNumParser">ConfigNumParser</a> for more information. <span class="anchor" id="line-532"></span><span class="anchor" id="line-533"></span><span class="anchor" id="line-534"></span><p class="line874">I hope this will give you a good starting point to read complex formatted text. <span class="anchor" id="line-535"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Reading_Custom_Text_Files_with_Pyparsing  (last edited 2015-10-24 17:48:26 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Reading_Custom_Text_Files_with_Pyparsing37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Reading_Custom_Text_Files_with_Pyparsing by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:22:06 GMT -->
+</html>
+

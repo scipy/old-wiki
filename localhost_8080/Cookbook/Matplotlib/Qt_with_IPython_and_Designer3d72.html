@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=AttachFile&do=view&target=designer_newopen.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:51:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:designer_newopen.png of Cookbook/Matplotlib/Qt_with_IPython_and_Designer - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Qt_with_IPython_and_Designer" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FQt_with_IPython_and_Designer&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="designer_edit_custom_widgets.png" href="Qt_with_IPython_and_Designer84d1.html?action=AttachFile&amp;do=view&amp;target=designer_edit_custom_widgets.png">
+<link rel="Appendix" title="designer_form_settings_comment.png" href="Qt_with_IPython_and_Designer42ce.html?action=AttachFile&amp;do=view&amp;target=designer_form_settings_comment.png">
+<link rel="Appendix" title="designer_full_workspace.png" href="Qt_with_IPython_and_Designered7b.html?action=AttachFile&amp;do=view&amp;target=designer_full_workspace.png">
+<link rel="Appendix" title="designer_new_widget.png" href="Qt_with_IPython_and_Designer4631.html?action=AttachFile&amp;do=view&amp;target=designer_new_widget.png">
+<link rel="Appendix" title="designer_newopen.png" href="Qt_with_IPython_and_Designer3d72.html?action=AttachFile&amp;do=view&amp;target=designer_newopen.png">
+<link rel="Appendix" title="designer_wizard.png" href="Qt_with_IPython_and_Designer60b2.html?action=AttachFile&amp;do=view&amp;target=designer_wizard.png">
+<link rel="Appendix" title="ipython_interacted.png" href="Qt_with_IPython_and_Designer8e9d.html?action=AttachFile&amp;do=view&amp;target=ipython_interacted.png">
+<link rel="Appendix" title="ipython_invoked.png" href="Qt_with_IPython_and_Designer990e.html?action=AttachFile&amp;do=view&amp;target=ipython_invoked.png">
+<link rel="Appendix" title="main_mpl_tutorial.py" href="Qt_with_IPython_and_Designer4e9d.html?action=AttachFile&amp;do=view&amp;target=main_mpl_tutorial.py">
+<link rel="Appendix" title="mplwidget.py" href="Qt_with_IPython_and_Designer4834.html?action=AttachFile&amp;do=view&amp;target=mplwidget.py">
+<link rel="Appendix" title="mplwidget_tutorial.py" href="Qt_with_IPython_and_Designer34e5.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.py">
+<link rel="Appendix" title="mplwidget_tutorial.ui" href="Qt_with_IPython_and_Designer0f0b.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.ui">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Qt_with_IPython_and_Designer456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:designer_newopen.png of Cookbook/Matplotlib/Qt_with_IPython_and_Designer</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Qt_with_IPython_and_Designer.html">Qt_with_IPy...nd_Designer</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Qt_with_IPython_and_Designer37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'designer_newopen.png'</h2><a class="download" href="designer_newopen1228.png?action=AttachFile&amp;do=get&amp;target=designer_newopen.png">Download</a><br><br><img src="designer_newopen1228.png?action=AttachFile&amp;do=get&amp;target=designer_newopen.png" alt="designer_newopen.png"><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="designer_newopen.png"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327ddb.657940d2fd38d8b8bcbc72052460e00ef7046a9e">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="designer_edit_custom_widgetscab5.png?action=AttachFile&amp;do=get&amp;target=designer_edit_custom_widgets.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer84d1.html?action=AttachFile&amp;do=view&amp;target=designer_edit_custom_widgets.png">view</a>] (2006-01-22 20:42:18, 77.0 KB) [[attachment:designer_edit_custom_widgets.png]]</li><li>[<a href="designer_form_settings_comment5a74.png?action=AttachFile&amp;do=get&amp;target=designer_form_settings_comment.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer42ce.html?action=AttachFile&amp;do=view&amp;target=designer_form_settings_comment.png">view</a>] (2006-01-22 20:42:46, 26.2 KB) [[attachment:designer_form_settings_comment.png]]</li><li>[<a href="designer_full_workspace49d8.png?action=AttachFile&amp;do=get&amp;target=designer_full_workspace.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designered7b.html?action=AttachFile&amp;do=view&amp;target=designer_full_workspace.png">view</a>] (2006-01-22 20:42:35, 96.7 KB) [[attachment:designer_full_workspace.png]]</li><li>[<a href="designer_new_widget1c36.png?action=AttachFile&amp;do=get&amp;target=designer_new_widget.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer4631.html?action=AttachFile&amp;do=view&amp;target=designer_new_widget.png">view</a>] (2006-01-22 20:42:25, 39.9 KB) [[attachment:designer_new_widget.png]]</li><li>[<a href="designer_newopen1228.png?action=AttachFile&amp;do=get&amp;target=designer_newopen.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer3d72.html?action=AttachFile&amp;do=view&amp;target=designer_newopen.png">view</a>] (2006-01-22 20:41:58, 26.0 KB) [[attachment:designer_newopen.png]]</li><li>[<a href="designer_wizard39ce.png?action=AttachFile&amp;do=get&amp;target=designer_wizard.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer60b2.html?action=AttachFile&amp;do=view&amp;target=designer_wizard.png">view</a>] (2006-01-22 20:42:08, 52.5 KB) [[attachment:designer_wizard.png]]</li><li>[<a href="ipython_interacted819f.png?action=AttachFile&amp;do=get&amp;target=ipython_interacted.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer8e9d.html?action=AttachFile&amp;do=view&amp;target=ipython_interacted.png">view</a>] (2006-01-22 20:45:29, 15.8 KB) [[attachment:ipython_interacted.png]]</li><li>[<a href="ipython_invoked66b5.png?action=AttachFile&amp;do=get&amp;target=ipython_invoked.png">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer990e.html?action=AttachFile&amp;do=view&amp;target=ipython_invoked.png">view</a>] (2006-01-22 20:45:20, 20.4 KB) [[attachment:ipython_invoked.png]]</li><li>[<a href="main_mpl_tutorial6e0d.py?action=AttachFile&amp;do=get&amp;target=main_mpl_tutorial.py">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer4e9d.html?action=AttachFile&amp;do=view&amp;target=main_mpl_tutorial.py">view</a>] (2006-01-22 20:44:16, 0.1 KB) [[attachment:main_mpl_tutorial.py]]</li><li>[<a href="mplwidget5599.py?action=AttachFile&amp;do=get&amp;target=mplwidget.py">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer4834.html?action=AttachFile&amp;do=view&amp;target=mplwidget.py">view</a>] (2006-01-22 20:43:39, 1.5 KB) [[attachment:mplwidget.py]]</li><li>[<a href="mplwidget_tutoriale8d6.py?action=AttachFile&amp;do=get&amp;target=mplwidget_tutorial.py">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer34e5.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.py">view</a>] (2006-01-22 20:43:47, 1.1 KB) [[attachment:mplwidget_tutorial.py]]</li><li>[<a href="mplwidget_tutorialb356.ui?action=AttachFile&amp;do=get&amp;target=mplwidget_tutorial.ui">get</a>&nbsp;| <a href="Qt_with_IPython_and_Designer0f0b.html?action=AttachFile&amp;do=view&amp;target=mplwidget_tutorial.ui">view</a>] (2006-01-22 20:43:59, 3.7 KB) [[attachment:mplwidget_tutorial.ui]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Qt_with_IPython_and_Designer37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Qt_with_IPython_and_Designer?action=AttachFile&do=view&target=designer_newopen.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:51:20 GMT -->
+</html>
+

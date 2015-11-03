@@ -1,0 +1,472 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/SWIG_and_NumPy?action=AttachFile&do=view&target=umfpack.i by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:umfpack.i of Cookbook/SWIG_and_NumPy - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/SWIG_and_NumPy" href="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FSWIG_and_NumPy&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="umfpack.i" href="SWIG_and_NumPyf72d.html?action=AttachFile&amp;do=view&amp;target=umfpack.i">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="SWIG_and_NumPy456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:umfpack.i of Cookbook/SWIG_and_NumPy</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="SWIG_and_NumPy.html">Cookbook/SWIG_and_NumPy</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="SWIG_and_NumPy37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'umfpack.i'</h2><a class="download" href="umfpackb43f.i?action=AttachFile&amp;do=get&amp;target=umfpack.i">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b442bf35e0269611356d1e737381d2d50cbd8d3a\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_1">   1</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_1"></span><span class="anchor" id="line-1-1"></span><span class="ID">%module</span> <span class="ID">_umfpack</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_2">   2</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_2"></span><span class="anchor" id="line-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_3">   3</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_3"></span><span class="anchor" id="line-3"></span><span class="Comment">/*</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_4">   4</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_4"></span><span class="anchor" id="line-4"></span><span class="Comment">  See umfpack.py for more information.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_5">   5</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_5"></span><span class="anchor" id="line-5"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_6">   6</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_6"></span><span class="anchor" id="line-6"></span><span class="Comment">  Created by: Robert Cimrman</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_7">   7</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_7"></span><span class="anchor" id="line-7"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_8">   8</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_8"></span><span class="anchor" id="line-8"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_9">   9</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_9"></span><span class="anchor" id="line-9"></span>%{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_10">  10</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_10"></span><span class="anchor" id="line-10"></span><span class="Preprc">#</span><span class="Preprc">include &lt;umfpack.h&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_11">  11</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_11"></span><span class="anchor" id="line-11"></span><span class="Preprc"></span><span class="Preprc">#</span><span class="Preprc">include &quot;numpy</span><span class="Preprc">/</span><span class="Preprc">arrayobject.h&quot;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_12">  12</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_12"></span><span class="anchor" id="line-12"></span><span class="Preprc"></span>%}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_13">  13</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_13"></span><span class="anchor" id="line-13"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_14">  14</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_14"></span><span class="anchor" id="line-14"></span><span class="ID">%feature</span>(<span class="String">&quot;</span><span class="String">autodoc</span><span class="String">&quot;</span>, <span class="String">&quot;</span><span class="String">1</span><span class="String">&quot;</span>);</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_15">  15</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_15"></span><span class="anchor" id="line-15"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_16">  16</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_16"></span><span class="anchor" id="line-16"></span><span class="Preprc">#</span><span class="Preprc">include &lt;umfpack.h&gt;</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_17">  17</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_17"></span><span class="anchor" id="line-17"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_18">  18</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_18"></span><span class="anchor" id="line-18"></span><span class="ID">%init</span> %{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_19">  19</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_19"></span><span class="anchor" id="line-19"></span>    <span class="ID">import_array</span>();</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_20">  20</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_20"></span><span class="anchor" id="line-20"></span>%}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_21">  21</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_21"></span><span class="anchor" id="line-21"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_22">  22</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_22"></span><span class="anchor" id="line-22"></span>%{</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_23">  23</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_23"></span><span class="anchor" id="line-23"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_24">  24</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_24"></span><span class="anchor" id="line-24"></span><span class="Comment">  Appends @a what to @a where. On input, @a where need not to be a tuple, but on</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_25">  25</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_25"></span><span class="anchor" id="line-25"></span><span class="Comment">  return it always is.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_26">  26</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_26"></span><span class="anchor" id="line-26"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_27">  27</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_27"></span><span class="anchor" id="line-27"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_28">  28</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_28"></span><span class="anchor" id="line-28"></span><span class="Comment">  - 17.02.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_29">  29</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_29"></span><span class="anchor" id="line-29"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_30">  30</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_30"></span><span class="anchor" id="line-30"></span><span class="ID">PyObject</span> *<span class="ID">helper_appendToTuple</span>( <span class="ID">PyObject</span> *<span class="ID">where</span>, <span class="ID">PyObject</span> *<span class="ID">what</span> ) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_31">  31</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_31"></span><span class="anchor" id="line-31"></span>  <span class="ID">PyObject</span> *<span class="ID">o2</span>, *<span class="ID">o3</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_32">  32</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_32"></span><span class="anchor" id="line-32"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_33">  33</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_33"></span><span class="anchor" id="line-33"></span>  <span class="ResWord">if</span> ((!<span class="ID">where</span>) || (<span class="ID">where</span> == <span class="ID">Py_None</span>)) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_34">  34</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_34"></span><span class="anchor" id="line-34"></span>    <span class="ID">where</span> = <span class="ID">what</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_35">  35</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_35"></span><span class="anchor" id="line-35"></span>  } <span class="ResWord">else</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_36">  36</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_36"></span><span class="anchor" id="line-36"></span>    <span class="ResWord">if</span> (!<span class="ID">PyTuple_Check</span>( <span class="ID">where</span> )) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_37">  37</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_37"></span><span class="anchor" id="line-37"></span>      <span class="ID">o2</span> = <span class="ID">where</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_38">  38</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_38"></span><span class="anchor" id="line-38"></span>      <span class="ID">where</span> = <span class="ID">PyTuple_New</span>( <span class="Number">1</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_39">  39</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_39"></span><span class="anchor" id="line-39"></span>      <span class="ID">PyTuple_SetItem</span>( <span class="ID">where</span>, <span class="Number">0</span>, <span class="ID">o2</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_40">  40</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_40"></span><span class="anchor" id="line-40"></span>    }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_41">  41</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_41"></span><span class="anchor" id="line-41"></span>    <span class="ID">o3</span> = <span class="ID">PyTuple_New</span>( <span class="Number">1</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_42">  42</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_42"></span><span class="anchor" id="line-42"></span>    <span class="ID">PyTuple_SetItem</span>( <span class="ID">o3</span>, <span class="Number">0</span>, <span class="ID">what</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_43">  43</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_43"></span><span class="anchor" id="line-43"></span>    <span class="ID">o2</span> = <span class="ID">where</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_44">  44</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_44"></span><span class="anchor" id="line-44"></span>    <span class="ID">where</span> = <span class="ID">PySequence_Concat</span>( <span class="ID">o2</span>, <span class="ID">o3</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_45">  45</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_45"></span><span class="anchor" id="line-45"></span>    <span class="ID">Py_DECREF</span>( <span class="ID">o2</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_46">  46</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_46"></span><span class="anchor" id="line-46"></span>    <span class="ID">Py_DECREF</span>( <span class="ID">o3</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_47">  47</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_47"></span><span class="anchor" id="line-47"></span>  }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_48">  48</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_48"></span><span class="anchor" id="line-48"></span>  <span class="ResWord">return</span> <span class="ID">where</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_49">  49</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_49"></span><span class="anchor" id="line-49"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_50">  50</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_50"></span><span class="anchor" id="line-50"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_51">  51</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_51"></span><span class="anchor" id="line-51"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_52">  52</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_52"></span><span class="anchor" id="line-52"></span><span class="Comment">  Gets PyArrayObject from a PyObject.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_53">  53</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_53"></span><span class="anchor" id="line-53"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_54">  54</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_54"></span><span class="anchor" id="line-54"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_55">  55</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_55"></span><span class="anchor" id="line-55"></span><span class="Comment">  - 22.02.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_56">  56</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_56"></span><span class="anchor" id="line-56"></span><span class="Comment">  - 03.03.2005</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_57">  57</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_57"></span><span class="anchor" id="line-57"></span><span class="Comment">  - 25.11.2005</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_58">  58</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_58"></span><span class="anchor" id="line-58"></span><span class="Comment">  - 30.11.2005</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_59">  59</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_59"></span><span class="anchor" id="line-59"></span><span class="Comment">  - 01.12.2005</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_60">  60</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_60"></span><span class="anchor" id="line-60"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_61">  61</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_61"></span><span class="anchor" id="line-61"></span><span class="ID">PyArrayObject</span> *<span class="ID">helper_getCArrayObject</span>( <span class="ID">PyObject</span> *<span class="ID">input</span>, <span class="ResWord">int</span> <span class="ID">type</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_62">  62</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_62"></span><span class="anchor" id="line-62"></span>				       <span class="ResWord">int</span> <span class="ID">minDim</span>, <span class="ResWord">int</span> <span class="ID">maxDim</span> ) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_63">  63</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_63"></span><span class="anchor" id="line-63"></span>  <span class="ID">PyArrayObject</span> *<span class="ID">obj</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_64">  64</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_64"></span><span class="anchor" id="line-64"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_65">  65</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_65"></span><span class="anchor" id="line-65"></span>  <span class="ResWord">if</span> (<span class="ID">PyArray_Check</span>( <span class="ID">input</span> )) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_66">  66</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_66"></span><span class="anchor" id="line-66"></span>    <span class="ID">obj</span> = (<span class="ID">PyArrayObject</span> *) <span class="ID">input</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_67">  67</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_67"></span><span class="anchor" id="line-67"></span>    <span class="ResWord">if</span> (!<span class="ID">PyArray_ISCARRAY</span>( <span class="ID">obj</span> )) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_68">  68</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_68"></span><span class="anchor" id="line-68"></span>      <span class="ID">PyErr_SetString</span>( <span class="ID">PyExc_TypeError</span>, <span class="String">&quot;</span><span class="String">not a C array</span><span class="String">&quot;</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_69">  69</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_69"></span><span class="anchor" id="line-69"></span>      <span class="ResWord">return</span> <span class="ResWord">NULL</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_70">  70</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_70"></span><span class="anchor" id="line-70"></span>    }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_71">  71</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_71"></span><span class="anchor" id="line-71"></span>    <span class="ID">obj</span> = (<span class="ID">PyArrayObject</span> *)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_72">  72</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_72"></span><span class="anchor" id="line-72"></span>      <span class="ID">PyArray_ContiguousFromAny</span>( <span class="ID">input</span>, <span class="ID">type</span>, <span class="ID">minDim</span>, <span class="ID">maxDim</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_73">  73</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_73"></span><span class="anchor" id="line-73"></span>    <span class="ResWord">if</span> (!<span class="ID">obj</span>) <span class="ResWord">return</span> <span class="ResWord">NULL</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_74">  74</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_74"></span><span class="anchor" id="line-74"></span>  } <span class="ResWord">else</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_75">  75</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_75"></span><span class="anchor" id="line-75"></span>    <span class="ID">PyErr_SetString</span>( <span class="ID">PyExc_TypeError</span>, <span class="String">&quot;</span><span class="String">not an array</span><span class="String">&quot;</span> );</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_76">  76</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_76"></span><span class="anchor" id="line-76"></span>    <span class="ResWord">return</span> <span class="ResWord">NULL</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_77">  77</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_77"></span><span class="anchor" id="line-77"></span>  }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_78">  78</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_78"></span><span class="anchor" id="line-78"></span>  <span class="ResWord">return</span> <span class="ID">obj</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_79">  79</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_79"></span><span class="anchor" id="line-79"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_80">  80</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_80"></span><span class="anchor" id="line-80"></span>%}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_81">  81</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_81"></span><span class="anchor" id="line-81"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_82">  82</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_82"></span><span class="anchor" id="line-82"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_83">  83</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_83"></span><span class="anchor" id="line-83"></span><span class="Comment">  Use for arrays as input arguments. Could be also used for changing an array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_84">  84</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_84"></span><span class="anchor" id="line-84"></span><span class="Comment">  in place.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_85">  85</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_85"></span><span class="anchor" id="line-85"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_86">  86</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_86"></span><span class="anchor" id="line-86"></span><span class="Comment">  @a rtype ... return this C data type</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_87">  87</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_87"></span><span class="anchor" id="line-87"></span><span class="Comment">  @a ctype ... C data type of the C function</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_88">  88</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_88"></span><span class="anchor" id="line-88"></span><span class="Comment">  @a atype ... PyArray_* suffix</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_89">  89</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_89"></span><span class="anchor" id="line-89"></span><span class="Comment"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_90">  90</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_90"></span><span class="anchor" id="line-90"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_91">  91</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_91"></span><span class="anchor" id="line-91"></span><span class="Comment">  - 30.11.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_92">  92</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_92"></span><span class="anchor" id="line-92"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_93">  93</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_93"></span><span class="anchor" id="line-93"></span><span class="Preprc">#</span><span class="Preprc">define ARRAY_IN( rtype, ctype, atype ) \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_94">  94</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_94"></span><span class="anchor" id="line-94"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, in ) (ctype *array) { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_95">  95</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_95"></span><span class="anchor" id="line-95"></span><span class="Preprc"></span><span class="Preprc">  PyArrayObject *obj; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_96">  96</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_96"></span><span class="anchor" id="line-96"></span><span class="Preprc"></span><span class="Preprc">  obj = helper_getCArrayObject( $input, PyArray_##atype, 1, 1 ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_97">  97</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_97"></span><span class="anchor" id="line-97"></span><span class="Preprc"></span><span class="Preprc">  if (!obj) return NULL; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_98">  98</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_98"></span><span class="anchor" id="line-98"></span><span class="Preprc"></span><span class="Preprc">  $1 = (rtype *) obj-&gt;data; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_99">  99</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_99"></span><span class="anchor" id="line-99"></span><span class="Preprc"></span><span class="Preprc">  Py_DECREF( obj ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_100"> 100</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_100"></span><span class="anchor" id="line-100"></span><span class="Preprc"></span><span class="Preprc">};</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_101"> 101</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_101"></span><span class="anchor" id="line-101"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_102"> 102</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_102"></span><span class="anchor" id="line-102"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_103"> 103</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_103"></span><span class="anchor" id="line-103"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_104"> 104</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_104"></span><span class="anchor" id="line-104"></span><span class="Comment">  - 30.11.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_105"> 105</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_105"></span><span class="anchor" id="line-105"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_106"> 106</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_106"></span><span class="anchor" id="line-106"></span><span class="Preprc">#</span><span class="Preprc">define CONF_IN( arSize ) \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_107"> 107</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_107"></span><span class="anchor" id="line-107"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, in ) (double conf [arSize]) { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_108"> 108</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_108"></span><span class="anchor" id="line-108"></span><span class="Preprc"></span><span class="Preprc">  PyArrayObject *obj; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_109"> 109</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_109"></span><span class="anchor" id="line-109"></span><span class="Preprc"></span><span class="Preprc">  obj = helper_getCArrayObject( $input, PyArray_DOUBLE, 1, 1 ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_110"> 110</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_110"></span><span class="anchor" id="line-110"></span><span class="Preprc"></span><span class="Preprc">  if (!obj) return NULL; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_111"> 111</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_111"></span><span class="anchor" id="line-111"></span><span class="Preprc"></span><span class="Preprc">  if ((obj-&gt;nd != 1) || (obj-&gt;dimensions[0] != arSize)) { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_112"> 112</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_112"></span><span class="anchor" id="line-112"></span><span class="Preprc"></span><span class="Preprc">    PyErr_SetString( PyExc_ValueError, &quot;wrong Control</span><span class="Preprc">/</span><span class="Preprc">Info array size&quot; ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_113"> 113</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_113"></span><span class="anchor" id="line-113"></span><span class="Preprc"></span><span class="Preprc">    Py_DECREF( obj ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_114"> 114</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_114"></span><span class="anchor" id="line-114"></span><span class="Preprc"></span><span class="Preprc">    return NULL; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_115"> 115</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_115"></span><span class="anchor" id="line-115"></span><span class="Preprc"></span><span class="Preprc">  } \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_116"> 116</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_116"></span><span class="anchor" id="line-116"></span><span class="Preprc"></span><span class="Preprc">  $1 = (double *) obj-&gt;data; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_117"> 117</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_117"></span><span class="anchor" id="line-117"></span><span class="Preprc"></span><span class="Preprc">};</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_118"> 118</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_118"></span><span class="anchor" id="line-118"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_119"> 119</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_119"></span><span class="anchor" id="line-119"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_120"> 120</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_120"></span><span class="anchor" id="line-120"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_121"> 121</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_121"></span><span class="anchor" id="line-121"></span><span class="Comment">  - 01.12.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_122"> 122</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_122"></span><span class="anchor" id="line-122"></span><span class="Comment">  - 02.12.2005</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_123"> 123</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_123"></span><span class="anchor" id="line-123"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_124"> 124</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_124"></span><span class="anchor" id="line-124"></span><span class="Preprc">#</span><span class="Preprc">define OPAQUE_ARGOUT( ttype ) \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_125"> 125</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_125"></span><span class="anchor" id="line-125"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, in, numinputs=0 ) ttype* opaque_argout( ttype tmp ) { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_126"> 126</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_126"></span><span class="anchor" id="line-126"></span><span class="Preprc"></span><span class="Preprc">  $1 = &amp;tmp; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_127"> 127</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_127"></span><span class="anchor" id="line-127"></span><span class="Preprc"></span><span class="Preprc">}; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_128"> 128</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_128"></span><span class="anchor" id="line-128"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, argout ) ttype* opaque_argout { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_129"> 129</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_129"></span><span class="anchor" id="line-129"></span><span class="Preprc"></span><span class="Preprc">  PyObject *obj; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_130"> 130</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_130"></span><span class="anchor" id="line-130"></span><span class="Preprc"></span><span class="Preprc">  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 1 ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_131"> 131</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_131"></span><span class="anchor" id="line-131"></span><span class="Preprc"></span><span class="Preprc">  $result = helper_appendToTuple( $result, obj ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_132"> 132</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_132"></span><span class="anchor" id="line-132"></span><span class="Preprc"></span><span class="Preprc">};</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_133"> 133</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_133"></span><span class="anchor" id="line-133"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_134"> 134</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_134"></span><span class="anchor" id="line-134"></span><span class="Comment">/*!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_135"> 135</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_135"></span><span class="anchor" id="line-135"></span><span class="Comment">  @par Revision history:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_136"> 136</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_136"></span><span class="anchor" id="line-136"></span><span class="Comment">  - 02.12.2005, c</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_137"> 137</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_137"></span><span class="anchor" id="line-137"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_138"> 138</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_138"></span><span class="anchor" id="line-138"></span><span class="Preprc">#</span><span class="Preprc">define OPAQUE_ARGINOUT( ttype ) \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_139"> 139</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_139"></span><span class="anchor" id="line-139"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, in ) ttype* opaque_arginout( ttype tmp ) { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_140"> 140</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_140"></span><span class="anchor" id="line-140"></span><span class="Preprc"></span><span class="Preprc">  if ((SWIG_ConvertPtr( $input,(void **) &amp;tmp, $*1_descriptor, \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_141"> 141</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_141"></span><span class="anchor" id="line-141"></span><span class="Preprc"></span><span class="Preprc">			SWIG_POINTER_EXCEPTION)) == -1) return NULL; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_142"> 142</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_142"></span><span class="anchor" id="line-142"></span><span class="Preprc"></span><span class="Preprc">  $1 = &amp;tmp; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_143"> 143</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_143"></span><span class="anchor" id="line-143"></span><span class="Preprc"></span><span class="Preprc">}; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_144"> 144</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_144"></span><span class="anchor" id="line-144"></span><span class="Preprc"></span><span class="Preprc">%typemap( python, argout ) ttype* opaque_arginout { \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_145"> 145</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_145"></span><span class="anchor" id="line-145"></span><span class="Preprc"></span><span class="Preprc">  PyObject *obj; \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_146"> 146</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_146"></span><span class="anchor" id="line-146"></span><span class="Preprc"></span><span class="Preprc">  obj = SWIG_NewPointerObj( (ttype) (*$1), $*1_descriptor, 1 ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_147"> 147</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_147"></span><span class="anchor" id="line-147"></span><span class="Preprc"></span><span class="Preprc">  $result = helper_appendToTuple( $result, obj ); \</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_148"> 148</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_148"></span><span class="anchor" id="line-148"></span><span class="Preprc"></span><span class="Preprc">};</span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_149"> 149</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_149"></span><span class="anchor" id="line-149"></span><span class="Preprc"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_150"> 150</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_150"></span><span class="anchor" id="line-150"></span><span class="ID">ARRAY_IN</span>( <span class="ResWord">int</span>, <span class="ResWord">const</span> <span class="ResWord">int</span>, <span class="ID">INT</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_151"> 151</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_151"></span><span class="anchor" id="line-151"></span><span class="ID">%apply</span> <span class="ResWord">const</span> <span class="ResWord">int</span> *<span class="ID">array</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_152"> 152</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_152"></span><span class="anchor" id="line-152"></span>    <span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">Ap</span> [ ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_153"> 153</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_153"></span><span class="anchor" id="line-153"></span>    <span class="ResWord">const</span> <span class="ResWord">int</span> <span class="ID">Ai</span> [ ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_154"> 154</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_154"></span><span class="anchor" id="line-154"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_155"> 155</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_155"></span><span class="anchor" id="line-155"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_156"> 156</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_156"></span><span class="anchor" id="line-156"></span><span class="ID">ARRAY_IN</span>( <span class="ResWord">long</span>, <span class="ResWord">const</span> <span class="ResWord">long</span>, <span class="ID">LONG</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_157"> 157</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_157"></span><span class="anchor" id="line-157"></span><span class="ID">%apply</span> <span class="ResWord">const</span> <span class="ResWord">long</span> *<span class="ID">array</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_158"> 158</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_158"></span><span class="anchor" id="line-158"></span>    <span class="ResWord">const</span> <span class="ResWord">long</span> <span class="ID">Ap</span> [ ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_159"> 159</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_159"></span><span class="anchor" id="line-159"></span>    <span class="ResWord">const</span> <span class="ResWord">long</span> <span class="ID">Ai</span> [ ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_160"> 160</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_160"></span><span class="anchor" id="line-160"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_161"> 161</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_161"></span><span class="anchor" id="line-161"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_162"> 162</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_162"></span><span class="anchor" id="line-162"></span><span class="ID">ARRAY_IN</span>( <span class="ResWord">double</span>, <span class="ResWord">const</span> <span class="ResWord">double</span>, <span class="ID">DOUBLE</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_163"> 163</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_163"></span><span class="anchor" id="line-163"></span><span class="ID">%apply</span> <span class="ResWord">const</span> <span class="ResWord">double</span> *<span class="ID">array</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_164"> 164</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_164"></span><span class="anchor" id="line-164"></span>    <span class="ResWord">const</span> <span class="ResWord">double</span> <span class="ID">Ax</span> [ ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_165"> 165</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_165"></span><span class="anchor" id="line-165"></span>    <span class="ResWord">const</span> <span class="ResWord">double</span> <span class="ID">Az</span> [ ],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_166"> 166</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_166"></span><span class="anchor" id="line-166"></span>    <span class="ResWord">const</span> <span class="ResWord">double</span> <span class="ID">B</span> [ ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_167"> 167</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_167"></span><span class="anchor" id="line-167"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_168"> 168</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_168"></span><span class="anchor" id="line-168"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_169"> 169</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_169"></span><span class="anchor" id="line-169"></span><span class="ID">ARRAY_IN</span>( <span class="ResWord">double</span>, <span class="ResWord">double</span>, <span class="ID">DOUBLE</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_170"> 170</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_170"></span><span class="anchor" id="line-170"></span><span class="ID">%apply</span> <span class="ResWord">double</span> *<span class="ID">array</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_171"> 171</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_171"></span><span class="anchor" id="line-171"></span>    <span class="ResWord">double</span> <span class="ID">X</span> [ ]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_172"> 172</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_172"></span><span class="anchor" id="line-172"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_173"> 173</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_173"></span><span class="anchor" id="line-173"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_174"> 174</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_174"></span><span class="anchor" id="line-174"></span><span class="ID">CONF_IN</span>( <span class="ID">UMFPACK_CONTROL</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_175"> 175</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_175"></span><span class="anchor" id="line-175"></span><span class="ID">%apply</span> (<span class="ResWord">double</span> <span class="ID">conf</span> [<span class="ID">UMFPACK_CONTROL</span>]) {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_176"> 176</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_176"></span><span class="anchor" id="line-176"></span>    <span class="ResWord">double</span> <span class="ID">Control</span> [<span class="ID">ANY</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_177"> 177</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_177"></span><span class="anchor" id="line-177"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_178"> 178</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_178"></span><span class="anchor" id="line-178"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_179"> 179</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_179"></span><span class="anchor" id="line-179"></span><span class="ID">CONF_IN</span>( <span class="ID">UMFPACK_INFO</span> )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_180"> 180</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_180"></span><span class="anchor" id="line-180"></span><span class="ID">%apply</span> <span class="ResWord">double</span> <span class="ID">conf</span> [<span class="ID">UMFPACK_INFO</span>] {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_181"> 181</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_181"></span><span class="anchor" id="line-181"></span>    <span class="ResWord">double</span> <span class="ID">Info</span> [<span class="ID">ANY</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_182"> 182</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_182"></span><span class="anchor" id="line-182"></span>};</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_183"> 183</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_183"></span><span class="anchor" id="line-183"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_184"> 184</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_184"></span><span class="anchor" id="line-184"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_185"> 185</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_185"></span><span class="anchor" id="line-185"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_solve</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_186"> 186</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_186"></span><span class="anchor" id="line-186"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_defaults</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_187"> 187</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_187"></span><span class="anchor" id="line-187"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_triplet_to_col</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_188"> 188</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_188"></span><span class="anchor" id="line-188"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_col_to_triplet</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_189"> 189</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_189"></span><span class="anchor" id="line-189"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_transpose</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_190"> 190</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_190"></span><span class="anchor" id="line-190"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_scale</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_191"> 191</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_191"></span><span class="anchor" id="line-191"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_192"> 192</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_192"></span><span class="anchor" id="line-192"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_report_symbolic</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_193"> 193</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_193"></span><span class="anchor" id="line-193"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_report_numeric</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_194"> 194</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_194"></span><span class="anchor" id="line-194"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_report_info</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_195"> 195</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_195"></span><span class="anchor" id="line-195"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_report_control</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_196"> 196</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_196"></span><span class="anchor" id="line-196"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_197"> 197</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_197"></span><span class="anchor" id="line-197"></span><span class="Comment">/*</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_198"> 198</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_198"></span><span class="anchor" id="line-198"></span><span class="Comment">  The order is important below!</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_199"> 199</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_199"></span><span class="anchor" id="line-199"></span><span class="Comment">*/</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_200"> 200</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_200"></span><span class="anchor" id="line-200"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_201"> 201</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_201"></span><span class="anchor" id="line-201"></span><span class="ID">OPAQUE_ARGOUT</span>( <span class="ResWord">void</span> * )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_202"> 202</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_202"></span><span class="anchor" id="line-202"></span><span class="ID">%apply</span>  <span class="ResWord">void</span> ** <span class="ID">opaque_argout</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_203"> 203</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_203"></span><span class="anchor" id="line-203"></span>    <span class="ResWord">void</span> **<span class="ID">Symbolic</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_204"> 204</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_204"></span><span class="anchor" id="line-204"></span>    <span class="ResWord">void</span> **<span class="ID">Numeric</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_205"> 205</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_205"></span><span class="anchor" id="line-205"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_206"> 206</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_206"></span><span class="anchor" id="line-206"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_207"> 207</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_207"></span><span class="anchor" id="line-207"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_symbolic</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_208"> 208</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_208"></span><span class="anchor" id="line-208"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_numeric</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_209"> 209</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_209"></span><span class="anchor" id="line-209"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_210"> 210</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_210"></span><span class="anchor" id="line-210"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_211"> 211</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_211"></span><span class="anchor" id="line-211"></span><span class="ID">OPAQUE_ARGINOUT</span>( <span class="ResWord">void</span> * )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_212"> 212</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_212"></span><span class="anchor" id="line-212"></span><span class="ID">%apply</span>  <span class="ResWord">void</span> ** <span class="ID">opaque_arginout</span> {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_213"> 213</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_213"></span><span class="anchor" id="line-213"></span>    <span class="ResWord">void</span> **<span class="ID">Symbolic</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_214"> 214</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_214"></span><span class="anchor" id="line-214"></span>    <span class="ResWord">void</span> **<span class="ID">Numeric</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_215"> 215</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_215"></span><span class="anchor" id="line-215"></span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_216"> 216</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_216"></span><span class="anchor" id="line-216"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_217"> 217</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_217"></span><span class="anchor" id="line-217"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_free_symbolic</span>.<span class="ID">h</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_218"> 218</a> </span><span class="LineAnchor" id="CA-b442bf35e0269611356d1e737381d2d50cbd8d3a_218"></span><span class="anchor" id="line-218"></span><span class="ID">%include</span> &lt;<span class="ID">umfpack_free_numeric</span>.<span class="ID">h</span>&gt;</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="umfpack.i"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="005632801e.4a77e5d3ec23d68bdd4d604e80b3f16fb6a6dc9c">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="umfpackb43f.i?action=AttachFile&amp;do=get&amp;target=umfpack.i">get</a>&nbsp;| <a href="SWIG_and_NumPyf72d.html?action=AttachFile&amp;do=view&amp;target=umfpack.i">view</a>] (2006-02-08 10:31:33, 4.6 KB) [[attachment:umfpack.i]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="SWIG_and_NumPy37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/SWIG_and_NumPy">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/SWIG_and_NumPy?action=AttachFile&do=view&target=umfpack.i by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:27 GMT -->
+</html>
+

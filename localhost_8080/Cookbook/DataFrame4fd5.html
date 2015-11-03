@@ -1,0 +1,593 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/DataFrame?action=AttachFile&do=view&target=CSVSample.csv by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:41:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:CSVSample.csv of Cookbook/DataFrame - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/DataFrame" href="../../external.html?link=http://localhost:8080/Cookbook/DataFrame?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FDataFrame&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/DataFrame?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/DataFrame?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="CSVSample.csv" href="DataFrame4fd5.html?action=AttachFile&amp;do=view&amp;target=CSVSample.csv">
+<link rel="Appendix" title="DataFrame.py" href="DataFrame857d.html?action=AttachFile&amp;do=view&amp;target=DataFrame.py">
+<link rel="Appendix" title="SampleCSV.csv" href="DataFrame4dec.html?action=AttachFile&amp;do=view&amp;target=SampleCSV.csv">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/DataFrame">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="DataFrame456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:CSVSample.csv of Cookbook/DataFrame</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="DataFrame.html">Cookbook/DataFrame</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="DataFrame37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/DataFrame">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'CSVSample.csv'</h2><a class="download" href="CSVSampleb202.csv?action=AttachFile&amp;do=get&amp;target=CSVSample.csv">Download</a><br><br><form action="../../external.html?link=http://localhost:8080/Cookbook/DataFrame" method="GET" name="dbw.form"><div><div><table id="dbw.table"><tbody><tr>  <td class="hcolumn0"><strong>"Nombre"</strong></td>
+  <td class="hcolumn1"><strong>"COD_OCA"</strong></td>
+  <td class="hcolumn2"><strong>"C_CULT"</strong></td>
+  <td class="hcolumn3"><strong>"FECHA"</strong></td>
+  <td class="hcolumn4"><strong>"PSN_MEAN"</strong></td>
+  <td class="hcolumn5"><strong>"PSN_STD"</strong></td>
+  <td class="hcolumn6"><strong>"SAMPLES"</strong></td>
+  <td class="hcolumn7"><strong>"ANHO"</strong></td>
+  <td class="hcolumn8"><strong>"NOM_CULTIVO_SIIA"</strong></td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;1/1/2001 0:00:00&quot;" class="column3">&quot;1/1/2001 0:00:00&quot;</td>
+  <td abbr="0.0053" class="column4">0.0053</td>
+  <td abbr="0.00036" class="column5">0.00036</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;9/1/2001 0:00:00&quot;" class="column3">&quot;9/1/2001 0:00:00&quot;</td>
+  <td abbr="0.005" class="column4">0.005</td>
+  <td abbr="0.00053" class="column5">0.00053</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;17/1/2001 0:00:00&quot;" class="column3">&quot;17/1/2001 0:00:00&quot;</td>
+  <td abbr="0.005" class="column4">0.005</td>
+  <td abbr="0.00028" class="column5">0.00028</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;25/1/2001 0:00:00&quot;" class="column3">&quot;25/1/2001 0:00:00&quot;</td>
+  <td abbr="0.0061" class="column4">0.0061</td>
+  <td abbr="0.00032" class="column5">0.00032</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;2/2/2001 0:00:00&quot;" class="column3">&quot;2/2/2001 0:00:00&quot;</td>
+  <td abbr="0.0085" class="column4">0.0085</td>
+  <td abbr="0.00054" class="column5">0.00054</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;10/2/2001 0:00:00&quot;" class="column3">&quot;10/2/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00056" class="column5">0.00056</td>
+  <td abbr="43" class="column6">43</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;18/2/2001 0:00:00&quot;" class="column3">&quot;18/2/2001 0:00:00&quot;</td>
+  <td abbr="0.0095" class="column4">0.0095</td>
+  <td abbr="0.00056" class="column5">0.00056</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;26/2/2001 0:00:00&quot;" class="column3">&quot;26/2/2001 0:00:00&quot;</td>
+  <td abbr="0.0063" class="column4">0.0063</td>
+  <td abbr="0.00082" class="column5">0.00082</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;6/3/2001 0:00:00&quot;" class="column3">&quot;6/3/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.001" class="column5">0.001</td>
+  <td abbr="43" class="column6">43</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;14/3/2001 0:00:00&quot;" class="column3">&quot;14/3/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00064" class="column5">0.00064</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;22/3/2001 0:00:00&quot;" class="column3">&quot;22/3/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00065" class="column5">0.00065</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;30/3/2001 0:00:00&quot;" class="column3">&quot;30/3/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00053" class="column5">0.00053</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;7/4/2001 0:00:00&quot;" class="column3">&quot;7/4/2001 0:00:00&quot;</td>
+  <td abbr="0.0062" class="column4">0.0062</td>
+  <td abbr="0.00039" class="column5">0.00039</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;15/4/2001 0:00:00&quot;" class="column3">&quot;15/4/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00032" class="column5">0.00032</td>
+  <td abbr="42" class="column6">42</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;23/4/2001 0:00:00&quot;" class="column3">&quot;23/4/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00064" class="column5">0.00064</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;1/5/2001 0:00:00&quot;" class="column3">&quot;1/5/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00181" class="column5">0.00181</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;9/5/2001 0:00:00&quot;" class="column3">&quot;9/5/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00095" class="column5">0.00095</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;17/5/2001 0:00:00&quot;" class="column3">&quot;17/5/2001 0:00:00&quot;</td>
+  <td abbr="0.01" class="column4">0.01</td>
+  <td abbr="0.00077" class="column5">0.00077</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;25/5/2001 0:00:00&quot;" class="column3">&quot;25/5/2001 0:00:00&quot;</td>
+  <td abbr="-0.0005" class="column4">-0.0005</td>
+  <td abbr="9e-005" class="column5">9e-005</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;2/6/2001 0:00:00&quot;" class="column3">&quot;2/6/2001 0:00:00&quot;</td>
+  <td abbr="-0.0021" class="column4">-0.0021</td>
+  <td abbr="0.00015" class="column5">0.00015</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;10/6/2001 0:00:00&quot;" class="column3">&quot;10/6/2001 0:00:00&quot;</td>
+  <td abbr="0.003" class="column4">0.003</td>
+  <td abbr="0.00016" class="column5">0.00016</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;18/6/2001 0:00:00&quot;" class="column3">&quot;18/6/2001 0:00:00&quot;</td>
+  <td abbr="-0.0035" class="column4">-0.0035</td>
+  <td abbr="0.00032" class="column5">0.00032</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;26/6/2001 0:00:00&quot;" class="column3">&quot;26/6/2001 0:00:00&quot;</td>
+  <td abbr="0.0" class="column4">0.0</td>
+  <td abbr="0.0001" class="column5">0.0001</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;4/7/2001 0:00:00&quot;" class="column3">&quot;4/7/2001 0:00:00&quot;</td>
+  <td abbr="0.0006" class="column4">0.0006</td>
+  <td abbr="5e-005" class="column5">5e-005</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;12/7/2001 0:00:00&quot;" class="column3">&quot;12/7/2001 0:00:00&quot;</td>
+  <td abbr="-0.0012" class="column4">-0.0012</td>
+  <td abbr="0.00017" class="column5">0.00017</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;20/7/2001 0:00:00&quot;" class="column3">&quot;20/7/2001 0:00:00&quot;</td>
+  <td abbr="-0.0005" class="column4">-0.0005</td>
+  <td abbr="8e-005" class="column5">8e-005</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;28/7/2001 0:00:00&quot;" class="column3">&quot;28/7/2001 0:00:00&quot;</td>
+  <td abbr="0.0014" class="column4">0.0014</td>
+  <td abbr="0.0001" class="column5">0.0001</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;5/8/2001 0:00:00&quot;" class="column3">&quot;5/8/2001 0:00:00&quot;</td>
+  <td abbr="-0.0013" class="column4">-0.0013</td>
+  <td abbr="9e-005" class="column5">9e-005</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;13/8/2001 0:00:00&quot;" class="column3">&quot;13/8/2001 0:00:00&quot;</td>
+  <td abbr="0.0015" class="column4">0.0015</td>
+  <td abbr="0.00011" class="column5">0.00011</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;21/8/2001 0:00:00&quot;" class="column3">&quot;21/8/2001 0:00:00&quot;</td>
+  <td abbr="0.0019" class="column4">0.0019</td>
+  <td abbr="0.00013" class="column5">0.00013</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;29/8/2001 0:00:00&quot;" class="column3">&quot;29/8/2001 0:00:00&quot;</td>
+  <td abbr="0.0035" class="column4">0.0035</td>
+  <td abbr="0.00022" class="column5">0.00022</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;6/9/2001 0:00:00&quot;" class="column3">&quot;6/9/2001 0:00:00&quot;</td>
+  <td abbr="0.0005" class="column4">0.0005</td>
+  <td abbr="8e-005" class="column5">8e-005</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;14/9/2001 0:00:00&quot;" class="column3">&quot;14/9/2001 0:00:00&quot;</td>
+  <td abbr="0.0026" class="column4">0.0026</td>
+  <td abbr="0.00012" class="column5">0.00012</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;22/9/2001 0:00:00&quot;" class="column3">&quot;22/9/2001 0:00:00&quot;</td>
+  <td abbr="0.0044" class="column4">0.0044</td>
+  <td abbr="0.00041" class="column5">0.00041</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;30/9/2001 0:00:00&quot;" class="column3">&quot;30/9/2001 0:00:00&quot;</td>
+  <td abbr="0.0044" class="column4">0.0044</td>
+  <td abbr="0.00051" class="column5">0.00051</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;8/10/2001 0:00:00&quot;" class="column3">&quot;8/10/2001 0:00:00&quot;</td>
+  <td abbr="0.0045" class="column4">0.0045</td>
+  <td abbr="0.00052" class="column5">0.00052</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;16/10/2001 0:00:00&quot;" class="column3">&quot;16/10/2001 0:00:00&quot;</td>
+  <td abbr="0.0073" class="column4">0.0073</td>
+  <td abbr="0.00062" class="column5">0.00062</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="&quot;Antequera&quot;" class="column0">&quot;Antequera&quot;</td>
+  <td abbr="2901" class="column1">2901</td>
+  <td abbr="14" class="column2">14</td>
+  <td abbr="&quot;24/10/2001 0:00:00&quot;" class="column3">&quot;24/10/2001 0:00:00&quot;</td>
+  <td abbr="0.0037" class="column4">0.0037</td>
+  <td abbr="0.00042" class="column5">0.00042</td>
+  <td abbr="44" class="column6">44</td>
+  <td abbr="2001" class="column7">2001</td>
+  <td abbr="&quot;TRIGO DURO&quot;" class="column8">&quot;TRIGO DURO&quot;</td>
+</tr>
+<tr>  <td abbr="" class="column0"></td>
+  <td abbr="" class="column1"></td>
+  <td abbr="" class="column2"></td>
+  <td abbr="" class="column3"></td>
+  <td abbr="" class="column4"></td>
+  <td abbr="" class="column5"></td>
+  <td abbr="" class="column6"></td>
+  <td abbr="" class="column7"></td>
+  <td abbr="" class="column8"></td>
+</tr>
+</tbody></table></div></div></form><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/DataFrame" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="CSVSample.csv"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327c53.fcc18a70fcaac25f6e932eb0c8738c1cd3bb9483">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="CSVSampleb202.csv?action=AttachFile&amp;do=get&amp;target=CSVSample.csv">get</a>&nbsp;| <a href="DataFrame4fd5.html?action=AttachFile&amp;do=view&amp;target=CSVSample.csv">view</a>] (2006-09-13 12:20:03, 2.9 KB) [[attachment:CSVSample.csv]]</li><li>[<a href="DataFrame7904.py?action=AttachFile&amp;do=get&amp;target=DataFrame.py">get</a>&nbsp;| <a href="DataFrame857d.html?action=AttachFile&amp;do=view&amp;target=DataFrame.py">view</a>] (2006-09-13 07:57:52, 17.3 KB) [[attachment:DataFrame.py]]</li><li>[<a href="SampleCSVcb86.csv?action=AttachFile&amp;do=get&amp;target=SampleCSV.csv">get</a>&nbsp;| <a href="DataFrame4dec.html?action=AttachFile&amp;do=view&amp;target=SampleCSV.csv">view</a>] (2006-09-13 12:12:09, 25.1 KB) [[attachment:SampleCSV.csv]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="DataFrame37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/DataFrame">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/DataFrame?action=AttachFile&do=view&target=CSVSample.csv by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:41:35 GMT -->
+</html>
+

@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data?action=AttachFile&do=view&target=raw_small by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:47:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:raw_small of Cookbook/Matplotlib/Gridding_irregularly_spaced_data - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Gridding_irregularly_spaced_data" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FGridding_irregularly_spaced_data&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="bin.png" href="Gridding_irregularly_spaced_data6a51.html?action=AttachFile&amp;do=view&amp;target=bin.png">
+<link rel="Appendix" title="bin_small" href="Gridding_irregularly_spaced_datac407.html?action=AttachFile&amp;do=view&amp;target=bin_small">
+<link rel="Appendix" title="bin_small.png" href="Gridding_irregularly_spaced_data6381.html?action=AttachFile&amp;do=view&amp;target=bin_small.png">
+<link rel="Appendix" title="binned_data.png" href="Gridding_irregularly_spaced_datad950.html?action=AttachFile&amp;do=view&amp;target=binned_data.png">
+<link rel="Appendix" title="griddataexample1.png" href="Gridding_irregularly_spaced_data7015.html?action=AttachFile&amp;do=view&amp;target=griddataexample1.png">
+<link rel="Appendix" title="ppb.png" href="Gridding_irregularly_spaced_databf10.html?action=AttachFile&amp;do=view&amp;target=ppb.png">
+<link rel="Appendix" title="ppb_raw.png" href="Gridding_irregularly_spaced_data98c3.html?action=AttachFile&amp;do=view&amp;target=ppb_raw.png">
+<link rel="Appendix" title="raw.png" href="Gridding_irregularly_spaced_datad8c3.html?action=AttachFile&amp;do=view&amp;target=raw.png">
+<link rel="Appendix" title="raw_small" href="Gridding_irregularly_spaced_datae219.html?action=AttachFile&amp;do=view&amp;target=raw_small">
+<link rel="Appendix" title="raw_small.png" href="Gridding_irregularly_spaced_data9c22.html?action=AttachFile&amp;do=view&amp;target=raw_small.png">
+<link rel="Appendix" title="unbinned_data.png" href="Gridding_irregularly_spaced_dataaf09.html?action=AttachFile&amp;do=view&amp;target=unbinned_data.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Gridding_irregularly_spaced_data456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:raw_small of Cookbook/Matplotlib/Gridding_irregularly_spaced_data</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Gridding_irregularly_spaced_data.html">Gridding_ir...spaced_data</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Gridding_irregularly_spaced_data37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'raw_small'</h2><a class="download" href="raw_smalla656?action=AttachFile&amp;do=get&amp;target=raw_small">Download</a><br><br>Current configuration does not allow embedding of the file raw_small because of its mimetype application/octet-stream.: <a href="raw_smalla656?action=AttachFile&amp;do=get&amp;target=raw_small">raw_small</a><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="raw_small"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327d59.9c79a8c63cfd1312380ccf4147380d053625279a">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="bine895.png?action=AttachFile&amp;do=get&amp;target=bin.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_data6a51.html?action=AttachFile&amp;do=view&amp;target=bin.png">view</a>] (2010-07-12 07:26:41, 106.2 KB) [[attachment:bin.png]]</li><li>[<a href="bin_small73a0?action=AttachFile&amp;do=get&amp;target=bin_small">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_datac407.html?action=AttachFile&amp;do=view&amp;target=bin_small">view</a>] (2010-07-12 08:00:23, 48.4 KB) [[attachment:bin_small]]</li><li>[<a href="bin_smallef6e.png?action=AttachFile&amp;do=get&amp;target=bin_small.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_data6381.html?action=AttachFile&amp;do=view&amp;target=bin_small.png">view</a>] (2010-07-12 08:05:31, 48.4 KB) [[attachment:bin_small.png]]</li><li>[<a href="binned_datac5e3.png?action=AttachFile&amp;do=get&amp;target=binned_data.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_datad950.html?action=AttachFile&amp;do=view&amp;target=binned_data.png">view</a>] (2010-07-12 07:13:34, 188.5 KB) [[attachment:binned_data.png]]</li><li>[<a href="griddataexample1eaee.png?action=AttachFile&amp;do=get&amp;target=griddataexample1.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_data7015.html?action=AttachFile&amp;do=view&amp;target=griddataexample1.png">view</a>] (2010-09-10 14:33:19, 49.5 KB) [[attachment:griddataexample1.png]]</li><li>[<a href="ppbf2f9.png?action=AttachFile&amp;do=get&amp;target=ppb.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_databf10.html?action=AttachFile&amp;do=view&amp;target=ppb.png">view</a>] (2010-07-12 07:30:22, 73.9 KB) [[attachment:ppb.png]]</li><li>[<a href="ppb_raw6dc1.png?action=AttachFile&amp;do=get&amp;target=ppb_raw.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_data98c3.html?action=AttachFile&amp;do=view&amp;target=ppb_raw.png">view</a>] (2010-07-12 07:30:10, 108.4 KB) [[attachment:ppb_raw.png]]</li><li>[<a href="raw48db.png?action=AttachFile&amp;do=get&amp;target=raw.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_datad8c3.html?action=AttachFile&amp;do=view&amp;target=raw.png">view</a>] (2010-07-12 07:27:46, 163.1 KB) [[attachment:raw.png]]</li><li>[<a href="raw_smalla656?action=AttachFile&amp;do=get&amp;target=raw_small">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_datae219.html?action=AttachFile&amp;do=view&amp;target=raw_small">view</a>] (2010-07-12 08:00:39, 54.2 KB) [[attachment:raw_small]]</li><li>[<a href="raw_smalld99c.png?action=AttachFile&amp;do=get&amp;target=raw_small.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_data9c22.html?action=AttachFile&amp;do=view&amp;target=raw_small.png">view</a>] (2010-07-12 08:05:57, 54.2 KB) [[attachment:raw_small.png]]</li><li>[<a href="unbinned_data6c47.png?action=AttachFile&amp;do=get&amp;target=unbinned_data.png">get</a>&nbsp;| <a href="Gridding_irregularly_spaced_dataaf09.html?action=AttachFile&amp;do=view&amp;target=unbinned_data.png">view</a>] (2010-07-12 07:13:51, 352.3 KB) [[attachment:unbinned_data.png]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Gridding_irregularly_spaced_data37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Gridding_irregularly_spaced_data?action=AttachFile&do=view&target=raw_small by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:47:56 GMT -->
+</html>
+

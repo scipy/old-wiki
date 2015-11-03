@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Solving_Large_Markov_Chains?action=AttachFile&do=view&target=tandemqueue.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:tandemqueue.py of Cookbook/Solving_Large_Markov_Chains - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Solving_Large_Markov_Chains" href="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FSolving_Large_Markov_Chains&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="pi.png" href="Solving_Large_Markov_Chains8b73.html?action=AttachFile&amp;do=view&amp;target=pi.png">
+<link rel="Appendix" title="tandemqueue.py" href="Solving_Large_Markov_Chainsb8ee.html?action=AttachFile&amp;do=view&amp;target=tandemqueue.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Solving_Large_Markov_Chains456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:tandemqueue.py of Cookbook/Solving_Large_Markov_Chains</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Solving_Large_Markov_Chains.html">Solving_Lar...rkov_Chains</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Solving_Large_Markov_Chains37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'tandemqueue.py'</h2><a class="download" href="tandemqueue438c.py?action=AttachFile&amp;do=get&amp;target=tandemqueue.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-e06b965da0abb22e286f0abf31d0231f435c77b6\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_1">   1</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_2">   2</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_2"></span><span class="anchor" id="line-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_3">   3</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_3"></span><span class="anchor" id="line-3"></span><span class="ID">labda</span>, <span class="ID">mu1</span>, <span class="ID">mu2</span> = <span class="Number">1.</span>, <span class="Number">1.01</span>, <span class="Number">1.001</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_4">   4</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_4"></span><span class="anchor" id="line-4"></span><span class="ID">N1</span>, <span class="ID">N2</span> = <span class="Number">50</span>, <span class="Number">50</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_5">   5</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_5"></span><span class="anchor" id="line-5"></span><span class="ID">size</span> = <span class="ID">N1</span>*<span class="ID">N2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_6">   6</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_6"></span><span class="anchor" id="line-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_7">   7</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> <span class="ID">ones</span>, <span class="ID">zeros</span>, <span class="ID">empty</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_8">   8</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_8"></span><span class="anchor" id="line-8"></span><span class="ResWord">import</span> <span class="ID">scipy.sparse</span> <span class="ResWord">as</span> <span class="ID">sp</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_9">   9</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_9"></span><span class="anchor" id="line-9"></span><span class="ResWord">import</span>  <span class="ID">pysparse</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_10">  10</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_10"></span><span class="anchor" id="line-10"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">matshow</span>, <span class="ID">savefig</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_11">  11</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_11"></span><span class="anchor" id="line-11"></span><span class="ResWord">from</span> <span class="ID">scipy.linalg</span> <span class="ResWord">import</span> <span class="ID">norm</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_12">  12</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_12"></span><span class="anchor" id="line-12"></span><span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_13">  13</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_13"></span><span class="anchor" id="line-13"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_14">  14</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_14"></span><span class="anchor" id="line-14"></span><span class="ResWord">def</span> <span class="ID">state</span>(<span class="ID">i</span>,<span class="ID">j</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_15">  15</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_15"></span><span class="anchor" id="line-15"></span>    <span class="ResWord">return</span> <span class="ID">j</span>*<span class="ID">N1</span> + <span class="ID">i</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_16">  16</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_16"></span><span class="anchor" id="line-16"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_17">  17</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_17"></span><span class="anchor" id="line-17"></span><span class="ResWord">def</span> <span class="ID">fillOffDiagonal</span>(<span class="ID">Q</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_18">  18</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_18"></span><span class="anchor" id="line-18"></span>    <span class="Comment"># labda</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_19">  19</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_19"></span><span class="anchor" id="line-19"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">0</span>,<span class="ID">N1</span>-<span class="Number">1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_20">  20</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_20"></span><span class="anchor" id="line-20"></span>        <span class="ResWord">for</span> <span class="ID">j</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">0</span>,<span class="ID">N2</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_21">  21</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_21"></span><span class="anchor" id="line-21"></span>            <span class="ID">Q</span>[(<span class="ID">state</span>(<span class="ID">i</span>,<span class="ID">j</span>),<span class="ID">state</span>(<span class="ID">i</span>+<span class="Number">1</span>,<span class="ID">j</span>))]= <span class="ID">labda</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_22">  22</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_22"></span><span class="anchor" id="line-22"></span>    <span class="Comment"># mu2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_23">  23</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_23"></span><span class="anchor" id="line-23"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">0</span>,<span class="ID">N1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_24">  24</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_24"></span><span class="anchor" id="line-24"></span>        <span class="ResWord">for</span> <span class="ID">j</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">1</span>,<span class="ID">N2</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_25">  25</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_25"></span><span class="anchor" id="line-25"></span>            <span class="ID">Q</span>[(<span class="ID">state</span>(<span class="ID">i</span>,<span class="ID">j</span>),<span class="ID">state</span>(<span class="ID">i</span>,<span class="ID">j</span>-<span class="Number">1</span>))]= <span class="ID">mu2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_26">  26</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_26"></span><span class="anchor" id="line-26"></span>    <span class="Comment"># mu1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_27">  27</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_27"></span><span class="anchor" id="line-27"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">1</span>,<span class="ID">N1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_28">  28</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_28"></span><span class="anchor" id="line-28"></span>        <span class="ResWord">for</span> <span class="ID">j</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="Number">0</span>,<span class="ID">N2</span>-<span class="Number">1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_29">  29</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_29"></span><span class="anchor" id="line-29"></span>            <span class="ID">Q</span>[(<span class="ID">state</span>(<span class="ID">i</span>,<span class="ID">j</span>),<span class="ID">state</span>(<span class="ID">i</span>-<span class="Number">1</span>,<span class="ID">j</span>+<span class="Number">1</span>))]= <span class="ID">mu1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_30">  30</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_30"></span><span class="anchor" id="line-30"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">ready filling</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_31">  31</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_31"></span><span class="anchor" id="line-31"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_32">  32</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_32"></span><span class="anchor" id="line-32"></span><span class="ResWord">def</span> <span class="ID">computePiMethod1</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_33">  33</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_33"></span><span class="anchor" id="line-33"></span>    <span class="ID">e0</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_34">  34</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_34"></span><span class="anchor" id="line-34"></span>    <span class="ID">Q</span> = <span class="ID">sp</span>.<span class="ID">dok_matrix</span>((<span class="ID">size</span>,<span class="ID">size</span>)) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_35">  35</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_35"></span><span class="anchor" id="line-35"></span>    <span class="ID">fillOffDiagonal</span>(<span class="ID">Q</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_36">  36</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_36"></span><span class="anchor" id="line-36"></span>    <span class="Comment"># Set the diagonal of Q such that the row sums are zero</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_37">  37</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_37"></span><span class="anchor" id="line-37"></span>    <span class="ID">Q</span>.<span class="ID">setdiag</span>( -<span class="ID">Q</span>*<span class="ID">ones</span>(<span class="ID">size</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_38">  38</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_38"></span><span class="anchor" id="line-38"></span>    <span class="Comment"># Compute a suitable stochastic matrix by means of uniformization</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_39">  39</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_39"></span><span class="anchor" id="line-39"></span>    <span class="ID">l</span> = <span class="ResWord">min</span>(<span class="ID">Q</span>.<span class="ID">values</span>())*<span class="Number">1.001</span>  <span class="Comment"># avoid periodicity, see trivedi's book</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_40">  40</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_40"></span><span class="anchor" id="line-40"></span>    <span class="ID">P</span> = <span class="ID">sp</span>.<span class="ID">speye</span>(<span class="ID">size</span>, <span class="ID">size</span>) - <span class="ID">Q</span>/<span class="ID">l</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_41">  41</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_41"></span><span class="anchor" id="line-41"></span>    <span class="Comment"># compute Pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_42">  42</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_42"></span><span class="anchor" id="line-42"></span>    <span class="ID">P</span> =  <span class="ID">P</span>.<span class="ID">tocsr</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_43">  43</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_43"></span><span class="anchor" id="line-43"></span>    <span class="ID">pi</span> = <span class="ID">zeros</span>(<span class="ID">size</span>);  <span class="ID">pi1</span> = <span class="ID">zeros</span>(<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_44">  44</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_44"></span><span class="anchor" id="line-44"></span>    <span class="ID">pi</span>[<span class="Number">0</span>] = <span class="Number">1</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_45">  45</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_45"></span><span class="anchor" id="line-45"></span>    <span class="ID">n</span> = <span class="ID">norm</span>(<span class="ID">pi</span> - <span class="ID">pi1</span>,<span class="Number">1</span>); <span class="ID">i</span> = <span class="Number">0</span>; </span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_46">  46</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_46"></span><span class="anchor" id="line-46"></span>    <span class="ResWord">while</span> <span class="ID">n</span> &gt; <span class="Number">1e-3</span> <span class="ResWord">and</span> <span class="ID">i</span> &lt; <span class="Number">1e5</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_47">  47</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_47"></span><span class="anchor" id="line-47"></span>        <span class="ID">pi1</span> = <span class="ID">pi</span>*<span class="ID">P</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_48">  48</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_48"></span><span class="anchor" id="line-48"></span>        <span class="ID">pi</span> = <span class="ID">pi1</span>*<span class="ID">P</span>   <span class="Comment"># avoid copying pi1 to pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_49">  49</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_49"></span><span class="anchor" id="line-49"></span>        <span class="ID">n</span> = <span class="ID">norm</span>(<span class="ID">pi</span> - <span class="ID">pi1</span>,<span class="Number">1</span>); <span class="ID">i</span> += <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_50">  50</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_50"></span><span class="anchor" id="line-50"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Method 1: </span><span class="String">&quot;</span>, <span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">e0</span>, <span class="ID">i</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_51">  51</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_51"></span><span class="anchor" id="line-51"></span>    <span class="ResWord">return</span> <span class="ID">pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_52">  52</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_52"></span><span class="anchor" id="line-52"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_53">  53</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_53"></span><span class="anchor" id="line-53"></span><span class="ResWord">def</span> <span class="ID">computePiMethod2</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_54">  54</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_54"></span><span class="anchor" id="line-54"></span>    <span class="ID">e0</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_55">  55</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_55"></span><span class="anchor" id="line-55"></span>    <span class="ID">Q</span> = <span class="ID">pysparse</span>.<span class="ID">spmatrix</span>.<span class="ID">ll_mat</span>(<span class="ID">size</span>,<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_56">  56</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_56"></span><span class="anchor" id="line-56"></span>    <span class="ID">fillOffDiagonal</span>(<span class="ID">Q</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_57">  57</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_57"></span><span class="anchor" id="line-57"></span>    <span class="Comment"># fill diagonal</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_58">  58</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_58"></span><span class="anchor" id="line-58"></span>    <span class="ID">x</span> =  <span class="ID">empty</span>(<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_59">  59</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_59"></span><span class="anchor" id="line-59"></span>    <span class="ID">Q</span>.<span class="ID">matvec</span>(<span class="ID">ones</span>(<span class="ID">size</span>),<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_60">  60</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_60"></span><span class="anchor" id="line-60"></span>    <span class="ID">Q</span>.<span class="ID">put</span>(-<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_61">  61</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_61"></span><span class="anchor" id="line-61"></span>    <span class="Comment"># uniformize </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_62">  62</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_62"></span><span class="anchor" id="line-62"></span>    <span class="ID">l</span> = <span class="ResWord">min</span>(<span class="ID">Q</span>.<span class="ID">values</span>())*<span class="Number">1.001</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_63">  63</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_63"></span><span class="anchor" id="line-63"></span>    <span class="ID">P</span> = <span class="ID">pysparse</span>.<span class="ID">spmatrix</span>.<span class="ID">ll_mat</span>(<span class="ID">size</span>,<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_64">  64</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_64"></span><span class="anchor" id="line-64"></span>    <span class="ID">P</span>.<span class="ID">put</span>(<span class="ID">ones</span>(<span class="ID">size</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_65">  65</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_65"></span><span class="anchor" id="line-65"></span>    <span class="ID">P</span>.<span class="ID">shift</span>(-<span class="Number">1.</span>/<span class="ID">l</span>, <span class="ID">Q</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_66">  66</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_66"></span><span class="anchor" id="line-66"></span>    <span class="Comment"># Compute pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_67">  67</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_67"></span><span class="anchor" id="line-67"></span>    <span class="ID">P</span> = <span class="ID">P</span>.<span class="ID">to_csr</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_68">  68</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_68"></span><span class="anchor" id="line-68"></span>    <span class="ID">pi</span> = <span class="ID">zeros</span>(<span class="ID">size</span>);  <span class="ID">pi1</span> = <span class="ID">zeros</span>(<span class="ID">size</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_69">  69</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_69"></span><span class="anchor" id="line-69"></span>    <span class="ID">pi</span>[<span class="Number">0</span>] = <span class="Number">1</span>;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_70">  70</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_70"></span><span class="anchor" id="line-70"></span>    <span class="ID">n</span> = <span class="ID">norm</span>(<span class="ID">pi</span> - <span class="ID">pi1</span>,<span class="Number">1</span>); <span class="ID">i</span> = <span class="Number">0</span>; </span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_71">  71</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_71"></span><span class="anchor" id="line-71"></span>    <span class="ResWord">while</span> <span class="ID">n</span> &gt; <span class="Number">1e-3</span> <span class="ResWord">and</span> <span class="ID">i</span> &lt; <span class="Number">1e5</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_72">  72</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_72"></span><span class="anchor" id="line-72"></span>        <span class="ID">P</span>.<span class="ID">matvec_transp</span>(<span class="ID">pi</span>,<span class="ID">pi1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_73">  73</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_73"></span><span class="anchor" id="line-73"></span>        <span class="ID">P</span>.<span class="ID">matvec_transp</span>(<span class="ID">pi1</span>,<span class="ID">pi</span>) </span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_74">  74</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_74"></span><span class="anchor" id="line-74"></span>        <span class="ID">n</span> = <span class="ID">norm</span>(<span class="ID">pi</span> - <span class="ID">pi1</span>,<span class="Number">1</span>); <span class="ID">i</span> += <span class="Number">1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_75">  75</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_75"></span><span class="anchor" id="line-75"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Method 2: </span><span class="String">&quot;</span>, <span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">e0</span>, <span class="ID">i</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_76">  76</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_76"></span><span class="anchor" id="line-76"></span>    <span class="ResWord">return</span> <span class="ID">pi</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_77">  77</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_77"></span><span class="anchor" id="line-77"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_78">  78</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_78"></span><span class="anchor" id="line-78"></span><span class="ResWord">def</span> <span class="ID">plotPi</span>(<span class="ID">pi</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_79">  79</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_79"></span><span class="anchor" id="line-79"></span>    <span class="ID">pi</span> = <span class="ID">pi</span>.<span class="ID">reshape</span>(<span class="ID">N2</span>,<span class="ID">N1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_80">  80</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_80"></span><span class="anchor" id="line-80"></span>    <span class="ID">matshow</span>(<span class="ID">pi</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_81">  81</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_81"></span><span class="anchor" id="line-81"></span>    <span class="ID">savefig</span>(<span class="String">&quot;</span><span class="String">pi.png</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_82">  82</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_82"></span><span class="anchor" id="line-82"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_83">  83</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_83"></span><span class="anchor" id="line-83"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_84">  84</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_84"></span><span class="anchor" id="line-84"></span>    <span class="ID">pi</span> = <span class="ID">computePiMethod1</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_85">  85</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_85"></span><span class="anchor" id="line-85"></span>    <span class="ID">pi</span> = <span class="ID">computePiMethod2</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-e06b965da0abb22e286f0abf31d0231f435c77b6_86">  86</a> </span><span class="LineAnchor" id="CA-e06b965da0abb22e286f0abf31d0231f435c77b6_86"></span><span class="anchor" id="line-86"></span>    <span class="ID">plotPi</span>(<span class="ID">pi</span>)</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="tandemqueue.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056328019.f8980a0431bed74b99054cccb5a5038ab302a3be">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="pi03f4.png?action=AttachFile&amp;do=get&amp;target=pi.png">get</a>&nbsp;| <a href="Solving_Large_Markov_Chains8b73.html?action=AttachFile&amp;do=view&amp;target=pi.png">view</a>] (2008-12-28 20:50:47, 11.3 KB) [[attachment:pi.png]]</li><li>[<a href="tandemqueue438c.py?action=AttachFile&amp;do=get&amp;target=tandemqueue.py">get</a>&nbsp;| <a href="Solving_Large_Markov_Chainsb8ee.html?action=AttachFile&amp;do=view&amp;target=tandemqueue.py">view</a>] (2008-12-28 21:32:16, 2.1 KB) [[attachment:tandemqueue.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Solving_Large_Markov_Chains37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Solving_Large_Markov_Chains">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Solving_Large_Markov_Chains?action=AttachFile&do=view&target=tandemqueue.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:57:15 GMT -->
+</html>
+

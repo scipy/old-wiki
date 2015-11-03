@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/KDTree by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:08:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/KDTree - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/KDTree" href="../../external.html?link=http://localhost:8080/Cookbook/KDTree?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FKDTree&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/KDTree?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/KDTree?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/KDTree">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="KDTree456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="KDTree33c1.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FKDTree%22" rel="nofollow" title="Click to do a full-text search for this title">KDTree</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="KDTree.html">Cookbook/KDTree</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="KDTree37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/KDTree">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><strong>'Note: there is an implementation of a kdtree in scipy: <a class="http" href="../../external.html?link=http://docs.scipy.org/scipy/docs/scipy.spatial.kdtree.KDTree/">http://docs.scipy.org/scipy/docs/scipy.spatial.kdtree.KDTree/</a> It is recommended to use that instead of the below.</strong>' <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">This is an example of how to construct and search a <a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Kd-tree">kd-tree</a> in <a class="http" href="../../external.html?link=http://www.python.org/">Python</a>with <a class="nonexistent" href="../NumPy.html">NumPy</a>. kd-trees are e.g. used to search for neighbouring data points in multidimensional space. Searching the kd-tree for the nearest neighbour of all n points has O(n log n) complexity with respect to sample size. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867">
+<h3 id="Building_a_kd-tree">Building a kd-tree</h3>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-94944acde36b67f16674964425b0795dc382dd62" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment"># Copyleft 2008 Sturla Molden</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="Comment"># University of Oslo</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="Comment">#import psyco</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="Comment">#psyco.full()</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ResWord">def</span> <span class="ID">kdtree</span>( <span class="ID">data</span>, <span class="ID">leafsize</span>=<span class="Number">10</span> ):</span>
+<span class="line"><span class="anchor" id="line-10-1"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="String">    build a kd-tree for O(n log n) nearest neighbour search</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-13-1"></span><span class="String">    input:</span></span>
+<span class="line"><span class="anchor" id="line-14-1"></span><span class="String">        data:       2D ndarray, shape =(ndim,ndata), preferentially C order</span></span>
+<span class="line"><span class="anchor" id="line-15-1"></span><span class="String">        leafsize:   max. number of data points to leave in a leaf</span></span>
+<span class="line"><span class="anchor" id="line-16-1"></span><span class="String"></span></span>
+<span class="line"><span class="anchor" id="line-17-1"></span><span class="String">    output:</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span><span class="String">        kd-tree:    list of tuples</span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-21-1"></span>    <span class="ID">ndim</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-22-1"></span>    <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-23-1"></span></span>
+<span class="line"><span class="anchor" id="line-24-1"></span>    <span class="Comment"># find bounding hyper-rectangle</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span>    <span class="ID">hrect</span> = <span class="ID">numpy</span>.<span class="ID">zeros</span>((<span class="Number">2</span>,<span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]))</span>
+<span class="line"><span class="anchor" id="line-26-1"></span>    <span class="ID">hrect</span>[<span class="Number">0</span>,:] = <span class="ID">data</span>.<span class="ID">min</span>(<span class="ID">axis</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-27-1"></span>    <span class="ID">hrect</span>[<span class="Number">1</span>,:] = <span class="ID">data</span>.<span class="ID">max</span>(<span class="ID">axis</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-28-1"></span></span>
+<span class="line"><span class="anchor" id="line-29-1"></span>    <span class="Comment"># create root of kd-tree</span></span>
+<span class="line"><span class="anchor" id="line-30-1"></span>    <span class="ID">idx</span> = <span class="ID">numpy</span>.<span class="ID">argsort</span>(<span class="ID">data</span>[<span class="Number">0</span>,:], <span class="ID">kind</span>=<span class="String">'</span><span class="String">mergesort</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-31-1"></span>    <span class="ID">data</span>[:,:] = <span class="ID">data</span>[:,<span class="ID">idx</span>]</span>
+<span class="line"><span class="anchor" id="line-32-1"></span>    <span class="ID">splitval</span> = <span class="ID">data</span>[<span class="Number">0</span>,<span class="ID">ndata</span>/<span class="Number">2</span>]</span>
+<span class="line"><span class="anchor" id="line-33-1"></span></span>
+<span class="line"><span class="anchor" id="line-34-1"></span>    <span class="ID">left_hrect</span> = <span class="ID">hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-35-1"></span>    <span class="ID">right_hrect</span> = <span class="ID">hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-36-1"></span>    <span class="ID">left_hrect</span>[<span class="Number">1</span>, <span class="Number">0</span>] = <span class="ID">splitval</span></span>
+<span class="line"><span class="anchor" id="line-37-1"></span>    <span class="ID">right_hrect</span>[<span class="Number">0</span>, <span class="Number">0</span>] = <span class="ID">splitval</span></span>
+<span class="line"><span class="anchor" id="line-38-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-39-1"></span>    <span class="ID">tree</span> = [(<span class="ResWord">None</span>, <span class="ResWord">None</span>, <span class="ID">left_hrect</span>, <span class="ID">right_hrect</span>, <span class="ResWord">None</span>, <span class="ResWord">None</span>)]</span>
+<span class="line"><span class="anchor" id="line-40-1"></span>    </span>
+<span class="line"><span class="anchor" id="line-41-1"></span>    <span class="ID">stack</span> = [(<span class="ID">data</span>[:,:<span class="ID">ndata</span>/<span class="Number">2</span>], <span class="ID">idx</span>[:<span class="ID">ndata</span>/<span class="Number">2</span>], <span class="Number">1</span>, <span class="Number">0</span>, <span class="ResWord">True</span>),</span>
+<span class="line"><span class="anchor" id="line-42-1"></span>             (<span class="ID">data</span>[:,<span class="ID">ndata</span>/<span class="Number">2</span>:], <span class="ID">idx</span>[<span class="ID">ndata</span>/<span class="Number">2</span>:], <span class="Number">1</span>, <span class="Number">0</span>, <span class="ResWord">False</span>)]</span>
+<span class="line"><span class="anchor" id="line-43-1"></span></span>
+<span class="line"><span class="anchor" id="line-44-1"></span>    <span class="Comment"># recursively split data in halves using hyper-rectangles:</span></span>
+<span class="line"><span class="anchor" id="line-45-1"></span>    <span class="ResWord">while</span> <span class="ID">stack</span>:</span>
+<span class="line"><span class="anchor" id="line-46-1"></span>        </span>
+<span class="line"><span class="anchor" id="line-47-1"></span>        <span class="Comment"># pop data off stack</span></span>
+<span class="line"><span class="anchor" id="line-48-1"></span>        <span class="ID">data</span>, <span class="ID">didx</span>, <span class="ID">depth</span>, <span class="ID">parent</span>, <span class="ID">leftbranch</span> = <span class="ID">stack</span>.<span class="ID">pop</span>()</span>
+<span class="line"><span class="anchor" id="line-49-1"></span>        <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-50-1"></span>        <span class="ID">nodeptr</span> = <span class="ResWord">len</span>(<span class="ID">tree</span>)</span>
+<span class="line"><span class="anchor" id="line-51-1"></span></span>
+<span class="line"><span class="anchor" id="line-52-1"></span>        <span class="Comment"># update parent node</span></span>
+<span class="line"><span class="anchor" id="line-53-1"></span></span>
+<span class="line"><span class="anchor" id="line-54-1"></span>        <span class="ID">_didx</span>, <span class="ID">_data</span>, <span class="ID">_left_hrect</span>, <span class="ID">_right_hrect</span>, <span class="ID">left</span>, <span class="ID">right</span> = <span class="ID">tree</span>[<span class="ID">parent</span>]</span>
+<span class="line"><span class="anchor" id="line-55-1"></span>        </span>
+<span class="line"><span class="anchor" id="line-56-1"></span>        <span class="ID">tree</span>[<span class="ID">parent</span>] = (<span class="ID">_didx</span>, <span class="ID">_data</span>, <span class="ID">_left_hrect</span>, <span class="ID">_right_hrect</span>, <span class="ID">nodeptr</span>, <span class="ID">right</span>) <span class="ResWord">if</span> <span class="ID">leftbranch</span> \</span>
+<span class="line"><span class="anchor" id="line-57-1"></span>            <span class="ResWord">else</span> (<span class="ID">_didx</span>, <span class="ID">_data</span>, <span class="ID">_left_hrect</span>, <span class="ID">_right_hrect</span>, <span class="ID">left</span>, <span class="ID">nodeptr</span>)</span>
+<span class="line"><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="anchor" id="line-59-1"></span>        <span class="Comment"># insert node in kd-tree</span></span>
+<span class="line"><span class="anchor" id="line-60-1"></span></span>
+<span class="line"><span class="anchor" id="line-61-1"></span>        <span class="Comment"># leaf node?</span></span>
+<span class="line"><span class="anchor" id="line-62-1"></span>        <span class="ResWord">if</span> <span class="ID">ndata</span> &lt;= <span class="ID">leafsize</span>:</span>
+<span class="line"><span class="anchor" id="line-63-1"></span>            <span class="ID">_didx</span> = <span class="ID">didx</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-64-1"></span>            <span class="ID">_data</span> = <span class="ID">data</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-65-1"></span>            <span class="ID">leaf</span> = (<span class="ID">_didx</span>, <span class="ID">_data</span>, <span class="ResWord">None</span>, <span class="ResWord">None</span>, <span class="Number">0</span>, <span class="Number">0</span>)</span>
+<span class="line"><span class="anchor" id="line-66-1"></span>            <span class="ID">tree</span>.<span class="ID">append</span>(<span class="ID">leaf</span>)</span>
+<span class="line"><span class="anchor" id="line-67-1"></span></span>
+<span class="line"><span class="anchor" id="line-68-1"></span>        <span class="Comment"># not a leaf, split the data in two      </span></span>
+<span class="line"><span class="anchor" id="line-69-1"></span>        <span class="ResWord">else</span>:                  </span>
+<span class="line"><span class="anchor" id="line-70-1"></span>            <span class="ID">splitdim</span> = <span class="ID">depth</span> % <span class="ID">ndim</span></span>
+<span class="line"><span class="anchor" id="line-71-1"></span>            <span class="ID">idx</span> = <span class="ID">numpy</span>.<span class="ID">argsort</span>(<span class="ID">data</span>[<span class="ID">splitdim</span>,:], <span class="ID">kind</span>=<span class="String">'</span><span class="String">mergesort</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-72-1"></span>            <span class="ID">data</span>[:,:] = <span class="ID">data</span>[:,<span class="ID">idx</span>]</span>
+<span class="line"><span class="anchor" id="line-73-1"></span>            <span class="ID">didx</span> = <span class="ID">didx</span>[<span class="ID">idx</span>]</span>
+<span class="line"><span class="anchor" id="line-74-1"></span>            <span class="ID">nodeptr</span> = <span class="ResWord">len</span>(<span class="ID">tree</span>)</span>
+<span class="line"><span class="anchor" id="line-75-1"></span>            <span class="ID">stack</span>.<span class="ID">append</span>((<span class="ID">data</span>[:,:<span class="ID">ndata</span>/<span class="Number">2</span>], <span class="ID">didx</span>[:<span class="ID">ndata</span>/<span class="Number">2</span>], <span class="ID">depth</span>+<span class="Number">1</span>, <span class="ID">nodeptr</span>, <span class="ResWord">True</span>))</span>
+<span class="line"><span class="anchor" id="line-76-1"></span>            <span class="ID">stack</span>.<span class="ID">append</span>((<span class="ID">data</span>[:,<span class="ID">ndata</span>/<span class="Number">2</span>:], <span class="ID">didx</span>[<span class="ID">ndata</span>/<span class="Number">2</span>:], <span class="ID">depth</span>+<span class="Number">1</span>, <span class="ID">nodeptr</span>, <span class="ResWord">False</span>))</span>
+<span class="line"><span class="anchor" id="line-77-1"></span>            <span class="ID">splitval</span> = <span class="ID">data</span>[<span class="ID">splitdim</span>,<span class="ID">ndata</span>/<span class="Number">2</span>]</span>
+<span class="line"><span class="anchor" id="line-78-1"></span>            <span class="ResWord">if</span> <span class="ID">leftbranch</span>:</span>
+<span class="line"><span class="anchor" id="line-79-1"></span>                <span class="ID">left_hrect</span> = <span class="ID">_left_hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-80-1"></span>                <span class="ID">right_hrect</span> = <span class="ID">_left_hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-81-1"></span>            <span class="ResWord">else</span>:</span>
+<span class="line"><span class="anchor" id="line-82-1"></span>                <span class="ID">left_hrect</span> = <span class="ID">_right_hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-83-1"></span>                <span class="ID">right_hrect</span> = <span class="ID">_right_hrect</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-84-1"></span>            <span class="ID">left_hrect</span>[<span class="Number">1</span>, <span class="ID">splitdim</span>] = <span class="ID">splitval</span></span>
+<span class="line"><span class="anchor" id="line-85-1"></span>            <span class="ID">right_hrect</span>[<span class="Number">0</span>, <span class="ID">splitdim</span>] = <span class="ID">splitval</span></span>
+<span class="line"><span class="anchor" id="line-86-1"></span>            <span class="Comment"># append node to tree</span></span>
+<span class="line"><span class="anchor" id="line-87-1"></span>            <span class="ID">tree</span>.<span class="ID">append</span>((<span class="ResWord">None</span>, <span class="ResWord">None</span>, <span class="ID">left_hrect</span>, <span class="ID">right_hrect</span>, <span class="ResWord">None</span>, <span class="ResWord">None</span>))</span>
+<span class="line"><span class="anchor" id="line-88-1"></span></span>
+<span class="line"><span class="anchor" id="line-89-1"></span>    <span class="ResWord">return</span> <span class="ID">tree</span></span>
+</pre></div></div><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><p class="line867">
+<h3 id="Searching_a_kd-tree">Searching a kd-tree</h3>
+<span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><p class="line867"><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-35f7060bb48d7ddca8f85e2b4809c5181db7a8b4" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span>    </span>
+<span class="line"><span class="anchor" id="line-2-2"></span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ResWord">def</span> <span class="ID">intersect</span>(<span class="ID">hrect</span>, <span class="ID">r2</span>, <span class="ID">centroid</span>):</span>
+<span class="line"><span class="anchor" id="line-4-2"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="String">    checks if the hyperrectangle hrect intersects with the</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="String">    hypersphere defined by centroid and r2</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span>    <span class="ID">maxval</span> = <span class="ID">hrect</span>[<span class="Number">1</span>,:]</span>
+<span class="line"><span class="anchor" id="line-9-2"></span>    <span class="ID">minval</span> = <span class="ID">hrect</span>[<span class="Number">0</span>,:]</span>
+<span class="line"><span class="anchor" id="line-10-2"></span>    <span class="ID">p</span> = <span class="ID">centroid</span>.<span class="ID">copy</span>()</span>
+<span class="line"><span class="anchor" id="line-11-2"></span>    <span class="ID">idx</span> = <span class="ID">p</span> &lt; <span class="ID">minval</span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span>    <span class="ID">p</span>[<span class="ID">idx</span>] = <span class="ID">minval</span>[<span class="ID">idx</span>]</span>
+<span class="line"><span class="anchor" id="line-13-2"></span>    <span class="ID">idx</span> = <span class="ID">p</span> &gt; <span class="ID">maxval</span></span>
+<span class="line"><span class="anchor" id="line-14-2"></span>    <span class="ID">p</span>[<span class="ID">idx</span>] = <span class="ID">maxval</span>[<span class="ID">idx</span>]</span>
+<span class="line"><span class="anchor" id="line-15-2"></span>    <span class="ResWord">return</span> ((<span class="ID">p</span>-<span class="ID">centroid</span>)**<span class="Number">2</span>).<span class="ID">sum</span>() &lt; <span class="ID">r2</span></span>
+<span class="line"><span class="anchor" id="line-16-2"></span></span>
+<span class="line"><span class="anchor" id="line-17-2"></span></span>
+<span class="line"><span class="anchor" id="line-18-2"></span><span class="ResWord">def</span> <span class="ID">quadratic_knn_search</span>(<span class="ID">data</span>, <span class="ID">lidx</span>, <span class="ID">ldata</span>, <span class="ID">K</span>):</span>
+<span class="line"><span class="anchor" id="line-19-2"></span>    <span class="String">&quot;&quot;&quot; find K nearest neighbours of data among ldata &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span>    <span class="ID">ndata</span> = <span class="ID">ldata</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-21-2"></span>    <span class="ID">param</span> = <span class="ID">ldata</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-22-2"></span>    <span class="ID">K</span> = <span class="ID">K</span> <span class="ResWord">if</span> <span class="ID">K</span> &lt; <span class="ID">ndata</span> <span class="ResWord">else</span> <span class="ID">ndata</span></span>
+<span class="line"><span class="anchor" id="line-23-2"></span>    <span class="ID">retval</span> = []</span>
+<span class="line"><span class="anchor" id="line-24-2"></span>    <span class="ID">sqd</span> = ((<span class="ID">ldata</span> - <span class="ID">data</span>[:,:<span class="ID">ndata</span>])**<span class="Number">2</span>).<span class="ID">sum</span>(<span class="ID">axis</span>=<span class="Number">0</span>) <span class="Comment"># data.reshape((param,1)).repeat(ndata, axis=1);</span></span>
+<span class="line"><span class="anchor" id="line-25-2"></span>    <span class="ID">idx</span> = <span class="ID">numpy</span>.<span class="ID">argsort</span>(<span class="ID">sqd</span>, <span class="ID">kind</span>=<span class="String">'</span><span class="String">mergesort</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-26-2"></span>    <span class="ID">idx</span> = <span class="ID">idx</span>[:<span class="ID">K</span>]</span>
+<span class="line"><span class="anchor" id="line-27-2"></span>    <span class="ResWord">return</span> <span class="ResWord">zip</span>(<span class="ID">sqd</span>[<span class="ID">idx</span>], <span class="ID">lidx</span>[<span class="ID">idx</span>])</span>
+<span class="line"><span class="anchor" id="line-28-2"></span></span>
+<span class="line"><span class="anchor" id="line-29-2"></span></span>
+<span class="line"><span class="anchor" id="line-30-2"></span><span class="ResWord">def</span> <span class="ID">search_kdtree</span>(<span class="ID">tree</span>, <span class="ID">datapoint</span>, <span class="ID">K</span>):</span>
+<span class="line"><span class="anchor" id="line-31-2"></span>    <span class="String">&quot;&quot;&quot; find the k nearest neighbours of datapoint in a kdtree &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-32-2"></span>    <span class="ID">stack</span> = [<span class="ID">tree</span>[<span class="Number">0</span>]]</span>
+<span class="line"><span class="anchor" id="line-33-2"></span>    <span class="ID">knn</span> = [(<span class="ID">numpy</span>.<span class="ID">inf</span>, <span class="ResWord">None</span>)]*<span class="ID">K</span></span>
+<span class="line"><span class="anchor" id="line-34-2"></span>    <span class="ID">_datapt</span> = <span class="ID">datapoint</span>[:,<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-35-2"></span>    <span class="ResWord">while</span> <span class="ID">stack</span>:</span>
+<span class="line"><span class="anchor" id="line-36-2"></span>        </span>
+<span class="line"><span class="anchor" id="line-37-2"></span>        <span class="ID">leaf_idx</span>, <span class="ID">leaf_data</span>, <span class="ID">left_hrect</span>, \</span>
+<span class="line"><span class="anchor" id="line-38-2"></span>                  <span class="ID">right_hrect</span>, <span class="ID">left</span>, <span class="ID">right</span> = <span class="ID">stack</span>.<span class="ID">pop</span>()</span>
+<span class="line"><span class="anchor" id="line-39-2"></span></span>
+<span class="line"><span class="anchor" id="line-40-2"></span>        <span class="Comment"># leaf</span></span>
+<span class="line"><span class="anchor" id="line-41-2"></span>        <span class="ResWord">if</span> <span class="ID">leaf_idx</span> <span class="ResWord">is</span> <span class="ResWord">not</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="anchor" id="line-42-2"></span>            <span class="ID">_knn</span> = <span class="ID">quadratic_knn_search</span>(<span class="ID">datapoint</span>, <span class="ID">leaf_idx</span>, <span class="ID">leaf_data</span>, <span class="ID">K</span>)</span>
+<span class="line"><span class="anchor" id="line-43-2"></span>            <span class="ResWord">if</span> <span class="ID">_knn</span>[<span class="Number">0</span>][<span class="Number">0</span>] &lt; <span class="ID">knn</span>[-<span class="Number">1</span>][<span class="Number">0</span>]:</span>
+<span class="line"><span class="anchor" id="line-44-2"></span>                <span class="ID">knn</span> = <span class="ResWord">sorted</span>(<span class="ID">knn</span> + <span class="ID">_knn</span>)[:<span class="ID">K</span>]</span>
+<span class="line"><span class="anchor" id="line-45-2"></span></span>
+<span class="line"><span class="anchor" id="line-46-2"></span>        <span class="Comment"># not a leaf</span></span>
+<span class="line"><span class="anchor" id="line-47-2"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="anchor" id="line-48-2"></span></span>
+<span class="line"><span class="anchor" id="line-49-2"></span>            <span class="Comment"># check left branch</span></span>
+<span class="line"><span class="anchor" id="line-50-2"></span>            <span class="ResWord">if</span> <span class="ID">intersect</span>(<span class="ID">left_hrect</span>, <span class="ID">knn</span>[-<span class="Number">1</span>][<span class="Number">0</span>], <span class="ID">_datapt</span>):</span>
+<span class="line"><span class="anchor" id="line-51-2"></span>                <span class="ID">stack</span>.<span class="ID">append</span>(<span class="ID">tree</span>[<span class="ID">left</span>])</span>
+<span class="line"><span class="anchor" id="line-52-2"></span></span>
+<span class="line"><span class="anchor" id="line-53-2"></span>            <span class="Comment"># chech right branch</span></span>
+<span class="line"><span class="anchor" id="line-54-2"></span>            <span class="ResWord">if</span> <span class="ID">intersect</span>(<span class="ID">right_hrect</span>, <span class="ID">knn</span>[-<span class="Number">1</span>][<span class="Number">0</span>], <span class="ID">_datapt</span>):</span>
+<span class="line"><span class="anchor" id="line-55-2"></span>                <span class="ID">stack</span>.<span class="ID">append</span>(<span class="ID">tree</span>[<span class="ID">right</span>])              </span>
+<span class="line"><span class="anchor" id="line-56-2"></span>    <span class="ResWord">return</span> <span class="ID">knn</span></span>
+<span class="line"><span class="anchor" id="line-57-2"></span></span>
+<span class="line"><span class="anchor" id="line-58-2"></span></span>
+<span class="line"><span class="anchor" id="line-59-2"></span><span class="ResWord">def</span> <span class="ID">knn_search</span>( <span class="ID">data</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>=<span class="Number">2048</span> ):</span>
+<span class="line"><span class="anchor" id="line-60-2"></span></span>
+<span class="line"><span class="anchor" id="line-61-2"></span>    <span class="String">&quot;&quot;&quot; find the K nearest neighbours for data points in data,</span></span>
+<span class="line"><span class="anchor" id="line-62-2"></span><span class="String">        using an O(n log n) kd-tree &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-63-2"></span></span>
+<span class="line"><span class="anchor" id="line-64-2"></span>    <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-65-2"></span>    <span class="ID">param</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-66-2"></span>    </span>
+<span class="line"><span class="anchor" id="line-67-2"></span>    <span class="Comment"># build kdtree</span></span>
+<span class="line"><span class="anchor" id="line-68-2"></span>    <span class="ID">tree</span> = <span class="ID">kdtree</span>(<span class="ID">data</span>.<span class="ID">copy</span>(), <span class="ID">leafsize</span>=<span class="ID">leafsize</span>)</span>
+<span class="line"><span class="anchor" id="line-69-2"></span>   </span>
+<span class="line"><span class="anchor" id="line-70-2"></span>    <span class="Comment"># search kdtree</span></span>
+<span class="line"><span class="anchor" id="line-71-2"></span>    <span class="ID">knn</span> = []</span>
+<span class="line"><span class="anchor" id="line-72-2"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="ID">ndata</span>):</span>
+<span class="line"><span class="anchor" id="line-73-2"></span>        <span class="ID">_data</span> = <span class="ID">data</span>[:,<span class="ID">i</span>].<span class="ID">reshape</span>((<span class="ID">param</span>,<span class="Number">1</span>)).<span class="ID">repeat</span>(<span class="ID">leafsize</span>, <span class="ID">axis</span>=<span class="Number">1</span>);</span>
+<span class="line"><span class="anchor" id="line-74-2"></span>        <span class="ID">_knn</span> = <span class="ID">search_kdtree</span>(<span class="ID">tree</span>, <span class="ID">_data</span>, <span class="ID">K</span>+<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-75-2"></span>        <span class="ID">knn</span>.<span class="ID">append</span>(<span class="ID">_knn</span>[<span class="Number">1</span>:])</span>
+<span class="line"><span class="anchor" id="line-76-2"></span></span>
+<span class="line"><span class="anchor" id="line-77-2"></span>    <span class="ResWord">return</span> <span class="ID">knn</span></span>
+<span class="line"><span class="anchor" id="line-78-2"></span></span>
+<span class="line"><span class="anchor" id="line-79-2"></span></span>
+<span class="line"><span class="anchor" id="line-80-2"></span><span class="ResWord">def</span> <span class="ID">radius_search</span>(<span class="ID">tree</span>, <span class="ID">datapoint</span>, <span class="ID">radius</span>):</span>
+<span class="line"><span class="anchor" id="line-81-2"></span>    <span class="String">&quot;&quot;&quot; find all points within radius of datapoint &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-82-2"></span>    <span class="ID">stack</span> = [<span class="ID">tree</span>[<span class="Number">0</span>]]</span>
+<span class="line"><span class="anchor" id="line-83-2"></span>    <span class="ID">inside</span> = []</span>
+<span class="line"><span class="anchor" id="line-84-2"></span>    <span class="ResWord">while</span> <span class="ID">stack</span>:</span>
+<span class="line"><span class="anchor" id="line-85-2"></span></span>
+<span class="line"><span class="anchor" id="line-86-2"></span>        <span class="ID">leaf_idx</span>, <span class="ID">leaf_data</span>, <span class="ID">left_hrect</span>, \</span>
+<span class="line"><span class="anchor" id="line-87-2"></span>                  <span class="ID">right_hrect</span>, <span class="ID">left</span>, <span class="ID">right</span> = <span class="ID">stack</span>.<span class="ID">pop</span>()</span>
+<span class="line"><span class="anchor" id="line-88-2"></span></span>
+<span class="line"><span class="anchor" id="line-89-2"></span>        <span class="Comment"># leaf</span></span>
+<span class="line"><span class="anchor" id="line-90-1"></span>        <span class="ResWord">if</span> <span class="ID">leaf_idx</span> <span class="ResWord">is</span> <span class="ResWord">not</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="anchor" id="line-91-1"></span>            <span class="ID">param</span>=<span class="ID">leaf_data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-92-1"></span>            <span class="ID">distance</span> = <span class="ID">numpy</span>.<span class="ID">sqrt</span>(((<span class="ID">leaf_data</span> - <span class="ID">datapoint</span>.<span class="ID">reshape</span>((<span class="ID">param</span>,<span class="Number">1</span>)))**<span class="Number">2</span>).<span class="ID">sum</span>(<span class="ID">axis</span>=<span class="Number">0</span>))</span>
+<span class="line"><span class="anchor" id="line-93-1"></span>            <span class="ID">near</span> = <span class="ID">numpy</span>.<span class="ID">where</span>(<span class="ID">distance</span>&lt;=<span class="ID">radius</span>)</span>
+<span class="line"><span class="anchor" id="line-94-1"></span>            <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">near</span>[<span class="Number">0</span>]):</span>
+<span class="line"><span class="anchor" id="line-95-1"></span>                <span class="ID">idx</span> = <span class="ID">leaf_idx</span>[<span class="ID">near</span>]</span>
+<span class="line"><span class="anchor" id="line-96-1"></span>                <span class="ID">distance</span> = <span class="ID">distance</span>[<span class="ID">near</span>]</span>
+<span class="line"><span class="anchor" id="line-97-1"></span>                <span class="ID">inside</span> += (<span class="ResWord">zip</span>(<span class="ID">distance</span>, <span class="ID">idx</span>))</span>
+<span class="line"><span class="anchor" id="line-98-1"></span></span>
+<span class="line"><span class="anchor" id="line-99-1"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="anchor" id="line-100-1"></span></span>
+<span class="line"><span class="anchor" id="line-101-1"></span>            <span class="ResWord">if</span> <span class="ID">intersect</span>(<span class="ID">left_hrect</span>, <span class="ID">radius</span>, <span class="ID">datapoint</span>):</span>
+<span class="line"><span class="anchor" id="line-102-1"></span>                <span class="ID">stack</span>.<span class="ID">append</span>(<span class="ID">tree</span>[<span class="ID">left</span>])</span>
+<span class="line"><span class="anchor" id="line-103-1"></span></span>
+<span class="line"><span class="anchor" id="line-104-1"></span>            <span class="ResWord">if</span> <span class="ID">intersect</span>(<span class="ID">right_hrect</span>, <span class="ID">radius</span>, <span class="ID">datapoint</span>):</span>
+<span class="line"><span class="anchor" id="line-105-1"></span>                <span class="ID">stack</span>.<span class="ID">append</span>(<span class="ID">tree</span>[<span class="ID">right</span>])</span>
+<span class="line"><span class="anchor" id="line-106-1"></span></span>
+<span class="line"><span class="anchor" id="line-107-1"></span>    <span class="ResWord">return</span> <span class="ID">inside</span></span>
+</pre></div></div><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><p class="line867">
+<h3 id="Quadratic_search_for_small_data_sets">Quadratic search for small data sets</h3>
+<span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><p class="line874">In contrast to the kd-tree, straight forward exhaustive search has quadratic complexity with respect to sample size. It can be faster than using a kd-tree when the sample size is very small. On my computer that is approximately 500 samples or less.  <span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><p class="line867"><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-fd6df42cfa484e95eabd88c60aefd9a7cc05b2b2" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="ResWord">def</span> <span class="ID">knn_search</span>( <span class="ID">data</span>, <span class="ID">K</span> ):</span>
+<span class="line"><span class="anchor" id="line-2-3"></span>    <span class="String">&quot;&quot;&quot; find the K nearest neighbours for data points in data,</span></span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="String">        using O(n**2) search &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-4-3"></span>    <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-5-3"></span>    <span class="ID">knn</span> = []</span>
+<span class="line"><span class="anchor" id="line-6-3"></span>    <span class="ID">idx</span> = <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="ID">ndata</span>)</span>
+<span class="line"><span class="anchor" id="line-7-3"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="ID">ndata</span>):</span>
+<span class="line"><span class="anchor" id="line-8-3"></span>        <span class="ID">_knn</span> = <span class="ID">quadratic_knn_search</span>(<span class="ID">data</span>[:,<span class="ID">i</span>], <span class="ID">idx</span>, <span class="ID">data</span>, <span class="ID">K</span>+<span class="Number">1</span>) <span class="Comment"># see above</span></span>
+<span class="line"><span class="anchor" id="line-9-3"></span>        <span class="ID">knn</span>.<span class="ID">append</span>( <span class="ID">_knn</span>[<span class="Number">1</span>:] )</span>
+<span class="line"><span class="anchor" id="line-10-3"></span>    <span class="ResWord">return</span> <span class="ID">knn</span></span>
+</pre></div></div><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><p class="line867">
+<h3 id="Parallel_search_for_large_data_sets">Parallel search for large data sets</h3>
+<span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><p class="line862">While creating a kd-tree is very fast, searching it can be time consuming. Due to Python's dreaded &quot;Global Interpreter Lock&quot; (GIL), threads cannot be used to conduct multiple searches in parallel. That is, Python threads can be used for asynchrony but not concurrency. However, we can use multiple processes (multiple interpreters). The <a class="http" href="../../external.html?link=http://pyprocessing.berlios.de/">pyprocessing</a> package makes this easy. It has an API similar to Python's threading and Queue standard modules, but work with processes instead of threads. Beginning with Python 2.6, pyprocessing is already included in Python's standard library as the &quot;multiprocessing&quot; module. There is a small overhead of using multiple processes, including process creation, process startup, IPC, and process termination. However, because processes run in separate address spaces, no memory contention is incurred. In the following example, the overhead of using multiple processes is very small compared to the computation, giving a speed-up close to the number of CPUs on the computer. <span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><p class="line867"><span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><span class="anchor" id="line-267"></span><span class="anchor" id="line-268"></span><span class="anchor" id="line-269"></span><span class="anchor" id="line-270"></span><span class="anchor" id="line-271"></span><span class="anchor" id="line-272"></span><span class="anchor" id="line-273"></span><span class="anchor" id="line-274"></span><span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span><span class="anchor" id="line-277"></span><span class="anchor" id="line-278"></span><span class="anchor" id="line-279"></span><span class="anchor" id="line-280"></span><span class="anchor" id="line-281"></span><span class="anchor" id="line-282"></span><span class="anchor" id="line-283"></span><span class="anchor" id="line-284"></span><span class="anchor" id="line-285"></span><span class="anchor" id="line-286"></span><span class="anchor" id="line-287"></span><span class="anchor" id="line-288"></span><span class="anchor" id="line-289"></span><span class="anchor" id="line-290"></span><span class="anchor" id="line-291"></span><span class="anchor" id="line-292"></span><span class="anchor" id="line-293"></span><span class="anchor" id="line-294"></span><span class="anchor" id="line-295"></span><span class="anchor" id="line-296"></span><span class="anchor" id="line-297"></span><span class="anchor" id="line-298"></span><span class="anchor" id="line-299"></span><span class="anchor" id="line-300"></span><span class="anchor" id="line-301"></span><span class="anchor" id="line-302"></span><span class="anchor" id="line-303"></span><span class="anchor" id="line-304"></span><span class="anchor" id="line-305"></span><span class="anchor" id="line-306"></span><span class="anchor" id="line-307"></span><span class="anchor" id="line-308"></span><span class="anchor" id="line-309"></span><span class="anchor" id="line-310"></span><span class="anchor" id="line-311"></span><span class="anchor" id="line-312"></span><span class="anchor" id="line-313"></span><span class="anchor" id="line-314"></span><span class="anchor" id="line-315"></span><span class="anchor" id="line-316"></span><span class="anchor" id="line-317"></span><span class="anchor" id="line-318"></span><span class="anchor" id="line-319"></span><span class="anchor" id="line-320"></span><span class="anchor" id="line-321"></span><span class="anchor" id="line-322"></span><span class="anchor" id="line-323"></span><span class="anchor" id="line-324"></span><span class="anchor" id="line-325"></span><span class="anchor" id="line-326"></span><span class="anchor" id="line-327"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-90e1ea77e78d268e21f2ae801c81e139c13a1689" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span><span class="ResWord">try</span>:</span>
+<span class="line"><span class="anchor" id="line-2-4"></span>    <span class="ResWord">import</span> <span class="ID">multiprocessing</span> <span class="ResWord">as</span> <span class="ID">processing</span></span>
+<span class="line"><span class="anchor" id="line-3-4"></span><span class="ResWord">except</span>:</span>
+<span class="line"><span class="anchor" id="line-4-4"></span>    <span class="ResWord">import</span> <span class="ID">processing</span></span>
+<span class="line"><span class="anchor" id="line-5-4"></span></span>
+<span class="line"><span class="anchor" id="line-6-4"></span><span class="ResWord">import</span> <span class="ID">ctypes</span>, <span class="ID">os</span></span>
+<span class="line"><span class="anchor" id="line-7-4"></span></span>
+<span class="line"><span class="anchor" id="line-8-4"></span><span class="ResWord">def</span> <span class="ID">__num_processors</span>():</span>
+<span class="line"><span class="anchor" id="line-9-4"></span>    <span class="ResWord">if</span> <span class="ID">os</span>.<span class="ID">name</span> == <span class="String">'</span><span class="String">nt</span><span class="String">'</span>: <span class="Comment"># Windows</span></span>
+<span class="line"><span class="anchor" id="line-10-4"></span>        <span class="ResWord">return</span> <span class="ResWord">int</span>(<span class="ID">os</span>.<span class="ID">getenv</span>(<span class="String">'</span><span class="String">NUMBER_OF_PROCESSORS</span><span class="String">'</span>))</span>
+<span class="line"><span class="anchor" id="line-11-3"></span>    <span class="ResWord">else</span>: <span class="Comment"># glibc (Linux, *BSD, Apple)</span></span>
+<span class="line"><span class="anchor" id="line-12-3"></span>        <span class="ID">get_nprocs</span> = <span class="ID">ctypes</span>.<span class="ID">cdll</span>.<span class="ID">libc</span>.<span class="ID">get_nprocs</span></span>
+<span class="line"><span class="anchor" id="line-13-3"></span>        <span class="ID">get_nprocs</span>.<span class="ID">restype</span> = <span class="ID">ctypes</span>.<span class="ID">c_int</span></span>
+<span class="line"><span class="anchor" id="line-14-3"></span>        <span class="ID">get_nprocs</span>.<span class="ID">argtypes</span> = []</span>
+<span class="line"><span class="anchor" id="line-15-3"></span>        <span class="ResWord">return</span> <span class="ID">get_nprocs</span>()</span>
+<span class="line"><span class="anchor" id="line-16-3"></span>        </span>
+<span class="line"><span class="anchor" id="line-17-3"></span></span>
+<span class="line"><span class="anchor" id="line-18-3"></span><span class="ResWord">def</span> <span class="ID">__search_kdtree</span>(<span class="ID">tree</span>, <span class="ID">data</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>):</span>
+<span class="line"><span class="anchor" id="line-19-3"></span>    <span class="ID">knn</span> = []</span>
+<span class="line"><span class="anchor" id="line-20-3"></span>    <span class="ID">param</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-21-3"></span>    <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-22-3"></span>    <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="ID">ndata</span>):</span>
+<span class="line"><span class="anchor" id="line-23-3"></span>        <span class="ID">_data</span> = <span class="ID">data</span>[:,<span class="ID">i</span>].<span class="ID">reshape</span>((<span class="ID">param</span>,<span class="Number">1</span>)).<span class="ID">repeat</span>(<span class="ID">leafsize</span>, <span class="ID">axis</span>=<span class="Number">1</span>);</span>
+<span class="line"><span class="anchor" id="line-24-3"></span>        <span class="ID">_knn</span> = <span class="ID">search_kdtree</span>(<span class="ID">tree</span>, <span class="ID">_data</span>, <span class="ID">K</span>+<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-25-3"></span>        <span class="ID">knn</span>.<span class="ID">append</span>(<span class="ID">_knn</span>[<span class="Number">1</span>:])</span>
+<span class="line"><span class="anchor" id="line-26-3"></span>    <span class="ResWord">return</span> <span class="ID">knn</span></span>
+<span class="line"><span class="anchor" id="line-27-3"></span></span>
+<span class="line"><span class="anchor" id="line-28-3"></span><span class="ResWord">def</span> <span class="ID">__remote_process</span>(<span class="ID">rank</span>, <span class="ID">qin</span>, <span class="ID">qout</span>, <span class="ID">tree</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>):</span>
+<span class="line"><span class="anchor" id="line-29-3"></span>    <span class="ResWord">while</span> <span class="Number">1</span>:</span>
+<span class="line"><span class="anchor" id="line-30-3"></span>        <span class="Comment"># read input queue (block until data arrives)</span></span>
+<span class="line"><span class="anchor" id="line-31-3"></span>        <span class="ID">nc</span>, <span class="ID">data</span> = <span class="ID">qin</span>.<span class="ID">get</span>()</span>
+<span class="line"><span class="anchor" id="line-32-3"></span>        <span class="Comment"># process data</span></span>
+<span class="line"><span class="anchor" id="line-33-3"></span>        <span class="ID">knn</span> = <span class="ID">__search_kdtree</span>(<span class="ID">tree</span>, <span class="ID">data</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>)</span>
+<span class="line"><span class="anchor" id="line-34-3"></span>        <span class="Comment"># write to output queue</span></span>
+<span class="line"><span class="anchor" id="line-35-3"></span>        <span class="ID">qout</span>.<span class="ID">put</span>((<span class="ID">nc</span>,<span class="ID">knn</span>))</span>
+<span class="line"><span class="anchor" id="line-36-3"></span></span>
+<span class="line"><span class="anchor" id="line-37-3"></span><span class="ResWord">def</span> <span class="ID">knn_search</span>(<span class="ID">data</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>=<span class="Number">2048</span>):</span>
+<span class="line"><span class="anchor" id="line-38-3"></span></span>
+<span class="line"><span class="anchor" id="line-39-3"></span>    <span class="String">&quot;&quot;&quot; find the K nearest neighbours for data points in data,</span></span>
+<span class="line"><span class="anchor" id="line-40-3"></span><span class="String">        using an O(n log n) kd-tree, exploiting all logical</span></span>
+<span class="line"><span class="anchor" id="line-41-3"></span><span class="String">        processors on the computer &quot;&quot;&quot;</span></span>
+<span class="line"><span class="anchor" id="line-42-3"></span></span>
+<span class="line"><span class="anchor" id="line-43-3"></span>    <span class="ID">ndata</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-44-3"></span>    <span class="ID">param</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-45-3"></span>    <span class="ID">nproc</span> = <span class="ID">__num_processors</span>()</span>
+<span class="line"><span class="anchor" id="line-46-3"></span>    <span class="Comment"># build kdtree</span></span>
+<span class="line"><span class="anchor" id="line-47-3"></span>    <span class="ID">tree</span> = <span class="ID">kdtree</span>(<span class="ID">data</span>.<span class="ID">copy</span>(), <span class="ID">leafsize</span>=<span class="ID">leafsize</span>)</span>
+<span class="line"><span class="anchor" id="line-48-3"></span>    <span class="Comment"># compute chunk size</span></span>
+<span class="line"><span class="anchor" id="line-49-3"></span>    <span class="ID">chunk_size</span> = <span class="ID">data</span>.<span class="ID">shape</span>[<span class="Number">1</span>] / (<span class="Number">4</span>*<span class="ID">nproc</span>)</span>
+<span class="line"><span class="anchor" id="line-50-3"></span>    <span class="ID">chunk_size</span> = <span class="Number">100</span> <span class="ResWord">if</span> <span class="ID">chunk_size</span> &lt; <span class="Number">100</span> <span class="ResWord">else</span> <span class="ID">chunk_size</span></span>
+<span class="line"><span class="anchor" id="line-51-3"></span>    <span class="Comment"># set up a pool of processes</span></span>
+<span class="line"><span class="anchor" id="line-52-3"></span>    <span class="ID">qin</span> = <span class="ID">processing</span>.<span class="ID">Queue</span>(<span class="ID">maxsize</span>=<span class="ID">ndata</span>/<span class="ID">chunk_size</span>)</span>
+<span class="line"><span class="anchor" id="line-53-3"></span>    <span class="ID">qout</span> = <span class="ID">processing</span>.<span class="ID">Queue</span>(<span class="ID">maxsize</span>=<span class="ID">ndata</span>/<span class="ID">chunk_size</span>)        </span>
+<span class="line"><span class="anchor" id="line-54-3"></span>    <span class="ID">pool</span> = [<span class="ID">processing</span>.<span class="ID">Process</span>(<span class="ID">target</span>=<span class="ID">__remote_process</span>,</span>
+<span class="line"><span class="anchor" id="line-55-3"></span>                <span class="ID">args</span>=(<span class="ID">rank</span>, <span class="ID">qin</span>, <span class="ID">qout</span>, <span class="ID">tree</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>))</span>
+<span class="line"><span class="anchor" id="line-56-3"></span>                    <span class="ResWord">for</span> <span class="ID">rank</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">nproc</span>)]</span>
+<span class="line"><span class="anchor" id="line-57-3"></span>    <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">pool</span>: <span class="ID">p</span>.<span class="ID">start</span>()</span>
+<span class="line"><span class="anchor" id="line-58-3"></span>    <span class="Comment"># put data chunks in input queue</span></span>
+<span class="line"><span class="anchor" id="line-59-3"></span>    <span class="ID">cur</span>, <span class="ID">nc</span> = <span class="Number">0</span>, <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-60-3"></span>    <span class="ResWord">while</span> <span class="Number">1</span>:</span>
+<span class="line"><span class="anchor" id="line-61-3"></span>        <span class="ID">_data</span> = <span class="ID">data</span>[:,<span class="ID">cur</span>:<span class="ID">cur</span>+<span class="ID">chunk_size</span>]</span>
+<span class="line"><span class="anchor" id="line-62-3"></span>        <span class="ResWord">if</span> <span class="ID">_data</span>.<span class="ID">shape</span>[<span class="Number">1</span>] == <span class="Number">0</span>: <span class="ResWord">break</span></span>
+<span class="line"><span class="anchor" id="line-63-3"></span>        <span class="ID">qin</span>.<span class="ID">put</span>((<span class="ID">nc</span>,<span class="ID">_data</span>))</span>
+<span class="line"><span class="anchor" id="line-64-3"></span>        <span class="ID">cur</span> += <span class="ID">chunk_size</span></span>
+<span class="line"><span class="anchor" id="line-65-3"></span>        <span class="ID">nc</span> += <span class="Number">1</span></span>
+<span class="line"><span class="anchor" id="line-66-3"></span>    <span class="Comment"># read output queue</span></span>
+<span class="line"><span class="anchor" id="line-67-3"></span>    <span class="ID">knn</span> = []</span>
+<span class="line"><span class="anchor" id="line-68-3"></span>    <span class="ResWord">while</span> <span class="ResWord">len</span>(<span class="ID">knn</span>) &lt; <span class="ID">nc</span>:</span>
+<span class="line"><span class="anchor" id="line-69-3"></span>        <span class="ID">knn</span> += [<span class="ID">qout</span>.<span class="ID">get</span>()]</span>
+<span class="line"><span class="anchor" id="line-70-3"></span>    <span class="Comment"># avoid race condition</span></span>
+<span class="line"><span class="anchor" id="line-71-3"></span>    <span class="ID">_knn</span> = [<span class="ID">n</span> <span class="ResWord">for</span> <span class="ID">i</span>,<span class="ID">n</span> <span class="ResWord">in</span> <span class="ResWord">sorted</span>(<span class="ID">knn</span>)]</span>
+<span class="line"><span class="anchor" id="line-72-3"></span>    <span class="ID">knn</span> = []</span>
+<span class="line"><span class="anchor" id="line-73-3"></span>    <span class="ResWord">for</span> <span class="ID">tmp</span> <span class="ResWord">in</span> <span class="ID">_knn</span>:</span>
+<span class="line"><span class="anchor" id="line-74-3"></span>        <span class="ID">knn</span> += <span class="ID">tmp</span></span>
+<span class="line"><span class="anchor" id="line-75-3"></span>    <span class="Comment"># terminate workers</span></span>
+<span class="line"><span class="anchor" id="line-76-3"></span>    <span class="ResWord">for</span> <span class="ID">p</span> <span class="ResWord">in</span> <span class="ID">pool</span>: <span class="ID">p</span>.<span class="ID">terminate</span>()</span>
+<span class="line"><span class="anchor" id="line-77-3"></span>    <span class="ResWord">return</span> <span class="ID">knn</span></span>
+</pre></div></div><span class="anchor" id="line-328"></span><span class="anchor" id="line-329"></span><span class="anchor" id="line-330"></span><p class="line867">
+<h3 id="Running_the_code">Running the code</h3>
+<span class="anchor" id="line-331"></span><p class="line874">The following shows how to run the example code (including how input data should be formatted): <span class="anchor" id="line-332"></span><span class="anchor" id="line-333"></span><p class="line867"><span class="anchor" id="line-334"></span><span class="anchor" id="line-335"></span><span class="anchor" id="line-336"></span><span class="anchor" id="line-337"></span><span class="anchor" id="line-338"></span><span class="anchor" id="line-339"></span><span class="anchor" id="line-340"></span><span class="anchor" id="line-341"></span><span class="anchor" id="line-342"></span><span class="anchor" id="line-343"></span><span class="anchor" id="line-344"></span><span class="anchor" id="line-345"></span><span class="anchor" id="line-346"></span><span class="anchor" id="line-347"></span><span class="anchor" id="line-348"></span><span class="anchor" id="line-349"></span><span class="anchor" id="line-350"></span><span class="anchor" id="line-351"></span><span class="anchor" id="line-352"></span><span class="anchor" id="line-353"></span><span class="anchor" id="line-354"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-189421598f79c2106addd870ec8fc99b4d5785db" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span><span class="ResWord">from</span> <span class="ID">time</span> <span class="ResWord">import</span> <span class="ID">clock</span></span>
+<span class="line"><span class="anchor" id="line-2-5"></span></span>
+<span class="line"><span class="anchor" id="line-3-5"></span><span class="ResWord">def</span> <span class="ID">test</span>():</span>
+<span class="line"><span class="anchor" id="line-4-5"></span>    <span class="ID">K</span> = <span class="Number">11</span></span>
+<span class="line"><span class="anchor" id="line-5-5"></span>    <span class="ID">ndata</span> = <span class="Number">10000</span></span>
+<span class="line"><span class="anchor" id="line-6-5"></span>    <span class="ID">ndim</span> = <span class="Number">12</span></span>
+<span class="line"><span class="anchor" id="line-7-5"></span>    <span class="ID">data</span> =  <span class="Number">10</span> * <span class="ID">numpy</span>.<span class="ID">random</span>.<span class="ID">rand</span>(<span class="ID">ndata</span>*<span class="ID">ndim</span>).<span class="ID">reshape</span>((<span class="ID">ndim</span>,<span class="ID">ndata</span>) )</span>
+<span class="line"><span class="anchor" id="line-8-5"></span>    <span class="ID">knn_search</span>(<span class="ID">data</span>, <span class="ID">K</span>, <span class="ID">leafsize</span>=<span class="Number">2096</span>)</span>
+<span class="line"><span class="anchor" id="line-9-5"></span></span>
+<span class="line"><span class="anchor" id="line-10-5"></span><span class="ResWord">if</span> <span class="ID">__name__</span> == <span class="String">'</span><span class="String">__main__</span><span class="String">'</span>:</span>
+<span class="line"><span class="anchor" id="line-11-4"></span>    <span class="ID">t0</span> = <span class="ID">clock</span>()</span>
+<span class="line"><span class="anchor" id="line-12-4"></span>    <span class="ID">test</span>()</span>
+<span class="line"><span class="anchor" id="line-13-4"></span>    <span class="ID">t1</span> = <span class="ID">clock</span>()</span>
+<span class="line"><span class="anchor" id="line-14-4"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Elapsed time </span><span class="String">%.2f</span><span class="String"> seconds</span><span class="String">&quot;</span> % <span class="ID">t1</span>-<span class="ID">t0</span></span>
+<span class="line"><span class="anchor" id="line-15-4"></span> </span>
+<span class="line"><span class="anchor" id="line-16-4"></span>    <span class="Comment">#import profile          # using Python's profiler is not useful if you are</span></span>
+<span class="line"><span class="anchor" id="line-17-4"></span>    <span class="Comment">#profile.run('test()')   # running the parallel search.</span></span>
+</pre></div></div><span class="anchor" id="line-355"></span><span class="anchor" id="line-356"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-357"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-358"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/KDTree  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="KDTree37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/KDTree">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/KDTree by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:08:54 GMT -->
+</html>
+

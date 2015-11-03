@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib?action=AttachFile&do=view&target=mpl_vtk.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:52:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:mpl_vtk.png of Cookbook/Matplotlib - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib" href="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="barchart.png" href="Matplotlib3ed1.html?action=AttachFile&amp;do=view&amp;target=barchart.png">
+<link rel="Appendix" title="barchartscaled.png" href="Matplotlib52d6.html?action=AttachFile&amp;do=view&amp;target=barchartscaled.png">
+<link rel="Appendix" title="basemap1.png" href="Matplotlibeb43.html?action=AttachFile&amp;do=view&amp;target=basemap1.png">
+<link rel="Appendix" title="chart_scaled.png" href="Matplotlib7bce.html?action=AttachFile&amp;do=view&amp;target=chart_scaled.png">
+<link rel="Appendix" title="colored_line.png" href="Matplotlibec08.html?action=AttachFile&amp;do=view&amp;target=colored_line.png">
+<link rel="Appendix" title="contourf3D.jpg" href="Matplotlib6d8a.html?action=AttachFile&amp;do=view&amp;target=contourf3D.jpg">
+<link rel="Appendix" title="hinton-small.png" href="Matplotlib4792.html?action=AttachFile&amp;do=view&amp;target=hinton-small.png">
+<link rel="Appendix" title="hist_outline.png" href="Matplotlib538a.html?action=AttachFile&amp;do=view&amp;target=hist_outline.png">
+<link rel="Appendix" title="hist_outline_small.png" href="Matplotlibc30e.html?action=AttachFile&amp;do=view&amp;target=hist_outline_small.png">
+<link rel="Appendix" title="log_labels.png" href="Matplotlibff28.html?action=AttachFile&amp;do=view&amp;target=log_labels.png">
+<link rel="Appendix" title="log_labels_small.png" href="Matplotlib70bd.html?action=AttachFile&amp;do=view&amp;target=log_labels_small.png">
+<link rel="Appendix" title="mpl_vtk.png" href="Matplotlib93fe.html?action=AttachFile&amp;do=view&amp;target=mpl_vtk.png">
+<link rel="Appendix" title="multiline.png" href="Matplotlib15fb.html?action=AttachFile&amp;do=view&amp;target=multiline.png">
+<link rel="Appendix" title="plot_arrow.png" href="Matplotliba5f8.html?action=AttachFile&amp;do=view&amp;target=plot_arrow.png">
+<link rel="Appendix" title="plot_arrow_small.png" href="Matplotlibadae.html?action=AttachFile&amp;do=view&amp;target=plot_arrow_small.png">
+<link rel="Appendix" title="sentinel.png" href="Matplotlib36c4.html?action=AttachFile&amp;do=view&amp;target=sentinel.png">
+<link rel="Appendix" title="shaded.png" href="Matplotlibfd37.html?action=AttachFile&amp;do=view&amp;target=shaded.png">
+<link rel="Appendix" title="shaded_small.png" href="Matplotlib9bad.html?action=AttachFile&amp;do=view&amp;target=shaded_small.png">
+<link rel="Appendix" title="sigmoids_small.png" href="Matplotlib5c7f.html?action=AttachFile&amp;do=view&amp;target=sigmoids_small.png">
+<link rel="Appendix" title="tex_demo.png" href="Matplotlibc8bc.html?action=AttachFile&amp;do=view&amp;target=tex_demo.png">
+<link rel="Appendix" title="thick_axes.png" href="Matplotlib3646.html?action=AttachFile&amp;do=view&amp;target=thick_axes.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Matplotlib456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:mpl_vtk.png of Cookbook/Matplotlib</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Matplotlib.html">Cookbook/Matplotlib</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'mpl_vtk.png'</h2><a class="download" href="mpl_vtkee0e.png?action=AttachFile&amp;do=get&amp;target=mpl_vtk.png">Download</a><br><br><img src="mpl_vtkee0e.png?action=AttachFile&amp;do=get&amp;target=mpl_vtk.png" alt="mpl_vtk.png"><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="mpl_vtk.png"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327e17.ed5ffe601debf1cece6554cb2ddb72a45f27fc64">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="barchartfc6d.png?action=AttachFile&amp;do=get&amp;target=barchart.png">get</a>&nbsp;| <a href="Matplotlib3ed1.html?action=AttachFile&amp;do=view&amp;target=barchart.png">view</a>] (2006-08-09 15:23:42, 11.7 KB) [[attachment:barchart.png]]</li><li>[<a href="barchartscaled5da0.png?action=AttachFile&amp;do=get&amp;target=barchartscaled.png">get</a>&nbsp;| <a href="Matplotlib52d6.html?action=AttachFile&amp;do=view&amp;target=barchartscaled.png">view</a>] (2006-08-09 15:29:56, 4.9 KB) [[attachment:barchartscaled.png]]</li><li>[<a href="basemap18f6c.png?action=AttachFile&amp;do=get&amp;target=basemap1.png">get</a>&nbsp;| <a href="Matplotlibeb43.html?action=AttachFile&amp;do=view&amp;target=basemap1.png">view</a>] (2006-01-22 19:02:46, 74.8 KB) [[attachment:basemap1.png]]</li><li>[<a href="chart_scaled4b07.png?action=AttachFile&amp;do=get&amp;target=chart_scaled.png">get</a>&nbsp;| <a href="Matplotlib7bce.html?action=AttachFile&amp;do=view&amp;target=chart_scaled.png">view</a>] (2006-08-09 15:27:18, 4.9 KB) [[attachment:chart_scaled.png]]</li><li>[<a href="colored_line9ae9.png?action=AttachFile&amp;do=get&amp;target=colored_line.png">get</a>&nbsp;| <a href="Matplotlibec08.html?action=AttachFile&amp;do=view&amp;target=colored_line.png">view</a>] (2006-01-22 19:02:28, 4.4 KB) [[attachment:colored_line.png]]</li><li>[<a href="contourf3Dc08c.jpg?action=AttachFile&amp;do=get&amp;target=contourf3D.jpg">get</a>&nbsp;| <a href="Matplotlib6d8a.html?action=AttachFile&amp;do=view&amp;target=contourf3D.jpg">view</a>] (2006-02-18 09:53:22, 20.0 KB) [[attachment:contourf3D.jpg]]</li><li>[<a href="hinton-smallad76.png?action=AttachFile&amp;do=get&amp;target=hinton-small.png">get</a>&nbsp;| <a href="Matplotlib4792.html?action=AttachFile&amp;do=view&amp;target=hinton-small.png">view</a>] (2009-05-14 22:10:04, 44.3 KB) [[attachment:hinton-small.png]]</li><li>[<a href="hist_outlineb5b2.png?action=AttachFile&amp;do=get&amp;target=hist_outline.png">get</a>&nbsp;| <a href="Matplotlib538a.html?action=AttachFile&amp;do=view&amp;target=hist_outline.png">view</a>] (2007-12-06 20:06:08, 12.0 KB) [[attachment:hist_outline.png]]</li><li>[<a href="hist_outline_smalle60d.png?action=AttachFile&amp;do=get&amp;target=hist_outline_small.png">get</a>&nbsp;| <a href="Matplotlibc30e.html?action=AttachFile&amp;do=view&amp;target=hist_outline_small.png">view</a>] (2007-12-06 20:17:35, 7.3 KB) [[attachment:hist_outline_small.png]]</li><li>[<a href="log_labelsa3cc.png?action=AttachFile&amp;do=get&amp;target=log_labels.png">get</a>&nbsp;| <a href="Matplotlibff28.html?action=AttachFile&amp;do=view&amp;target=log_labels.png">view</a>] (2008-09-17 01:33:45, 12.3 KB) [[attachment:log_labels.png]]</li><li>[<a href="log_labels_smallb9b0.png?action=AttachFile&amp;do=get&amp;target=log_labels_small.png">get</a>&nbsp;| <a href="Matplotlib70bd.html?action=AttachFile&amp;do=view&amp;target=log_labels_small.png">view</a>] (2008-09-17 01:33:11, 4.1 KB) [[attachment:log_labels_small.png]]</li><li>[<a href="mpl_vtkee0e.png?action=AttachFile&amp;do=get&amp;target=mpl_vtk.png">get</a>&nbsp;| <a href="Matplotlib93fe.html?action=AttachFile&amp;do=view&amp;target=mpl_vtk.png">view</a>] (2006-01-22 19:01:42, 104.2 KB) [[attachment:mpl_vtk.png]]</li><li>[<a href="multiline3809.png?action=AttachFile&amp;do=get&amp;target=multiline.png">get</a>&nbsp;| <a href="Matplotlib15fb.html?action=AttachFile&amp;do=view&amp;target=multiline.png">view</a>] (2006-01-22 19:02:13, 15.6 KB) [[attachment:multiline.png]]</li><li>[<a href="plot_arrowd947.png?action=AttachFile&amp;do=get&amp;target=plot_arrow.png">get</a>&nbsp;| <a href="Matplotliba5f8.html?action=AttachFile&amp;do=view&amp;target=plot_arrow.png">view</a>] (2007-12-06 20:06:22, 19.6 KB) [[attachment:plot_arrow.png]]</li><li>[<a href="plot_arrow_smallcfbf.png?action=AttachFile&amp;do=get&amp;target=plot_arrow_small.png">get</a>&nbsp;| <a href="Matplotlibadae.html?action=AttachFile&amp;do=view&amp;target=plot_arrow_small.png">view</a>] (2007-12-06 20:17:57, 4.9 KB) [[attachment:plot_arrow_small.png]]</li><li>[<a href="sentinel7629.png?action=AttachFile&amp;do=get&amp;target=sentinel.png">get</a>&nbsp;| <a href="Matplotlib36c4.html?action=AttachFile&amp;do=view&amp;target=sentinel.png">view</a>] (2006-01-22 19:04:37, 48.2 KB) [[attachment:sentinel.png]]</li><li>[<a href="shaded517f.png?action=AttachFile&amp;do=get&amp;target=shaded.png">get</a>&nbsp;| <a href="Matplotlibfd37.html?action=AttachFile&amp;do=view&amp;target=shaded.png">view</a>] (2007-12-06 20:05:50, 18.3 KB) [[attachment:shaded.png]]</li><li>[<a href="shaded_small3da0.png?action=AttachFile&amp;do=get&amp;target=shaded_small.png">get</a>&nbsp;| <a href="Matplotlib9bad.html?action=AttachFile&amp;do=view&amp;target=shaded_small.png">view</a>] (2007-12-06 20:17:16, 4.6 KB) [[attachment:shaded_small.png]]</li><li>[<a href="sigmoids_small7096.png?action=AttachFile&amp;do=get&amp;target=sigmoids_small.png">get</a>&nbsp;| <a href="Matplotlib5c7f.html?action=AttachFile&amp;do=view&amp;target=sigmoids_small.png">view</a>] (2006-01-22 18:51:00, 11.1 KB) [[attachment:sigmoids_small.png]]</li><li>[<a href="tex_demo93f4.png?action=AttachFile&amp;do=get&amp;target=tex_demo.png">get</a>&nbsp;| <a href="Matplotlibc8bc.html?action=AttachFile&amp;do=view&amp;target=tex_demo.png">view</a>] (2006-01-22 19:00:34, 7.3 KB) [[attachment:tex_demo.png]]</li><li>[<a href="thick_axesf0e5.png?action=AttachFile&amp;do=get&amp;target=thick_axes.png">get</a>&nbsp;| <a href="Matplotlib3646.html?action=AttachFile&amp;do=view&amp;target=thick_axes.png">view</a>] (2008-12-02 20:32:39, 10.8 KB) [[attachment:thick_axes.png]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Matplotlib37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Matplotlib">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib?action=AttachFile&do=view&target=mpl_vtk.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:52:13 GMT -->
+</html>
+

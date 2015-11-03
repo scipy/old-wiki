@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Plotting_Tutorial?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Plotting_Tutorial - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Plotting_Tutorial" href="../external.html?link=http://localhost:8080/Plotting_Tutorial?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Plotting_Tutorial&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/Plotting_Tutorial?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/Plotting_Tutorial?action=print">
+<link rel="Appendix" title="simple_plot.png" href="Plotting_Tutorial0da7.html?action=AttachFile&amp;do=view&amp;target=simple_plot.png">
+<link rel="Appendix" title="spiral.png" href="Plotting_Tutoriald010.html?action=AttachFile&amp;do=view&amp;target=spiral.png">
+<link rel="Appendix" title="spiral_small.png" href="Plotting_Tutoriald70c.html?action=AttachFile&amp;do=view&amp;target=spiral_small.png">
+<link rel="Appendix" title="spiral_smaller.png" href="Plotting_Tutorial9767.html?action=AttachFile&amp;do=view&amp;target=spiral_smaller.png">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/Plotting_Tutorial">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Plotting_Tutorial456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a class="backlink" href="Plotting_Tutorial81a3.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Plotting_Tutorial%22" rel="nofollow" title="Click to do a full-text search for this title">Plotting_Tutorial</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="Plotting_Tutorial.html">Plotting_Tutorial</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Plotting_Tutorial.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Plotting_Tutorial37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Plotting_Tutorial">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><a class="http" href="../external.html?link=http://matplotlib.sourceforge.net/">Matplotlib</a> is the preferred 2D plotting library for Python users. The following is a collection of very simple programs from Matplotlib's examples directory. For powerful 3D plotting, see <a class="http" href="../external.html?link=http://code.enthought.com/projects/mayavi/">Mayavi</a>. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">For more examples you may want to check out the <a href="Cookbook/Matplotlib.html">Matplotlib Cookbook</a> and the official matplotlib tutorial at <a class="http" href="../external.html?link=http://matplotlib.sf.net/tutorial.html">http://matplotlib.sf.net/tutorial.html</a>. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867">
+<h1 id="Simple_plot">Simple plot</h1>
+<span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><img alt="simple_plot.png" class="attachment" src="simple_plot8b9d.png?action=AttachFile&amp;do=get&amp;target=simple_plot.png" title="simple_plot.png" /> <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867"><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_1">   1</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_1"></span><span class="anchor" id="line-1-2"></span><span class="Comment">#!/usr/bin/env python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_2">   2</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_2"></span><span class="anchor" id="line-2-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_3">   3</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_3"></span><span class="anchor" id="line-3-1"></span><span class="String">Example: simple line plot.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_4">   4</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_4"></span><span class="anchor" id="line-4-1"></span><span class="String">Show how to make and save a simple line plot with labels, title and grid</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_5">   5</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_5"></span><span class="anchor" id="line-5-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_6">   6</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_6"></span><span class="anchor" id="line-6-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_7">   7</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_7"></span><span class="anchor" id="line-7-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_8">   8</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_8"></span><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_9">   9</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_9"></span><span class="anchor" id="line-9-1"></span><span class="ID">t</span> = <span class="ID">numpy</span>.<span class="ID">arange</span>(<span class="Number">0.0</span>, <span class="Number">1.0</span>+<span class="Number">0.01</span>, <span class="Number">0.01</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_10">  10</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">s</span> = <span class="ID">numpy</span>.<span class="ID">cos</span>(<span class="Number">2</span>*<span class="Number">2</span>*<span class="ID">numpy</span>.<span class="ID">pi</span>*<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_11">  11</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">t</span>, <span class="ID">s</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_12">  12</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_12"></span><span class="anchor" id="line-12-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_13">  13</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_13"></span><span class="anchor" id="line-13-1"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (s)</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_14">  14</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_14"></span><span class="anchor" id="line-14-1"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">voltage (mV)</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_15">  15</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">pylab</span>.<span class="ID">title</span>(<span class="String">'</span><span class="String">About as simple as it gets, folks</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_16">  16</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">pylab</span>.<span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_17">  17</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">simple_plot</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_18">  18</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_18"></span><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_19">  19</a> </span><span class="LineAnchor" id="CA-68cf81004fa8beffe54b2c9f23ca63d2f79f2973_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867">
+<h1 id="Image_plot">Image plot</h1>
+<span class="anchor" id="line-33"></span><p class="line862">This small script shows two very useful things : how to display an image, i.e., a matrix of values, and how to plot contour lines, that is, lines following a constant value in the matrix. Using <tt>hold(True)</tt>, we can overlay the two images, and in fact, any other line.  <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><p class="line862">The <tt>imshow(z)</tt> method works by assigning a color to the values of the matrix <tt>z</tt> using a colormap. In the following example, the default colormap <tt>jet</tt> is used. The colormap basically consists of an index ranging from 0 to 1, to which rgb values are assigned. There exists a range of other colormaps similar to those in Matlab (TM), and it is not so difficult to create one from scratch. In the example, two options are passed with imshow : <tt>extent</tt> and <tt>origin</tt>. The <tt>extent</tt> argument simply tells matplotlib what the coordinates of the image are so it can label the x and y axis correctly. The <tt>origin</tt> option can take one of two values, 'upper' or 'lower'. The default is 'upper', which will just display the matrix as it is, with the (1,1) element in the upper left corner. With the 'lower' argument, the matrix is mirrored so the (1,1) element goes in the lower left corner. There are a lot more options to control <tt>imshow</tt>'s behavior, such as cmap (colormap), norm (the normalization method), interpolation, alpha (transparency). With some tweaking, you'll get the result you want.  <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><p class="line867"><img alt="spiral_smaller.png" class="attachment" src="spiral_smaller4399.png?action=AttachFile&amp;do=get&amp;target=spiral_smaller.png" title="spiral_smaller.png" /> <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line867"><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-7c59e43a475ba319221980b899fb43ac7a739126\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-7c59e43a475ba319221980b899fb43ac7a739126" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_1">   1</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_1"></span><span class="anchor" id="line-1-4"></span><span class="Comment"># Formulas from C. Pickover</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_2">   2</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_2"></span><span class="anchor" id="line-2-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_3">   3</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_3"></span><span class="anchor" id="line-3-2"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_4">   4</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_4"></span><span class="anchor" id="line-4-2"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_5">   5</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_5"></span><span class="anchor" id="line-5-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_6">   6</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_6"></span><span class="anchor" id="line-6-2"></span><span class="Comment"># Creating the grid of coordinates x,y </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_7">   7</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">x</span>,<span class="ID">y</span> = <span class="ID">ogrid</span>[-<span class="Number">1.</span>:<span class="Number">1.</span>:.<span class="Number">01</span>, -<span class="Number">1.</span>:<span class="Number">1.</span>:.<span class="Number">01</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_8">   8</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_8"></span><span class="anchor" id="line-8-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_9">   9</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_9"></span><span class="anchor" id="line-9-2"></span><span class="ID">z</span> = <span class="Number">3</span>*<span class="ID">y</span>*(<span class="Number">3</span>*<span class="ID">x</span>**<span class="Number">2</span>-<span class="ID">y</span>**<span class="Number">2</span>)/<span class="Number">4</span> + .<span class="Number">5</span>*<span class="ID">cos</span>(<span class="Number">6</span>*<span class="ID">pi</span> * <span class="ID">sqrt</span>(<span class="ID">x</span>**<span class="Number">2</span> +<span class="ID">y</span>**<span class="Number">2</span>) + <span class="ID">arctan2</span>(<span class="ID">x</span>,<span class="ID">y</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_10">  10</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_10"></span><span class="anchor" id="line-10-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_11">  11</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_11"></span><span class="anchor" id="line-11-2"></span><span class="ID">hold</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_12">  12</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_12"></span><span class="anchor" id="line-12-2"></span><span class="Comment"># Creating image</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_13">  13</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_13"></span><span class="anchor" id="line-13-2"></span><span class="ID">imshow</span>(<span class="ID">z</span>, <span class="ID">origin</span>=<span class="String">'</span><span class="String">lower</span><span class="String">'</span>, <span class="ID">extent</span>=[-<span class="Number">1</span>,<span class="Number">1</span>,-<span class="Number">1</span>,<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_14">  14</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_14"></span><span class="anchor" id="line-14-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_15">  15</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_15"></span><span class="anchor" id="line-15-2"></span><span class="Comment"># Plotting contour lines</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_16">  16</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_16"></span><span class="anchor" id="line-16-2"></span><span class="ID">contour</span>(<span class="ID">z</span>, <span class="ID">origin</span>=<span class="String">'</span><span class="String">lower</span><span class="String">'</span>, <span class="ID">extent</span>=[-<span class="Number">1</span>,<span class="Number">1</span>,-<span class="Number">1</span>,<span class="Number">1</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_17">  17</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_17"></span><span class="anchor" id="line-17-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_18">  18</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_18"></span><span class="anchor" id="line-18-2"></span><span class="ID">xlabel</span>(<span class="String">'</span><span class="String">x</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_19">  19</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_19"></span><span class="anchor" id="line-19-2"></span><span class="ID">ylabel</span>(<span class="String">'</span><span class="String">y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_20">  20</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">title</span>(<span class="String">'</span><span class="String">A spiral !</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_21">  21</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_21"></span><span class="anchor" id="line-21-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_22">  22</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_22"></span><span class="anchor" id="line-22-1"></span><span class="Comment"># Adding a line plot slicing the z matrix just for fun. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_23">  23</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_23"></span><span class="anchor" id="line-23-1"></span><span class="ID">plot</span>(<span class="ID">x</span>[:], <span class="ID">z</span>[<span class="Number">50</span>, :])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_24">  24</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_24"></span><span class="anchor" id="line-24-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7c59e43a475ba319221980b899fb43ac7a739126_25">  25</a> </span><span class="LineAnchor" id="CA-7c59e43a475ba319221980b899fb43ac7a739126_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">savefig</span>(<span class="String">'</span><span class="String">spiral</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-68"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Plotting_Tutorial37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/Plotting_Tutorial">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Plotting_Tutorial?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:47 GMT -->
+</html>
+

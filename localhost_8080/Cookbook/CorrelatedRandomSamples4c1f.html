@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/CorrelatedRandomSamples?highlight=%28%28SciPy%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:20:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/CorrelatedRandomSamples - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/CorrelatedRandomSamples" href="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FCorrelatedRandomSamples&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="correlated_random_vars.png" href="CorrelatedRandomSamples6821.html?action=AttachFile&amp;do=view&amp;target=correlated_random_vars.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="CorrelatedRandomSamples456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="CorrelatedRandomSamples47ae.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FCorrelatedRandomSamples%22" rel="nofollow" title="Click to do a full-text search for this title">CorrelatedRandomSamples</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="CorrelatedRandomSamples.html">CorrelatedRandomSamples</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CorrelatedRandomSamples37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h2 id="Correlated_Random_Samples">Correlated Random Samples</h2>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><em><strong>Note:</strong></em> <em>This cookbook entry shows how to generate random samples from a multivariate normal distribution using tools from <a href="../SciPy.html"><strong class="highlight">SciPy</strong></a>, but in fact <a class="nonexistent" href="../NumPy.html">NumPy</a> includes the function <tt class="backtick">numpy.random.multivariate_normal</tt> to accomplish the same task.</em> <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">To generate correlated normally distributed random samples, one can first generate uncorrelated samples, and then multiply them by a matrix <em>C</em> such that <em>C*C<sup>T</sup> = R</em>, where <em>R</em> is the desired covariance matrix.  <em>C</em> can be created, for example, by using the Cholesky decomposition of <em>R</em>, or from the eigenvalues and eigenvectors of <em>R</em>. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><pre><span class="anchor" id="line-1-1"></span>&quot;&quot;&quot;Example of generating correlated normally distributed random samples.&quot;&quot;&quot;
+<span class="anchor" id="line-2-1"></span>
+<span class="anchor" id="line-3-1"></span>import numpy as np
+<span class="anchor" id="line-4-1"></span>from <strong class="highlight">scipy</strong>.linalg import eigh, cholesky
+<span class="anchor" id="line-5-1"></span>from <strong class="highlight">scipy</strong>.stats import norm
+<span class="anchor" id="line-6-1"></span>
+<span class="anchor" id="line-7-1"></span>from pylab import plot, show, axis, subplot, xlabel, ylabel, grid
+<span class="anchor" id="line-8-1"></span>
+<span class="anchor" id="line-9-1"></span>
+<span class="anchor" id="line-10-1"></span># Choice of cholesky or eigenvector method.
+<span class="anchor" id="line-11-1"></span>method = 'cholesky'
+<span class="anchor" id="line-12-1"></span>#method = 'eigenvectors'
+<span class="anchor" id="line-13-1"></span>
+<span class="anchor" id="line-14-1"></span>num_samples = 400
+<span class="anchor" id="line-15-1"></span>
+<span class="anchor" id="line-16-1"></span># The desired covariance matrix.
+<span class="anchor" id="line-17-1"></span>r = np.array([
+<span class="anchor" id="line-18-1"></span>        [  3.40, -2.75, -2.00],
+<span class="anchor" id="line-19-1"></span>        [ -2.75,  5.50,  1.50],
+<span class="anchor" id="line-20-1"></span>        [ -2.00,  1.50,  1.25]
+<span class="anchor" id="line-21-1"></span>    ])
+<span class="anchor" id="line-22-1"></span>
+<span class="anchor" id="line-23-1"></span># Generate samples from three independent normally distributed random
+<span class="anchor" id="line-24-1"></span># variables (with mean 0 and std. dev. 1).
+<span class="anchor" id="line-25-1"></span>x = norm.rvs(size=(3, num_samples))
+<span class="anchor" id="line-26-1"></span>
+<span class="anchor" id="line-27-1"></span># We need a matrix `c` for which `c*c^T = r`.  We can use, for example,
+<span class="anchor" id="line-28-1"></span># the Cholesky decomposition, or the we can construct `c` from the
+<span class="anchor" id="line-29-1"></span># eigenvectors and eigenvalues.
+<span class="anchor" id="line-30-1"></span>
+<span class="anchor" id="line-31-1"></span>if method == 'cholesky':
+<span class="anchor" id="line-32-1"></span>    # Compute the Cholesky decomposition.
+<span class="anchor" id="line-33-1"></span>    c = cholesky(r, lower=True)
+<span class="anchor" id="line-34-1"></span>else:
+<span class="anchor" id="line-35-1"></span>    # Compute the eigenvalues and eigenvectors.
+<span class="anchor" id="line-36-1"></span>    evals, evecs = eigh(r)
+<span class="anchor" id="line-37-1"></span>    # Construct c, so c*c^T = r.
+<span class="anchor" id="line-38-1"></span>    c = np.dot(evecs, np.diag(np.sqrt(evals)))
+<span class="anchor" id="line-39-1"></span>
+<span class="anchor" id="line-40-1"></span># Convert the data to correlated random variables. 
+<span class="anchor" id="line-41-1"></span>y = np.dot(c, x)
+<span class="anchor" id="line-42-1"></span>
+<span class="anchor" id="line-43-1"></span>#
+<span class="anchor" id="line-44-1"></span># Plot various projections of the samples.
+<span class="anchor" id="line-45-1"></span>#
+<span class="anchor" id="line-46-1"></span>subplot(2,2,1)
+<span class="anchor" id="line-47-1"></span>plot(y[0], y[1], 'b.')
+<span class="anchor" id="line-48-1"></span>ylabel('y[1]')
+<span class="anchor" id="line-49-1"></span>axis('equal')
+<span class="anchor" id="line-50-1"></span>grid(True)
+<span class="anchor" id="line-51-1"></span>
+<span class="anchor" id="line-52-1"></span>subplot(2,2,3)
+<span class="anchor" id="line-53-1"></span>plot(y[0], y[2], 'b.')
+<span class="anchor" id="line-54-1"></span>xlabel('y[0]')
+<span class="anchor" id="line-55-1"></span>ylabel('y[2]')
+<span class="anchor" id="line-56-1"></span>axis('equal')
+<span class="anchor" id="line-57-1"></span>grid(True)
+<span class="anchor" id="line-58-1"></span>
+<span class="anchor" id="line-59-1"></span>subplot(2,2,4)
+<span class="anchor" id="line-60-1"></span>plot(y[1], y[2], 'b.')
+<span class="anchor" id="line-61-1"></span>xlabel('y[1]')
+<span class="anchor" id="line-62-1"></span>axis('equal')
+<span class="anchor" id="line-63-1"></span>grid(True)
+<span class="anchor" id="line-64-1"></span>
+<span class="anchor" id="line-65-1"></span>show()</pre><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><p class="line874">Scatter plots of three projections of the random samples: <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><p class="line867"><img alt="correlated_random_vars.png" class="attachment" src="correlated_random_vars1ab5.png?action=AttachFile&amp;do=get&amp;target=correlated_random_vars.png" title="correlated_random_vars.png" /> <span class="anchor" id="line-78"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/CorrelatedRandomSamples  (last edited 2015-10-24 17:48:26 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="CorrelatedRandomSamples37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/CorrelatedRandomSamples">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/CorrelatedRandomSamples?highlight=%28%28SciPy%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:20:10 GMT -->
+</html>
+

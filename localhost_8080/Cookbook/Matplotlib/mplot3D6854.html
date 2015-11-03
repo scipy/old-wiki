@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/mplot3D?action=AttachFile&do=view&target=test3.jpg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:50:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:test3.jpg of Cookbook/Matplotlib/mplot3D - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/mplot3D" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2Fmplot3D&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="contour.jpg" href="mplot3D9f53.html?action=AttachFile&amp;do=view&amp;target=contour.jpg">
+<link rel="Appendix" title="contour.png" href="mplot3D2059.html?action=AttachFile&amp;do=view&amp;target=contour.png">
+<link rel="Appendix" title="contour3D.jpg" href="mplot3D2cb7.html?action=AttachFile&amp;do=view&amp;target=contour3D.jpg">
+<link rel="Appendix" title="contour3D.png" href="mplot3D52cc.html?action=AttachFile&amp;do=view&amp;target=contour3D.png">
+<link rel="Appendix" title="contourf.jpg" href="mplot3D9049.html?action=AttachFile&amp;do=view&amp;target=contourf.jpg">
+<link rel="Appendix" title="contourf.png" href="mplot3D567a.html?action=AttachFile&amp;do=view&amp;target=contourf.png">
+<link rel="Appendix" title="contourf3D.jpg" href="mplot3D6d8a.html?action=AttachFile&amp;do=view&amp;target=contourf3D.jpg">
+<link rel="Appendix" title="contourf3D.png" href="mplot3D669b.html?action=AttachFile&amp;do=view&amp;target=contourf3D.png">
+<link rel="Appendix" title="plot.jpg" href="mplot3D23ef.html?action=AttachFile&amp;do=view&amp;target=plot.jpg">
+<link rel="Appendix" title="plot.png" href="mplot3D2c12.html?action=AttachFile&amp;do=view&amp;target=plot.png">
+<link rel="Appendix" title="scatter.jpg" href="mplot3D445c.html?action=AttachFile&amp;do=view&amp;target=scatter.jpg">
+<link rel="Appendix" title="scatter.png" href="mplot3D8d90.html?action=AttachFile&amp;do=view&amp;target=scatter.png">
+<link rel="Appendix" title="surface.jpg" href="mplot3D59e8.html?action=AttachFile&amp;do=view&amp;target=surface.jpg">
+<link rel="Appendix" title="surface.png" href="mplot3D124a.html?action=AttachFile&amp;do=view&amp;target=surface.png">
+<link rel="Appendix" title="test1.jpg" href="mplot3D53f9.html?action=AttachFile&amp;do=view&amp;target=test1.jpg">
+<link rel="Appendix" title="test1.png" href="mplot3Dfd1f.html?action=AttachFile&amp;do=view&amp;target=test1.png">
+<link rel="Appendix" title="test2.jpg" href="mplot3D9a79.html?action=AttachFile&amp;do=view&amp;target=test2.jpg">
+<link rel="Appendix" title="test2.png" href="mplot3Df602.html?action=AttachFile&amp;do=view&amp;target=test2.png">
+<link rel="Appendix" title="test3.jpg" href="mplot3D6854.html?action=AttachFile&amp;do=view&amp;target=test3.jpg">
+<link rel="Appendix" title="test3.png" href="mplot3Dd9f2.html?action=AttachFile&amp;do=view&amp;target=test3.png">
+<link rel="Appendix" title="wireframe.jpg" href="mplot3D357e.html?action=AttachFile&amp;do=view&amp;target=wireframe.jpg">
+<link rel="Appendix" title="wireframe.png" href="mplot3D9f75.html?action=AttachFile&amp;do=view&amp;target=wireframe.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="mplot3D456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:test3.jpg of Cookbook/Matplotlib/mplot3D</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="mplot3D.html">mplot3D</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mplot3D37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'test3.jpg'</h2><a class="download" href="test320b6.jpg?action=AttachFile&amp;do=get&amp;target=test3.jpg">Download</a><br><br><img src="test320b6.jpg?action=AttachFile&amp;do=get&amp;target=test3.jpg" alt="test3.jpg"><h2>New Attachment</h2>
+<form action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="test3.jpg"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327d9e.58d52af0b62359582328f54661d491318b6b0078">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="contour8f70.jpg?action=AttachFile&amp;do=get&amp;target=contour.jpg">get</a>&nbsp;| <a href="mplot3D9f53.html?action=AttachFile&amp;do=view&amp;target=contour.jpg">view</a>] (2006-02-17 15:31:21, 17.4 KB) [[attachment:contour.jpg]]</li><li>[<a href="contour26aa.png?action=AttachFile&amp;do=get&amp;target=contour.png">get</a>&nbsp;| <a href="mplot3D2059.html?action=AttachFile&amp;do=view&amp;target=contour.png">view</a>] (2006-02-17 14:47:56, 75.0 KB) [[attachment:contour.png]]</li><li>[<a href="contour3D13ef.jpg?action=AttachFile&amp;do=get&amp;target=contour3D.jpg">get</a>&nbsp;| <a href="mplot3D2cb7.html?action=AttachFile&amp;do=view&amp;target=contour3D.jpg">view</a>] (2006-02-17 15:31:12, 17.1 KB) [[attachment:contour3D.jpg]]</li><li>[<a href="contour3D7783.png?action=AttachFile&amp;do=get&amp;target=contour3D.png">get</a>&nbsp;| <a href="mplot3D52cc.html?action=AttachFile&amp;do=view&amp;target=contour3D.png">view</a>] (2006-02-17 14:45:55, 85.0 KB) [[attachment:contour3D.png]]</li><li>[<a href="contourf29f3.jpg?action=AttachFile&amp;do=get&amp;target=contourf.jpg">get</a>&nbsp;| <a href="mplot3D9049.html?action=AttachFile&amp;do=view&amp;target=contourf.jpg">view</a>] (2006-02-17 15:31:44, 14.4 KB) [[attachment:contourf.jpg]]</li><li>[<a href="contourf49a2.png?action=AttachFile&amp;do=get&amp;target=contourf.png">get</a>&nbsp;| <a href="mplot3D567a.html?action=AttachFile&amp;do=view&amp;target=contourf.png">view</a>] (2006-02-17 14:46:50, 52.9 KB) [[attachment:contourf.png]]</li><li>[<a href="contourf3Dc08c.jpg?action=AttachFile&amp;do=get&amp;target=contourf3D.jpg">get</a>&nbsp;| <a href="mplot3D6d8a.html?action=AttachFile&amp;do=view&amp;target=contourf3D.jpg">view</a>] (2006-02-17 15:31:27, 20.0 KB) [[attachment:contourf3D.jpg]]</li><li>[<a href="contourf3Dde27.png?action=AttachFile&amp;do=get&amp;target=contourf3D.png">get</a>&nbsp;| <a href="mplot3D669b.html?action=AttachFile&amp;do=view&amp;target=contourf3D.png">view</a>] (2006-02-17 14:46:19, 109.4 KB) [[attachment:contourf3D.png]]</li><li>[<a href="plote3f1.jpg?action=AttachFile&amp;do=get&amp;target=plot.jpg">get</a>&nbsp;| <a href="mplot3D23ef.html?action=AttachFile&amp;do=view&amp;target=plot.jpg">view</a>] (2006-02-17 17:15:10, 25.1 KB) [[attachment:plot.jpg]]</li><li>[<a href="plot7286.png?action=AttachFile&amp;do=get&amp;target=plot.png">get</a>&nbsp;| <a href="mplot3D2c12.html?action=AttachFile&amp;do=view&amp;target=plot.png">view</a>] (2006-02-17 17:15:28, 197.3 KB) [[attachment:plot.png]]</li><li>[<a href="scattercef3.jpg?action=AttachFile&amp;do=get&amp;target=scatter.jpg">get</a>&nbsp;| <a href="mplot3D445c.html?action=AttachFile&amp;do=view&amp;target=scatter.jpg">view</a>] (2006-02-17 15:31:56, 21.2 KB) [[attachment:scatter.jpg]]</li><li>[<a href="scatter7849.png?action=AttachFile&amp;do=get&amp;target=scatter.png">get</a>&nbsp;| <a href="mplot3D8d90.html?action=AttachFile&amp;do=view&amp;target=scatter.png">view</a>] (2006-02-17 14:44:11, 280.2 KB) [[attachment:scatter.png]]</li><li>[<a href="surface15f2.jpg?action=AttachFile&amp;do=get&amp;target=surface.jpg">get</a>&nbsp;| <a href="mplot3D59e8.html?action=AttachFile&amp;do=view&amp;target=surface.jpg">view</a>] (2006-02-17 15:32:06, 16.5 KB) [[attachment:surface.jpg]]</li><li>[<a href="surface8888.png?action=AttachFile&amp;do=get&amp;target=surface.png">get</a>&nbsp;| <a href="mplot3D124a.html?action=AttachFile&amp;do=view&amp;target=surface.png">view</a>] (2006-02-17 14:44:57, 98.7 KB) [[attachment:surface.png]]</li><li>[<a href="test14a27.jpg?action=AttachFile&amp;do=get&amp;target=test1.jpg">get</a>&nbsp;| <a href="mplot3D53f9.html?action=AttachFile&amp;do=view&amp;target=test1.jpg">view</a>] (2006-02-17 15:32:14, 26.4 KB) [[attachment:test1.jpg]]</li><li>[<a href="test1e919.png?action=AttachFile&amp;do=get&amp;target=test1.png">get</a>&nbsp;| <a href="mplot3Dfd1f.html?action=AttachFile&amp;do=view&amp;target=test1.png">view</a>] (2006-02-17 14:49:34, 149.1 KB) [[attachment:test1.png]]</li><li>[<a href="test2c119.jpg?action=AttachFile&amp;do=get&amp;target=test2.jpg">get</a>&nbsp;| <a href="mplot3D9a79.html?action=AttachFile&amp;do=view&amp;target=test2.jpg">view</a>] (2006-02-17 15:32:21, 17.7 KB) [[attachment:test2.jpg]]</li><li>[<a href="test2ce89.png?action=AttachFile&amp;do=get&amp;target=test2.png">get</a>&nbsp;| <a href="mplot3Df602.html?action=AttachFile&amp;do=view&amp;target=test2.png">view</a>] (2006-02-17 14:49:57, 92.1 KB) [[attachment:test2.png]]</li><li>[<a href="test320b6.jpg?action=AttachFile&amp;do=get&amp;target=test3.jpg">get</a>&nbsp;| <a href="mplot3D6854.html?action=AttachFile&amp;do=view&amp;target=test3.jpg">view</a>] (2006-02-17 15:32:29, 22.6 KB) [[attachment:test3.jpg]]</li><li>[<a href="test3e5ea.png?action=AttachFile&amp;do=get&amp;target=test3.png">get</a>&nbsp;| <a href="mplot3Dd9f2.html?action=AttachFile&amp;do=view&amp;target=test3.png">view</a>] (2006-02-17 14:50:17, 159.2 KB) [[attachment:test3.png]]</li><li>[<a href="wireframed8e5.jpg?action=AttachFile&amp;do=get&amp;target=wireframe.jpg">get</a>&nbsp;| <a href="mplot3D357e.html?action=AttachFile&amp;do=view&amp;target=wireframe.jpg">view</a>] (2006-02-17 15:31:02, 25.0 KB) [[attachment:wireframe.jpg]]</li><li>[<a href="wireframe40cb.png?action=AttachFile&amp;do=get&amp;target=wireframe.png">get</a>&nbsp;| <a href="mplot3D9f75.html?action=AttachFile&amp;do=view&amp;target=wireframe.png">view</a>] (2006-02-17 13:56:50, 239.4 KB) [[attachment:wireframe.png]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mplot3D37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/mplot3D?action=AttachFile&do=view&target=test3.jpg by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:50:49 GMT -->
+</html>
+

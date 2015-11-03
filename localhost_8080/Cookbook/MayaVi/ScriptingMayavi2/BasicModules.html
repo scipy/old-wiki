@@ -1,0 +1,376 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:15:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/MayaVi/ScriptingMayavi2/BasicModules - SciPy</title>
+<script type="text/javascript" src="../../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/ScriptingMayavi2/BasicModules" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FScriptingMayavi2%2FBasicModules&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules?action=print">
+<link rel="Up" href="../ScriptingMayavi2.html">
+<link rel="Appendix" title="basic_axes.png" href="BasicModules539e.html?action=AttachFile&amp;do=view&amp;target=basic_axes.png">
+<link rel="Appendix" title="basic_colorbar.png" href="BasicModules6938.html?action=AttachFile&amp;do=view&amp;target=basic_colorbar.png">
+<link rel="Appendix" title="basic_orientationaxes.png" href="BasicModules6107.html?action=AttachFile&amp;do=view&amp;target=basic_orientationaxes.png">
+<link rel="Appendix" title="basic_outline.png" href="BasicModulesa0c0.html?action=AttachFile&amp;do=view&amp;target=basic_outline.png">
+<link rel="Appendix" title="basic_scene_parall.png" href="BasicModulesdcd5.html?action=AttachFile&amp;do=view&amp;target=basic_scene_parall.png">
+<link rel="Appendix" title="basic_scene_persp.png" href="BasicModules3ac0.html?action=AttachFile&amp;do=view&amp;target=basic_scene_persp.png">
+<link rel="Appendix" title="basic_title.png" href="BasicModulesb32f.html?action=AttachFile&amp;do=view&amp;target=basic_title.png">
+<link rel="Search" href="../../../FindPage.html">
+<link rel="Index" href="../../../TitleIndex.html">
+<link rel="Glossary" href="../../../WordIndex.html">
+<link rel="Help" href="../../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="BasicModules456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../../Cookbook.html">Cookbook</a></li><li><a href="../../MayaVi.html">MayaVi</a></li><li><a href="../ScriptingMayavi2.html">ScriptingMayavi2</a></li><li><a class="backlink" href="BasicModules019b.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FScriptingMayavi2%2FBasicModules%22" rel="nofollow" title="Click to do a full-text search for this title">BasicModules</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../../HelpContents.html">HelpContents</a></li><li class="current"><a href="BasicModules.html">BasicModules</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BasicModules37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Outline_module">Outline module</a></li><li>
+<a href="#Axes_module">Axes module</a></li><li>
+<a href="#OrientationAxes_module">OrientationAxes module</a></li><li>
+<a href="#Text_module">Text module</a></li><li>
+<a href="#Setting_up_color_bar">Setting up color bar</a></li><li>
+<a href="#Setting_up_the_scene">Setting up the scene</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">These modules are called &quot;basic&quot; because they are general and independant to all kind of data. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line874">Before using a module, remind that you have to import it. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">In general, if you want to change the color of an object, you have to type: <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867"><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-724a4ba4255d56dcac58320ec5dabae332a602d9" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ID">module</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+</pre></div></div><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line874">where fg_color is a &quot;tuple&quot;, say (0, 0, 0) for black. <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line862">Note: You can set color for each module/filter (when available, of course), as above. But you can also set background/foreground colors for all your MayaVi2 sessions. See <a href="../Tips.html">Cookbook/MayaVi/Tips</a>. So, your background and foreground colors may (in fact, must) be different from those in the pictures presented here. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><p class="line867">
+<h1 id="Outline_module">Outline module</h1>
+<span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line874">Nothing special for this very simple module.  <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line874">Begin to import the Outline module: <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-6b68baf4952b8bdb8773a1c62ac546c82e135e32" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.outline</span> <span class="ResWord">import</span> <span class="ID">Outline</span></span>
+</pre></div></div><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line874">then <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><p class="line867"><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-736554c86b671f1a4b67c58869489d625a490697" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="ID">fg_color</span> = (<span class="Number">0</span>, <span class="Number">0</span>, <span class="Number">0</span>)    <span class="Comment"># black foreground color</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ID">o</span> = <span class="ID">Outline</span>()</span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">o</span>)</span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ID">o</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+</pre></div></div><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line867"><img alt="basic_outline.png" class="attachment" src="basic_outlined612.png?action=AttachFile&amp;do=get&amp;target=basic_outline.png" title="basic_outline.png" /> <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line867">
+<h1 id="Axes_module">Axes module</h1>
+<span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line874">For axis, you can set several parameters: <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><ul><li>color for axes; <span class="anchor" id="line-45"></span></li><li>color for labels; <span class="anchor" id="line-46"></span></li><li>labels name; <span class="anchor" id="line-47"></span></li><li>and label format. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></li></ul><p class="line874">Here's what you can type: <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867"><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-3f4bbf9eec2a7a9a95cb32b08215bedf4cf20c6a" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.axes</span> <span class="ResWord">import</span> <span class="ID">Axes</span></span>
+</pre></div></div><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line874">then <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867"><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-1c9c36a9f5cba40467ff9126eee2b3f2ebd647ff" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span><span class="ID">a</span> = <span class="ID">Axes</span>()</span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">a</span>)</span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span>                     <span class="Comment"># color for axes</span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">axis_title_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span>     <span class="Comment"># color for axes title</span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">x_label</span> = <span class="String">&quot;</span><span class="String">Lx</span><span class="String">&quot;</span>                                <span class="Comment"># label for Ox axis</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">y_label</span> = <span class="String">&quot;</span><span class="String">Ly</span><span class="String">&quot;</span>                                <span class="Comment"># label for Oy axis</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">z_label</span> = <span class="String">&quot;</span><span class="String">Lz</span><span class="String">&quot;</span>                                <span class="Comment"># label for Oz axis</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">label_format</span> = <span class="String">&quot;</span><span class="String">&quot;</span>                             <span class="Comment"># no dimensions displayed</span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">axis_label_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span>     <span class="Comment"># in case we want to display them</span></span>
+</pre></div></div><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><p class="line874">Label format is the format for the dimensions along Ox, Oy and Oz axis. <span class="anchor" id="line-70"></span>By default, it is set to %6.3g. <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line867"><img alt="basic_axes.png" class="attachment" src="basic_axesf6b2.png?action=AttachFile&amp;do=get&amp;target=basic_axes.png" title="basic_axes.png" /> <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line867">
+<h1 id="OrientationAxes_module">OrientationAxes module</h1>
+<span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line867">OrientationAxes module will display a little trihedron in the corner of the render window, <span class="anchor" id="line-77"></span>showing the orientation of the three axes, Ox, Oy, Oz. <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><p class="line862">Note: VTK &gt; 5.0 must be installed in order to use this module. <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><p class="line874">Nothing special here, as the Outline module, you can set the labels color: <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><p class="line867"><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-4a7ca324015ffbd1b064b75542669245568a6d92" lang="en"><span class="line"><span class="anchor" id="line-1-12"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.orientation_axes</span> <span class="ResWord">import</span> <span class="ID">OrientationAxes</span></span>
+</pre></div></div><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><p class="line874">and <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line867"><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-58c29b9fff839248488d56d5ec0dfaac52c7a6b5" lang="en"><span class="line"><span class="anchor" id="line-1-14"></span><span class="ID">oa</span> = <span class="ID">OrientationAxes</span>()</span>
+<span class="line"><span class="anchor" id="line-2-3"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">oa</span>)</span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ID">oa</span>.<span class="ID">text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+</pre></div></div><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><p class="line867"><img alt="basic_orientationaxes.png" class="attachment" src="basic_orientationaxesd9d6.png?action=AttachFile&amp;do=get&amp;target=basic_orientationaxes.png" title="basic_orientationaxes.png" /> <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><p class="line867">
+<h1 id="Text_module">Text module</h1>
+<span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><p class="line874">You can use this module to display a title for your rendering window. <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><p class="line874">You need a text (a string), and you have to set up its position in the window (coordinates go from 0 to 1 in x and y) with the x_position and y_position parameters. <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><p class="line874">Then you can set up the height and the width of your text: <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><p class="line867"><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-a60f0377a405667ae4741e247dd4255e50434dca" lang="en"><span class="line"><span class="anchor" id="line-1-16"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.text</span> <span class="ResWord">import</span> <span class="ID">Text</span></span>
+</pre></div></div><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><p class="line874">and <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><p class="line867"><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-1-17"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-4825d2f0cead168d0f3a380a609930397596dc03" lang="en"><span class="line"><span class="anchor" id="line-1-18"></span><span class="Comment"># I like my title centered and at top of the window</span></span>
+<span class="line"><span class="anchor" id="line-2-4"></span><span class="ID">t</span> = <span class="ID">Text</span>()</span>
+<span class="line"><span class="anchor" id="line-3-4"></span><span class="ID">t</span>.<span class="ID">text</span> = <span class="String">&quot;</span><span class="String">My Title Centered at the Top</span><span class="String">&quot;</span></span>
+<span class="line"><span class="anchor" id="line-4-3"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">t</span>)</span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">scaled_text</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">text_property</span>.<span class="ID">font_size</span> = <span class="Number">34</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span><span class="Comment"># have to find out text width to center it. Tricky, but works fine. Thanks to Prabhu.</span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="ID">t</span>.<span class="ID">width</span> = <span class="Number">1.0</span>*<span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">get_width</span>(<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>)/<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>.<span class="ID">size</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">height</span> = <span class="Number">1.0</span>*<span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">get_height</span>(<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>)/<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>.<span class="ID">size</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">t</span>.<span class="ID">x_position</span> = <span class="Number">0.5</span>-<span class="ID">t</span>.<span class="ID">width</span>/<span class="Number">2</span></span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ID">t</span>.<span class="ID">y_position</span> = <span class="Number">1</span>-<span class="ID">height</span></span>
+</pre></div></div><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><p class="line867"><img alt="basic_title.png" class="attachment" src="basic_title5080.png?action=AttachFile&amp;do=get&amp;target=basic_title.png" title="basic_title.png" /> <span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><p class="line874">Now, we will present how to set up the color bar, called &quot;scalar&quot; or &quot;vector&quot; color bar. It depends of the data you have in your file. <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line867">
+<h1 id="Setting_up_color_bar">Setting up color bar</h1>
+<span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><p class="line874">Strictly speaking, the color bar is not a module, i.e. you don't need to add it with an add_module() command: you have to associate the &quot;module_manager&quot; object to a module, previously loaded, say the Text module for example. <span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><p class="line874">Then, you can configure the color bar as follows (keywords are self-explanatory): <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><p class="line867"><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-1-19"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-a44cfb97a0583dc83e92f1b1f079396d2c9e39c8" lang="en"><span class="line"><span class="anchor" id="line-1-20"></span><span class="ID">mmsclut</span> = <span class="ID">t</span>.<span class="ID">module_manager</span>.<span class="ID">scalar_lut_manager</span></span>
+<span class="line"><span class="anchor" id="line-2-5"></span><span class="ID">mmsclut</span>.<span class="ID">show_scalar_bar</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="anchor" id="line-3-5"></span><span class="ID">mmsclutsc</span> = <span class="ID">mmsclut</span>.<span class="ID">scalar_bar</span></span>
+<span class="line"><span class="anchor" id="line-4-4"></span><span class="ID">mmsclutsc</span>.<span class="ID">orientation</span> = <span class="String">&quot;</span><span class="String">vertical</span><span class="String">&quot;</span>    <span class="Comment"># or &quot;horizontal&quot;</span></span>
+<span class="line"><span class="anchor" id="line-5-3"></span><span class="ID">mmsclutsc</span>.<span class="ID">width</span> = <span class="Number">0.1</span></span>
+<span class="line"><span class="anchor" id="line-6-3"></span><span class="ID">mmsclutsc</span>.<span class="ID">height</span> = <span class="Number">0.8</span></span>
+<span class="line"><span class="anchor" id="line-7-3"></span><span class="ID">mmsclutsc</span>.<span class="ID">position</span> = (<span class="Number">0.01</span>, <span class="Number">0.15</span>)     <span class="Comment"># color bar located to the left of the rendering window</span></span>
+<span class="line"><span class="anchor" id="line-8-3"></span><span class="ID">mmsclutsc</span>.<span class="ID">label_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="anchor" id="line-9-3"></span><span class="ID">mmsclutsc</span>.<span class="ID">title_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ID">mmsclut</span>.<span class="ID">number_of_labels</span> = <span class="Number">10</span></span>
+<span class="line"><span class="anchor" id="line-11-2"></span><span class="ID">mmsclut</span>.<span class="ID">number_of_colors</span> = <span class="Number">64</span></span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="ID">mmsclut</span>.<span class="ID">data_name</span> = <span class="String">&quot;</span><span class="String">My Label</span><span class="String">&quot;</span></span>
+</pre></div></div><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><p class="line867"><img alt="basic_colorbar.png" class="attachment" src="basic_colorbar30d0.png?action=AttachFile&amp;do=get&amp;target=basic_colorbar.png" title="basic_colorbar.png" /> <span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><p class="line874">Note: To configure a color bar for vectors instead of scalars, replace &quot;scalar_lut_manager&quot; by &quot;vector_lut_manager&quot; above. <span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><p class="line874">At last, to close the &quot;basic&quot; modules section, let's see how we can setting up the scene. <span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><p class="line867">
+<h1 id="Setting_up_the_scene">Setting up the scene</h1>
+<span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><p class="line874">By &quot;setting up the scene&quot;, you have to read &quot;how the scene will be seen&quot;: for example, setting the color background and the point of view of the scene. <span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><p class="line862">As usual, setting these parameters using python &amp; TVTK is very easy. <span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><p class="line874">If you want to change background color, you may need to also change foreground color for all <span class="anchor" id="line-164"></span>modules. We recall them here. <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line867"><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-1-21"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-2d76150363f2d639d77e9774b30cda91cb2aaf82\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_1">   1</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_1"></span><span class="anchor" id="line-1-22"></span><span class="Comment">#! /usr/bin/env python</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_2">   2</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_2"></span><span class="anchor" id="line-2-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_3">   3</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_3"></span><span class="anchor" id="line-3-6"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.outline</span> <span class="ResWord">import</span> <span class="ID">Outline</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_4">   4</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_4"></span><span class="anchor" id="line-4-5"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.axes</span> <span class="ResWord">import</span> <span class="ID">Axes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_5">   5</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_5"></span><span class="anchor" id="line-5-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.orientation_axes</span> <span class="ResWord">import</span> <span class="ID">OrientationAxes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_6">   6</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_6"></span><span class="anchor" id="line-6-4"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.modules.text</span> <span class="ResWord">import</span> <span class="ID">Text</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_7">   7</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_7"></span><span class="anchor" id="line-7-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_8">   8</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_8"></span><span class="anchor" id="line-8-4"></span><span class="Comment"># we want a dark foreground color on a bright background</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_9">   9</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_9"></span><span class="anchor" id="line-9-4"></span><span class="ID">fg_color</span> = (<span class="Number">0.06666</span>, <span class="Number">0.06666</span>, <span class="Number">0.1804</span>)   <span class="Comment"># dark blue</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_10">  10</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_10"></span><span class="anchor" id="line-10-3"></span><span class="ID">bg_color</span> = (<span class="Number">1</span>, <span class="Number">1</span>, <span class="Number">0.94118</span>)              <span class="Comment"># ivory</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_11">  11</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_11"></span><span class="anchor" id="line-11-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_12">  12</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_12"></span><span class="anchor" id="line-12-3"></span><span class="Comment"># setting foreground color for Outline module</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_13">  13</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_13"></span><span class="anchor" id="line-13-1"></span><span class="ID">o</span> = <span class="ID">Outline</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_14">  14</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_14"></span><span class="anchor" id="line-14-1"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">o</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_15">  15</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">o</span>.<span class="ID">actor</span>.<span class="ID">property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_16">  16</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_16"></span><span class="anchor" id="line-16-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_17">  17</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_17"></span><span class="anchor" id="line-17-1"></span><span class="Comment"># setting foreground color for Axes module</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_18">  18</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_18"></span><span class="anchor" id="line-18-1"></span><span class="ID">a</span> = <span class="ID">Axes</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_19">  19</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_19"></span><span class="anchor" id="line-19-1"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">a</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_20">  20</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span>                     <span class="Comment"># color for axes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_21">  21</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_21"></span><span class="anchor" id="line-21-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">axis_title_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span>     <span class="Comment"># color for axes label</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_22">  22</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_22"></span><span class="anchor" id="line-22-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">x_label</span> = <span class="String">&quot;</span><span class="String">Lx</span><span class="String">&quot;</span>                                <span class="Comment"># label for Ox axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_23">  23</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_23"></span><span class="anchor" id="line-23-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">y_label</span> = <span class="String">&quot;</span><span class="String">Ly</span><span class="String">&quot;</span>                                <span class="Comment"># label for Oy axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_24">  24</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">z_label</span> = <span class="String">&quot;</span><span class="String">Lz</span><span class="String">&quot;</span>                                <span class="Comment"># label for Oz axis</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_25">  25</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_25"></span><span class="anchor" id="line-25-1"></span><span class="ID">a</span>.<span class="ID">axes</span>.<span class="ID">label_format</span> = <span class="String">&quot;</span><span class="String">&quot;</span>                             <span class="Comment"># no dimensions displayed</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_26">  26</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_26"></span><span class="anchor" id="line-26-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_27">  27</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_27"></span><span class="anchor" id="line-27-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_28">  28</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_28"></span><span class="anchor" id="line-28-1"></span><span class="Comment"># setting foreground color for OrientationAxes module</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_29">  29</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_29"></span><span class="anchor" id="line-29-1"></span><span class="ID">oa</span> = <span class="ID">OrientationAxes</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_30">  30</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_30"></span><span class="anchor" id="line-30-1"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">oa</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_31">  31</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_31"></span><span class="anchor" id="line-31-1"></span><span class="ID">oa</span>.<span class="ID">text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_32">  32</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_32"></span><span class="anchor" id="line-32-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_33">  33</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_33"></span><span class="anchor" id="line-33-1"></span><span class="Comment"># setting foreground color for Text module</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_34">  34</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_34"></span><span class="anchor" id="line-34-1"></span><span class="ID">t</span> = <span class="ID">Text</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_35">  35</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_35"></span><span class="anchor" id="line-35-1"></span><span class="ID">t</span>.<span class="ID">text</span> = <span class="String">&quot;</span><span class="String">My Title Centered at the Top</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_36">  36</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_36"></span><span class="anchor" id="line-36-1"></span><span class="ID">script</span>.<span class="ID">add_module</span>(<span class="ID">t</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_37">  37</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_37"></span><span class="anchor" id="line-37-1"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">scaled_text</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_38">  38</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_38"></span><span class="anchor" id="line-38-1"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">text_property</span>.<span class="ID">font_size</span> = <span class="Number">34</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_39">  39</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_39"></span><span class="anchor" id="line-39-1"></span><span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_40">  40</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_40"></span><span class="anchor" id="line-40-1"></span><span class="ID">t</span>.<span class="ID">width</span> = <span class="Number">1.0</span>*<span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">get_width</span>(<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>)/<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>.<span class="ID">size</span>[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_41">  41</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_41"></span><span class="anchor" id="line-41-1"></span><span class="ID">height</span> = <span class="Number">1.0</span>*<span class="ID">t</span>.<span class="ID">actor</span>.<span class="ID">mapper</span>.<span class="ID">get_height</span>(<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>)/<span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">renderer</span>.<span class="ID">size</span>[<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_42">  42</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_42"></span><span class="anchor" id="line-42-1"></span><span class="ID">t</span>.<span class="ID">x_position</span> = <span class="Number">0.5</span>-<span class="ID">t</span>.<span class="ID">width</span>/<span class="Number">2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_43">  43</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_43"></span><span class="anchor" id="line-43-1"></span><span class="ID">t</span>.<span class="ID">y_position</span> = <span class="Number">1</span>-<span class="ID">height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_44">  44</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_44"></span><span class="anchor" id="line-44-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_45">  45</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_45"></span><span class="anchor" id="line-45-1"></span><span class="Comment"># setting foreground color for labels and title color bar.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_46">  46</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_46"></span><span class="anchor" id="line-46-1"></span><span class="ID">mmsclut</span> = <span class="ID">t</span>.<span class="ID">module_manager</span>.<span class="ID">scalar_lut_manager</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_47">  47</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_47"></span><span class="anchor" id="line-47-1"></span><span class="ID">mmsclut</span>.<span class="ID">show_scalar_bar</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_48">  48</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_48"></span><span class="anchor" id="line-48-1"></span><span class="ID">mmsclutsc</span> = <span class="ID">mmsclut</span>.<span class="ID">scalar_bar</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_49">  49</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_49"></span><span class="anchor" id="line-49-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">orientation</span> = <span class="String">&quot;</span><span class="String">vertical</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_50">  50</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_50"></span><span class="anchor" id="line-50-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">width</span> = <span class="Number">0.1</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_51">  51</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_51"></span><span class="anchor" id="line-51-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">height</span> = <span class="Number">0.8</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_52">  52</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_52"></span><span class="anchor" id="line-52-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">position</span> = (<span class="Number">0.01</span>, <span class="Number">0.15</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_53">  53</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_53"></span><span class="anchor" id="line-53-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">label_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_54">  54</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_54"></span><span class="anchor" id="line-54-1"></span><span class="ID">mmsclutsc</span>.<span class="ID">title_text_property</span>.<span class="ID">color</span> = <span class="ID">fg_color</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_55">  55</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_55"></span><span class="anchor" id="line-55-1"></span><span class="ID">mmsclut</span>.<span class="ID">number_of_labels</span> = <span class="Number">10</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_56">  56</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_56"></span><span class="anchor" id="line-56-1"></span><span class="ID">mmsclut</span>.<span class="ID">number_of_colors</span> = <span class="Number">64</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_57">  57</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_57"></span><span class="anchor" id="line-57-1"></span><span class="ID">mmsclut</span>.<span class="ID">data_name</span> = <span class="String">&quot;</span><span class="String">My Label</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_58">  58</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_58"></span><span class="anchor" id="line-58-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_59">  59</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_59"></span><span class="anchor" id="line-59-1"></span><span class="Comment"># setting background color for the scene.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_60">  60</a> </span><span class="LineAnchor" id="CA-2d76150363f2d639d77e9774b30cda91cb2aaf82_60"></span><span class="anchor" id="line-60-1"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">background</span> = <span class="ID">bg_color</span></span>
+</pre></div></div><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><p class="line862">Some points of view are also predefined in MayaVi2.  <span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><p class="line874">If you want: <span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><ul><li>Ox axis normal to the scene: use x_plus_view() (towards) or x_minus_view() (backwards) method; <span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span></li><li class="gap">Oy axis normal to the scene: use y_plus_view() (towards) or y_minus_view() (backwards) method; <span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span></li><li class="gap">Oz axis normal to the scene: use z_plus_view() (towards) or z_minus_view() (backwards) method; <span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span></li><li class="gap">an isometric view (coordinates normal are (1, 1, 1)), use isometric_view method. <span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span></li></ul><p class="line874">You can also: <span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><ul><li>set the elevation and azimuth angles to your needs (in degrees); <span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span></li><li class="gap">set a zooming factor of your scene. <span class="anchor" id="line-246"></span><span class="anchor" id="line-247"></span></li></ul><p class="line874">with: <span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><p class="line867"><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-1-23"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-ead7b4f63793eebd5d8f2ef0d3d1fc19fb70a953" lang="en"><span class="line"><span class="anchor" id="line-1-24"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">x_plus_view</span>()</span>
+<span class="line"><span class="anchor" id="line-2-7"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">camera</span>.<span class="ID">azimuth</span>(<span class="Number">62</span>)</span>
+<span class="line"><span class="anchor" id="line-3-7"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">camera</span>.<span class="ID">elevation</span>(<span class="Number">19.5</span>)</span>
+<span class="line"><span class="anchor" id="line-4-6"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">camera</span>.<span class="ID">zoom</span>(<span class="Number">1.5</span>)</span>
+</pre></div></div><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><p class="line874">At last, you can choose if you want a perspective view or a parallel projection for your scene: <span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><p class="line867"><span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><span class="anchor" id="line-1-25"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-7f36d34f665a5485b1772c3f0993d48a4f7f5e1f" lang="en"><span class="line"><span class="anchor" id="line-1-26"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">camera</span>.<span class="ID">parallel_projection</span> = <span class="ResWord">True</span></span>
+</pre></div></div><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><p class="line867"><img alt="basic_scene_parall.png" class="attachment" src="basic_scene_parallcd4b.png?action=AttachFile&amp;do=get&amp;target=basic_scene_parall.png" title="basic_scene_parall.png" /> <span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><p class="line874">for a parallel projection, or: <span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><p class="line867"><span class="anchor" id="line-267"></span><span class="anchor" id="line-268"></span><span class="anchor" id="line-1-27"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-276aced26a6d81a28e5db2bb25131d45f523f1bf" lang="en"><span class="line"><span class="anchor" id="line-1-28"></span><span class="ID">t</span>.<span class="ID">scene</span>.<span class="ID">camera</span>.<span class="ID">parallel_projection</span> = <span class="ResWord">False</span></span>
+</pre></div></div><span class="anchor" id="line-269"></span><span class="anchor" id="line-270"></span><p class="line867"><img alt="basic_scene_persp.png" class="attachment" src="basic_scene_perspc498.png?action=AttachFile&amp;do=get&amp;target=basic_scene_persp.png" title="basic_scene_persp.png" /> <span class="anchor" id="line-271"></span><span class="anchor" id="line-272"></span><p class="line874">for a perspective view. <span class="anchor" id="line-273"></span><span class="anchor" id="line-274"></span><p class="line874">Here, &quot;t&quot; stands for the Text module previously loaded. <span class="anchor" id="line-275"></span><span class="anchor" id="line-276"></span><p class="line862">Note: There are a lot of others parameters you can set up for your scene. See <a href="../Tips.html">Cookbook/MayaVi/Tips</a> to read how to get more information about setting parameters modules. <span class="anchor" id="line-277"></span><span class="anchor" id="line-278"></span><p class="line874">Now, it's time to read the most interesting part: configuring and using modules and filters which interact with your data. <span class="anchor" id="line-279"></span><span class="anchor" id="line-280"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-281"></span><a href="../../../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-282"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MayaVi/ScriptingMayavi2/BasicModules  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="BasicModules37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/ScriptingMayavi2/BasicModules by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:16:21 GMT -->
+</html>
+

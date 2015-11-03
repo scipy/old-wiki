@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/RunningMayavi2?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/MayaVi/RunningMayavi2 - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/RunningMayavi2" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FRunningMayavi2&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Appendix" title="mv2.png" href="RunningMayavi206b7.html?action=AttachFile&amp;do=view&amp;target=mv2.png">
+<link rel="Appendix" title="mv2_cmdline.png" href="RunningMayavi22585.html?action=AttachFile&amp;do=view&amp;target=mv2_cmdline.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="RunningMayavi2456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../MayaVi.html">MayaVi</a></li><li><a class="backlink" href="RunningMayavi2aef2.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FRunningMayavi2%22" rel="nofollow" title="Click to do a full-text search for this title">RunningMayavi2</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="RunningMayavi2.html">RunningMayavi2</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="RunningMayavi2.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="RunningMayavi237dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Run_MayaVi2_as_is">Run MayaVi2 as is</a></li><li>
+<a href="#Run_MayaVi2_with_some_parameters:_modules_and_filters_available">Run MayaVi2 with some parameters: modules and filters available</a></li><li>
+<a href="#Moving_around">Moving around</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867">MayaVi2 works with two kinds of &quot;objects&quot;: modules and filters. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867">MayaVi Users Guide (v. 1.5) by P. Ramachandran defines them as follows: <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><ul><li>&quot;A Module is an object that actually visualizes the data.&quot;; <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span></li><li class="gap"><p class="line862">&quot;A Filter is an object that filters out the data in some way or the other. A simple example is the ExtractVectorNorm filter. This extracts the magnitude of the selected vector data field attribute for the data file. All modules that use this as an input will receive the vector magnitude as the scalar field data.&quot; <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span></li></ul><p class="line862">You can run MayaVi2 using one of the following two ways: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><ul><li><p class="line862">run MayaVi2 as is, without any options on the command line. You'll manage modules and/or filters using the GUI; <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span></li><li class="gap"><p class="line862">run MayaVi2 with some options on the command line, thus loading directly the modules and/or the filters you want to use. <span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span></li></ul><p class="line867">
+<h1 id="Run_MayaVi2_as_is">Run MayaVi2 as is</h1>
+<span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><p class="line862">Note: It is supposed here, in order to work, that your PATH variable contains the directory where MayaVi2 binary is installed (for instance, /usr/local/bin). <span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line862">Begin to run MayaVi2: <span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><p class="line867"><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><pre><span class="anchor" id="line-1"></span>mayavi2</pre><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><p class="line867">MayaVi2 will be launched with a TVTK Scene which is blank. <span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><ul><li>Let's start by loading some data. Go into File/Open/Vtk file. This will bring up a file dialogue, use this to select the heart.vtk file under examples/data directory. <span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span>The TVTK Scene has not changed, but you see that the file is loaded by looking at the upper left window. <span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span></li><li class="gap">Now that we have data, we can visualize it. First lets create an outline. Click on &quot;VTK File (heart.vtk)&quot; in the upper left window. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span>Go into the menu item Visualize/Modules/Outline. This creates an Outline object. We can edit the properties of the outline in the object editor, and we can rotate and manipulate the object in the scene editor. <span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span></li><li class="gap">Now lets add three grid planes. <span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line862">Select Visualize/Modules/!<a class="nonexistent" href="../../GridPlane.html">GridPlane</a>, this create a grid plane in the X axis. We can create two more grid planes. By selecting Axis in object editor, we can set those grid planes in the Y and Z axis. <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span></li><li class="gap">We can project the object onto the Grid planes using contour grid planes. Select Visualize/Modules/Contour grid plane. Do this for the Y, and Z planes as well. <span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span></li><li class="gap">Now we can look at our data by selecting Visualize/Modules/Isosurface. <span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span></li><li class="gap">We can now finish adding a scalar cut plane by selecting Visualize/Modules/Scalar Cut Plane. By clicking on the white arrow we can move the plane around. <span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span></li></ul><p class="line862">The result should look like this (for issue concerning background/forground colors, see <a href="Tips.html">Cookbook/MayaVi/Tips</a>): <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line867"><img alt="mv2.png" class="attachment" src="mv29980.png?action=AttachFile&amp;do=get&amp;target=mv2.png" title="mv2.png" /> <span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><p class="line867">
+<h1 id="Run_MayaVi2_with_some_parameters:_modules_and_filters_available">Run MayaVi2 with some parameters: modules and filters available</h1>
+<span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><p class="line874">In order to know what you can set as parameters on the command line, type <span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line867"><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><pre><span class="anchor" id="line-1-1"></span>mayavi2 -h</pre><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><p class="line874">This will list all the available options. Amongst all these options are: <span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><ul><li><p class="line862">-d file.vtk: set the VTK file to load into MayaVi2; <span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span></li><li class="gap"><p class="line862">-m <em>module</em>: set the module to use. The following list displays all available modules, in alphabetical order with a short description (taken from Python doc files): <span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><ul><li><p class="line891"><em>Axes</em>: draws a simple axes using tvtk.CubeAxesActor; <span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span></li><li class="gap"><p class="line891"><em>ContourGridPlane</em>: a contour grid plane module. This module lets one take a slice of input grid data and view contours of the data. The module only works for structured points, rectilinear grid and structured grid input. <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span></li><li class="gap"><p class="line891"><em>CustomGridPlane</em>: a custom grid plane with a lot more flexibility than GridPlane. This also only works for non-unstructured/non-polygonal datasets. <span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span></li><li class="gap"><p class="line891"><em>Glyph</em>: displays different types of glyphs oriented and colored as per scalar or vector data at the input points; <span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span></li><li class="gap"><p class="line891"><em>GridPlane</em>: a simple grid plane module; <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span></li><li class="gap"><p class="line891"><em>ImagePlaneWidget</em>: a simple ImagePlaneWidget module to view image data; <span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span></li><li class="gap"><p class="line891"><em>IsoSurface</em>: an IsoSurface module that allows the user to make contours of input point data; <span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span></li><li class="gap"><p class="line891"><em>OrientationAxes</em>: creates a small axes on the side that indicates the position of the co-ordinate axes and thereby marks the orientation of the scene. It uses the OrientationMarkerWidget which requires VTK-4.5 and above. <span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span></li><li class="gap"><p class="line891"><em>Outline</em>: an outline module that draws an outline for the given data; <span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span></li><li class="gap"><p class="line891"><em>ScalarCutPlane</em>: takes a cut plane of any input data set using an implicit plane and plots the data with optional contouring and scalar warping; <span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span></li><li class="gap"><p class="line891"><em>SliceUnstructuredGrid</em>: this module takes a slice of the unstructured grid data and shows the cells that intersect or touch the slice; <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span></li><li class="gap"><p class="line891"><em>Streamline</em>: allows the user to draw streamlines for given vector data. This supports various types of seed objects (line, sphere, plane and point seeds). It also allows the user to draw ribbons or tubes and further supports different types of interactive modes of calculating the streamlines. <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span></li><li class="gap"><p class="line891"><em>StructuredGridOutline</em>: draws a grid-conforming outline for structured grids; <span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span></li><li class="gap"><p class="line891"><em>Surface</em>: draws a surface for any input dataset with optional contouring; <span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span></li><li class="gap"><p class="line891"><em>Text</em>: this module allows the user to place text on the screen; <span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span></li><li class="gap"><p class="line891"><em>VectorCutPlane</em>: takes an arbitrary slice of the input data using an implicit cut plane and places glyphs according to the vector field data. The glyphs may be colored using either the vector magnitude or the scalar attributes. <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span></li><li class="gap"><p class="line891"><em>Vectors</em>: displays different types of glyphs oriented and colored as per vector data at the input points. This is merely a convenience module that is entirely based on the Glyph module. <span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span></li><li class="gap"><p class="line891"><em>Volume</em>: the Volume module visualizes scalar fields using volumetric visualization techniques. This supports ImageData and UnstructuredGrid data. It also supports the FixedPointRenderer for ImageData. However, the performance is slow so your best bet is probably with the ImageData based renderers. <span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span></li><li class="gap"><p class="line891"><em>WarpVectorCutPlane</em>: takes an arbitrary slice of the input data using an implicit cut plane and warps it according to the vector field data. The scalars are displayed on the warped surface as colors. <span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span></li></ul></li><li class="gap"><p class="line862">-f <em>filter</em>: set the filter to use (load it before module if you want to see your data filtered). Available filters are: <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><ul><li><p class="line891"><em>CellToPointData</em>: transforms cell attribute data to point data by averaging the cell data from the cells at the point. <span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span></li><li class="gap"><p class="line891"><em>Delaunay2D</em>: performs a 2D Delaunay triangulation using the tvtk.Delaunay2D class; <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span></li><li class="gap"><p class="line891"><em>Delaunay3D</em>: performs a 3D Delaunay triangulation using the tvtk.Delaunay3D class; <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span></li><li class="gap"><p class="line891"><em>ExtractGrid</em>: allows a user to select a part of a structured grid; <span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span></li><li class="gap"><p class="line891"><em>ExtractUnstructuredGrid</em>: allows a user to select a part of an unstructured grid; <span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span></li><li class="gap"><p class="line891"><em>ExtractVectorNorm</em>: computes the norm (Eucliedean) of the input vector data (with optional scaling between [0, 1]). This is useful when the input data has vector input but no scalar data for the magnitude of the vectors. <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span></li><li class="gap"><p class="line891"><em>MaskPoints</em>: selectively passes the input points downstream. This can be used to subsample the input points. Note that this does not pass geometry data, this means all grid information is lost. <span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span></li><li class="gap"><p class="line891"><em>PointToCellData</em>: does the inverse of the CellToPointData filter; <span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span></li><li class="gap"><p class="line891"><em>PolyDataNormals</em>: computes normals from input data. This gives meshes a smoother appearance. This should work for any input dataset. Note: this filter is called &quot;Compute Normals&quot; in MayaVi2 GUI (Visualize/Filters/Compute Normals). <span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span></li><li class="gap"><p class="line891"><em>Threshold</em>: a simple filter that thresholds on input data; <span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span></li><li class="gap"><p class="line891"><em>TransformData</em>: performs a linear transformation to input data using a tvtk.BoxWidget. This does not work with ImageData/StructuredPoints. <span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span></li><li class="gap"><p class="line891"><em>WarpScalar</em>: warps the input data along a particular direction (either the normals or a specified direction) with a scale specified by the local scalar value. Useful for making carpet plots. <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span></li><li class="gap"><p class="line891"><em>WarpVector</em>: warps the input data along a the point vector attribute scaled as per a scale factor. Useful for showing flow profiles or displacements. <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span></li></ul></li></ul><p class="line874">Ok, you think you'll get rapidly tired to type all these long name modules and filters ? <span class="anchor" id="line-134"></span>Don't worry, use your shell completion command ! <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><p class="line874">For instance, for (t)csh shell, you can put this line in your configuration shell file: <span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><p class="line867"><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><pre><span class="anchor" id="line-1-2"></span>complete mayavi2 c/-/&quot;(3 d f m n M p q w x z)&quot;/ n/-3/f:*.3ds/ n/-d/f:*.vt?/ n/-f/&quot;(CellToPointData Delaunay2D Delaunay3D ExtractGrid ExtractUnstructuredGrid ExtractVectorNorm MaskPoints PointToCellData PolyDataNormals Threshold TransformData WarpScalar WarpVector)&quot;/ n/-m/&quot;(Axes ContourGridPlane CustomGridPlane Glyph GridPlane ImagePlaneWidget IsoSurface Outline OrientationAxes ScalarCutPlane SliceUnstructuredGrid Streamline StructuredGridOutline Surface Text Vectors VectorCutPlane Volume WarpVectorCutPlane)&quot;/ n/-p/f:{*xyz.bin,*.xyz}/ n/-q/f:{*q.bin,*.q}/ n/-w/f:*.wrl/ n/-x/f:*.py/ n/-z/f:*.mv2/</pre><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><p class="line862">Quite long to type the first time, but once typed, no more effort load the module or filter you want to use ! <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><p class="line862">Thus, typing (in MayaVi2's examples directory, see <a href="Installation.html">Cookbook/MayaVi/Installation</a>): <span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line867"><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><pre><span class="anchor" id="line-1-3"></span>mayavi2 -d data/heart.vtk -m Outline -m GridPlane -m GridPlane -m GridPlane -m ContourGridPlane -m ContourGridPlane -m IsoSurface -m ScalarCutPlane</pre><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><p class="line874">you should get this: <span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line867"><img alt="mv2_cmdline.png" class="attachment" src="mv2_cmdline78c0.png?action=AttachFile&amp;do=get&amp;target=mv2_cmdline.png" title="mv2_cmdline.png" /> <span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><p class="line874">Ok, this is not exactly the same as on the previous figure although exactly the same modules have been loaded. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line862">The reason is that you did not set (and you can not, AFAIK) some modules properties, such as iso-value for IsoSurface module, normals to the GridPlane, etc. <span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line874">Hopefully, you can set these parameters &quot;by hand&quot; using the GUI. <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><p class="line862">So now, let's play with this GUI <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><p class="line867">
+<h1 id="Moving_around">Moving around</h1>
+<span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><p class="line874">So, you can see on these two figures the render window on the right (TVTK Scene) beside the modules tree on the left. Let's consider the first figure. <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line874">You can handle rendering scene with the mouse as usual using OpenGL: <span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><ul><li>moving the mouse with the left button pressed rotates the scene; <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span></li><li class="gap">moving the mouse with middle button pressed translates it; <span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span></li><li class="gap">and moving the mouse with right button pressed zooms in/out (note: you can also use the wheel of your mouse, if you get one). <span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span></li></ul><p class="line874">Note: You can get a &quot;predefined&quot; angle of view (normal to x axis, y or z) clicking on <span class="anchor" id="line-175"></span>the &quot;View&quot; item or on each small icons (first X: Ox axis points backwards you, second X: Ox axis points towards you, etc...) <span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><p class="line874">On the left of the window, you can see which modules are loaded (&quot;TVTK Scene&quot; is the &quot;root&quot; of <span class="anchor" id="line-178"></span>the scene, and &quot;VTK file&quot; is the data source, i.e. the heart.vtk file): <span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><ul><li>&quot;Outline&quot; module displays the box surrounding the scene; <span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span></li><li class="gap"><p class="line862">you have three grid planes (&quot;GridPlane&quot; module), at coordinates x = 0, y = 0, and z = 0; <span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span></li><li class="gap"><p class="line862">two contour grid planes (&quot;ContourGridPlane&quot; module): the first displays contour lines (vertically), the second, the cutplane at z = const; <span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span></li><li class="gap"><p class="line862">&quot;IsoSurface&quot; module displays the heart as yellow; <span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span></li><li class="gap"><p class="line862">the last cutplane (vertically, at y = const) is displayed by the &quot;ScalarCutPlane&quot; module. <span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span></li></ul><p class="line874">Note that no filter is used in these scenes. <span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><p class="line874">Using each module/filter is very intuitive. Click on your module/filter in the tree and set some <span class="anchor" id="line-193"></span>parameters with the mouse or enter some values at the keyboard, in the window at the <span class="anchor" id="line-194"></span>bottom left of the GUI. <span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><p class="line874">If you want to copy/paste/delete/cut a given module/filter, click on it with the right button. A small window popups, with a items list. <span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><p class="line874">Note: You can get a larger window double-clicking on the choosen module/filter in the tree. <span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><p class="line874">To load other modules or add filters, click on the &quot;Visualize&quot; item at the top of the window. <span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><p class="line862">At last, you can also load another VTK data file, load/save the scene in a &quot;MayaVi2&quot; file (with extension .mv2), or convert it to the image format you want (PNG, JPEG...), clicking on the &quot;File&quot; item or on the appropriate icon (small floppy disk). <span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><p class="line874">You can also get your scene in full-screen clicking on the small icon representing four red arrows in a little square. To disable full-screen mode, type 'e' or 'q'. <span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><p class="line862">This is the simplest way to use MayaVi2. You are recalled here that you can also try <em>mayavi2 -h</em> to see what options and arguments you can add to the MayaVi2 command line. <span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-209"></span><a href="../../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-210"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="RunningMayavi237dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/RunningMayavi2">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/RunningMayavi2?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:04 GMT -->
+</html>
+

@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/ApplyFIRFilter by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:05:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/ApplyFIRFilter - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/ApplyFIRFilter" href="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FApplyFIRFilter&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="fir_time_comparison.png" href="ApplyFIRFilteracd8.html?action=AttachFile&amp;do=view&amp;target=fir_time_comparison.png">
+<link rel="Appendix" title="fir_time_comparison2.png" href="ApplyFIRFilter2fc9.html?action=AttachFile&amp;do=view&amp;target=fir_time_comparison2.png">
+<link rel="Appendix" title="fir_time_comparison3.png" href="ApplyFIRFilterb30e.html?action=AttachFile&amp;do=view&amp;target=fir_time_comparison3.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="ApplyFIRFilter456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="ApplyFIRFilter02e6.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FApplyFIRFilter%22" rel="nofollow" title="Click to do a full-text search for this title">ApplyFIRFilter</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="ApplyFIRFilter.html">Cookbook/ApplyFIRFilter</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ApplyFIRFilter37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h2 id="How_to_apply_a_FIR_filter:_convolve.2C_fftconvolve.2C_convolve1d_or_lfilter.3F">How to apply a FIR filter: convolve, fftconvolve, convolve1d or lfilter?</h2>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line874">The following plot shows the time required to apply a finite impulse response (FIR) filter of varying length to a signal of length 131072 using several different functions that are available in numpy and scipy. The details of how this figure was created are given below. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867"><img alt="fir_time_comparison3.png" class="attachment" src="fir_time_comparison33ed6.png?action=AttachFile&amp;do=get&amp;target=fir_time_comparison3.png" title="fir_time_comparison3.png" /> <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line867">
+<h2 id="The_Details">The Details</h2>
+<span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line874">There are several functions in the numpy and scipy libraries that can be used to apply a <span class="anchor" id="line-12"></span><a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Finite_impulse_response">FIR filter</a> to a signal. <span class="anchor" id="line-13"></span>From scipy.signal, lfilter() is designed to apply a discrete <span class="anchor" id="line-14"></span><a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Infinite_impulse_response">IIR filter</a> to a signal, <span class="anchor" id="line-15"></span>so by simply setting the array of denominator coefficients to [1.0], it can be <span class="anchor" id="line-16"></span>used to apply a FIR filter. <span class="anchor" id="line-17"></span>Applying a FIR filter is equivalent to a discrete <span class="anchor" id="line-18"></span><a class="http" href="../../external.html?link=http://en.wikipedia.org/wiki/Convolution">convolution</a>, <span class="anchor" id="line-19"></span>so one can also use convolve() from numpy, convolve() or fftconvolve() from scipy.signal, or <span class="anchor" id="line-20"></span>convolve1d() from scipy.ndimage.   <span class="anchor" id="line-21"></span>In this page, we demonstrate each of these functions, and we look at how the <span class="anchor" id="line-22"></span>computational time varies when the data <span class="anchor" id="line-23"></span>signal size is fixed and the FIR filter length is varied.  We'll use a data signal <span class="anchor" id="line-24"></span>length of 131072, which is 2**17.  We assume that we have <em>m</em> channels of data, so <span class="anchor" id="line-25"></span>our input signal is an <em>m</em> by <em>n</em> array. <span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><p class="line862">We assume our FIR filter coefficients are in a one-dimensional array <em>b</em>. <span class="anchor" id="line-28"></span>The function numpy.convolve only accepts one-dimensional arrays, so we'll have <span class="anchor" id="line-29"></span>to use a python loop over our input array to perform the convolution over all <span class="anchor" id="line-30"></span>the channels.  One way to do that is <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><pre><span class="anchor" id="line-1"></span>    np.array([np.convolve(xi, b, mode='valid') for xi in x])</pre><span class="anchor" id="line-34"></span><p class="line862">We use a list comprehension to loop over the rows of <em>x</em>, and pass the result <span class="anchor" id="line-35"></span>to <em>np.array</em> to reassemble the filtered data into a two-dimensional array. <span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><p class="line874">Both signal.convolve and signal.fftconvolve perform a two-dimensional convolution of <span class="anchor" id="line-38"></span>two-dimensional arrays.  To filter our <em>m</em> by <em>n</em> array with either of these <span class="anchor" id="line-39"></span>functions, we shape our filter to be a two-dimensional array, with shape 1 by <em>len(b)</em>. <span class="anchor" id="line-40"></span>The python code looks like <span class="anchor" id="line-41"></span>this: <span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><pre><span class="anchor" id="line-1-1"></span>    y = convolve(x, b[np.newaxis, :], mode='valid')</pre><span class="anchor" id="line-45"></span><p class="line862">where <em>x</em> is a numpy array with shape <em>(m, n)</em>, and <em>b</em> is the one-dimensional <span class="anchor" id="line-46"></span>array of FIR filter coefficients. <em>b[np.newaxis, :]</em> is the <span class="anchor" id="line-47"></span>two dimensional view of <em>b</em>, with shape 1 by <em>len(b)</em>.  <em>y</em> is the filtered data; it includes <span class="anchor" id="line-48"></span>only those terms for which the full convolution was computed, so it <span class="anchor" id="line-49"></span>has shape <em>(m, n - len(b) + 1)</em>. <span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><p class="line874">ndimage.convolve1d() is designed to do a convolution of a 1d array along the given <span class="anchor" id="line-52"></span>axis of another n-dimensional array.  It does not have the option mode='valid', <span class="anchor" id="line-53"></span>so to extract the valid part of the result, we slice the result of the function: <span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><pre><span class="anchor" id="line-1-2"></span>    y = convolve1d(x, b)[:, (len(b)-1)//2 : -(len(b)//2)]</pre><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line874">signal.lfilter is designed to filter one-dimensional data. <span class="anchor" id="line-59"></span>It can take a two-dimensional array (or, in general, an n-dimensional array) <span class="anchor" id="line-60"></span>and filter the data in any given axis.  It can also be used for IIR <span class="anchor" id="line-61"></span>filters, so in our case, we'll pass in [1.0] for the denominator <span class="anchor" id="line-62"></span>coefficients.  In python, this looks like: <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><pre><span class="anchor" id="line-1-3"></span>    y = lfilter(b, [1.0], x)</pre><span class="anchor" id="line-66"></span><p class="line874">To obtain exactly the same array as computed by convolve or fftconvolve <span class="anchor" id="line-67"></span>(i.e. to get the equivalent of the 'valid' mode), we must discard the <span class="anchor" id="line-68"></span>beginning of the array computed by lfilter.  We can do this by <span class="anchor" id="line-69"></span>slicing the array immediately after the call to filter: <span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><pre><span class="anchor" id="line-1-4"></span>    y = lfilter(b, [1.0], x)[:, len(b) - 1:]</pre><span class="anchor" id="line-73"></span><p class="line874">The following script computes and plots the results of applying a FIR <span class="anchor" id="line-74"></span>filter to a 2 by 131072 array of data, with a series of FIR filters <span class="anchor" id="line-75"></span>of increasing length. <span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-be5ec652db3453c1a3368d040150febfffb8aa75\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_1">   1</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_2">   2</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_3">   3</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_3"></span><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">np</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_4">   4</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> <span class="ID">convolve</span> <span class="ResWord">as</span> <span class="ID">np_convolve</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_5">   5</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_5"></span><span class="anchor" id="line-5-1"></span><span class="ResWord">from</span> <span class="ID">scipy.signal</span> <span class="ResWord">import</span> <span class="ID">convolve</span> <span class="ResWord">as</span> <span class="ID">sig_convolve</span>, <span class="ID">fftconvolve</span>, <span class="ID">lfilter</span>, <span class="ID">firwin</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_6">   6</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_6"></span><span class="anchor" id="line-6-1"></span><span class="ResWord">from</span> <span class="ID">scipy.ndimage</span> <span class="ResWord">import</span> <span class="ID">convolve1d</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_7">   7</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_7"></span><span class="anchor" id="line-7-1"></span><span class="ResWord">from</span> <span class="ID">pylab</span> <span class="ResWord">import</span> <span class="ID">grid</span>, <span class="ID">show</span>, <span class="ID">legend</span>, <span class="ID">loglog</span>, <span class="ID">xlabel</span>, <span class="ID">ylabel</span>, <span class="ID">figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_8">   8</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_8"></span><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_9">   9</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_9"></span><span class="anchor" id="line-9-1"></span><span class="Comment"># Create the m by n data to be filtered.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_10">  10</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">m</span> = <span class="Number">4</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_11">  11</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_11"></span><span class="anchor" id="line-11-1"></span><span class="ID">n</span> = <span class="Number">2</span> ** <span class="Number">17</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_12">  12</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_12"></span><span class="anchor" id="line-12-1"></span><span class="ID">x</span> = <span class="ID">np</span>.<span class="ID">random</span>.<span class="ID">random</span>(<span class="ID">size</span>=(<span class="ID">m</span>, <span class="ID">n</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_13">  13</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_13"></span><span class="anchor" id="line-13-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_14">  14</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_14"></span><span class="anchor" id="line-14-1"></span><span class="ID">conv_time</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_15">  15</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">npconv_time</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_16">  16</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_16"></span><span class="anchor" id="line-16-1"></span><span class="ID">fftconv_time</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_17">  17</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_17"></span><span class="anchor" id="line-17-1"></span><span class="ID">conv1d_time</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_18">  18</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_18"></span><span class="anchor" id="line-18-1"></span><span class="ID">lfilt_time</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_19">  19</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_19"></span><span class="anchor" id="line-19-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_20">  20</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_20"></span><span class="anchor" id="line-20-1"></span><span class="ID">diff_list</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_21">  21</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_21"></span><span class="anchor" id="line-21-1"></span><span class="ID">diff2_list</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_22">  22</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_22"></span><span class="anchor" id="line-22-1"></span><span class="ID">diff3_list</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_23">  23</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_23"></span><span class="anchor" id="line-23-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_24">  24</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_24"></span><span class="anchor" id="line-24-1"></span><span class="ID">ntaps_list</span> = <span class="Number">2</span> ** <span class="ID">np</span>.<span class="ID">arange</span>(<span class="Number">2</span>, <span class="Number">13</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_25">  25</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_25"></span><span class="anchor" id="line-25-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_26">  26</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_26"></span><span class="anchor" id="line-26-1"></span><span class="ResWord">for</span> <span class="ID">ntaps</span> <span class="ResWord">in</span> <span class="ID">ntaps_list</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_27">  27</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_27"></span><span class="anchor" id="line-27-1"></span>    <span class="Comment"># Create a FIR filter.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_28">  28</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_28"></span><span class="anchor" id="line-28-1"></span>    <span class="ID">b</span> = <span class="ID">firwin</span>(<span class="ID">ntaps</span>, [<span class="Number">0.05</span>, <span class="Number">0.95</span>], <span class="ID">width</span>=<span class="Number">0.05</span>, <span class="ID">pass_zero</span>=<span class="ResWord">False</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_29">  29</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_29"></span><span class="anchor" id="line-29-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_30">  30</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_30"></span><span class="anchor" id="line-30-1"></span>    <span class="ResWord">if</span> <span class="ID">ntaps</span> &lt;= <span class="Number">2</span> ** <span class="Number">9</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_31">  31</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_31"></span><span class="anchor" id="line-31-1"></span>        <span class="Comment"># --- signal.convolve ---</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_32">  32</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_32"></span><span class="anchor" id="line-32-1"></span>        <span class="Comment"># We know this is slower than the others when ntaps is</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_33">  33</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_33"></span><span class="anchor" id="line-33-1"></span>        <span class="Comment"># large, so we only compute it for small values.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_34">  34</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_34"></span><span class="anchor" id="line-34-1"></span>        <span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_35">  35</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_35"></span><span class="anchor" id="line-35-1"></span>        <span class="ID">conv_result</span> = <span class="ID">sig_convolve</span>(<span class="ID">x</span>, <span class="ID">b</span>[<span class="ID">np</span>.<span class="ID">newaxis</span>, :], <span class="ID">mode</span>=<span class="String">'</span><span class="String">valid</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_36">  36</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_36"></span><span class="anchor" id="line-36-1"></span>        <span class="ID">conv_time</span>.<span class="ID">append</span>(<span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">tstart</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_37">  37</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_37"></span><span class="anchor" id="line-37-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_38">  38</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_38"></span><span class="anchor" id="line-38-1"></span>    <span class="Comment"># --- numpy.convolve ---</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_39">  39</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_39"></span><span class="anchor" id="line-39-1"></span>    <span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_40">  40</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_40"></span><span class="anchor" id="line-40-1"></span>    <span class="ID">npconv_result</span> = <span class="ID">np</span>.<span class="ID">array</span>([<span class="ID">np_convolve</span>(<span class="ID">xi</span>, <span class="ID">b</span>, <span class="ID">mode</span>=<span class="String">'</span><span class="String">valid</span><span class="String">'</span>) <span class="ResWord">for</span> <span class="ID">xi</span> <span class="ResWord">in</span> <span class="ID">x</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_41">  41</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_41"></span><span class="anchor" id="line-41-1"></span>    <span class="ID">npconv_time</span>.<span class="ID">append</span>(<span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">tstart</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_42">  42</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_42"></span><span class="anchor" id="line-42-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_43">  43</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_43"></span><span class="anchor" id="line-43-1"></span>    <span class="Comment"># --- signal.fftconvolve ---</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_44">  44</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_44"></span><span class="anchor" id="line-44-1"></span>    <span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_45">  45</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_45"></span><span class="anchor" id="line-45-1"></span>    <span class="ID">fftconv_result</span> = <span class="ID">fftconvolve</span>(<span class="ID">x</span>, <span class="ID">b</span>[<span class="ID">np</span>.<span class="ID">newaxis</span>, :], <span class="ID">mode</span>=<span class="String">'</span><span class="String">valid</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_46">  46</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_46"></span><span class="anchor" id="line-46-1"></span>    <span class="ID">fftconv_time</span>.<span class="ID">append</span>(<span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">tstart</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_47">  47</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_47"></span><span class="anchor" id="line-47-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_48">  48</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_48"></span><span class="anchor" id="line-48-1"></span>    <span class="Comment"># --- convolve1d ---</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_49">  49</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_49"></span><span class="anchor" id="line-49-1"></span>    <span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_50">  50</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_50"></span><span class="anchor" id="line-50-1"></span>    <span class="Comment"># convolve1d doesn't have a 'valid' mode, so we expliclity slice out</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_51">  51</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_51"></span><span class="anchor" id="line-51-1"></span>    <span class="Comment"># the valid part of the result.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_52">  52</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_52"></span><span class="anchor" id="line-52-1"></span>    <span class="ID">conv1d_result</span> = <span class="ID">convolve1d</span>(<span class="ID">x</span>, <span class="ID">b</span>)[:, (<span class="ResWord">len</span>(<span class="ID">b</span>)-<span class="Number">1</span>)//<span class="Number">2</span> : -(<span class="ResWord">len</span>(<span class="ID">b</span>)//<span class="Number">2</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_53">  53</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_53"></span><span class="anchor" id="line-53-1"></span>    <span class="ID">conv1d_time</span>.<span class="ID">append</span>(<span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">tstart</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_54">  54</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_54"></span><span class="anchor" id="line-54-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_55">  55</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_55"></span><span class="anchor" id="line-55-1"></span>    <span class="Comment"># --- lfilter ---</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_56">  56</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_56"></span><span class="anchor" id="line-56-1"></span>    <span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_57">  57</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_57"></span><span class="anchor" id="line-57-1"></span>    <span class="ID">lfilt_result</span> = <span class="ID">lfilter</span>(<span class="ID">b</span>, [<span class="Number">1.0</span>], <span class="ID">x</span>)[:, <span class="ResWord">len</span>(<span class="ID">b</span>) - <span class="Number">1</span>:]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_58">  58</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_58"></span><span class="anchor" id="line-58-1"></span>    <span class="ID">lfilt_time</span>.<span class="ID">append</span>(<span class="ID">time</span>.<span class="ID">time</span>() - <span class="ID">tstart</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_59">  59</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_59"></span><span class="anchor" id="line-59-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_60">  60</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_60"></span><span class="anchor" id="line-60-1"></span>    <span class="ID">diff</span> = <span class="ID">np</span>.<span class="ID">abs</span>(<span class="ID">fftconv_result</span> - <span class="ID">lfilt_result</span>).<span class="ID">max</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_61">  61</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_61"></span><span class="anchor" id="line-61-1"></span>    <span class="ID">diff_list</span>.<span class="ID">append</span>(<span class="ID">diff</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_62">  62</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_62"></span><span class="anchor" id="line-62-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_63">  63</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_63"></span><span class="anchor" id="line-63-1"></span>    <span class="ID">diff2</span> = <span class="ID">np</span>.<span class="ID">abs</span>(<span class="ID">conv1d_result</span> - <span class="ID">lfilt_result</span>).<span class="ID">max</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_64">  64</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_64"></span><span class="anchor" id="line-64-1"></span>    <span class="ID">diff2_list</span>.<span class="ID">append</span>(<span class="ID">diff2</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_65">  65</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_65"></span><span class="anchor" id="line-65-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_66">  66</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_66"></span><span class="anchor" id="line-66-1"></span>    <span class="ID">diff3</span> = <span class="ID">np</span>.<span class="ID">abs</span>(<span class="ID">npconv_result</span> - <span class="ID">lfilt_result</span>).<span class="ID">max</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_67">  67</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_67"></span><span class="anchor" id="line-67-1"></span>    <span class="ID">diff3_list</span>.<span class="ID">append</span>(<span class="ID">diff3</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_68">  68</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_68"></span><span class="anchor" id="line-68-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_69">  69</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_69"></span><span class="anchor" id="line-69-1"></span><span class="Comment"># Verify that np.convolve and lfilter gave the same results.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_70">  70</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_70"></span><span class="anchor" id="line-70-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Did np.convolve and lfilter produce the same results?</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_71">  71</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_71"></span><span class="anchor" id="line-71-1"></span><span class="ID">check</span> = <span class="ResWord">all</span>(<span class="ID">diff</span> &lt; <span class="Number">1e-13</span> <span class="ResWord">for</span> <span class="ID">diff</span> <span class="ResWord">in</span> <span class="ID">diff3_list</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_72">  72</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_72"></span><span class="anchor" id="line-72-1"></span><span class="ResWord">if</span> <span class="ID">check</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_73">  73</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_73"></span><span class="anchor" id="line-73-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Yes.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_74">  74</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_74"></span><span class="anchor" id="line-74-1"></span><span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_75">  75</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_75"></span><span class="anchor" id="line-75-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">No!  Something went wrong.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_76">  76</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_76"></span><span class="anchor" id="line-76-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_77">  77</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_77"></span><span class="anchor" id="line-77-1"></span><span class="Comment"># Verify that fftconvolve and lfilter gave the same results.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_78">  78</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_78"></span><span class="anchor" id="line-78-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Did fftconvolve and lfilter produce the same results?</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_79">  79</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_79"></span><span class="anchor" id="line-79-1"></span><span class="ID">check</span> = <span class="ResWord">all</span>(<span class="ID">diff</span> &lt; <span class="Number">1e-13</span> <span class="ResWord">for</span> <span class="ID">diff</span> <span class="ResWord">in</span> <span class="ID">diff_list</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_80">  80</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_80"></span><span class="anchor" id="line-80-1"></span><span class="ResWord">if</span> <span class="ID">check</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_81">  81</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_81"></span><span class="anchor" id="line-81-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Yes.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_82">  82</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_82"></span><span class="anchor" id="line-82-1"></span><span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_83">  83</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_83"></span><span class="anchor" id="line-83-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">No!  Something went wrong.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_84">  84</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_84"></span><span class="anchor" id="line-84-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_85">  85</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_85"></span><span class="anchor" id="line-85-1"></span><span class="Comment"># Verify that convolve1d and lfilter gave the same results.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_86">  86</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_86"></span><span class="anchor" id="line-86-1"></span><span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Did convolve1d and lfilter produce the same results?</span><span class="String">&quot;</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_87">  87</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_87"></span><span class="anchor" id="line-87-1"></span><span class="ID">check</span> = <span class="ResWord">all</span>(<span class="ID">diff2</span> &lt; <span class="Number">1e-13</span> <span class="ResWord">for</span> <span class="ID">diff2</span> <span class="ResWord">in</span> <span class="ID">diff2_list</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_88">  88</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_88"></span><span class="anchor" id="line-88-1"></span><span class="ResWord">if</span> <span class="ID">check</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_89">  89</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_89"></span><span class="anchor" id="line-89-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">Yes.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_90">  90</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_90"></span><span class="anchor" id="line-90-1"></span><span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_91">  91</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_91"></span><span class="anchor" id="line-91-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">No!  Something went wrong.</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_92">  92</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_92"></span><span class="anchor" id="line-92-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_93">  93</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_93"></span><span class="anchor" id="line-93-1"></span><span class="ID">figure</span>(<span class="Number">1</span>, <span class="ID">figsize</span>=(<span class="Number">8</span>, <span class="Number">5.5</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_94">  94</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_94"></span><span class="anchor" id="line-94-1"></span><span class="ID">loglog</span>(<span class="ID">ntaps_list</span>, <span class="ID">npconv_time</span>, <span class="String">'</span><span class="String">c-s</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">numpy.convolve</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_95">  95</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_95"></span><span class="anchor" id="line-95-1"></span><span class="ID">loglog</span>(<span class="ID">ntaps_list</span>, <span class="ID">conv1d_time</span>, <span class="String">'</span><span class="String">k-p</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">ndimage.convolve1d</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_96">  96</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_96"></span><span class="anchor" id="line-96-1"></span><span class="ID">loglog</span>(<span class="ID">ntaps_list</span>, <span class="ID">fftconv_time</span>, <span class="String">'</span><span class="String">g-*</span><span class="String">'</span>, <span class="ID">markersize</span>=<span class="Number">8</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">signal.fftconvolve</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_97">  97</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_97"></span><span class="anchor" id="line-97-1"></span><span class="ID">loglog</span>(<span class="ID">ntaps_list</span>[:<span class="ResWord">len</span>(<span class="ID">conv_time</span>)], <span class="ID">conv_time</span>, <span class="String">'</span><span class="String">m-d</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">signal.convolve</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_98">  98</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_98"></span><span class="anchor" id="line-98-1"></span><span class="ID">loglog</span>(<span class="ID">ntaps_list</span>, <span class="ID">lfilt_time</span>, <span class="String">'</span><span class="String">b-o</span><span class="String">'</span>, <span class="ID">label</span>=<span class="String">'</span><span class="String">signal.lfilter</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_99">  99</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_99"></span><span class="anchor" id="line-99-1"></span><span class="ID">legend</span>(<span class="ID">loc</span>=<span class="String">'</span><span class="String">best</span><span class="String">'</span>, <span class="ID">numpoints</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_100"> 100</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_100"></span><span class="anchor" id="line-100-1"></span><span class="ID">grid</span>(<span class="ResWord">True</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_101"> 101</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_101"></span><span class="anchor" id="line-101-1"></span><span class="ID">xlabel</span>(<span class="String">'</span><span class="String">Number of taps</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_102"> 102</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_102"></span><span class="anchor" id="line-102-1"></span><span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Time to filter (seconds)</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be5ec652db3453c1a3368d040150febfffb8aa75_103"> 103</a> </span><span class="LineAnchor" id="CA-be5ec652db3453c1a3368d040150febfffb8aa75_103"></span><span class="anchor" id="line-103-1"></span><span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><p class="line874">The plot shows that, depending on the number of taps, either scipy.ndimage.convolve1d, <span class="anchor" id="line-184"></span>numpy.convolve or scipy.signal.fftconvolve is the fastest. <span class="anchor" id="line-185"></span>The above script can be used to explore variations of these results. <span class="anchor" id="line-186"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/ApplyFIRFilter  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="ApplyFIRFilter37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/ApplyFIRFilter">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/ApplyFIRFilter by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:05:53 GMT -->
+</html>
+

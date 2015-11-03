@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/Tips?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/MayaVi/Tips - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/MayaVi/Tips" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMayaVi%2FTips&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips?action=print">
+<link rel="Up" href="../MayaVi.html">
+<link rel="Appendix" title="ps1.png" href="Tipsd5f7.html?action=AttachFile&amp;do=view&amp;target=ps1.png">
+<link rel="Appendix" title="ps2.png" href="Tips4c77.html?action=AttachFile&amp;do=view&amp;target=ps2.png">
+<link rel="Appendix" title="ps3.png" href="Tips6182.html?action=AttachFile&amp;do=view&amp;target=ps3.png">
+<link rel="Appendix" title="ps4.png" href="Tips8a19.html?action=AttachFile&amp;do=view&amp;target=ps4.png">
+<link rel="Appendix" title="ps5.png" href="Tipsc2d3.html?action=AttachFile&amp;do=view&amp;target=ps5.png">
+<link rel="Appendix" title="ps6.png" href="Tipsc787.html?action=AttachFile&amp;do=view&amp;target=ps6.png">
+<link rel="Appendix" title="ps7.png" href="Tipse524.html?action=AttachFile&amp;do=view&amp;target=ps7.png">
+<link rel="Appendix" title="ps8.png" href="Tips0269.html?action=AttachFile&amp;do=view&amp;target=ps8.png">
+<link rel="Appendix" title="setcolors.png" href="Tips3c53.html?action=AttachFile&amp;do=view&amp;target=setcolors.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Tips456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../MayaVi.html">MayaVi</a></li><li><a class="backlink" href="Tips2b65.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMayaVi%2FTips%22" rel="nofollow" title="Click to do a full-text search for this title">Tips</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Tips.html">Cookbook/MayaVi/Tips</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Tips37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Scripting_MayaVi2_effectively">Scripting MayaVi2 effectively</a><ol><li>
+<a href="#Drag_and_drop_object">Drag and drop object</a></li><li>
+<a href="#Typing_in_the_python_shell">Typing in the python shell</a></li><li>
+<a href="#Using_the_explore.28.29_method">Using the explore() method</a></li><li>
+<a href="#Working_in_the_python_shell">Working in the python shell</a></li></ol></li><li>
+<a href="#Save_snapshots">Save snapshots</a></li><li>
+<a href="#Enabling_alpha_transparency_in_the_colormap">Enabling alpha transparency in the colormap</a></li><li>
+<a href="#Set_MayaVi2_session_colors">Set MayaVi2 session colors</a></li><li>
+<a href="#Writing_VTK_data_files_using_TVTK">Writing VTK data files using TVTK</a></li></ol></div><p class="line874"> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">Here are general tips on how best to use MayaVi2. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line867">
+<h1 id="Scripting_MayaVi2_effectively">Scripting MayaVi2 effectively</h1>
+<span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line874">Here are a few tips showing how to script mayavi2 interactively and effectively. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
+<h2 id="Drag_and_drop_object">Drag and drop object</h2>
+<span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line874">Running the contour.py python script example, you should get: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line867"><img alt="ps1.png" class="attachment" src="ps1aba3.png?action=AttachFile&amp;do=get&amp;target=ps1.png" title="ps1.png" /> <span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><p class="line874">First, enable python shell clicking on Python in the &quot;View&quot; menu. <span class="anchor" id="line-18"></span>A python shell should appear at the bottom of the MayaVi2 window: <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><p class="line867"><img alt="ps2.png" class="attachment" src="ps26707.png?action=AttachFile&amp;do=get&amp;target=ps2.png" title="ps2.png" /> <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><p class="line874">Then drag any object from the tree view on the left and drop it on the python shell and you'll get the object. Say you want to get the Outline module: <span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><p class="line867"><img alt="ps3.png" class="attachment" src="ps3c2f0.png?action=AttachFile&amp;do=get&amp;target=ps3.png" title="ps3.png" /> <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line874">Now, you can use your object following two ways: typing directly in the python shell or using the explore() method. <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line867">
+<h2 id="Typing_in_the_python_shell">Typing in the python shell</h2>
+<span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><p class="line874">You can create an instance of your object in the python shell window. <span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><p class="line867"><img alt="ps4.png" class="attachment" src="ps4da21.png?action=AttachFile&amp;do=get&amp;target=ps4.png" title="ps4.png" /> <span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><p class="line874">Note that you benefit of &quot;word completion&quot; in this python shell, ie a little window popups letting you choose the name of the expected object or method. <span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><p class="line874">Thus, you can display the RGB values of the outline color for instance: <span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line867"><img alt="ps5.png" class="attachment" src="ps5f35c.png?action=AttachFile&amp;do=get&amp;target=ps5.png" title="ps5.png" /> <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">However, find out objects or methods can be not so easy: you may not know how they depends from each other. An easier way is using the explore() method. <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line867">
+<h2 id="Using_the_explore.28.29_method">Using the explore() method</h2>
+<span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">Simply type <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line867"><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-f6001848829addc3e34058cbbb4c34d5ed128741" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="ID">explore</span>(<span class="ID">_</span>)</span>
+</pre></div></div><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line874">or <span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><p class="line867"><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-1b54099f18fae80d0e6b32c8978c05995f38fdb2" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="ID">explore</span>(<span class="ID">foobar</span>)</span>
+</pre></div></div><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><p class="line874">if you have previously defined it: <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line867"><img alt="ps6.png" class="attachment" src="ps6f784.png?action=AttachFile&amp;do=get&amp;target=ps6.png" title="ps6.png" /> <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line874">Then, you get the following window: <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><p class="line867"><img alt="ps7.png" class="attachment" src="ps79dcb.png?action=AttachFile&amp;do=get&amp;target=ps7.png" title="ps7.png" /> <span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><p class="line874">Considering the last example, about the color of the outline module, you can unfold the &quot;tree&quot; and thus, get the info you need: <span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><p class="line867"><img alt="ps8.png" class="attachment" src="ps8ba26.png?action=AttachFile&amp;do=get&amp;target=ps8.png" title="ps8.png" /> <span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><p class="line862">Very powerful, isn't it ! <img alt=":-)" height="15" src="../../moin_static197/modern/img/smile.png" title=":-)" width="15" /> <span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><p class="line874">You can also work in the pyhon shell, create your objects and so on... <span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><p class="line867">
+<h2 id="Working_in_the_python_shell">Working in the python shell</h2>
+<span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line862">On the embedded Python shell in the MayaVi2 application, the name 'mayavi' is bound to the MayaVi scripting interface which can be used to script mayavi easily as shown here: <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line867"><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-f12964b40fbf0d249e6ee334587bd4c01741d0ce" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="ID">e</span> = <span class="ID">mayavi</span>.<span class="ID">engine</span> <span class="Comment"># Get the MayaVi engine.</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ID">mayavi</span>.<span class="ID">new_scene</span>() <span class="Comment"># Create a new scene</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="Comment"># [...]</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span><span class="ID">mayavi</span>.<span class="ID">save_visualization</span>(<span class="String">'</span><span class="String">foo.mv2</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ID">mayavi</span>.<span class="ID">load_visualization</span>(<span class="String">'</span><span class="String">foo.mv2</span><span class="String">'</span>)</span>
+</pre></div></div><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line874">Note that the Mayavi engine lets you script mayavi in powerful ways. For example: <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line867"><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-ba70309e53c419bd320b09cc649329fa2f2a0680" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span><span class="ID">e</span> = <span class="ID">mayavi</span>.<span class="ID">engine</span></span>
+</pre></div></div><p class="line874"> <span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><p class="line874">Here 'e' is the running Engine instance (mayavi/engine.py) and has the same hierarchy that you see on the mayavi tree view. For example: <span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><p class="line867"><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-46d524baa2097db7c190910910679efad8734ded" lang="en"><span class="line"><span class="anchor" id="line-1-10"></span><span class="ID">e</span>.<span class="ID">scenes</span>[<span class="Number">0</span>]             <span class="Comment"># --&gt; first scene in mayavi.</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ID">e</span>.<span class="ID">scenes</span>[<span class="Number">0</span>].<span class="ID">children</span>[<span class="Number">0</span>] <span class="Comment"># --&gt; first scene's first source (vtkfile)</span></span>
+</pre></div></div><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><p class="line874">Another example, just run examples/contour.py and type/cut/paste the following to get the scalar cut plane module: <span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><p class="line867"><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-d889c33e535880d807db624908041b4133be5b81" lang="en"><span class="line"><span class="anchor" id="line-1-12"></span><span class="ID">e</span> = <span class="ID">mayavi</span>.<span class="ID">engine</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span><span class="ID">s</span> = <span class="ID">e</span>.<span class="ID">scenes</span>[<span class="Number">0</span>].<span class="ID">children</span>[<span class="Number">0</span>].<span class="ID">children</span>[<span class="Number">0</span>].<span class="ID">children</span>[-<span class="Number">1</span>]</span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="Comment"># Think scene.datafile.module_manager.last_module</span></span>
+</pre></div></div><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><p class="line862">It is possible to use Mayavi2 from within <a class="http" href="../../../external.html?link=http://ipython.scipy.org/">IPython</a> and script it. You must first start IPython with the '-wthread' command line option. Here is an example: <span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><p class="line867"><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-c21b5f148b8cf918c02adbc4012d7c00e1a06006" lang="en"><span class="line"><span class="anchor" id="line-1-14"></span><span class="ResWord">from</span> <span class="ID">enthought.mayavi.app</span> <span class="ResWord">import</span> <span class="ID">Mayavi</span></span>
+<span class="line"><span class="anchor" id="line-2-4"></span><span class="ID">m</span> = <span class="ID">Mayavi</span>()</span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ID">m</span>.<span class="ID">main</span>()</span>
+<span class="line"><span class="anchor" id="line-4-2"></span><span class="ID">m</span>.<span class="ID">script</span>.<span class="ID">new_scene</span>() <span class="Comment"># m.script is the mayavi.script.Script instance</span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ID">engine</span> = <span class="ID">m</span>.<span class="ID">script</span>.<span class="ID">engine</span> </span>
+</pre></div></div><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><p class="line874">In the above, 'm.script' is the same as the 'mayavi' instance on the embedded shell. <span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><p class="line874">If you are writing a stand-alone script to visualize something like the scripts in the examples/ directory, please use any of the examples as a template. <span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><p class="line867">
+<h1 id="Save_snapshots">Save snapshots</h1>
+<span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><p class="line874">Saving snapshots within a python script is very easy: <span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><p class="line867"><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-7954b1a561e36a5e3d5a3a0a86f27f4ec96caa35" lang="en"><span class="line"><span class="anchor" id="line-1-16"></span><span class="ID">s</span> = <span class="ID">script</span>.<span class="ID">engine</span>.<span class="ID">current_scene</span></span>
+<span class="line"><span class="anchor" id="line-2-5"></span><span class="ID">s</span>.<span class="ID">scene</span>.<span class="ID">save</span>(<span class="String">'</span><span class="String">test.jpg</span><span class="String">'</span>, <span class="ID">size</span>=(<span class="ID">width</span>,<span class="ID">height</span>))</span>
+</pre></div></div><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><p class="line862">You can also save images in a lot of others format: PostScript (ps), Encapsuled PostScript (eps), PDF (pdf), Bitmap (bmp), TIFF (tiff), PNG (png), OpenInventor (iv), Virtual Reality Markup Language (wrl, vrml), Geomview (oogl), RenderMan RIB (rib), Wavefront (obj). <span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><p class="line862">The obvious corollary of saving snapshots is saving a lot of snapshots in order to make a movie for example, without MayaVi2 window popup for each snapshot recorded. <span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><p class="line874">The answer is straightforward (only under UN*X boxes): use the 'X virtual framebuffer'. <span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><p class="line874">The following lines give you the trick. You can improve it, of course, scripting it in shell, python, and so on. <span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><ul><li>create your X virtual framebuffer with the following command: 'xvfb :1 -screen 0 1280x1024x24'. It will use the display #1, with a size of 1280x1024 and 24 bit depth color; <span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span></li><li class="gap">export your display: 'export DISPLAY=:1' (sh/bash syntax) or 'setenv DISPLAY :1' (csh/tcsh syntax) <span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span></li><li class="gap"><p class="line862">run your MayaVi2 script as usual; <span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span></li><li class="gap"><p class="line862">once finished, and all your snapshots have been created, don't forget to kill the X virtual framebuffer and reset your display to its previous value. If not, you won't be able to see your movie <img alt=";-)" height="15" src="../../moin_static197/modern/img/smile4.png" title=";-)" width="15" /> <span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span></li></ul><p class="line867">
+<h1 id="Enabling_alpha_transparency_in_the_colormap">Enabling alpha transparency in the colormap</h1>
+<span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><p class="line874">Drag the module manager to the python shell and you will be able to enable alpha transparency in the colormap via: <span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><p class="line867"><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-1-17"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-318660e313e405cf3bf4cb0524d48ad287fe23b7" lang="en"><span class="line"><span class="anchor" id="line-1-18"></span><span class="ID">dragged</span>.<span class="ID">scalar_lut_manager</span>.<span class="ID">lut</span>.<span class="ID">alpha_range</span>=(<span class="Number">0</span>,<span class="Number">1</span>)</span>
+</pre></div></div><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><p class="line867">
+<h1 id="Set_MayaVi2_session_colors">Set MayaVi2 session colors</h1>
+<span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><p class="line862">Run MayaVi2, go to &quot;Tools&quot; menu then &quot;Preferences&quot; then &quot;TVTK Scene&quot;. <span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><p class="line874">Suppose that you want to change background color: click on &quot;Background color&quot; tag. <span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><p class="line874">Here, you can choose a predefined color, or click in the square to set your RGB value, for instance. <span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><p class="line867"><img alt="setcolors.png" class="attachment" src="setcolors0a07.png?action=AttachFile&amp;do=get&amp;target=setcolors.png" title="setcolors.png" /> <span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><p class="line874">Also, if you want to set foreground color, it will be applied for all modules and filters, i.e. outline color, text color, labels axes, and so on. <span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><p class="line862">Your preferences will be saved in a MayaVi2 configuration file, so you'll get these colors each time you run a MayaVi2 session. <span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line867">
+<h1 id="Writing_VTK_data_files_using_TVTK">Writing VTK data files using TVTK</h1>
+<span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><p class="line874">Coming soon... <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-171"></span><a href="../../CategoryCookbook.html"><strong class="highlight">CategoryCookbook</strong></a> <span class="anchor" id="line-172"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/MayaVi/Tips  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Tips37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/MayaVi/Tips">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/MayaVi/Tips?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+</html>
+

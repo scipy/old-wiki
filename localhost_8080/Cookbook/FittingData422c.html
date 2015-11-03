@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/FittingData?action=AttachFile&do=view&target=gaussfitter2.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:43:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:gaussfitter2.py of Cookbook/FittingData - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/FittingData" href="../../external.html?link=http://localhost:8080/Cookbook/FittingData?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FFittingData&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/FittingData?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/FittingData?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="datafit.png" href="FittingDataa2fd.html?action=AttachFile&amp;do=view&amp;target=datafit.png">
+<link rel="Appendix" title="fitgaussian.png" href="FittingData6ace.html?action=AttachFile&amp;do=view&amp;target=fitgaussian.png">
+<link rel="Appendix" title="gaussfitter.py" href="FittingData659c.html?action=AttachFile&amp;do=view&amp;target=gaussfitter.py">
+<link rel="Appendix" title="gaussfitter2.py" href="FittingData422c.html?action=AttachFile&amp;do=view&amp;target=gaussfitter2.py">
+<link rel="Appendix" title="gaussianfit.png" href="FittingData3338.html?action=AttachFile&amp;do=view&amp;target=gaussianfit.png">
+<link rel="Appendix" title="power_law_fit.png" href="FittingData2d0c.html?action=AttachFile&amp;do=view&amp;target=power_law_fit.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/FittingData">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="FittingData456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:gaussfitter2.py of Cookbook/FittingData</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="FittingData.html">Cookbook/FittingData</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FittingData37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/FittingData">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'gaussfitter2.py'</h2><a class="download" href="gaussfitter2b4b1.py?action=AttachFile&amp;do=get&amp;target=gaussfitter2.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_1">   1</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_1"></span><span class="anchor" id="line-1-1"></span><span class="Comment"># gaussfitter.py</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_2">   2</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_2"></span><span class="anchor" id="line-2"></span><span class="Comment"># created by Adam Ginsburg (adam.ginsburg@colorado.edu or keflavich@gmail.com) 3/17/08)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_3">   3</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_3"></span><span class="anchor" id="line-3"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_4">   4</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_4"></span><span class="anchor" id="line-4"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">optimize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_5">   5</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_5"></span><span class="anchor" id="line-5"></span><span class="ResWord">from</span> <span class="ID">scipy</span> <span class="ResWord">import</span> <span class="ID">stats</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_6">   6</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_6"></span><span class="anchor" id="line-6"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_7">   7</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_7"></span><span class="anchor" id="line-7"></span><span class="ResWord">def</span> <span class="ID">moments</span>(<span class="ID">data</span>,<span class="ID">circle</span>,<span class="ID">rotate</span>,<span class="ID">vheight</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_8">   8</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_8"></span><span class="anchor" id="line-8"></span>    <span class="String">&quot;&quot;&quot;Returns (height, amplitude, x, y, width_x, width_y, rotation angle)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_9">   9</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_9"></span><span class="anchor" id="line-9"></span><span class="String">    the gaussian parameters of a 2D distribution by calculating its</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_10">  10</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_10"></span><span class="anchor" id="line-10"></span><span class="String">    moments.  Depending on the input parameters, will only output </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_11">  11</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_11"></span><span class="anchor" id="line-11"></span><span class="String">    a subset of the above&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_12">  12</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_12"></span><span class="anchor" id="line-12"></span>    <span class="ID">total</span> = <span class="ID">data</span>.<span class="ID">sum</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_13">  13</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_13"></span><span class="anchor" id="line-13"></span>    <span class="ID">X</span>, <span class="ID">Y</span> = <span class="ID">indices</span>(<span class="ID">data</span>.<span class="ID">shape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_14">  14</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_14"></span><span class="anchor" id="line-14"></span>    <span class="ID">x</span> = (<span class="ID">X</span>*<span class="ID">data</span>).<span class="ID">sum</span>()/<span class="ID">total</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_15">  15</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_15"></span><span class="anchor" id="line-15"></span>    <span class="ID">y</span> = (<span class="ID">Y</span>*<span class="ID">data</span>).<span class="ID">sum</span>()/<span class="ID">total</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_16">  16</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_16"></span><span class="anchor" id="line-16"></span>    <span class="ID">col</span> = <span class="ID">data</span>[:, <span class="ResWord">int</span>(<span class="ID">y</span>)]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_17">  17</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_17"></span><span class="anchor" id="line-17"></span>    <span class="ID">width_x</span> = <span class="ID">sqrt</span>(<span class="ResWord">abs</span>((<span class="ID">arange</span>(<span class="ID">col</span>.<span class="ID">size</span>)-<span class="ID">y</span>)**<span class="Number">2</span>*<span class="ID">col</span>).<span class="ID">sum</span>()/<span class="ID">col</span>.<span class="ID">sum</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_18">  18</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_18"></span><span class="anchor" id="line-18"></span>    <span class="ID">row</span> = <span class="ID">data</span>[<span class="ResWord">int</span>(<span class="ID">x</span>), :]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_19">  19</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_19"></span><span class="anchor" id="line-19"></span>    <span class="ID">width_y</span> = <span class="ID">sqrt</span>(<span class="ResWord">abs</span>((<span class="ID">arange</span>(<span class="ID">row</span>.<span class="ID">size</span>)-<span class="ID">x</span>)**<span class="Number">2</span>*<span class="ID">row</span>).<span class="ID">sum</span>()/<span class="ID">row</span>.<span class="ID">sum</span>())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_20">  20</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_20"></span><span class="anchor" id="line-20"></span>    <span class="ID">width</span> = ( <span class="ID">width_x</span> + <span class="ID">width_y</span> ) / <span class="Number">2.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_21">  21</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_21"></span><span class="anchor" id="line-21"></span>    <span class="ID">height</span> = <span class="ID">stats</span>.<span class="ID">mode</span>(<span class="ID">data</span>.<span class="ID">ravel</span>())[<span class="Number">0</span>][<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_22">  22</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_22"></span><span class="anchor" id="line-22"></span>    <span class="ID">amplitude</span> = <span class="ID">data</span>.<span class="ID">max</span>()-<span class="ID">height</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_23">  23</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_23"></span><span class="anchor" id="line-23"></span>    <span class="ID">mylist</span> = [<span class="ID">amplitude</span>,<span class="ID">x</span>,<span class="ID">y</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_24">  24</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_24"></span><span class="anchor" id="line-24"></span>    <span class="ResWord">if</span> <span class="ID">vheight</span>==<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_25">  25</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_25"></span><span class="anchor" id="line-25"></span>        <span class="ID">mylist</span> = [<span class="ID">height</span>] + <span class="ID">mylist</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_26">  26</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_26"></span><span class="anchor" id="line-26"></span>    <span class="ResWord">if</span> <span class="ID">circle</span>==<span class="Number">0</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_27">  27</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_27"></span><span class="anchor" id="line-27"></span>        <span class="ID">mylist</span> = <span class="ID">mylist</span> + [<span class="ID">width_x</span>,<span class="ID">width_y</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_28">  28</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_28"></span><span class="anchor" id="line-28"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_29">  29</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_29"></span><span class="anchor" id="line-29"></span>        <span class="ID">mylist</span> = <span class="ID">mylist</span> + [<span class="ID">width</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_30">  30</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_30"></span><span class="anchor" id="line-30"></span>    <span class="ResWord">if</span> <span class="ID">rotate</span>==<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_31">  31</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_31"></span><span class="anchor" id="line-31"></span>        <span class="ID">mylist</span> = <span class="ID">mylist</span> + [<span class="Number">0.</span>] <span class="Comment">#rotation &quot;moment&quot; is just zero...</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_32">  32</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_32"></span><span class="anchor" id="line-32"></span>    <span class="ResWord">return</span> <span class="ResWord">tuple</span>(<span class="ID">mylist</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_33">  33</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_33"></span><span class="anchor" id="line-33"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_34">  34</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_34"></span><span class="anchor" id="line-34"></span><span class="ResWord">def</span> <span class="ID">twodgaussian</span>(<span class="ID">inpars</span>, <span class="ID">circle</span>, <span class="ID">rotate</span>, <span class="ID">vheight</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_35">  35</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_35"></span><span class="anchor" id="line-35"></span>    <span class="String">&quot;&quot;&quot;Returns a 2d gaussian function of the form:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_36">  36</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_36"></span><span class="anchor" id="line-36"></span><span class="String">        x' = cos(rota) * x - sin(rota) * y</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_37">  37</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_37"></span><span class="anchor" id="line-37"></span><span class="String">        y' = sin(rota) * x + cos(rota) * y</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_38">  38</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_38"></span><span class="anchor" id="line-38"></span><span class="String">        (rota should be in degrees)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_39">  39</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_39"></span><span class="anchor" id="line-39"></span><span class="String">        g = b + a exp ( - ( ((x-center_x)/width_x)**2 +</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_40">  40</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_40"></span><span class="anchor" id="line-40"></span><span class="String">        ((y-center_y)/width_y)**2 ) / 2 )</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_41">  41</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_41"></span><span class="anchor" id="line-41"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_42">  42</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_42"></span><span class="anchor" id="line-42"></span><span class="String">        where x and y are the input parameters of the returned function,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_43">  43</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_43"></span><span class="anchor" id="line-43"></span><span class="String">        and all other parameters are specified by this function</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_44">  44</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_44"></span><span class="anchor" id="line-44"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_45">  45</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_45"></span><span class="anchor" id="line-45"></span><span class="String">        However, the above values are passed by list.  The list should be:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_46">  46</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_46"></span><span class="anchor" id="line-46"></span><span class="String">        inpars = (height,amplitude,center_x,center_y,width_x,width_y,rota)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_47">  47</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_47"></span><span class="anchor" id="line-47"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_48">  48</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_48"></span><span class="anchor" id="line-48"></span><span class="String">        You can choose to ignore / neglect some of the above input parameters using the following options:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_49">  49</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_49"></span><span class="anchor" id="line-49"></span><span class="String">            circle=0 - default is an elliptical gaussian (different x, y widths), but can reduce</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_50">  50</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_50"></span><span class="anchor" id="line-50"></span><span class="String">                the input by one parameter if it's a circular gaussian</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_51">  51</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_51"></span><span class="anchor" id="line-51"></span><span class="String">            rotate=1 - default allows rotation of the gaussian ellipse.  Can remove last parameter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_52">  52</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_52"></span><span class="anchor" id="line-52"></span><span class="String">                by setting rotate=0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_53">  53</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_53"></span><span class="anchor" id="line-53"></span><span class="String">            vheight=1 - default allows a variable height-above-zero, i.e. an additive constant</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_54">  54</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_54"></span><span class="anchor" id="line-54"></span><span class="String">                for the Gaussian function.  Can remove first parameter by setting this to 0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_55">  55</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_55"></span><span class="anchor" id="line-55"></span><span class="String">        &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_56">  56</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_56"></span><span class="anchor" id="line-56"></span>    <span class="ID">inpars_old</span> = <span class="ID">inpars</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_57">  57</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_57"></span><span class="anchor" id="line-57"></span>    <span class="ID">inpars</span> = <span class="ResWord">list</span>(<span class="ID">inpars</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_58">  58</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_58"></span><span class="anchor" id="line-58"></span>    <span class="ResWord">if</span> <span class="ID">vheight</span> == <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_59">  59</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_59"></span><span class="anchor" id="line-59"></span>        <span class="ID">height</span> = <span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_60">  60</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_60"></span><span class="anchor" id="line-60"></span>        <span class="ID">height</span> = <span class="ResWord">float</span>(<span class="ID">height</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_61">  61</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_61"></span><span class="anchor" id="line-61"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_62">  62</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_62"></span><span class="anchor" id="line-62"></span>        <span class="ID">height</span> = <span class="ResWord">float</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_63">  63</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_63"></span><span class="anchor" id="line-63"></span>    <span class="ID">amplitude</span>, <span class="ID">center_x</span>, <span class="ID">center_y</span> = <span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>),<span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>),<span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_64">  64</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_64"></span><span class="anchor" id="line-64"></span>    <span class="ID">amplitude</span> = <span class="ResWord">float</span>(<span class="ID">amplitude</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_65">  65</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_65"></span><span class="anchor" id="line-65"></span>    <span class="ID">center_x</span> = <span class="ResWord">float</span>(<span class="ID">center_x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_66">  66</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_66"></span><span class="anchor" id="line-66"></span>    <span class="ID">center_y</span> = <span class="ResWord">float</span>(<span class="ID">center_y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_67">  67</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_67"></span><span class="anchor" id="line-67"></span>    <span class="ResWord">if</span> <span class="ID">circle</span> == <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_68">  68</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_68"></span><span class="anchor" id="line-68"></span>        <span class="ID">width</span> = <span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_69">  69</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_69"></span><span class="anchor" id="line-69"></span>        <span class="ID">width_x</span> = <span class="ResWord">float</span>(<span class="ID">width</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_70">  70</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_70"></span><span class="anchor" id="line-70"></span>        <span class="ID">width_y</span> = <span class="ResWord">float</span>(<span class="ID">width</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_71">  71</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_71"></span><span class="anchor" id="line-71"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_72">  72</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_72"></span><span class="anchor" id="line-72"></span>        <span class="ID">width_x</span>, <span class="ID">width_y</span> = <span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>),<span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_73">  73</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_73"></span><span class="anchor" id="line-73"></span>        <span class="ID">width_x</span> = <span class="ResWord">float</span>(<span class="ID">width_x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_74">  74</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_74"></span><span class="anchor" id="line-74"></span>        <span class="ID">width_y</span> = <span class="ResWord">float</span>(<span class="ID">width_y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_75">  75</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_75"></span><span class="anchor" id="line-75"></span>    <span class="ResWord">if</span> <span class="ID">rotate</span> == <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_76">  76</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_76"></span><span class="anchor" id="line-76"></span>        <span class="ID">rota</span> = <span class="ID">inpars</span>.<span class="ID">pop</span>(<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_77">  77</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_77"></span><span class="anchor" id="line-77"></span>        <span class="ID">rota</span> = <span class="ID">pi</span>/<span class="Number">180.</span> * <span class="ResWord">float</span>(<span class="ID">rota</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_78">  78</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_78"></span><span class="anchor" id="line-78"></span>        <span class="ID">rcen_x</span> = <span class="ID">center_x</span> * <span class="ID">cos</span>(<span class="ID">rota</span>) - <span class="ID">center_y</span> * <span class="ID">sin</span>(<span class="ID">rota</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_79">  79</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_79"></span><span class="anchor" id="line-79"></span>        <span class="ID">rcen_y</span> = <span class="ID">center_x</span> * <span class="ID">sin</span>(<span class="ID">rota</span>) + <span class="ID">center_y</span> * <span class="ID">cos</span>(<span class="ID">rota</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_80">  80</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_80"></span><span class="anchor" id="line-80"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_81">  81</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_81"></span><span class="anchor" id="line-81"></span>        <span class="ID">rcen_x</span> = <span class="ID">center_x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_82">  82</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_82"></span><span class="anchor" id="line-82"></span>        <span class="ID">rcen_y</span> = <span class="ID">center_y</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_83">  83</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_83"></span><span class="anchor" id="line-83"></span>    <span class="ResWord">if</span> <span class="ResWord">len</span>(<span class="ID">inpars</span>) &gt; <span class="Number">0</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_84">  84</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_84"></span><span class="anchor" id="line-84"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>(<span class="String">&quot;</span><span class="String">There are still input parameters:</span><span class="String">&quot;</span> + <span class="ResWord">str</span>(<span class="ID">inpars</span>) + \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_85">  85</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_85"></span><span class="anchor" id="line-85"></span>                <span class="String">&quot;</span><span class="String"> and you</span><span class="String">'</span><span class="String">ve input: </span><span class="String">&quot;</span> + <span class="ResWord">str</span>(<span class="ID">inpars_old</span>) + <span class="String">&quot;</span><span class="String"> circle=</span><span class="String">%d</span><span class="String">, rotate=</span><span class="String">%d</span><span class="String">, vheight=</span><span class="String">%d</span><span class="String">&quot;</span> % (<span class="ID">circle</span>,<span class="ID">rotate</span>,<span class="ID">vheight</span>) )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_86">  86</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_86"></span><span class="anchor" id="line-86"></span>            </span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_87">  87</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_87"></span><span class="anchor" id="line-87"></span>    <span class="ResWord">def</span> <span class="ID">rotgauss</span>(<span class="ID">x</span>,<span class="ID">y</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_88">  88</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_88"></span><span class="anchor" id="line-88"></span>        <span class="ResWord">if</span> <span class="ID">rotate</span>==<span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_89">  89</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_89"></span><span class="anchor" id="line-89"></span>            <span class="ID">xp</span> = <span class="ID">x</span> * <span class="ID">cos</span>(<span class="ID">rota</span>) - <span class="ID">y</span> * <span class="ID">sin</span>(<span class="ID">rota</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_90">  90</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_90"></span><span class="anchor" id="line-90"></span>            <span class="ID">yp</span> = <span class="ID">x</span> * <span class="ID">sin</span>(<span class="ID">rota</span>) + <span class="ID">y</span> * <span class="ID">cos</span>(<span class="ID">rota</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_91">  91</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_91"></span><span class="anchor" id="line-91"></span>        <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_92">  92</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_92"></span><span class="anchor" id="line-92"></span>            <span class="ID">xp</span> = <span class="ID">x</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_93">  93</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_93"></span><span class="anchor" id="line-93"></span>            <span class="ID">yp</span> = <span class="ID">y</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_94">  94</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_94"></span><span class="anchor" id="line-94"></span>        <span class="ID">g</span> = <span class="ID">height</span>+<span class="ID">amplitude</span>*<span class="ID">exp</span>(</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_95">  95</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_95"></span><span class="anchor" id="line-95"></span>            -(((<span class="ID">rcen_x</span>-<span class="ID">xp</span>)/<span class="ID">width_x</span>)**<span class="Number">2</span>+</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_96">  96</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_96"></span><span class="anchor" id="line-96"></span>            ((<span class="ID">rcen_y</span>-<span class="ID">yp</span>)/<span class="ID">width_y</span>)**<span class="Number">2</span>)/<span class="Number">2.</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_97">  97</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_97"></span><span class="anchor" id="line-97"></span>        <span class="ResWord">return</span> <span class="ID">g</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_98">  98</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_98"></span><span class="anchor" id="line-98"></span>    <span class="ResWord">return</span> <span class="ID">rotgauss</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_99">  99</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_99"></span><span class="anchor" id="line-99"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_100"> 100</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_100"></span><span class="anchor" id="line-100"></span><span class="ResWord">def</span> <span class="ID">gaussfit</span>(<span class="ID">data</span>,<span class="ID">err</span>=<span class="ResWord">None</span>,<span class="ID">params</span>=[],<span class="ID">autoderiv</span>=<span class="Number">1</span>,<span class="ID">return_all</span>=<span class="Number">0</span>,<span class="ID">circle</span>=<span class="Number">0</span>,<span class="ID">rotate</span>=<span class="Number">1</span>,<span class="ID">vheight</span>=<span class="Number">1</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_101"> 101</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_101"></span><span class="anchor" id="line-101"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_102"> 102</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_102"></span><span class="anchor" id="line-102"></span><span class="String">    Gaussian fitter with the ability to fit a variety of different forms of 2-dimensional gaussian.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_103"> 103</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_103"></span><span class="anchor" id="line-103"></span><span class="String">    </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_104"> 104</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_104"></span><span class="anchor" id="line-104"></span><span class="String">    Input Parameters:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_105"> 105</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_105"></span><span class="anchor" id="line-105"></span><span class="String">        data - 2-dimensional data array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_106"> 106</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_106"></span><span class="anchor" id="line-106"></span><span class="String">        err=None - error array with same size as data array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_107"> 107</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_107"></span><span class="anchor" id="line-107"></span><span class="String">        params=[] - initial input parameters for Gaussian function.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_108"> 108</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_108"></span><span class="anchor" id="line-108"></span><span class="String">            (height, amplitude, x, y, width_x, width_y, rota)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_109"> 109</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_109"></span><span class="anchor" id="line-109"></span><span class="String">            if not input, these will be determined from the moments of the system, </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_110"> 110</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_110"></span><span class="anchor" id="line-110"></span><span class="String">            assuming no rotation</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_111"> 111</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_111"></span><span class="anchor" id="line-111"></span><span class="String">        autoderiv=1 - use the autoderiv provided in the lmder.f function (the alternative</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_112"> 112</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_112"></span><span class="anchor" id="line-112"></span><span class="String">            is to us an analytic derivative with lmdif.f: this method is less robust)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_113"> 113</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_113"></span><span class="anchor" id="line-113"></span><span class="String">        return_all=0 - Default is to return only the Gaussian parameters.  See below for</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_114"> 114</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_114"></span><span class="anchor" id="line-114"></span><span class="String">            detail on output</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_115"> 115</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_115"></span><span class="anchor" id="line-115"></span><span class="String">        circle=0 - default is an elliptical gaussian (different x, y widths), but can reduce</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_116"> 116</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_116"></span><span class="anchor" id="line-116"></span><span class="String">            the input by one parameter if it's a circular gaussian</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_117"> 117</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_117"></span><span class="anchor" id="line-117"></span><span class="String">        rotate=1 - default allows rotation of the gaussian ellipse.  Can remove last parameter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_118"> 118</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_118"></span><span class="anchor" id="line-118"></span><span class="String">            by setting rotate=0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_119"> 119</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_119"></span><span class="anchor" id="line-119"></span><span class="String">        vheight=1 - default allows a variable height-above-zero, i.e. an additive constant</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_120"> 120</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_120"></span><span class="anchor" id="line-120"></span><span class="String">            for the Gaussian function.  Can remove first parameter by setting this to 0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_121"> 121</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_121"></span><span class="anchor" id="line-121"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_122"> 122</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_122"></span><span class="anchor" id="line-122"></span><span class="String">    Output:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_123"> 123</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_123"></span><span class="anchor" id="line-123"></span><span class="String">        Default output is a set of Gaussian parameters with the same shape as the input parameters</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_124"> 124</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_124"></span><span class="anchor" id="line-124"></span><span class="String">        Can also output the covariance matrix, 'infodict' that contains a lot more detail about</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_125"> 125</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_125"></span><span class="anchor" id="line-125"></span><span class="String">            the fit (see scipy.optimize.leastsq), and a message from leastsq telling what the exit</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_126"> 126</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_126"></span><span class="anchor" id="line-126"></span><span class="String">            status of the fitting routine was</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_127"> 127</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_127"></span><span class="anchor" id="line-127"></span><span class="String"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_128"> 128</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_128"></span><span class="anchor" id="line-128"></span><span class="String">        Warning: Does NOT necessarily output a rotation angle between 0 and 360 degrees.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_129"> 129</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_129"></span><span class="anchor" id="line-129"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_130"> 130</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_130"></span><span class="anchor" id="line-130"></span>    <span class="ResWord">if</span> <span class="ID">params</span> == []:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_131"> 131</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_131"></span><span class="anchor" id="line-131"></span>        <span class="ID">params</span> = (<span class="ID">moments</span>(<span class="ID">data</span>,<span class="ID">circle</span>,<span class="ID">rotate</span>,<span class="ID">vheight</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_132"> 132</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_132"></span><span class="anchor" id="line-132"></span>    <span class="ResWord">if</span> <span class="ID">err</span> == <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_133"> 133</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_133"></span><span class="anchor" id="line-133"></span>        <span class="ID">errorfunction</span> = <span class="ResWord">lambda</span> <span class="ID">p</span>: <span class="ID">ravel</span>((<span class="ID">twodgaussian</span>(<span class="ID">p</span>,<span class="ID">circle</span>,<span class="ID">rotate</span>,<span class="ID">vheight</span>)(*<span class="ID">indices</span>(<span class="ID">data</span>.<span class="ID">shape</span>)) - <span class="ID">data</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_134"> 134</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_134"></span><span class="anchor" id="line-134"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_135"> 135</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_135"></span><span class="anchor" id="line-135"></span>        <span class="ID">errorfunction</span> = <span class="ResWord">lambda</span> <span class="ID">p</span>: <span class="ID">ravel</span>((<span class="ID">twodgaussian</span>(<span class="ID">p</span>,<span class="ID">circle</span>,<span class="ID">rotate</span>,<span class="ID">vheight</span>)(*<span class="ID">indices</span>(<span class="ID">data</span>.<span class="ID">shape</span>)) - <span class="ID">data</span>)/<span class="ID">err</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_136"> 136</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_136"></span><span class="anchor" id="line-136"></span>    <span class="ResWord">if</span> <span class="ID">autoderiv</span> == <span class="Number">0</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_137"> 137</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_137"></span><span class="anchor" id="line-137"></span>        <span class="Comment"># the analytic derivative, while not terribly difficult, is less efficient and useful.  I only bothered</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_138"> 138</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_138"></span><span class="anchor" id="line-138"></span>        <span class="Comment"># putting it here because I was instructed to do so for a class project - please ask if you would like </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_139"> 139</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_139"></span><span class="anchor" id="line-139"></span>        <span class="Comment"># this feature implemented</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_140"> 140</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_140"></span><span class="anchor" id="line-140"></span>        <span class="ResWord">raise</span> <span class="ID">ValueError</span>(<span class="String">&quot;</span><span class="String">I</span><span class="String">'</span><span class="String">m sorry, I haven</span><span class="String">'</span><span class="String">t implemented this feature yet.</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_141"> 141</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_141"></span><span class="anchor" id="line-141"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_142"> 142</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_142"></span><span class="anchor" id="line-142"></span>        <span class="ID">p</span>, <span class="ID">cov</span>, <span class="ID">infodict</span>, <span class="ID">errmsg</span>, <span class="ID">success</span> = <span class="ID">optimize</span>.<span class="ID">leastsq</span>(<span class="ID">errorfunction</span>, <span class="ID">params</span>, <span class="ID">full_output</span>=<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_143"> 143</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_143"></span><span class="anchor" id="line-143"></span>    <span class="ResWord">if</span>  <span class="ID">return_all</span> == <span class="Number">0</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_144"> 144</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_144"></span><span class="anchor" id="line-144"></span>        <span class="ResWord">return</span> <span class="ID">p</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_145"> 145</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_145"></span><span class="anchor" id="line-145"></span>    <span class="ResWord">elif</span> <span class="ID">return_all</span> == <span class="Number">1</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_146"> 146</a> </span><span class="LineAnchor" id="CA-01eafdf0a4e98eda6a8d536ed520ab02c3a32896_146"></span><span class="anchor" id="line-146"></span>        <span class="ResWord">return</span> <span class="ID">p</span>,<span class="ID">cov</span>,<span class="ID">infodict</span>,<span class="ID">errmsg</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/FittingData" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="gaussfitter2.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327c90.0cdd9da226ba5dfd0632bd1bfb40f0eb0c7bc718">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="datafit59fc.png?action=AttachFile&amp;do=get&amp;target=datafit.png">get</a>&nbsp;| <a href="FittingDataa2fd.html?action=AttachFile&amp;do=view&amp;target=datafit.png">view</a>] (2006-09-21 01:42:19, 54.5 KB) [[attachment:datafit.png]]</li><li>[<a href="fitgaussianbc41.png?action=AttachFile&amp;do=get&amp;target=fitgaussian.png">get</a>&nbsp;| <a href="FittingData6ace.html?action=AttachFile&amp;do=view&amp;target=fitgaussian.png">view</a>] (2007-05-17 16:07:02, 369.1 KB) [[attachment:fitgaussian.png]]</li><li>[<a href="gaussfitterbe68.py?action=AttachFile&amp;do=get&amp;target=gaussfitter.py">get</a>&nbsp;| <a href="FittingData659c.html?action=AttachFile&amp;do=view&amp;target=gaussfitter.py">view</a>] (2008-03-17 17:24:50, 5.7 KB) [[attachment:gaussfitter.py]]</li><li>[<a href="gaussfitter2b4b1.py?action=AttachFile&amp;do=get&amp;target=gaussfitter2.py">get</a>&nbsp;| <a href="FittingData422c.html?action=AttachFile&amp;do=view&amp;target=gaussfitter2.py">view</a>] (2008-03-17 17:48:05, 6.4 KB) [[attachment:gaussfitter2.py]]</li><li>[<a href="gaussianfitafe4.png?action=AttachFile&amp;do=get&amp;target=gaussianfit.png">get</a>&nbsp;| <a href="FittingData3338.html?action=AttachFile&amp;do=view&amp;target=gaussianfit.png">view</a>] (2007-03-11 14:27:29, 15.4 KB) [[attachment:gaussianfit.png]]</li><li>[<a href="power_law_fit9e6b.png?action=AttachFile&amp;do=get&amp;target=power_law_fit.png">get</a>&nbsp;| <a href="FittingData2d0c.html?action=AttachFile&amp;do=view&amp;target=power_law_fit.png">view</a>] (2007-12-06 19:27:48, 38.4 KB) [[attachment:power_law_fit.png]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FittingData37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/FittingData">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/FittingData?action=AttachFile&do=view&target=gaussfitter2.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:43:21 GMT -->
+</html>
+

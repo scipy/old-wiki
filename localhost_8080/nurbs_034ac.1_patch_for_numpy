@@ -1,0 +1,475 @@
+diff -u -r Nurbs-0.1/Nurbs/_Bas.c Nurbs-0.1-new/Nurbs/_Bas.c
+--- Nurbs-0.1/Nurbs/_Bas.c	2001-09-24 20:08:14.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/_Bas.c	2007-01-31 10:24:28.000000000 +0200
+@@ -1,5 +1,5 @@
+ #include "Python.h"
+-#include "Numeric/arrayobject.h"
++#include "numpy/arrayobject.h"
+ #include <math.h>
+ 
+ 
+@@ -8,6 +8,14 @@
+ This module implements low level NURBS functions.\n\
+ \n";
+ 
++#ifndef max
++#define max(a,b) ((a) >= (b) ? (a) : (b))
++#endif
++
++#ifndef min
++#define min(a,b) ((a) <= (b) ? (a) : (b))
++#endif
++
+ static double **vec2mat(double *vec, int nrows, int ncols) 
+ {
+   int row;
+@@ -72,11 +80,11 @@
+   return a[n];
+ }
+ 
+-static char bincoeff__doc__[] =
+-"Computes the binomial coefficient.\n\
+-\n\
+- ( n )      n!\n\
+- (   ) = --------\n\
++static char bincoeff__doc__[] =
++"Computes the binomial coefficient.\n\
++\n\
++ ( n )      n!\n\
++ (   ) = --------\n\
+  ( k )   k!(n-k)!\n\
+ \n\
+  Algorithm from 'Numerical Recipes in C, 2nd Edition' pg215.\n";
+@@ -178,21 +186,21 @@
+   free(right);
+ }
+ 
+-static char bspeval__doc__[] =
+-"Evaluation of univariate B-Spline. \n\
+-\n\
+-INPUT:\n\
+-\n\
+- d - spline degree       integer\n\
+- c - control points      double  matrix(mc,nc)\n\
+- k - knot sequence       double  vector(nk)\n\
++static char bspeval__doc__[] =
++"Evaluation of univariate B-Spline. \n\
++\n\
++INPUT:\n\
++\n\
++ d - spline degree       integer\n\
++ c - control points      double  matrix(mc,nc)\n\
++ k - knot sequence       double  vector(nk)\n\
+  u - parametric points   double  vector(nu)\n\
+ \n\
+ OUTPUT:\n\
+ \n\
+    p - evaluated points    double  matrix(mc,nu)\n\
+ \n\
+-Modified version of Algorithm A3.1 from 'The NURBS BOOK' pg82.\n\
++Modified version of Algorithm A3.1 from 'The NURBS BOOK' pg82.\n\
+ \n";
+ 
+ static void _bspeval(int d, double **ctrl, int mc, int nc, double *k, int nk, double *u,
+@@ -358,14 +366,14 @@
+   free(right);
+ }
+ 
+-static char bspdeval__doc__[] =
+-"Evaluate a B-Spline derivative curve.\n\
+-\n\
+-INPUT:\n\
+-\n\
+- d - spline degree       integer\n\
+- c - control points      double  matrix(mc,nc)\n\
+- k - knot sequence       double  vector(nk)\n\
++static char bspdeval__doc__[] =
++"Evaluate a B-Spline derivative curve.\n\
++\n\
++INPUT:\n\
++\n\
++ d - spline degree       integer\n\
++ c - control points      double  matrix(mc,nc)\n\
++ k - knot sequence       double  vector(nk)\n\
+  u - parametric point    double\n\
+  n - nth derivative      integer\n\
+ \n\
+@@ -373,7 +381,7 @@
+ \n\
+  p - evaluated points    double  matrix(mc, n+1)\n\
+ \n\
+-Modified version of Algorithm A3.2 from 'The NURBS BOOK' pg93.\n\
++Modified version of Algorithm A3.2 from 'The NURBS BOOK' pg93.\n\
+ \n";
+ 
+ static void _bspdeval(int d, double **c, int mc, int nc, double *k, int nk, 
+@@ -433,14 +441,14 @@
+ 	return PyArray_Return(pnt);
+ }
+ 
+-static char bspkntins__doc__[] =
+-"Insert Knot into a B-Spline.\n\
+-\n\
+-INPUT:\n\
+-\n\
+- d - spline degree       integer\n\
+- c - control points      double  matrix(mc,nc)\n\
+- k - knot sequence       double  vector(nk)\n\
++static char bspkntins__doc__[] =
++"Insert Knot into a B-Spline.\n\
++\n\
++INPUT:\n\
++\n\
++ d - spline degree       integer\n\
++ c - control points      double  matrix(mc,nc)\n\
++ k - knot sequence       double  vector(nk)\n\
+  u - new knots           double  vector(nu)\n\
+ \n\
+ OUTPUT:\n\
+@@ -448,7 +456,7 @@
+  ic - new control points double  matrix(mc,nc+nu)\n\
+  ik - new knot sequence  double  vector(nk+nu)\n\
+ \n\
+-Modified version of Algorithm A5.4 from 'The NURBS BOOK' pg164.\n\
++Modified version of Algorithm A5.4 from 'The NURBS BOOK' pg164.\n\
+ \n";
+ 
+ static void _bspkntins(int d, double **ctrl, int mc, int nc, double *k, int nk, 
+@@ -544,18 +552,18 @@
+ 	return Py_BuildValue("(OO)", (PyObject *)ic, (PyObject *)ik);
+ }
+ 
+-static char bspdegelev__doc__[] =
+-"Degree elevate a B-Spline t times.\n\
+-\n\
+-INPUT:\n\
+-\n\
++static char bspdegelev__doc__[] =
++"Degree elevate a B-Spline t times.\n\
++\n\
++INPUT:\n\
++\n\
+  n,p,U,Pw,t\n\
+ \n\
+ OUTPUT:\n\
+ \n\
+  nh,Uh,Qw\n\
+ \n\
+-Modified version of Algorithm A5.9 from 'The NURBS BOOK' pg206.\n\
++Modified version of Algorithm A5.9 from 'The NURBS BOOK' pg206.\n\
+ \n";
+ 
+ static void _bspdegelev(int d, double **ctrl, int mc, int nc, double *k, int nk, 
+@@ -798,18 +806,18 @@
+ 	return Py_BuildValue("(OOi)", (PyObject *)ic, (PyObject *)ik, nh);
+ }
+ 
+-static char bspbezdecom__doc__[] =
+-"Decompose a B-Spline to Bezier segments.\n\
+-\n\
+-INPUT:\n\
+-\n\
++static char bspbezdecom__doc__[] =
++"Decompose a B-Spline to Bezier segments.\n\
++\n\
++INPUT:\n\
++\n\
+  n,p,U,Pw\n\
+ \n\
+ OUTPUT:\n\
+ \n\
+  Qw\n\
+ \n\
+-Modified version of Algorithm A5.6 from 'The NURBS BOOK' pg173.\n\
++Modified version of Algorithm A5.6 from 'The NURBS BOOK' pg173.\n\
+ \n";
+ 
+ static void _bspbezdecom(int d, double **ctrl, int mc, int nc, double *k, int nk, 
+diff -u -r Nurbs-0.1/Nurbs/Crv.py Nurbs-0.1-new/Nurbs/Crv.py
+--- Nurbs-0.1/Nurbs/Crv.py	2001-09-24 20:18:02.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/Crv.py	2007-01-31 10:28:57.000000000 +0200
+@@ -3,11 +3,11 @@
+ from Util import  scale, translate, rotz
+ 
+ dependencies = '''This module requires:
+-	Numeric Python
++	numpy
+ '''
+ 
+ try:
+-    import Numeric
++    import numpy.oldnumeric as Numeric
+ except ImportError, value:
+ 	print dependencies
+ 	raise
+@@ -76,7 +76,7 @@
+ 	NOTE: No knot multiplicity will be increased beyond the order of the spline"""
+         if len(uknots):
+             uknots = Numeric.sort(Numeric.asarray(uknots, Numeric.Float))
+-            if Numeric.less(uknots, 0.) or Numeric.greater(uknots, 1.):
++            if Numeric.any(uknots < 0.) or Numeric.any(uknots > 1.):
+                 raise NURBSError, 'NURBS curve parameter out of range [0,1]'
+             self.cntrl, self.uknots = bspkntins(self.degree, self.cntrl, self.uknots, uknots)
+ 
+@@ -111,21 +111,21 @@
+     def pnt4D(self, ut):
+         "Evaluate parametric point[s] and return 4D homogeneous coordinates"
+         ut = Numeric.asarray(ut, Numeric.Float)
+-        if Numeric.less(ut, 0.) or Numeric.greater(ut, 1.):
++        if Numeric.any(ut < 0.) or Numeric.any(ut > 1.):
+             raise NURBSError, 'NURBS curve parameter out of range [0,1]'
+         return bspeval(self.degree, self.cntrl, self.uknots, ut)
+                 
+     def plot(self, n = 25):
+         """A simple plotting function for debugging purpose
+ 	n = number of subdivisions.
+-	Depends on the dislin plotting library."""
++	Depends on the matplotlib library."""
+         try:
+-            import dislin
++            import pylab as P
+         except ImportError, value:
+-            print 'dislin plotting library not available'
++            print 'Pylab (matplotlib) not available'
+             return
+ 
+-        pnts = self.pnt3D(Numeric.arange(n + 1, typecode = Numeric.Float)/n)
++        pnts = self.pnt3D(Numeric.linspace(0.,1,n))
+         knots = self.pnt3D(self.uknots)
+ 
+         maxminx = Numeric.sort(self.cntrl[0,:]/self.cntrl[3,:])
+@@ -146,28 +146,17 @@
+         if minz == maxz:
+             minz -= 1.
+             maxz += 1.
+-            
+-        dislin.metafl('cons')
+-        dislin.disini()
+-        dislin.hwfont()
+-        dislin.pagera()
+-        dislin.name('X-axis', 'X')
+-        dislin.name('Y-axis', 'Y')
+-        dislin.name('Z-axis', 'Z')
+-        dislin.graf3d(minx, maxx, 0 , abs((maxx-minx)/4.),
+-                      miny, maxy, 0 , abs((maxy-miny)/4.),
+-                      minz, maxz, 0 , abs((maxz-minz)/4.))
+-        dislin.color('yellow')
+-        dislin.curv3d(pnts[0,:], pnts[1,:], pnts[2,:], n+1)
+-        dislin.color('red')
+-        dislin.dashm()
+-        dislin.curv3d(self.cntrl[0,:]/self.cntrl[3,:], self.cntrl[1,:]/self.cntrl[3,:],
+-                      self.cntrl[2,:]/self.cntrl[3,:], self.cntrl.shape[1])
+-        dislin.color('white')
+-        dislin.incmrk(-1)
+-        dislin.marker(8)
+-        dislin.curv3d(knots[0,:], knots[1,:], knots[2,:], knots.shape[1])
+-        dislin.disfin()
++
++        P.figure()
++        P.plot(pnts[0,:], pnts[1,:])
++        P.plot(self.cntrl[0,:]/self.cntrl[3,:],
++               self.cntrl[1,:]/self.cntrl[3,:], 'r:o')
++        P.plot(knots[0,:], knots[1,:], 'go')
++        P.xlabel("X-axis")
++        P.ylabel("Y-axis")        
++        P.axis("scaled")
++        P.show()
++        P.close()
+ 
+     def __call__(self, *args):
+         return self.pnt3D(args[0])
+diff -u -r Nurbs-0.1/Nurbs/demos/EllipseCrv.py Nurbs-0.1-new/Nurbs/demos/EllipseCrv.py
+--- Nurbs-0.1/Nurbs/demos/EllipseCrv.py	2001-09-24 20:36:26.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/demos/EllipseCrv.py	2007-01-31 10:16:29.000000000 +0200
+@@ -1,14 +1,14 @@
+ # Demonstration of a unit circle transformed to a inclined ellipse
+ # by first scaling, then rotating and finally translating.
+ 
+-import Numeric
++import numpy
+ from Nurbs import Crv
+ from Nurbs.Util import translate, scale, rotx, roty, deg2rad
+ 
+ xx = scale([1., 2.])
+-xx = Numeric.dot(rotx(deg2rad(45)), xx)
+-xx = Numeric.dot(roty(deg2rad(12)), xx)
+-xx = Numeric.dot(translate([2., 1.]), xx)
++xx = numpy.dot(rotx(deg2rad(45)), xx)
++xx = numpy.dot(roty(deg2rad(12)), xx)
++xx = numpy.dot(translate([2., 1.]), xx)
+ crv = Crv.UnitCircle()
+ crv.trans(xx)
+ crv.plot()
+diff -u -r Nurbs-0.1/Nurbs/demos/GLCrv.py Nurbs-0.1-new/Nurbs/demos/GLCrv.py
+--- Nurbs-0.1/Nurbs/demos/GLCrv.py	2001-09-27 20:58:50.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/demos/GLCrv.py	2007-01-31 10:16:44.000000000 +0200
+@@ -1,5 +1,5 @@
+ from Nurbs import Crv
+-import Numeric
++import numpy
+ 
+ from OpenGL.GL import *
+ from OpenGL.GLU import *
+@@ -83,7 +83,7 @@
+ 	
+ 	glColor3f(1., 1., 0.)
+ 	gluBeginCurve(nurb)
+-	gluNurbsCurve(nurb, crv.uknots, Numeric.transpose(crv.cntrl), GL_MAP1_VERTEX_4)
++	gluNurbsCurve(nurb, crv.uknots, numpy.transpose(crv.cntrl), GL_MAP1_VERTEX_4)
+ 	gluEndCurve(nurb)
+ 
+ 	glEndList()
+diff -u -r Nurbs-0.1/Nurbs/demos/Srf.py Nurbs-0.1-new/Nurbs/demos/Srf.py
+--- Nurbs-0.1/Nurbs/demos/Srf.py	2001-09-21 22:03:20.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/demos/Srf.py	2007-01-31 10:17:05.000000000 +0200
+@@ -1,9 +1,9 @@
+ # Demonstration of a surface
+ 
+-import Numeric
++import numpy
+ from Nurbs import Srf, Crv
+ 
+-cntrl = Numeric.zeros((4,4,4), Numeric.Float)
++cntrl = numpy.zeros((4,4,4), numpy.float)
+ for u in range(4):
+     for v in range(4):
+         cntrl[0][u][v] = 2.*(u - 1.5)
+diff -u -r Nurbs-0.1/Nurbs/__init__.py Nurbs-0.1-new/Nurbs/__init__.py
+--- Nurbs-0.1/Nurbs/__init__.py	2001-09-27 23:28:58.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/__init__.py	2007-01-31 10:19:41.000000000 +0200
+@@ -6,17 +6,17 @@
+ Dependency
+ ============
+ Python 2.0 or newer
+-Numerical Python
++numpy
+ Dislin -> optional but recomended
+ PyOpenGL -> optional
+ 
+-Installation
++Installation
+ ============
+ See python documentation for Distutils.
+ 
+-License
+-=======
+-All the software within this tool is covered by the GPL Version 2 license
++License
++=======
++All the software within this tool is covered by the GPL Version 2 license
+ which is stated in the file 'LICENSE'.
+ 
+ Runar Tenfjord
+diff -u -r Nurbs-0.1/Nurbs/Srf.py Nurbs-0.1-new/Nurbs/Srf.py
+--- Nurbs-0.1/Nurbs/Srf.py	2001-09-24 20:24:56.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/Srf.py	2007-01-31 10:30:51.000000000 +0200
+@@ -4,11 +4,11 @@
+ import Crv
+ 
+ dependencies = '''This module requires:
+-	Numeric Python
++	numpy
+ '''
+ 
+ try:
+-    import Numeric
++    import numpy.oldnumeric as Numeric
+ except ImportError, value:
+ 	print dependencies
+ 	raise
+@@ -101,7 +101,7 @@
+ 
+     def extractV(self, u):
+         "Extract curve in v-direction at parameter u."
+-        if Numeric.less(u, 0.) or Numeric.greater(u, 1.):
++        if Numeric.any(u < 0.) or Numeric.any(u > 1.):
+                 raise NURBSError, 'Out of parameter range [0,1]'
+         if u == 0.:
+             cntrl = self.cntrl[:,0,:]
+@@ -128,7 +128,7 @@
+ 
+     def extractU(self, v):
+         "Extract curve in u-direction at parameter v."
+-        if Numeric.less(v, 0.) or Numeric.greater(v, 1.):
++        if Numeric.any(v < 0.) or Numeric.any(v > 1.):
+                 raise NURBSError, 'Out of parameter range [0,1]'
+         if v == 0.:
+             cntrl = self.cntrl[:,:,0]
+@@ -159,7 +159,7 @@
+         if len(vknots):
+             # Force the v knot sequence to be a vector in ascending order
+             vknots = Numeric.sort(Numeric.asarray(vknots, Numeric.Float))
+-            if Numeric.less(vknots, 0.) or Numeric.greater(vknots, 1.):
++            if Numeric.any(vknots < 0.) or Numeric.any(vknots > 1.):
+                 raise NURBSError, 'Illegal vknots sequence'
+             coefs = Numeric.resize(self.cntrl,(4*self.cntrl.shape[1], self.cntrl.shape[2]))
+             coefs, self.vknots = bspkntins(self.degree[1], coefs, self.vknots, vknots)
+@@ -167,7 +167,7 @@
+         if len(uknots):
+             # Force the u knot sequence to be a vector in ascending order
+             uknots = Numeric.sort(Numeric.asarray(uknots, Numeric.Float))
+-            if Numeric.less(uknots, 0.) or Numeric.greater(uknots, 1.):
++            if Numeric.any(uknots < 0.) or Numeric.any(uknots > 1.):
+                 raise NURBSError, 'Illegal uknots sequence'
+             coefs = Numeric.transpose(self.cntrl,(0, 2, 1))
+             coefs = Numeric.resize(coefs,(4*self.cntrl.shape[2], self.cntrl.shape[1]))
+@@ -243,13 +243,13 @@
+ 	ut(1,:) represents the v direction.
+ 	If both parameters are given then we will evaluate over a [u,v] grid."""
+         ut = Numeric.asarray(ut, Numeric.Float)
+-        if Numeric.less(ut, 0.) or Numeric.greater(ut, 1.):
++        if Numeric.any(ut < 0.) or Numeric.any(ut > 1.):
+             raise NURBSError, 'NURBS curve parameter out of range [0,1]'
+         
+         if vt: #FIX!
+             # Evaluate over a [u,v] grid
+             vt = Numeric.asarray(vt, Numeric.Float)
+-            if Numeric.less(vt, 0.) or Numeric.greater(vt, 1.):
++            if Numeric.any(vt < 0.) or Numeric.any(vt > 1.):
+                 raise NURBSError, 'NURBS curve parameter out of range [0,1]'
+     
+             val = Numeric.resize(self.cntrl,(4*self.cntrl.shape[1],self.cntrl.shape[2]))
+diff -u -r Nurbs-0.1/Nurbs/Util.py Nurbs-0.1-new/Nurbs/Util.py
+--- Nurbs-0.1/Nurbs/Util.py	2001-09-24 20:09:28.000000000 +0200
++++ Nurbs-0.1-new/Nurbs/Util.py	2007-01-31 10:18:59.000000000 +0200
+@@ -1,11 +1,11 @@
+ import math
+ 
+ dependencies = '''This module requires:
+-	Numeric Python
++	numpy
+ '''
+ 
+ try:
+-    import Numeric
++    import numpy.oldnumeric as Numeric
+ except ImportError, value:
+     print dependencies
+     raise
+diff -u -r Nurbs-0.1/setup.py Nurbs-0.1-new/setup.py
+--- Nurbs-0.1/setup.py	2001-09-27 22:19:10.000000000 +0200
++++ Nurbs-0.1-new/setup.py	2007-01-31 10:18:07.000000000 +0200
+@@ -1,14 +1,14 @@
+-from distutils.core import setup, Extension
+-
+-setup(
+-    name='Nurbs',
+-    version='0.1',
+-    description='Python module to work with NURBS curves and surfaces.',
+-    author='Runar Tenfjord',
+-    author_email='runten@netcom.no',
++from numpy.distutils.core import setup, Extension
++
++setup(
++    name='Nurbs',
++    version='0.1',
++    description='Python module to work with NURBS curves and surfaces.',
++    author='Runar Tenfjord',
++    author_email='runten@netcom.no',
+     url='http://runten.tripod.com/',
+     packages=['Nurbs', 'Nurbs.demos'],
+     ext_modules = [Extension("Nurbs._Bas", ["Nurbs/_Bas.c"])],
+     data_files=[('Nurbs/Doc', ['LICENSE', 'README'])]
+-    )
++    )
+ 

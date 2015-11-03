@@ -1,0 +1,438 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/FortranIO/FortranFile?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/FortranIO/FortranFile - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/FortranIO/FortranFile" href="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FFortranIO%2FFortranFile&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile?action=print">
+<link rel="Up" href="../FortranIO.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="FortranFile456e-2.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../FortranIO.html">FortranIO</a></li><li><a class="backlink" href="FortranFile9636.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FFortranIO%2FFortranFile%22" rel="nofollow" title="Click to do a full-text search for this title">FortranFile</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="FortranFile-2.html">FortranFile</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="FortranFile-2.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FortranFile37dc-2.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="The_FortranFile_class">The FortranFile class</h1>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line874">This subclass of file is designed to simplify reading of Fortran unformatted binary files which are typically saved in a record-based format. <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line867"><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><span class="anchor" id="line-220"></span><span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span><span class="anchor" id="line-225"></span><span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span><span class="anchor" id="line-243"></span><span class="anchor" id="line-244"></span><span class="anchor" id="line-245"></span><span class="anchor" id="line-246"></span><span class="anchor" id="line-247"></span><span class="anchor" id="line-248"></span><span class="anchor" id="line-249"></span><span class="anchor" id="line-250"></span><span class="anchor" id="line-251"></span><span class="anchor" id="line-252"></span><span class="anchor" id="line-253"></span><span class="anchor" id="line-254"></span><span class="anchor" id="line-255"></span><span class="anchor" id="line-256"></span><span class="anchor" id="line-257"></span><span class="anchor" id="line-258"></span><span class="anchor" id="line-259"></span><span class="anchor" id="line-260"></span><span class="anchor" id="line-261"></span><span class="anchor" id="line-262"></span><span class="anchor" id="line-263"></span><span class="anchor" id="line-264"></span><span class="anchor" id="line-265"></span><span class="anchor" id="line-266"></span><pre><span class="anchor" id="line-1"></span># Copyright 2008, 2009 Neil Martinsen-Burrell
+<span class="anchor" id="line-2"></span>#
+<span class="anchor" id="line-3"></span># Permission is hereby granted, free of charge, to any person obtaining a copy
+<span class="anchor" id="line-4"></span># of this software and associated documentation files (the &quot;Software&quot;), to deal
+<span class="anchor" id="line-5"></span># in the Software without restriction, including without limitation the rights
+<span class="anchor" id="line-6"></span># to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+<span class="anchor" id="line-7"></span># copies of the Software, and to permit persons to whom the Software is
+<span class="anchor" id="line-8"></span># furnished to do so, subject to the following conditions:
+<span class="anchor" id="line-9"></span>
+<span class="anchor" id="line-10"></span># The above copyright notice and this permission notice shall be included in
+<span class="anchor" id="line-11"></span># all copies or substantial portions of the Software.
+<span class="anchor" id="line-12"></span>
+<span class="anchor" id="line-13"></span># THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+<span class="anchor" id="line-14"></span># IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+<span class="anchor" id="line-15"></span># FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+<span class="anchor" id="line-16"></span># AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+<span class="anchor" id="line-17"></span># LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+<span class="anchor" id="line-18"></span># OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+<span class="anchor" id="line-19"></span># THE SOFTWARE.
+<span class="anchor" id="line-20"></span>
+<span class="anchor" id="line-21"></span>&quot;&quot;&quot;Defines a file-derived class to read/write Fortran unformatted files.
+<span class="anchor" id="line-22"></span>
+<span class="anchor" id="line-23"></span>The assumption is that a Fortran unformatted file is being written by
+<span class="anchor" id="line-24"></span>the Fortran runtime as a sequence of records.  Each record consists of
+<span class="anchor" id="line-25"></span>an integer (of the default size [usually 32 or 64 bits]) giving the
+<span class="anchor" id="line-26"></span>length of the following data in bytes, then the data itself, then the
+<span class="anchor" id="line-27"></span>same integer as before.
+<span class="anchor" id="line-28"></span>
+<span class="anchor" id="line-29"></span>Examples
+<span class="anchor" id="line-30"></span>--------
+<span class="anchor" id="line-31"></span>
+<span class="anchor" id="line-32"></span>To use the default endian and size settings, one can just do::
+<span class="anchor" id="line-33"></span>    &gt;&gt;&gt; f = FortranFile('filename')
+<span class="anchor" id="line-34"></span>    &gt;&gt;&gt; x = f.readReals()
+<span class="anchor" id="line-35"></span>
+<span class="anchor" id="line-36"></span>One can read arrays with varying precisions::
+<span class="anchor" id="line-37"></span>    &gt;&gt;&gt; f = FortranFile('filename')
+<span class="anchor" id="line-38"></span>    &gt;&gt;&gt; x = f.readInts('h')
+<span class="anchor" id="line-39"></span>    &gt;&gt;&gt; y = f.readInts('q')
+<span class="anchor" id="line-40"></span>    &gt;&gt;&gt; z = f.readReals('f')
+<span class="anchor" id="line-41"></span>Where the format codes are those used by Python's struct module.
+<span class="anchor" id="line-42"></span>
+<span class="anchor" id="line-43"></span>One can change the default endian-ness and header precision::
+<span class="anchor" id="line-44"></span>    &gt;&gt;&gt; f = FortranFile('filename', endian='&gt;', header_prec='l')
+<span class="anchor" id="line-45"></span>for a file with little-endian data whose record headers are long
+<span class="anchor" id="line-46"></span>integers.
+<span class="anchor" id="line-47"></span>&quot;&quot;&quot;
+<span class="anchor" id="line-48"></span>
+<span class="anchor" id="line-49"></span>__docformat__ = &quot;restructuredtext en&quot;
+<span class="anchor" id="line-50"></span>
+<span class="anchor" id="line-51"></span>import struct
+<span class="anchor" id="line-52"></span>import numpy
+<span class="anchor" id="line-53"></span>
+<span class="anchor" id="line-54"></span>class FortranFile(file):
+<span class="anchor" id="line-55"></span>
+<span class="anchor" id="line-56"></span>    &quot;&quot;&quot;File with methods for dealing with fortran unformatted data files&quot;&quot;&quot;
+<span class="anchor" id="line-57"></span>
+<span class="anchor" id="line-58"></span>    def _get_header_length(self):
+<span class="anchor" id="line-59"></span>        return struct.calcsize(self._header_prec)
+<span class="anchor" id="line-60"></span>    _header_length = property(fget=_get_header_length)
+<span class="anchor" id="line-61"></span>
+<span class="anchor" id="line-62"></span>    def _set_endian(self,c):
+<span class="anchor" id="line-63"></span>        &quot;&quot;&quot;Set endian to big (c='&gt;') or little (c='&lt;') or native (c='@')
+<span class="anchor" id="line-64"></span>
+<span class="anchor" id="line-65"></span>        :Parameters:
+<span class="anchor" id="line-66"></span>          `c` : string
+<span class="anchor" id="line-67"></span>            The endian-ness to use when reading from this file.
+<span class="anchor" id="line-68"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-69"></span>        if c in '&lt;&gt;@=':
+<span class="anchor" id="line-70"></span>            self._endian = c
+<span class="anchor" id="line-71"></span>        else:
+<span class="anchor" id="line-72"></span>            raise ValueError('Cannot set endian-ness')
+<span class="anchor" id="line-73"></span>    def _get_endian(self):
+<span class="anchor" id="line-74"></span>        return self._endian
+<span class="anchor" id="line-75"></span>    ENDIAN = property(fset=_set_endian,
+<span class="anchor" id="line-76"></span>                      fget=_get_endian,
+<span class="anchor" id="line-77"></span>                      doc=&quot;Possible endian values are '&lt;', '&gt;', '@', '='&quot;
+<span class="anchor" id="line-78"></span>                     )
+<span class="anchor" id="line-79"></span>
+<span class="anchor" id="line-80"></span>    def _set_header_prec(self, prec):
+<span class="anchor" id="line-81"></span>        if prec in 'hilq':
+<span class="anchor" id="line-82"></span>            self._header_prec = prec
+<span class="anchor" id="line-83"></span>        else:
+<span class="anchor" id="line-84"></span>            raise ValueError('Cannot set header precision')
+<span class="anchor" id="line-85"></span>    def _get_header_prec(self):
+<span class="anchor" id="line-86"></span>        return self._header_prec
+<span class="anchor" id="line-87"></span>    HEADER_PREC = property(fset=_set_header_prec,
+<span class="anchor" id="line-88"></span>                           fget=_get_header_prec,
+<span class="anchor" id="line-89"></span>                           doc=&quot;Possible header precisions are 'h', 'i', 'l', 'q'&quot;
+<span class="anchor" id="line-90"></span>                          )
+<span class="anchor" id="line-91"></span>
+<span class="anchor" id="line-92"></span>    def __init__(self, fname, endian='@', header_prec='i', *args, **kwargs):
+<span class="anchor" id="line-93"></span>        &quot;&quot;&quot;Open a Fortran unformatted file for writing.
+<span class="anchor" id="line-94"></span>        
+<span class="anchor" id="line-95"></span>        Parameters
+<span class="anchor" id="line-96"></span>        ----------
+<span class="anchor" id="line-97"></span>        endian : character, optional
+<span class="anchor" id="line-98"></span>            Specify the endian-ness of the file.  Possible values are
+<span class="anchor" id="line-99"></span>            '&gt;', '&lt;', '@' and '='.  See the documentation of Python's
+<span class="anchor" id="line-100"></span>            struct module for their meanings.  The deafult is '&gt;' (native
+<span class="anchor" id="line-101"></span>            byte order)
+<span class="anchor" id="line-102"></span>        header_prec : character, optional
+<span class="anchor" id="line-103"></span>            Specify the precision used for the record headers.  Possible
+<span class="anchor" id="line-104"></span>            values are 'h', 'i', 'l' and 'q' with their meanings from
+<span class="anchor" id="line-105"></span>            Python's struct module.  The default is 'i' (the system's
+<span class="anchor" id="line-106"></span>            default integer).
+<span class="anchor" id="line-107"></span>
+<span class="anchor" id="line-108"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-109"></span>        file.__init__(self, fname, *args, **kwargs)
+<span class="anchor" id="line-110"></span>        self.ENDIAN = endian
+<span class="anchor" id="line-111"></span>        self.HEADER_PREC = header_prec
+<span class="anchor" id="line-112"></span>
+<span class="anchor" id="line-113"></span>    def _read_exactly(self, num_bytes):
+<span class="anchor" id="line-114"></span>        &quot;&quot;&quot;Read in exactly num_bytes, raising an error if it can't be done.&quot;&quot;&quot;
+<span class="anchor" id="line-115"></span>        data = ''
+<span class="anchor" id="line-116"></span>        while True:
+<span class="anchor" id="line-117"></span>            l = len(data)
+<span class="anchor" id="line-118"></span>            if l == num_bytes:
+<span class="anchor" id="line-119"></span>                return data
+<span class="anchor" id="line-120"></span>            else:
+<span class="anchor" id="line-121"></span>                read_data = self.read(num_bytes - l)
+<span class="anchor" id="line-122"></span>            if read_data == '':
+<span class="anchor" id="line-123"></span>                raise IOError('Could not read enough data.'
+<span class="anchor" id="line-124"></span>                              '  Wanted %d bytes, got %d.' % (num_bytes, l))
+<span class="anchor" id="line-125"></span>            data += read_data
+<span class="anchor" id="line-126"></span>
+<span class="anchor" id="line-127"></span>    def _read_check(self):
+<span class="anchor" id="line-128"></span>        return struct.unpack(self.ENDIAN+self.HEADER_PREC,
+<span class="anchor" id="line-129"></span>                             self._read_exactly(self._header_length)
+<span class="anchor" id="line-130"></span>                            )[0]
+<span class="anchor" id="line-131"></span>
+<span class="anchor" id="line-132"></span>    def _write_check(self, number_of_bytes):
+<span class="anchor" id="line-133"></span>        &quot;&quot;&quot;Write the header for the given number of bytes&quot;&quot;&quot;
+<span class="anchor" id="line-134"></span>        self.write(struct.pack(self.ENDIAN+self.HEADER_PREC,
+<span class="anchor" id="line-135"></span>                               number_of_bytes))
+<span class="anchor" id="line-136"></span>
+<span class="anchor" id="line-137"></span>    def readRecord(self):
+<span class="anchor" id="line-138"></span>        &quot;&quot;&quot;Read a single fortran record&quot;&quot;&quot;
+<span class="anchor" id="line-139"></span>        l = self._read_check()
+<span class="anchor" id="line-140"></span>        data_str = self._read_exactly(l)
+<span class="anchor" id="line-141"></span>        check_size = self._read_check()
+<span class="anchor" id="line-142"></span>        if check_size != l:
+<span class="anchor" id="line-143"></span>            raise IOError('Error reading record from data file')
+<span class="anchor" id="line-144"></span>        return data_str
+<span class="anchor" id="line-145"></span>
+<span class="anchor" id="line-146"></span>    def writeRecord(self,s):
+<span class="anchor" id="line-147"></span>        &quot;&quot;&quot;Write a record with the given bytes.
+<span class="anchor" id="line-148"></span>
+<span class="anchor" id="line-149"></span>        Parameters
+<span class="anchor" id="line-150"></span>        ----------
+<span class="anchor" id="line-151"></span>        s : the string to write
+<span class="anchor" id="line-152"></span>
+<span class="anchor" id="line-153"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-154"></span>        length_bytes = len(s)
+<span class="anchor" id="line-155"></span>        self._write_check(length_bytes)
+<span class="anchor" id="line-156"></span>        self.write(s)
+<span class="anchor" id="line-157"></span>        self._write_check(length_bytes)
+<span class="anchor" id="line-158"></span>
+<span class="anchor" id="line-159"></span>    def readString(self):
+<span class="anchor" id="line-160"></span>        &quot;&quot;&quot;Read a string.&quot;&quot;&quot;
+<span class="anchor" id="line-161"></span>        return self.readRecord()
+<span class="anchor" id="line-162"></span>
+<span class="anchor" id="line-163"></span>    def writeString(self,s):
+<span class="anchor" id="line-164"></span>        &quot;&quot;&quot;Write a string
+<span class="anchor" id="line-165"></span>
+<span class="anchor" id="line-166"></span>        Parameters
+<span class="anchor" id="line-167"></span>        ----------
+<span class="anchor" id="line-168"></span>        s : the string to write
+<span class="anchor" id="line-169"></span>        
+<span class="anchor" id="line-170"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-171"></span>        self.writeRecord(s)
+<span class="anchor" id="line-172"></span>
+<span class="anchor" id="line-173"></span>    _real_precisions = 'df'
+<span class="anchor" id="line-174"></span>
+<span class="anchor" id="line-175"></span>    def readReals(self, prec='f'):
+<span class="anchor" id="line-176"></span>        &quot;&quot;&quot;Read in an array of real numbers.
+<span class="anchor" id="line-177"></span>        
+<span class="anchor" id="line-178"></span>        Parameters
+<span class="anchor" id="line-179"></span>        ----------
+<span class="anchor" id="line-180"></span>        prec : character, optional
+<span class="anchor" id="line-181"></span>            Specify the precision of the array using character codes from
+<span class="anchor" id="line-182"></span>            Python's struct module.  Possible values are 'd' and 'f'.
+<span class="anchor" id="line-183"></span>            
+<span class="anchor" id="line-184"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-185"></span>        
+<span class="anchor" id="line-186"></span>        _numpy_precisions = {'d': numpy.float64,
+<span class="anchor" id="line-187"></span>                             'f': numpy.float32
+<span class="anchor" id="line-188"></span>                            }
+<span class="anchor" id="line-189"></span>
+<span class="anchor" id="line-190"></span>        if prec not in self._real_precisions:
+<span class="anchor" id="line-191"></span>            raise ValueError('Not an appropriate precision')
+<span class="anchor" id="line-192"></span>            
+<span class="anchor" id="line-193"></span>        data_str = self.readRecord()
+<span class="anchor" id="line-194"></span>        num = len(data_str)/struct.calcsize(prec)
+<span class="anchor" id="line-195"></span>        numbers =struct.unpack(self.ENDIAN+str(num)+prec,data_str) 
+<span class="anchor" id="line-196"></span>        return numpy.array(numbers, dtype=_numpy_precisions[prec])
+<span class="anchor" id="line-197"></span>
+<span class="anchor" id="line-198"></span>    def writeReals(self, reals, prec='f'):
+<span class="anchor" id="line-199"></span>        &quot;&quot;&quot;Write an array of floats in given precision
+<span class="anchor" id="line-200"></span>
+<span class="anchor" id="line-201"></span>        Parameters
+<span class="anchor" id="line-202"></span>        ----------
+<span class="anchor" id="line-203"></span>        reals : array
+<span class="anchor" id="line-204"></span>            Data to write
+<span class="anchor" id="line-205"></span>        prec` : string
+<span class="anchor" id="line-206"></span>            Character code for the precision to use in writing
+<span class="anchor" id="line-207"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-208"></span>        if prec not in self._real_precisions:
+<span class="anchor" id="line-209"></span>            raise ValueError('Not an appropriate precision')
+<span class="anchor" id="line-210"></span>        
+<span class="anchor" id="line-211"></span>        # Don't use writeRecord to avoid having to form a
+<span class="anchor" id="line-212"></span>        # string as large as the array of numbers
+<span class="anchor" id="line-213"></span>        length_bytes = len(reals)*struct.calcsize(prec)
+<span class="anchor" id="line-214"></span>        self._write_check(length_bytes)
+<span class="anchor" id="line-215"></span>        _fmt = self.ENDIAN + prec
+<span class="anchor" id="line-216"></span>        for r in reals:
+<span class="anchor" id="line-217"></span>            self.write(struct.pack(_fmt,r))
+<span class="anchor" id="line-218"></span>        self._write_check(length_bytes)
+<span class="anchor" id="line-219"></span>    
+<span class="anchor" id="line-220"></span>    _int_precisions = 'hilq'
+<span class="anchor" id="line-221"></span>
+<span class="anchor" id="line-222"></span>    def readInts(self, prec='i'):
+<span class="anchor" id="line-223"></span>        &quot;&quot;&quot;Read an array of integers.
+<span class="anchor" id="line-224"></span>        
+<span class="anchor" id="line-225"></span>        Parameters
+<span class="anchor" id="line-226"></span>        ----------
+<span class="anchor" id="line-227"></span>        prec : character, optional
+<span class="anchor" id="line-228"></span>            Specify the precision of the data to be read using 
+<span class="anchor" id="line-229"></span>            character codes from Python's struct module.  Possible
+<span class="anchor" id="line-230"></span>            values are 'h', 'i', 'l' and 'q'
+<span class="anchor" id="line-231"></span>            
+<span class="anchor" id="line-232"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-233"></span>        if prec not in self._int_precisions:
+<span class="anchor" id="line-234"></span>            raise ValueError('Not an appropriate precision')
+<span class="anchor" id="line-235"></span>            
+<span class="anchor" id="line-236"></span>        data_str = self.readRecord()
+<span class="anchor" id="line-237"></span>        num = len(data_str)/struct.calcsize(prec)
+<span class="anchor" id="line-238"></span>        return numpy.array(struct.unpack(self.ENDIAN+str(num)+prec,data_str))
+<span class="anchor" id="line-239"></span>
+<span class="anchor" id="line-240"></span>    def writeInts(self, ints, prec='i'):
+<span class="anchor" id="line-241"></span>        &quot;&quot;&quot;Write an array of integers in given precision
+<span class="anchor" id="line-242"></span>
+<span class="anchor" id="line-243"></span>        Parameters
+<span class="anchor" id="line-244"></span>        ----------
+<span class="anchor" id="line-245"></span>        reals : array
+<span class="anchor" id="line-246"></span>            Data to write
+<span class="anchor" id="line-247"></span>        prec : string
+<span class="anchor" id="line-248"></span>            Character code for the precision to use in writing
+<span class="anchor" id="line-249"></span>        &quot;&quot;&quot;
+<span class="anchor" id="line-250"></span>        if prec not in self._int_precisions:
+<span class="anchor" id="line-251"></span>            raise ValueError('Not an appropriate precision')
+<span class="anchor" id="line-252"></span>        
+<span class="anchor" id="line-253"></span>        # Don't use writeRecord to avoid having to form a
+<span class="anchor" id="line-254"></span>        # string as large as the array of numbers
+<span class="anchor" id="line-255"></span>        length_bytes = len(ints)*struct.calcsize(prec)
+<span class="anchor" id="line-256"></span>        self._write_check(length_bytes)
+<span class="anchor" id="line-257"></span>        _fmt = self.ENDIAN + prec
+<span class="anchor" id="line-258"></span>        for item in ints:
+<span class="anchor" id="line-259"></span>            self.write(struct.pack(_fmt,item))
+<span class="anchor" id="line-260"></span>        self._write_check(length_bytes)</pre><span class="anchor" id="line-267"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="FortranFile37dc-2.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/FortranIO/FortranFile">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/FortranIO/FortranFile?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

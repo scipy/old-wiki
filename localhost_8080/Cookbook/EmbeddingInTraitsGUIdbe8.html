@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/EmbeddingInTraitsGUI?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/EmbeddingInTraitsGUI - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/EmbeddingInTraitsGUI" href="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FEmbeddingInTraitsGUI&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="mpl_editor.py" href="EmbeddingInTraitsGUI8971.html?action=AttachFile&amp;do=view&amp;target=mpl_editor.py">
+<link rel="Appendix" title="mpl_in_traits_view.png" href="EmbeddingInTraitsGUI9aad.html?action=AttachFile&amp;do=view&amp;target=mpl_in_traits_view.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="EmbeddingInTraitsGUI456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="../AllPages290a.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FEmbeddingInTraitsGUI%22" rel="nofollow" title="Click to do a full-text search for this title">EmbeddingInTraitsGUI</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="EmbeddingInTraitsGUI.html">EmbeddingInTraitsGUI</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="EmbeddingInTraitsGUI.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="EmbeddingInTraitsGUI37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line867">
+<h1 id="Embedding_a_Matplotlib_Figure_in_a_Traits_App">Embedding a Matplotlib Figure in a Traits App</h1>
+<span class="anchor" id="line-3"></span><p class="line862">Traits, part of the<a class="http" href="../../external.html?link=http://code.enthought.com/">Enthought Tools Suit</a>, provides a great framework for creating GUI Apps without a lot of the normal boilerplate required to connect the UI the rest of the application logic. A brief introduction to Traits can be found <a href="../TraitsUI.html">here</a>. Although ETS comes with it's own traits-aware plotting framework (Chaco), if you already know matplotlib it is just as easy to embed this instead. The advantages of Chaco (IMHO) are its interactive &quot;tools&quot;, an (in development) OpenGL rendering backend and an easy-to-understand codebase. However, matplotlib has more and better documentation and better defaults; it just works. The key to getting TraitsUI and matplotlib to play nice is to use the mpl object-oriented API, rather than pylab / pyplot. This recipe requires the following packages: <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><ul><li>numpy <span class="anchor" id="line-6"></span></li><li>wxPython <span class="anchor" id="line-7"></span></li><li>matplotlib <span class="anchor" id="line-8"></span></li><li><p class="line862">Traits &gt; 3.0 <span class="anchor" id="line-9"></span></li><li><p class="line862">TraitsGUI &gt; 3.0 <span class="anchor" id="line-10"></span></li><li><p class="line862">TraitsBackendWX &gt; 3.0 <span class="anchor" id="line-11"></span></li></ul><p class="line862">For this example, we will display a function (y, a sine wave) of one variable (x, a numpy ndarray) and one parameter (scale, a float value with bounds). We want to be able to vary the parameter from the UI and see the resulting changes to y in a plot window. Here's what the final result looks like: <img alt="mpl_in_traits_view.png" class="attachment" src="mpl_in_traits_viewdabe.png?action=AttachFile&amp;do=get&amp;target=mpl_in_traits_view.png" title="mpl_in_traits_view.png" /> The TraitsUI &quot;CustomEditor&quot; can be used to display any wxPython window as the editor for the object. You simply pass the CustomEditor a callable which, when called, returns the wxPython window you want to display. In this case, our MakePlot() function returns a wxPanel containing the mpl FigureCanvas and Navigation toolbar. This example exploits a few of Traits' features. We use &quot;dynamic initialisation&quot; to create the Axes and Line2D objects on demand (using the _xxx_default methods).  We use Traits &quot;notification&quot;, to call update_line(...) whenever the x- or y-data is changed. Further, the y-data is declared as a Property trait which depends on both the 'scale' parameter and the x-data. 'y' is then recalculated on demand, whenever either 'scale' or 'x' change. The 'cached_property' decorator prevents recalculation of y if it's dependancies <em>are not</em> modified. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line862">Finally, there's a bit of wx-magic in the redraw() method to limit the redraw rate by delaying the actual drawing by 50ms. This uses the wx.CallLater class. This prevents excessive redrawing as the slider is dragged, keeping the UI from lagging.<a class="attachment" href="EmbeddingInTraitsGUI8971.html?action=AttachFile&amp;do=view&amp;target=mpl_editor.py" title="Here's">Here's</a> the full listing: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line867"><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-857cd979a7bc8353f47489ac67e99f93b073a27c\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_1">   1</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_1"></span><span class="anchor" id="line-1-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_2">   2</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_2"></span><span class="anchor" id="line-2-1"></span><span class="String">A simple demonstration of embedding a matplotlib plot window in</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_3">   3</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_3"></span><span class="anchor" id="line-3-1"></span><span class="String">a traits-application. The CustomEditor allow any wxPython window</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_4">   4</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_4"></span><span class="anchor" id="line-4-1"></span><span class="String">to be used as an editor. The demo also illustrates Property traits,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_5">   5</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_5"></span><span class="anchor" id="line-5-1"></span><span class="String">which provide nice dependency-handling and dynamic initialisation, using</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_6">   6</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_6"></span><span class="anchor" id="line-6-1"></span><span class="String">the _xxx_default(...) method.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_7">   7</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_7"></span><span class="anchor" id="line-7-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_8">   8</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_8"></span><span class="anchor" id="line-8-1"></span><span class="ResWord">from</span> <span class="ID">enthought.traits.api</span> <span class="ResWord">import</span> <span class="ID">HasTraits</span>, <span class="ID">Instance</span>, <span class="ID">Range</span>,\</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_9">   9</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_9"></span><span class="anchor" id="line-9-1"></span>                                <span class="ID">Array</span>, <span class="ID">on_trait_change</span>, <span class="ID">Property</span>,\</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_10">  10</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_10"></span><span class="anchor" id="line-10-1"></span>                                <span class="ID">cached_property</span>, <span class="ID">Bool</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_11">  11</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_11"></span><span class="anchor" id="line-11-1"></span><span class="ResWord">from</span> <span class="ID">enthought.traits.ui.api</span> <span class="ResWord">import</span> <span class="ID">View</span>, <span class="ID">Item</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_12">  12</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_12"></span><span class="anchor" id="line-12-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_wxagg</span> <span class="ResWord">import</span> <span class="ID">FigureCanvasWxAgg</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_13">  13</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_13"></span><span class="anchor" id="line-13-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.backends.backend_wx</span> <span class="ResWord">import</span> <span class="ID">NavigationToolbar2Wx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_14">  14</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_14"></span><span class="anchor" id="line-14-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.figure</span> <span class="ResWord">import</span> <span class="ID">Figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_15">  15</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_15"></span><span class="anchor" id="line-15-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.axes</span> <span class="ResWord">import</span> <span class="ID">Axes</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_16">  16</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_16"></span><span class="anchor" id="line-16-1"></span><span class="ResWord">from</span> <span class="ID">matplotlib.lines</span> <span class="ResWord">import</span> <span class="ID">Line2D</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_17">  17</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_17"></span><span class="anchor" id="line-17-1"></span><span class="ResWord">from</span> <span class="ID">enthought.traits.ui.api</span> <span class="ResWord">import</span> <span class="ID">CustomEditor</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_18">  18</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_18"></span><span class="anchor" id="line-18-1"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_19">  19</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_19"></span><span class="anchor" id="line-19-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_20">  20</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_20"></span><span class="anchor" id="line-20-1"></span><span class="ResWord">def</span> <span class="ID">MakePlot</span>(<span class="ID">parent</span>, <span class="ID">editor</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_21">  21</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_21"></span><span class="anchor" id="line-21-1"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_22">  22</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_22"></span><span class="anchor" id="line-22-1"></span><span class="String">    Builds the Canvas window for displaying the mpl-figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_23">  23</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_23"></span><span class="anchor" id="line-23-1"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_24">  24</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_24"></span><span class="anchor" id="line-24-1"></span>    <span class="ID">fig</span> = <span class="ID">editor</span>.<span class="ID">object</span>.<span class="ID">figure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_25">  25</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_25"></span><span class="anchor" id="line-25-1"></span>    <span class="ID">panel</span> = <span class="ID">wx</span>.<span class="ID">Panel</span>(<span class="ID">parent</span>, -<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_26">  26</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_26"></span><span class="anchor" id="line-26-1"></span>    <span class="ID">canvas</span> = <span class="ID">FigureCanvasWxAgg</span>(<span class="ID">panel</span>, -<span class="Number">1</span>, <span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_27">  27</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_27"></span><span class="anchor" id="line-27-1"></span>    <span class="ID">toolbar</span> = <span class="ID">NavigationToolbar2Wx</span>(<span class="ID">canvas</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_28">  28</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_28"></span><span class="anchor" id="line-28-1"></span>    <span class="ID">toolbar</span>.<span class="ID">Realize</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_29">  29</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_29"></span><span class="anchor" id="line-29-1"></span>    <span class="ID">sizer</span> = <span class="ID">wx</span>.<span class="ID">BoxSizer</span>(<span class="ID">wx</span>.<span class="ID">VERTICAL</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_30">  30</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_30"></span><span class="anchor" id="line-30-1"></span>    <span class="ID">sizer</span>.<span class="ID">Add</span>(<span class="ID">canvas</span>,<span class="Number">1</span>,<span class="ID">wx</span>.<span class="ID">EXPAND</span>|<span class="ID">wx</span>.<span class="ID">ALL</span>,<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_31">  31</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_31"></span><span class="anchor" id="line-31-1"></span>    <span class="ID">sizer</span>.<span class="ID">Add</span>(<span class="ID">toolbar</span>,<span class="Number">0</span>,<span class="ID">wx</span>.<span class="ID">EXPAND</span>|<span class="ID">wx</span>.<span class="ID">ALL</span>,<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_32">  32</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_32"></span><span class="anchor" id="line-32-1"></span>    <span class="ID">panel</span>.<span class="ID">SetSizer</span>(<span class="ID">sizer</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_33">  33</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_33"></span><span class="anchor" id="line-33-1"></span>    <span class="ResWord">return</span> <span class="ID">panel</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_34">  34</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_34"></span><span class="anchor" id="line-34-1"></span><span class="ResWord">class</span> <span class="ID">PlotModel</span>(<span class="ID">HasTraits</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_35">  35</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_35"></span><span class="anchor" id="line-35-1"></span>    <span class="String">&quot;&quot;&quot;A Model for displaying a matplotlib figure&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_36">  36</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_36"></span><span class="anchor" id="line-36-1"></span>    <span class="Comment">#we need instances of a Figure, a Axes and a Line2D</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_37">  37</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_37"></span><span class="anchor" id="line-37-1"></span>    <span class="ID">figure</span> = <span class="ID">Instance</span>(<span class="ID">Figure</span>, ())</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_38">  38</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_38"></span><span class="anchor" id="line-38-1"></span>    <span class="ID">axes</span> = <span class="ID">Instance</span>(<span class="ID">Axes</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_39">  39</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_39"></span><span class="anchor" id="line-39-1"></span>    <span class="ID">line</span> = <span class="ID">Instance</span>(<span class="ID">Line2D</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_40">  40</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_40"></span><span class="anchor" id="line-40-1"></span>    <span class="ID">_draw_pending</span> = <span class="ID">Bool</span>(<span class="ResWord">False</span>) <span class="Comment">#a flag to throttle the redraw rate</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_41">  41</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_41"></span><span class="anchor" id="line-41-1"></span>    <span class="Comment">#a variable paremeter</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_42">  42</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_42"></span><span class="anchor" id="line-42-1"></span>    <span class="ID">scale</span> = <span class="ID">Range</span>(<span class="Number">0.1</span>,<span class="Number">10.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_43">  43</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_43"></span><span class="anchor" id="line-43-1"></span>    <span class="Comment">#an independent variable</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_44">  44</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_44"></span><span class="anchor" id="line-44-1"></span>    <span class="ID">x</span> = <span class="ID">Array</span>(<span class="ID">value</span>=<span class="ID">numpy</span>.<span class="ID">linspace</span>(-<span class="Number">5</span>,<span class="Number">5</span>,<span class="Number">512</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_45">  45</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_45"></span><span class="anchor" id="line-45-1"></span>    <span class="Comment">#a dependent variable</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_46">  46</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_46"></span><span class="anchor" id="line-46-1"></span>    <span class="ID">y</span> = <span class="ID">Property</span>(<span class="ID">Array</span>, <span class="ID">depends_on</span>=[<span class="String">'</span><span class="String">scale</span><span class="String">'</span>,<span class="String">'</span><span class="String">x</span><span class="String">'</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_47">  47</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_47"></span><span class="anchor" id="line-47-1"></span>    <span class="ID">traits_view</span> = <span class="ID">View</span>(</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_48">  48</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_48"></span><span class="anchor" id="line-48-1"></span>                    <span class="ID">Item</span>(<span class="String">'</span><span class="String">figure</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_49">  49</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_49"></span><span class="anchor" id="line-49-1"></span>                         <span class="ID">editor</span>=<span class="ID">CustomEditor</span>(<span class="ID">MakePlot</span>),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_50">  50</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_50"></span><span class="anchor" id="line-50-1"></span>                         <span class="ID">resizable</span>=<span class="ResWord">True</span>),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_51">  51</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_51"></span><span class="anchor" id="line-51-1"></span>                    <span class="ID">Item</span>(<span class="String">'</span><span class="String">scale</span><span class="String">'</span>),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_52">  52</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_52"></span><span class="anchor" id="line-52-1"></span>                    <span class="ID">resizable</span>=<span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_53">  53</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_53"></span><span class="anchor" id="line-53-1"></span>                    )</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_54">  54</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_54"></span><span class="anchor" id="line-54-1"></span>    <span class="ResWord">def</span> <span class="ID">_axes_default</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_55">  55</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_55"></span><span class="anchor" id="line-55-1"></span>        <span class="ResWord">return</span> <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">add_subplot</span>(<span class="Number">111</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_56">  56</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_56"></span><span class="anchor" id="line-56-1"></span>    <span class="ResWord">def</span> <span class="ID">_line_default</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_57">  57</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_57"></span><span class="anchor" id="line-57-1"></span>        <span class="ResWord">return</span> <span class="ResWord">self</span>.<span class="ID">axes</span>.<span class="ID">plot</span>(<span class="ResWord">self</span>.<span class="ID">x</span>, <span class="ResWord">self</span>.<span class="ID">y</span>)[<span class="Number">0</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_58">  58</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_58"></span><span class="anchor" id="line-58-1"></span>    <span class="ID">@cached_property</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_59">  59</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_59"></span><span class="anchor" id="line-59-1"></span>    <span class="ResWord">def</span> <span class="ID">_get_y</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_60">  60</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_60"></span><span class="anchor" id="line-60-1"></span>        <span class="ResWord">return</span> <span class="ID">numpy</span>.<span class="ID">sin</span>(<span class="ResWord">self</span>.<span class="ID">scale</span> * <span class="ResWord">self</span>.<span class="ID">x</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_61">  61</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_61"></span><span class="anchor" id="line-61-1"></span>    <span class="ID">@on_trait_change</span>(<span class="String">&quot;</span><span class="String">x, y</span><span class="String">&quot;</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_62">  62</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_62"></span><span class="anchor" id="line-62-1"></span>    <span class="ResWord">def</span> <span class="ID">update_line</span>(<span class="ResWord">self</span>, <span class="ID">obj</span>, <span class="ID">name</span>, <span class="ID">val</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_63">  63</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_63"></span><span class="anchor" id="line-63-1"></span>        <span class="ID">attr</span> = {<span class="String">'</span><span class="String">x</span><span class="String">'</span>: <span class="String">&quot;</span><span class="String">set_xdata</span><span class="String">&quot;</span>, <span class="String">'</span><span class="String">y</span><span class="String">'</span>: <span class="String">&quot;</span><span class="String">set_ydata</span><span class="String">&quot;</span>}[<span class="ID">name</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_64">  64</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_64"></span><span class="anchor" id="line-64-1"></span>        <span class="ResWord">getattr</span>(<span class="ResWord">self</span>.<span class="ID">line</span>, <span class="ID">attr</span>)(<span class="ID">val</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_65">  65</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_65"></span><span class="anchor" id="line-65-1"></span>        <span class="ResWord">self</span>.<span class="ID">redraw</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_66">  66</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_66"></span><span class="anchor" id="line-66-1"></span>    <span class="ResWord">def</span> <span class="ID">redraw</span>(<span class="ResWord">self</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_67">  67</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_67"></span><span class="anchor" id="line-67-1"></span>        <span class="ResWord">if</span> <span class="ResWord">self</span>.<span class="ID">_draw_pending</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_68">  68</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_68"></span><span class="anchor" id="line-68-1"></span>            <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_69">  69</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_69"></span><span class="anchor" id="line-69-1"></span>        <span class="ID">canvas</span> = <span class="ResWord">self</span>.<span class="ID">figure</span>.<span class="ID">canvas</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_70">  70</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_70"></span><span class="anchor" id="line-70-1"></span>        <span class="ResWord">if</span> <span class="ID">canvas</span> <span class="ResWord">is</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_71">  71</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_71"></span><span class="anchor" id="line-71-1"></span>            <span class="ResWord">return</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_72">  72</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_72"></span><span class="anchor" id="line-72-1"></span>        <span class="ResWord">def</span> <span class="ID">_draw</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_73">  73</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_73"></span><span class="anchor" id="line-73-1"></span>            <span class="ID">canvas</span>.<span class="ID">draw</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_74">  74</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_74"></span><span class="anchor" id="line-74-1"></span>            <span class="ResWord">self</span>.<span class="ID">_draw_pending</span> = <span class="ResWord">False</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_75">  75</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_75"></span><span class="anchor" id="line-75-1"></span>        <span class="ID">wx</span>.<span class="ID">CallLater</span>(<span class="Number">50</span>, <span class="ID">_draw</span>).<span class="ID">Start</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_76">  76</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_76"></span><span class="anchor" id="line-76-1"></span>        <span class="ResWord">self</span>.<span class="ID">_draw_pending</span> = <span class="ResWord">True</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_77">  77</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_77"></span><span class="anchor" id="line-77-1"></span><span class="ResWord">if</span> <span class="ID">__name__</span>==<span class="String">&quot;</span><span class="String">__main__</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_78">  78</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_78"></span><span class="anchor" id="line-78-1"></span>    <span class="ID">model</span> = <span class="ID">PlotModel</span>(<span class="ID">scale</span>=<span class="Number">2.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-857cd979a7bc8353f47489ac67e99f93b073a27c_79">  79</a> </span><span class="LineAnchor" id="CA-857cd979a7bc8353f47489ac67e99f93b073a27c_79"></span><span class="anchor" id="line-79-1"></span>    <span class="ID">model</span>.<span class="ID">configure_traits</span>()</span>
+</pre></div></div><span class="anchor" id="line-97"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="EmbeddingInTraitsGUI37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/EmbeddingInTraitsGUI">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/EmbeddingInTraitsGUI?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+

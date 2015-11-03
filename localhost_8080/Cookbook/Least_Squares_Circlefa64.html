@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Least_Squares_Circle?action=AttachFile&do=view&target=arc_v2.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:45:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:arc_v2.png of Cookbook/Least_Squares_Circle - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Least_Squares_Circle" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FLeast_Squares_Circle&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="arc_residu2_v1.png" href="Least_Squares_Circle1460.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v1.png">
+<link rel="Appendix" title="arc_residu2_v2.png" href="Least_Squares_Circledc35.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v2.png">
+<link rel="Appendix" title="arc_residu2_v3.png" href="Least_Squares_Circle2b5e.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v3.png">
+<link rel="Appendix" title="arc_residu2_v4.png" href="Least_Squares_Circlec5f0.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v4.png">
+<link rel="Appendix" title="arc_residu2_v5.png" href="Least_Squares_Circleb5fc.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v5.png">
+<link rel="Appendix" title="arc_residu2_v6.png" href="Least_Squares_Circle7b11.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v6.png">
+<link rel="Appendix" title="arc_v1.png" href="Least_Squares_Circle2ff1.html?action=AttachFile&amp;do=view&amp;target=arc_v1.png">
+<link rel="Appendix" title="arc_v2.png" href="Least_Squares_Circlefa64.html?action=AttachFile&amp;do=view&amp;target=arc_v2.png">
+<link rel="Appendix" title="arc_v3.png" href="Least_Squares_Circle039a.html?action=AttachFile&amp;do=view&amp;target=arc_v3.png">
+<link rel="Appendix" title="arc_v4.png" href="Least_Squares_Circlecbe7.html?action=AttachFile&amp;do=view&amp;target=arc_v4.png">
+<link rel="Appendix" title="arc_v5.png" href="Least_Squares_Circlec123.html?action=AttachFile&amp;do=view&amp;target=arc_v5.png">
+<link rel="Appendix" title="full_cercle_residu2_v1.png" href="Least_Squares_Circled194.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v1.png">
+<link rel="Appendix" title="full_cercle_residu2_v2.png" href="Least_Squares_Circlefa34.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v2.png">
+<link rel="Appendix" title="full_cercle_residu2_v3.png" href="Least_Squares_Circle6219.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v3.png">
+<link rel="Appendix" title="full_cercle_residu2_v4.png" href="Least_Squares_Circle2927.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v4.png">
+<link rel="Appendix" title="full_cercle_residu2_v5.png" href="Least_Squares_Circle22a9.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v5.png">
+<link rel="Appendix" title="full_cercle_v1.png" href="Least_Squares_Circleb62b.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v1.png">
+<link rel="Appendix" title="full_cercle_v2.png" href="Least_Squares_Circle2eba.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v2.png">
+<link rel="Appendix" title="full_cercle_v3.png" href="Least_Squares_Circleb7f8.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v3.png">
+<link rel="Appendix" title="full_cercle_v4.png" href="Least_Squares_Circlec5b2.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v4.png">
+<link rel="Appendix" title="full_cercle_v5.png" href="Least_Squares_Circle2dd0.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v5.png">
+<link rel="Appendix" title="least_squares_circle.py" href="Least_Squares_Circle264b.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle.py">
+<link rel="Appendix" title="least_squares_circle_v1.py" href="Least_Squares_Circleae9f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1.py">
+<link rel="Appendix" title="least_squares_circle_v1b.py" href="Least_Squares_Circle298f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1b.py">
+<link rel="Appendix" title="least_squares_circle_v1c.py" href="Least_Squares_Circlec4f1.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1c.py">
+<link rel="Appendix" title="least_squares_circle_v1d.py" href="Least_Squares_Circlee308.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1d.py">
+<link rel="Appendix" title="least_squares_circle_v2.py" href="Least_Squares_Circle13d8.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v2.py">
+<link rel="Appendix" title="least_squares_circle_v3.py" href="Least_Squares_Circled609.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v3.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Least_Squares_Circle456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:arc_v2.png of Cookbook/Least_Squares_Circle</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Least_Squares_Circle.html">Least_Squares_Circle</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Least_Squares_Circle37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'arc_v2.png'</h2><a class="download" href="arc_v2589d.png?action=AttachFile&amp;do=get&amp;target=arc_v2.png">Download</a><br><br><img src="arc_v2589d.png?action=AttachFile&amp;do=get&amp;target=arc_v2.png" alt="arc_v2.png"><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="arc_v2.png"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327ce1.deab9720f760623f21895a7ab65cbb0baefc50b4">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="arc_residu2_v12565.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v1.png">get</a>&nbsp;| <a href="Least_Squares_Circle1460.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v1.png">view</a>] (2011-03-20 09:33:13, 125.4 KB) [[attachment:arc_residu2_v1.png]]</li><li>[<a href="arc_residu2_v28ca2.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v2.png">get</a>&nbsp;| <a href="Least_Squares_Circledc35.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v2.png">view</a>] (2011-03-20 09:51:22, 111.5 KB) [[attachment:arc_residu2_v2.png]]</li><li>[<a href="arc_residu2_v32ed7.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v3.png">get</a>&nbsp;| <a href="Least_Squares_Circle2b5e.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v3.png">view</a>] (2011-03-20 10:25:35, 92.9 KB) [[attachment:arc_residu2_v3.png]]</li><li>[<a href="arc_residu2_v4edcc.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v4.png">get</a>&nbsp;| <a href="Least_Squares_Circlec5f0.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v4.png">view</a>] (2011-03-20 15:12:18, 117.3 KB) [[attachment:arc_residu2_v4.png]]</li><li>[<a href="arc_residu2_v55fb9.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v5.png">get</a>&nbsp;| <a href="Least_Squares_Circleb5fc.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v5.png">view</a>] (2011-03-20 15:33:13, 153.6 KB) [[attachment:arc_residu2_v5.png]]</li><li>[<a href="arc_residu2_v68efd.png?action=AttachFile&amp;do=get&amp;target=arc_residu2_v6.png">get</a>&nbsp;| <a href="Least_Squares_Circle7b11.html?action=AttachFile&amp;do=view&amp;target=arc_residu2_v6.png">view</a>] (2011-03-21 22:06:57, 137.4 KB) [[attachment:arc_residu2_v6.png]]</li><li>[<a href="arc_v19b94.png?action=AttachFile&amp;do=get&amp;target=arc_v1.png">get</a>&nbsp;| <a href="Least_Squares_Circle2ff1.html?action=AttachFile&amp;do=view&amp;target=arc_v1.png">view</a>] (2011-03-19 22:05:21, 108.4 KB) [[attachment:arc_v1.png]]</li><li>[<a href="arc_v2589d.png?action=AttachFile&amp;do=get&amp;target=arc_v2.png">get</a>&nbsp;| <a href="Least_Squares_Circlefa64.html?action=AttachFile&amp;do=view&amp;target=arc_v2.png">view</a>] (2011-03-20 10:25:10, 87.9 KB) [[attachment:arc_v2.png]]</li><li>[<a href="arc_v39a26.png?action=AttachFile&amp;do=get&amp;target=arc_v3.png">get</a>&nbsp;| <a href="Least_Squares_Circle039a.html?action=AttachFile&amp;do=view&amp;target=arc_v3.png">view</a>] (2011-03-20 15:11:49, 108.1 KB) [[attachment:arc_v3.png]]</li><li>[<a href="arc_v448b0.png?action=AttachFile&amp;do=get&amp;target=arc_v4.png">get</a>&nbsp;| <a href="Least_Squares_Circlecbe7.html?action=AttachFile&amp;do=view&amp;target=arc_v4.png">view</a>] (2011-03-20 15:32:44, 149.4 KB) [[attachment:arc_v4.png]]</li><li>[<a href="arc_v5d32c.png?action=AttachFile&amp;do=get&amp;target=arc_v5.png">get</a>&nbsp;| <a href="Least_Squares_Circlec123.html?action=AttachFile&amp;do=view&amp;target=arc_v5.png">view</a>] (2011-03-21 22:06:23, 126.9 KB) [[attachment:arc_v5.png]]</li><li>[<a href="full_cercle_residu2_v15393.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v1.png">get</a>&nbsp;| <a href="Least_Squares_Circled194.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v1.png">view</a>] (2011-03-20 09:07:45, 113.4 KB) [[attachment:full_cercle_residu2_v1.png]]</li><li>[<a href="full_cercle_residu2_v2f60b.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v2.png">get</a>&nbsp;| <a href="Least_Squares_Circlefa34.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v2.png">view</a>] (2011-03-20 10:24:26, 79.1 KB) [[attachment:full_cercle_residu2_v2.png]]</li><li>[<a href="full_cercle_residu2_v3981e.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v3.png">get</a>&nbsp;| <a href="Least_Squares_Circle6219.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v3.png">view</a>] (2011-03-20 15:11:25, 93.4 KB) [[attachment:full_cercle_residu2_v3.png]]</li><li>[<a href="full_cercle_residu2_v46b7c.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v4.png">get</a>&nbsp;| <a href="Least_Squares_Circle2927.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v4.png">view</a>] (2011-03-20 15:32:12, 116.0 KB) [[attachment:full_cercle_residu2_v4.png]]</li><li>[<a href="full_cercle_residu2_v55c38.png?action=AttachFile&amp;do=get&amp;target=full_cercle_residu2_v5.png">get</a>&nbsp;| <a href="Least_Squares_Circle22a9.html?action=AttachFile&amp;do=view&amp;target=full_cercle_residu2_v5.png">view</a>] (2011-03-21 22:05:38, 120.8 KB) [[attachment:full_cercle_residu2_v5.png]]</li><li>[<a href="full_cercle_v1f901.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v1.png">get</a>&nbsp;| <a href="Least_Squares_Circleb62b.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v1.png">view</a>] (2011-03-19 22:04:02, 104.2 KB) [[attachment:full_cercle_v1.png]]</li><li>[<a href="full_cercle_v2981d.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v2.png">get</a>&nbsp;| <a href="Least_Squares_Circle2eba.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v2.png">view</a>] (2011-03-20 10:24:01, 67.2 KB) [[attachment:full_cercle_v2.png]]</li><li>[<a href="full_cercle_v37b36.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v3.png">get</a>&nbsp;| <a href="Least_Squares_Circleb7f8.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v3.png">view</a>] (2011-03-20 15:10:50, 81.4 KB) [[attachment:full_cercle_v3.png]]</li><li>[<a href="full_cercle_v4888e.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v4.png">get</a>&nbsp;| <a href="Least_Squares_Circlec5b2.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v4.png">view</a>] (2011-03-20 15:31:32, 103.7 KB) [[attachment:full_cercle_v4.png]]</li><li>[<a href="full_cercle_v5f911.png?action=AttachFile&amp;do=get&amp;target=full_cercle_v5.png">get</a>&nbsp;| <a href="Least_Squares_Circle2dd0.html?action=AttachFile&amp;do=view&amp;target=full_cercle_v5.png">view</a>] (2011-03-21 22:05:03, 101.3 KB) [[attachment:full_cercle_v5.png]]</li><li>[<a href="least_squares_circle5942.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle.py">get</a>&nbsp;| <a href="Least_Squares_Circle264b.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle.py">view</a>] (2011-03-19 22:22:43, 4.2 KB) [[attachment:least_squares_circle.py]]</li><li>[<a href="least_squares_circle_v193db.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v1.py">get</a>&nbsp;| <a href="Least_Squares_Circleae9f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1.py">view</a>] (2011-03-20 09:32:03, 0.0 KB) [[attachment:least_squares_circle_v1.py]]</li><li>[<a href="least_squares_circle_v1ba2c8.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v1b.py">get</a>&nbsp;| <a href="Least_Squares_Circle298f.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1b.py">view</a>] (2011-03-20 14:14:56, 7.4 KB) [[attachment:least_squares_circle_v1b.py]]</li><li>[<a href="least_squares_circle_v1cd8d6.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v1c.py">get</a>&nbsp;| <a href="Least_Squares_Circlec4f1.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1c.py">view</a>] (2011-03-20 19:16:27, 9.1 KB) [[attachment:least_squares_circle_v1c.py]]</li><li>[<a href="least_squares_circle_v1df4ef.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v1d.py">get</a>&nbsp;| <a href="Least_Squares_Circlee308.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v1d.py">view</a>] (2011-03-21 22:02:12, 9.2 KB) [[attachment:least_squares_circle_v1d.py]]</li><li>[<a href="least_squares_circle_v21405.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v2.py">get</a>&nbsp;| <a href="Least_Squares_Circle13d8.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v2.py">view</a>] (2011-03-20 10:26:23, 5.4 KB) [[attachment:least_squares_circle_v2.py]]</li><li>[<a href="least_squares_circle_v37324.py?action=AttachFile&amp;do=get&amp;target=least_squares_circle_v3.py">get</a>&nbsp;| <a href="Least_Squares_Circled609.html?action=AttachFile&amp;do=view&amp;target=least_squares_circle_v3.py">view</a>] (2011-03-20 14:00:31, 7.5 KB) [[attachment:least_squares_circle_v3.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Least_Squares_Circle37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Least_Squares_Circle">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Least_Squares_Circle?action=AttachFile&do=view&target=arc_v2.png by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:45:58 GMT -->
+</html>
+

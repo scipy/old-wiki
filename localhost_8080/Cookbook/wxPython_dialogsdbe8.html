@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/wxPython_dialogs?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/wxPython_dialogs - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/wxPython_dialogs" href="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FwxPython_dialogs&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="wxPython_dialogs456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="wxPython_dialogs54d2.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FwxPython_dialogs%22" rel="nofollow" title="Click to do a full-text search for this title">wxPython_dialogs</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="wxPython_dialogs.html">Cookbook/wxPython_dialogs</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="wxPython_dialogs.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="wxPython_dialogs37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h1 id="Overview">Overview</h1>
+<span class="anchor" id="line-2"></span><p class="line874">Something I enjoy in matlab is the ease in which simple file selector dialogs, and status bars can be made. <span class="anchor" id="line-3"></span>Now that I use nothing but scipy, I have wanted to have simliar functions for my scipy code. Thanks to the <span class="anchor" id="line-4"></span>great reference <a class="http" href="../../external.html?link=http://www.manning.com/rappin/">&quot;wxPython in Action&quot;</a> I have learned some of the basics again, <span class="anchor" id="line-5"></span>with the promise of making very fancy GUIs if I ever find the urge! (Check out the sample chapters, they have <span class="anchor" id="line-6"></span>given the entire section on making dialogs, which is how I initially got started with wxPython). <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867">
+<h1 id="File_Selector_Dialog">File Selector Dialog</h1>
+<span class="anchor" id="line-9"></span><p class="line874">I often write simple translation scripts that convert some data, into another form. I like to use these for <span class="anchor" id="line-10"></span>a series of data, and share them with some coworkers who do not program. the wxPython <a class="nonexistent" href="../FileSelector.html">FileSelector</a> function <span class="anchor" id="line-11"></span>comes to the rescue. <span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line867"><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_1">   1</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_2">   2</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_2"></span><span class="anchor" id="line-2-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_3">   3</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment"># setup the GUI main loop</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_4">   4</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_4"></span><span class="anchor" id="line-4-1"></span><span class="ID">app</span> = <span class="ID">wx</span>.<span class="ID">App</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_5">   5</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_5"></span><span class="anchor" id="line-5-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_6">   6</a> </span><span class="LineAnchor" id="CA-dbbe98a5d8b71172dfadd0ccd09beecb942284eb_6"></span><span class="anchor" id="line-6-1"></span><span class="ID">filename</span> = <span class="ID">wx</span>.<span class="ID">FileSelector</span>()</span>
+</pre></div></div><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><p class="line874">With this basic code, filename contains a string pathname (may be unicode depending on your installation of wxPython, <span class="anchor" id="line-24"></span>more on this latter) of the selected file. <span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><p class="line874">Some of the spiffing up will include using the current directory the script was started in, we do this easily <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-0d6869257d8043d13b271bc5a6dc7c33660460b1\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_1">   1</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">import</span> <span class="ID">wx</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_2">   2</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_2"></span><span class="anchor" id="line-2-2"></span><span class="ResWord">import</span> <span class="ID">os</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_3">   3</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_3"></span><span class="anchor" id="line-3-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_4">   4</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_4"></span><span class="anchor" id="line-4-2"></span><span class="Comment"># setup the GUI main loop</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_5">   5</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_5"></span><span class="anchor" id="line-5-2"></span><span class="ID">app</span> = <span class="ID">wx</span>.<span class="ID">App</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_6">   6</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_6"></span><span class="anchor" id="line-6-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_7">   7</a> </span><span class="LineAnchor" id="CA-0d6869257d8043d13b271bc5a6dc7c33660460b1_7"></span><span class="anchor" id="line-7-1"></span><span class="ID">filename</span> = <span class="ID">wx</span>.<span class="ID">FileSelector</span>(<span class="ID">default_path</span>=<span class="ID">os</span>.<span class="ID">getcwd</span>())</span>
+</pre></div></div><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><p class="line874">If one runs such script repeatedly, it might be a good idea to do some basic clean-up after each run. <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b_1">   1</a> </span><span class="LineAnchor" id="CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b_1"></span><span class="anchor" id="line-1-6"></span><span class="Comment"># ...</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b_2">   2</a> </span><span class="LineAnchor" id="CA-8879f0b3ba436aa654e41e24e2713bf688c54b0b_2"></span><span class="anchor" id="line-2-3"></span><span class="ID">app</span>.<span class="ID">Destroy</span>()</span>
+</pre></div></div><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line874">To be continued . . . <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line867">
+<h1 id="Status_Bar">Status Bar</h1>
+<span class="anchor" id="line-47"></span><p class="line874">Coming soon . . . <span class="anchor" id="line-48"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="wxPython_dialogs37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/wxPython_dialogs">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/wxPython_dialogs?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:06 GMT -->
+</html>
+

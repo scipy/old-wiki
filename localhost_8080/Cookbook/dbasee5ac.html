@@ -1,0 +1,471 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=dbase_pydoc.0.1.txt by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:42:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:dbase_pydoc.0.1.txt of Cookbook/dbase - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/dbase" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2Fdbase&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/dbase?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="data.0.3.csv" href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">
+<link rel="Appendix" title="data.csv" href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">
+<link rel="Appendix" title="dbase.0.1.py" href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">
+<link rel="Appendix" title="dbase.0.2.py" href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">
+<link rel="Appendix" title="dbase.0.3.py" href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">
+<link rel="Appendix" title="dbase.0.4.py" href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">
+<link rel="Appendix" title="dbase.0.5.py" href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">
+<link rel="Appendix" title="dbase.0.6.py" href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">
+<link rel="Appendix" title="dbase.0.7.py" href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">
+<link rel="Appendix" title="dbase.py" href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">
+<link rel="Appendix" title="dbase.pydoc" href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">
+<link rel="Appendix" title="dbase_pydoc.0.1.txt" href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">
+<link rel="Appendix" title="dbase_pydoc.0.2.txt" href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">
+<link rel="Appendix" title="ex_plot.0.1.png" href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">
+<link rel="Appendix" title="ex_plot.png" href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">
+<link rel="Appendix" title="ex_plot1.png" href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">
+<link rel="Appendix" title="example_plot.png" href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">
+<link rel="Appendix" title="pydoc" href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="dbase456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:dbase_pydoc.0.1.txt of Cookbook/dbase</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="dbase.html">Cookbook/dbase</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'dbase_pydoc.0.1.txt'</h2><a class="download" href="dbase_pydoc.0.1d60b.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.1.txt">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_1">   1</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_1"></span><span class="anchor" id="line-1-1"></span>Help on module dbase:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_2">   2</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_2"></span><span class="anchor" id="line-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_3">   3</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_3"></span><span class="anchor" id="line-3"></span>NAME</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_4">   4</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_4"></span><span class="anchor" id="line-4"></span>    dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_5">   5</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_6">   6</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_6"></span><span class="anchor" id="line-6"></span>FILE</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_7">   7</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_7"></span><span class="anchor" id="line-7"></span>    ./dbase.py</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_8">   8</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_8"></span><span class="anchor" id="line-8"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_9">   9</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_9"></span><span class="anchor" id="line-9"></span>CLASSES</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_10">  10</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_10"></span><span class="anchor" id="line-10"></span>    dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_11">  11</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_11"></span><span class="anchor" id="line-11"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_12">  12</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_12"></span><span class="anchor" id="line-12"></span>    class dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_13">  13</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_13"></span><span class="anchor" id="line-13"></span>     |  Author: Vincent Nijs (+ ?)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_14">  14</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_14"></span><span class="anchor" id="line-14"></span>     |  Email: v-nijs at kellogg.northwestern.edu</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_15">  15</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_15"></span><span class="anchor" id="line-15"></span>     |  Last Modified: Sun Jan <span class="Number">7</span> <span class="Number">10</span>:<span class="Number">05</span>:<span class="Number">12</span> CST <span class="Number">2007</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_16">  16</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_16"></span><span class="anchor" id="line-16"></span>     |          </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_17">  17</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_17"></span><span class="anchor" id="line-17"></span>     |  Todo:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_18">  18</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_18"></span><span class="anchor" id="line-18"></span>     |          - Check if shelve loading/saving works</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_19">  19</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_19"></span><span class="anchor" id="line-19"></span>     |          - Only tested on Mac OS X <span class="Number">10</span>.<span class="Number">4</span>.<span class="Number">8</span>, with full matplotlib (incl. pytz)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_20">  20</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_20"></span><span class="anchor" id="line-20"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_21">  21</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_21"></span><span class="anchor" id="line-21"></span>     |  Dependencies:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_22">  22</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_22"></span><span class="anchor" id="line-22"></span>     |          - See import statement at the top of this file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_23">  23</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_23"></span><span class="anchor" id="line-23"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_24">  24</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_24"></span><span class="anchor" id="line-24"></span>     |  Doc:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_25">  25</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_25"></span><span class="anchor" id="line-25"></span>     |  A simple data-frame, that reads and writes csv/pickle/shelve files with variable names.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_26">  26</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_26"></span><span class="anchor" id="line-26"></span>     |  Data is stored in a dictionary. </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_27">  27</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_27"></span><span class="anchor" id="line-27"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_28">  28</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_28"></span><span class="anchor" id="line-28"></span>     |  To use the class:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_29">  29</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_29"></span><span class="anchor" id="line-29"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_30">  30</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_30"></span><span class="anchor" id="line-30"></span>     |          &gt;&gt;&gt; from dbase import dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_31">  31</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_31"></span><span class="anchor" id="line-31"></span>     |          &gt;&gt;&gt; y = dbase('your_filename.csv')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_32">  32</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_32"></span><span class="anchor" id="line-32"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_33">  33</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_33"></span><span class="anchor" id="line-33"></span>     |  or for a previously created dbase object stored in a pickle file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_34">  34</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_34"></span><span class="anchor" id="line-34"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_35">  35</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_35"></span><span class="anchor" id="line-35"></span>     |          &gt;&gt;&gt; from dbase import dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_36">  36</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_36"></span><span class="anchor" id="line-36"></span>     |          &gt;&gt;&gt; y = dbase('your_filename.pickle')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_37">  37</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_37"></span><span class="anchor" id="line-37"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_38">  38</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_38"></span><span class="anchor" id="line-38"></span>     |          or without importing the dbase class</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_39">  39</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_39"></span><span class="anchor" id="line-39"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_40">  40</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_40"></span><span class="anchor" id="line-40"></span>     |          &gt;&gt;&gt; import cPickle </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_41">  41</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_41"></span><span class="anchor" id="line-41"></span>     |          &gt;&gt;&gt; f = open('your_filename.pickle','rb')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_42">  42</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_42"></span><span class="anchor" id="line-42"></span>     |          &gt;&gt;&gt; y = cPickle.load(f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_43">  43</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_43"></span><span class="anchor" id="line-43"></span>     |          &gt;&gt;&gt; data_key = cPickle.load(f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_44">  44</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_44"></span><span class="anchor" id="line-44"></span>     |          &gt;&gt;&gt; f.close()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_45">  45</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_45"></span><span class="anchor" id="line-45"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_46">  46</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_46"></span><span class="anchor" id="line-46"></span>     |  or for a dictionary stored in a shelf file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_47">  47</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_47"></span><span class="anchor" id="line-47"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_48">  48</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_48"></span><span class="anchor" id="line-48"></span>     |          &gt;&gt;&gt; from dbase import dbase</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_49">  49</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_49"></span><span class="anchor" id="line-49"></span>     |          &gt;&gt;&gt; y = dbase('your_filename.pickle')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_50">  50</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_50"></span><span class="anchor" id="line-50"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_51">  51</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_51"></span><span class="anchor" id="line-51"></span>     |  To return a list of variable names and an array of data</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_52">  52</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_52"></span><span class="anchor" id="line-52"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_53">  53</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_53"></span><span class="anchor" id="line-53"></span>     |          &gt;&gt;&gt; varnm, data = y.get()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_54">  54</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_54"></span><span class="anchor" id="line-54"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_55">  55</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_55"></span><span class="anchor" id="line-55"></span>     |  For usage examples of other class methods see the class tests at the bottom of this file. To see the class in action</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_56">  56</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_56"></span><span class="anchor" id="line-56"></span>     |  simply run the file using 'python dbase.py'. This will generate some simulated data (data.csv) and save instance data</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_57">  57</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_57"></span><span class="anchor" id="line-57"></span>     |  of the class to a pickle file.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_58">  58</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_58"></span><span class="anchor" id="line-58"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_59">  59</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_59"></span><span class="anchor" id="line-59"></span>     |  Methods defined here:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_60">  60</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_60"></span><span class="anchor" id="line-60"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_61">  61</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_61"></span><span class="anchor" id="line-61"></span>     |  __init__(self, fname, *var, **date)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_62">  62</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_62"></span><span class="anchor" id="line-62"></span>     |      Initializing the dbase class. Loading file fname.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_63">  63</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_63"></span><span class="anchor" id="line-63"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_64">  64</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_64"></span><span class="anchor" id="line-64"></span>     |      If you have have a column in your csv file that is a date-string use:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_65">  65</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_65"></span><span class="anchor" id="line-65"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_66">  66</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_66"></span><span class="anchor" id="line-66"></span>     |              &gt;&gt;&gt; x = dbase('myfile.csv',date = <span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_67">  67</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_67"></span><span class="anchor" id="line-67"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_68">  68</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_68"></span><span class="anchor" id="line-68"></span>     |      where <span class="Number">0</span> is the index of the date column</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_69">  69</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_69"></span><span class="anchor" id="line-69"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_70">  70</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_70"></span><span class="anchor" id="line-70"></span>     |      If you have have an array in your pickle file that is a date variable use:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_71">  71</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_71"></span><span class="anchor" id="line-71"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_72">  72</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_72"></span><span class="anchor" id="line-72"></span>     |              &gt;&gt;&gt; x = dbase('myfile.pickle',date = 'date')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_73">  73</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_73"></span><span class="anchor" id="line-73"></span>     |      </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_74">  74</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_74"></span><span class="anchor" id="line-74"></span>     |      where 'date' is the key of the date array</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_75">  75</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_75"></span><span class="anchor" id="line-75"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_76">  76</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_76"></span><span class="anchor" id="line-76"></span>     |  add_dummy(self, dum, dname='dummy')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_77">  77</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_77"></span><span class="anchor" id="line-77"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_78">  78</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_78"></span><span class="anchor" id="line-78"></span>     |  add_seasonal_dummies(self, freq=<span class="Number">52</span>, ndum=<span class="Number">13</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_79">  79</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_79"></span><span class="anchor" id="line-79"></span>     |      This function will only work if the freq and ndum 'fit. That is,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_80">  80</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_80"></span><span class="anchor" id="line-80"></span>     |      weeks and <span class="Number">4</span>-weekly periods will work. Weeks and months/quarters</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_81">  81</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_81"></span><span class="anchor" id="line-81"></span>     |      will not.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_82">  82</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_82"></span><span class="anchor" id="line-82"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_83">  83</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_83"></span><span class="anchor" id="line-83"></span>     |  add_trend(self, tname='trend')</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_84">  84</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_84"></span><span class="anchor" id="line-84"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_85">  85</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_85"></span><span class="anchor" id="line-85"></span>     |  dataplot(self, *var, **adict)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_86">  86</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_86"></span><span class="anchor" id="line-86"></span>     |      Plotting the data with variable names</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_87">  87</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_87"></span><span class="anchor" id="line-87"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_88">  88</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_88"></span><span class="anchor" id="line-88"></span>     |  delobs(self, sel)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_89">  89</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_89"></span><span class="anchor" id="line-89"></span>     |      Deleting specified observations, changing dictionary in place</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_90">  90</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_90"></span><span class="anchor" id="line-90"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_91">  91</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_91"></span><span class="anchor" id="line-91"></span>     |  delobs_copy(self, sel)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_92">  92</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_92"></span><span class="anchor" id="line-92"></span>     |      Deleting specified observations, making a copy</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_93">  93</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_93"></span><span class="anchor" id="line-93"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_94">  94</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_94"></span><span class="anchor" id="line-94"></span>     |  delvar(self, *var)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_95">  95</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_95"></span><span class="anchor" id="line-95"></span>     |      Deleting specified variables in the data dictionary, changing dictionary in place</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_96">  96</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_96"></span><span class="anchor" id="line-96"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_97">  97</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_97"></span><span class="anchor" id="line-97"></span>     |  delvar_copy(self, *var)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_98">  98</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_98"></span><span class="anchor" id="line-98"></span>     |      Deleting specified variables in the data dictionary, making a copy</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_99">  99</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_99"></span><span class="anchor" id="line-99"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_100"> 100</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_100"></span><span class="anchor" id="line-100"></span>     |  get(self, *var, **sel)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_101"> 101</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_101"></span><span class="anchor" id="line-101"></span>     |      Copying data and keys of selected variables for further analysis</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_102"> 102</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_102"></span><span class="anchor" id="line-102"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_103"> 103</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_103"></span><span class="anchor" id="line-103"></span>     |  info(self, *var, **adict)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_104"> 104</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_104"></span><span class="anchor" id="line-104"></span>     |      Printing descriptive statistics on selected variables</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_105"> 105</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_105"></span><span class="anchor" id="line-105"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_106"> 106</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_106"></span><span class="anchor" id="line-106"></span>     |  keepobs(self, sel)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_107"> 107</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_107"></span><span class="anchor" id="line-107"></span>     |      Keeping specified observations, changing dictionary in place</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_108"> 108</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_108"></span><span class="anchor" id="line-108"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_109"> 109</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_109"></span><span class="anchor" id="line-109"></span>     |  keepobs_copy(self, sel)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_110"> 110</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_110"></span><span class="anchor" id="line-110"></span>     |      Keeping specified observations, making a copy</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_111"> 111</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_111"></span><span class="anchor" id="line-111"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_112"> 112</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_112"></span><span class="anchor" id="line-112"></span>     |  keepvar(self, *var)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_113"> 113</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_113"></span><span class="anchor" id="line-113"></span>     |      Keeping specified variables in the data dictionary, changing dictionary in place</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_114"> 114</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_114"></span><span class="anchor" id="line-114"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_115"> 115</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_115"></span><span class="anchor" id="line-115"></span>     |  keepvar_copy(self, *var)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_116"> 116</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_116"></span><span class="anchor" id="line-116"></span>     |      Keeping specified variables in the data dictionary, making a copy</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_117"> 117</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_117"></span><span class="anchor" id="line-117"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_118"> 118</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_118"></span><span class="anchor" id="line-118"></span>     |  load(self, fname, var, date)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_119"> 119</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_119"></span><span class="anchor" id="line-119"></span>     |      Loading data from a csv or a pickle file of the dbase class.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_120"> 120</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_120"></span><span class="anchor" id="line-120"></span>     |      If this is csv file use pylab's load function. Seems much faster</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_121"> 121</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_121"></span><span class="anchor" id="line-121"></span>     |      than scipy.io.read_array.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_122"> 122</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_122"></span><span class="anchor" id="line-122"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_123"> 123</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_123"></span><span class="anchor" id="line-123"></span>     |  load_csv(self, f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_124"> 124</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_124"></span><span class="anchor" id="line-124"></span>     |      Loading data from a csv file. Uses pylab's load function. Seems much faster</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_125"> 125</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_125"></span><span class="anchor" id="line-125"></span>     |      than scipy.io.read_array.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_126"> 126</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_126"></span><span class="anchor" id="line-126"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_127"> 127</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_127"></span><span class="anchor" id="line-127"></span>     |  load_pickle(self, f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_128"> 128</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_128"></span><span class="anchor" id="line-128"></span>     |      Loading data from a created earlier using the the dbase class.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_129"> 129</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_129"></span><span class="anchor" id="line-129"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_130"> 130</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_130"></span><span class="anchor" id="line-130"></span>     |  load_shelve(self, fname, var)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_131"> 131</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_131"></span><span class="anchor" id="line-131"></span>     |      Loading data from a created earlier using the the dbase class.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_132"> 132</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_132"></span><span class="anchor" id="line-132"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_133"> 133</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_133"></span><span class="anchor" id="line-133"></span>     |  save(self, fname)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_134"> 134</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_134"></span><span class="anchor" id="line-134"></span>     |      Dumping the class data dictionary into a csv or pickle file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_135"> 135</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_135"></span><span class="anchor" id="line-135"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_136"> 136</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_136"></span><span class="anchor" id="line-136"></span>     |  save_csv(self, f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_137"> 137</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_137"></span><span class="anchor" id="line-137"></span>     |      Dumping the class data dictionary into a csv file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_138"> 138</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_138"></span><span class="anchor" id="line-138"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_139"> 139</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_139"></span><span class="anchor" id="line-139"></span>     |  save_pickle(self, f)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_140"> 140</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_140"></span><span class="anchor" id="line-140"></span>     |      Dumping the class data dictionary and date_key into a binary pickle file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_141"> 141</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_141"></span><span class="anchor" id="line-141"></span>     |  </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_142"> 142</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_142"></span><span class="anchor" id="line-142"></span>     |  save_shelve(self, fname)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_143"> 143</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_143"></span><span class="anchor" id="line-143"></span>     |      Dumping the class data dictionary into a shelve file</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_144"> 144</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_144"></span><span class="anchor" id="line-144"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_145"> 145</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_145"></span><span class="anchor" id="line-145"></span>FUNCTIONS</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_146"> 146</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_146"></span><span class="anchor" id="line-146"></span>    arange(...)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_147"> 147</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_147"></span><span class="anchor" id="line-147"></span>        arange([start,] stop[, step,], dtype=None)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_148"> 148</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_148"></span><span class="anchor" id="line-148"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_149"> 149</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_149"></span><span class="anchor" id="line-149"></span>        For integer arguments, just like range() except it returns an array</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_150"> 150</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_150"></span><span class="anchor" id="line-150"></span>        whose type can be specified by the keyword argument dtype.  If dtype</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_151"> 151</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_151"></span><span class="anchor" id="line-151"></span>        is not specified, the type of the result is deduced from the type of</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_152"> 152</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_152"></span><span class="anchor" id="line-152"></span>        the arguments.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_153"> 153</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_153"></span><span class="anchor" id="line-153"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_154"> 154</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_154"></span><span class="anchor" id="line-154"></span>        For floating point arguments, the length of the result is ceil((stop -</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_155"> 155</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_155"></span><span class="anchor" id="line-155"></span>        start)/step).  This rule may result in the last element of the result</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_156"> 156</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_156"></span><span class="anchor" id="line-156"></span>        being greater than stop.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_157"> 157</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_157"></span><span class="anchor" id="line-157"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_158"> 158</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_158"></span><span class="anchor" id="line-158"></span>    array(...)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_159"> 159</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_159"></span><span class="anchor" id="line-159"></span>        array(object, dtype=None, copy=<span class="Number">1</span>,order=None, subok=<span class="Number">0</span>,ndmin=<span class="Number">0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_160"> 160</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_160"></span><span class="anchor" id="line-160"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_161"> 161</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_161"></span><span class="anchor" id="line-161"></span>        Return an array from object with the specified date-type.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_162"> 162</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_162"></span><span class="anchor" id="line-162"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_163"> 163</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_163"></span><span class="anchor" id="line-163"></span>        Inputs:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_164"> 164</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_164"></span><span class="anchor" id="line-164"></span>          object - an array, any object exposing the array interface, any</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_165"> 165</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_165"></span><span class="anchor" id="line-165"></span>                    object whose __array__ method returns an array, or any</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_166"> 166</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_166"></span><span class="anchor" id="line-166"></span>                    (nested) sequence.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_167"> 167</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_167"></span><span class="anchor" id="line-167"></span>          dtype  - The desired data-type for the array.  If not given, then</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_168"> 168</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_168"></span><span class="anchor" id="line-168"></span>                    the type will be determined as the minimum type required</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_169"> 169</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_169"></span><span class="anchor" id="line-169"></span>                    to hold the objects in the sequence.  This argument can only</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_170"> 170</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_170"></span><span class="anchor" id="line-170"></span>                    be used to 'upcast' the array.  For downcasting, use the</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_171"> 171</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_171"></span><span class="anchor" id="line-171"></span>                    .astype(t) method.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_172"> 172</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_172"></span><span class="anchor" id="line-172"></span>          copy   - If true, then force a copy.  Otherwise a copy will only occur</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_173"> 173</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_173"></span><span class="anchor" id="line-173"></span>                    if __array__ returns a copy, obj is a nested sequence, or</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_174"> 174</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_174"></span><span class="anchor" id="line-174"></span>                    a copy is needed to satisfy any of the other requirements</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_175"> 175</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_175"></span><span class="anchor" id="line-175"></span>          order  - Specify the order of the array.  If order is 'C', then the</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_176"> 176</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_176"></span><span class="anchor" id="line-176"></span>                    array will be in C-contiguous order (last-index varies the</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_177"> 177</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_177"></span><span class="anchor" id="line-177"></span>                    fastest).  If order is 'FORTRAN', then the returned array</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_178"> 178</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_178"></span><span class="anchor" id="line-178"></span>                    will be in Fortran-contiguous order (first-index varies the</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_179"> 179</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_179"></span><span class="anchor" id="line-179"></span>                    fastest).  If order is None, then the returned array may</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_180"> 180</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_180"></span><span class="anchor" id="line-180"></span>                    be in either C-, or Fortran-contiguous order or even</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_181"> 181</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_181"></span><span class="anchor" id="line-181"></span>                    discontiguous.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_182"> 182</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_182"></span><span class="anchor" id="line-182"></span>          subok  - If True, then sub-classes will be passed-through, otherwise</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_183"> 183</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_183"></span><span class="anchor" id="line-183"></span>                    the returned array will be forced to be a base-class array</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_184"> 184</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_184"></span><span class="anchor" id="line-184"></span>          ndmin  - Specifies the minimum number of dimensions that the resulting</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_185"> 185</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_185"></span><span class="anchor" id="line-185"></span>                    array should have.  <span class="Number">1</span>'s will be pre-pended to the shape as</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_186"> 186</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_186"></span><span class="anchor" id="line-186"></span>                    needed to meet this requirement.</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_187"> 187</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_187"></span><span class="anchor" id="line-187"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_188"> 188</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_188"></span><span class="anchor" id="line-188"></span>    randn(...)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_189"> 189</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_189"></span><span class="anchor" id="line-189"></span>        Returns zero-mean, unit-variance Gaussian random numbers in an </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_190"> 190</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_190"></span><span class="anchor" id="line-190"></span>        array of shape (d<span class="Number">0</span>, d<span class="Number">1</span>, ..., dn).</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_191"> 191</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_191"></span><span class="anchor" id="line-191"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_192"> 192</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_192"></span><span class="anchor" id="line-192"></span>        randn(d<span class="Number">0</span>, d<span class="Number">1</span>, ..., dn) -&gt; random values</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_193"> 193</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_193"></span><span class="anchor" id="line-193"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_194"> 194</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_194"></span><span class="anchor" id="line-194"></span>        Note:  This is a convenience function. If you want an</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_195"> 195</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_195"></span><span class="anchor" id="line-195"></span>                    interface that takes a tuple as the first argument</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_196"> 196</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_196"></span><span class="anchor" id="line-196"></span>                    use numpy.random.standard_normal(shape_tuple).</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_197"> 197</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_197"></span><span class="anchor" id="line-197"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_198"> 198</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_198"></span><span class="anchor" id="line-198"></span>DATA</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_199"> 199</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_199"></span><span class="anchor" id="line-199"></span>    c_ = &lt;numpy.lib.index_tricks.c_class object at <span class="Number">0</span>x<span class="Number">1186530</span>&gt;</span>
+<span class="line"><span class="LineNumber"><a href="#CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_200"> 200</a> </span><span class="LineAnchor" id="CA-a9f6437fed7d7ded6d5b791e6d073151b6ca91dc_200"></span><span class="anchor" id="line-200"></span>    division = _Feature((<span class="Number">2</span>, <span class="Number">2</span>, <span class="Number">0</span>, 'alpha', <span class="Number">2</span>), (<span class="Number">3</span>, <span class="Number">0</span>, <span class="Number">0</span>, 'alpha', <span class="Number">0</span>), <span class="Number">8192</span>...</span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../../external.html?link=http://localhost:8080/Cookbook/dbase" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="dbase_pydoc.0.1.txt"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327c68.6a84aaf7bd30ac3ac8ce8bc16bfe120b866e166d">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="data.0.3e200.csv?action=AttachFile&amp;do=get&amp;target=data.0.3.csv">get</a>&nbsp;| <a href="dbasef1b9.html?action=AttachFile&amp;do=view&amp;target=data.0.3.csv">view</a>] (2007-01-14 23:35:05, 4.5 KB) [[attachment:data.0.3.csv]]</li><li>[<a href="data76e5.csv?action=AttachFile&amp;do=get&amp;target=data.csv">get</a>&nbsp;| <a href="dbase77dc.html?action=AttachFile&amp;do=view&amp;target=data.csv">view</a>] (2007-01-07 18:13:31, 4.0 KB) [[attachment:data.csv]]</li><li>[<a href="dbase.0.1b943.py?action=AttachFile&amp;do=get&amp;target=dbase.0.1.py">get</a>&nbsp;| <a href="dbasef4cc.html?action=AttachFile&amp;do=view&amp;target=dbase.0.1.py">view</a>] (2007-01-07 18:00:31, 16.1 KB) [[attachment:dbase.0.1.py]]</li><li>[<a href="dbase.0.274aa.py?action=AttachFile&amp;do=get&amp;target=dbase.0.2.py">get</a>&nbsp;| <a href="dbase9024.html?action=AttachFile&amp;do=view&amp;target=dbase.0.2.py">view</a>] (2007-01-14 22:55:13, 5.6 KB) [[attachment:dbase.0.2.py]]</li><li>[<a href="dbase.0.32133.py?action=AttachFile&amp;do=get&amp;target=dbase.0.3.py">get</a>&nbsp;| <a href="dbase3529.html?action=AttachFile&amp;do=view&amp;target=dbase.0.3.py">view</a>] (2007-01-14 23:31:35, 18.1 KB) [[attachment:dbase.0.3.py]]</li><li>[<a href="dbase.0.4bd63.py?action=AttachFile&amp;do=get&amp;target=dbase.0.4.py">get</a>&nbsp;| <a href="dbase6f87.html?action=AttachFile&amp;do=view&amp;target=dbase.0.4.py">view</a>] (2007-01-14 23:51:16, 18.4 KB) [[attachment:dbase.0.4.py]]</li><li>[<a href="dbase.0.5f856.py?action=AttachFile&amp;do=get&amp;target=dbase.0.5.py">get</a>&nbsp;| <a href="dbase4a6f.html?action=AttachFile&amp;do=view&amp;target=dbase.0.5.py">view</a>] (2007-01-14 23:54:23, 18.4 KB) [[attachment:dbase.0.5.py]]</li><li>[<a href="dbase.0.6312b.py?action=AttachFile&amp;do=get&amp;target=dbase.0.6.py">get</a>&nbsp;| <a href="dbaseea86.html?action=AttachFile&amp;do=view&amp;target=dbase.0.6.py">view</a>] (2007-01-15 06:33:06, 18.4 KB) [[attachment:dbase.0.6.py]]</li><li>[<a href="dbase.0.7f434.py?action=AttachFile&amp;do=get&amp;target=dbase.0.7.py">get</a>&nbsp;| <a href="dbase6ce4.html?action=AttachFile&amp;do=view&amp;target=dbase.0.7.py">view</a>] (2007-01-19 05:53:14, 19.1 KB) [[attachment:dbase.0.7.py]]</li><li>[<a href="dbase211c.py?action=AttachFile&amp;do=get&amp;target=dbase.py">get</a>&nbsp;| <a href="dbasee3a4.html?action=AttachFile&amp;do=view&amp;target=dbase.py">view</a>] (2007-01-07 07:50:10, 15.8 KB) [[attachment:dbase.py]]</li><li>[<a href="dbase07fe.pydoc?action=AttachFile&amp;do=get&amp;target=dbase.pydoc">get</a>&nbsp;| <a href="dbaseb764.html?action=AttachFile&amp;do=view&amp;target=dbase.pydoc">view</a>] (2007-01-07 07:52:21, 7.6 KB) [[attachment:dbase.pydoc]]</li><li>[<a href="dbase_pydoc.0.1d60b.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.1.txt">get</a>&nbsp;| <a href="dbasee5ac.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.1.txt">view</a>] (2007-01-07 18:01:44, 7.9 KB) [[attachment:dbase_pydoc.0.1.txt]]</li><li>[<a href="dbase_pydoc.0.230c3.txt?action=AttachFile&amp;do=get&amp;target=dbase_pydoc.0.2.txt">get</a>&nbsp;| <a href="dbase377d.html?action=AttachFile&amp;do=view&amp;target=dbase_pydoc.0.2.txt">view</a>] (2007-01-14 22:56:04, 8.2 KB) [[attachment:dbase_pydoc.0.2.txt]]</li><li>[<a href="ex_plot.0.1c9c7.png?action=AttachFile&amp;do=get&amp;target=ex_plot.0.1.png">get</a>&nbsp;| <a href="dbaseac9a.html?action=AttachFile&amp;do=view&amp;target=ex_plot.0.1.png">view</a>] (2007-01-07 18:02:50, 27.7 KB) [[attachment:ex_plot.0.1.png]]</li><li>[<a href="ex_plot59eb.png?action=AttachFile&amp;do=get&amp;target=ex_plot.png">get</a>&nbsp;| <a href="dbase8180.html?action=AttachFile&amp;do=view&amp;target=ex_plot.png">view</a>] (2007-01-07 08:01:04, 87.7 KB) [[attachment:ex_plot.png]]</li><li>[<a href="ex_plot1f462.png?action=AttachFile&amp;do=get&amp;target=ex_plot1.png">get</a>&nbsp;| <a href="dbase5ecf.html?action=AttachFile&amp;do=view&amp;target=ex_plot1.png">view</a>] (2007-01-07 08:03:54, 28.2 KB) [[attachment:ex_plot1.png]]</li><li>[<a href="example_plotd84c.png?action=AttachFile&amp;do=get&amp;target=example_plot.png">get</a>&nbsp;| <a href="dbase7534.html?action=AttachFile&amp;do=view&amp;target=example_plot.png">view</a>] (2007-01-07 07:57:21, 895.9 KB) [[attachment:example_plot.png]]</li><li>[<a href="pydocef5d?action=AttachFile&amp;do=get&amp;target=pydoc">get</a>&nbsp;| <a href="dbase88e1.html?action=AttachFile&amp;do=view&amp;target=pydoc">view</a>] (2007-01-07 07:51:51, 34.3 KB) [[attachment:pydoc]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="dbase37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/dbase">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/dbase?action=AttachFile&do=view&target=dbase_pydoc.0.1.txt by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:42:16 GMT -->
+</html>
+

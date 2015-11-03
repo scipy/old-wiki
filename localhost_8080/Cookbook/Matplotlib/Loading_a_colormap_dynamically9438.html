@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Matplotlib/Loading_a_colormap_dynamically - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/Loading_a_colormap_dynamically" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2FLoading_a_colormap_dynamically&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Loading_a_colormap_dynamically456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="Loading_a_colormap_dynamically1834.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2FLoading_a_colormap_dynamically%22" rel="nofollow" title="Click to do a full-text search for this title">Loading_a_colormap_dynamically</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="Loading_a_colormap_dynamically.html">Loading_a_c...dynamically</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Loading_a_colormap_dynamically37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line862">In a <a class="http" href="../../../external.html?link=http://thread.gmane.org/gmane.comp.python.matplotlib.general/1536">thread</a> on the matplotlib mailling list, James Boyle posted a way to load colormaps from a file. Here it is slightly modified. <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867"><strong>gmtColormap.py</strong> <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_1">   1</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">def</span> <span class="ID">gmtColormap</span>(<span class="ID">fileName</span>,<span class="ID">GMTPath</span> = <span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_2">   2</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_2"></span><span class="anchor" id="line-2-1"></span>      <span class="ResWord">import</span> <span class="ID">colorsys</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_3">   3</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_3"></span><span class="anchor" id="line-3-1"></span>      <span class="ResWord">import</span> <span class="ID">Numeric</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_4">   4</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_4"></span><span class="anchor" id="line-4-1"></span>      <span class="ID">N</span> = <span class="ID">Numeric</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_5">   5</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_5"></span><span class="anchor" id="line-5-1"></span>      <span class="ResWord">if</span> <span class="ResWord">type</span>(<span class="ID">GMTPath</span>) == <span class="ResWord">type</span>(<span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_6">   6</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_6"></span><span class="anchor" id="line-6-1"></span>          <span class="ID">filePath</span> = <span class="String">&quot;</span><span class="String">/usr/local/cmaps/</span><span class="String">&quot;</span>+ <span class="ID">fileName</span>+<span class="String">&quot;</span><span class="String">.cpt</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_7">   7</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_7"></span><span class="anchor" id="line-7-1"></span>      <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_8">   8</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_8"></span><span class="anchor" id="line-8-1"></span>          <span class="ID">filePath</span> = <span class="ID">GMTPath</span>+<span class="String">&quot;</span><span class="String">/</span><span class="String">&quot;</span>+ <span class="ID">fileName</span> +<span class="String">&quot;</span><span class="String">.cpt</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_9">   9</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_9"></span><span class="anchor" id="line-9-1"></span>      <span class="ResWord">try</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_10">  10</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_10"></span><span class="anchor" id="line-10-1"></span>          <span class="ID">f</span> = <span class="ResWord">open</span>(<span class="ID">filePath</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_11">  11</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_11"></span><span class="anchor" id="line-11-1"></span>      <span class="ResWord">except</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_12">  12</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_12"></span><span class="anchor" id="line-12-1"></span>          <span class="ResWord">print</span> <span class="String">&quot;</span><span class="String">file </span><span class="String">&quot;</span>,<span class="ID">filePath</span>, <span class="String">&quot;</span><span class="String">not found</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_13">  13</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_13"></span><span class="anchor" id="line-13-1"></span>          <span class="ResWord">return</span> <span class="ResWord">None</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_14">  14</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_14"></span><span class="anchor" id="line-14-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_15">  15</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_15"></span><span class="anchor" id="line-15-1"></span>      <span class="ID">lines</span> = <span class="ID">f</span>.<span class="ID">readlines</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_16">  16</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_16"></span><span class="anchor" id="line-16-1"></span>      <span class="ID">f</span>.<span class="ID">close</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_17">  17</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_17"></span><span class="anchor" id="line-17-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_18">  18</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_18"></span><span class="anchor" id="line-18-1"></span>      <span class="ID">x</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_19">  19</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_19"></span><span class="anchor" id="line-19-1"></span>      <span class="ID">r</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_20">  20</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_20"></span><span class="anchor" id="line-20-1"></span>      <span class="ID">g</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_21">  21</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_21"></span><span class="anchor" id="line-21-1"></span>      <span class="ID">b</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_22">  22</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_22"></span><span class="anchor" id="line-22-1"></span>      <span class="ID">colorModel</span> = <span class="String">&quot;</span><span class="String">RGB</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_23">  23</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_23"></span><span class="anchor" id="line-23-1"></span>      <span class="ResWord">for</span> <span class="ID">l</span> <span class="ResWord">in</span> <span class="ID">lines</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_24">  24</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_24"></span><span class="anchor" id="line-24-1"></span>          <span class="ID">ls</span> = <span class="ID">l</span>.<span class="ID">split</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_25">  25</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_25"></span><span class="anchor" id="line-25-1"></span>          <span class="ResWord">if</span> <span class="ID">l</span>[<span class="Number">0</span>] == <span class="String">&quot;</span><span class="String">#</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_26">  26</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_26"></span><span class="anchor" id="line-26-1"></span>             <span class="ResWord">if</span> <span class="ID">ls</span>[-<span class="Number">1</span>] == <span class="String">&quot;</span><span class="String">HSV</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_27">  27</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_27"></span><span class="anchor" id="line-27-1"></span>                 <span class="ID">colorModel</span> = <span class="String">&quot;</span><span class="String">HSV</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_28">  28</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_28"></span><span class="anchor" id="line-28-1"></span>                 <span class="ResWord">continue</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_29">  29</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_29"></span><span class="anchor" id="line-29-1"></span>             <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_30">  30</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_30"></span><span class="anchor" id="line-30-1"></span>                 <span class="ResWord">continue</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_31">  31</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_31"></span><span class="anchor" id="line-31-1"></span>          <span class="ResWord">if</span> <span class="ID">ls</span>[<span class="Number">0</span>] == <span class="String">&quot;</span><span class="String">B</span><span class="String">&quot;</span> <span class="ResWord">or</span> <span class="ID">ls</span>[<span class="Number">0</span>] == <span class="String">&quot;</span><span class="String">F</span><span class="String">&quot;</span> <span class="ResWord">or</span> <span class="ID">ls</span>[<span class="Number">0</span>] == <span class="String">&quot;</span><span class="String">N</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_32">  32</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_32"></span><span class="anchor" id="line-32-1"></span>             <span class="ResWord">pass</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_33">  33</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_33"></span><span class="anchor" id="line-33-1"></span>          <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_34">  34</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_34"></span><span class="anchor" id="line-34-1"></span>              <span class="ID">x</span>.<span class="ID">append</span>(<span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">0</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_35">  35</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_35"></span><span class="anchor" id="line-35-1"></span>              <span class="ID">r</span>.<span class="ID">append</span>(<span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">1</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_36">  36</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_36"></span><span class="anchor" id="line-36-1"></span>              <span class="ID">g</span>.<span class="ID">append</span>(<span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">2</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_37">  37</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_37"></span><span class="anchor" id="line-37-1"></span>              <span class="ID">b</span>.<span class="ID">append</span>(<span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">3</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_38">  38</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_38"></span><span class="anchor" id="line-38-1"></span>              <span class="ID">xtemp</span> = <span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">4</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_39">  39</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_39"></span><span class="anchor" id="line-39-1"></span>              <span class="ID">rtemp</span> = <span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">5</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_40">  40</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_40"></span><span class="anchor" id="line-40-1"></span>              <span class="ID">gtemp</span> = <span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">6</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_41">  41</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_41"></span><span class="anchor" id="line-41-1"></span>              <span class="ID">btemp</span> = <span class="ResWord">float</span>(<span class="ID">ls</span>[<span class="Number">7</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_42">  42</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_42"></span><span class="anchor" id="line-42-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_43">  43</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_43"></span><span class="anchor" id="line-43-1"></span>      <span class="ID">x</span>.<span class="ID">append</span>(<span class="ID">xtemp</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_44">  44</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_44"></span><span class="anchor" id="line-44-1"></span>      <span class="ID">r</span>.<span class="ID">append</span>(<span class="ID">rtemp</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_45">  45</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_45"></span><span class="anchor" id="line-45-1"></span>      <span class="ID">g</span>.<span class="ID">append</span>(<span class="ID">gtemp</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_46">  46</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_46"></span><span class="anchor" id="line-46-1"></span>      <span class="ID">b</span>.<span class="ID">append</span>(<span class="ID">btemp</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_47">  47</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_47"></span><span class="anchor" id="line-47-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_48">  48</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_48"></span><span class="anchor" id="line-48-1"></span>      <span class="ID">nTable</span> = <span class="ResWord">len</span>(<span class="ID">r</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_49">  49</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_49"></span><span class="anchor" id="line-49-1"></span>      <span class="ID">x</span> = <span class="ID">N</span>.<span class="ID">array</span>( <span class="ID">x</span> , <span class="ID">N</span>.<span class="ID">Float</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_50">  50</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_50"></span><span class="anchor" id="line-50-1"></span>      <span class="ID">r</span> = <span class="ID">N</span>.<span class="ID">array</span>( <span class="ID">r</span> , <span class="ID">N</span>.<span class="ID">Float</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_51">  51</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_51"></span><span class="anchor" id="line-51-1"></span>      <span class="ID">g</span> = <span class="ID">N</span>.<span class="ID">array</span>( <span class="ID">g</span> , <span class="ID">N</span>.<span class="ID">Float</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_52">  52</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_52"></span><span class="anchor" id="line-52-1"></span>      <span class="ID">b</span> = <span class="ID">N</span>.<span class="ID">array</span>( <span class="ID">b</span> , <span class="ID">N</span>.<span class="ID">Float</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_53">  53</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_53"></span><span class="anchor" id="line-53-1"></span>      <span class="ResWord">if</span> <span class="ID">colorModel</span> == <span class="String">&quot;</span><span class="String">HSV</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_54">  54</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_54"></span><span class="anchor" id="line-54-1"></span>         <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">r</span>.<span class="ID">shape</span>[<span class="Number">0</span>]):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_55">  55</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_55"></span><span class="anchor" id="line-55-1"></span>             <span class="ID">rr</span>,<span class="ID">gg</span>,<span class="ID">bb</span> = <span class="ID">colorsys</span>.<span class="ID">hsv_to_rgb</span>(<span class="ID">r</span>[<span class="ID">i</span>]/<span class="Number">360.</span>,<span class="ID">g</span>[<span class="ID">i</span>],<span class="ID">b</span>[<span class="ID">i</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_56">  56</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_56"></span><span class="anchor" id="line-56-1"></span>             <span class="ID">r</span>[<span class="ID">i</span>] = <span class="ID">rr</span> ; <span class="ID">g</span>[<span class="ID">i</span>] = <span class="ID">gg</span> ; <span class="ID">b</span>[<span class="ID">i</span>] = <span class="ID">bb</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_57">  57</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_57"></span><span class="anchor" id="line-57-1"></span>      <span class="ResWord">if</span> <span class="ID">colorModel</span> == <span class="String">&quot;</span><span class="String">HSV</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_58">  58</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_58"></span><span class="anchor" id="line-58-1"></span>         <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">r</span>.<span class="ID">shape</span>[<span class="Number">0</span>]):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_59">  59</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_59"></span><span class="anchor" id="line-59-1"></span>             <span class="ID">rr</span>,<span class="ID">gg</span>,<span class="ID">bb</span> = <span class="ID">colorsys</span>.<span class="ID">hsv_to_rgb</span>(<span class="ID">r</span>[<span class="ID">i</span>]/<span class="Number">360.</span>,<span class="ID">g</span>[<span class="ID">i</span>],<span class="ID">b</span>[<span class="ID">i</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_60">  60</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_60"></span><span class="anchor" id="line-60-1"></span>             <span class="ID">r</span>[<span class="ID">i</span>] = <span class="ID">rr</span> ; <span class="ID">g</span>[<span class="ID">i</span>] = <span class="ID">gg</span> ; <span class="ID">b</span>[<span class="ID">i</span>] = <span class="ID">bb</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_61">  61</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_61"></span><span class="anchor" id="line-61-1"></span>      <span class="ResWord">if</span> <span class="ID">colorModel</span> == <span class="String">&quot;</span><span class="String">RGB</span><span class="String">&quot;</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_62">  62</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_62"></span><span class="anchor" id="line-62-1"></span>          <span class="ID">r</span> = <span class="ID">r</span>/<span class="Number">255.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_63">  63</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_63"></span><span class="anchor" id="line-63-1"></span>          <span class="ID">g</span> = <span class="ID">g</span>/<span class="Number">255.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_64">  64</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_64"></span><span class="anchor" id="line-64-1"></span>          <span class="ID">b</span> = <span class="ID">b</span>/<span class="Number">255.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_65">  65</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_65"></span><span class="anchor" id="line-65-1"></span>      <span class="ID">xNorm</span> = (<span class="ID">x</span> - <span class="ID">x</span>[<span class="Number">0</span>])/(<span class="ID">x</span>[-<span class="Number">1</span>] - <span class="ID">x</span>[<span class="Number">0</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_66">  66</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_66"></span><span class="anchor" id="line-66-1"></span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_67">  67</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_67"></span><span class="anchor" id="line-67-1"></span>      <span class="ID">red</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_68">  68</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_68"></span><span class="anchor" id="line-68-1"></span>      <span class="ID">blue</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_69">  69</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_69"></span><span class="anchor" id="line-69-1"></span>      <span class="ID">green</span> = []</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_70">  70</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_70"></span><span class="anchor" id="line-70-1"></span>      <span class="ResWord">for</span> <span class="ID">i</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ResWord">len</span>(<span class="ID">x</span>)):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_71">  71</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_71"></span><span class="anchor" id="line-71-1"></span>          <span class="ID">red</span>.<span class="ID">append</span>([<span class="ID">xNorm</span>[<span class="ID">i</span>],<span class="ID">r</span>[<span class="ID">i</span>],<span class="ID">r</span>[<span class="ID">i</span>]])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_72">  72</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_72"></span><span class="anchor" id="line-72-1"></span>          <span class="ID">green</span>.<span class="ID">append</span>([<span class="ID">xNorm</span>[<span class="ID">i</span>],<span class="ID">g</span>[<span class="ID">i</span>],<span class="ID">g</span>[<span class="ID">i</span>]])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_73">  73</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_73"></span><span class="anchor" id="line-73-1"></span>          <span class="ID">blue</span>.<span class="ID">append</span>([<span class="ID">xNorm</span>[<span class="ID">i</span>],<span class="ID">b</span>[<span class="ID">i</span>],<span class="ID">b</span>[<span class="ID">i</span>]])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_74">  74</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_74"></span><span class="anchor" id="line-74-1"></span>      <span class="ID">colorDict</span> = {<span class="String">&quot;</span><span class="String">red</span><span class="String">&quot;</span>:<span class="ID">red</span>, <span class="String">&quot;</span><span class="String">green</span><span class="String">&quot;</span>:<span class="ID">green</span>, <span class="String">&quot;</span><span class="String">blue</span><span class="String">&quot;</span>:<span class="ID">blue</span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_75">  75</a> </span><span class="LineAnchor" id="CA-539e5a9dba50a5893ad41c189139c82a99d0e7d8_75"></span><span class="anchor" id="line-75-1"></span>      <span class="ResWord">return</span> (<span class="ID">colorDict</span>)</span>
+</pre></div></div><span class="anchor" id="line-81"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-82"></span><a href="../../CategoryCookbookMatplotlib.html"><strong class="highlight">CategoryCookbook</strong>Matplotlib</a> <span class="anchor" id="line-83"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/Loading_a_colormap_dynamically  (last edited 2015-10-24 17:48:24 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Loading_a_colormap_dynamically37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/Loading_a_colormap_dynamically?highlight=%28%28CategoryCookbook%29%29 by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:34:10 GMT -->
+</html>
+

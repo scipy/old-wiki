@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=AttachFile&do=view&target=numpyctypes.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:37:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="noindex,nofollow">
+
+<title>attachment:numpyctypes.py of C++_Extensions_that_use_NumPy_arrays - SciPy</title>
+<script type="text/javascript" src="moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: C++_Extensions_that_use_NumPy_arrays" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=C%2B%2B_Extensions_that_use_NumPy_arrays&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=print">
+<link rel="Appendix" title="ndarray.h" href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h">
+<link rel="Appendix" title="numpyctypes.py" href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py">
+<link rel="Search" href="FindPage.html">
+<link rel="Index" href="TitleIndex.html">
+<link rel="Glossary" href="WordIndex.html">
+<link rel="Help" href="HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="C%2b%2b_Extensions_that_use_NumPy_arrays456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li>attachment:numpyctypes.py of C++_Extensions_that_use_NumPy_arrays</li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="HelpContents.html">HelpContents</a></li><li class="current"><a href="C%2b%2b_Extensions_that_use_NumPy_arrays.html">C++_Extensi...umPy_arrays</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<h2>Attachment 'numpyctypes.py'</h2><a class="download" href="numpyctypes0706.py?action=AttachFile&amp;do=get&amp;target=numpyctypes.py">Download</a><br><br><span class="anchor" id="line-1"></span><div class="highlight text"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-7b509eec9416e083ec926c04a404e29de2b5bd23\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_1">   1</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_1"></span><span class="anchor" id="line-1-1"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_2">   2</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_2"></span><span class="anchor" id="line-2"></span><span class="ResWord">import</span> <span class="ID">ctypes</span> <span class="ResWord">as</span> <span class="ID">C</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_3">   3</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_3"></span><span class="anchor" id="line-3"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_4">   4</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_4"></span><span class="anchor" id="line-4"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_5">   5</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_5"></span><span class="anchor" id="line-5"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_6">   6</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_6"></span><span class="anchor" id="line-6"></span><span class="ID">ctypesDict</span> = {<span class="String">'</span><span class="String">d</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_double</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_7">   7</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_7"></span><span class="anchor" id="line-7"></span>              <span class="String">'</span><span class="String">b</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_char</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_8">   8</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_8"></span><span class="anchor" id="line-8"></span>              <span class="String">'</span><span class="String">h</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_short</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_9">   9</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_9"></span><span class="anchor" id="line-9"></span>              <span class="String">'</span><span class="String">i</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_int</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_10">  10</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_10"></span><span class="anchor" id="line-10"></span>              <span class="String">'</span><span class="String">l</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_long</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_11">  11</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_11"></span><span class="anchor" id="line-11"></span>              <span class="String">'</span><span class="String">q</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_longlong</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_12">  12</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_12"></span><span class="anchor" id="line-12"></span>              <span class="String">'</span><span class="String">B</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_ubyte</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_13">  13</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_13"></span><span class="anchor" id="line-13"></span>              <span class="String">'</span><span class="String">H</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_ushort</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_14">  14</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_14"></span><span class="anchor" id="line-14"></span>              <span class="String">'</span><span class="String">I</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_uint</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_15">  15</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_15"></span><span class="anchor" id="line-15"></span>              <span class="String">'</span><span class="String">L</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_ulong</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_16">  16</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_16"></span><span class="anchor" id="line-16"></span>              <span class="String">'</span><span class="String">Q</span><span class="String">'</span> : <span class="ID">C</span>.<span class="ID">c_ulonglong</span>}</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_17">  17</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_17"></span><span class="anchor" id="line-17"></span>              </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_18">  18</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_18"></span><span class="anchor" id="line-18"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_19">  19</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_19"></span><span class="anchor" id="line-19"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_20">  20</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_20"></span><span class="anchor" id="line-20"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_21">  21</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_21"></span><span class="anchor" id="line-21"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_22">  22</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_22"></span><span class="anchor" id="line-22"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_23">  23</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_23"></span><span class="anchor" id="line-23"></span><span class="ResWord">def</span> <span class="ID">c_ndarray</span>(<span class="ID">a</span>, <span class="ID">dtype</span> = <span class="ResWord">None</span>, <span class="ID">ndim</span> = <span class="ResWord">None</span>, <span class="ID">shape</span> = <span class="ResWord">None</span>, <span class="ID">requirements</span> = <span class="ResWord">None</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_24">  24</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_24"></span><span class="anchor" id="line-24"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_25">  25</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_25"></span><span class="anchor" id="line-25"></span>    <span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_26">  26</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_26"></span><span class="anchor" id="line-26"></span><span class="String">    PURPOSE: Given an array, return a ctypes structure containing the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_27">  27</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_27"></span><span class="anchor" id="line-27"></span><span class="String">             arrays info (data, shape, strides, ndim). A check is made to ensure</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_28">  28</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_28"></span><span class="anchor" id="line-28"></span><span class="String">             that the array has the specified dtype and requirements.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_29">  29</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_29"></span><span class="anchor" id="line-29"></span><span class="String">             </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_30">  30</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_30"></span><span class="anchor" id="line-30"></span><span class="String">    INPUT: a: an array: something that is or can be converted to a numpy array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_31">  31</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_31"></span><span class="anchor" id="line-31"></span><span class="String">           dtype: the required dtype of the array, convert if it doesn't match</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_32">  32</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_32"></span><span class="anchor" id="line-32"></span><span class="String">           ndim: integer: the required number of axes of the array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_33">  33</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_33"></span><span class="anchor" id="line-33"></span><span class="String">           shape: tuple of integers: required shape of the array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_34">  34</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_34"></span><span class="anchor" id="line-34"></span><span class="String">           requirements: list of requirements: (E)nsurearray, (F)ortran, (F)_contiguous,</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_35">  35</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_35"></span><span class="anchor" id="line-35"></span><span class="String">                        (C)ontiguous, (C)_contiguous. Convert if it doesn't match.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_36">  36</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_36"></span><span class="anchor" id="line-36"></span><span class="String">                         </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_37">  37</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_37"></span><span class="anchor" id="line-37"></span><span class="String">    OUTPUT: ctypes structure with the fields:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_38">  38</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_38"></span><span class="anchor" id="line-38"></span><span class="String">             . data: pointer to the data : the type is determined with the dtype of the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_39">  39</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_39"></span><span class="anchor" id="line-39"></span><span class="String">                     array, and with ctypesDict.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_40">  40</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_40"></span><span class="anchor" id="line-40"></span><span class="String">             . shape: pointer to long array : size of each of the dimensions</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_41">  41</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_41"></span><span class="anchor" id="line-41"></span><span class="String">             . strides: pointer to long array : strides in elements (not bytes)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_42">  42</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_42"></span><span class="anchor" id="line-42"></span><span class="String">    &quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_43">  43</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_43"></span><span class="anchor" id="line-43"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_44">  44</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_44"></span><span class="anchor" id="line-44"></span>    <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">requirements</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_45">  45</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_45"></span><span class="anchor" id="line-45"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_46">  46</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_46"></span><span class="anchor" id="line-46"></span>        <span class="Comment"># Also allow derived classes of ndarray</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_47">  47</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_47"></span><span class="anchor" id="line-47"></span>        <span class="ID">array</span> = <span class="ID">N</span>.<span class="ID">asanyarray</span>(<span class="ID">a</span>, <span class="ID">dtype</span>=<span class="ID">dtype</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_48">  48</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_48"></span><span class="anchor" id="line-48"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_49">  49</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_49"></span><span class="anchor" id="line-49"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_50">  50</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_50"></span><span class="anchor" id="line-50"></span>        <span class="Comment"># Convert requirements to captial letter codes:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_51">  51</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_51"></span><span class="anchor" id="line-51"></span>        <span class="Comment"># (ensurearray' -&gt; 'E';  'aligned' -&gt; 'A'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_52">  52</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_52"></span><span class="anchor" id="line-52"></span>        <span class="Comment">#  'fortran', 'f_contiguous', 'f' -&gt; 'F'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_53">  53</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_53"></span><span class="anchor" id="line-53"></span>        <span class="Comment">#  'contiguous', 'c_contiguous', 'c' -&gt; 'C')</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_54">  54</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_54"></span><span class="anchor" id="line-54"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_55">  55</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_55"></span><span class="anchor" id="line-55"></span>        <span class="ID">requirements</span> = [<span class="ID">x</span>[<span class="Number">0</span>].<span class="ID">upper</span>() <span class="ResWord">for</span> <span class="ID">x</span> <span class="ResWord">in</span> <span class="ID">requirements</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_56">  56</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_56"></span><span class="anchor" id="line-56"></span>        <span class="ID">subok</span> = (<span class="Number">0</span> <span class="ResWord">if</span> <span class="String">'</span><span class="String">E</span><span class="String">'</span> <span class="ResWord">in</span> <span class="ID">requirements</span> <span class="ResWord">else</span> <span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_57">  57</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_57"></span><span class="anchor" id="line-57"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_58">  58</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_58"></span><span class="anchor" id="line-58"></span>        <span class="Comment"># Make from 'a' an ndarray with the specified dtype, but don't copy the</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_59">  59</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_59"></span><span class="anchor" id="line-59"></span>        <span class="Comment"># data (yet). This also ensures that the .flags attribute is present.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_60">  60</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_60"></span><span class="anchor" id="line-60"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_61">  61</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_61"></span><span class="anchor" id="line-61"></span>        <span class="ID">array</span> = <span class="ID">N</span>.<span class="ID">array</span>(<span class="ID">a</span>, <span class="ID">dtype</span>=<span class="ID">dtype</span>, <span class="ID">copy</span>=<span class="ResWord">False</span>, <span class="ID">subok</span>=<span class="ID">subok</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_62">  62</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_62"></span><span class="anchor" id="line-62"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_63">  63</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_63"></span><span class="anchor" id="line-63"></span>        <span class="Comment"># See if copying all data is really necessary.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_64">  64</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_64"></span><span class="anchor" id="line-64"></span>        <span class="Comment"># Note: 'A' = (A)ny = only (F) it is was already (F) </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_65">  65</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_65"></span><span class="anchor" id="line-65"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_66">  66</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_66"></span><span class="anchor" id="line-66"></span>        <span class="ID">copychar</span> = <span class="String">'</span><span class="String">A</span><span class="String">'</span> </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_67">  67</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_67"></span><span class="anchor" id="line-67"></span>        <span class="ResWord">if</span> <span class="String">'</span><span class="String">F</span><span class="String">'</span> <span class="ResWord">in</span> <span class="ID">requirements</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_68">  68</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_68"></span><span class="anchor" id="line-68"></span>            <span class="ID">copychar</span> = <span class="String">'</span><span class="String">F</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_69">  69</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_69"></span><span class="anchor" id="line-69"></span>        <span class="ResWord">elif</span> <span class="String">'</span><span class="String">C</span><span class="String">'</span> <span class="ResWord">in</span> <span class="ID">requirements</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_70">  70</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_70"></span><span class="anchor" id="line-70"></span>            <span class="ID">copychar</span> = <span class="String">'</span><span class="String">C</span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_71">  71</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_71"></span><span class="anchor" id="line-71"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_72">  72</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_72"></span><span class="anchor" id="line-72"></span>        <span class="ResWord">for</span> <span class="ID">req</span> <span class="ResWord">in</span> <span class="ID">requirements</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_73">  73</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_73"></span><span class="anchor" id="line-73"></span>            <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">array</span>.<span class="ID">flags</span>[<span class="ID">req</span>]:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_74">  74</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_74"></span><span class="anchor" id="line-74"></span>                <span class="ID">array</span> = <span class="ID">array</span>.<span class="ID">copy</span>(<span class="ID">copychar</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_75">  75</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_75"></span><span class="anchor" id="line-75"></span>                <span class="ResWord">break</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_76">  76</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_76"></span><span class="anchor" id="line-76"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_77">  77</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_77"></span><span class="anchor" id="line-77"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_78">  78</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_78"></span><span class="anchor" id="line-78"></span>    <span class="Comment"># If required, check the number of axes and the shape of the array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_79">  79</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_79"></span><span class="anchor" id="line-79"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_80">  80</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_80"></span><span class="anchor" id="line-80"></span>    <span class="ResWord">if</span> <span class="ID">ndim</span> <span class="ResWord">is</span> <span class="ResWord">not</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_81">  81</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_81"></span><span class="anchor" id="line-81"></span>        <span class="ResWord">if</span> <span class="ID">array</span>.<span class="ID">ndim</span> != <span class="ID">ndim</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_82">  82</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_82"></span><span class="anchor" id="line-82"></span>            <span class="ResWord">raise</span> <span class="ID">TypeError</span>, <span class="String">&quot;</span><span class="String">Array has wrong number of axes</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_83">  83</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_83"></span><span class="anchor" id="line-83"></span>                </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_84">  84</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_84"></span><span class="anchor" id="line-84"></span>    <span class="ResWord">if</span> <span class="ID">shape</span> <span class="ResWord">is</span> <span class="ResWord">not</span> <span class="ResWord">None</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_85">  85</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_85"></span><span class="anchor" id="line-85"></span>        <span class="ResWord">if</span> <span class="ID">array</span>.<span class="ID">shape</span> != <span class="ID">shape</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_86">  86</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_86"></span><span class="anchor" id="line-86"></span>            <span class="ResWord">raise</span> <span class="ID">TypeError</span>, <span class="String">&quot;</span><span class="String">Array has wrong shape</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_87">  87</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_87"></span><span class="anchor" id="line-87"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_88">  88</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_88"></span><span class="anchor" id="line-88"></span>    <span class="Comment"># Define a class that serves as interface of an ndarray to ctypes.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_89">  89</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_89"></span><span class="anchor" id="line-89"></span>    <span class="Comment"># Part of the type depends on the array's dtype. </span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_90">  90</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_90"></span><span class="anchor" id="line-90"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_91">  91</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_91"></span><span class="anchor" id="line-91"></span>    <span class="ResWord">class</span> <span class="ID">ndarrayInterfaceToCtypes</span>(<span class="ID">C</span>.<span class="ID">Structure</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_92">  92</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_92"></span><span class="anchor" id="line-92"></span>        <span class="ResWord">pass</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_93">  93</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_93"></span><span class="anchor" id="line-93"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_94">  94</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_94"></span><span class="anchor" id="line-94"></span>    <span class="ID">typechar</span> = <span class="ID">array</span>.<span class="ID">dtype</span>.<span class="ID">char</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_95">  95</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_95"></span><span class="anchor" id="line-95"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_96">  96</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_96"></span><span class="anchor" id="line-96"></span>    <span class="ResWord">if</span> <span class="ID">typechar</span> <span class="ResWord">in</span> <span class="ID">ctypesDict</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_97">  97</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_97"></span><span class="anchor" id="line-97"></span>        <span class="ID">ndarrayInterfaceToCtypes</span>.<span class="ID">_fields_</span> =                       \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_98">  98</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_98"></span><span class="anchor" id="line-98"></span>                  [(<span class="String">&quot;</span><span class="String">data</span><span class="String">&quot;</span>, <span class="ID">C</span>.<span class="ID">POINTER</span>(<span class="ID">ctypesDict</span>[<span class="ID">typechar</span>])),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_99">  99</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_99"></span><span class="anchor" id="line-99"></span>                   (<span class="String">&quot;</span><span class="String">shape</span><span class="String">&quot;</span> , <span class="ID">C</span>.<span class="ID">POINTER</span>(<span class="ID">C</span>.<span class="ID">c_long</span>)),</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_100"> 100</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_100"></span><span class="anchor" id="line-100"></span>                   (<span class="String">&quot;</span><span class="String">strides</span><span class="String">&quot;</span>, <span class="ID">C</span>.<span class="ID">POINTER</span>(<span class="ID">C</span>.<span class="ID">c_long</span>))]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_101"> 101</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_101"></span><span class="anchor" id="line-101"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_102"> 102</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_102"></span><span class="anchor" id="line-102"></span>        <span class="ResWord">raise</span> <span class="ID">TypeError</span>, <span class="String">&quot;</span><span class="String">dtype of input ndarray not supported</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_103"> 103</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_103"></span><span class="anchor" id="line-103"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_104"> 104</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_104"></span><span class="anchor" id="line-104"></span>    <span class="Comment"># Instantiate the interface class and attach the ndarray's internal info.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_105"> 105</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_105"></span><span class="anchor" id="line-105"></span>    <span class="Comment"># Ctypes does automatic conversion between (c_long * #) arrays and POINTER(c_long).</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_106"> 106</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_106"></span><span class="anchor" id="line-106"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_107"> 107</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_107"></span><span class="anchor" id="line-107"></span>    <span class="ID">ndarrayInterface</span> = <span class="ID">ndarrayInterfaceToCtypes</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_108"> 108</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_108"></span><span class="anchor" id="line-108"></span>    <span class="ID">ndarrayInterface</span>.<span class="ID">data</span> = <span class="ID">array</span>.<span class="ID">ctypes</span>.<span class="ID">data_as</span>(<span class="ID">C</span>.<span class="ID">POINTER</span>(<span class="ID">ctypesDict</span>[<span class="ID">typechar</span>]))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_109"> 109</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_109"></span><span class="anchor" id="line-109"></span>    <span class="ID">ndarrayInterface</span>.<span class="ID">shape</span> = (<span class="ID">C</span>.<span class="ID">c_long</span> * <span class="ID">array</span>.<span class="ID">ndim</span>)(*<span class="ID">array</span>.<span class="ID">shape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_110"> 110</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_110"></span><span class="anchor" id="line-110"></span>    <span class="ID">ndarrayInterface</span>.<span class="ID">strides</span> = (<span class="ID">C</span>.<span class="ID">c_long</span> * <span class="ID">array</span>.<span class="ID">ndim</span>)(*<span class="ID">array</span>.<span class="ID">strides</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_111"> 111</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_111"></span><span class="anchor" id="line-111"></span>    <span class="ResWord">for</span> <span class="ID">n</span> <span class="ResWord">in</span> <span class="ResWord">range</span>(<span class="ID">array</span>.<span class="ID">ndim</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_112"> 112</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_112"></span><span class="anchor" id="line-112"></span>        <span class="ID">ndarrayInterface</span>.<span class="ID">strides</span>[<span class="ID">n</span>] /= <span class="ID">array</span>.<span class="ID">dtype</span>.<span class="ID">itemsize</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_113"> 113</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_113"></span><span class="anchor" id="line-113"></span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-7b509eec9416e083ec926c04a404e29de2b5bd23_114"> 114</a> </span><span class="LineAnchor" id="CA-7b509eec9416e083ec926c04a404e29de2b5bd23_114"></span><span class="anchor" id="line-114"></span>    <span class="ResWord">return</span> <span class="ID">ndarrayInterface</span></span>
+</pre></div></div><h2>New Attachment</h2>
+<form action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays" method="POST" enctype="multipart/form-data">
+<dl>
+<dt>File to upload</dt>
+<dd><input type="file" name="file" size="50"></dd>
+<dt>Rename to</dt>
+<dd><input type="text" name="target" size="50" value="numpyctypes.py"></dd>
+<dt>Overwrite existing attachment of same name</dt>
+<dd><input type="checkbox" name="overwrite" value="1" ></dd>
+</dl>
+
+<p>
+<input type="hidden" name="action" value="AttachFile">
+<input type="hidden" name="do" value="upload">
+<input type="hidden" name="ticket" value="0056327bff.7c52f71c869ec1132e8a3bb82f0de9a2fa48d150">
+<input type="submit" value="Upload">
+</p>
+</form>
+<h2>Attached Files</h2>To refer to attachments on a page, use <strong><tt>attachment:filename</tt></strong>,  as shown below in the list of files.  Do <strong>NOT</strong> use the URL of the <tt>[get]</tt> link,  since this is subject to change and can break easily.<ul><li>[<a href="ndarray2e5c.h?action=AttachFile&amp;do=get&amp;target=ndarray.h">get</a>&nbsp;| <a href="C%2b%2b_Extensions_that_use_NumPy_arraysa992.html?action=AttachFile&amp;do=view&amp;target=ndarray.h">view</a>] (2009-01-15 15:10:20, 4.7 KB) [[attachment:ndarray.h]]</li><li>[<a href="numpyctypes0706.py?action=AttachFile&amp;do=get&amp;target=numpyctypes.py">get</a>&nbsp;| <a href="C%2b%2b_Extensions_that_use_NumPy_arrays6951.html?action=AttachFile&amp;do=view&amp;target=numpyctypes.py">view</a>] (2009-01-15 15:10:33, 4.1 KB) [[attachment:numpyctypes.py]]</li></ul><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="C%2b%2b_Extensions_that_use_NumPy_arrays37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../external.html?link=http://localhost:8080/C++_Extensions_that_use_NumPy_arrays">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/C++_Extensions_that_use_NumPy_arrays?action=AttachFile&do=view&target=numpyctypes.py by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:37:07 GMT -->
+</html>
+

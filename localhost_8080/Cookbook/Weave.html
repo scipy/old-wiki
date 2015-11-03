@@ -1,0 +1,345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Weave by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:23:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Weave - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Weave" href="../../external.html?link=http://localhost:8080/Cookbook/Weave?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FWeave&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Weave?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Weave?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="fftmod.tar.gz" href="Weaveab62.html?action=AttachFile&amp;do=view&amp;target=fftmod.tar.gz">
+<link rel="Appendix" title="iterators.py" href="Weavebfd8.html?action=AttachFile&amp;do=view&amp;target=iterators.py">
+<link rel="Appendix" title="iterators_example.py" href="Weave6995.html?action=AttachFile&amp;do=view&amp;target=iterators_example.py">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Weave">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Weave456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Weave75c1.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FWeave%22" rel="nofollow" title="Click to do a full-text search for this title">Weave</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Weave.html">Cookbook/Weave</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Weave37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Weave">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+<h2 id="Inline_Weave_With_Basic_Array_Conversion_.28no_Blitz.29">Inline Weave With Basic Array Conversion (no Blitz)</h2>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line862">Python and Numpy are designed to express general statements that work transparently on many sizes of incoming data. Using inline Weave with Blitz conversion can dramatically speed up many numerical operations (eg, addition of a series of arrays) because in some ways it bypasses generality. How can you speed up your algorithms with inline C code while maintaining generality? One tool provided by Numpy is the <strong>iterator</strong>. Because an iterator keeps track of memory indexing for you, its operation is very analogous to the concept of iteration in Python itself. You can write loop in C that simply says &quot;take the next element in a serial object--the PyArrayObject--and operate on it, until there are no more elements.&quot; <span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-7"></span>This is a very simple example of multi dimensional iterators, and their power to &quot;broadcast&quot; arrays of compatible shapes. It shows that the very same code that is entirely ignorant of dimensionality can achieve completely different computations based on the rules of broadcasting. I have assumed in this case that <em><strong>a</em></strong> has at least as many dimensions as <em><strong>b</em></strong>. It is important to know that the weave array conversion of <em><strong>a</strong></em> gives you access in C++ to: <span class="anchor" id="line-8"></span><ul><li><p class="line862">py_a -- PyObject * <span class="anchor" id="line-9"></span></li><li><p class="line862">a_array -- PyArrayObject * <span class="anchor" id="line-10"></span></li><li><p class="line862">a -- (c-type *) py_array-&gt;data <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span></li></ul><p class="line867"><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_1">   1</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">npy</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_2">   2</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">from</span> <span class="ID">scipy.weave</span> <span class="ResWord">import</span> <span class="ID">inline</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_3">   3</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_3"></span><span class="anchor" id="line-3-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_4">   4</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">def</span> <span class="ID">multi_iter_example</span>():</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_5">   5</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_5"></span><span class="anchor" id="line-5-1"></span>    <span class="ID">a</span> = <span class="ID">npy</span>.<span class="ID">ones</span>((<span class="Number">4</span>,<span class="Number">4</span>), <span class="ID">npy</span>.<span class="ID">float64</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_6">   6</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_6"></span><span class="anchor" id="line-6-1"></span>    <span class="Comment"># for the sake of driving home the &quot;dynamic code&quot; approach...</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_7">   7</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_7"></span><span class="anchor" id="line-7-1"></span>    <span class="ID">dtype2ctype</span> = {</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_8">   8</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_8"></span><span class="anchor" id="line-8-1"></span>        <span class="ID">npy</span>.<span class="ID">dtype</span>(<span class="ID">npy</span>.<span class="ID">float64</span>): <span class="String">'</span><span class="String">double</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_9">   9</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_9"></span><span class="anchor" id="line-9-1"></span>        <span class="ID">npy</span>.<span class="ID">dtype</span>(<span class="ID">npy</span>.<span class="ID">float32</span>): <span class="String">'</span><span class="String">float</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_10">  10</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_10"></span><span class="anchor" id="line-10-1"></span>        <span class="ID">npy</span>.<span class="ID">dtype</span>(<span class="ID">npy</span>.<span class="ID">int32</span>): <span class="String">'</span><span class="String">int</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_11">  11</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_11"></span><span class="anchor" id="line-11-1"></span>        <span class="ID">npy</span>.<span class="ID">dtype</span>(<span class="ID">npy</span>.<span class="ID">int16</span>): <span class="String">'</span><span class="String">short</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_12">  12</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_12"></span><span class="anchor" id="line-12-1"></span>    }</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_13">  13</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_13"></span><span class="anchor" id="line-13-1"></span>    <span class="ID">dt</span> = <span class="ID">dtype2ctype</span>.<span class="ID">get</span>(<span class="ID">a</span>.<span class="ID">dtype</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_14">  14</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_14"></span><span class="anchor" id="line-14-1"></span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_15">  15</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_15"></span><span class="anchor" id="line-15-1"></span>    <span class="Comment"># this code does a = a*b inplace, broadcasting b to fit the shape of a</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_16">  16</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_16"></span><span class="anchor" id="line-16-1"></span>    <span class="ID">code</span> = \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_17">  17</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_17"></span><span class="anchor" id="line-17-1"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_18">  18</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_18"></span><span class="anchor" id="line-18-1"></span><span class="String">%s *p1, *p2;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_19">  19</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_19"></span><span class="anchor" id="line-19-1"></span><span class="String">PyObject *itr;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_20">  20</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_20"></span><span class="anchor" id="line-20-1"></span><span class="String">itr = PyArray_MultiIterNew(2, a_array, b_array);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_21">  21</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_21"></span><span class="anchor" id="line-21-1"></span><span class="String">while(PyArray_MultiIter_NOTDONE(itr)) {</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_22">  22</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_22"></span><span class="anchor" id="line-22-1"></span><span class="String">  p1 = (%s *) PyArray_MultiIter_DATA(itr, 0);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_23">  23</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_23"></span><span class="anchor" id="line-23-1"></span><span class="String">  p2 = (%s *) PyArray_MultiIter_DATA(itr, 1);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_24">  24</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_24"></span><span class="anchor" id="line-24-1"></span><span class="String">  *p1 = (*p1) * (*p2);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_25">  25</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_25"></span><span class="anchor" id="line-25-1"></span><span class="String">  PyArray_MultiIter_NEXT(itr);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_26">  26</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_26"></span><span class="anchor" id="line-26-1"></span><span class="String">}</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_27">  27</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_27"></span><span class="anchor" id="line-27-1"></span><span class="String">&quot;&quot;&quot;</span> % (<span class="ID">dt</span>, <span class="ID">dt</span>, <span class="ID">dt</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_28">  28</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_28"></span><span class="anchor" id="line-28-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_29">  29</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_29"></span><span class="anchor" id="line-29-1"></span>    <span class="ID">b</span> = <span class="ID">npy</span>.<span class="ID">arange</span>(<span class="Number">4</span>, <span class="ID">dtype</span>=<span class="ID">a</span>.<span class="ID">dtype</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_30">  30</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_30"></span><span class="anchor" id="line-30-1"></span>    <span class="ResWord">print</span> <span class="String">'</span><span class="SPChar">\n</span><span class="String">         A                  B     </span><span class="String">'</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_31">  31</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_31"></span><span class="anchor" id="line-31-1"></span>    <span class="ResWord">print</span> <span class="ID">a</span>, <span class="ID">b</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_32">  32</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_32"></span><span class="anchor" id="line-32-1"></span>    <span class="Comment"># this reshaping is redundant, it would be the default broadcast</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_33">  33</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_33"></span><span class="anchor" id="line-33-1"></span>    <span class="ID">b</span>.<span class="ID">shape</span> = (<span class="Number">1</span>,<span class="Number">4</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_34">  34</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_34"></span><span class="anchor" id="line-34-1"></span>    <span class="ID">inline</span>(<span class="ID">code</span>, [<span class="String">'</span><span class="String">a</span><span class="String">'</span>, <span class="String">'</span><span class="String">b</span><span class="String">'</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_35">  35</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_35"></span><span class="anchor" id="line-35-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">inline version of a*b[None,:],</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_36">  36</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_36"></span><span class="anchor" id="line-36-1"></span>    <span class="ResWord">print</span> <span class="ID">a</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_37">  37</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_37"></span><span class="anchor" id="line-37-1"></span>    <span class="ID">a</span> = <span class="ID">npy</span>.<span class="ID">ones</span>((<span class="Number">4</span>,<span class="Number">4</span>), <span class="ID">npy</span>.<span class="ID">float64</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_38">  38</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_38"></span><span class="anchor" id="line-38-1"></span>    <span class="ID">b</span> = <span class="ID">npy</span>.<span class="ID">arange</span>(<span class="Number">4</span>, <span class="ID">dtype</span>=<span class="ID">a</span>.<span class="ID">dtype</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_39">  39</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_39"></span><span class="anchor" id="line-39-1"></span>    <span class="ID">b</span>.<span class="ID">shape</span> = (<span class="Number">4</span>,<span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_40">  40</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_40"></span><span class="anchor" id="line-40-1"></span>    <span class="ID">inline</span>(<span class="ID">code</span>, [<span class="String">'</span><span class="String">a</span><span class="String">'</span>, <span class="String">'</span><span class="String">b</span><span class="String">'</span>])</span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_41">  41</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_41"></span><span class="anchor" id="line-41-1"></span>    <span class="ResWord">print</span> <span class="String">&quot;</span><span class="SPChar">\n</span><span class="String">inline version of a*b[:,None],</span><span class="String">&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_42">  42</a> </span><span class="LineAnchor" id="CA-3bfe6cda9f488a11b8178da3894f340ef7515a2b_42"></span><span class="anchor" id="line-42-1"></span>    <span class="ResWord">print</span> <span class="ID">a</span></span>
+</pre></div></div><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><p class="line862">There are two other iterator applications in <a class="attachment" href="Weave6995.html?action=AttachFile&amp;do=view&amp;target=iterators_example.py" title="iterators_example.py">iterators_example.py</a> and <a class="attachment" href="Weavebfd8.html?action=AttachFile&amp;do=view&amp;target=iterators.py" title="iterators.py">iterators.py</a>. <span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><p class="line867">
+<h3 id="Deeper_into_the_.22inline.22_method">Deeper into the &quot;inline&quot; method</h3>
+<span class="anchor" id="line-60"></span><p class="line862">The <a class="http" href="../../external.html?link=http://www.scipy.org/scipy/scipy/browser/trunk/scipy/weave/inline_tools.py">docstring</a> for <strong>inline</strong> is enormous, and indicates that all kinds of compiling options are supported when integrating your inline code. I've taken advantage of this to make some specialized FFTW calls a lot more simple, and in only a few additional lines add support for inline FFTs. In this example, I read in a file of pure C code and use it as <em><strong>support_code</strong></em> in my inline statement. I also use a tool from Numpy's distutils to locate my FFTW libraries and headers. <span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-faa015db37ddd861305a25a44add64a213c24914\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-faa015db37ddd861305a25a44add64a213c24914" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_1">   1</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_1"></span><span class="anchor" id="line-1-4"></span><span class="ResWord">import</span> <span class="ID">numpy</span> <span class="ResWord">as</span> <span class="ID">N</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_2">   2</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_2"></span><span class="anchor" id="line-2-2"></span><span class="ResWord">from</span> <span class="ID">scipy.weave</span> <span class="ResWord">import</span> <span class="ID">inline</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_3">   3</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_3"></span><span class="anchor" id="line-3-2"></span><span class="ResWord">from</span> <span class="ID">os.path</span> <span class="ResWord">import</span> <span class="ID">join</span>, <span class="ID">split</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_4">   4</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_4"></span><span class="anchor" id="line-4-2"></span><span class="ResWord">from</span> <span class="ID">numpy.distutils.system_info</span> <span class="ResWord">import</span> <span class="ID">get_info</span>        </span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_5">   5</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_5"></span><span class="anchor" id="line-5-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_6">   6</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_6"></span><span class="anchor" id="line-6-2"></span><span class="ID">fft1_code</span> = \</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_7">   7</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_7"></span><span class="anchor" id="line-7-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_8">   8</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_8"></span><span class="anchor" id="line-8-2"></span><span class="String">char *i, *o;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_9">   9</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_9"></span><span class="anchor" id="line-9-2"></span><span class="String">i = (char *) a;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_10">  10</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_10"></span><span class="anchor" id="line-10-2"></span><span class="String">o = inplace ? i : (char *) b;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_11">  11</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_11"></span><span class="anchor" id="line-11-2"></span><span class="String">if(isfloat) {</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_12">  12</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_12"></span><span class="anchor" id="line-12-2"></span><span class="String">  cfft1d(reinterpret_cast&lt;fftwf_complex*&gt;(i),</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_13">  13</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_13"></span><span class="anchor" id="line-13-2"></span><span class="String">         reinterpret_cast&lt;fftwf_complex*&gt;(o),</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_14">  14</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_14"></span><span class="anchor" id="line-14-2"></span><span class="String">         xdim, len_array, direction, shift);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_15">  15</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_15"></span><span class="anchor" id="line-15-2"></span><span class="String">} else {</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_16">  16</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_16"></span><span class="anchor" id="line-16-2"></span><span class="String">  zfft1d(reinterpret_cast&lt;fftw_complex*&gt;(i),</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_17">  17</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_17"></span><span class="anchor" id="line-17-2"></span><span class="String">         reinterpret_cast&lt;fftw_complex*&gt;(o),</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_18">  18</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_18"></span><span class="anchor" id="line-18-2"></span><span class="String">         xdim, len_array, direction, shift);</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_19">  19</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_19"></span><span class="anchor" id="line-19-2"></span><span class="String">}</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_20">  20</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_20"></span><span class="anchor" id="line-20-2"></span><span class="String">&quot;&quot;&quot;</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_21">  21</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_21"></span><span class="anchor" id="line-21-2"></span><span class="ID">extra_code</span> = <span class="ResWord">open</span>(<span class="ID">join</span>(<span class="ID">split</span>(<span class="ID">__file__</span>)[<span class="Number">0</span>],<span class="String">'</span><span class="String">src/cmplx_fft.c</span><span class="String">'</span>)).<span class="ID">read</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_22">  22</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_22"></span><span class="anchor" id="line-22-2"></span><span class="ID">fftw_info</span> = <span class="ID">get_info</span>(<span class="String">'</span><span class="String">fftw3</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_23">  23</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_23"></span><span class="anchor" id="line-23-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_24">  24</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_24"></span><span class="anchor" id="line-24-2"></span><span class="ResWord">def</span> <span class="ID">fft1</span>(<span class="ID">a</span>, <span class="ID">shift</span>=<span class="ResWord">True</span>, <span class="ID">inplace</span>=<span class="ResWord">False</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_25">  25</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_25"></span><span class="anchor" id="line-25-2"></span>    <span class="ResWord">if</span> <span class="ID">inplace</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_26">  26</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_26"></span><span class="anchor" id="line-26-2"></span>        <span class="ID">_fft1_work</span>(<span class="ID">a</span>, -<span class="Number">1</span>, <span class="ID">shift</span>, <span class="ID">inplace</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_27">  27</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_27"></span><span class="anchor" id="line-27-2"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_28">  28</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_28"></span><span class="anchor" id="line-28-2"></span>        <span class="ResWord">return</span> <span class="ID">_fft1_work</span>(<span class="ID">a</span>, -<span class="Number">1</span>, <span class="ID">shift</span>, <span class="ID">inplace</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_29">  29</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_29"></span><span class="anchor" id="line-29-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_30">  30</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_30"></span><span class="anchor" id="line-30-2"></span><span class="ResWord">def</span> <span class="ID">ifft1</span>(<span class="ID">a</span>, <span class="ID">shift</span>=<span class="ResWord">True</span>, <span class="ID">inplace</span>=<span class="ResWord">False</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_31">  31</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_31"></span><span class="anchor" id="line-31-2"></span>    <span class="ResWord">if</span> <span class="ID">inplace</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_32">  32</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_32"></span><span class="anchor" id="line-32-2"></span>        <span class="ID">_fft1_work</span>(<span class="ID">a</span>, +<span class="Number">1</span>, <span class="ID">shift</span>, <span class="ID">inplace</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_33">  33</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_33"></span><span class="anchor" id="line-33-2"></span>    <span class="ResWord">else</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_34">  34</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_34"></span><span class="anchor" id="line-34-2"></span>        <span class="ResWord">return</span> <span class="ID">_fft1_work</span>(<span class="ID">a</span>, +<span class="Number">1</span>, <span class="ID">shift</span>, <span class="ID">inplace</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_35">  35</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_35"></span><span class="anchor" id="line-35-2"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_36">  36</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_36"></span><span class="anchor" id="line-36-2"></span><span class="ResWord">def</span> <span class="ID">_fft1_work</span>(<span class="ID">a</span>, <span class="ID">direction</span>, <span class="ID">shift</span>, <span class="ID">inplace</span>):</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_37">  37</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_37"></span><span class="anchor" id="line-37-2"></span>    <span class="Comment"># to get correct C-code, b always must be an array (but if it's</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_38">  38</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_38"></span><span class="anchor" id="line-38-2"></span>    <span class="Comment"># not being used, it can be trivially small)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_39">  39</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_39"></span><span class="anchor" id="line-39-2"></span>    <span class="ID">b</span> = <span class="ID">N</span>.<span class="ID">empty_like</span>(<span class="ID">a</span>) <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">inplace</span> <span class="ResWord">else</span> <span class="ID">N</span>.<span class="ID">array</span>([<span class="Number">1j</span>], <span class="ID">a</span>.<span class="ID">dtype</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_40">  40</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_40"></span><span class="anchor" id="line-40-2"></span>    <span class="ID">inplace</span> = <span class="Number">1</span> <span class="ResWord">if</span> <span class="ID">inplace</span> <span class="ResWord">else</span> <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_41">  41</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_41"></span><span class="anchor" id="line-41-2"></span>    <span class="ID">shift</span> = <span class="Number">1</span> <span class="ResWord">if</span> <span class="ID">shift</span> <span class="ResWord">else</span> <span class="Number">0</span>    </span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_42">  42</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_42"></span><span class="anchor" id="line-42-2"></span>    <span class="ID">isfloat</span> = <span class="Number">1</span> <span class="ResWord">if</span> <span class="ID">a</span>.<span class="ID">dtype</span>.<span class="ID">itemsize</span>==<span class="Number">8</span> <span class="ResWord">else</span> <span class="Number">0</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_43">  43</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_43"></span><span class="anchor" id="line-43-1"></span>    <span class="ID">len_array</span> = <span class="ID">N</span>.<span class="ID">product</span>(<span class="ID">a</span>.<span class="ID">shape</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_44">  44</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_44"></span><span class="anchor" id="line-44-1"></span>    <span class="ID">xdim</span> = <span class="ID">a</span>.<span class="ID">shape</span>[-<span class="Number">1</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_45">  45</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_45"></span><span class="anchor" id="line-45-1"></span>    <span class="ID">inline</span>(<span class="ID">fft1_code</span>, [<span class="String">'</span><span class="String">a</span><span class="String">'</span>, <span class="String">'</span><span class="String">b</span><span class="String">'</span>, <span class="String">'</span><span class="String">isfloat</span><span class="String">'</span>, <span class="String">'</span><span class="String">inplace</span><span class="String">'</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_46">  46</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_46"></span><span class="anchor" id="line-46-1"></span>                       <span class="String">'</span><span class="String">len_array</span><span class="String">'</span>, <span class="String">'</span><span class="String">xdim</span><span class="String">'</span>, <span class="String">'</span><span class="String">direction</span><span class="String">'</span>, <span class="String">'</span><span class="String">shift</span><span class="String">'</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_47">  47</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_47"></span><span class="anchor" id="line-47-1"></span>           <span class="ID">support_code</span>=<span class="ID">extra_code</span>,</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_48">  48</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_48"></span><span class="anchor" id="line-48-1"></span>           <span class="ID">headers</span>=[<span class="String">'</span><span class="String">&lt;fftw3.h&gt;</span><span class="String">'</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_49">  49</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_49"></span><span class="anchor" id="line-49-1"></span>           <span class="ID">libraries</span>=[<span class="String">'</span><span class="String">fftw3</span><span class="String">'</span>, <span class="String">'</span><span class="String">fftw3f</span><span class="String">'</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_50">  50</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_50"></span><span class="anchor" id="line-50-1"></span>           <span class="ID">include_dirs</span>=<span class="ID">fftw_info</span>[<span class="String">'</span><span class="String">include_dirs</span><span class="String">'</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_51">  51</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_51"></span><span class="anchor" id="line-51-1"></span>           <span class="ID">library_dirs</span>=<span class="ID">fftw_info</span>[<span class="String">'</span><span class="String">library_dirs</span><span class="String">'</span>],</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_52">  52</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_52"></span><span class="anchor" id="line-52-1"></span>           <span class="ID">compiler</span>=<span class="String">'</span><span class="String">gcc</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_53">  53</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_53"></span><span class="anchor" id="line-53-1"></span>    <span class="ResWord">if</span> <span class="ResWord">not</span> <span class="ID">inplace</span>:</span>
+<span class="line"><span class="LineNumber"><a href="#CA-faa015db37ddd861305a25a44add64a213c24914_54">  54</a> </span><span class="LineAnchor" id="CA-faa015db37ddd861305a25a44add64a213c24914_54"></span><span class="anchor" id="line-54-1"></span>        <span class="ResWord">return</span> <span class="ID">b</span></span>
+</pre></div></div><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><p class="line862">This code is available in <a class="attachment" href="Weaveab62.html?action=AttachFile&amp;do=view&amp;target=fftmod.tar.gz" title="fftmod.tar.gz">fftmod.tar.gz</a>. <span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-121"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-122"></span><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Weave  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Weave37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Weave">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Weave by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:23:11 GMT -->
+</html>
+

@@ -1,0 +1,381 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/mplot3D by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:12:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="index,nofollow">
+
+<title>Cookbook/Matplotlib/mplot3D - SciPy</title>
+<script type="text/javascript" src="../../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Matplotlib/mplot3D" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FMatplotlib%2Fmplot3D&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D?action=print">
+<link rel="Up" href="../Matplotlib.html">
+<link rel="Appendix" title="contour.jpg" href="mplot3D9f53.html?action=AttachFile&amp;do=view&amp;target=contour.jpg">
+<link rel="Appendix" title="contour.png" href="mplot3D2059.html?action=AttachFile&amp;do=view&amp;target=contour.png">
+<link rel="Appendix" title="contour3D.jpg" href="mplot3D2cb7.html?action=AttachFile&amp;do=view&amp;target=contour3D.jpg">
+<link rel="Appendix" title="contour3D.png" href="mplot3D52cc.html?action=AttachFile&amp;do=view&amp;target=contour3D.png">
+<link rel="Appendix" title="contourf.jpg" href="mplot3D9049.html?action=AttachFile&amp;do=view&amp;target=contourf.jpg">
+<link rel="Appendix" title="contourf.png" href="mplot3D567a.html?action=AttachFile&amp;do=view&amp;target=contourf.png">
+<link rel="Appendix" title="contourf3D.jpg" href="mplot3D6d8a.html?action=AttachFile&amp;do=view&amp;target=contourf3D.jpg">
+<link rel="Appendix" title="contourf3D.png" href="mplot3D669b.html?action=AttachFile&amp;do=view&amp;target=contourf3D.png">
+<link rel="Appendix" title="plot.jpg" href="mplot3D23ef.html?action=AttachFile&amp;do=view&amp;target=plot.jpg">
+<link rel="Appendix" title="plot.png" href="mplot3D2c12.html?action=AttachFile&amp;do=view&amp;target=plot.png">
+<link rel="Appendix" title="scatter.jpg" href="mplot3D445c.html?action=AttachFile&amp;do=view&amp;target=scatter.jpg">
+<link rel="Appendix" title="scatter.png" href="mplot3D8d90.html?action=AttachFile&amp;do=view&amp;target=scatter.png">
+<link rel="Appendix" title="surface.jpg" href="mplot3D59e8.html?action=AttachFile&amp;do=view&amp;target=surface.jpg">
+<link rel="Appendix" title="surface.png" href="mplot3D124a.html?action=AttachFile&amp;do=view&amp;target=surface.png">
+<link rel="Appendix" title="test1.jpg" href="mplot3D53f9.html?action=AttachFile&amp;do=view&amp;target=test1.jpg">
+<link rel="Appendix" title="test1.png" href="mplot3Dfd1f.html?action=AttachFile&amp;do=view&amp;target=test1.png">
+<link rel="Appendix" title="test2.jpg" href="mplot3D9a79.html?action=AttachFile&amp;do=view&amp;target=test2.jpg">
+<link rel="Appendix" title="test2.png" href="mplot3Df602.html?action=AttachFile&amp;do=view&amp;target=test2.png">
+<link rel="Appendix" title="test3.jpg" href="mplot3D6854.html?action=AttachFile&amp;do=view&amp;target=test3.jpg">
+<link rel="Appendix" title="test3.png" href="mplot3Dd9f2.html?action=AttachFile&amp;do=view&amp;target=test3.png">
+<link rel="Appendix" title="wireframe.jpg" href="mplot3D357e.html?action=AttachFile&amp;do=view&amp;target=wireframe.jpg">
+<link rel="Appendix" title="wireframe.png" href="mplot3D9f75.html?action=AttachFile&amp;do=view&amp;target=wireframe.png">
+<link rel="Search" href="../../FindPage.html">
+<link rel="Index" href="../../TitleIndex.html">
+<link rel="Glossary" href="../../WordIndex.html">
+<link rel="Help" href="../../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="mplot3D456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../../Cookbook.html">Cookbook</a></li><li><a href="../Matplotlib.html">Matplotlib</a></li><li><a class="backlink" href="mplot3D00e1.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FMatplotlib%2Fmplot3D%22" rel="nofollow" title="Click to do a full-text search for this title">mplot3D</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../../HelpContents.html">HelpContents</a></li><li class="current"><a href="mplot3D.html">mplot3D</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mplot3D37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><span class="anchor" id="line-2"></span><p class="line862">The examples below show simple 3D plots using matplotlib. matplotlib's 3D capabilities were added by incorporating John Porter's mplot3d module, thus no additional download is required any more, the following examples will run with an up to date matplotlib installation.  <strong>Note, this code is not supported in the matplotlib-0.98 branch, but you can use either the latest 0.99 release or the 0.91 maintenance version if you need this functionality. </strong> Alternatively, the Mayavi2 project provides a pylab-like API for extensive 3D plotting: <a class="http" href="../../../external.html?link=http://code.enthought.com/projects/mayavi/docs/development/html/mayavi/mlab.html">http://code.enthought.com/projects/mayavi/docs/development/html/mayavi/mlab.html</a> <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><p class="line862">Note that not all examples on this page are up to date, so some of them might not be working. For other examples, see <a class="http" href="../../../external.html?link=http://matplotlib.sourceforge.net/examples/mplot3d/">http://matplotlib.sourceforge.net/examples/mplot3d/</a> <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span><p class="line874">3D Plotting examples: <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span><p class="line867"><span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+function isnumbered(obj) {
+  return obj.childNodes.length && obj.firstChild.childNodes.length && obj.firstChild.firstChild.className == 'LineNumber';
+}
+function nformat(num,chrs,add) {
+  var nlen = Math.max(0,chrs-(''+num).length), res = '';
+  while (nlen>0) { res += ' '; nlen-- }
+  return res+num+add;
+}
+function addnumber(did, nstart, nstep) {
+  var c = document.getElementById(did), l = c.firstChild, n = 1;
+  if (!isnumbered(c)) {
+    if (typeof nstart == 'undefined') nstart = 1;
+    if (typeof nstep  == 'undefined') nstep = 1;
+    var n = nstart;
+    while (l != null) {
+      if (l.tagName == 'SPAN') {
+        var s = document.createElement('SPAN');
+        var a = document.createElement('A');
+        s.className = 'LineNumber';
+        a.appendChild(document.createTextNode(nformat(n,4,'')));
+        a.href = '#' + did + '_' + n;
+        s.appendChild(a);
+        s.appendChild(document.createTextNode(' '));
+        n += nstep;
+        if (l.childNodes.length) {
+          l.insertBefore(s, l.firstChild);
+        }
+        else {
+          l.appendChild(s);
+        }
+      }
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function remnumber(did) {
+  var c = document.getElementById(did), l = c.firstChild;
+  if (isnumbered(c)) {
+    while (l != null) {
+      if (l.tagName == 'SPAN' && l.firstChild.className == 'LineNumber') l.removeChild(l.firstChild);
+      l = l.nextSibling;
+    }
+  }
+  return false;
+}
+function togglenumber(did, nstart, nstep) {
+  var c = document.getElementById(did);
+  if (isnumbered(c)) {
+    remnumber(did);
+  } else {
+    addnumber(did,nstart,nstep);
+  }
+  return false;
+}
+</script>
+
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_1">   1</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_1"></span><span class="anchor" id="line-1-2"></span><span class="ResWord">from</span> <span class="ID">numpy</span> <span class="ResWord">import</span> *</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_2">   2</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_2"></span><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span> <span class="ResWord">as</span> <span class="ID">p</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_3">   3</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_3"></span><span class="anchor" id="line-3-1"></span><span class="Comment">#import matplotlib.axes3d as p3</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_4">   4</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_4"></span><span class="anchor" id="line-4-1"></span><span class="ResWord">import</span> <span class="ID">mpl_toolkits.mplot3d.axes3d</span> <span class="ResWord">as</span> <span class="ID">p3</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_5">   5</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_5"></span><span class="anchor" id="line-5-1"></span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_6">   6</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_6"></span><span class="anchor" id="line-6-1"></span><span class="Comment"># u and v are parametric variables.</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_7">   7</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_7"></span><span class="anchor" id="line-7-1"></span><span class="Comment"># u is an array from 0 to 2*pi, with 100 elements</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_8">   8</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_8"></span><span class="anchor" id="line-8-1"></span><span class="ID">u</span>=<span class="ID">r_</span>[<span class="Number">0</span>:<span class="Number">2</span>*<span class="ID">pi</span>:<span class="Number">100j</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_9">   9</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_9"></span><span class="anchor" id="line-9-1"></span><span class="Comment"># v is an array from 0 to 2*pi, with 100 elements</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_10">  10</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_10"></span><span class="anchor" id="line-10-1"></span><span class="ID">v</span>=<span class="ID">r_</span>[<span class="Number">0</span>:<span class="ID">pi</span>:<span class="Number">100j</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_11">  11</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_11"></span><span class="anchor" id="line-11-1"></span><span class="Comment"># x, y, and z are the coordinates of the points for plotting</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_12">  12</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_12"></span><span class="anchor" id="line-12-1"></span><span class="Comment"># each is arranged in a 100x100 array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_13">  13</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_13"></span><span class="anchor" id="line-13-1"></span><span class="ID">x</span>=<span class="Number">10</span>*<span class="ID">outer</span>(<span class="ID">cos</span>(<span class="ID">u</span>),<span class="ID">sin</span>(<span class="ID">v</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_14">  14</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_14"></span><span class="anchor" id="line-14-1"></span><span class="ID">y</span>=<span class="Number">10</span>*<span class="ID">outer</span>(<span class="ID">sin</span>(<span class="ID">u</span>),<span class="ID">sin</span>(<span class="ID">v</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_15">  15</a> </span><span class="LineAnchor" id="CA-be63d781c47b10bd0f6a123944cb4ad5c1796e67_15"></span><span class="anchor" id="line-15-1"></span><span class="ID">z</span>=<span class="Number">10</span>*<span class="ID">outer</span>(<span class="ID">ones</span>(<span class="ID">size</span>(<span class="ID">u</span>)),<span class="ID">cos</span>(<span class="ID">v</span>))</span>
+</pre></div></div><span class="anchor" id="line-26"></span><p class="line874">Wireframe (works on 0.87.5): <span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><p class="line867"><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-84114b4a890702c1d228f9b2de876bafb11a1b59\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_1">   1</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_1"></span><span class="anchor" id="line-1-4"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_2">   2</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_2"></span><span class="anchor" id="line-2-2"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_3">   3</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_3"></span><span class="anchor" id="line-3-2"></span><span class="ID">ax</span>.<span class="ID">plot_wireframe</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_4">   4</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_4"></span><span class="anchor" id="line-4-2"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_5">   5</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_5"></span><span class="anchor" id="line-5-2"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_6">   6</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_6"></span><span class="anchor" id="line-6-2"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-84114b4a890702c1d228f9b2de876bafb11a1b59_7">   7</a> </span><span class="LineAnchor" id="CA-84114b4a890702c1d228f9b2de876bafb11a1b59_7"></span><span class="anchor" id="line-7-2"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-38"></span><p class="line867"><img alt="wireframe.jpg" class="attachment" src="wireframed8e5.jpg?action=AttachFile&amp;do=get&amp;target=wireframe.jpg" title="wireframe.jpg" /> <span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><p class="line874">3D Plot: <span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><p class="line867"><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_1">   1</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_1"></span><span class="anchor" id="line-1-6"></span><span class="Comment"># this connects each of the points with lines</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_2">   2</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_2"></span><span class="anchor" id="line-2-3"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_3">   3</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_3"></span><span class="anchor" id="line-3-3"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_4">   4</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_4"></span><span class="anchor" id="line-4-3"></span><span class="Comment"># plot3D requires a 1D array for x, y, and z</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_5">   5</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_5"></span><span class="anchor" id="line-5-3"></span><span class="Comment"># ravel() converts the 100x100 array into a 1x10000 array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_6">   6</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_6"></span><span class="anchor" id="line-6-3"></span><span class="ID">ax</span>.<span class="ID">plot3D</span>(<span class="ID">ravel</span>(<span class="ID">x</span>),<span class="ID">ravel</span>(<span class="ID">y</span>),<span class="ID">ravel</span>(<span class="ID">z</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_7">   7</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_7"></span><span class="anchor" id="line-7-3"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_8">   8</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_8"></span><span class="anchor" id="line-8-2"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_9">   9</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_9"></span><span class="anchor" id="line-9-2"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_10">  10</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_10"></span><span class="anchor" id="line-10-2"></span><span class="ID">fig</span>.<span class="ID">add_axes</span>(<span class="ID">ax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_11">  11</a> </span><span class="LineAnchor" id="CA-bdcf5ddd325a0a6e1f881ddb65486540625facaa_11"></span><span class="anchor" id="line-11-2"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-56"></span><p class="line867"><img alt="plot.jpg" class="attachment" src="plote3f1.jpg?action=AttachFile&amp;do=get&amp;target=plot.jpg" title="plot.jpg" /> <span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><p class="line874">Scatter (works on 0.87.5, shows some artefacts): <span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><p class="line867"><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_1">   1</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_1"></span><span class="anchor" id="line-1-8"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_2">   2</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_2"></span><span class="anchor" id="line-2-4"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_3">   3</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_3"></span><span class="anchor" id="line-3-4"></span><span class="Comment"># scatter3D requires a 1D array for x, y, and z</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_4">   4</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_4"></span><span class="anchor" id="line-4-4"></span><span class="Comment"># ravel() converts the 100x100 array into a 1x10000 array</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_5">   5</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_5"></span><span class="anchor" id="line-5-4"></span><span class="ID">ax</span>.<span class="ID">scatter3D</span>(<span class="ID">ravel</span>(<span class="ID">x</span>),<span class="ID">ravel</span>(<span class="ID">y</span>),<span class="ID">ravel</span>(<span class="ID">z</span>))</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_6">   6</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_6"></span><span class="anchor" id="line-6-4"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_7">   7</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_7"></span><span class="anchor" id="line-7-4"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_8">   8</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_8"></span><span class="anchor" id="line-8-3"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_9">   9</a> </span><span class="LineAnchor" id="CA-2b0d947a596bdf8f75c8b32da3208139cc5fc4c6_9"></span><span class="anchor" id="line-9-3"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-72"></span><p class="line867"><img alt="scatter.jpg" class="attachment" src="scattercef3.jpg?action=AttachFile&amp;do=get&amp;target=scatter.jpg" title="scatter.jpg" /> <span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><p class="line874">Surface (works on 0.87.5): <span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><p class="line867"><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-1-9"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b1a781a2e21a6444a23818f44caeecca9313d680\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_1">   1</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_1"></span><span class="anchor" id="line-1-10"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_2">   2</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_2"></span><span class="anchor" id="line-2-5"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_3">   3</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_3"></span><span class="anchor" id="line-3-5"></span><span class="Comment"># x, y, and z are 100x100 arrays</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_4">   4</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_4"></span><span class="anchor" id="line-4-5"></span><span class="ID">ax</span>.<span class="ID">plot_surface</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_5">   5</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_5"></span><span class="anchor" id="line-5-5"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_6">   6</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_6"></span><span class="anchor" id="line-6-5"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_7">   7</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_7"></span><span class="anchor" id="line-7-5"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b1a781a2e21a6444a23818f44caeecca9313d680_8">   8</a> </span><span class="LineAnchor" id="CA-b1a781a2e21a6444a23818f44caeecca9313d680_8"></span><span class="anchor" id="line-8-4"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-87"></span><p class="line867"><img alt="surface.jpg" class="attachment" src="surface15f2.jpg?action=AttachFile&amp;do=get&amp;target=surface.jpg" title="surface.jpg" /> <span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><p class="line874">Contour3D (works on 0.87.5): <span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><p class="line867"><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-1-11"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-39180a6321b62de5f5f785d15b86495e5a5c5a63\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_1">   1</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_1"></span><span class="anchor" id="line-1-12"></span><span class="ID">delta</span> = <span class="Number">0.025</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_2">   2</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_2"></span><span class="anchor" id="line-2-6"></span><span class="ID">x</span> = <span class="ID">arange</span>(-<span class="Number">3.0</span>, <span class="Number">3.0</span>, <span class="ID">delta</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_3">   3</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_3"></span><span class="anchor" id="line-3-6"></span><span class="ID">y</span> = <span class="ID">arange</span>(-<span class="Number">2.0</span>, <span class="Number">2.0</span>, <span class="ID">delta</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_4">   4</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_4"></span><span class="anchor" id="line-4-6"></span><span class="ID">X</span>, <span class="ID">Y</span> = <span class="ID">p</span>.<span class="ID">meshgrid</span>(<span class="ID">x</span>, <span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_5">   5</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_5"></span><span class="anchor" id="line-5-6"></span><span class="ID">Z1</span> = <span class="ID">p</span>.<span class="ID">bivariate_normal</span>(<span class="ID">X</span>, <span class="ID">Y</span>, <span class="Number">1.0</span>, <span class="Number">1.0</span>, <span class="Number">0.0</span>, <span class="Number">0.0</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_6">   6</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_6"></span><span class="anchor" id="line-6-6"></span><span class="ID">Z2</span> = <span class="ID">p</span>.<span class="ID">bivariate_normal</span>(<span class="ID">X</span>, <span class="ID">Y</span>, <span class="Number">1.5</span>, <span class="Number">0.5</span>, <span class="Number">1</span>, <span class="Number">1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_7">   7</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_7"></span><span class="anchor" id="line-7-6"></span><span class="Comment"># difference of Gaussians</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_8">   8</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_8"></span><span class="anchor" id="line-8-5"></span><span class="ID">Z</span> = <span class="Number">10.0</span> * (<span class="ID">Z2</span> - <span class="ID">Z1</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_9">   9</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_9"></span><span class="anchor" id="line-9-4"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_10">  10</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_10"></span><span class="anchor" id="line-10-3"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_11">  11</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_11"></span><span class="anchor" id="line-11-3"></span><span class="ID">ax</span>.<span class="ID">contour3D</span>(<span class="ID">X</span>,<span class="ID">Y</span>,<span class="ID">Z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_12">  12</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_12"></span><span class="anchor" id="line-12-2"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_13">  13</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_13"></span><span class="anchor" id="line-13-2"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_14">  14</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_14"></span><span class="anchor" id="line-14-2"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_15">  15</a> </span><span class="LineAnchor" id="CA-39180a6321b62de5f5f785d15b86495e5a5c5a63_15"></span><span class="anchor" id="line-15-2"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-109"></span><p class="line867"><img alt="contour3D.jpg" class="attachment" src="contour3D13ef.jpg?action=AttachFile&amp;do=get&amp;target=contour3D.jpg" title="contour3D.jpg" /> <span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><p class="line874">Contourf3D: <span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><p class="line867"><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-1-13"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_1">   1</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_1"></span><span class="anchor" id="line-1-14"></span><span class="Comment"># in mplt3D change:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_2">   2</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_2"></span><span class="anchor" id="line-2-7"></span><span class="Comment"># levels, colls = self.contourf(X, Y, Z, 20)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_3">   3</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_3"></span><span class="anchor" id="line-3-7"></span><span class="Comment"># to:</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_4">   4</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_4"></span><span class="anchor" id="line-4-7"></span><span class="Comment"># C = self.contourf(X, Y, Z, *args, **kwargs)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_5">   5</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_5"></span><span class="anchor" id="line-5-7"></span><span class="Comment"># levels, colls = (C.levels, C.collections)</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_6">   6</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_6"></span><span class="anchor" id="line-6-7"></span><span class="ID">fig</span>=<span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_7">   7</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_7"></span><span class="anchor" id="line-7-7"></span><span class="ID">ax</span> = <span class="ID">p3</span>.<span class="ID">Axes3D</span>(<span class="ID">fig</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_8">   8</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_8"></span><span class="anchor" id="line-8-6"></span><span class="ID">ax</span>.<span class="ID">contourf3D</span>(<span class="ID">X</span>,<span class="ID">Y</span>,<span class="ID">Z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_9">   9</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_9"></span><span class="anchor" id="line-9-5"></span><span class="ID">ax</span>.<span class="ID">set_xlabel</span>(<span class="String">'</span><span class="String">X</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_10">  10</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_10"></span><span class="anchor" id="line-10-4"></span><span class="ID">ax</span>.<span class="ID">set_ylabel</span>(<span class="String">'</span><span class="String">Y</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_11">  11</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_11"></span><span class="anchor" id="line-11-4"></span><span class="ID">ax</span>.<span class="ID">set_zlabel</span>(<span class="String">'</span><span class="String">Z</span><span class="String">'</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_12">  12</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_12"></span><span class="anchor" id="line-12-3"></span><span class="ID">fig</span>.<span class="ID">add_axes</span>(<span class="ID">ax</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_13">  13</a> </span><span class="LineAnchor" id="CA-b132c996b18ad68c42cb6724de1a7be9c6f106f2_13"></span><span class="anchor" id="line-13-3"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-129"></span><p class="line867"><img alt="contourf3D.jpg" class="attachment" src="contourf3Dc08c.jpg?action=AttachFile&amp;do=get&amp;target=contourf3D.jpg" title="contourf3D.jpg" /> <span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><p class="line874">2D Contour Plots (work on 0.87.5): <span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><p class="line867"><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-1-15"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en">
+<script type="text/javascript">
+document.write('<a href="#" onclick="return togglenumber(\'CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e\', 1, 1);" \
+                class="codenumbers">Toggle line numbers<\/a>');
+</script>
+<pre dir="ltr" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e" lang="en"><span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_1">   1</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_1"></span><span class="anchor" id="line-1-16"></span><span class="ID">x</span>=<span class="ID">r_</span>[-<span class="Number">10</span>:<span class="Number">10</span>:<span class="Number">100j</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_2">   2</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_2"></span><span class="anchor" id="line-2-8"></span><span class="ID">y</span>=<span class="ID">r_</span>[-<span class="Number">10</span>:<span class="Number">10</span>:<span class="Number">100j</span>]</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_3">   3</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_3"></span><span class="anchor" id="line-3-8"></span><span class="ID">z</span>= <span class="ID">add</span>.<span class="ID">outer</span>(<span class="ID">x</span>*<span class="ID">x</span>, <span class="ID">y</span>*<span class="ID">y</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_4">   4</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_4"></span><span class="anchor" id="line-4-8"></span><span class="Comment">### Contour plot of z = x**2 + y**2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_5">   5</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_5"></span><span class="anchor" id="line-5-8"></span><span class="ID">p</span>.<span class="ID">contour</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_6">   6</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_6"></span><span class="anchor" id="line-6-8"></span><span class="Comment">### ContourF plot of z = x**2 + y**2</span></span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_7">   7</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_7"></span><span class="anchor" id="line-7-8"></span><span class="ID">p</span>.<span class="ID">figure</span>()</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_8">   8</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_8"></span><span class="anchor" id="line-8-7"></span><span class="ID">p</span>.<span class="ID">contourf</span>(<span class="ID">x</span>,<span class="ID">y</span>,<span class="ID">z</span>)</span>
+<span class="line"><span class="LineNumber"><a href="#CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_9">   9</a> </span><span class="LineAnchor" id="CA-d5feb536ea5561ed1b1d654ef2a736332d844b6e_9"></span><span class="anchor" id="line-9-6"></span><span class="ID">p</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-145"></span><p class="line867"><img alt="contour.jpg" class="attachment" src="contour8f70.jpg?action=AttachFile&amp;do=get&amp;target=contour.jpg" title="contour.jpg" /> <img alt="contourf.jpg" class="attachment" src="contourf29f3.jpg?action=AttachFile&amp;do=get&amp;target=contourf.jpg" title="contourf.jpg" /> <span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><p class="line874">For some other examples of 3d plotting capability, run the following commands. See the source of matplotlib/axes3d.py for more information: <span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><p class="line867"><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span></pre><span class="anchor" id="bottom"></span></div><p id="pageinfo" class="info" lang="en" dir="ltr">SciPy: Cookbook/Matplotlib/mplot3D  (last edited 2015-10-24 17:48:23 by <span title="">anonymous</span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="mplot3D37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../../external.html?link=http://localhost:8080/Cookbook/Matplotlib/mplot3D">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Matplotlib/mplot3D by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 20:12:38 GMT -->
+</html>
+

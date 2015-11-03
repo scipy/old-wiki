@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<!-- Mirrored from localhost:8080/Cookbook/Data_Acquisition_with_PyUL?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="edit_on_doubleclick" content="/">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Cookbook/Data_Acquisition_with_PyUL - SciPy</title>
+<script type="text/javascript" src="../moin_static197/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="../moin_static197/modern/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="../moin_static197/modern/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="../moin_static197/modern/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="../moin_static197/modern/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/modern/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="SciPy: Cookbook/Data_Acquisition_with_PyUL" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL?diffs=1&amp;show_att=1&amp;action=rss_rc&amp;unique=0&amp;page=Cookbook%2FData_Acquisition_with_PyUL&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="../AllPages.html">
+<link rel="Alternate" title="Wiki Markup" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL?action=print">
+<link rel="Up" href="../Cookbook.html">
+<link rel="Appendix" title="example1.png" href="Data_Acquisition_with_PyUL501c.html?action=AttachFile&amp;do=view&amp;target=example1.png">
+<link rel="Appendix" title="example2.png" href="Data_Acquisition_with_PyULcd8f.html?action=AttachFile&amp;do=view&amp;target=example2.png">
+<link rel="Appendix" title="example3.png" href="Data_Acquisition_with_PyUL5cfd.html?action=AttachFile&amp;do=view&amp;target=example3.png">
+<link rel="Appendix" title="example4.png" href="Data_Acquisition_with_PyUL6e73.html?action=AttachFile&amp;do=view&amp;target=example4.png">
+<link rel="Search" href="../FindPage.html">
+<link rel="Index" href="../TitleIndex.html">
+<link rel="Glossary" href="../WordIndex.html">
+<link rel="Help" href="../HelpOnFormatting.html">
+</head>
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+
+
+<form id="searchform" method="get" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="Data_Acquisition_with_PyUL456e.html?action=login" id="login" rel="nofollow">Login</a></li></ul>
+<div id="locationline">
+<div id="interwiki"><span><a href="../AllPages.html" rel="nofollow">SciPy</a></span></div>
+
+<ul id="pagelocation">
+<li><a href="../Cookbook.html">Cookbook</a></li><li><a class="backlink" href="Data_Acquisition_with_PyUL88ba.html?action=fullsearch&amp;context=180&amp;value=linkto%3A%22Cookbook%2FData_Acquisition_with_PyUL%22" rel="nofollow" title="Click to do a full-text search for this title">Data_Acquisition_with_PyUL</a></li>
+</ul>
+
+</div>
+
+
+<ul id="navibar">
+<li class="wikilink"><a href="../RecentChanges.html">RecentChanges</a></li><li class="wikilink"><a class="nonexistent" href="../FindPage.html">FindPage</a></li><li class="wikilink"><a class="nonexistent" href="../HelpContents.html">HelpContents</a></li><li class="current"><a href="Data_Acquisition_with_PyUL.html">Data_Acquis...n_with_PyUL</a></li>
+</ul>
+
+<div id="pageline"><hr style="display:none;"></div>
+<div id="message">
+<p><div class="warning">This wiki is not enabled for mail processing.
+Contact the owner of the wiki, who can enable email.</div></p><a class="clear-link" href="Data_Acquisition_with_PyUL.html">Clear message</a>
+</div>
+
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Data_Acquisition_with_PyUL37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+
+<div id="page" lang="en" dir="ltr">
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><div class="table-of-contents"><p class="table-of-contents-heading">Contents<ol><li>
+<a href="#Introduction">Introduction</a></li><li>
+<a href="#Example_1_-_Simple_Analog_input">Example 1 - Simple Analog input</a></li><li>
+<a href="#Example_2_-_Getting_Volts_rather_than_arbitrary_units">Example 2 - Getting Volts rather than arbitrary units</a></li><li>
+<a href="#Example_3_-_Buffered_input">Example 3 - Buffered input</a></li><li>
+<a href="#Example_4_-_computing_the_power_spectrum">Example 4 - computing the power spectrum</a></li></ol></div> <span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+<h1 id="Introduction">Introduction</h1>
+<span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span><p class="line862">This pages illustrates the use of the inexpensive (about $150) <a class="http" href="../../external.html?link=http://www.measurementcomputing.com/cbicatalog/cbiproduct_new.asp?dept_id=412&amp;pf_id=1665&amp;mscssid=G9PDTGJV5VES9P694WLRS3JWG3J615M7">PMD USB-1208FS</a> data acquisition device from <a class="http" href="../../external.html?link=http://www.measurementcomputing.com/">Measurement Computing</a>. It makes use of <a class="http" href="../../external.html?link=http://www.its.caltech.edu/~astraw/pyul.html">PyUniversalLibrary</a>, an open-source wrapper of Measurement Computing's <a class="http" href="../../external.html?link=http://www.measurementcomputing.com/cbicatalog/cbiproduct.asp?dept%5Fid=261&amp;pf%5Fid=1084&amp;mscssid=RDNUK9VN7L3L8PL34QF282AX3F987098">Universal Library</a>. <span class="anchor" id="line-6"></span><span class="anchor" id="line-7"></span><p class="line862">See also <a href="Data_Acquisition_with_NIDAQmx.html">Data acquisition with Ni-DAQmx</a>. <span class="anchor" id="line-8"></span><span class="anchor" id="line-9"></span><p class="line862">The following examples were made with PyUL Release 20050624. The <a class="http" href="../../external.html?link=http://www.its.caltech.edu/~astraw/PyUniversalLibrary/PyUniversalLibrary-20050624.win32-py2.4-num23.7.exe">pre-compiled win32 binaries</a> of this version are compatible with the <a class="http" href="../../external.html?link=http://code.enthought.com/enthon/">Enthought Edition of Python 2.4</a> (Release 1.0.0, 2006-08-02 12:20), which is what was used to run these examples. <span class="anchor" id="line-10"></span><span class="anchor" id="line-11"></span><p class="line867">
+<h1 id="Example_1_-_Simple_Analog_input">Example 1 - Simple Analog input</h1>
+<span class="anchor" id="line-12"></span><span class="anchor" id="line-13"></span><p class="line874">The first example illustrates the use of the unbuffered analog input: <span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span><p class="line867"><span class="anchor" id="line-16"></span><span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span><span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span><span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span><span class="anchor" id="line-23"></span><span class="anchor" id="line-24"></span><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-1-1"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-ccabdbe9527c1b3e46165487e62bda5dc1a2372a" lang="en"><span class="line"><span class="anchor" id="line-1-2"></span><span class="Comment"># example1.py</span></span>
+<span class="line"><span class="anchor" id="line-2-1"></span><span class="ResWord">import</span> <span class="ID">UniversalLibrary</span> <span class="ResWord">as</span> <span class="ID">UL</span></span>
+<span class="line"><span class="anchor" id="line-3-1"></span><span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="anchor" id="line-4-1"></span></span>
+<span class="line"><span class="anchor" id="line-5-1"></span><span class="ID">BoardNum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-6-1"></span><span class="ID">Gain</span> = <span class="ID">UL</span>.<span class="ID">BIP5VOLTS</span></span>
+<span class="line"><span class="anchor" id="line-7-1"></span><span class="ID">Chan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-8-1"></span></span>
+<span class="line"><span class="anchor" id="line-9-1"></span><span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="anchor" id="line-10-1"></span><span class="ID">data</span> = []</span>
+<span class="line"><span class="anchor" id="line-11-1"></span><span class="ID">times</span> = []</span>
+<span class="line"><span class="anchor" id="line-12-1"></span><span class="ResWord">while</span> <span class="Number">1</span>:</span>
+<span class="line"><span class="anchor" id="line-13-1"></span>    <span class="ID">DataValue</span> = <span class="ID">UL</span>.<span class="ID">cbAIn</span>(<span class="ID">BoardNum</span>, <span class="ID">Chan</span>, <span class="ID">Gain</span>)</span>
+<span class="line"><span class="anchor" id="line-14-1"></span>    <span class="ID">data</span>.<span class="ID">append</span>( <span class="ID">DataValue</span> )</span>
+<span class="line"><span class="anchor" id="line-15-1"></span>    <span class="ID">times</span>.<span class="ID">append</span>( <span class="ID">time</span>.<span class="ID">time</span>()-<span class="ID">tstart</span> )</span>
+<span class="line"><span class="anchor" id="line-16-1"></span>    <span class="ResWord">if</span> <span class="ID">times</span>[-<span class="Number">1</span>] &gt; <span class="Number">1.0</span>:</span>
+<span class="line"><span class="anchor" id="line-17-1"></span>        <span class="ResWord">break</span></span>
+<span class="line"><span class="anchor" id="line-18-1"></span></span>
+<span class="line"><span class="anchor" id="line-19-1"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="anchor" id="line-20-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">times</span>,<span class="ID">data</span>,<span class="String">'</span><span class="String">o-</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-21-1"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (sec)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-22-1"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">ADC units</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-23-1"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><p class="line874">When I ran this, I had a function generator generating a sine wave connected to pins 1 and 2 of my device. <span class="anchor" id="line-42"></span>This should produce a figure like the following: <span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><p class="line867"><img alt="example1.png" class="attachment" src="example1cbac.png?action=AttachFile&amp;do=get&amp;target=example1.png" title="example1.png" /> <span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><p class="line867">
+<h1 id="Example_2_-_Getting_Volts_rather_than_arbitrary_units">Example 2 - Getting Volts rather than arbitrary units</h1>
+<span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><p class="line862">The values recorded in example 1 are &quot;ADC units&quot;, the values recorded directly by the Analog-to-Digital hardware. In fact, this device has a 12-bit A to D converter, but the values are stored as 16-bit signed integers. To convert these values to Volts, we use Measurement Computing's <tt>cbToEngUnits()</tt> function. Here we do that for each piece of data and plot the results. <span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><p class="line867"><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-1-3"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-6bb0bf3f981d5f045d127b80f11e35570bbed6df" lang="en"><span class="line"><span class="anchor" id="line-1-4"></span><span class="Comment">#example2.py</span></span>
+<span class="line"><span class="anchor" id="line-2-2"></span><span class="ResWord">import</span> <span class="ID">UniversalLibrary</span> <span class="ResWord">as</span> <span class="ID">UL</span></span>
+<span class="line"><span class="anchor" id="line-3-2"></span><span class="ResWord">import</span> <span class="ID">time</span></span>
+<span class="line"><span class="anchor" id="line-4-2"></span></span>
+<span class="line"><span class="anchor" id="line-5-2"></span><span class="ID">BoardNum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-6-2"></span><span class="ID">Gain</span> = <span class="ID">UL</span>.<span class="ID">BIP5VOLTS</span></span>
+<span class="line"><span class="anchor" id="line-7-2"></span><span class="ID">Chan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-8-2"></span></span>
+<span class="line"><span class="anchor" id="line-9-2"></span><span class="ID">tstart</span> = <span class="ID">time</span>.<span class="ID">time</span>()</span>
+<span class="line"><span class="anchor" id="line-10-2"></span><span class="ID">data</span> = []</span>
+<span class="line"><span class="anchor" id="line-11-2"></span><span class="ID">times</span> = []</span>
+<span class="line"><span class="anchor" id="line-12-2"></span><span class="ResWord">while</span> <span class="Number">1</span>:</span>
+<span class="line"><span class="anchor" id="line-13-2"></span>    <span class="ID">DataValue</span> = <span class="ID">UL</span>.<span class="ID">cbAIn</span>(<span class="ID">BoardNum</span>, <span class="ID">Chan</span>, <span class="ID">Gain</span>)</span>
+<span class="line"><span class="anchor" id="line-14-2"></span>    <span class="ID">EngUnits</span> = <span class="ID">UL</span>.<span class="ID">cbToEngUnits</span>(<span class="ID">BoardNum</span>, <span class="ID">Gain</span>, <span class="ID">DataValue</span>)</span>
+<span class="line"><span class="anchor" id="line-15-2"></span>    <span class="ID">data</span>.<span class="ID">append</span>( <span class="ID">EngUnits</span> )</span>
+<span class="line"><span class="anchor" id="line-16-2"></span>    <span class="ID">times</span>.<span class="ID">append</span>( <span class="ID">time</span>.<span class="ID">time</span>()-<span class="ID">tstart</span> )</span>
+<span class="line"><span class="anchor" id="line-17-2"></span>    <span class="ResWord">if</span> <span class="ID">times</span>[-<span class="Number">1</span>] &gt; <span class="Number">1.0</span>:</span>
+<span class="line"><span class="anchor" id="line-18-2"></span>        <span class="ResWord">break</span></span>
+<span class="line"><span class="anchor" id="line-19-2"></span></span>
+<span class="line"><span class="anchor" id="line-20-2"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="anchor" id="line-21-2"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">times</span>,<span class="ID">data</span>,<span class="String">'</span><span class="String">o-</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-22-2"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (sec)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-23-2"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Volts</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-24-1"></span><span class="Comment">#pylab.savefig('example2.png',dpi=72)</span></span>
+<span class="line"><span class="anchor" id="line-25-1"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><p class="line874">Now the output values are in volts: <span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><p class="line867"><img alt="example2.png" class="attachment" src="example24324.png?action=AttachFile&amp;do=get&amp;target=example2.png" title="example2.png" /> <span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><p class="line867">
+<h1 id="Example_3_-_Buffered_input">Example 3 - Buffered input</h1>
+<span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><p class="line874">As you have no doubt noticed, the plots above aren't very &quot;pure&quot; sine waves. This is undoubtedly due to the way we're sampling the data. Rather than relying on a steady clock to do our acquisition, we're simply polling the device as fast as it (and the operating system) will let us go. There's a better way - we can use the clock on board the Measurement Computing device to acquire a buffer of data at evenly spaced samples. <span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><p class="line867"><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-1-5"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-eb08255cebc328c39647af0996c9ee375c7661f3" lang="en"><span class="line"><span class="anchor" id="line-1-6"></span><span class="Comment">#example3.py</span></span>
+<span class="line"><span class="anchor" id="line-2-3"></span><span class="ResWord">import</span> <span class="ID">UniversalLibrary</span> <span class="ResWord">as</span> <span class="ID">UL</span></span>
+<span class="line"><span class="anchor" id="line-3-3"></span><span class="ResWord">import</span> <span class="ID">Numeric</span></span>
+<span class="line"><span class="anchor" id="line-4-3"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="anchor" id="line-5-3"></span></span>
+<span class="line"><span class="anchor" id="line-6-3"></span><span class="ID">BoardNum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-7-3"></span><span class="ID">Gain</span> = <span class="ID">UL</span>.<span class="ID">BIP5VOLTS</span></span>
+<span class="line"><span class="anchor" id="line-8-3"></span></span>
+<span class="line"><span class="anchor" id="line-9-3"></span><span class="ID">LowChan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-10-3"></span><span class="ID">HighChan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-11-3"></span></span>
+<span class="line"><span class="anchor" id="line-12-3"></span><span class="ID">Count</span> = <span class="Number">2000</span></span>
+<span class="line"><span class="anchor" id="line-13-3"></span><span class="ID">Rate</span> = <span class="Number">3125</span></span>
+<span class="line"><span class="anchor" id="line-14-3"></span></span>
+<span class="line"><span class="anchor" id="line-15-3"></span><span class="ID">Options</span> = <span class="ID">UL</span>.<span class="ID">CONVERTDATA</span></span>
+<span class="line"><span class="anchor" id="line-16-3"></span><span class="ID">ADData</span> = <span class="ID">Numeric</span>.<span class="ID">zeros</span>((<span class="ID">Count</span>,), <span class="ID">Numeric</span>.<span class="ID">Int16</span>)</span>
+<span class="line"><span class="anchor" id="line-17-3"></span></span>
+<span class="line"><span class="anchor" id="line-18-3"></span><span class="ID">ActualRate</span> = <span class="ID">UL</span>.<span class="ID">cbAInScan</span>(<span class="ID">BoardNum</span>, <span class="ID">LowChan</span>, <span class="ID">HighChan</span>, <span class="ID">Count</span>,</span>
+<span class="line"><span class="anchor" id="line-19-3"></span>                         <span class="ID">Rate</span>, <span class="ID">Gain</span>, <span class="ID">ADData</span>, <span class="ID">Options</span>)</span>
+<span class="line"><span class="anchor" id="line-20-3"></span></span>
+<span class="line"><span class="anchor" id="line-21-3"></span><span class="Comment"># convert to Volts</span></span>
+<span class="line"><span class="anchor" id="line-22-3"></span><span class="ID">data_in_volts</span> = [ <span class="ID">UL</span>.<span class="ID">cbToEngUnits</span>(<span class="ID">BoardNum</span>, <span class="ID">Gain</span>, <span class="ID">y</span>) <span class="ResWord">for</span> <span class="ID">y</span> <span class="ResWord">in</span> <span class="ID">ADData</span>]</span>
+<span class="line"><span class="anchor" id="line-23-3"></span></span>
+<span class="line"><span class="anchor" id="line-24-2"></span><span class="ID">time</span> = <span class="ID">Numeric</span>.<span class="ID">arange</span>( <span class="ID">ADData</span>.<span class="ID">shape</span>[<span class="Number">0</span>] )*<span class="Number">1.0</span>/<span class="ID">ActualRate</span></span>
+<span class="line"><span class="anchor" id="line-25-2"></span></span>
+<span class="line"><span class="anchor" id="line-26-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">time</span>, <span class="ID">data_in_volts</span>, <span class="String">'</span><span class="String">o-</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-27-1"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (sec)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-28-1"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Volts</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-29-1"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">example3.png</span><span class="String">'</span>,<span class="ID">dpi</span>=<span class="Number">72</span>)</span>
+<span class="line"><span class="anchor" id="line-30-1"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><p class="line874">The output looks much better: <span class="anchor" id="line-120"></span><img alt="example3.png" class="attachment" src="example3a799.png?action=AttachFile&amp;do=get&amp;target=example3.png" title="example3.png" /> <span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><p class="line867">
+<h1 id="Example_4_-_computing_the_power_spectrum">Example 4 - computing the power spectrum</h1>
+<span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><p class="line862">Now we can use the <tt>psd()</tt> function from pylab (part of matplotlib) to compute the power spectral density. <span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><p class="line867"><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-1-7"></span><div class="highlight python"><div class="codearea" dir="ltr" lang="en"><pre dir="ltr" id="CA-dd4f0e116660ad18de4a064951b18242388dc179" lang="en"><span class="line"><span class="anchor" id="line-1-8"></span><span class="Comment">#example4.py</span></span>
+<span class="line"><span class="anchor" id="line-2-4"></span><span class="ResWord">import</span> <span class="ID">UniversalLibrary</span> <span class="ResWord">as</span> <span class="ID">UL</span></span>
+<span class="line"><span class="anchor" id="line-3-4"></span><span class="ResWord">import</span> <span class="ID">Numeric</span></span>
+<span class="line"><span class="anchor" id="line-4-4"></span><span class="ResWord">import</span> <span class="ID">pylab</span></span>
+<span class="line"><span class="anchor" id="line-5-4"></span></span>
+<span class="line"><span class="anchor" id="line-6-4"></span><span class="ID">BoardNum</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-7-4"></span><span class="ID">Gain</span> = <span class="ID">UL</span>.<span class="ID">BIP5VOLTS</span></span>
+<span class="line"><span class="anchor" id="line-8-4"></span></span>
+<span class="line"><span class="anchor" id="line-9-4"></span><span class="ID">LowChan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-10-4"></span><span class="ID">HighChan</span> = <span class="Number">0</span></span>
+<span class="line"><span class="anchor" id="line-11-4"></span></span>
+<span class="line"><span class="anchor" id="line-12-4"></span><span class="ID">Count</span> = <span class="Number">2000</span></span>
+<span class="line"><span class="anchor" id="line-13-4"></span><span class="ID">Rate</span> = <span class="Number">10000</span></span>
+<span class="line"><span class="anchor" id="line-14-4"></span></span>
+<span class="line"><span class="anchor" id="line-15-4"></span><span class="ID">Options</span> = <span class="ID">UL</span>.<span class="ID">CONVERTDATA</span></span>
+<span class="line"><span class="anchor" id="line-16-4"></span><span class="ID">ADData</span> = <span class="ID">Numeric</span>.<span class="ID">zeros</span>((<span class="ID">Count</span>,), <span class="ID">Numeric</span>.<span class="ID">Int16</span>)</span>
+<span class="line"><span class="anchor" id="line-17-4"></span></span>
+<span class="line"><span class="anchor" id="line-18-4"></span><span class="ID">ActualRate</span> = <span class="ID">UL</span>.<span class="ID">cbAInScan</span>(<span class="ID">BoardNum</span>, <span class="ID">LowChan</span>, <span class="ID">HighChan</span>, <span class="ID">Count</span>,</span>
+<span class="line"><span class="anchor" id="line-19-4"></span>                         <span class="ID">Rate</span>, <span class="ID">Gain</span>, <span class="ID">ADData</span>, <span class="ID">Options</span>)</span>
+<span class="line"><span class="anchor" id="line-20-4"></span><span class="ID">time</span> = <span class="ID">Numeric</span>.<span class="ID">arange</span>( <span class="ID">ADData</span>.<span class="ID">shape</span>[<span class="Number">0</span>] )*<span class="Number">1.0</span>/<span class="ID">ActualRate</span></span>
+<span class="line"><span class="anchor" id="line-21-4"></span></span>
+<span class="line"><span class="anchor" id="line-22-4"></span><span class="Comment"># convert to Volts</span></span>
+<span class="line"><span class="anchor" id="line-23-4"></span><span class="ID">data_in_volts</span> = [ <span class="ID">UL</span>.<span class="ID">cbToEngUnits</span>(<span class="ID">BoardNum</span>, <span class="ID">Gain</span>, <span class="ID">y</span>) <span class="ResWord">for</span> <span class="ID">y</span> <span class="ResWord">in</span> <span class="ID">ADData</span>]</span>
+<span class="line"><span class="anchor" id="line-24-3"></span><span class="ID">data_in_volts</span> = <span class="ID">Numeric</span>.<span class="ID">array</span>(<span class="ID">data_in_volts</span>) <span class="Comment"># convert to Numeric array</span></span>
+<span class="line"><span class="anchor" id="line-25-3"></span></span>
+<span class="line"><span class="anchor" id="line-26-2"></span><span class="ID">pxx</span>, <span class="ID">freqs</span> = <span class="ID">pylab</span>.<span class="ID">psd</span>( <span class="ID">data_in_volts</span>, <span class="ID">Fs</span>=<span class="ID">ActualRate</span> )</span>
+<span class="line"><span class="anchor" id="line-27-2"></span><span class="ID">decibels</span> = <span class="Number">10</span>*<span class="ID">Numeric</span>.<span class="ID">log10</span>(<span class="ID">pxx</span>)</span>
+<span class="line"><span class="anchor" id="line-28-2"></span><span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">2</span>,<span class="Number">1</span>,<span class="Number">1</span>)</span>
+<span class="line"><span class="anchor" id="line-29-2"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">time</span>[<span class="Number">100</span>:<span class="Number">200</span>],<span class="ID">data_in_volts</span>[<span class="Number">100</span>:<span class="Number">200</span>],<span class="String">'</span><span class="String">o-</span><span class="String">'</span>) <span class="Comment"># plot a few samples</span></span>
+<span class="line"><span class="anchor" id="line-30-2"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">time (sec)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-31-1"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Volts</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-32-1"></span><span class="ID">pylab</span>.<span class="ID">subplot</span>(<span class="Number">2</span>,<span class="Number">1</span>,<span class="Number">2</span>)</span>
+<span class="line"><span class="anchor" id="line-33-1"></span><span class="ID">pylab</span>.<span class="ID">plot</span>(<span class="ID">freqs</span>, <span class="ID">decibels</span>, <span class="String">'</span><span class="String">o-</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-34-1"></span><span class="ID">pylab</span>.<span class="ID">xlabel</span>(<span class="String">'</span><span class="String">frequency</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-35-1"></span><span class="ID">pylab</span>.<span class="ID">ylabel</span>(<span class="String">'</span><span class="String">Power (decibels)</span><span class="String">'</span>)</span>
+<span class="line"><span class="anchor" id="line-36-1"></span><span class="ID">pylab</span>.<span class="ID">savefig</span>(<span class="String">'</span><span class="String">example4.png</span><span class="String">'</span>,<span class="ID">dpi</span>=<span class="Number">72</span>)</span>
+<span class="line"><span class="anchor" id="line-37-1"></span><span class="ID">pylab</span>.<span class="ID">show</span>()</span>
+</pre></div></div><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><p class="line862">For this example, I've turned up the frequency on the function generator to 480 Hz. You can see, indeed, that's what the <tt>psd()</tt> function tells us: <span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><p class="line867"><img alt="example4.png" class="attachment" src="example43114.png?action=AttachFile&amp;do=get&amp;target=example4.png" title="example4.png" /> <span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><p class="line867"><hr /><p class="line874"> <span class="anchor" id="line-171"></span><a href="../CategoryCookbook.html">CategoryCookbook</a> <span class="anchor" id="line-172"></span><span class="anchor" id="bottom"></span></div>
+<div id="pagebottom"></div>
+</div>
+
+
+<div id="footer">
+<ul class="editbar"><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onClick="toggleComments();return false;">Comments</a></li><li><a class="nbattachments" href="Data_Acquisition_with_PyUL37dc.html?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="../../external.html?link=http://localhost:8080/Cookbook/Data_Acquisition_with_PyUL">
+<div>
+    <label>More Actions:</label>
+    <select name="action"
+        onchange="if ((this.selectedIndex != 0) &&
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="RenamePage" disabled class="disabled">Rename Page</option>
+<option value="DeletePage" disabled class="disabled">Delete Page</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Subscribe User</option>
+<option value="show" disabled class="disabled">------------------------</option>
+<option value="show" disabled class="disabled">Remove Spam</option>
+<option value="show" disabled class="disabled">Revert to this revision</option>
+    </select>
+    <input type="submit" value="Do">
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+<ul id="credits">
+<li><a href="../../external.html?link=http://moinmo.in/" title="This site uses the MoinMoin Wiki software.">MoinMoin Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/Python" title="MoinMoin is written in Python.">Python Powered</a></li><li><a href="../../external.html?link=http://moinmo.in/GPL" title="MoinMoin is GPL licensed.">GPL licensed</a></li><li><a href="../../external.html?link=http://validator.w3.org/check?uri=referer" title="Click here to validate this page.">Valid HTML 4.01</a></li>
+</ul>
+
+
+</div>
+</body>
+
+<!-- Mirrored from localhost:8080/Cookbook/Data_Acquisition_with_PyUL?action=recoverpass by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Oct 2015 23:19:03 GMT -->
+</html>
+
