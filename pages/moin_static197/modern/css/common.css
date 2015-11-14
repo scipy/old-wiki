@@ -594,3 +594,7 @@ form {
 #pageinfo {
     display: none;
 }
+
+#interwiki {
+    font-size: 1.5em !important;
+}
