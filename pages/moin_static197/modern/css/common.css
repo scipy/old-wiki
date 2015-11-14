@@ -562,3 +562,35 @@ TD.tip {
 
 /* admonition end */
 
+#searchform {
+    display: none;
+}
+
+.editbar form.actionsmenu {
+    display: none !important;
+}
+
+#credits {
+    display: none;
+}
+
+#username {
+    display: none !important;
+}
+
+#locationline {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+#navibar {
+    display: none !important;
+}
+
+form {
+    display: none;
+}
+
+#pageinfo {
+    display: none;
+}
