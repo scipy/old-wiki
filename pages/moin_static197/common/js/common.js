@@ -576,34 +576,6 @@ function doTextareaScroll(e) {
 // This is the function that registers double clicks.
 // isPreview is true if the current page is an edit draft preview
 function setCallback(node, line, isPreview) {
-    if (node.scrollLine) {
-        // this node already processed
-        return;
-    } else {
-        node.scrollLine = line;
-        if(window.addEventListener){ 
-            if (isPreview) {
-                node.addEventListener('dblclick',doTextareaScroll,false);
-            } else {
-                node.addEventListener('dblclick',doActionEdit,false);
-            }
-            if (autoScrollDebugOn) {
-                node.addEventListener('mouseover', doMouseOver,false); 
-                node.addEventListener('mouseout',doMouseOut,false); 
-            }
-        } else {
-            // IE
-            if (isPreview) {
-                node.attachEvent('ondblclick',doTextareaScroll);
-            } else {
-                node.attachEvent('ondblclick',doActionEdit);
-            }
-            if (autoScrollDebugOn) {
-                node.attachEvent('onmouseover', doMouseOver,false); 
-                node.attachEvent('onmouseout',doMouseOut,false);
-            }
-        }
-    }
 }
 
 // walk part of DOM and add doubleclick function to all nodes with tagNames
